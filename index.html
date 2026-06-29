@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul Le | AV, ICT, ELV Consultant – Vietnam</title>
+  <meta name="description" content="Professional consulting and design of ICT, ELV and Audio Visual systems for commercial, office and industrial buildings in Vietnam.">
+  <meta name="keywords" content="ELV consultant Vietnam, ICT design, audio visual AV consultant, CCTV design, fire alarm consultant, BMS, structured cabling, Ho Chi Minh City">
+  <meta name="author" content="Paul Le Consultant">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elvconsultant.com">
+  <meta property="og:title" content="Paul Le | AV, ICT, ELV Consultant – Vietnam">
+  <meta property="og:description" content="Expert consulting and design of ICT, ELV and Audio Visual systems for buildings in Vietnam.">
+  <meta property="og:image" content="https://elvconsultant.com/og-image.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Paul Le | AV, ICT, ELV Consultant">
+  <meta name="twitter:description" content="Expert ICT, ELV & AV consulting for buildings in Vietnam.">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://elvconsultant.com">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --navy:#1B2A4A; --navy-deep:#0D1B35; --steel:#4A6280;
+      --cyan:#00C8E0; --cyan-dim:#007A8C; --silver:#A0B4C8;
+      --white:#F0F4F8; --bg:#07111F; --card-bg:#101E30;
+      --card-border:#1E3550; --grid-line:rgba(0,200,224,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--white); overflow-x:hidden; }
+
+    /* GRID BG */
+    .grid-bg {
+      position:fixed; top:0; left:0; width:100%; height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px; pointer-events:none; z-index:0;
+    }
+
+    /* NAV */
+    nav {
+      position:sticky; top:0; z-index:100;
+      background:rgba(7,17,31,0.95); border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+      padding:0 2rem; display:flex; align-items:center; justify-content:space-between; height:64px;
+    }
+    .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+    .logo-shield { width:36px; height:36px; }
+    .logo-text { font-family:'Orbitron',monospace; font-size:15px; font-weight:700; color:var(--white); letter-spacing:1px; }
+    .logo-sub { font-size:9px; color:var(--cyan); letter-spacing:2px; font-weight:400; display:block; margin-top:-2px; }
+    .nav-right { display:flex; align-items:center; gap:1.5rem; }
+    .nav-links { display:flex; gap:1.5rem; list-style:none; }
+    .nav-links a { color:var(--silver); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:0.5px; transition:color 0.2s; }
+    .nav-links a:hover { color:var(--cyan); }
+    .lang-switcher { display:flex; gap:4px; }
+    .lang-btn { background:transparent; border:1px solid var(--card-border); color:var(--silver); padding:5px 10px; border-radius:4px; font-size:12px; cursor:pointer; font-family:'Inter',sans-serif; transition:all 0.2s; font-weight:500; }
+    .lang-btn.active { border-color:var(--cyan); color:var(--cyan); background:rgba(0,200,224,0.08); }
+    .lang-btn:hover:not(.active) { border-color:var(--silver); color:var(--white); }
+    .nav-cta { background:transparent; border:1px solid var(--cyan); color:var(--cyan); padding:8px 20px; border-radius:4px; font-size:13px; font-weight:500; cursor:pointer; font-family:'Inter',sans-serif; letter-spacing:0.5px; transition:all 0.2s; }
+    .nav-cta:hover { background:var(--cyan); color:var(--bg); }
+    .hamburger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+    .hamburger span { display:block; width:22px; height:2px; background:var(--silver); border-radius:2px; }
+    .mobile-menu { display:none; position:fixed; top:64px; left:0; right:0; background:rgba(7,17,31,0.98); border-bottom:1px solid var(--card-border); padding:1.5rem 2rem; z-index:99; flex-direction:column; gap:1rem; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { color:var(--silver); font-size:15px; text-decoration:none; padding:0.5rem 0; border-bottom:1px solid var(--card-border); }
+    .mobile-menu a:hover { color:var(--cyan); }
+    .mobile-lang { display:flex; gap:8px; padding-top:0.5rem; }
+
+    /* SCROLL ANIMATIONS */
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay:0.1s; }
+    .reveal-delay-2 { transition-delay:0.2s; }
+    .reveal-delay-3 { transition-delay:0.3s; }
+    .reveal-delay-4 { transition-delay:0.4s; }
+
+    /* HERO */
+    .hero-wrap { position:relative; z-index:1; overflow:hidden; }
+    .hero { min-height:90vh; display:flex; align-items:center; padding:6rem 2rem 4rem; max-width:1100px; margin:0 auto; position:relative; }
+    .hero-content { max-width:600px; }
+    .hero-eyebrow { font-family:'Orbitron',monospace; font-size:11px; letter-spacing:4px; color:var(--cyan); margin-bottom:1.5rem; display:flex; align-items:center; gap:12px; }
+    .hero-eyebrow::before { content:''; display:inline-block; width:32px; height:1px; background:var(--cyan); }
+    h1.hero-title { font-family:'Orbitron',monospace; font-size:clamp(2.2rem,5vw,3.6rem); font-weight:900; line-height:1.1; color:var(--white); margin-bottom:0.5rem; }
+    h1.hero-title .accent { color:var(--cyan); }
+    .hero-subtitle { font-family:'Orbitron',monospace; font-size:clamp(1rem,2vw,1.3rem); font-weight:400; color:var(--steel); letter-spacing:2px; margin-bottom:1.5rem; }
+    .hero-desc { font-size:15px; color:var(--silver); line-height:1.8; max-width:480px; margin-bottom:2.5rem; }
+    .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; }
+    .btn-primary { background:var(--cyan); color:var(--bg); border:none; padding:14px 32px; border-radius:4px; font-size:14px; font-weight:600; cursor:pointer; font-family:'Inter',sans-serif; letter-spacing:0.5px; transition:all 0.2s; text-decoration:none; display:inline-block; }
+    .btn-primary:hover { background:#00e0f8; }
+    .btn-outline { background:transparent; color:var(--silver); border:1px solid var(--card-border); padding:14px 32px; border-radius:4px; font-size:14px; font-weight:500; cursor:pointer; font-family:'Inter',sans-serif; letter-spacing:0.5px; transition:all 0.2s; text-decoration:none; display:inline-block; }
+    .btn-outline:hover { border-color:var(--silver); color:var(--white); }
+    .hero-visual { position:absolute; right:0; top:50%; transform:translateY(-50%); width:420px; opacity:0.9; }
+
+    /* STATS */
+    .stats-strip { position:relative; z-index:1; border-top:1px solid var(--card-border); border-bottom:1px solid var(--card-border); background:var(--card-bg); padding:1.5rem 2rem; }
+    .stats-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+    .stat-item { text-align:center; }
+    .stat-num { font-family:'Orbitron',monospace; font-size:1.8rem; font-weight:700; color:var(--cyan); }
+    .stat-label { font-size:12px; color:var(--silver); letter-spacing:1px; margin-top:4px; }
+
+    /* SECTIONS */
+    section { position:relative; z-index:1; padding:5rem 2rem; max-width:1100px; margin:0 auto; }
+    .section-eyebrow { font-family:'Orbitron',monospace; font-size:10px; letter-spacing:4px; color:var(--cyan); margin-bottom:0.75rem; }
+    h2.section-title { font-family:'Orbitron',monospace; font-size:clamp(1.4rem,3vw,2rem); font-weight:700; color:var(--white); margin-bottom:1rem; }
+    .section-desc { font-size:15px; color:var(--silver); line-height:1.8; max-width:560px; margin-bottom:3rem; }
+
+    /* TABS */
+    .tab-bar { display:flex; gap:0.5rem; margin-bottom:2rem; flex-wrap:wrap; }
+    .tab-btn { padding:8px 20px; border-radius:4px; border:1px solid var(--card-border); background:transparent; color:var(--silver); font-size:13px; cursor:pointer; font-family:'Inter',sans-serif; letter-spacing:0.5px; transition:all 0.2s; }
+    .tab-btn.active { background:var(--cyan); color:var(--bg); border-color:var(--cyan); font-weight:600; }
+    .tab-btn:hover:not(.active) { border-color:var(--silver); color:var(--white); }
+    .tab-content { display:none; }
+    .tab-content.active { display:block; }
+
+    /* SERVICE CARDS */
+    .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .service-card { background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; padding:2rem; transition:all 0.3s; position:relative; overflow:hidden; }
+    .service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:var(--cyan); opacity:0; transition:opacity 0.3s; }
+    .service-card:hover { border-color:var(--cyan-dim); transform:translateY(-4px); }
+    .service-card:hover::before { opacity:1; }
+    .service-icon { width:48px; height:48px; border-radius:8px; background:rgba(0,200,224,0.1); border:1px solid rgba(0,200,224,0.2); display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; font-size:22px; }
+    .service-tag { font-family:'Orbitron',monospace; font-size:10px; letter-spacing:2px; color:var(--cyan); margin-bottom:0.5rem; }
+    .service-name { font-size:16px; font-weight:600; color:var(--white); margin-bottom:0.75rem; }
+    .service-desc { font-size:13px; color:var(--silver); line-height:1.7; }
+    .service-items { margin-top:1rem; list-style:none; }
+    .service-items li { font-size:12px; color:var(--silver); padding:4px 0; padding-left:16px; position:relative; }
+    .service-items li::before { content:'›'; position:absolute; left:0; color:var(--cyan); }
+
+    /* PORTFOLIO */
+    .portfolio-filter { display:flex; gap:0.5rem; margin-bottom:2rem; flex-wrap:wrap; }
+    .filter-btn { padding:7px 18px; border-radius:20px; border:1px solid var(--card-border); background:transparent; color:var(--silver); font-size:12px; cursor:pointer; font-family:'Inter',sans-serif; transition:all 0.2s; letter-spacing:0.5px; }
+    .filter-btn.active { background:rgba(0,200,224,0.15); border-color:var(--cyan); color:var(--cyan); font-weight:600; }
+    .filter-btn:hover:not(.active) { border-color:var(--silver); color:var(--white); }
+    .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+    .portfolio-card {
+      background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px;
+      overflow:hidden; transition:all 0.3s; cursor:default;
+    }
+    .portfolio-card:hover { border-color:var(--cyan-dim); transform:translateY(-3px); }
+    .portfolio-card.hidden { display:none; }
+    .portfolio-thumb {
+      height:140px; display:flex; align-items:center; justify-content:center;
+      font-size:40px; position:relative; overflow:hidden;
+    }
+    .portfolio-thumb-ict { background:linear-gradient(135deg,#0D1B35 0%,#1B2A4A 100%); border-bottom:1px solid rgba(0,200,224,0.2); }
+    .portfolio-thumb-elv { background:linear-gradient(135deg,#0D1B35 0%,#1A2840 100%); border-bottom:1px solid rgba(0,200,224,0.2); }
+    .portfolio-thumb-av  { background:linear-gradient(135deg,#0D1B35 0%,#162238 100%); border-bottom:1px solid rgba(0,200,224,0.2); }
+    .portfolio-thumb-tag {
+      position:absolute; top:10px; right:10px;
+      font-family:'Orbitron',monospace; font-size:9px; letter-spacing:1px;
+      padding:3px 8px; border-radius:3px; font-weight:700;
+    }
+    .tag-ict  { background:rgba(0,200,224,0.2); color:var(--cyan); border:1px solid rgba(0,200,224,0.4); }
+    .tag-elv  { background:rgba(74,98,128,0.3); color:#A0B4C8; border:1px solid rgba(74,98,128,0.5); }
+    .tag-av   { background:rgba(0,200,224,0.15); color:#7ADCEC; border:1px solid rgba(0,200,224,0.3); }
+    .portfolio-info { padding:1rem 1.25rem; }
+    .portfolio-name { font-size:14px; font-weight:600; color:var(--white); margin-bottom:4px; }
+    .portfolio-meta { font-size:12px; color:var(--steel); display:flex; gap:1rem; margin-bottom:8px; }
+    .portfolio-scope { font-size:12px; color:var(--silver); line-height:1.5; }
+    .portfolio-dots { display:flex; gap:4px; margin-top:10px; flex-wrap:wrap; }
+    .dot { width:6px; height:6px; border-radius:50%; background:var(--cyan); opacity:0.5; }
+    .dot.active { opacity:1; }
+
+    /* PROCESS */
+    .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+    .process-step { text-align:center; padding:2rem 1rem; background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; transition:border-color 0.3s; }
+    .process-step:hover { border-color:rgba(0,200,224,0.3); }
+    .step-num { font-family:'Orbitron',monospace; font-size:2rem; font-weight:900; color:rgba(0,200,224,0.15); margin-bottom:1rem; }
+    .step-icon { font-size:28px; margin-bottom:0.75rem; display:block; }
+    .step-name { font-size:14px; font-weight:600; color:var(--white); margin-bottom:0.5rem; }
+    .step-desc { font-size:12px; color:var(--silver); line-height:1.6; }
+
+    /* WHY */
+    .why-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; }
+    .why-item { display:flex; gap:1rem; align-items:flex-start; padding:1.5rem; background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px; transition:border-color 0.3s; }
+    .why-item:hover { border-color:rgba(0,200,224,0.3); }
+    .why-icon { font-size:24px; flex-shrink:0; width:44px; height:44px; background:rgba(0,200,224,0.1); border:1px solid rgba(0,200,224,0.2); border-radius:8px; display:flex; align-items:center; justify-content:center; }
+    .why-text h4 { font-size:15px; font-weight:600; color:var(--white); margin-bottom:0.4rem; }
+    .why-text p { font-size:13px; color:var(--silver); line-height:1.6; }
+
+    /* CONTACT */
+    .contact-wrap { background:var(--card-bg); border:1px solid var(--card-border); border-radius:12px; padding:3rem; display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
+    .contact-info h3 { font-family:'Orbitron',monospace; font-size:1.2rem; color:var(--white); margin-bottom:1rem; }
+    .contact-info p { font-size:14px; color:var(--silver); line-height:1.8; margin-bottom:1.5rem; }
+    .contact-detail { display:flex; align-items:center; gap:10px; margin-bottom:0.75rem; font-size:14px; color:var(--silver); }
+    .contact-detail .icon { color:var(--cyan); }
+    .tags-box { background:rgba(0,200,224,0.08); border:1px solid rgba(0,200,224,0.2); border-radius:8px; padding:1rem; margin-top:1rem; }
+    .tags-label { font-family:'Orbitron',monospace; font-size:10px; color:var(--cyan); letter-spacing:2px; margin-bottom:0.5rem; }
+    .tags-wrap { display:flex; gap:0.5rem; flex-wrap:wrap; }
+    .tag-cyan { background:rgba(0,200,224,0.15); color:#00C8E0; font-size:11px; padding:4px 10px; border-radius:4px; border:1px solid rgba(0,200,224,0.3); }
+    .tag-gray { background:rgba(74,98,128,0.2); color:#A0B4C8; font-size:11px; padding:4px 10px; border-radius:4px; border:1px solid rgba(74,98,128,0.3); }
+    .contact-form { display:flex; flex-direction:column; gap:1rem; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .form-field input,.form-field textarea,.form-field select {
+      width:100%; background:rgba(255,255,255,0.04); border:1px solid var(--card-border);
+      border-radius:6px; color:var(--white); padding:12px 14px; font-size:14px;
+      font-family:'Inter',sans-serif; transition:border-color 0.2s; outline:none;
+    }
+    .form-field input:focus,.form-field textarea:focus,.form-field select:focus { border-color:var(--cyan); }
+    .form-field input::placeholder,.form-field textarea::placeholder { color:var(--steel); }
+    .form-field select option { background:var(--navy-deep); color:var(--white); }
+    .form-field textarea { min-height:100px; resize:vertical; }
+    .form-status { font-size:13px; text-align:center; padding:8px; border-radius:6px; display:none; }
+    .form-status.success { background:rgba(0,200,100,0.1); border:1px solid rgba(0,200,100,0.3); color:#4ddb8c; display:block; }
+    .form-status.error   { background:rgba(200,50,50,0.1);  border:1px solid rgba(200,50,50,0.3);  color:#f08080; display:block; }
+    .btn-submit { width:100%; padding:14px; background:var(--cyan); color:var(--bg); border:none; border-radius:4px; font-size:14px; font-weight:600; cursor:pointer; font-family:'Inter',sans-serif; letter-spacing:0.5px; transition:all 0.2s; }
+    .btn-submit:hover { background:#00e0f8; }
+    .btn-submit:disabled { opacity:0.6; cursor:not-allowed; }
+
+    /* DIVIDER */
+    .divider { position:relative; z-index:1; border:none; border-top:1px solid var(--card-border); margin:0; }
+
+    /* FOOTER */
+    footer { position:relative; z-index:1; border-top:1px solid var(--card-border); background:var(--card-bg); padding:2.5rem 2rem; }
+    .footer-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:2rem; align-items:start; }
+    .footer-brand .logo-text { font-size:14px; }
+    .footer-brand .logo-sub { font-size:8px; }
+    .footer-brand p { font-size:12px; color:var(--steel); line-height:1.7; margin-top:0.75rem; }
+    .footer-col h5 { font-family:'Orbitron',monospace; font-size:10px; letter-spacing:2px; color:var(--cyan); margin-bottom:1rem; }
+    .footer-col a { display:block; font-size:13px; color:var(--steel); text-decoration:none; margin-bottom:0.4rem; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--silver); }
+    .footer-bottom { max-width:1100px; margin:1.5rem auto 0; padding-top:1.5rem; border-top:1px solid var(--card-border); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; }
+    .footer-copy { font-size:12px; color:var(--steel); }
+    .footer-domain { font-family:'Orbitron',monospace; font-size:12px; color:var(--cyan); }
+
+    /* BACK TO TOP */
+    .back-to-top {
+      position:fixed; bottom:5.5rem; right:1.5rem; z-index:200;
+      width:42px; height:42px; border-radius:50%;
+      background:var(--card-bg); border:1px solid var(--card-border);
+      color:var(--silver); font-size:18px; cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+      opacity:0; pointer-events:none; transition:all 0.3s;
+    }
+    .back-to-top.visible { opacity:1; pointer-events:auto; }
+    .back-to-top:hover { border-color:var(--cyan); color:var(--cyan); }
+
+    /* WHATSAPP FLOAT */
+    .wa-float {
+      position:fixed; bottom:1.5rem; right:1.5rem; z-index:200;
+      width:52px; height:52px; border-radius:50%;
+      background:#25D366; border:none; cursor:pointer;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 16px rgba(37,211,102,0.35);
+      transition:transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-float:hover { transform:scale(1.08); box-shadow:0 6px 24px rgba(37,211,102,0.5); }
+    .wa-float svg { width:28px; height:28px; }
+    .wa-tooltip {
+      position:fixed; bottom:2rem; right:5.5rem; z-index:200;
+      background:var(--card-bg); border:1px solid var(--card-border);
+      border-radius:6px; padding:8px 14px; font-size:13px; color:var(--white);
+      white-space:nowrap; opacity:0; pointer-events:none; transition:opacity 0.2s;
+    }
+    .wa-float:hover + .wa-tooltip, .wa-tooltip:hover { opacity:1; }
+
+    /* RESPONSIVE */
+    @media(max-width:900px) {
+      .services-grid { grid-template-columns:repeat(2,1fr); }
+      .portfolio-grid { grid-template-columns:repeat(2,1fr); }
+      .process-grid { grid-template-columns:repeat(2,1fr); }
+      .hero-visual { display:none; }
+      .footer-inner { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:640px) {
+      .services-grid,.portfolio-grid { grid-template-columns:1fr; }
+      .why-grid { grid-template-columns:1fr; }
+      .contact-wrap { grid-template-columns:1fr; padding:1.5rem; }
+      .stats-inner { grid-template-columns:repeat(2,1fr); }
+      .nav-links,.nav-cta,.lang-switcher { display:none; }
+      .hamburger { display:flex; }
+      .process-grid { grid-template-columns:1fr 1fr; }
+      .footer-inner { grid-template-columns:1fr; }
+      .footer-bottom { flex-direction:column; text-align:center; }
+      .form-row { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <svg class="logo-shield" viewBox="0 0 120 140" fill="none">
+      <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#1B2A4A" stroke="#4A6280" stroke-width="4"/>
+      <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#0D1B35"/>
+      <path d="M60 18 L60 124 Q22 105 22 72 L22 34 Z" fill="#1B2A4A"/>
+      <circle cx="52" cy="72" r="8" fill="none" stroke="#F0F4F8" stroke-width="2.5"/>
+      <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#F0F4F8"/>
+      <line x1="56" y1="71" x2="63" y2="71" stroke="#F0F4F8" stroke-width="2.5"/>
+      <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#F0F4F8" stroke-width="2"/>
+      <line x1="66" y1="71" x2="66" y2="83" stroke="#F0F4F8" stroke-width="2"/>
+      <circle cx="66" cy="84" r="3" fill="#F0F4F8"/>
+    </svg>
+    <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="#process" data-i18n="nav.process">Process</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div class="lang-switcher">
+      <button class="lang-btn active" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" onclick="setLang('vi')">VI</button>
+    </div>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-i18n="nav.cta">Get Consulting</button>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMobileMenu()" data-i18n="nav.services">Services</a>
+  <a href="#portfolio" onclick="closeMobileMenu()" data-i18n="nav.portfolio">Portfolio</a>
+  <a href="#process" onclick="closeMobileMenu()" data-i18n="nav.process">Process</a>
+  <a href="#about" onclick="closeMobileMenu()" data-i18n="nav.about">About</a>
+  <a href="#contact" onclick="closeMobileMenu()" data-i18n="nav.contact">Contact</a>
+  <div class="mobile-lang">
+    <button class="lang-btn active" onclick="setLang('en');closeMobileMenu()">EN</button>
+    <button class="lang-btn" onclick="setLang('vi');closeMobileMenu()">VI</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero-wrap">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal" data-i18n="hero.eyebrow">SPECIALIST DESIGN CONSULTANT</div>
+      <h1 class="hero-title reveal reveal-delay-1">
+        <span data-i18n="hero.title1">Solutions</span><br>
+        <span class="accent">ICT · ELV</span><br>
+        <span class="accent">Audio Visual</span>
+      </h1>
+      <p class="hero-subtitle reveal reveal-delay-2" data-i18n="hero.subtitle">INTELLIGENT BUILDING SYSTEMS</p>
+      <p class="hero-desc reveal reveal-delay-3" data-i18n="hero.desc">Consulting and design of low-voltage, ICT and audio-visual systems for commercial, office and industrial buildings in Vietnam.</p>
+      <div class="hero-actions reveal reveal-delay-4">
+        <a href="#services" class="btn-primary" data-i18n="hero.btn1">Explore Services</a>
+        <a href="#contact" class="btn-outline" data-i18n="hero.btn2">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;" role="img" aria-label="System diagram">
+        <circle cx="200" cy="200" r="170" fill="none" stroke="rgba(0,200,224,0.1)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="130" fill="none" stroke="rgba(0,200,224,0.08)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="90" fill="none" stroke="rgba(0,200,224,0.12)" stroke-width="1.5"/>
+        <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(0,200,224,0.2)" stroke-width="1" stroke-dasharray="8 12">
+          <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="20s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="200" cy="200" r="110" fill="none" stroke="rgba(0,200,224,0.15)" stroke-width="1" stroke-dasharray="4 8">
+          <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="15s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="200" cy="200" r="52" fill="rgba(13,27,53,0.9)" stroke="rgba(0,200,224,0.4)" stroke-width="1.5"/>
+        <text x="200" y="196" text-anchor="middle" fill="#00C8E0" font-family="'Orbitron',monospace" font-size="11" font-weight="700">PAUL LE</text>
+        <text x="200" y="212" text-anchor="middle" fill="#4A6280" font-family="'Orbitron',monospace" font-size="8">CONSULTANT</text>
+        <circle cx="200" cy="50" r="32" fill="rgba(13,27,53,0.95)" stroke="rgba(0,200,224,0.5)" stroke-width="1.5"/><text x="200" y="46" text-anchor="middle" fill="#00C8E0" font-family="'Orbitron',monospace" font-size="9" font-weight="700">ICT</text><text x="200" y="59" text-anchor="middle" fill="#4A6280" font-size="8" font-family="'Inter',sans-serif">Network</text><line x1="200" y1="82" x2="200" y2="148" stroke="rgba(0,200,224,0.25)" stroke-width="1"/>
+        <circle cx="352" cy="145" r="32" fill="rgba(13,27,53,0.95)" stroke="rgba(0,200,224,0.5)" stroke-width="1.5"/><text x="352" y="141" text-anchor="middle" fill="#00C8E0" font-family="'Orbitron',monospace" font-size="9" font-weight="700">ELV</text><text x="352" y="154" text-anchor="middle" fill="#4A6280" font-size="8" font-family="'Inter',sans-serif">Security</text><line x1="320" y1="163" x2="252" y2="178" stroke="rgba(0,200,224,0.25)" stroke-width="1"/>
+        <circle cx="352" cy="255" r="32" fill="rgba(13,27,53,0.95)" stroke="rgba(0,200,224,0.5)" stroke-width="1.5"/><text x="352" y="251" text-anchor="middle" fill="#00C8E0" font-family="'Orbitron',monospace" font-size="9" font-weight="700">AV</text><text x="352" y="264" text-anchor="middle" fill="#4A6280" font-size="8" font-family="'Inter',sans-serif">Display</text><line x1="320" y1="237" x2="252" y2="218" stroke="rgba(0,200,224,0.25)" stroke-width="1"/>
+        <circle cx="200" cy="350" r="32" fill="rgba(13,27,53,0.95)" stroke="rgba(74,98,128,0.5)" stroke-width="1.5"/><text x="200" y="346" text-anchor="middle" fill="#A0B4C8" font-family="'Orbitron',monospace" font-size="8" font-weight="700">FIRE</text><text x="200" y="359" text-anchor="middle" fill="#4A6280" font-size="8" font-family="'Inter',sans-serif">Alarm</text><line x1="200" y1="318" x2="200" y2="252" stroke="rgba(74,98,128,0.25)" stroke-width="1"/>
+        <circle cx="48" cy="255" r="32" fill="rgba(13,27,53,0.95)" stroke="rgba(74,98,128,0.5)" stroke-width="1.5"/><text x="48" y="251" text-anchor="middle" fill="#A0B4C8" font-family="'Orbitron',monospace" font-size="8" font-weight="700">BMS</text><text x="48" y="264" text-anchor="middle" fill="#4A6280" font-size="8" font-family="'Inter',sans-serif">Control</text><line x1="80" y1="237" x2="148" y2="218" stroke="rgba(74,98,128,0.25)" stroke-width="1"/>
+        <circle cx="48" cy="145" r="32" fill="rgba(13,27,53,0.95)" stroke="rgba(74,98,128,0.5)" stroke-width="1.5"/><text x="48" y="141" text-anchor="middle" fill="#A0B4C8" font-family="'Orbitron',monospace" font-size="8" font-weight="700">CCTV</text><text x="48" y="154" text-anchor="middle" fill="#4A6280" font-size="8" font-family="'Inter',sans-serif">Camera</text><line x1="80" y1="163" x2="148" y2="178" stroke="rgba(74,98,128,0.25)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="6" fill="#00C8E0" opacity="0.9"><animate attributeName="r" from="6" to="18" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" from="0.9" to="0" dur="2s" repeatCount="indefinite"/></circle>
+        <circle cx="200" cy="200" r="5" fill="#00C8E0"/>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item reveal"><div class="stat-num">15+</div><div class="stat-label" data-i18n="stats.exp">YEARS EXPERIENCE</div></div>
+    <div class="stat-item reveal reveal-delay-1"><div class="stat-num">200+</div><div class="stat-label" data-i18n="stats.projects">PROJECTS COMPLETED</div></div>
+    <div class="stat-item reveal reveal-delay-2"><div class="stat-num">50+</div><div class="stat-label" data-i18n="stats.clients">CLIENTS</div></div>
+    <div class="stat-item reveal reveal-delay-3"><div class="stat-num">6</div><div class="stat-label" data-i18n="stats.disciplines">DISCIPLINES</div></div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-eyebrow reveal" data-i18n="svc.eyebrow">// CONSULTING SERVICES</div>
+  <h2 class="section-title reveal" data-i18n="svc.title">Our Specialisations</h2>
+  <p class="section-desc reveal" data-i18n="svc.desc">End-to-end technical design and consulting for intelligent building systems.</p>
+  <div class="tab-bar reveal">
+    <button class="tab-btn active" onclick="showTab('all',this)" data-i18n="svc.tab.all">All</button>
+    <button class="tab-btn" onclick="showTab('ict',this)">ICT</button>
+    <button class="tab-btn" onclick="showTab('elv',this)">ELV</button>
+    <button class="tab-btn" onclick="showTab('av',this)">Audio Visual</button>
+  </div>
+  <div id="tab-all" class="tab-content active">
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-icon">🌐</div><div class="service-tag">ICT SYSTEMS</div><div class="service-name" data-i18n="svc.ict.name">Network & ICT Infrastructure</div><div class="service-desc" data-i18n="svc.ict.desc">LAN/WAN network design, data centres, integrated telecom systems.</div><ul class="service-items"><li>Structured Cabling System</li><li>Data Center Design</li><li>Wi-Fi & Network Infrastructure</li><li>VoIP & UC Systems</li></ul></div>
+      <div class="service-card reveal reveal-delay-1"><div class="service-icon">🔒</div><div class="service-tag">ELV SECURITY</div><div class="service-name" data-i18n="svc.sec.name">Security & Surveillance</div><div class="service-desc" data-i18n="svc.sec.desc">IP CCTV cameras, access control, intrusion detection and building security.</div><ul class="service-items"><li>IP CCTV Surveillance</li><li>Access Control System</li><li>Intrusion Detection</li><li>Intercom & Video Door</li></ul></div>
+      <div class="service-card reveal reveal-delay-2"><div class="service-icon">🔊</div><div class="service-tag">AUDIO VISUAL</div><div class="service-name" data-i18n="svc.av.name">Audio & Visual Systems</div><div class="service-desc" data-i18n="svc.av.desc">Audio, projection and LED display systems for conference rooms and public spaces.</div><ul class="service-items"><li>Conference Room AV</li><li>Digital Signage</li><li>Public Address System</li><li>LED Video Wall</li></ul></div>
+      <div class="service-card reveal"><div class="service-icon">🔥</div><div class="service-tag">ELV SAFETY</div><div class="service-name" data-i18n="svc.fire.name">Fire Alarm & Safety</div><div class="service-desc" data-i18n="svc.fire.desc">Automatic fire detection and alarm systems to international standards.</div><ul class="service-items"><li>Fire Alarm System</li><li>PA Evacuation System</li><li>Gas Suppression Design</li><li>Emergency Lighting</li></ul></div>
+      <div class="service-card reveal reveal-delay-1"><div class="service-icon">🏢</div><div class="service-tag">BUILDING MGMT</div><div class="service-name" data-i18n="svc.bms.name">BMS & Building Automation</div><div class="service-desc" data-i18n="svc.bms.desc">Smart building management integrating HVAC, lighting and security controls.</div><ul class="service-items"><li>BMS Integration</li><li>Smart Lighting Control</li><li>HVAC Control</li><li>Energy Management</li></ul></div>
+      <div class="service-card reveal reveal-delay-2"><div class="service-icon">📋</div><div class="service-tag">CONSULTING</div><div class="service-name" data-i18n="svc.con.name">Consulting & Cost Planning</div><div class="service-desc" data-i18n="svc.con.desc">Technical drawings, specifications, BOQ cost estimates and tender support.</div><ul class="service-items"><li>Technical Specification</li><li>BOQ & Cost Estimate</li><li>Tender Support</li><li>Site Supervision</li></ul></div>
+    </div>
+  </div>
+  <div id="tab-ict" class="tab-content"><div class="services-grid" style="grid-template-columns:repeat(2,1fr)"><div class="service-card"><div class="service-icon">🌐</div><div class="service-tag">ICT</div><div class="service-name" data-i18n="svc.ict.name">Network & ICT Infrastructure</div><div class="service-desc" data-i18n="svc.ict2.desc">LAN/WAN, Data Centre, Wi-Fi, VoIP to TIA/ISO standards.</div></div><div class="service-card"><div class="service-icon">☁️</div><div class="service-tag">ICT</div><div class="service-name" data-i18n="svc.dc.name">Data Centre Design</div><div class="service-desc" data-i18n="svc.dc.desc">Server room design, cooling, UPS and structured cabling.</div></div></div></div>
+  <div id="tab-elv" class="tab-content"><div class="services-grid"><div class="service-card"><div class="service-icon">🔒</div><div class="service-tag">ELV</div><div class="service-name" data-i18n="svc.sec.name">Security & Surveillance</div><div class="service-desc">IP CCTV, Access Control, Intercom, Intrusion Detection.</div></div><div class="service-card"><div class="service-icon">🔥</div><div class="service-tag">ELV</div><div class="service-name" data-i18n="svc.fire.name">Fire Alarm & Safety</div><div class="service-desc" data-i18n="svc.fire2.desc">Fire Alarm, PA Evacuation, Gas Suppression to NFPA/EN54.</div></div><div class="service-card"><div class="service-icon">🏢</div><div class="service-tag">ELV</div><div class="service-name" data-i18n="svc.bms.name">BMS & Building Automation</div><div class="service-desc" data-i18n="svc.bms2.desc">Smart BMS integrating HVAC, lighting and security.</div></div></div></div>
+  <div id="tab-av" class="tab-content"><div class="services-grid" style="grid-template-columns:repeat(2,1fr)"><div class="service-card"><div class="service-icon">🔊</div><div class="service-tag">AUDIO VISUAL</div><div class="service-name" data-i18n="svc.conf.name">Conference & Meeting Rooms</div><div class="service-desc" data-i18n="svc.conf.desc">AV design for boardrooms, auditoriums with Crestron/AMX control.</div></div><div class="service-card"><div class="service-icon">📺</div><div class="service-tag">AUDIO VISUAL</div><div class="service-name" data-i18n="svc.sign.name">Digital Signage & LED Wall</div><div class="service-desc" data-i18n="svc.sign.desc">Information displays and LED video walls for lobbies and retail.</div></div></div></div>
+</section>
+
+<hr class="divider">
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section-eyebrow reveal" data-i18n="port.eyebrow">// SELECTED PROJECTS</div>
+  <h2 class="section-title reveal" data-i18n="port.title">Project Portfolio</h2>
+  <p class="section-desc reveal" data-i18n="port.desc">A selection of completed consulting and design projects across Vietnam.</p>
+  <div class="portfolio-filter reveal">
+    <button class="filter-btn active" onclick="filterPortfolio('all',this)" data-i18n="port.filter.all">All Projects</button>
+    <button class="filter-btn" onclick="filterPortfolio('ict',this)">ICT</button>
+    <button class="filter-btn" onclick="filterPortfolio('elv',this)">ELV</button>
+    <button class="filter-btn" onclick="filterPortfolio('av',this)">Audio Visual</button>
+  </div>
+  <div class="portfolio-grid">
+    <div class="portfolio-card reveal" data-cat="ict">
+      <div class="portfolio-thumb portfolio-thumb-ict">🏢<span class="portfolio-thumb-tag tag-ict">ICT</span></div>
+      <div class="portfolio-info">
+        <div class="portfolio-name" data-i18n="port.p1.name">Grade-A Office Tower – ICT Infrastructure</div>
+        <div class="portfolio-meta"><span>📍 <span data-i18n="port.p1.loc">Ho Chi Minh City</span></span><span>2023</span></div>
+        <div class="portfolio-scope" data-i18n="port.p1.scope">Structured cabling Cat6A, data centre, Wi-Fi, VoIP for 25-storey commercial building.</div>
+        <div class="portfolio-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div></div>
+      </div>
+    </div>
+    <div class="portfolio-card reveal reveal-delay-1" data-cat="elv">
+      <div class="portfolio-thumb portfolio-thumb-elv">🏭<span class="portfolio-thumb-tag tag-elv">ELV</span></div>
+      <div class="portfolio-info">
+        <div class="portfolio-name" data-i18n="port.p2.name">Industrial Park – ELV & Security</div>
+        <div class="portfolio-meta"><span>📍 <span data-i18n="port.p2.loc">Binh Duong</span></span><span>2023</span></div>
+        <div class="portfolio-scope" data-i18n="port.p2.scope">CCTV 200+ cameras, access control, fire alarm, PA system for 50-ha industrial zone.</div>
+        <div class="portfolio-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div></div>
+      </div>
+    </div>
+    <div class="portfolio-card reveal reveal-delay-2" data-cat="av">
+      <div class="portfolio-thumb portfolio-thumb-av">🎬<span class="portfolio-thumb-tag tag-av">AV</span></div>
+      <div class="portfolio-info">
+        <div class="portfolio-name" data-i18n="port.p3.name">Corporate HQ – AV & Conference</div>
+        <div class="portfolio-meta"><span>📍 <span data-i18n="port.p3.loc">Ho Chi Minh City</span></span><span>2022</span></div>
+        <div class="portfolio-scope" data-i18n="port.p3.scope">18 meeting rooms, boardroom, auditorium AV with Crestron control integration.</div>
+        <div class="portfolio-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div></div>
+      </div>
+    </div>
+    <div class="portfolio-card reveal" data-cat="elv">
+      <div class="portfolio-thumb portfolio-thumb-elv">🏥<span class="portfolio-thumb-tag tag-elv">ELV</span></div>
+      <div class="portfolio-info">
+        <div class="portfolio-name" data-i18n="port.p4.name">Hospital – Fire Alarm & BMS</div>
+        <div class="portfolio-meta"><span>📍 <span data-i18n="port.p4.loc">Hanoi</span></span><span>2022</span></div>
+        <div class="portfolio-scope" data-i18n="port.p4.scope">Addressable fire alarm, nurse call, BMS integration for 500-bed hospital complex.</div>
+        <div class="portfolio-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div></div>
+      </div>
+    </div>
+    <div class="portfolio-card reveal reveal-delay-1" data-cat="ict">
+      <div class="portfolio-thumb portfolio-thumb-ict">🏨<span class="portfolio-thumb-tag tag-ict">ICT</span></div>
+      <div class="portfolio-info">
+        <div class="portfolio-name" data-i18n="port.p5.name">5-Star Hotel – ICT & AV</div>
+        <div class="portfolio-meta"><span>📍 <span data-i18n="port.p5.loc">Da Nang</span></span><span>2021</span></div>
+        <div class="portfolio-scope" data-i18n="port.p5.scope">Full ICT infrastructure, IPTV, in-room AV, conference centre for 350-key luxury hotel.</div>
+        <div class="portfolio-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div></div>
+      </div>
+    </div>
+    <div class="portfolio-card reveal reveal-delay-2" data-cat="av">
+      <div class="portfolio-thumb portfolio-thumb-av">🎓<span class="portfolio-thumb-tag tag-av">AV</span></div>
+      <div class="portfolio-info">
+        <div class="portfolio-name" data-i18n="port.p6.name">University Campus – Digital Signage</div>
+        <div class="portfolio-meta"><span>📍 <span data-i18n="port.p6.loc">Ho Chi Minh City</span></span><span>2021</span></div>
+        <div class="portfolio-scope" data-i18n="port.p6.scope">Campus-wide digital signage network, lecture hall AV, LED video wall at main lobby.</div>
+        <div class="portfolio-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-eyebrow reveal" data-i18n="proc.eyebrow">// OUR PROCESS</div>
+  <h2 class="section-title reveal" data-i18n="proc.title">From Brief to Complete Design</h2>
+  <p class="section-desc reveal" data-i18n="proc.desc">A professional, transparent and efficient design consulting workflow.</p>
+  <div class="process-grid">
+    <div class="process-step reveal"><div class="step-num">01</div><span class="step-icon">💬</span><div class="step-name" data-i18n="proc.s1.name">Survey & Consult</div><div class="step-desc" data-i18n="proc.s1.desc">Understand requirements, survey existing conditions and propose the right technical solution.</div></div>
+    <div class="process-step reveal reveal-delay-1"><div class="step-num">02</div><span class="step-icon">📐</span><div class="step-name" data-i18n="proc.s2.name">Concept Design</div><div class="step-desc" data-i18n="proc.s2.desc">Develop concept design documents, schematic diagrams and system layouts.</div></div>
+    <div class="process-step reveal reveal-delay-2"><div class="step-num">03</div><span class="step-icon">📄</span><div class="step-name" data-i18n="proc.s3.name">Technical Documents</div><div class="step-desc" data-i18n="proc.s3.desc">Construction drawings, technical specifications, BOQ and cost estimates.</div></div>
+    <div class="process-step reveal reveal-delay-3"><div class="step-num">04</div><span class="step-icon">✅</span><div class="step-name" data-i18n="proc.s4.name">Supervision & Handover</div><div class="step-desc" data-i18n="proc.s4.desc">Tender support, construction supervision and system commissioning and handover.</div></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-eyebrow reveal" data-i18n="why.eyebrow">// WHY CHOOSE US</div>
+  <h2 class="section-title reveal" data-i18n="why.title">Our Commitment</h2>
+  <p class="section-desc reveal" data-i18n="why.desc">Practical experience across a wide range of project types in Vietnam and the region.</p>
+  <div class="why-grid">
+    <div class="why-item reveal"><div class="why-icon">🏆</div><div class="why-text"><h4 data-i18n="why.w1.title">Independent Consultant</h4><p data-i18n="why.w1.desc">Objective advice, independent of equipment vendors — ensuring the optimum solution for the client.</p></div></div>
+    <div class="why-item reveal reveal-delay-1"><div class="why-icon">📊</div><div class="why-text"><h4 data-i18n="why.w2.title">International Standards</h4><p data-i18n="why.w2.desc">Designs comply with ANSI/TIA, ISO/IEC, NFPA, IEC, BS EN and current Vietnamese standards.</p></div></div>
+    <div class="why-item reveal reveal-delay-2"><div class="why-icon">⚡</div><div class="why-text"><h4 data-i18n="why.w3.title">Diverse Project Types</h4><p data-i18n="why.w3.desc">Offices, commercial buildings, industrial parks, hospitals, schools, hotels and data centres.</p></div></div>
+    <div class="why-item reveal reveal-delay-3"><div class="why-icon">🔗</div><div class="why-text"><h4 data-i18n="why.w4.title">Integrated Solutions</h4><p data-i18n="why.w4.desc">Multi-system ICT, ELV and AV design integrated in a unified, manageable architecture.</p></div></div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-eyebrow reveal" data-i18n="con.eyebrow">// GET IN TOUCH</div>
+  <h2 class="section-title reveal" data-i18n="con.title">Start Your Project</h2>
+  <p class="section-desc reveal" data-i18n="con.desc">Send your project details for a free initial consultation.</p>
+  <div class="contact-wrap reveal">
+    <div class="contact-info">
+      <h3>Paul Le Consultant</h3>
+      <p data-i18n="con.info.desc">Expert consulting for ICT, ELV and Audio Visual systems for construction projects across Vietnam.</p>
+      <div class="contact-detail"><span class="icon">🌐</span> elvconsultant.com</div>
+      <div class="contact-detail"><span class="icon">📧</span> paul@elvconsultant.com</div>
+      <div class="contact-detail"><span class="icon">📍</span><span data-i18n="con.info.city">Ho Chi Minh City, Vietnam</span></div>
+      <div class="contact-detail"><span class="icon">📱</span> +84 xxx xxx xxx</div>
+      <div class="tags-box">
+        <div class="tags-label" data-i18n="con.disciplines">DISCIPLINES</div>
+        <div class="tags-wrap">
+          <span class="tag-cyan">ICT</span><span class="tag-cyan">ELV</span><span class="tag-cyan">Audio Visual</span>
+          <span class="tag-gray">Fire Alarm</span><span class="tag-gray">BMS</span><span class="tag-gray">CCTV</span>
+        </div>
+      </div>
+    </div>
+    <!-- FORMSPREE FORM — replace YOUR_FORM_ID with actual ID from formspree.io -->
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <div class="form-field"><input type="text" name="name" data-i18n-placeholder="con.form.name" placeholder="Full name *" required></div>
+        <div class="form-field"><input type="email" name="email" data-i18n-placeholder="con.form.email" placeholder="Email *" required></div>
+      </div>
+      <div class="form-field"><input type="text" name="project" data-i18n-placeholder="con.form.project" placeholder="Project / Building name"></div>
+      <div class="form-field"><input type="tel" name="phone" data-i18n-placeholder="con.form.phone" placeholder="Phone / WhatsApp"></div>
+      <div class="form-field">
+        <select name="service" id="serviceSelect">
+          <option value="" disabled selected data-i18n="con.form.select">Select service type</option>
+          <option data-i18n="con.form.opt1">ICT – Network & ICT Infrastructure</option>
+          <option data-i18n="con.form.opt2">ELV – Security & Surveillance</option>
+          <option data-i18n="con.form.opt3">ELV – Fire Alarm & Safety</option>
+          <option data-i18n="con.form.opt4">ELV – BMS & Building Automation</option>
+          <option data-i18n="con.form.opt5">Audio Visual</option>
+          <option data-i18n="con.form.opt6">Full Consulting (ICT + ELV + AV)</option>
+        </select>
+      </div>
+      <div class="form-field"><textarea name="message" data-i18n-placeholder="con.form.msg" placeholder="Brief description of your project..." required></textarea></div>
+      <input type="hidden" name="_subject" value="New consultation request – elvconsultant.com">
+      <div class="form-status" id="formStatus"></div>
+      <button type="submit" class="btn-submit" id="submitBtn" data-i18n="con.form.submit">Send Consultation Request</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.75rem;">
+        <svg width="28" height="32" viewBox="0 0 120 140" fill="none">
+          <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#1B2A4A" stroke="#4A6280" stroke-width="4"/>
+          <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#0D1B35"/>
+          <path d="M60 18 L60 124 Q22 105 22 72 L22 34 Z" fill="#1B2A4A"/>
+          <circle cx="52" cy="72" r="8" fill="none" stroke="#F0F4F8" stroke-width="2.5"/>
+          <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#F0F4F8"/>
+          <line x1="56" y1="71" x2="63" y2="71" stroke="#F0F4F8" stroke-width="2.5"/>
+          <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#F0F4F8" stroke-width="2"/>
+          <line x1="66" y1="71" x2="66" y2="83" stroke="#F0F4F8" stroke-width="2"/>
+          <circle cx="66" cy="84" r="3" fill="#F0F4F8"/>
+        </svg>
+        <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
+      </div>
+      <p data-i18n="footer.brand">Independent consulting and design for ICT, ELV & AV building systems in Vietnam.</p>
+    </div>
+    <div class="footer-col">
+      <h5 data-i18n="footer.col1.title">SERVICES</h5>
+      <a href="#services">ICT Infrastructure</a>
+      <a href="#services">ELV & Security</a>
+      <a href="#services">Audio Visual</a>
+      <a href="#services">Fire Alarm</a>
+      <a href="#services">BMS & Automation</a>
+    </div>
+    <div class="footer-col">
+      <h5 data-i18n="footer.col2.title">CONTACT</h5>
+      <a href="mailto:paul@elvconsultant.com">paul@elvconsultant.com</a>
+      <a href="https://wa.me/84xxxxxxxxx" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#portfolio" data-i18n="footer.portfolio">View Portfolio</a>
+      <a href="#contact" data-i18n="footer.consult">Free Consultation</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy" data-i18n="footer.copy">© 2025 Paul Le Consultant · ICT, ELV & AV Design Consulting in Vietnam</span>
+    <span class="footer-domain">elvconsultant.com</span>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- WHATSAPP FLOAT -->
+<button class="wa-float" aria-label="Chat on WhatsApp" onclick="window.open('https://wa.me/84xxxxxxxxx','_blank')">
+  <svg viewBox="0 0 32 32" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 2C8.27 2 2 8.27 2 16c0 2.44.65 4.73 1.78 6.72L2 30l7.47-1.74A13.93 13.93 0 0016 30c7.73 0 14-6.27 14-14S23.73 2 16 2zm0 25.5a11.44 11.44 0 01-5.83-1.6l-.41-.25-4.44 1.04 1.05-4.31-.27-.44A11.5 11.5 0 1116 27.5zm6.32-8.62c-.35-.17-2.06-1.01-2.38-1.13-.32-.12-.55-.17-.78.17-.23.35-.9 1.13-1.1 1.36-.2.23-.4.26-.75.09-.35-.17-1.47-.54-2.8-1.72-1.03-.92-1.73-2.05-1.93-2.4-.2-.35-.02-.54.15-.71.16-.16.35-.4.52-.6.17-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.17-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6H10c-.2 0-.52.07-.8.35-.28.28-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.17-1.43-.07-.12-.28-.2-.63-.35z"/>
+  </svg>
+</button>
+<div class="wa-tooltip" data-i18n="wa.tooltip">Chat on WhatsApp</div>
+
+<script>
+// ── i18n ──────────────────────────────────────────────────────
+const i18n = {
+  en: {
+    "nav.services":"Services","nav.portfolio":"Portfolio","nav.process":"Process","nav.about":"About","nav.contact":"Contact","nav.cta":"Get Consulting",
+    "hero.eyebrow":"SPECIALIST DESIGN CONSULTANT","hero.title1":"Solutions","hero.subtitle":"INTELLIGENT BUILDING SYSTEMS",
+    "hero.desc":"Consulting and design of low-voltage, ICT and audio-visual systems for commercial, office and industrial buildings in Vietnam.",
+    "hero.btn1":"Explore Services","hero.btn2":"Get in Touch",
+    "stats.exp":"YEARS EXPERIENCE","stats.projects":"PROJECTS COMPLETED","stats.clients":"CLIENTS","stats.disciplines":"DISCIPLINES",
+    "svc.eyebrow":"// CONSULTING SERVICES","svc.title":"Our Specialisations","svc.desc":"End-to-end technical design and consulting for intelligent building systems.","svc.tab.all":"All",
+    "svc.ict.name":"Network & ICT Infrastructure","svc.ict.desc":"LAN/WAN network design, data centres, integrated telecom systems.","svc.ict2.desc":"LAN/WAN, Data Centre, Wi-Fi, VoIP to TIA/ISO standards.",
+    "svc.dc.name":"Data Centre Design","svc.dc.desc":"Server room design, cooling, UPS and structured cabling.",
+    "svc.sec.name":"Security & Surveillance","svc.sec.desc":"IP CCTV cameras, access control, intrusion detection and building security.",
+    "svc.av.name":"Audio & Visual Systems","svc.av.desc":"Audio, projection and LED display systems for conference rooms and public spaces.",
+    "svc.fire.name":"Fire Alarm & Safety","svc.fire.desc":"Automatic fire detection and alarm systems to international standards.","svc.fire2.desc":"Fire Alarm, PA Evacuation, Gas Suppression to NFPA/EN54.",
+    "svc.bms.name":"BMS & Building Automation","svc.bms.desc":"Smart building management integrating HVAC, lighting and security controls.","svc.bms2.desc":"Smart BMS integrating HVAC, lighting and security.",
+    "svc.con.name":"Consulting & Cost Planning","svc.con.desc":"Technical drawings, specifications, BOQ cost estimates and tender support.",
+    "svc.conf.name":"Conference & Meeting Rooms","svc.conf.desc":"AV design for boardrooms, auditoriums with Crestron/AMX control.",
+    "svc.sign.name":"Digital Signage & LED Wall","svc.sign.desc":"Information displays and LED video walls for lobbies and retail.",
+    "port.eyebrow":"// SELECTED PROJECTS","port.title":"Project Portfolio","port.desc":"A selection of completed consulting and design projects across Vietnam.",
+    "port.filter.all":"All Projects",
+    "port.p1.name":"Grade-A Office Tower – ICT Infrastructure","port.p1.loc":"Ho Chi Minh City","port.p1.scope":"Structured cabling Cat6A, data centre, Wi-Fi, VoIP for 25-storey commercial building.",
+    "port.p2.name":"Industrial Park – ELV & Security","port.p2.loc":"Binh Duong","port.p2.scope":"CCTV 200+ cameras, access control, fire alarm, PA system for 50-ha industrial zone.",
+    "port.p3.name":"Corporate HQ – AV & Conference","port.p3.loc":"Ho Chi Minh City","port.p3.scope":"18 meeting rooms, boardroom, auditorium AV with Crestron control integration.",
+    "port.p4.name":"Hospital – Fire Alarm & BMS","port.p4.loc":"Hanoi","port.p4.scope":"Addressable fire alarm, nurse call, BMS integration for 500-bed hospital complex.",
+    "port.p5.name":"5-Star Hotel – ICT & AV","port.p5.loc":"Da Nang","port.p5.scope":"Full ICT infrastructure, IPTV, in-room AV, conference centre for 350-key luxury hotel.",
+    "port.p6.name":"University Campus – Digital Signage","port.p6.loc":"Ho Chi Minh City","port.p6.scope":"Campus-wide digital signage network, lecture hall AV, LED video wall at main lobby.",
+    "proc.eyebrow":"// OUR PROCESS","proc.title":"From Brief to Complete Design","proc.desc":"A professional, transparent and efficient design consulting workflow.",
+    "proc.s1.name":"Survey & Consult","proc.s1.desc":"Understand requirements, survey existing conditions and propose the right technical solution.",
+    "proc.s2.name":"Concept Design","proc.s2.desc":"Develop concept design documents, schematic diagrams and system layouts.",
+    "proc.s3.name":"Technical Documents","proc.s3.desc":"Construction drawings, technical specifications, BOQ and cost estimates.",
+    "proc.s4.name":"Supervision & Handover","proc.s4.desc":"Tender support, construction supervision and system commissioning and handover.",
+    "why.eyebrow":"// WHY CHOOSE US","why.title":"Our Commitment","why.desc":"Practical experience across a wide range of project types in Vietnam and the region.",
+    "why.w1.title":"Independent Consultant","why.w1.desc":"Objective advice, independent of equipment vendors — ensuring the optimum solution.",
+    "why.w2.title":"International Standards","why.w2.desc":"Designs comply with ANSI/TIA, ISO/IEC, NFPA, IEC, BS EN and Vietnamese standards.",
+    "why.w3.title":"Diverse Project Types","why.w3.desc":"Offices, commercial buildings, industrial parks, hospitals, schools, hotels and data centres.",
+    "why.w4.title":"Integrated Solutions","why.w4.desc":"Multi-system ICT, ELV and AV design integrated in a unified, manageable architecture.",
+    "con.eyebrow":"// GET IN TOUCH","con.title":"Start Your Project","con.desc":"Send your project details for a free initial consultation.",
+    "con.info.desc":"Expert consulting for ICT, ELV and Audio Visual systems for construction projects across Vietnam.",
+    "con.info.city":"Ho Chi Minh City, Vietnam","con.disciplines":"DISCIPLINES",
+    "con.form.name":"Full name *","con.form.email":"Email *","con.form.phone":"Phone / WhatsApp","con.form.project":"Project / Building name",
+    "con.form.select":"Select service type","con.form.opt1":"ICT – Network & ICT Infrastructure","con.form.opt2":"ELV – Security & Surveillance",
+    "con.form.opt3":"ELV – Fire Alarm & Safety","con.form.opt4":"ELV – BMS & Building Automation","con.form.opt5":"Audio Visual","con.form.opt6":"Full Consulting (ICT + ELV + AV)",
+    "con.form.msg":"Brief description of your project...","con.form.submit":"Send Consultation Request",
+    "form.sending":"Sending...","form.success":"Thank you! We will be in touch within 24 hours.","form.error":"Something went wrong. Please email us directly.",
+    "footer.brand":"Independent consulting and design for ICT, ELV & AV building systems in Vietnam.",
+    "footer.col1.title":"SERVICES","footer.col2.title":"CONTACT","footer.portfolio":"View Portfolio","footer.consult":"Free Consultation",
+    "footer.copy":"© 2025 Paul Le Consultant · ICT, ELV & AV Design Consulting in Vietnam",
+    "wa.tooltip":"Chat on WhatsApp"
+  },
+  vi: {
+    "nav.services":"Dịch vụ","nav.portfolio":"Dự án","nav.process":"Quy trình","nav.about":"Về chúng tôi","nav.contact":"Liên hệ","nav.cta":"Tư vấn ngay",
+    "hero.eyebrow":"CHUYÊN GIA TƯ VẤN THIẾT KẾ","hero.title1":"Giải pháp","hero.subtitle":"INTELLIGENT BUILDING SYSTEMS",
+    "hero.desc":"Tư vấn thiết kế hệ thống điện nhẹ, công nghệ thông tin và âm thanh hình ảnh cho công trình thương mại, văn phòng và khu công nghiệp tại Việt Nam.",
+    "hero.btn1":"Khám phá dịch vụ","hero.btn2":"Liên hệ tư vấn",
+    "stats.exp":"NĂM KINH NGHIỆM","stats.projects":"DỰ ÁN HOÀN THÀNH","stats.clients":"KHÁCH HÀNG","stats.disciplines":"CHUYÊN NGÀNH",
+    "svc.eyebrow":"// DỊCH VỤ TƯ VẤN","svc.title":"Chuyên ngành của chúng tôi","svc.desc":"Thiết kế và tư vấn kỹ thuật toàn diện cho hệ thống thông minh trong công trình.","svc.tab.all":"Tất cả",
+    "svc.ict.name":"Hạ tầng mạng & CNTT","svc.ict.desc":"Thiết kế hạ tầng mạng LAN/WAN, trung tâm dữ liệu, hệ thống viễn thông tích hợp.","svc.ict2.desc":"LAN/WAN, Data Center, Wi-Fi, VoIP theo tiêu chuẩn TIA/ISO.",
+    "svc.dc.name":"Thiết kế trung tâm dữ liệu","svc.dc.desc":"Thiết kế phòng server, hệ thống làm mát, nguồn điện dự phòng và structured cabling.",
+    "svc.sec.name":"An ninh & Giám sát","svc.sec.desc":"Hệ thống camera CCTV, kiểm soát ra vào, báo động và an ninh tòa nhà.",
+    "svc.av.name":"Âm thanh & Hình ảnh","svc.av.desc":"Hệ thống âm thanh, trình chiếu, màn hình LED cho phòng hội nghị và không gian công cộng.",
+    "svc.fire.name":"Báo cháy & PCCC","svc.fire.desc":"Thiết kế hệ thống phát hiện và báo cháy tự động theo tiêu chuẩn quốc tế.","svc.fire2.desc":"Fire Alarm, PA Evacuation, Gas Suppression theo NFPA/EN54.",
+    "svc.bms.name":"BMS & Tự động hóa","svc.bms.desc":"Hệ thống quản lý tòa nhà thông minh, tích hợp HVAC, chiếu sáng và an ninh.","svc.bms2.desc":"Quản lý tòa nhà thông minh, tích hợp HVAC, chiếu sáng, an ninh.",
+    "svc.con.name":"Tư vấn & Lập dự toán","svc.con.desc":"Lập hồ sơ thiết kế, bản vẽ kỹ thuật, dự toán chi phí và hỗ trợ đấu thầu.",
+    "svc.conf.name":"Phòng hội nghị & Hội thảo","svc.conf.desc":"Thiết kế AV cho boardroom, hội trường với tích hợp Crestron/AMX.",
+    "svc.sign.name":"Digital Signage & Màn LED","svc.sign.desc":"Màn hình hiển thị thông tin, video wall LED cho sảnh, khu thương mại.",
+    "port.eyebrow":"// DỰ ÁN TIÊU BIỂU","port.title":"Danh mục dự án","port.desc":"Một số dự án tư vấn thiết kế đã hoàn thành tại Việt Nam.",
+    "port.filter.all":"Tất cả dự án",
+    "port.p1.name":"Tòa nhà văn phòng hạng A – Hạ tầng ICT","port.p1.loc":"TP. Hồ Chí Minh","port.p1.scope":"Cabling Cat6A, trung tâm dữ liệu, Wi-Fi, VoIP cho tòa nhà thương mại 25 tầng.",
+    "port.p2.name":"Khu công nghiệp – ELV & An ninh","port.p2.loc":"Bình Dương","port.p2.scope":"CCTV 200+ camera, kiểm soát ra vào, báo cháy, PA cho khu công nghiệp 50ha.",
+    "port.p3.name":"Trụ sở doanh nghiệp – AV & Hội nghị","port.p3.loc":"TP. Hồ Chí Minh","port.p3.scope":"18 phòng họp, boardroom, hội trường AV với tích hợp điều khiển Crestron.",
+    "port.p4.name":"Bệnh viện – Báo cháy & BMS","port.p4.loc":"Hà Nội","port.p4.scope":"Báo cháy địa chỉ, gọi y tá, tích hợp BMS cho bệnh viện 500 giường.",
+    "port.p5.name":"Khách sạn 5 sao – ICT & AV","port.p5.loc":"Đà Nẵng","port.p5.scope":"Hạ tầng ICT, IPTV, AV phòng khách, trung tâm hội nghị cho khách sạn 350 phòng.",
+    "port.p6.name":"Trường đại học – Digital Signage","port.p6.loc":"TP. Hồ Chí Minh","port.p6.scope":"Mạng digital signage toàn campus, AV giảng đường, màn LED sảnh chính.",
+    "proc.eyebrow":"// QUY TRÌNH LÀM VIỆC","proc.title":"Từ ý tưởng đến bản vẽ hoàn chỉnh","proc.desc":"Quy trình tư vấn thiết kế chuyên nghiệp, minh bạch và hiệu quả.",
+    "proc.s1.name":"Khảo sát & Tư vấn","proc.s1.desc":"Hiểu nhu cầu, khảo sát hiện trạng và đề xuất giải pháp kỹ thuật phù hợp.",
+    "proc.s2.name":"Thiết kế cơ sở","proc.s2.desc":"Lập hồ sơ thiết kế concept, sơ đồ nguyên lý và layout hệ thống.",
+    "proc.s3.name":"Hồ sơ kỹ thuật","proc.s3.desc":"Bản vẽ thi công, thuyết minh kỹ thuật, BOQ và dự toán chi phí.",
+    "proc.s4.name":"Giám sát & Nghiệm thu","proc.s4.desc":"Hỗ trợ đấu thầu, giám sát thi công và kiểm tra nghiệm thu hệ thống.",
+    "why.eyebrow":"// VÌ SAO CHỌN CHÚNG TÔI","why.title":"Cam kết chuyên nghiệp","why.desc":"Kinh nghiệm thực tiễn trên nhiều loại hình dự án tại Việt Nam và khu vực.",
+    "why.w1.title":"Chuyên gia độc lập","why.w1.desc":"Tư vấn khách quan, không phụ thuộc vào nhà cung cấp thiết bị, đảm bảo giải pháp tối ưu.",
+    "why.w2.title":"Tiêu chuẩn quốc tế","why.w2.desc":"Thiết kế theo ANSI/TIA, ISO/IEC, NFPA, IEC, BS EN và quy chuẩn Việt Nam.",
+    "why.w3.title":"Đa dạng loại hình công trình","why.w3.desc":"Văn phòng, tòa nhà thương mại, khu công nghiệp, bệnh viện, trường học, khách sạn, TTDL.",
+    "why.w4.title":"Giải pháp tích hợp","why.w4.desc":"Tư vấn thiết kế tích hợp ICT, ELV, AV trong một kiến trúc thống nhất, dễ quản lý.",
+    "con.eyebrow":"// LIÊN HỆ TƯ VẤN","con.title":"Bắt đầu dự án của bạn","con.desc":"Gửi thông tin dự án để nhận tư vấn ban đầu miễn phí.",
+    "con.info.desc":"Chuyên gia tư vấn thiết kế hệ thống ICT, ELV và Audio Visual cho các công trình tại Việt Nam.",
+    "con.info.city":"TP. Hồ Chí Minh, Việt Nam","con.disciplines":"CHUYÊN NGÀNH",
+    "con.form.name":"Họ và tên *","con.form.email":"Email *","con.form.phone":"Điện thoại / WhatsApp","con.form.project":"Tên dự án / Công trình",
+    "con.form.select":"Loại dịch vụ cần tư vấn","con.form.opt1":"ICT – Hạ tầng mạng & CNTT","con.form.opt2":"ELV – An ninh & Giám sát",
+    "con.form.opt3":"ELV – Báo cháy & PCCC","con.form.opt4":"ELV – BMS & Tự động hóa","con.form.opt5":"Audio Visual","con.form.opt6":"Tư vấn tổng thể (ICT + ELV + AV)",
+    "con.form.msg":"Mô tả sơ bộ về dự án của bạn...","con.form.submit":"Gửi yêu cầu tư vấn",
+    "form.sending":"Đang gửi...","form.success":"Cảm ơn! Chúng tôi sẽ phản hồi trong vòng 24 giờ.","form.error":"Có lỗi xảy ra. Vui lòng liên hệ trực tiếp qua email.",
+    "footer.brand":"Tư vấn thiết kế độc lập hệ thống ICT, ELV & AV cho công trình xây dựng tại Việt Nam.",
+    "footer.col1.title":"DỊCH VỤ","footer.col2.title":"LIÊN HỆ","footer.portfolio":"Xem dự án","footer.consult":"Tư vấn miễn phí",
+    "footer.copy":"© 2025 Paul Le Consultant · Tư vấn thiết kế ICT, ELV, AV tại Việt Nam",
+    "wa.tooltip":"Nhắn tin WhatsApp"
+  }
+};
+
+let currentLang = 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  const t = i18n[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => { if(t[el.dataset.i18n]!==undefined) el.textContent = t[el.dataset.i18n]; });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { if(t[el.dataset.i18nPlaceholder]!==undefined) el.placeholder = t[el.dataset.i18nPlaceholder]; });
+  const sel = document.getElementById('serviceSelect');
+  if(sel) sel.querySelectorAll('option[data-i18n]').forEach(o => { if(t[o.dataset.i18n]) o.textContent = t[o.dataset.i18n]; });
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent===lang.toUpperCase()));
+}
+
+// ── TABS ─────────────────────────────────────────────────────
+function showTab(name, btn) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── PORTFOLIO FILTER ─────────────────────────────────────────
+function filterPortfolio(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.portfolio-card').forEach(card => {
+    card.classList.toggle('hidden', cat !== 'all' && card.dataset.cat !== cat);
+  });
+}
+
+// ── SCROLL REVEAL ────────────────────────────────────────────
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ── BACK TO TOP ──────────────────────────────────────────────
+const btt = document.getElementById('backToTop');
+window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
+
+// ── MOBILE MENU ───────────────────────────────────────────────
+document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobileMenu').classList.toggle('open'));
+function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+// ── SMOOTH SCROLL ─────────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => { e.preventDefault(); const t = document.querySelector(a.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'}); closeMobileMenu(); });
+});
+
+// ── FORMSPREE AJAX SUBMIT ─────────────────────────────────────
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const status = document.getElementById('formStatus');
+  const t = i18n[currentLang];
+  btn.disabled = true;
+  btn.textContent = t['form.sending'];
+  status.className = 'form-status';
+  try {
+    const res = await fetch(this.action, { method:'POST', body: new FormData(this), headers:{'Accept':'application/json'} });
+    if(res.ok) {
+      status.textContent = t['form.success'];
+      status.className = 'form-status success';
+      this.reset();
+    } else {
+      throw new Error();
+    }
+  } catch {
+    status.textContent = t['form.error'];
+    status.className = 'form-status error';
+  }
+  btn.disabled = false;
+  btn.textContent = t['con.form.submit'];
+});
+
+// Init
+setLang('en');
+</script>
+</body>
+</html>
