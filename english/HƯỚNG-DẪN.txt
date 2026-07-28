@@ -1,0 +1,62 @@
+╔══════════════════════════════════════════════════════╗
+║   ENGLISH & PERSONA STUDIO — 2 app trong 1            ║
+║   🎓 Emma (luyện tiếng Anh)  +  🎭 Persona (nhân vật)  ║
+╚══════════════════════════════════════════════════════╝
+
+Một app duy nhất, một chỗ nhập API key dùng chung cho cả hai.
+
+
+────────────────────────────────────────────
+1) CÁCH MỞ
+────────────────────────────────────────────
+• Giải nén .zip → bấm đúp "index.html".
+• Nên dùng GOOGLE CHROME để 🎤 (nói) và 🔊 (nghe) chạy tốt.
+• Ở trên cùng có 2 thẻ chuyển qua lại:
+     🎓 Emma · Tiếng Anh     🎭 Persona · Nhân vật
+
+
+────────────────────────────────────────────
+2) NHẬP API KEY (1 lần, dùng chung cả 2)
+────────────────────────────────────────────
+Bấm nút ⚙ ở bất kỳ app nào → dán key → Lưu. Key sẽ dùng chung
+cho CẢ Emma lẫn Persona (không phải nhập 2 lần).
+
+  1. Vào:  https://console.anthropic.com/settings/keys
+  2. Đăng nhập, nạp một ít credit (vài đô dùng rất lâu).
+  3. Tạo key (sk-ant-...), sao chép, dán vào ⚙ trong app.
+
+Model: Haiku 4.5 (nhanh, rẻ - khuyên dùng) hoặc Sonnet 5 (thông
+minh hơn). Key chỉ lưu trên máy của anh.
+
+
+────────────────────────────────────────────
+3) 🎓 EMMA — LUYỆN TIẾNG ANH
+────────────────────────────────────────────
+• Trò chuyện ưu tiên giao tiếp; gợi ý "You could say…".
+• 📖 Word of the day, 🎯 luyện phát âm chấm điểm, ⭐ lưu từ.
+• 🔥 Streak đếm ngày luyện, role-play (phỏng vấn, khách hàng…).
+• Không cần key vẫn dùng được: word of the day, phát âm, streak.
+
+
+────────────────────────────────────────────
+4) 🎭 PERSONA — BẢN SAO & NHÂN VẬT
+────────────────────────────────────────────
+• Tạo nhân vật: 🪞 bản sao của anh, 🎓 cố vấn, 💼 khách hàng khó
+  tính (luyện thuyết trình AV/ELV/ICT), 🗣️ English Buddy, 🤝 nhà
+  tuyển dụng, 🎭 nhân vật tự do.
+• Mỗi nhân vật có tính cách, cách nói, ngôn ngữ riêng; lưu lại để
+  dùng lâu dài. Chọn ai thì ngồi trò chuyện với người đó.
+
+
+────────────────────────────────────────────
+5) LƯU Ý
+────────────────────────────────────────────
+• Cần Internet để AI trả lời và tải phông chữ.
+• Tiến trình, từ đã lưu, danh sách nhân vật lưu trong trình duyệt
+  của máy này. Đổi máy / xoá dữ liệu duyệt web thì bắt đầu lại.
+• Nhân vật là mô phỏng theo mô tả của anh hoặc vai tưởng tượng;
+  nếu tạo theo người nổi tiếng thật thì chỉ "lấy cảm hứng", không
+  phải lời thật của họ. Dùng để tập dượt và suy ngẫm.
+• File có key của anh — đừng gửi lại file đã nhập key cho người khác.
+
+Chúc anh luyện nói và trò chuyện ngày càng tự tin! 🌱
