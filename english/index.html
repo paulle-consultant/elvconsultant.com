@@ -936,6 +936,23 @@ function(a,b,c){if(!Vd(b))throw Error(m(200));return Wd(null,a,b,!1,c)};Q.unmoun
     corrections: [],
     suggestions: ["I'm doing great, thanks!", "I'm a little tired today.", "Not bad — just relaxing."]
   };
+  function parseReply(raw) {
+    var t = (raw || '').replace(/```json/gi, '').replace(/```/g, '').trim();
+    try {
+      return JSON.parse(t);
+    } catch (e) {}
+    var s = t.indexOf('{'),
+      e = t.lastIndexOf('}');
+    if (s >= 0 && e > s) {
+      try {
+        return JSON.parse(t.slice(s, e + 1));
+      } catch (e2) {}
+    }
+    return {
+      reply: t,
+      vietnamese: ''
+    };
+  }
   function buildSystem(level) {
     const lvl = (LEVELS.find(l => l.id === level) || {}).en || "Intermediate";
     return `You are Emma, a warm, encouraging English conversation partner for a Vietnamese adult who wants to practice everyday SPOKEN English in their free time. The student's level is ${lvl}.
@@ -1092,8 +1109,7 @@ Respond with ONLY a raw JSON object (no markdown, no code fences, no preamble) u
       }
       const data = await res.json();
       const text = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("");
-      const clean = text.replace(/```json/gi, "").replace(/```/g, "").trim();
-      return JSON.parse(clean);
+      return parseReply(text);
     }
     const send = useCallback(async rawText => {
       const text = (rawText != null ? rawText : input).trim();
@@ -1700,6 +1716,23 @@ const PersonaApp = function () {
       localStorage.setItem(k, JSON.stringify(v));
     } catch (e) {}
   }
+  function parseReply(raw) {
+    var t = (raw || '').replace(/```json/gi, '').replace(/```/g, '').trim();
+    try {
+      return JSON.parse(t);
+    } catch (e) {}
+    var s = t.indexOf('{'),
+      e = t.lastIndexOf('}');
+    if (s >= 0 && e > s) {
+      try {
+        return JSON.parse(t.slice(s, e + 1));
+      } catch (e2) {}
+    }
+    return {
+      reply: t,
+      vietnamese: ''
+    };
+  }
   function buildSystem(c) {
     const langLine = c.lang === "en" ? "Reply in English. Fill the vietnamese field with a Vietnamese translation." : c.lang === "both" ? "Mirror the user's language. When you reply in English, fill vietnamese with a translation; when in Vietnamese, leave it empty." : "Reply in Vietnamese. Leave the vietnamese field empty.";
     const frame = c.isSelf ? "You are the DIGITAL TWIN of " + c.name + " — a second version of them that they talk to, like talking to themselves. Speak in the first person as " + c.name + ", with their voice and views." : "You are " + c.name + (c.tagline ? " — " + c.tagline : "") + ". Fully embody this character and speak in the first person as them, having a real conversation with the user.";
@@ -1852,7 +1885,7 @@ const PersonaApp = function () {
       }
       const data = await res.json();
       const text = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("");
-      return JSON.parse(text.replace(/```json/gi, "").replace(/```/g, "").trim());
+      return parseReply(text);
     }
     const send = useCallback(async raw => {
       const text = (raw != null ? raw : input).trim();
