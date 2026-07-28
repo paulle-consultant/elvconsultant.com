@@ -398,8 +398,33 @@ html,body{ background:#EAEAF2; }
 .hub-wrap .et-shell, .hub-wrap .dt-shell{ height:min(84vh,740px); }
 @media (max-width:520px){ .hub-wrap .et-shell, .hub-wrap .dt-shell{ height:calc(100vh - 62px); border-radius:0; border:0; } .hub-bar{ padding:8px 8px 0; } }
 </style>
+
+<style>
+body:not(.unlocked) #root{ display:none !important; }
+body.unlocked #gate{ display:none !important; }
+#gate{ position:fixed; inset:0; z-index:99999; background:#ECEAF4; display:flex; align-items:center; justify-content:center; padding:20px; font-family:'Inter',system-ui,sans-serif; box-sizing:border-box; }
+.gate-card{ background:#fff; border:1px solid #E2DEEE; border-radius:20px; padding:32px 26px; width:100%; max-width:340px; text-align:center; box-shadow:0 24px 60px -24px rgba(40,30,60,.5); }
+.gate-logo{ font-size:34px; }
+.gate-title{ font-family:'Bricolage Grotesque',sans-serif; font-weight:700; font-size:20px; color:#221E2E; margin-top:8px; }
+.gate-sub{ font-size:13px; color:#6E6982; margin:6px 0 18px; }
+#gate-input{ width:100%; box-sizing:border-box; border:1px solid #E2DEEE; border-radius:12px; padding:12px 14px; font-size:15px; outline:none; text-align:center; }
+#gate-input:focus{ border-color:#6A54A6; box-shadow:0 0 0 3px #ECE7F7; }
+#gate-btn{ width:100%; margin-top:12px; background:#6A54A6; color:#fff; border:0; border-radius:12px; padding:12px; font-size:15px; font-weight:600; cursor:pointer; }
+#gate-btn:hover{ background:#4C3A80; }
+.gate-err{ color:#B2453B; font-size:12.5px; margin-top:10px; min-height:16px; }
+</style>
 </head>
 <body>
+<div id="gate">
+  <div class="gate-card">
+    <div class="gate-logo">🔒</div>
+    <div class="gate-title">Khu vực riêng tư</div>
+    <div class="gate-sub">Nhập mật khẩu để mở ứng dụng</div>
+    <input id="gate-input" type="password" placeholder="Mật khẩu / Passcode" autocomplete="off" />
+    <button id="gate-btn">Mở khoá</button>
+    <div id="gate-err" class="gate-err"></div>
+  </div>
+</div>
 <div id="root"></div>
 <script>/**
  * @license React
@@ -2298,5 +2323,22 @@ function Hub() {
   }, "🎭 Persona · Nhân vật"))), view === 'emma' ? /*#__PURE__*/React.createElement(EmmaApp, null) : /*#__PURE__*/React.createElement(PersonaApp, null));
 }
 ReactDOM.createRoot(document.getElementById("root")).render(/*#__PURE__*/React.createElement(Hub, null));</script>
+<script>
+(function(){
+  var HASH="db8bf2d1864b34246208b217757b46ab9e5616459c55e7a7f2968033aadea6fa";
+  function sha(s){ return crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)).then(function(b){ return Array.prototype.map.call(new Uint8Array(b), function(x){ return ('0'+x.toString(16)).slice(-2); }).join(''); }); }
+  try{ if(localStorage.getItem('elv_gate_ok')==='1') document.body.classList.add('unlocked'); }catch(e){}
+  function submit(){
+    var i=document.getElementById('gate-input'); var err=document.getElementById('gate-err');
+    sha(i.value||'').then(function(hex){
+      if(hex===HASH){ try{ localStorage.setItem('elv_gate_ok','1'); }catch(e){} document.body.classList.add('unlocked'); }
+      else { err.textContent='Sai mật khẩu. Thử lại.'; i.value=''; i.focus(); }
+    });
+  }
+  var b=document.getElementById('gate-btn'), inp=document.getElementById('gate-input');
+  if(b) b.addEventListener('click', submit);
+  if(inp){ inp.addEventListener('keydown', function(e){ if(e.key==='Enter') submit(); }); inp.focus(); }
+})();
+</script>
 </body>
 </html>
