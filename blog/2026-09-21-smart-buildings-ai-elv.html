@@ -63,13 +63,28 @@
     .article-tags { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:2rem; }
     .article-tag { font-family:'Orbitron',monospace; font-size:9px; letter-spacing:1px; padding:4px 10px; border-radius:3px; border:1px solid rgba(0,200,224,0.3); color:var(--cyan); background:rgba(0,200,224,0.08); }
     /* HERO IMAGE */
-    .article-hero { position:relative; width:calc(100% + 4rem); margin:0 -2rem 2.5rem; height:340px; overflow:hidden; }
-    .article-hero img { width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.65) saturate(0.8); }
-    .article-hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg, transparent 35%, rgba(7,17,31,0.9) 100%); }
-    .article-hero-caption { position:absolute; bottom:0.75rem; right:1rem; font-size:10px; color:rgba(160,180,200,0.5); }
-    .article-hero-caption a { color:rgba(160,180,200,0.5); text-decoration:none; }
+    .article-hero { position:relative; width:calc(100% + 4rem); margin:0 -2rem 0; height:400px; overflow:hidden; }
+    .article-hero img { width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.75) saturate(0.85); transition:transform 8s ease; }
+    .article-hero:hover img { transform:scale(1.04); }
+    .article-hero-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(180deg,
+        rgba(7,17,31,0.2) 0%,
+        transparent 30%,
+        rgba(7,17,31,0.7) 75%,
+        rgba(7,17,31,0.98) 100%);
+    }
+    /* cyan side accent */
+    .article-hero::after {
+      content:''; position:absolute; left:0; top:0; bottom:0; width:3px;
+      background:linear-gradient(180deg, var(--cyan), transparent);
+      opacity:0.6;
+    }
+    .article-hero-caption { position:absolute; bottom:0.75rem; right:1rem; font-size:10px; color:rgba(160,180,200,0.45); }
+    .article-hero-caption a { color:rgba(160,180,200,0.45); text-decoration:none; transition:color 0.2s; }
     .article-hero-caption a:hover { color:rgba(160,180,200,0.8); }
-    @media(max-width:768px) { .article-hero { width:calc(100% + 2rem); margin:0 -1rem 2rem; height:220px; } }
+    .article-hero-spacer { height:2.5rem; }
+    @media(max-width:768px) { .article-hero { width:calc(100% + 2rem); margin:0 -1rem 0; height:240px; } }
 
     /* NEWS SECTION IMAGES */
     .news-img-link { display:block; text-decoration:none; }
@@ -174,21 +189,23 @@
     <div class="article-date">THỨ HAI · 21 THÁNG 9, 2026 · ELVCONSULTANT.COM</div>
     <h1 class="article-title">Tòa Nhà Thông Minh, An Ninh Thông Minh:<br>AI Đang Định Hình Lại Ngành ELV &amp; ICT Toàn Cầu</h1>
     <div class="article-subtitle">Bản tin hàng ngày song ngữ Việt–Anh | Smart Buildings, Intelligent Security: How AI Is Reshaping the ELV &amp; ICT Industry Worldwide</div>
-    <div class="article-tags">
-      <span class="article-tag">AI</span>
-      <span class="article-tag">SMART BUILDING</span>
-      <span class="article-tag">ELV</span>
-      <span class="article-tag">ICT</span>
-      <span class="article-tag">BMS</span>
-      <span class="article-tag">SECURITY</span>
-    </div>
   </div>
 
   <div class="article-hero">
-    <img src="https://images.unsplash.com/photo-1589935447067-5531094415d1?w=1200&h=500&q=80&auto=format&fit=crop"
+    <img src="https://images.unsplash.com/photo-1589935447067-5531094415d1?w=1400&h=600&q=85&auto=format&fit=crop"
          alt="IP CCTV cameras – Smart Building Security Systems" loading="lazy">
     <div class="article-hero-overlay"></div>
     <div class="article-hero-caption">Photo: <a href="https://unsplash.com/@jaqbovsky" target="_blank" rel="noopener">Michał Jakubowski</a> / Unsplash</div>
+  </div>
+  <div class="article-hero-spacer"></div>
+
+  <div class="article-tags" style="margin-bottom:1.75rem;">
+    <span class="article-tag">AI</span>
+    <span class="article-tag">SMART BUILDING</span>
+    <span class="article-tag">ELV</span>
+    <span class="article-tag">ICT</span>
+    <span class="article-tag">BMS</span>
+    <span class="article-tag">SECURITY</span>
   </div>
 
   <div class="lang-toggle">
