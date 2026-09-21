@@ -72,9 +72,12 @@
     @media(max-width:768px) { .article-hero { width:calc(100% + 2rem); margin:0 -1rem 2rem; height:220px; } }
 
     /* NEWS SECTION IMAGES */
+    .news-img-link { display:block; text-decoration:none; }
     .news-img { width:calc(100% + 4rem); margin:0.75rem -2rem 1.5rem; height:260px; overflow:hidden; border-radius:4px; position:relative; }
     .news-img img { width:100%; height:100%; object-fit:cover; display:block; filter:brightness(0.8) saturate(0.85); transition:transform 0.4s, filter 0.4s; }
-    .news-img:hover img { transform:scale(1.03); filter:brightness(0.9) saturate(1); }
+    .news-img-link:hover .news-img img { transform:scale(1.03); filter:brightness(0.9) saturate(1); }
+    .news-img::after { content:'🔗 Xem nguồn'; position:absolute; bottom:0.6rem; right:0.75rem; font-size:10px; font-family:'Orbitron',monospace; letter-spacing:1px; color:rgba(240,244,248,0.65); opacity:0; transition:opacity 0.3s; pointer-events:none; }
+    .news-img-link:hover .news-img::after { opacity:1; }
     @media(max-width:768px) { .news-img { width:calc(100% + 2rem); margin:0.75rem -1rem 1.25rem; height:200px; } }
 
     /* LANGUAGE TOGGLE */
@@ -198,7 +201,7 @@
 
     <div class="news-item">
       <div class="news-num">01 · SECUTECH VIETNAM 2026</div>
-      <div class="news-img"><img src="https://images.unsplash.com/photo-1761195696518-6384573549ea?w=800&h=380&q=80&auto=format&fit=crop" alt="Triển lãm an ninh thông minh – Secutech Vietnam 2026" loading="lazy"></div>
+      <a href="https://www.secutechvietnam.com/" target="_blank" rel="noopener" class="news-img-link"><div class="news-img"><img src="https://images.unsplash.com/photo-1761195696518-6384573549ea?w=800&h=380&q=80&auto=format&fit=crop" alt="Triển lãm an ninh thông minh – Secutech Vietnam 2026" loading="lazy"></div></a>
       <h2 class="news-title">Secutech Vietnam 2026: Giải Pháp Tích Hợp AI Dẫn Đầu Xu Hướng Tại Hà Nội</h2>
       <p class="news-body">Triển lãm Secutech Vietnam 2026 vừa kết thúc thành công tại Hà Nội với sự tham gia của hàng trăm nhà triển lãm trong và ngoài nước, mang đến làn sóng mới về các giải pháp an ninh thông minh và tòa nhà tự động. Điểm nhấn của sự kiện năm nay là sự hội tụ của camera giám sát tích hợp AI, hệ thống quản lý tòa nhà (BMS), phòng cháy chữa cháy và các hệ thống ELV — tất cả được trình diễn trong một hệ sinh thái tích hợp duy nhất. Đây là tín hiệu rõ ràng nhất cho thấy khách hàng Việt Nam — từ bất động sản thương mại đến nhà máy công nghiệp — đang tăng mạnh ngân sách đầu tư vào hạ tầng số thông minh.</p>
       <div class="why-box">
@@ -211,7 +214,7 @@
 
     <div class="news-item">
       <div class="news-num">02 · CEDIA EXPO / CIX 2026 · DENVER</div>
-      <div class="news-img"><img src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=800&h=380&q=80&auto=format&fit=crop" alt="Hệ thống điều khiển nhà thông minh – CEDIA Expo 2026" loading="lazy"></div>
+      <a href="https://www.cedia.org/expo" target="_blank" rel="noopener" class="news-img-link"><div class="news-img"><img src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=800&h=380&q=80&auto=format&fit=crop" alt="Hệ thống điều khiển nhà thông minh – CEDIA Expo 2026" loading="lazy"></div></a>
       <h2 class="news-title">CEDIA Expo/CIX 2026 Tại Denver: An Ninh Trở Thành Nguồn Doanh Thu Mới Cho Nhà Tích Hợp Residential</h2>
       <p class="news-body">CEDIA Expo/CIX 2026 diễn ra tại Denver (1–4/9/2026) đã đánh dấu một bước ngoặt quan trọng: bảo mật và an ninh không còn là hạng mục phụ trợ, mà đã trở thành động lực doanh thu chính cho các nhà tích hợp hệ thống nhà thông minh. Các thương hiệu dẫn đầu như Control4, Crestron, Lutron và Savant đều trình diễn giải pháp hội tụ giữa smart home và nền tảng an ninh dân dụng, bao gồm cảm biến chuyển động thế hệ mới, hệ thống kiểm soát truy cập và giám sát tích hợp sâu. Hiệp hội CEDIA xác nhận an ninh là danh mục tăng trưởng nhanh nhất trong dịch vụ tích hợp nhà ở cao cấp.</p>
       <div class="why-box">
@@ -224,7 +227,7 @@
 
     <div class="news-item">
       <div class="news-num">03 · SIEMENS BUILDING X</div>
-      <div class="news-img"><img src="https://images.unsplash.com/photo-1674981208693-de5a9c4c4f44?w=800&h=380&q=80&auto=format&fit=crop" alt="Tòa nhà thương mại thông minh – Siemens Building X AI" loading="lazy"></div>
+      <a href="https://www.siemens.com/global/en/products/buildings/building-x.html" target="_blank" rel="noopener" class="news-img-link"><div class="news-img"><img src="https://images.unsplash.com/photo-1674981208693-de5a9c4c4f44?w=800&h=380&q=80&auto=format&fit=crop" alt="Tòa nhà thương mại thông minh – Siemens Building X AI" loading="lazy"></div></a>
       <h2 class="news-title">Siemens Ra Mắt Dịch Vụ AI Quản Lý Tòa Nhà Tự Động Trên Nền Tảng Building X</h2>
       <p class="news-body">Siemens vừa ra mắt dịch vụ quản lý tòa nhà tự động dựa trên AI thông qua nền tảng Building X — một bước tiến từ "tòa nhà thông minh" sang "tòa nhà tự vận hành." Nền tảng này sử dụng học máy để tự động tối ưu hóa HVAC, chiếu sáng, tiêu thụ năng lượng và an ninh mà không cần sự can thiệp liên tục của con người. Các tính năng nổi bật bao gồm bảo trì dự đoán (predictive maintenance), phát hiện bất thường theo thời gian thực và tích hợp đồng bộ giữa BMS, kiểm soát truy cập và các hệ thống ELV khác. Đánh giá độc lập của Memoori năm 2026 xếp Siemens là một trong những nhà cung cấp dẫn đầu về chiến lược AI trong lĩnh vực tòa nhà thông minh.</p>
       <div class="why-box">
@@ -237,7 +240,7 @@
 
     <div class="news-item">
       <div class="news-num">04 · HONEYWELL &amp; RHOMBUS</div>
-      <div class="news-img"><img src="https://images.unsplash.com/photo-1528312635006-8ea0bc49ec63?w=800&h=380&q=80&auto=format&fit=crop" alt="Camera an ninh AI cloud-native – Honeywell & Rhombus" loading="lazy"></div>
+      <a href="https://www.honeywell.com/us/en/industries/building-technologies" target="_blank" rel="noopener" class="news-img-link"><div class="news-img"><img src="https://images.unsplash.com/photo-1528312635006-8ea0bc49ec63?w=800&h=380&q=80&auto=format&fit=crop" alt="Camera an ninh AI cloud-native – Honeywell & Rhombus" loading="lazy"></div></a>
       <h2 class="news-title">Honeywell &amp; Rhombus: Giải Pháp Camera AI Cloud-Native Thế Hệ Mới Cho Công Trình Thương Mại</h2>
       <p class="news-body">Honeywell và Rhombus Systems đã ra mắt giải pháp bảo mật hoàn toàn trên nền tảng đám mây (cloud-native), không cần máy chủ tại chỗ, kết hợp phân tích video AI (nhận diện người, cảnh báo bất thường, nhận diện biển số xe) với quản lý kiểm soát truy cập từ bất kỳ thiết bị nào. Đặc biệt, Honeywell cũng ra mắt thương mại hóa AI-powered Control Room Assistant — cho phép đội ngũ an ninh truy vấn footage bằng ngôn ngữ tự nhiên và nhận tóm tắt sự kiện theo thời gian thực. Đây là sự thay đổi cơ bản trong cách thiết kế và vận hành các hệ thống an ninh ELV trong công trình thương mại hiện đại.</p>
       <div class="why-box">
@@ -250,7 +253,7 @@
 
     <div class="news-item">
       <div class="news-num">05 · AUTOMATEDBUILDINGS.COM · SEPT 2026</div>
-      <div class="news-img"><img src="https://images.unsplash.com/photo-1650682009477-52fd77302b78?w=800&h=380&q=80&auto=format&fit=crop" alt="Hệ thống IoT tòa nhà thông minh – AutomatedBuildings 2026" loading="lazy"></div>
+      <a href="https://www.automatedbuildings.com/" target="_blank" rel="noopener" class="news-img-link"><div class="news-img"><img src="https://images.unsplash.com/photo-1650682009477-52fd77302b78?w=800&h=380&q=80&auto=format&fit=crop" alt="Hệ thống IoT tòa nhà thông minh – AutomatedBuildings 2026" loading="lazy"></div></a>
       <h2 class="news-title">Xu Hướng 2026: "Kết Nối Có Kiểm Soát Qua Các Ranh Giới Tin Cậy" — Thách Thức Mới Cho Nhà Tích Hợp ELV/BMS</h2>
       <p class="news-body">AutomatedBuildings.com tháng 9/2026 đặt chủ đề trọng tâm là "Trust in Autonomous Buildings" (Tin cậy trong Tòa nhà Tự động), với loạt bài phân tích sâu về thách thức kết nối an toàn và có kiểm soát giữa các hệ thống BMS, AV, kiểm soát truy cập, chiếu sáng và ELV khi các tác nhân AI bắt đầu điều phối chúng. Quan điểm then chốt: hệ thống BMS truyền thống không bị thay thế mà đang được tích hợp vào các nền tảng AI lớn hơn — đây là cơ hội cho các nhà tích hợp duy trì và nâng cấp hạ tầng hiện có thay vì thay thế toàn bộ.</p>
       <div class="why-box">
@@ -266,7 +269,7 @@
 
     <div class="news-item">
       <div class="news-num">01 · SECUTECH VIETNAM 2026</div>
-      <div class="news-img"><img src="https://images.unsplash.com/photo-1761195696518-6384573549ea?w=800&h=380&q=80&auto=format&fit=crop" alt="Security exhibition hall – Secutech Vietnam 2026" loading="lazy"></div>
+      <a href="https://www.secutechvietnam.com/" target="_blank" rel="noopener" class="news-img-link"><div class="news-img"><img src="https://images.unsplash.com/photo-1761195696518-6384573549ea?w=800&h=380&q=80&auto=format&fit=crop" alt="Security exhibition hall – Secutech Vietnam 2026" loading="lazy"></div></a>
       <h2 class="news-title">Secutech Vietnam 2026: AI-Integrated Solutions Take Center Stage in Hanoi</h2>
       <p class="news-body">Secutech Vietnam 2026 concluded successfully in Hanoi, drawing regional and international exhibitors to showcase the next generation of AI-driven security and smart building solutions. The show highlighted the convergence of AI-powered video surveillance, building management systems (BMS), fire safety, and ELV platforms — all demonstrated as part of a single integrated ecosystem rather than isolated products. The event confirmed that Vietnamese clients across commercial real estate, manufacturing, and critical infrastructure are significantly accelerating their investment in intelligent building infrastructure.</p>
       <div class="why-box">
@@ -279,7 +282,7 @@
 
     <div class="news-item">
       <div class="news-num">02 · CEDIA EXPO / CIX 2026 · DENVER</div>
-      <div class="news-img"><img src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=800&h=380&q=80&auto=format&fit=crop" alt="Smart home control system – CEDIA Expo 2026" loading="lazy"></div>
+      <a href="https://www.cedia.org/expo" target="_blank" rel="noopener" class="news-img-link"><div class="news-img"><img src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?w=800&h=380&q=80&auto=format&fit=crop" alt="Smart home control system – CEDIA Expo 2026" loading="lazy"></div></a>
       <h2 class="news-title">CEDIA Expo/CIX 2026 in Denver: Security Becomes a Primary Revenue Driver for Residential Integrators</h2>
       <p class="news-body">CEDIA Expo/CIX 2026 (Denver, September 1–4, 2026) marked a decisive shift: security is no longer a secondary add-on but is now one of the fastest-growing revenue categories for custom integration (CI) professionals. Leading platforms including Control4, Crestron, Lutron, and Savant demonstrated deep convergence between whole-home automation and residential security — covering next-generation motion sensors, intelligent access control, and integrated surveillance management. CEDIA formally identified security solutions as the primary new business opportunity for home technology integrators.</p>
       <div class="why-box">
@@ -292,7 +295,7 @@
 
     <div class="news-item">
       <div class="news-num">03 · SIEMENS BUILDING X</div>
-      <div class="news-img"><img src="https://images.unsplash.com/photo-1674981208693-de5a9c4c4f44?w=800&h=380&q=80&auto=format&fit=crop" alt="Smart commercial building – Siemens Building X AI platform" loading="lazy"></div>
+      <a href="https://www.siemens.com/global/en/products/buildings/building-x.html" target="_blank" rel="noopener" class="news-img-link"><div class="news-img"><img src="https://images.unsplash.com/photo-1674981208693-de5a9c4c4f44?w=800&h=380&q=80&auto=format&fit=crop" alt="Smart commercial building – Siemens Building X AI platform" loading="lazy"></div></a>
       <h2 class="news-title">Siemens Launches AI-Powered Managed Service for Autonomous Building Operations</h2>
       <p class="news-body">Siemens has launched an AI-powered managed service through its Building X platform, moving the industry from "smart buildings" to "autonomous buildings." The platform uses machine learning to continuously optimize HVAC, lighting, energy consumption, and security systems without constant human intervention, while delivering predictive maintenance, real-time anomaly detection, and synchronized integration across BMS, access control, and ELV subsystems. An independent 2026 Memoori assessment ranked Siemens among the top incumbents applying AI strategy to smart building platforms — alongside Honeywell and Johnson Controls.</p>
       <div class="why-box">
@@ -305,7 +308,7 @@
 
     <div class="news-item">
       <div class="news-num">04 · HONEYWELL &amp; RHOMBUS</div>
-      <div class="news-img"><img src="https://images.unsplash.com/photo-1528312635006-8ea0bc49ec63?w=800&h=380&q=80&auto=format&fit=crop" alt="AI cloud-native security camera – Honeywell & Rhombus" loading="lazy"></div>
+      <a href="https://www.honeywell.com/us/en/industries/building-technologies" target="_blank" rel="noopener" class="news-img-link"><div class="news-img"><img src="https://images.unsplash.com/photo-1528312635006-8ea0bc49ec63?w=800&h=380&q=80&auto=format&fit=crop" alt="AI cloud-native security camera – Honeywell & Rhombus" loading="lazy"></div></a>
       <h2 class="news-title">Honeywell &amp; Rhombus: Cloud-Native AI Video and Access Control for Modern Commercial Buildings</h2>
       <p class="news-body">Honeywell and Rhombus Systems have launched a fully cloud-native, AI-driven video surveillance and access control solution for commercial buildings, eliminating the need for on-premises servers entirely. The platform integrates AI-powered analytics — person detection, anomaly alerts, license plate recognition — with cloud-based access management operable from any device or location. Honeywell has also commercially launched an AI-powered Control Room Assistant that allows security operators to query surveillance footage using natural language and receive real-time incident summaries.</p>
       <div class="why-box">
@@ -318,7 +321,7 @@
 
     <div class="news-item">
       <div class="news-num">05 · AUTOMATEDBUILDINGS.COM · SEPT 2026</div>
-      <div class="news-img"><img src="https://images.unsplash.com/photo-1650682009477-52fd77302b78?w=800&h=380&q=80&auto=format&fit=crop" alt="Smart building IoT platform – AutomatedBuildings Trust 2026" loading="lazy"></div>
+      <a href="https://www.automatedbuildings.com/" target="_blank" rel="noopener" class="news-img-link"><div class="news-img"><img src="https://images.unsplash.com/photo-1650682009477-52fd77302b78?w=800&h=380&q=80&auto=format&fit=crop" alt="Smart building IoT platform – AutomatedBuildings Trust 2026" loading="lazy"></div></a>
       <h2 class="news-title">Industry Insight 2026: "Governed Connectivity Across Trust Boundaries" — The New Challenge for ELV and BMS Integrators</h2>
       <p class="news-body">AutomatedBuildings.com's September 2026 editorial theme — "Trust in Autonomous Buildings" — produced a highly practical series addressing the challenge every large-scale integrator faces: how to achieve secure, governed data connectivity between BMS, AV, access control, lighting, and ELV subsystems as AI agents increasingly coordinate them. The key insight: traditional BMS infrastructure is not being replaced — it is being absorbed and elevated into larger AI-orchestrated platforms, creating an upgrade opportunity rather than a rip-and-replace scenario. This reframes the integrator's role from installer to long-term platform steward.</p>
       <div class="why-box">
