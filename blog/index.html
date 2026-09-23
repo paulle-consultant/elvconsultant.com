@@ -128,6 +128,14 @@
       transition:gap 0.25s, border-color 0.25s;
     }
     .post-card:hover .post-read-more { gap:11px; border-color:var(--cyan); }
+    /* BADGE NEW */
+    .badge-new {
+      display:inline-block;
+      font-family:'Orbitron',monospace; font-size:8px; font-weight:700; letter-spacing:1.5px;
+      background:var(--cyan); color:var(--bg);
+      padding:3px 8px; border-radius:3px; margin-left:0.5rem;
+      vertical-align:middle;
+    }
     .empty-state { text-align:center; padding:4rem 2rem; color:var(--steel); }
     .empty-state .icon { font-size:48px; margin-bottom:1rem; opacity:0.4; }
     .empty-state p { font-size:14px; line-height:1.7; }
@@ -187,7 +195,55 @@
 
 <main class="blog-main">
   <div class="posts-grid" id="postsGrid">
-    <!-- POSTS_PLACEHOLDER -->
+
+    <!-- NEW POST 2026-09-23 -->
+    <a class="post-card" href="/blog/2026-09-23-elv-ict-av-weekly.html">
+      <div class="post-thumb">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&h=520&q=85&auto=format&fit=crop"
+             alt="Network infrastructure data center — ELV ICT AV Weekly 23 Sep 2026" loading="eager">
+        <div class="post-thumb-overlay"></div>
+        <div class="post-thumb-content">
+          <div class="post-date">THỨ TƯ · 23 THÁNG 9, 2026 <span class="badge-new">MỚI NHẤT · LATEST</span></div>
+          <div class="post-title">Cisco Wi-Fi 7, Axis AI Cameras, Schneider Foresight BMS, Crestron Collab &amp; Secutech VN 2026</div>
+        </div>
+      </div>
+      <div class="post-body">
+        <div class="post-excerpt">5 tin nổi bật tuần: Cisco Live Wi-Fi 7 &amp; AI Networking · Axis ISC West AI Security · Schneider EcoStruxure Foresight · Crestron Collab Compute · Secutech Vietnam 2026</div>
+        <div class="post-tags">
+          <span class="post-tag">CISCO</span>
+          <span class="post-tag">AXIS</span>
+          <span class="post-tag">SCHNEIDER</span>
+          <span class="post-tag">CRESTRON</span>
+          <span class="post-tag">SECUTECH VN</span>
+        </div>
+        <div class="post-read-more">ĐỌC TIẾP <span>→</span></div>
+      </div>
+    </a>
+
+    <!-- PREVIOUS POST 2026-09-22 -->
+    <a class="post-card" href="/blog/2026-09-22-elv-ict-av-weekly.html">
+      <div class="post-thumb">
+        <img src="https://images.unsplash.com/photo-1652145595413-0a79398e5888?w=900&h=520&q=85&auto=format&fit=crop"
+             alt="Phòng điều khiển tòa nhà thông minh – Smart Building Control Room" loading="lazy">
+        <div class="post-thumb-overlay"></div>
+        <div class="post-thumb-content">
+          <div class="post-date">THỨ BA · 22 THÁNG 9, 2026</div>
+          <div class="post-title">Secutech VN 2026, NFPA 72 Mới Nhất, AI + BMS &amp; Phòng Họp Tự Trị</div>
+        </div>
+      </div>
+      <div class="post-body">
+        <div class="post-excerpt">5 tin nổi bật: Secutech Vietnam 2026 · NFPA 72:2026 bắt buộc cybersecurity báo cháy · BMS+AI Edge Intelligence · Smart Fire Detection $52.89B · Phòng họp tự điều chỉnh AV 2026</div>
+        <div class="post-tags">
+          <span class="post-tag">SECUTECH VN</span>
+          <span class="post-tag">NFPA 72</span>
+          <span class="post-tag">AI BMS</span>
+          <span class="post-tag">AV 2026</span>
+        </div>
+        <div class="post-read-more">ĐỌC TIẾP <span>→</span></div>
+      </div>
+    </a>
+
+    <!-- PREVIOUS POST 2026-09-21 -->
     <a class="post-card" href="/blog/2026-09-21-smart-buildings-ai-elv.html">
       <div class="post-thumb">
         <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=900&h=520&q=85&auto=format&fit=crop"
@@ -209,6 +265,7 @@
         <div class="post-read-more">ĐỌC TIẾP <span>→</span></div>
       </div>
     </a>
+
   </div>
 </main>
 
@@ -234,7 +291,9 @@
     <div class="footer-col">
       <h5>TIN TỨC</h5>
       <a href="/blog/">Tất cả bài viết</a>
-      <a href="/blog/2026-09-21-smart-buildings-ai-elv.html">21/09/2026 – AI & ELV</a>
+      <a href="/blog/2026-09-23-elv-ict-av-weekly.html">23/09/2026 – Cisco Wi-Fi 7, Axis AI, Schneider BMS</a>
+      <a href="/blog/2026-09-22-elv-ict-av-weekly.html">22/09/2026 – Secutech VN, NFPA 72, AI BMS</a>
+      <a href="/blog/2026-09-21-smart-buildings-ai-elv.html">21/09/2026 – AI &amp; ELV</a>
     </div>
     <div class="footer-col">
       <h5>LIÊN HỆ</h5>

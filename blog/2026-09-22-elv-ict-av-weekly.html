@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELV/ICT/AV Weekly — 22 Tháng 9, 2026 | elvconsultant.com</title>
+  <meta name="description" content="Bản tin tuần ELV/ICT/AV ngày 22/09/2026: Secutech Vietnam 2026, NFPA 72 mới nhất, AI tòa nhà thông minh, phát hiện cháy thông minh, phòng họp tự động." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #07111F;
+      --card-bg: #101E30;
+      --card-border: #1E3550;
+      --cyan: #00C8E0;
+      --cyan-dim: rgba(0,200,224,0.12);
+      --cyan-glow: rgba(0,200,224,0.3);
+      --silver: #A0B4C8;
+      --white: #F0F4F8;
+      --accent2: #0066FF;
+      --danger: #FF4C6A;
+      --success: #00E0A0;
+      --font-head: 'Orbitron', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7,17,31,0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a {
+      color: var(--silver);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cyan); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,200,224,0.13) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 20% 100%, rgba(0,102,255,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-label {
+      display: inline-block;
+      font-family: var(--font-head);
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      color: var(--cyan);
+      border: 1px solid var(--cyan-glow);
+      border-radius: 2px;
+      padding: 0.3rem 0.9rem;
+      margin-bottom: 1.4rem;
+      background: var(--cyan-dim);
+    }
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--white);
+      max-width: 800px;
+      margin: 0 auto 0.8rem;
+    }
+    .hero h1 span { color: var(--cyan); }
+    .hero-sub {
+      color: var(--silver);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    /* ── LANG TOGGLE ── */
+    .lang-toggle {
+      display: inline-flex;
+      border: 1px solid var(--card-border);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .lang-btn {
+      padding: 0.4rem 1.2rem;
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--silver);
+      transition: background 0.2s, color 0.2s;
+    }
+    .lang-btn.active {
+      background: var(--cyan);
+      color: var(--bg);
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    /* ── SECTION HEADER ── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.8rem;
+    }
+    .section-header::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--card-border) 0%, transparent 100%);
+    }
+    .section-label {
+      font-family: var(--font-head);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--cyan);
+    }
+
+    /* ── NEWS CARDS ── */
+    .news-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-left: 3px solid var(--cyan);
+      border-radius: 6px;
+      padding: 1.6rem 1.8rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .news-card:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 24px rgba(0,200,224,0.1);
+    }
+    .news-num {
+      font-family: var(--font-head);
+      font-size: 0.62rem;
+      color: var(--cyan);
+      letter-spacing: 0.14em;
+      margin-bottom: 0.5rem;
+    }
+    .news-source {
+      font-size: 0.72rem;
+      color: var(--silver);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.04em;
+    }
+    .news-source a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    .news-card h3 {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+    }
+    .news-card p {
+      color: var(--silver);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    /* ── WHY BOX ── */
+    .why-box {
+      background: rgba(0,200,224,0.06);
+      border: 1px solid rgba(0,200,224,0.25);
+      border-radius: 4px;
+      padding: 1rem 1.2rem;
+      margin-top: 0.8rem;
+    }
+    .why-label {
+      font-family: var(--font-head);
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      color: var(--cyan);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .why-box p {
+      color: var(--white);
+      font-size: 0.88rem;
+      margin: 0;
+    }
+
+    /* ── TAG CHIPS ── */
+    .tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.8rem; }
+    .tag {
+      font-family: var(--font-head);
+      font-size: 0.55rem;
+      letter-spacing: 0.12em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      border: 1px solid var(--card-border);
+      color: var(--silver);
+      background: rgba(30,53,80,0.5);
+    }
+
+    /* ── CTA ── */
+    .cta-block {
+      background: linear-gradient(135deg, rgba(0,200,224,0.08) 0%, rgba(0,102,255,0.08) 100%);
+      border: 1px solid var(--cyan-glow);
+      border-radius: 8px;
+      padding: 2.4rem;
+      text-align: center;
+      margin: 2.5rem 0;
+    }
+    .cta-block h2 {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+    .cta-block p { color: var(--silver); font-size: 0.9rem; margin-bottom: 1.4rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 2rem;
+      background: var(--cyan);
+      color: var(--bg);
+      font-family: var(--font-head);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: opacity 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { opacity: 0.88; box-shadow: 0 0 20px var(--cyan-glow); }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      margin-left: 0.8rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--silver);
+      font-size: 0.78rem;
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+    .footer-logo {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      color: var(--cyan);
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── DIVIDER ── */
+    .lang-divider {
+      border: none;
+      border-top: 2px dashed var(--card-border);
+      margin: 2.5rem 0;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hero { padding: 3.5rem 1rem 2.5rem; }
+      .news-card { padding: 1.2rem 1rem; }
+      .cta-block { padding: 1.6rem 1rem; }
+      .btn-outline { margin-left: 0; margin-top: 0.6rem; display: block; }
+    }
+
+    /* ── LANG VISIBILITY ── */
+    .vi-content, .en-content { display: none; }
+    .vi-content.active, .en-content.active { display: block; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">ELV CONSULTANT</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="mailto:luyenlt.dhp@gmail.com">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">WEEKLY INTELLIGENCE BRIEF</div>
+  <h1>ELV / ICT / AV <span>Weekly</span><br/>22 Tháng 9 · September 22, 2026</h1>
+  <p class="hero-sub">Tin tức hàng tuần dành cho tư vấn &amp; tích hợp hệ thống ELV, ICT, AV tại Việt Nam &amp; khu vực<br/>Weekly intelligence for ELV, ICT &amp; AV systems consultants and integrators</p>
+
+  <!-- LANG TOGGLE -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('vi')" id="btn-vi">🇻🇳 TIẾNG VIỆT</button>
+    <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 ENGLISH</button>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <!-- ═══════════════════════════════
+       VIETNAMESE SECTION
+  ═══════════════════════════════ -->
+  <div class="vi-content active" id="vi">
+
+    <div class="section-header">
+      <span class="section-label">5 TIN NỔI BẬT TUẦN NÀY</span>
+    </div>
+
+    <!-- TIN 1 -->
+    <article class="news-card">
+      <div class="news-num">TIN #01 · 18/09/2026</div>
+      <div class="tags">
+        <span class="tag">VIETNAM</span>
+        <span class="tag">SMART BUILDING</span>
+        <span class="tag">AI SECURITY</span>
+      </div>
+      <div class="news-source">📍 <a href="https://www.securityinformed.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank">SecurityInformed.com</a></div>
+      <h3>Secutech Vietnam 2026: AI Tích Hợp Vào Công Nghệ Tòa Nhà Thông Minh</h3>
+      <p>Triển lãm Secutech Vietnam 2026 kết thúc ngày 12/9 tại Cung Hữu Nghị Hà Nội với 480 thương hiệu từ 16 quốc gia, trên diện tích 13.000 m², thu hút 15.898 khách thăm quan. Điểm nổi bật: thị trường đang chuyển dịch mạnh từ các sản phẩm an ninh đơn lẻ sang hệ thống tích hợp toàn diện bao gồm phòng ngừa, giám sát, phản ứng và vận hành tòa nhà — được dẫn dắt bởi quá trình đô thị hóa nhanh tại Việt Nam. Các triển lãm quốc tế trình diễn hệ thống AI giám sát, robot bảo vệ, phát hiện khói sớm cho data center và nhà máy.</p>
+      <div class="why-box">
+        <span class="why-label">💡 TẠI SAO ĐIỀU NÀY QUAN TRỌNG</span>
+        <p>Đây là tín hiệu rõ ràng nhất cho thị trường ELV Việt Nam năm 2026: khách hàng và chủ đầu tư đang kỳ vọng các giải pháp <strong>tích hợp, thông minh và có khả năng quản lý vận hành</strong>, không chỉ là lắp thiết bị độc lập. Tư vấn và SI cần định vị lại năng lực theo hướng hệ sinh thái tích hợp để giành được dự án.</p>
+      </div>
+    </article>
+
+    <!-- TIN 2 -->
+    <article class="news-card">
+      <div class="news-num">TIN #02 · 15/09/2026</div>
+      <div class="tags">
+        <span class="tag">FIRE ALARM</span>
+        <span class="tag">CODE UPDATE</span>
+        <span class="tag">NFPA 72</span>
+      </div>
+      <div class="news-source">📍 <a href="https://www.withessential.com/resources/nfpa-72-changes-for-2026" target="_blank">withessential.com</a></div>
+      <h3>NFPA 72 Phiên Bản 2026: Những Thay Đổi Quan Trọng Nhà Thầu ELV Cần Biết</h3>
+      <p>Phiên bản NFPA 72:2026 (Tiêu chuẩn Báo Cháy &amp; Báo Hiệu Quốc Gia Hoa Kỳ) đã được ban hành với loạt cập nhật có hiệu lực ngay: (1) Bắt buộc an ninh mạng (cybersecurity) cho toàn bộ thiết bị báo cháy kết nối mạng; (2) Chiều cao lắp đặt đầu báo khói truyền thống tối đa 12m (40ft) — cao hơn phải dùng kỹ thuật Performance-Based; (3) Thử nghiệm thiết bị waterflow và supervisory định kỳ 6 tháng/lần (trước là 1 năm); (4) Công nhận chính thức đầu báo cháy bằng ảnh nhiệt và cảm biến rò rỉ âm thanh; (5) Thông báo sự cố phải gửi trong vòng 8 giờ (trước là 24 giờ).</p>
+      <div class="why-box">
+        <span class="why-label">💡 TẠI SAO ĐIỀU NÀY QUAN TRỌNG</span>
+        <p>NFPA 72 là tài liệu tham chiếu chuẩn tại nhiều dự án quốc tế và FDI tại Việt Nam. Sự thay đổi về <strong>an ninh mạng cho hệ thống báo cháy</strong> và nhận dạng đầu báo nhiệt ảnh là xu hướng kỹ thuật sẽ ảnh hưởng trực tiếp đến hồ sơ thiết kế và specification mà các tư vấn ELV cần cập nhật ngay.</p>
+      </div>
+    </article>
+
+    <!-- TIN 3 -->
+    <article class="news-card">
+      <div class="news-num">TIN #03 · 03/09/2026</div>
+      <div class="tags">
+        <span class="tag">BMS</span>
+        <span class="tag">AI</span>
+        <span class="tag">SMART BUILDING</span>
+      </div>
+      <div class="news-source">📍 <a href="https://www.automatedbuildings.com/2026/09/digital-building-landscape-converging-with-ai/" target="_blank">AutomatedBuildings.com</a></div>
+      <h3>BMS + AI: Tòa Nhà Không Còn Là Hệ Thống Thụ Động — Kỷ Nguyên Tự Trị Đã Bắt Đầu</h3>
+      <p>Hệ thống quản lý tòa nhà (BMS) đang tiến hóa từ bảng điều khiển thụ động sang hệ sinh thái tự trị dẫn dắt bởi AI. Bốn trụ cột chính: (1) <strong>Edge Intelligence</strong> — AI xử lý tại local controller, không cần cloud, giảm độ trễ và tăng khả năng chịu lỗi; (2) <strong>Khung dữ liệu ngữ nghĩa</strong> (Project Haystack, Brick Schema, ASHRAE 223P) cho phép AI "hiểu" dữ liệu tòa nhà; (3) Tòa nhà thông minh tham gia điều tiết lưới điện quốc gia qua định giá thời gian thực, sạc xe điện và quản lý pin hai chiều; (4) An ninh mạng OT/IT hội tụ yêu cầu giao thức zero-trust.</p>
+      <div class="why-box">
+        <span class="why-label">💡 TẠI SAO ĐIỀU NÀY QUAN TRỌNG</span>
+        <p>Các dự án tòa nhà cao cấp và văn phòng Grade A tại Hà Nội, TP.HCM đang yêu cầu BMS tích hợp AI ngày càng nhiều. Tư vấn ELV/ICT cần <strong>hiểu rõ semantic data layer và zero-trust OT/IT</strong> để tư vấn đúng cho chủ đầu tư và tránh thiết kế BMS "ốc đảo" không tương thích với nền tảng AI.</p>
+      </div>
+    </article>
+
+    <!-- TIN 4 -->
+    <article class="news-card">
+      <div class="news-num">TIN #04 · 14/04/2026</div>
+      <div class="tags">
+        <span class="tag">FIRE DETECTION</span>
+        <span class="tag">AI/IoT</span>
+        <span class="tag">SMART SAFETY</span>
+      </div>
+      <div class="news-source">📍 <a href="https://internationalfireandsafetyjournal.com/smart-fire-detection-systems/" target="_blank">International Fire &amp; Safety Journal</a></div>
+      <h3>Phát Hiện Cháy Thông Minh: AI &amp; IoT Xóa Bỏ Báo Động Nhầm — Thị Trường $52.89 Tỷ USD</h3>
+      <p>97–98% báo động tự động hiện tại là báo nhầm — AI và IoT đang phá vỡ điều này. Công nghệ tiên tiến 2026: (1) <strong>Cảm biến đa yếu tố</strong> (khói, nhiệt, khí, chất lượng không khí) giảm thiểu báo nhầm; (2) Nhận dạng mẫu bằng Machine Learning phân biệt cháy thực và nhiễu; (3) Hệ thống địa chỉ hóa chính xác vị trí từng đầu báo; (4) Kết nối IoT cho phép giám sát từ xa và phản ứng tức thời. Thị trường thiết bị phòng cháy chữa cháy tăng từ $49.42 tỷ (2025) lên $52.89 tỷ USD (2026).</p>
+      <div class="why-box">
+        <span class="why-label">💡 TẠI SAO ĐIỀU NÀY QUAN TRỌNG</span>
+        <p>Tại Việt Nam, hệ thống báo cháy thường bị phàn nàn về báo động nhầm gây mất tin tưởng. Đây là cơ hội để tư vấn ELV <strong>nâng cấp specification từ đầu báo truyền thống sang hệ multi-sensor addressable tích hợp AI</strong>, tăng giá trị tư vấn và giảm rủi ro pháp lý cho chủ đầu tư.</p>
+      </div>
+    </article>
+
+    <!-- TIN 5 -->
+    <article class="news-card">
+      <div class="news-num">TIN #05 · 01/2026</div>
+      <div class="tags">
+        <span class="tag">AV</span>
+        <span class="tag">CONFERENCE ROOM</span>
+        <span class="tag">AUTOMATION</span>
+      </div>
+      <div class="news-source">📍 <a href="https://xchange.avixa.org/posts/2025-vs-2026-av-technology-what-s-changing-in-2026" target="_blank">AVIXA Xchange</a></div>
+      <h3>AV 2026: Phòng Họp Tự Điều Chỉnh — Không Cần Con Người Can Thiệp</h3>
+      <p>Cuộc cách mạng AV 2026 theo AVIXA: từ <em>hybrid-ready</em> sang <em>autonomous</em>. Năm xu hướng định hình năm nay: (1) <strong>Phòng họp tự trị</strong> — âm thanh, hình ảnh, ánh sáng tự động điều chỉnh không cần thao tác; (2) AV hội tụ với BMS — cảm biến người dùng, quản lý năng lượng phòng; (3) Thực tế tăng cường (AR/VR) cho đào tạo và cộng tác; (4) Màn hình LED COB thay thế SMD truyền thống — độ bền cao hơn, màu sắc trung thực hơn; (5) Analytics sử dụng phòng tối ưu hóa thiết kế không gian. Tóm tắt 2026 AV: "<strong>Dự đoán — Chủ động — Cá nhân hóa</strong>".</p>
+      <div class="why-box">
+        <span class="why-label">💡 TẠI SAO ĐIỀU NÀY QUAN TRỌNG</span>
+        <p>Chủ đầu tư văn phòng cao cấp và tòa nhà hạng A tại Việt Nam đang đặt câu hỏi về <strong>ROI của hệ thống AV</strong>. Xu hướng phòng họp tự trị + analytics sử dụng giúp tư vấn AV trả lời câu hỏi này bằng số liệu cụ thể — đây là lợi thế cạnh tranh rõ ràng khi tư vấn hệ thống AV cho dự án mới.</p>
+      </div>
+    </article>
+
+    <!-- CTA VIETNAMESE -->
+    <div class="cta-block">
+      <h2>🎯 BẠN CÓ DỰ ÁN ELV/ICT/AV CẦN TƯ VẤN?</h2>
+      <p>Từ thiết kế hệ thống CCTV, kiểm soát ra vào, báo cháy đến BMS và AV tích hợp — nhóm chuyên gia của chúng tôi sẵn sàng hỗ trợ bạn ngay hôm nay.</p>
+      <a href="mailto:luyenlt.dhp@gmail.com?subject=Tư vấn dự án ELV/ICT/AV" class="btn">LIÊN HỆ TƯ VẤN NGAY</a>
+      <a href="/blog/" class="btn btn-outline">XEM TẤT CẢ BÀI VIẾT</a>
+    </div>
+
+  </div><!-- /vi-content -->
+
+  <hr class="lang-divider" />
+
+  <!-- ═══════════════════════════════
+       ENGLISH SECTION
+  ═══════════════════════════════ -->
+  <div class="en-content" id="en">
+
+    <div class="section-header">
+      <span class="section-label">5 TOP STORIES THIS WEEK</span>
+    </div>
+
+    <!-- NEWS 1 -->
+    <article class="news-card">
+      <div class="news-num">NEWS #01 · SEP 18, 2026</div>
+      <div class="tags">
+        <span class="tag">VIETNAM</span>
+        <span class="tag">SMART BUILDING</span>
+        <span class="tag">AI SECURITY</span>
+      </div>
+      <div class="news-source">📍 <a href="https://www.securityinformed.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank">SecurityInformed.com</a></div>
+      <h3>Secutech Vietnam 2026: AI Powers Integrated Smart Building Security</h3>
+      <p>Secutech Vietnam 2026 concluded September 12 at Hanoi's Friendship Cultural Palace, gathering 480 brands from 16 countries across 13,000 sqm with 15,898 visitors. The event highlighted a decisive market shift: from standalone security devices toward fully integrated systems covering prevention, monitoring, response, and facility operations — driven by Vietnam's rapid urbanization and infrastructure build-out. International pavilions showcased AI-powered surveillance, security robotics, and early smoke detection systems for data centers and factories.</p>
+      <div class="why-box">
+        <span class="why-label">💡 WHY IT MATTERS</span>
+        <p>This is the clearest signal from the Vietnam ELV market in 2026: clients and developers now expect <strong>integrated, intelligent, operationally-aware solutions</strong>, not standalone hardware. Consultants and SIs must reposition around ecosystem integration to win projects in this new landscape.</p>
+      </div>
+    </article>
+
+    <!-- NEWS 2 -->
+    <article class="news-card">
+      <div class="news-num">NEWS #02 · SEP 15, 2026</div>
+      <div class="tags">
+        <span class="tag">FIRE ALARM</span>
+        <span class="tag">CODE UPDATE</span>
+        <span class="tag">NFPA 72</span>
+      </div>
+      <div class="news-source">📍 <a href="https://www.withessential.com/resources/nfpa-72-changes-for-2026" target="_blank">withessential.com</a></div>
+      <h3>NFPA 72 (2026 Edition): Critical Changes Every Fire Alarm Contractor Must Know</h3>
+      <p>The 2026 edition of NFPA 72 — the National Fire Alarm and Signaling Code — introduces enforceable updates that reshape fire alarm design: (1) Mandatory cybersecurity for all network-connected fire alarm equipment (Chapter 11); (2) Traditional smoke detector maximum ceiling height now 40 ft — above requires performance-based engineering; (3) Waterflow and supervisory device testing now semiannual (was annual); (4) Official recognition of thermal imaging fire detectors and acoustic leak sensors; (5) Impairment notifications must be issued within 8 hours (down from 24).</p>
+      <div class="why-box">
+        <span class="why-label">💡 WHY IT MATTERS</span>
+        <p>NFPA 72 is the benchmark reference for FDI and international projects across Vietnam. The <strong>mandatory cybersecurity requirement for fire alarm networks</strong> and formal recognition of thermal imaging detectors are technical shifts that consultants must address in specifications and design documentation immediately.</p>
+      </div>
+    </article>
+
+    <!-- NEWS 3 -->
+    <article class="news-card">
+      <div class="news-num">NEWS #03 · SEP 3, 2026</div>
+      <div class="tags">
+        <span class="tag">BMS</span>
+        <span class="tag">AI</span>
+        <span class="tag">SMART BUILDING</span>
+      </div>
+      <div class="news-source">📍 <a href="https://www.automatedbuildings.com/2026/09/digital-building-landscape-converging-with-ai/" target="_blank">AutomatedBuildings.com</a></div>
+      <h3>BMS Meets AI: Buildings Are No Longer Passive Infrastructure — The Autonomous Era Has Arrived</h3>
+      <p>Building Management Systems are evolving from passive dashboards into AI-driven autonomous ecosystems. Four key pillars: (1) <strong>Edge Intelligence</strong> — AI inference at local controllers, faster response, greater resilience without cloud dependence; (2) <strong>Semantic data standards</strong> (Project Haystack, Brick Schema, ASHRAE 223P) enable AI to interpret building data safely; (3) Smart buildings actively participate in energy grids via real-time pricing, EV charging coordination, and bidirectional battery management; (4) Converging OT/IT cybersecurity demands zero-trust network protocols.</p>
+      <div class="why-box">
+        <span class="why-label">💡 WHY IT MATTERS</span>
+        <p>Premium and Grade-A office buildings in Hanoi and Ho Chi Minh City are increasingly specifying AI-integrated BMS. Consultants must <strong>understand the semantic data layer and OT/IT zero-trust architecture</strong> to correctly specify systems and avoid designing BMS "islands" incompatible with AI platforms.</p>
+      </div>
+    </article>
+
+    <!-- NEWS 4 -->
+    <article class="news-card">
+      <div class="news-num">NEWS #04 · APR 14, 2026</div>
+      <div class="tags">
+        <span class="tag">FIRE DETECTION</span>
+        <span class="tag">AI/IoT</span>
+        <span class="tag">SMART SAFETY</span>
+      </div>
+      <div class="news-source">📍 <a href="https://internationalfireandsafetyjournal.com/smart-fire-detection-systems/" target="_blank">International Fire &amp; Safety Journal</a></div>
+      <h3>Smart Fire Detection: AI &amp; IoT Eliminate False Alarms — $52.89B Global Market in 2026</h3>
+      <p>Up to 97–98% of current automatic fire alarm activations are false alarms — AI and IoT are eliminating this. 2026 technologies: (1) <strong>Multi-sensor fusion</strong> (smoke, heat, gas, air quality) dramatically reduces false positives; (2) Machine learning pattern recognition distinguishes real fires from interference; (3) Addressable systems pinpoint exact detector locations; (4) IoT connectivity enables remote monitoring and instant response. The fire safety equipment market grows from $49.42B (2025) to $52.89B in 2026.</p>
+      <div class="why-box">
+        <span class="why-label">💡 WHY IT MATTERS</span>
+        <p>Vietnam fire alarm systems are routinely criticized for false alarms that erode stakeholder trust. This is an opportunity for ELV consultants to <strong>upgrade specifications from conventional to AI-enabled multi-sensor addressable systems</strong> — adding real value to the design and reducing legal liability for building owners.</p>
+      </div>
+    </article>
+
+    <!-- NEWS 5 -->
+    <article class="news-card">
+      <div class="news-num">NEWS #05 · JAN 2026</div>
+      <div class="tags">
+        <span class="tag">AV</span>
+        <span class="tag">CONFERENCE ROOM</span>
+        <span class="tag">AUTOMATION</span>
+      </div>
+      <div class="news-source">📍 <a href="https://xchange.avixa.org/posts/2025-vs-2026-av-technology-what-s-changing-in-2026" target="_blank">AVIXA Xchange</a></div>
+      <h3>AV 2026: Self-Managing Conference Rooms — Technology Runs the Meeting, Not the Human</h3>
+      <p>AVIXA's definitive look at AV in 2026 maps the shift from <em>hybrid-ready</em> to <em>autonomous</em>. Five defining trends: (1) <strong>Autonomous meeting rooms</strong> that self-adjust audio, video, and lighting without manual input; (2) AV convergence with smart building platforms — occupancy sensing, energy management; (3) AR/VR adoption for training and collaboration; (4) COB LED displays replacing SMD — superior durability and color accuracy; (5) Usage analytics to optimize space design. The 2026 AV theme: "<strong>Predictive, Proactive, and Personalised</strong>".</p>
+      <div class="why-box">
+        <span class="why-label">💡 WHY IT MATTERS</span>
+        <p>Premium office and Grade-A building clients in Vietnam are increasingly asking for the <strong>ROI of AV systems</strong>. Autonomous room automation combined with usage analytics gives AV consultants a concrete data-driven answer — a significant competitive edge when specifying AV for new projects.</p>
+      </div>
+    </article>
+
+    <!-- CTA ENGLISH -->
+    <div class="cta-block">
+      <h2>🎯 GOT AN ELV/ICT/AV PROJECT?</h2>
+      <p>From CCTV design, access control, fire alarm, and BMS to full AV integration — our expert team is ready to support your project today.</p>
+      <a href="mailto:luyenlt.dhp@gmail.com?subject=ELV/ICT/AV Project Consultation" class="btn">GET EXPERT CONSULTATION</a>
+      <a href="/blog/" class="btn btn-outline">VIEW ALL POSTS</a>
+    </div>
+
+  </div><!-- /en-content -->
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">⬡ ELV CONSULTANT</div>
+  <p>
+    <a href="/">elvconsultant.com</a> · ELV, ICT &amp; AV Design Director · HBP Project Management
+  </p>
+  <p style="margin-top:0.4rem; color: #5a7090; font-size:0.72rem;">
+    Bản tin ngày 22/09/2026 · Newsletter September 22, 2026 · Duy Hoa Phat Corporation
+  </p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.vi-content, .en-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+    document.getElementById('btn-' + lang).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
