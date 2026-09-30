@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly 30/09/2026 – Cisco G300 · Schneider EcoCare · Crestron Collab · Axis IP · Secutech VN | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin tuần ELV/ICT/AV 30/09/2026: Cisco Silicon One G300, Schneider EcoCare BMS AI, Crestron Collab Compute InfoComm India, Axis IP Camera Series mới, Secutech Vietnam 2026.">
+  <meta name="keywords" content="ELV news Vietnam 2026, Cisco Silicon One G300, Schneider EcoCare BMS, Crestron Collab Compute, Axis IP camera, Secutech Vietnam, smart building AI">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-09-30-elv-ict-av-weekly.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;}
+    .grid-bg{
+      position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0;
+    }
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;
+    }
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-text{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--white);letter-spacing:1px;}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px;}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan);}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:8px 20px;border-radius:4px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all 0.2s;text-decoration:none;}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg);}
+
+    /* LANG BAR */
+    .lang-bar{
+      position:relative;z-index:2;display:flex;align-items:center;gap:8px;
+      padding:10px 2rem;background:rgba(16,30,48,0.85);border-bottom:1px solid var(--card-border);
+      font-size:12px;color:var(--steel);
+    }
+    .lang-btn{
+      font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:1.5px;
+      padding:4px 12px;border-radius:3px;border:1px solid var(--card-border);
+      color:var(--steel);background:transparent;cursor:pointer;transition:all 0.2s;
+    }
+    .lang-btn.active{color:var(--bg);background:var(--cyan);border-color:var(--cyan);}
+    .lang-bar span{color:var(--steel);}
+
+    /* ARTICLE HERO */
+    .article-hero{
+      position:relative;z-index:1;height:520px;overflow:hidden;
+    }
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.65) saturate(0.85);}
+    .article-hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(7,17,31,0.2) 0%,rgba(7,17,31,0.15) 30%,rgba(7,17,31,0.75) 70%,rgba(7,17,31,0.98) 100%);
+    }
+    .article-hero-content{
+      position:absolute;bottom:0;left:0;right:0;
+      max-width:900px;margin:0 auto;padding:0 2rem 2.5rem;
+    }
+    .eyebrow{
+      font-family:'Orbitron',monospace;font-size:10px;letter-spacing:4px;
+      color:var(--cyan);margin-bottom:0.75rem;
+    }
+    .article-hero-content h1{
+      font-family:'Orbitron',monospace;font-size:clamp(1.3rem,3vw,2rem);
+      font-weight:900;color:var(--white);line-height:1.25;text-shadow:0 2px 16px rgba(0,0,0,0.7);
+    }
+    .article-meta{
+      display:flex;align-items:center;gap:1rem;margin-top:0.85rem;flex-wrap:wrap;
+    }
+    .article-meta span{font-size:12px;color:var(--silver);}
+    .article-meta .divider{color:var(--steel);}
+
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:3rem 2rem 4rem;}
+
+    /* NEWS ITEM */
+    .news-item{
+      background:var(--card-bg);border:1px solid var(--card-border);
+      border-radius:10px;padding:2rem;margin-bottom:2rem;
+      transition:border-color 0.3s;
+    }
+    .news-item:hover{border-color:rgba(0,200,224,0.35);}
+    .news-item-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.25rem;}
+    .news-num{
+      font-family:'Orbitron',monospace;font-size:28px;font-weight:900;
+      color:rgba(0,200,224,0.18);line-height:1;min-width:48px;
+    }
+    .news-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0.75rem;}
+    .tag{
+      font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:1.5px;
+      padding:3px 9px;border-radius:3px;
+      border:1px solid rgba(0,200,224,0.3);color:var(--cyan);background:rgba(0,200,224,0.08);
+    }
+    .tag.mfr{border-color:rgba(0,200,224,0.55);background:rgba(0,200,224,0.15);}
+    .news-title-vi{font-size:17px;font-weight:600;color:var(--white);line-height:1.35;margin-bottom:0.3rem;}
+    .news-title-en{font-size:14px;font-weight:400;color:var(--silver);line-height:1.35;font-style:italic;margin-bottom:0;}
+    .news-body{font-size:14px;color:var(--silver);line-height:1.75;margin-top:1.1rem;}
+    .news-body p{margin-bottom:0.85rem;}
+    .news-body p:last-child{margin-bottom:0;}
+    .news-body strong{color:var(--white);font-weight:600;}
+    .why-box{
+      background:rgba(0,200,224,0.06);border:1px solid rgba(0,200,224,0.2);
+      border-left:3px solid var(--cyan);border-radius:6px;
+      padding:1rem 1.25rem;margin-top:1.25rem;
+    }
+    .why-box .why-label{
+      font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
+      color:var(--cyan);margin-bottom:0.5rem;font-weight:700;
+    }
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.7;margin:0;}
+    .source-link{
+      display:inline-flex;align-items:center;gap:5px;
+      font-size:11px;color:rgba(0,200,224,0.7);text-decoration:none;
+      margin-top:0.75rem;transition:color 0.2s;
+    }
+    .source-link:hover{color:var(--cyan);}
+
+    /* CTA BOX */
+    .cta-box{
+      background:linear-gradient(135deg,rgba(0,200,224,0.08),rgba(0,200,224,0.03));
+      border:1px solid rgba(0,200,224,0.25);border-radius:10px;
+      padding:2.5rem 2rem;text-align:center;margin-top:3rem;
+    }
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.75rem;}
+    .cta-box p{font-size:14px;color:var(--silver);line-height:1.7;max-width:520px;margin:0 auto 1.5rem;}
+    .cta-btn{
+      display:inline-block;padding:12px 28px;
+      background:transparent;border:1px solid var(--cyan);
+      color:var(--cyan);font-family:'Orbitron',monospace;font-size:11px;
+      font-weight:700;letter-spacing:2px;border-radius:4px;
+      text-decoration:none;transition:all 0.2s;
+    }
+    .cta-btn:hover{background:var(--cyan);color:var(--bg);}
+
+    /* FOOTER */
+    footer{
+      position:relative;z-index:1;border-top:1px solid var(--card-border);
+      background:var(--card-bg);padding:2.5rem 2rem;margin-top:4rem;
+    }
+    .footer-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-nav{display:flex;gap:1.5rem;flex-wrap:wrap;}
+    .footer-nav a{font-size:13px;color:var(--steel);text-decoration:none;transition:color 0.2s;}
+    .footer-nav a:hover{color:var(--silver);}
+    .footer-bottom{max-width:900px;margin:1.25rem auto 0;padding-top:1.25rem;border-top:1px solid var(--card-border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;}
+    .footer-copy{font-size:11px;color:var(--steel);}
+    .footer-domain{font-family:'Orbitron',monospace;font-size:11px;color:var(--cyan);}
+
+    @media(max-width:768px){
+      nav{padding:0 1rem;}
+      .nav-links{display:none;}
+      .article-hero{height:360px;}
+      main{padding:2rem 1rem 3rem;}
+      .news-item{padding:1.5rem 1.25rem;}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">ELV · ICT · AV DESIGN</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư vấn</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span>Ngôn ngữ / Language:</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1569660424259-87e64a80f6fc?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Network infrastructure technology – ELV ICT AV Weekly 30 Sep 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="eyebrow vi-content">BẢN TIN TUẦN · ELV / ICT / AV</div>
+    <div class="eyebrow en-content">WEEKLY BULLETIN · ELV / ICT / AV</div>
+    <h1 class="vi-content">Cisco G300 AI · Schneider EcoCare BMS · Crestron Collab Compute · Axis Camera Series · Secutech Vietnam 2026</h1>
+    <h1 class="en-content">Cisco G300 AI · Schneider EcoCare BMS · Crestron Collab Compute · Axis Camera Series · Secutech Vietnam 2026</h1>
+    <div class="article-meta">
+      <span>Paul Le Consultant</span>
+      <span class="divider">·</span>
+      <span class="vi-content">Thứ Tư · 30 Tháng 9, 2026</span>
+      <span class="en-content">Wednesday · September 30, 2026</span>
+      <span class="divider">·</span>
+      <span>5 min read</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- NEWS 1: CISCO -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">01</div>
+      <div style="flex:1;">
+        <div class="news-tags">
+          <span class="tag mfr">CISCO</span>
+          <span class="tag">ICT NETWORKING</span>
+          <span class="tag">AI INFRASTRUCTURE</span>
+        </div>
+        <div class="vi-content">
+          <div class="news-title-vi">Cisco Silicon One G300: Mạng AI Gigawatt-Scale & AgenticOps Tự Động Hóa Hạ Tầng</div>
+          <div class="news-title-en">Cisco Silicon One G300: Gigawatt-Scale AI Networking & AgenticOps Infrastructure Automation</div>
+        </div>
+        <div class="en-content">
+          <div class="news-title-vi">Cisco Silicon One G300: Gigawatt-Scale AI Networking & AgenticOps Infrastructure Automation</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-body vi-content">
+      <p>Cisco ra mắt thế hệ chip mạng <strong>Silicon One G300</strong> — nền tảng silicon cho phép xây dựng cụm AI gigawatt-scale với hiệu năng vượt trội: <strong>tăng 33% sử dụng băng thông mạng</strong> và <strong>cải thiện 28% thời gian hoàn thành tác vụ AI</strong> thông qua tối ưu lưu lượng thông minh. G300 cung cấp sức mạnh cho các hệ thống Nexus N9100 và 8000 Series dành cho hyperscaler, nhà cung cấp dịch vụ và enterprise.</p>
+      <p>Đi kèm là <strong>AgenticOps</strong> — bộ giải pháp tự động hóa IT xuyên portfolio sử dụng telemetry từ mạng, bảo mật và observability tools để đơn giản hóa vận hành. Cisco cũng ra mắt <strong>AI Defense</strong> nâng cao với runtime protection cho agentic AI và kiểm soát chuỗi cung ứng phần mềm AI.</p>
+      <p>Nền tảng quản lý thống nhất <strong>Nexus One</strong> giúp vận hành liền mạch giữa on-premises và cloud data center — giảm đáng kể độ phức tạp hoạt động trong môi trường hybrid.</p>
+    </div>
+    <div class="news-body en-content">
+      <p>Cisco launched the <strong>Silicon One G300</strong> chip — a silicon platform enabling gigawatt-scale AI cluster deployment with remarkable performance gains: <strong>33% increase in network utilization</strong> and <strong>28% improvement in AI job completion time</strong> through intelligent traffic optimization. G300 powers new Nexus N9100 and 8000 Series systems for hyperscalers, service providers, and enterprises.</p>
+      <p>Accompanying it is <strong>AgenticOps</strong> — a cross-portfolio IT automation suite using telemetry from networking, security and observability tools to streamline operations. Cisco also enhanced <strong>AI Defense</strong> with runtime protection for agentic AI systems and supply-chain governance for AI software.</p>
+      <p>The unified <strong>Nexus One</strong> management plane simplifies on-premises and cloud data center operations — significantly reducing complexity in hybrid environments.</p>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+      <div class="why-label en-content">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+      <p class="vi-content">Các data center tại Việt Nam và ASEAN đang bước vào giai đoạn nâng cấp mạng cho workload AI. Silicon One G300 thiết lập baseline mới cho thiết kế cabling structure — yêu cầu fiber optic 400G/800G, structured cabling tier theo TIA-942 cấp Tier III+, và hệ thống quản lý mạng tích hợp AI. Các nhà tư vấn ELV/ICT cần cập nhật specification dự án để phù hợp với hạ tầng AI-ready.</p>
+      <p class="en-content">Data centers across Vietnam and ASEAN are entering a network upgrade cycle for AI workloads. Silicon One G300 sets a new baseline for structured cabling design — requiring 400G/800G fiber optic, TIA-942 Tier III+ structured cabling, and AI-integrated network management. ELV/ICT consultants must update project specifications to align with AI-ready infrastructure requirements.</p>
+    </div>
+    <a class="source-link" href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m02/cisco-launches-breakthrough-innovations-for-the-ai-era.html" target="_blank" rel="noopener">↗ Nguồn / Source: Cisco Newsroom</a>
+  </div>
+
+  <!-- NEWS 2: SCHNEIDER ELECTRIC -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">02</div>
+      <div style="flex:1;">
+        <div class="news-tags">
+          <span class="tag mfr">SCHNEIDER ELECTRIC</span>
+          <span class="tag">BMS</span>
+          <span class="tag">SMART BUILDING</span>
+        </div>
+        <div class="vi-content">
+          <div class="news-title-vi">Schneider Electric EcoCare for BMS: AI Giám Sát Liên Tục, Tiết Kiệm 25% Năng Lượng Tòa Nhà</div>
+          <div class="news-title-en">Schneider Electric EcoCare for BMS: AI Continuous Monitoring, 25% Building Energy Savings</div>
+        </div>
+        <div class="en-content">
+          <div class="news-title-vi">Schneider Electric EcoCare for BMS: AI Continuous Monitoring, 25% Building Energy Savings</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-body vi-content">
+      <p>Schneider Electric ra mắt dịch vụ <strong>EcoCare for Building Management Systems</strong> — giải pháp AI giám sát liên tục 24/7 cho hệ thống BMS/IBMS tòa nhà. Theo dữ liệu công bố, EcoCare mang lại: <strong>giảm 25% tiêu thụ năng lượng</strong>, <strong>cải thiện 30% hiệu quả vận hành hệ thống</strong>, <strong>giảm 60% khiếu nại từ người dùng</strong>, và <strong>giảm gần 50% thời gian downtime</strong> so với phương pháp quản lý tòa nhà truyền thống.</p>
+      <p>EcoCare kết hợp giám sát từ xa với hỗ trợ kỹ thuật tại chỗ, sử dụng AI analytics để phân tích predictive — phát hiện sự cố trước khi xảy ra. Giải pháp đặc biệt phù hợp với <strong>bệnh viện, trường đại học và cơ sở y tế</strong> — nơi độ ổn định hệ thống là yêu cầu bắt buộc.</p>
+      <p>Đây là bước tiếp theo trong chiến lược EcoStruxure của Schneider sau Edge AI Room Controllers (2025) và EcoStruxure Building Activate (2024).</p>
+    </div>
+    <div class="news-body en-content">
+      <p>Schneider Electric launched <strong>EcoCare for Building Management Systems</strong> — an AI-powered continuous 24/7 monitoring service for BMS/IBMS building systems. Published data shows EcoCare delivers: <strong>25% reduction in facility energy consumption</strong>, <strong>30% improvement in system operational efficiency</strong>, <strong>60% reduction in occupant complaints</strong>, and <strong>nearly 50% decrease in system downtime</strong> versus traditional building management approaches.</p>
+      <p>EcoCare combines remote monitoring with on-site technical support, using AI analytics for predictive insights — detecting issues before they disrupt operations. The solution is particularly suited to <strong>hospitals, universities, and healthcare facilities</strong> where system stability is mandatory.</p>
+      <p>This is the next step in Schneider's EcoStruxure strategy following Edge AI Room Controllers (2025) and EcoStruxure Building Activate (2024).</p>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+      <div class="why-label en-content">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+      <p class="vi-content">EcoCare for BMS trực tiếp ứng dụng cho các dự án bệnh viện, trường học và tòa nhà văn phòng lớn tại Việt Nam — phân khúc đang tăng trưởng mạnh. Khi thiết kế BMS cho công trình mới, các nhà tư vấn ELV nên xem xét đưa dịch vụ O&M dạng AI monitoring vào gói dịch vụ sau thi công (maintenance contract). Tích kiệm 25% năng lượng là con số thuyết phục mạnh với chủ đầu tư trong bối cảnh chi phí điện tại Việt Nam liên tục tăng.</p>
+      <p class="en-content">EcoCare for BMS directly applies to hospital, school, and large office building projects in Vietnam — a fast-growing segment. When designing BMS for new projects, ELV consultants should consider incorporating AI monitoring-type O&M services into post-construction maintenance contracts. 25% energy savings is a compelling figure for project owners as Vietnam's electricity costs continue to rise.</p>
+    </div>
+    <a class="source-link" href="https://www.facilitiesdive.com/news/schneider-electric-launches-ai-driven-continuous-bms-monitoring-service/822148/" target="_blank" rel="noopener">↗ Nguồn / Source: Facilities Dive – Schneider Electric EcoCare</a>
+  </div>
+
+  <!-- NEWS 3: CRESTRON -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">03</div>
+      <div style="flex:1;">
+        <div class="news-tags">
+          <span class="tag mfr">CRESTRON</span>
+          <span class="tag">AV</span>
+          <span class="tag">COLLABORATION</span>
+        </div>
+        <div class="vi-content">
+          <div class="news-title-vi">Crestron Collab Compute & DM-NAX: Nền Tảng AV Thế Hệ Mới Tại InfoComm India 2026</div>
+          <div class="news-title-en">Crestron Collab Compute & DM-NAX: Next-Gen AV Platform at InfoComm India 2026</div>
+        </div>
+        <div class="en-content">
+          <div class="news-title-vi">Crestron Collab Compute & DM-NAX: Next-Gen AV Platform at InfoComm India 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-body vi-content">
+      <p>Tại InfoComm India 2026 (Mumbai, Jio World Convention Centre), Crestron trình diễn <strong>Collab Compute</strong> — nền tảng phần cứng thế hệ mới cho phòng họp hybrid. Được xây dựng trên <strong>Intel Core Ultra processors với NPU tích hợp</strong> (Neural Processing Unit), Collab Compute hỗ trợ đồng thời Microsoft Teams Rooms và Zoom Rooms, xử lý multi-display, professional audio, multi-camera systems, và room automation trong một thiết bị duy nhất.</p>
+      <p>Portfolio đầy đủ tại triển lãm bao gồm: <strong>Videobar 70</strong> (all-in-one camera/mic/speaker), <strong>AirMedia</strong> (wireless presentation), <strong>1 Beyond i12D</strong> (AI camera tracking), <strong>DM-NAX</strong> (distributed AV over IP), và <strong>Automate VX</strong> (autonomous camera switching). Crestron nhấn mạnh triết lý "phòng họp như một hệ sinh thái kết nối" thay vì thiết bị đơn lẻ.</p>
+    </div>
+    <div class="news-body en-content">
+      <p>At InfoComm India 2026 (Mumbai, Jio World Convention Centre), Crestron demonstrated <strong>Collab Compute</strong> — a next-generation hardware platform for hybrid meeting rooms. Built on <strong>Intel Core Ultra processors with integrated NPU</strong> (Neural Processing Unit), Collab Compute supports simultaneous Microsoft Teams Rooms and Zoom Rooms deployments, handling multi-display, professional audio, multi-camera systems, and room automation in a single device.</p>
+      <p>The full portfolio at the exhibition included: <strong>Videobar 70</strong> (all-in-one camera/mic/speaker), <strong>AirMedia</strong> (wireless presentation), <strong>1 Beyond i12D</strong> (AI camera tracking), <strong>DM-NAX</strong> (distributed AV over IP), and <strong>Automate VX</strong> (autonomous camera switching). Crestron emphasized the philosophy of "meeting rooms as a connected ecosystem" rather than standalone devices.</p>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+      <div class="why-label en-content">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+      <p class="vi-content">Collab Compute định hình lại thiết kế phòng họp AV cho thị trường doanh nghiệp và corporate building tại Việt Nam. Các dự án văn phòng hạng A, trung tâm hội nghị và campus đại học cần cập nhật specification AV với giải pháp tích hợp UC (Unified Communications) platform thay vì thiết bị rời. DM-NAX (AV over IP) cho phép phân phối âm thanh/hình ảnh không giới hạn qua hạ tầng mạng IP hiện có — giảm chi phí cabling đáng kể trong công trình lớn. Đây là xu hướng AVoIP đang thay thế dần matrix switcher truyền thống.</p>
+      <p class="en-content">Collab Compute redefines AV meeting room design for the enterprise and corporate building market in Vietnam. Grade-A offices, conference centers, and university campuses need to update AV specifications with integrated UC (Unified Communications) platform solutions rather than standalone devices. DM-NAX (AV over IP) enables unlimited audio/video distribution over existing IP network infrastructure — significantly reducing cabling costs in large projects. This represents the AVoIP trend gradually replacing traditional matrix switchers.</p>
+    </div>
+    <a class="source-link" href="https://www.ncnonline.net/crestron-brings-next-generation-collaboration-and-intelligent-av-solutions-to-infocomm-india-2026/" target="_blank" rel="noopener">↗ Nguồn / Source: NCN Online – Crestron InfoComm India 2026</a>
+  </div>
+
+  <!-- NEWS 4: AXIS COMMUNICATIONS -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">04</div>
+      <div style="flex:1;">
+        <div class="news-tags">
+          <span class="tag mfr">AXIS COMMUNICATIONS</span>
+          <span class="tag">SECURITY</span>
+          <span class="tag">IP CAMERA</span>
+        </div>
+        <div class="vi-content">
+          <div class="news-title-vi">Axis Ra Mắt Loạt Camera IP Mới: Cellular 5G, Global Shutter LPR & Thermal Bispectral 2026</div>
+          <div class="news-title-en">Axis Launches New IP Camera Series: Private 5G Cellular, Global Shutter LPR & Thermal Bispectral 2026</div>
+        </div>
+        <div class="en-content">
+          <div class="news-title-vi">Axis Launches New IP Camera Series: Private 5G Cellular, Global Shutter LPR & Thermal Bispectral 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-body vi-content">
+      <p>Axis Communications ra mắt loạt camera IP mới với công nghệ đột phá trong Q2-Q3/2026:</p>
+      <p><strong>AXIS TP3604-E Private Cellular Back Box</strong> (tháng 8/2026) — cho phép camera hoạt động qua mạng 5G/LTE Private Cellular Networks không cần cáp vật lý, với xác thực SIM-based, mã hóa mạnh và khả năng bao phủ vài km mỗi trạm gốc. Phù hợp cho công trình hạ tầng, sân bay, khu công nghiệp.</p>
+      <p><strong>AXIS P1486-LE Global Shutter Camera</strong> — camera đầu tiên trong ngành sử dụng CMOS Global Shutter để ghi lại hình ảnh chuyển động tốc độ cao không bị motion blur — đặc biệt hiệu quả cho nhận dạng biển số xe (LPR) và kiểm soát ra vào phương tiện.</p>
+      <p><strong>AXIS Q2802-E Bispectral Camera & F2180-TE Thermal Sensor</strong> — kết hợp visual + thermal cho giám sát nhiệt độ và nhận thức tình huống. <strong>AXIS M4337/38 & M4347/48 PLVE</strong> — camera panoramic 360° với độ phân giải 6MP hoặc 12MP, tích hợp IR và microphone cho audio analytics, chuẩn IP66/IK10 môi trường khắc nghiệt.</p>
+    </div>
+    <div class="news-body en-content">
+      <p>Axis Communications launched a new series of IP cameras with breakthrough technologies in Q2-Q3/2026:</p>
+      <p><strong>AXIS TP3604-E Private Cellular Back Box</strong> (August 2026) — enables cameras to operate over private 5G/LTE Cellular Networks without physical cables, with SIM-based authentication, strong encryption, and several km coverage per base station. Ideal for infrastructure, airports, and industrial complexes.</p>
+      <p><strong>AXIS P1486-LE Global Shutter Camera</strong> — industry-first CMOS Global Shutter capturing high-speed motion without blur — especially effective for license plate recognition (LPR) and vehicle access control.</p>
+      <p><strong>AXIS Q2802-E Bispectral Camera & F2180-TE Thermal Sensor</strong> — combining visual and thermal for temperature monitoring and situational awareness. <strong>AXIS M4337/38 & M4347/48 PLVE</strong> — 360° panoramic cameras with 6MP or 12MP resolution, integrated IR and microphone for audio analytics, rated IP66/IK10 for harsh environments.</p>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+      <div class="why-label en-content">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+      <p class="vi-content">Camera cellular Axis TP3604-E mở ra khả năng triển khai giám sát ở những khu vực không có hạ tầng cáp — bến cảng, khu công nghiệp xa trung tâm, công trình hạ tầng giao thông. LPR Global Shutter phù hợp cho bãi đỗ xe thông minh, cổng ra vào khu chế xuất và dự án Smart City. Khi thiết kế ELV cho công trình có yêu cầu giám sát ngoại vi, các kỹ sư nên đưa giải pháp Axis Bispectral/Thermal vào bài toán phát hiện sớm (early detection) để đáp ứng yêu cầu an ninh ngày càng cao.</p>
+      <p class="en-content">The Axis TP3604-E cellular camera enables surveillance deployment in areas lacking cable infrastructure — ports, remote industrial zones, and transportation infrastructure projects. LPR Global Shutter suits smart parking, export processing zone access control, and Smart City projects. When designing ELV systems with perimeter monitoring requirements, engineers should incorporate Axis Bispectral/Thermal solutions into early detection schemes to meet increasingly demanding security requirements.</p>
+    </div>
+    <a class="source-link" href="https://www.sourcesecurity.com/news/axis-launches-ip-cameras-boosting-security-co-227-ga.1775121731.html" target="_blank" rel="noopener">↗ Nguồn / Source: SourceSecurity – Axis New IP Camera Series</a>
+  </div>
+
+  <!-- NEWS 5: SECUTECH VIETNAM -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">05</div>
+      <div style="flex:1;">
+        <div class="news-tags">
+          <span class="tag mfr">SECUTECH VIETNAM</span>
+          <span class="tag">ELV</span>
+          <span class="tag">VIETNAM MARKET</span>
+        </div>
+        <div class="vi-content">
+          <div class="news-title-vi">Secutech Vietnam 2026: 480 Thương Hiệu, 16 Quốc Gia — AI & An Toàn Cháy Nổ Dẫn Đầu Xu Hướng</div>
+          <div class="news-title-en">Secutech Vietnam 2026: 480 Brands, 16 Countries — AI & Fire Safety Lead the Trend</div>
+        </div>
+        <div class="en-content">
+          <div class="news-title-vi">Secutech Vietnam 2026: 480 Brands, 16 Countries — AI & Fire Safety Lead the Trend</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-body vi-content">
+      <p>Triển lãm <strong>Secutech Vietnam 2026</strong> lần thứ 19 vừa kết thúc vào ngày 12/9 tại Cung Văn hóa Hữu Nghị Hà Nội. Quy mô ấn tượng: <strong>480 thương hiệu từ 16 quốc gia</strong> trên diện tích <strong>13.000m²</strong>, thu hút <strong>15.898 khách tham quan</strong> bao gồm chủ đầu tư, nhà thầu cơ điện, system integrators và facility managers.</p>
+      <p>Công nghệ nổi bật: AI-powered surveillance, access control IP, CCTV thế hệ mới, flame detectors thông minh, fire alarm devices, intelligent circuit breakers, sprinkler components, và robot chữa cháy. Điểm nhấn là xu hướng tích hợp hệ thống thay vì sản phẩm đơn lẻ — hướng tới connected safety ecosystem.</p>
+      <p>Các đơn vị nổi bật: <strong>Nohmi Bosai Ltd</strong> (Nhật Bản) — hệ thống phát hiện khói sớm cho data center & nhà máy; <strong>UL Solutions</strong> — công nghệ và chứng nhận an toàn cháy; <strong>RTC Technology Vietnam</strong> — camera AI và robotics công nghiệp. Bà Regina Tsai nhận định: "Đầu tư xây dựng tại Việt Nam tạo ra nhu cầu mạnh về hệ thống an toàn tích hợp."</p>
+    </div>
+    <div class="news-body en-content">
+      <p>The 19th <strong>Secutech Vietnam 2026</strong> exhibition concluded on September 12 at Hanoi's Friendship Cultural Palace. Impressive scale: <strong>480 brands from 16 countries</strong> across <strong>13,000m²</strong>, attracting <strong>15,898 visitors</strong> including project owners, MEP contractors, system integrators, and facility managers.</p>
+      <p>Featured technologies: AI-powered surveillance, IP access control, next-generation CCTV, smart flame detectors, fire alarm devices, intelligent circuit breakers, sprinkler components, and firefighting robots. The standout trend was system integration over standalone products — moving toward a connected safety ecosystem.</p>
+      <p>Notable exhibitors: <strong>Nohmi Bosai Ltd</strong> (Japan) — early smoke detection for data centers and factories; <strong>UL Solutions</strong> — fire safety technologies and certification; <strong>RTC Technology Vietnam</strong> — AI cameras and industrial robotics. Regina Tsai commented: "Vietnam's investment in buildings and infrastructure is creating strong demand for reliable integrated safety systems."</p>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+      <div class="why-label en-content">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+      <p class="vi-content">Secutech Vietnam 2026 là phong vũ biểu quan trọng nhất của thị trường ELV Việt Nam. Con số 15.898 khách với 480 thương hiệu quốc tế khẳng định: nhu cầu hệ thống an ninh, báo cháy và smart building tại Việt Nam đang tăng trưởng mạnh. Xu hướng connected safety ecosystem mà Secutech giới thiệu phù hợp hoàn toàn với định hướng tích hợp BMS+ELV+Fire+Security thành một nền tảng duy nhất trong các dự án quy mô lớn. Nhà tư vấn ELV nên theo dõi sát các giải pháp được trình diễn để cập nhật vào danh mục thiết bị cho specification 2026-2027.</p>
+      <p class="en-content">Secutech Vietnam 2026 is the most important barometer of Vietnam's ELV market. The figures of 15,898 visitors and 480 international brands confirm: demand for security, fire alarm, and smart building systems in Vietnam is growing strongly. The connected safety ecosystem trend showcased at Secutech aligns perfectly with the direction of integrating BMS+ELV+Fire+Security into a single unified platform in large-scale projects. ELV consultants should closely monitor the demonstrated solutions to update equipment lists for 2026-2027 specifications.</p>
+    </div>
+    <a class="source-link" href="https://www.securityinformed.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" rel="noopener">↗ Nguồn / Source: SecurityInformed – Secutech Vietnam 2026</a>
+  </div>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <h3 class="vi-content">CẦN TƯ VẤN THIẾT KẾ ELV / ICT / AV?</h3>
+    <h3 class="en-content">NEED ELV / ICT / AV DESIGN CONSULTATION?</h3>
+    <p class="vi-content">Paul Le cung cấp dịch vụ tư vấn thiết kế hệ thống ELV, ICT và AV cho công trình xây dựng tại Việt Nam — từ lập BoQ, specification đến giám sát thi công và tích hợp hệ thống.</p>
+    <p class="en-content">Paul Le provides ELV, ICT, and AV system design consulting for construction projects in Vietnam — from BoQ and specification preparation to construction supervision and system integration.</p>
+    <a href="/#contact" class="cta-btn vi-content">LIÊN HỆ TƯ VẤN MIỄN PHÍ</a>
+    <a href="/#contact" class="cta-btn en-content">FREE CONSULTATION</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="nav-logo" style="text-decoration:none;">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      </svg>
+      <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">ELV · ICT · AV DESIGN</span></div>
+    </a>
+    <nav class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Paul Le Consultant · ELV, ICT, AV Design Vietnam</span>
+    <span class="footer-domain">elvconsultant.com</span>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
