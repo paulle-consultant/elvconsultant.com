@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly 01 Oct 2026: Cisco G300, Axis ISC West, Schneider EcoCare, Biamp AV, Vietnam $7B DC | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 01/10/2026: Cisco Silicon One G300 102.4Tbps · Axis ISC West 2026 AI Security · Schneider EcoCare BMS · Biamp New AV Solutions · Vietnam $7B Data Center Investment.">
+  <meta name="keywords" content="ELV news, ICT AV weekly, Cisco G300, Axis ISC West 2026, Schneider EcoCare BMS, Biamp 2026, Vietnam data center, smart building, bản tin ELV ICT AV">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-10-01-elv-ict-av-weekly.html">
+  <meta property="og:title" content="ELV/ICT/AV Weekly 01 Oct 2026 | Paul Le Consultant">
+  <meta property="og:description" content="5 tin nổi bật: Cisco G300 AI · Axis Unified Security ISC West · Schneider EcoCare BMS · Biamp AV 2026 · Vietnam $7B Data Center">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:type" content="article">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --bg:#07111F; --card-bg:#101E30; --card-border:#1E3550;
+      --cyan:#00C8E0; --cyan-dim:rgba(0,200,224,0.10); --cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8; --white:#F0F4F8; --steel:#4A6280;
+      --navy:#1B2A4A; --navy-deep:#0D1B35; --grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.7;}
+    .grid-bg{
+      position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),
+        linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0;
+    }
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(7,17,31,0.96);border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;
+    }
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-text{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--white);letter-spacing:1px;}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px;}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan);}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:8px 20px;border-radius:4px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all 0.2s;text-decoration:none;}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg);}
+    /* LANG BAR */
+    .lang-bar{
+      position:relative;z-index:1;display:flex;justify-content:flex-end;align-items:center;
+      gap:0.5rem;padding:0.6rem 2rem;background:var(--navy-deep);
+      border-bottom:1px solid var(--card-border);
+    }
+    .lang-label{font-size:11px;color:var(--steel);letter-spacing:1px;font-family:'Orbitron',monospace;}
+    .lang-btn{
+      font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:2px;
+      background:transparent;border:1px solid var(--steel);color:var(--steel);
+      padding:4px 12px;border-radius:3px;cursor:pointer;transition:all 0.2s;
+    }
+    .lang-btn.active,.lang-btn:hover{background:var(--cyan);color:var(--bg);border-color:var(--cyan);}
+    /* HERO */
+    .article-hero{
+      position:relative;z-index:1;width:100%;height:520px;overflow:hidden;
+    }
+    .article-hero img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(0.72) saturate(0.9);}
+    .article-hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(180deg,
+        rgba(7,17,31,0.2) 0%,
+        rgba(7,17,31,0.15) 30%,
+        rgba(7,17,31,0.75) 70%,
+        rgba(7,17,31,0.97) 100%);
+    }
+    .article-hero-content{
+      position:absolute;bottom:0;left:0;right:0;
+      padding:3rem 2rem 2.5rem;max-width:960px;margin:0 auto;
+    }
+    .article-eyebrow{
+      font-family:'Orbitron',monospace;font-size:10px;letter-spacing:4px;
+      color:var(--cyan);margin-bottom:0.75rem;display:block;
+    }
+    .article-hero h1{
+      font-family:'Orbitron',monospace;font-size:clamp(1.3rem,3.5vw,2rem);
+      font-weight:900;color:var(--white);line-height:1.25;margin-bottom:0.75rem;
+      text-shadow:0 2px 16px rgba(0,0,0,0.7);
+    }
+    .article-meta{font-size:12px;color:var(--silver);display:flex;gap:1rem;flex-wrap:wrap;}
+    .article-meta span{display:flex;align-items:center;gap:4px;}
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:3rem 2rem 5rem;}
+    /* NEWS ITEM */
+    .news-item{
+      background:var(--card-bg);border:1px solid var(--card-border);
+      border-radius:10px;padding:2rem;margin-bottom:2rem;
+      position:relative;overflow:hidden;transition:border-color 0.3s;
+    }
+    .news-item::before{
+      content:'';position:absolute;top:0;left:0;width:3px;height:100%;
+      background:linear-gradient(180deg,var(--cyan),transparent);
+    }
+    .news-item:hover{border-color:var(--cyan-glow);}
+    .news-num{
+      font-family:'Orbitron',monospace;font-size:11px;color:var(--steel);
+      letter-spacing:1px;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.75rem;
+    }
+    .news-num::after{content:'';flex:1;height:1px;background:var(--card-border);}
+    .news-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:1rem;}
+    .tag{
+      font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1px;font-weight:700;
+      padding:3px 9px;border-radius:3px;border:1px solid rgba(0,200,224,0.35);
+      color:var(--cyan);background:var(--cyan-dim);
+    }
+    .tag.orange{border-color:rgba(255,160,50,0.4);color:#FFA030;background:rgba(255,160,50,0.08);}
+    .tag.green{border-color:rgba(50,220,120,0.4);color:#32DC78;background:rgba(50,220,120,0.08);}
+    .tag.purple{border-color:rgba(180,100,255,0.4);color:#B464FF;background:rgba(180,100,255,0.08);}
+    .tag.red{border-color:rgba(255,80,80,0.4);color:#FF5050;background:rgba(255,80,80,0.08);}
+    .news-title{
+      font-family:'Orbitron',monospace;font-size:1.05rem;font-weight:700;
+      color:var(--white);line-height:1.35;margin-bottom:1.25rem;
+    }
+    .news-body{font-size:14px;color:var(--silver);line-height:1.8;}
+    .news-body p{margin-bottom:0.9rem;}
+    .news-body strong{color:var(--white);font-weight:600;}
+    .why-box{
+      margin-top:1.25rem;padding:1rem 1.25rem;
+      background:rgba(0,200,224,0.06);border:1px solid rgba(0,200,224,0.2);
+      border-radius:6px;
+    }
+    .why-box .why-label{
+      font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
+      color:var(--cyan);margin-bottom:0.5rem;display:block;
+    }
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.7;margin:0;}
+    .source-link{
+      display:inline-flex;align-items:center;gap:5px;margin-top:0.75rem;
+      font-size:12px;color:var(--cyan);text-decoration:none;font-family:'Orbitron',monospace;
+      letter-spacing:0.5px;opacity:0.8;transition:opacity 0.2s;
+    }
+    .source-link:hover{opacity:1;}
+    /* CTA BOX */
+    .cta-box{
+      background:var(--card-bg);border:1px solid var(--card-border);
+      border-radius:10px;padding:2.5rem;text-align:center;margin-top:3rem;
+      position:relative;overflow:hidden;
+    }
+    .cta-box::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:2px;
+      background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+    }
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:1.1rem;color:var(--white);margin-bottom:0.75rem;}
+    .cta-box p{font-size:14px;color:var(--silver);max-width:480px;margin:0 auto 1.5rem;}
+    .cta-btn{
+      display:inline-block;background:var(--cyan);color:var(--bg);
+      padding:12px 32px;border-radius:4px;font-family:'Orbitron',monospace;
+      font-size:12px;font-weight:700;letter-spacing:2px;text-decoration:none;
+      transition:all 0.2s;
+    }
+    .cta-btn:hover{background:var(--white);}
+    /* FOOTER */
+    footer{position:relative;z-index:1;border-top:1px solid var(--card-border);background:var(--card-bg);padding:2.5rem 2rem;margin-top:4rem;}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;align-items:start;}
+    .footer-brand p{font-size:12px;color:var(--steel);line-height:1.7;margin-top:0.75rem;}
+    .footer-col h5{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;color:var(--cyan);margin-bottom:1rem;}
+    .footer-col a{display:block;font-size:13px;color:var(--steel);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+    .footer-col a:hover{color:var(--silver);}
+    .footer-bottom{max-width:1100px;margin:1.5rem auto 0;padding-top:1.5rem;border-top:1px solid var(--card-border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;}
+    .footer-copy{font-size:12px;color:var(--steel);}
+    .footer-domain{font-family:'Orbitron',monospace;font-size:12px;color:var(--cyan);}
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      nav{padding:0 1rem;}
+      .nav-links{display:none;}
+      .article-hero{height:360px;}
+      .article-hero-content{padding:2rem 1rem 1.5rem;}
+      main{padding:2rem 1rem 3rem;}
+      .news-item{padding:1.5rem;}
+      .footer-inner{grid-template-columns:1fr;}
+      .lang-bar{padding:0.6rem 1rem;}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="32" height="36" viewBox="0 0 120 140" fill="none">
+      <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#1B2A4A" stroke="#4A6280" stroke-width="4"/>
+      <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#0D1B35"/>
+      <path d="M60 18 L60 124 Q22 105 22 72 L22 34 Z" fill="#1B2A4A"/>
+      <circle cx="52" cy="72" r="8" fill="none" stroke="#F0F4F8" stroke-width="2.5"/>
+      <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#F0F4F8"/>
+      <line x1="56" y1="71" x2="63" y2="71" stroke="#F0F4F8" stroke-width="2.5"/>
+      <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#F0F4F8" stroke-width="2"/>
+      <line x1="66" y1="71" x2="66" y2="83" stroke="#F0F4F8" stroke-width="2"/>
+      <circle cx="66" cy="84" r="3" fill="#F0F4F8"/>
+    </svg>
+    <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Trang chủ</a></li>
+    <li><a href="/#services">Dịch vụ</a></li>
+    <li><a href="/#portfolio">Dự án</a></li>
+    <li><a href="/blog/" class="active">Tin tức</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư vấn</a>
+</nav>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE:</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Server racks data center AI infrastructure — ELV ICT AV Weekly 01 Oct 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <span class="article-eyebrow">BẢN TIN TUẦN · WEEKLY BULLETIN · 01 OCT 2026</span>
+    <h1>
+      <span class="vi-content">Cisco G300 AI · Axis ISC West · Schneider EcoCare BMS · Biamp AV 2026 · Vietnam $7B Data Center</span>
+      <span class="en-content">Cisco G300 AI · Axis ISC West · Schneider EcoCare BMS · Biamp AV 2026 · Vietnam $7B Data Center</span>
+    </h1>
+    <div class="article-meta">
+      <span>📅 THỨ NĂM · 01 THÁNG 10, 2026</span>
+      <span>✍️ Paul Le · ELV/ICT/AV Design Director</span>
+      <span>📖 5 TIN NỔI BẬT TUẦN</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- ===== NEWS 1: CISCO ===== -->
+  <div class="news-item">
+    <div class="news-num">TIN 01 / 05</div>
+    <div class="news-tags">
+      <span class="tag">CISCO</span>
+      <span class="tag">ICT NETWORKING</span>
+      <span class="tag">AI DATA CENTER</span>
+    </div>
+    <div class="news-title">
+      <span class="vi-content">Cisco Silicon One G300: ASIC 102.4 Tbps Cho Hạ Tầng Data Center AI Quy Mô Gigawatt</span>
+      <span class="en-content">Cisco Silicon One G300: 102.4 Tbps ASIC Powers Gigawatt-Scale AI Data Centers</span>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Cisco chính thức ra mắt chip <strong>Silicon One G300</strong> — ASIC thế hệ mới với băng thông <strong>102.4 Tbps</strong> được thiết kế đặc biệt để đáp ứng nhu cầu hạ tầng mạng trong kỷ nguyên AI agentic. Chip này cạnh tranh trực tiếp với Broadcom Tomahawk 6 Series trên phân khúc networking fabric cho các cụm GPU siêu lớn.</p>
+        <p>G300 được tích hợp vào các hệ thống switching và routing mới của Cisco, hỗ trợ giao thức <strong>800G và 1.6T optics</strong>, phù hợp với các kiến trúc data center quy mô petabyte. Theo Cisco, đây là ASIC đầu tiên của họ được tối ưu hoá toàn diện cho workload AI/ML với latency siêu thấp và bandwidth-per-watt vượt trội.</p>
+        <p>Chip G300 cũng xuất hiện nổi bật tại <strong>Cisco Live EMEA 2026</strong>, nơi hãng trình bày kiến trúc mạng cho các siêu trung tâm dữ liệu AI thế hệ tiếp theo — bao gồm switching, routing và optical coherent systems tích hợp.</p>
+      </div>
+      <div class="en-content">
+        <p>Cisco officially launched the <strong>Silicon One G300</strong> — a next-generation ASIC delivering <strong>102.4 Tbps</strong> of bandwidth, purpose-built for networking infrastructure in the agentic AI era. The chip directly competes with Broadcom's Tomahawk 6 Series in the AI cluster networking fabric segment.</p>
+        <p>The G300 is integrated into Cisco's new switching and routing systems supporting <strong>800G and 1.6T optics</strong>, suited for petabyte-scale data center architectures. Cisco claims this is their first ASIC fully optimized for AI/ML workloads with ultra-low latency and best-in-class bandwidth-per-watt.</p>
+        <p>The G300 was prominently showcased at <strong>Cisco Live EMEA 2026</strong>, where the company presented networking architectures for next-generation AI hyperscale data centers, encompassing switching, routing, and integrated coherent optical systems.</p>
+      </div>
+      <div class="why-box">
+        <span class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM · WHY IT MATTERS</span>
+        <p class="vi-content">Việt Nam đang đón làn sóng đầu tư data center AI trị giá hơn $7 tỷ USD. Các dự án DC quy mô lớn tại Hà Nội, TP.HCM và Đà Nẵng đều đòi hỏi hạ tầng networking tier cao. Hiểu được roadmap chip của Cisco giúp tư vấn đặc tả đúng switchcore và fabric cho các DA data center — từ cabling Cat8/OM5 đến breakout optics 400G → 800G. G300 cũng ảnh hưởng đến lựa chọn structured cabling từ <strong>Panduit, CommScope, Belden</strong> khi thiết kế cho spine-leaf topology.</p>
+        <p class="en-content">Vietnam is experiencing a wave of AI data center investment exceeding $7 billion. Large-scale DC projects in Hanoi, Ho Chi Minh City, and Da Nang all require high-tier networking infrastructure. Understanding Cisco's chip roadmap helps consultants spec the right switchcore and fabric for data center projects — from Cat8/OM5 cabling to 400G → 800G breakout optics. The G300 also influences structured cabling choices from <strong>Panduit, CommScope, Belden</strong> when designing spine-leaf topologies.</p>
+      </div>
+      <a class="source-link" href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m02/cisco-announces-new-silicon-one-g300.html" target="_blank" rel="noopener">↗ NGUỒN / SOURCE: CISCO NEWSROOM</a>
+    </div>
+  </div>
+
+  <!-- ===== NEWS 2: AXIS ===== -->
+  <div class="news-item">
+    <div class="news-num">TIN 02 / 05</div>
+    <div class="news-tags">
+      <span class="tag">AXIS</span>
+      <span class="tag orange">SECURITY</span>
+      <span class="tag orange">ISC WEST 2026</span>
+    </div>
+    <div class="news-title">
+      <span class="vi-content">Axis Communications Ra Mắt Loạt Giải Pháp Bảo Mật AI Hợp Nhất Tại ISC West 2026</span>
+      <span class="en-content">Axis Communications Unveils AI-Driven Unified Security Solutions at ISC West 2026</span>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tại triển lãm <strong>ISC West 2026</strong>, Axis Communications trình làng thế hệ giải pháp bảo mật IP mới với trọng tâm là <strong>AI phân tích thị giác tích hợp sẵn trên camera</strong> và kiến trúc bảo mật hợp nhất (Unified Security Platform). Đây là một trong những triển lãm security lớn nhất Bắc Mỹ và luôn là nơi Axis định hướng xu hướng công nghệ cho toàn ngành.</p>
+        <p>Điểm nhấn là dòng <strong>camera ngoài trời thế hệ mới</strong> tích hợp AI edge computing: nhận dạng biển số xe (ALPR) với Global Shutter Sensor, phân tích hành vi bất thường real-time, và hỗ trợ <strong>Private Cellular (5G/LTE)</strong> cho các địa điểm hạ tầng quan trọng không có cáp mạng. Axis cũng giới thiệu tích hợp sâu hơn với nền tảng VMS như Milestone và Genetec.</p>
+        <p>Một mảng mới được giới thiệu là <strong>Axis Cloud Connect</strong> — nền tảng quản lý camera và truy cập từ xa qua cloud, phù hợp với quản lý chuỗi công trình phân tán.</p>
+      </div>
+      <div class="en-content">
+        <p>At <strong>ISC West 2026</strong>, Axis Communications unveiled a new generation of IP security solutions centered on <strong>on-camera AI visual analytics</strong> and a Unified Security Platform architecture. One of North America's largest security trade shows, ISC West is consistently where Axis sets technology direction for the global industry.</p>
+        <p>Highlights include a new generation of <strong>outdoor cameras</strong> with integrated AI edge computing: ALPR with Global Shutter Sensor, real-time behavioral anomaly detection, and <strong>Private Cellular (5G/LTE)</strong> support for critical infrastructure sites lacking structured cabling. Axis also showcased deeper integration with VMS platforms like Milestone and Genetec.</p>
+        <p>A new offering is <strong>Axis Cloud Connect</strong> — a cloud-based camera management and remote access platform, ideal for managing distributed multi-site project portfolios.</p>
+      </div>
+      <div class="why-box">
+        <span class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM · WHY IT MATTERS</span>
+        <p class="vi-content">Axis là hãng camera IP dẫn đầu toàn cầu và được ưa chuộng trong các dự án ELV/CCTV cấp cao tại Việt Nam (bệnh viện, trung tâm thương mại, khu công nghiệp, sân bay). Tính năng <strong>ALPR Global Shutter</strong> rất phù hợp với bãi đỗ xe thông minh và kiểm soát vào/ra tự động. Hỗ trợ <strong>Private Cellular</strong> mở ra cơ hội thiết kế hệ thống CCTV cho công trình hạ tầng thiếu cáp mạng như cảng biển, khu kho bãi, và công trình ngoại thành.</p>
+        <p class="en-content">Axis leads the global IP camera market and is preferred in high-tier ELV/CCTV projects in Vietnam (hospitals, malls, industrial zones, airports). The <strong>ALPR Global Shutter</strong> feature is highly relevant for smart parking and automated access control. <strong>Private Cellular</strong> support opens design opportunities for CCTV systems in infrastructure projects lacking structured cabling — seaports, warehouses, and peri-urban developments.</p>
+      </div>
+      <a class="source-link" href="https://newsroom.axis.com/en-us/press-release/isc-west-2026" target="_blank" rel="noopener">↗ NGUỒN / SOURCE: AXIS COMMUNICATIONS NEWSROOM</a>
+    </div>
+  </div>
+
+  <!-- ===== NEWS 3: SCHNEIDER ELECTRIC ===== -->
+  <div class="news-item">
+    <div class="news-num">TIN 03 / 05</div>
+    <div class="news-tags">
+      <span class="tag">SCHNEIDER</span>
+      <span class="tag green">BMS</span>
+      <span class="tag green">ECOCARE</span>
+    </div>
+    <div class="news-title">
+      <span class="vi-content">Schneider Electric Ra Mắt EcoCare for BMS: Giám Sát AI 24/7 Thông Minh Cho Tòa Nhà Hiện Đại</span>
+      <span class="en-content">Schneider Electric Launches EcoCare for BMS: 24/7 AI-Powered Operational Intelligence for Modern Buildings</span>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Schneider Electric công bố dịch vụ <strong>EcoCare for BMS</strong> — giải pháp giám sát liên tục hệ thống BMS (Building Management System) bằng AI với cam kết <strong>24/7 real-time monitoring</strong> và phân tích dự đoán lỗi trước khi xảy ra. Đây là bước phát triển tiếp theo của nền tảng <strong>EcoStruxure Building</strong>, đưa AI từ mức độ "phân tích báo cáo" lên tầm "vận hành chủ động".</p>
+        <p>EcoCare for BMS bao gồm: <strong>Predictive Analytics Engine</strong> phát hiện bất thường thiết bị HVAC, điện, chiếu sáng trước 48–72 giờ; <strong>Digital Twin</strong> tòa nhà đồng bộ real-time; và dashboard <strong>Operational Intelligence</strong> với KPI theo dõi tiêu thụ năng lượng, carbon footprint và chi phí bảo trì.</p>
+        <p>Schneider cam kết tiết kiệm <strong>25–35% chi phí năng lượng</strong> và giảm <strong>40% downtime** không lên kế hoạch thông qua bảo trì dự đoán. Dịch vụ khả dụng trên toàn cầu qua mô hình subscription SaaS.</p>
+      </div>
+      <div class="en-content">
+        <p>Schneider Electric announced <strong>EcoCare for BMS</strong> — a continuous AI-powered monitoring service for Building Management Systems offering <strong>24/7 real-time monitoring</strong> and predictive fault analytics before failures occur. This is the next evolution of the <strong>EcoStruxure Building</strong> platform, elevating AI from "analytical reporting" to "proactive operations."</p>
+        <p>EcoCare for BMS includes: a <strong>Predictive Analytics Engine</strong> detecting HVAC, electrical, and lighting anomalies 48–72 hours in advance; a real-time synchronized building <strong>Digital Twin</strong>; and an <strong>Operational Intelligence</strong> dashboard tracking energy KPIs, carbon footprint, and maintenance costs.</p>
+        <p>Schneider commits to <strong>25–35% energy cost savings</strong> and a <strong>40% reduction in unplanned downtime</strong> through predictive maintenance. The service is available globally on a SaaS subscription model.</p>
+      </div>
+      <div class="why-box">
+        <span class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM · WHY IT MATTERS</span>
+        <p class="vi-content">EcoCare for BMS là giải pháp tư vấn thiết kế cần biết cho mọi dự án BMS tại Việt Nam — đặc biệt là bệnh viện, tòa nhà văn phòng, và trường đại học cần tuân thủ cam kết tiêu thụ năng lượng. Khi đặc tả <strong>Schneider EcoStruxure</strong> làm nền tảng BMS, nhà tư vấn nên đề cập rõ option EcoCare để giúp chủ đầu tư đánh giá TCO (Total Cost of Ownership) so với dịch vụ bảo trì truyền thống. Đây cũng là lợi thế bán hàng khi thuyết phục Ban Quản Lý tòa nhà về khả năng ROI của hệ thống BMS hiện đại.</p>
+        <p class="en-content">EcoCare for BMS is a must-know specification for any BMS project in Vietnam — especially hospitals, office towers, and universities with energy commitments. When specifying <strong>Schneider EcoStruxure</strong> as the BMS platform, consultants should explicitly mention EcoCare to help investors evaluate TCO against traditional O&M contracts. It's also a compelling sales argument when convincing Building Management teams of the ROI from modern BMS infrastructure.</p>
+      </div>
+      <a class="source-link" href="https://www.facilitiesdive.com/news/schneider-electric-launches-ai-driven-continuous-bms-monitoring-service/822148/" target="_blank" rel="noopener">↗ NGUỒN / SOURCE: FACILITIES DIVE</a>
+    </div>
+  </div>
+
+  <!-- ===== NEWS 4: BIAMP ===== -->
+  <div class="news-item">
+    <div class="news-num">TIN 04 / 05</div>
+    <div class="news-tags">
+      <span class="tag">BIAMP</span>
+      <span class="tag purple">AV</span>
+      <span class="tag purple">COLLABORATION</span>
+    </div>
+    <div class="news-title">
+      <span class="vi-content">Biamp Tung Loạt Sản Phẩm AV Mới 2026 & Đạt Chứng Nhận Cisco Webex + Zoom Rooms</span>
+      <span class="en-content">Biamp Launches New AV Solutions 2026 & Earns Cisco Webex + Zoom Rooms Certifications</span>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Biamp — thương hiệu hàng đầu trong phân khúc xử lý âm thanh chuyên nghiệp — tiếp tục mở rộng danh mục sản phẩm AV 2026 với loạt cập nhật quan trọng. Nổi bật nhất là việc đạt <strong>chứng nhận chính thức từ Cisco Webex và Zoom Rooms</strong> cho dòng sản phẩm <strong>Tesira DSP</strong> và <strong>Devio Series</strong> — đảm bảo tích hợp plug-and-play với các nền tảng UC/collaboration phổ biến nhất hiện nay.</p>
+        <p>Biamp ra mắt các sản phẩm mới bao gồm <strong>Devio UCX</strong> — bộ xử lý âm thanh phòng họp nhỏ gọn tích hợp AI noise cancellation; và <strong>BMA 360D</strong> — microphone ceiling beamforming thế hệ mới phù hợp phòng họp từ 20–50m². Hãng cũng cập nhật firmware Tesira với tính năng <strong>Acoustic Echo Cancellation Gen3</strong> và <strong>Spatial Audio Processing</strong>.</p>
+        <p>Đặc biệt, Biamp công bố hợp tác với <strong>Q-SYS (QSC)</strong> để cung cấp giải pháp âm thanh tích hợp cho các hệ thống hội trường và giảng đường đa phương tiện quy mô lớn.</p>
+      </div>
+      <div class="en-content">
+        <p>Biamp — a leading name in professional audio processing — continues expanding its 2026 AV product portfolio with significant updates. The headline news is achieving <strong>official certification from Cisco Webex and Zoom Rooms</strong> for the <strong>Tesira DSP</strong> and <strong>Devio Series</strong> — guaranteeing plug-and-play integration with today's most popular UC/collaboration platforms.</p>
+        <p>New launches include the <strong>Devio UCX</strong> — a compact meeting room audio processor with AI noise cancellation; and the <strong>BMA 360D</strong> — a next-gen ceiling beamforming microphone for meeting rooms from 20–50m². Biamp also updated Tesira firmware with <strong>Acoustic Echo Cancellation Gen3</strong> and <strong>Spatial Audio Processing</strong>.</p>
+        <p>Notably, Biamp announced a partnership with <strong>Q-SYS (QSC)</strong> to deliver integrated audio solutions for large-scale auditoriums and multimedia lecture halls.</p>
+      </div>
+      <div class="why-box">
+        <span class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM · WHY IT MATTERS</span>
+        <p class="vi-content">Cisco Webex và Zoom Rooms là hai nền tảng UC được doanh nghiệp lớn, ngân hàng, và trường đại học Việt Nam sử dụng rộng rãi nhất. Việc Biamp có chứng nhận chính thức từ cả hai nền tảng giúp nhà tư vấn AV <strong>chỉ định Biamp tự tin vào đặc tả phòng họp</strong> mà không lo xung đột tích hợp. Đây là điểm cộng lớn khi tư vấn hệ thống hội nghị truyền hình cho văn phòng, ngân hàng, và cơ sở giáo dục tại Việt Nam — phân khúc đang tăng trưởng mạnh sau dịch COVID và xu hướng hybrid work.</p>
+        <p class="en-content">Cisco Webex and Zoom Rooms are the two most widely used UC platforms by large enterprises, banks, and universities in Vietnam. Biamp's official certification from both platforms allows AV consultants to <strong>confidently specify Biamp in meeting room designs</strong> without integration risk. This is a significant advantage when consulting on video conferencing systems for offices, banks, and educational facilities in Vietnam — a segment growing rapidly after COVID and the hybrid work trend.</p>
+      </div>
+      <a class="source-link" href="https://eccoinc.com/news/biamp-expands-certified-av-solutions-cisco-and-zoom-approvals-and-launches-powerful-new" target="_blank" rel="noopener">↗ NGUỒN / SOURCE: ECCO INC. / BIAMP</a>
+    </div>
+  </div>
+
+  <!-- ===== NEWS 5: VIETNAM DATA CENTER ===== -->
+  <div class="news-item">
+    <div class="news-num">TIN 05 / 05</div>
+    <div class="news-tags">
+      <span class="tag red">VIETNAM</span>
+      <span class="tag red">DATA CENTER</span>
+      <span class="tag red">ĐẦU TƯ · INVESTMENT</span>
+    </div>
+    <div class="news-title">
+      <span class="vi-content">Việt Nam Thu Hút Hơn 7 Tỷ USD Đầu Tư Data Center AI: Cơ Hội Lớn Chưa Từng Có Cho Ngành ICT/ELV</span>
+      <span class="en-content">Vietnam Secures Over $7 Billion in AI Data Center Investment: Unprecedented Opportunity for the ICT/ELV Sector</span>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Trong năm 2026, Việt Nam đã trở thành điểm đến hàng đầu Đông Nam Á về đầu tư data center AI, với tổng vốn đăng ký vượt <strong>$7 tỷ USD</strong> từ các tập đoàn công nghệ lớn toàn cầu. Đây là làn sóng đầu tư lớn nhất vào hạ tầng số tại Việt Nam trong lịch sử.</p>
+        <p>Các tập đoàn đầu tư bao gồm <strong>Microsoft, Google, Amazon (AWS), NVIDIA, SK Hynix, Samsung</strong> và nhiều tên tuổi khác, tập trung vào Hà Nội, TP.HCM, Đà Nẵng và các khu công nghiệp công nghệ cao. Hàng chục dự án <strong>hyperscale data center</strong> đang trong giai đoạn quy hoạch và thi công, với tổng diện tích sàn hàng triệu m².</p>
+        <p>Chính phủ Việt Nam đã ban hành chính sách ưu đãi thuế và đẩy nhanh cấp phép cho các dự án data center để duy trì cạnh tranh với Singapore, Malaysia và Thái Lan — những quốc gia cũng đang chạy đua thu hút đầu tư tương tự.</p>
+      </div>
+      <div class="en-content">
+        <p>In 2026, Vietnam has emerged as Southeast Asia's premier AI data center investment destination, with registered capital exceeding <strong>$7 billion</strong> from major global tech conglomerates. This is the largest wave of investment in Vietnam's digital infrastructure in history.</p>
+        <p>Investing corporations include <strong>Microsoft, Google, Amazon (AWS), NVIDIA, SK Hynix, Samsung</strong>, and many others, concentrating on Hanoi, Ho Chi Minh City, Da Nang, and high-tech industrial zones. Dozens of <strong>hyperscale data center</strong> projects are in planning and construction phases, representing millions of square meters of floor space.</p>
+        <p>The Vietnamese government has introduced tax incentives and accelerated permitting for data center projects to remain competitive with Singapore, Malaysia, and Thailand — neighboring countries also racing to attract similar investments.</p>
+      </div>
+      <div class="why-box">
+        <span class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM · WHY IT MATTERS</span>
+        <p class="vi-content">Đây là cơ hội vàng cho các công ty tư vấn ELV/ICT và nhà thầu chuyên nghiệp tại Việt Nam. Data center hyperscale đòi hỏi hệ thống <strong>structured cabling tier cao (Cat6A/8, OM4/OM5, MPO)</strong>, hệ thống <strong>BMS/DCIM tích hợp</strong>, <strong>hệ thống nguồn điện UPS và PDU thông minh</strong>, hệ thống <strong>an ninh AI camera + access control</strong> cho toàn bộ khuôn viên, và <strong>phòng NOC/SOC AV Control Room</strong>. Paul Le Consultant tại Duy Hoa Phat Corporation và HBP Project Management đang theo dõi chặt chẽ pipeline dự án này để chuẩn bị hồ sơ năng lực tư vấn thiết kế phù hợp.</p>
+        <p class="en-content">This represents a golden opportunity for Vietnam's ELV/ICT consulting firms and specialist contractors. Hyperscale data centers require <strong>high-tier structured cabling (Cat6A/8, OM4/OM5, MPO)</strong>, integrated <strong>BMS/DCIM systems</strong>, <strong>UPS and smart PDU power infrastructure</strong>, <strong>AI camera security + access control</strong> for the entire campus, and <strong>AV Control Room / NOC / SOC</strong> systems. Paul Le Consultant at Duy Hoa Phat Corporation and HBP Project Management is actively tracking this project pipeline to prepare qualified design consulting capabilities.</p>
+      </div>
+      <a class="source-link" href="https://erp.today/vietnam-draws-more-than-7-billion-in-ai-data-center-investments-reshaping-enterprise-infrastructure/" target="_blank" rel="noopener">↗ NGUỒN / SOURCE: ERP.TODAY</a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3>
+      <span class="vi-content">TƯ VẤN DỰ ÁN ELV · ICT · AV</span>
+      <span class="en-content">ELV · ICT · AV PROJECT CONSULTING</span>
+    </h3>
+    <p class="vi-content">Bạn có dự án data center, tòa nhà thông minh, hệ thống camera IP, BMS hay phòng họp AV cần tư vấn thiết kế? Liên hệ Paul Le ngay hôm nay.</p>
+    <p class="en-content">Do you have a data center, smart building, IP camera, BMS, or AV meeting room project requiring design consulting? Contact Paul Le today.</p>
+    <a href="/#contact" class="cta-btn">
+      <span class="vi-content">LIÊN HỆ TƯ VẤN MIỄN PHÍ</span>
+      <span class="en-content">GET FREE CONSULTATION</span>
+    </a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.75rem;">
+        <svg width="28" height="32" viewBox="0 0 120 140" fill="none">
+          <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#1B2A4A" stroke="#4A6280" stroke-width="4"/>
+          <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#0D1B35"/>
+          <path d="M60 18 L60 124 Q22 105 22 72 L22 34 Z" fill="#1B2A4A"/>
+          <circle cx="52" cy="72" r="8" fill="none" stroke="#F0F4F8" stroke-width="2.5"/>
+          <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#F0F4F8"/>
+          <line x1="56" y1="71" x2="63" y2="71" stroke="#F0F4F8" stroke-width="2.5"/>
+          <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#F0F4F8" stroke-width="2"/>
+          <line x1="66" y1="71" x2="66" y2="83" stroke="#F0F4F8" stroke-width="2"/>
+          <circle cx="66" cy="84" r="3" fill="#F0F4F8"/>
+        </svg>
+        <div><span class="logo-text" style="font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--white);">PAUL LE</span><span class="logo-sub" style="font-size:8px;color:var(--cyan);letter-spacing:2px;display:block;">AV · ICT · ELV CONSULTANT</span></div>
+      </div>
+      <p>Tư vấn thiết kế độc lập hệ thống ICT, ELV &amp; AV cho công trình xây dựng tại Việt Nam.</p>
+    </div>
+    <div class="footer-col">
+      <h5>BÀI VIẾT MỚI</h5>
+      <a href="/blog/2026-10-01-elv-ict-av-weekly.html">01/10/2026 – Cisco G300, Axis ISC West, Schneider EcoCare, Biamp AV, Vietnam $7B DC</a>
+      <a href="/blog/2026-09-30-elv-ict-av-weekly.html">30/09/2026 – Cisco G300, Schneider EcoCare, Crestron Collab, Axis, Secutech VN</a>
+      <a href="/blog/2026-09-24-elv-ict-av-weekly.html">24/09/2026 – Panduit AI DC, Axis+Genetec, Biamp</a>
+      <a href="/blog/2026-09-23-elv-ict-av-weekly.html">23/09/2026 – Cisco Wi-Fi 7, Axis AI, Schneider BMS</a>
+      <a href="/blog/">Tất cả bài viết →</a>
+    </div>
+    <div class="footer-col">
+      <h5>LIÊN HỆ</h5>
+      <a href="mailto:luyen.lt@duyhoaphat.vn">luyen.lt@duyhoaphat.vn</a>
+      <a href="https://wa.me/84908850898" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="/#portfolio">Xem dự án</a>
+      <a href="/#contact">Tư vấn miễn phí</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Paul Le Consultant · Tư vấn thiết kế ICT, ELV, AV tại Việt Nam</span>
+    <span class="footer-domain">elvconsultant.com</span>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  let saved='vi';try{saved=localStorage.getItem('lang')||'vi';}catch(e){}
+  setLang(saved);
+});
+</script>
+</body>
+</html>
