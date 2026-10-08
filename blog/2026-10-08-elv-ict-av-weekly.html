@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bản Tin ELV/ICT/AV Tuần 08/10/2026 | Paul Le Consultant</title>
+  <meta name="description" content="5 tin nổi bật tuần này: Cisco Silicon One G300, Cisco Room Kit Pro G2, Axis AI Security, Schneider EcoCare BMS, Secutech Vietnam 2026. Song ngữ Việt–Anh.">
+  <meta property="og:title" content="ELV/ICT/AV Weekly — 08 Oct 2026 | Paul Le Consultant">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1683322499436-f4383dd59f5a?w=1200&h=630&q=85&auto=format&fit=crop">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07111F;
+      --card-bg: #101E30;
+      --card-border: #1E3550;
+      --cyan: #00C8E0;
+      --cyan-dim: rgba(0,200,224,0.10);
+      --cyan-glow: rgba(0,200,224,0.28);
+      --silver: #A0B4C8;
+      --white: #F0F4F8;
+      --steel: #4A6280;
+      --navy: #1B2A4A;
+      --navy-deep: #0D1B35;
+      --grid-line: rgba(0,200,224,0.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7,17,31,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0 16px;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--cyan);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--silver);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cyan); }
+
+    /* ===== LANG BAR ===== */
+    .lang-bar {
+      background: var(--navy-deep);
+      border-bottom: 1px solid var(--grid-line);
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 6px 16px;
+      gap: 8px;
+    }
+    .lang-label { font-size: 11px; color: var(--steel); letter-spacing: 0.08em; }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--card-border);
+      color: var(--silver);
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.06em;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--cyan-dim);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    /* ===== HERO ===== */
+    .article-hero {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+    .article-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(7,17,31,0.35) 0%,
+        rgba(7,17,31,0.55) 50%,
+        rgba(7,17,31,0.92) 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 32px 24px;
+    }
+    .hero-eyebrow {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--cyan);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background: var(--cyan);
+    }
+    .hero-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(18px, 3.5vw, 30px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      max-width: 800px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    }
+    .hero-meta {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--silver);
+      letter-spacing: 0.05em;
+    }
+
+    /* ===== MAIN ===== */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 16px 60px;
+    }
+
+    /* ===== INTRO BOX ===== */
+    .intro-box {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-left: 3px solid var(--cyan);
+      border-radius: 6px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-size: 14px;
+      color: var(--silver);
+      line-height: 1.8;
+    }
+    .intro-box strong { color: var(--cyan); }
+
+    /* ===== NEWS ITEMS ===== */
+    .news-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 28px 28px 24px;
+      margin-bottom: 24px;
+      position: relative;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .news-item:hover {
+      border-color: var(--cyan-glow);
+      box-shadow: 0 4px 30px rgba(0,200,224,0.07);
+    }
+    .news-number {
+      position: absolute;
+      top: -14px;
+      left: 24px;
+      background: var(--bg);
+      border: 1px solid var(--card-border);
+      color: var(--cyan);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 3px;
+      letter-spacing: 0.1em;
+    }
+    .news-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+      margin-top: 6px;
+    }
+    .tag {
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0,200,224,0.20);
+      color: var(--cyan);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 3px 9px;
+      border-radius: 2px;
+      text-transform: uppercase;
+    }
+    .tag.secondary {
+      background: rgba(74,98,128,0.15);
+      border-color: rgba(74,98,128,0.3);
+      color: var(--silver);
+    }
+    .news-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+    .news-title .en { color: var(--silver); font-size: 13px; font-weight: 600; display: block; margin-top: 4px; }
+    .news-body {
+      font-size: 14px;
+      color: var(--silver);
+      line-height: 1.8;
+    }
+    .news-body p { margin-bottom: 10px; }
+    .news-body ul {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 12px;
+    }
+    .news-body ul li {
+      padding-left: 18px;
+      position: relative;
+      margin-bottom: 5px;
+      font-size: 13.5px;
+    }
+    .news-body ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-weight: 700;
+    }
+    .news-body strong { color: var(--white); font-weight: 600; }
+    .news-source {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--steel);
+    }
+    .news-source a { color: var(--cyan); text-decoration: none; }
+    .news-source a:hover { text-decoration: underline; }
+
+    /* ===== WHY BOX ===== */
+    .why-box {
+      background: linear-gradient(135deg, rgba(0,200,224,0.05) 0%, rgba(0,200,224,0.02) 100%);
+      border: 1px solid rgba(0,200,224,0.15);
+      border-left: 3px solid var(--cyan);
+      border-radius: 4px;
+      padding: 14px 18px;
+      margin-top: 18px;
+    }
+    .why-box-label {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .why-box p {
+      font-size: 13px;
+      color: var(--silver);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ===== DIVIDER ===== */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--grid-line);
+      margin: 8px 0 32px;
+    }
+
+    /* ===== CTA BOX ===== */
+    .cta-box {
+      background: var(--navy-deep);
+      border: 1px solid var(--card-border);
+      border-top: 2px solid var(--cyan);
+      border-radius: 8px;
+      padding: 32px 28px;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .cta-box h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 16px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .cta-box p { color: var(--silver); font-size: 14px; margin-bottom: 20px; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--cyan);
+      color: var(--bg);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 12px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--navy-deep);
+      border-top: 1px solid var(--card-border);
+      padding: 28px 16px;
+      text-align: center;
+    }
+    .footer-inner { max-width: 860px; margin: 0 auto; }
+    footer p { color: var(--steel); font-size: 12px; margin-bottom: 8px; }
+    footer a { color: var(--cyan); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .article-hero { height: 280px; }
+      .hero-overlay { padding: 20px 16px; }
+      .news-item { padding: 24px 16px 18px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="/index.html">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text></svg>
+      PAUL LE CONSULTANT
+    </a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/blog/index.html">Blog</a></li>
+      <li><a href="/index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE:</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1683322499436-f4383dd59f5a?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Network infrastructure dark blue cables — ELV/ICT/AV Weekly">
+  <div class="hero-overlay">
+    <div class="hero-eyebrow">
+      <span class="vi-content">BẢN TIN TUẦN · ELV / ICT / AV</span>
+      <span class="en-content" style="display:none">WEEKLY NEWSLETTER · ELV / ICT / AV</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="vi-content">Cisco AI Chip, Axis Security, Schneider BMS &amp; Secutech Vietnam<br>— 5 Tin Nổi Bật Tuần 08/10/2026</span>
+      <span class="en-content" style="display:none">Cisco AI Chip, Axis Security, Schneider BMS &amp; Secutech Vietnam<br>— Top 5 Stories, Week of 08 Oct 2026</span>
+    </h1>
+    <div class="hero-meta">08 Tháng 10, 2026 &nbsp;·&nbsp; Paul Le Consultant &nbsp;·&nbsp; elvconsultant.com</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- INTRO -->
+  <div class="intro-box">
+    <span class="vi-content">
+      Chào mừng đến với bản tin ELV/ICT/AV tuần này. Tuần 08/10/2026 nổi bật với: <strong>Cisco</strong> ra mắt chip mạng AI thế hệ mới Silicon One G300 cùng giải pháp hội thảo Room Kit Pro G2; <strong>Axis Communications</strong> trình làng loạt camera AI thế hệ mới; <strong>Schneider Electric</strong> ra mắt EcoCare for BMS giúp tối ưu vận hành tòa nhà bằng AI; và <strong>Secutech Vietnam 2026</strong> đã kết thúc thành công tại Hà Nội với hơn 480 thương hiệu tham dự.
+    </span>
+    <span class="en-content" style="display:none">
+      Welcome to this week's ELV/ICT/AV newsletter. Highlights for the week of 08 Oct 2026: <strong>Cisco</strong> unveils the AI-native Silicon One G300 networking chip and the Room Kit Pro G2 conferencing system; <strong>Axis Communications</strong> launches next-gen AI-powered security cameras; <strong>Schneider Electric</strong> introduces EcoCare for BMS, an AI-driven building operations service; and <strong>Secutech Vietnam 2026</strong> concluded successfully in Hanoi with 480+ exhibiting brands.
+    </span>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- ==================== NEWS ITEM 1 ==================== -->
+  <article class="news-item">
+    <div class="news-number">TIN 01 / NEWS 01</div>
+    <div class="news-tags">
+      <span class="tag">CISCO</span>
+      <span class="tag secondary">NETWORKING</span>
+      <span class="tag secondary">AI INFRASTRUCTURE</span>
+    </div>
+
+    <h2 class="news-title">
+      <span class="vi-content">Cisco Silicon One G300: Chip Mạng AI 102.4 Tbps — Cải Thiện 28% Thời Gian Xử Lý AI Cluster</span>
+      <span class="en-content" style="display:none">Cisco Silicon One G300: 102.4 Tbps AI Networking Chip — 28% Faster AI Job Completion</span>
+    </h2>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tại Cisco Live Amsterdam 2026, Cisco đã giới thiệu <strong>Silicon One G300</strong> — chip chuyển mạch lập trình 102,4 Tbps thế hệ mới, được thiết kế đặc biệt cho các cụm AI quy mô lớn (AI clusters). Cisco công bố cải thiện 28% thời gian hoàn thành tác vụ AI (job completion time) nhờ kiến trúc Intelligent Collective Networking kết hợp shared packet buffer, cân bằng tải theo đường dẫn, và telemetry chủ động.</p>
+        <p>Các hệ thống xây dựng trên G300 bao gồm:</p>
+        <ul>
+          <li><strong>Cisco Nexus 9000 &amp; 8000</strong>: Hệ thống switching/routing modular với làm mát bằng chất lỏng 100%, tiết kiệm năng lượng gần 70%</li>
+          <li><strong>Module quang 1.6T OSFP &amp; 800G LPO</strong>: Giải pháp kết nối tốc độ cao thế hệ mới cho data center</li>
+          <li><strong>Nexus One</strong>: Nền tảng thống nhất NX-OS VXLAN EVPN và Cisco ACI, tích hợp Splunk cho AI job observability</li>
+          <li><strong>Cisco AI Defense</strong>: Cập nhật lớn nhất từ trước đến nay — bảo vệ AI supply chain và agentic tool runtime</li>
+        </ul>
+        <p>Các hệ thống dựa trên G300 sẽ được giao hàng trong năm 2026.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>At Cisco Live Amsterdam 2026, Cisco unveiled the <strong>Silicon One G300</strong> — a 102.4 Tbps programmable switching chip purpose-built for large AI clusters. Cisco claims a 28% improvement in AI job completion time through Intelligent Collective Networking, combining shared packet buffers, path-based load balancing, and proactive telemetry.</p>
+        <p>Systems built on G300 include:</p>
+        <ul>
+          <li><strong>Cisco Nexus 9000 &amp; 8000</strong>: Fixed and modular switching systems with 100% liquid cooling and ~70% energy efficiency improvement</li>
+          <li><strong>1.6T OSFP &amp; 800G LPO Optics</strong>: Next-generation high-speed connectivity for data centers</li>
+          <li><strong>Nexus One</strong>: Unified NX-OS VXLAN EVPN and Cisco ACI under one dashboard, with native Splunk integration for AI job observability</li>
+          <li><strong>Cisco AI Defense Update</strong>: Biggest update since launch — adds AI supply chain governance and agentic tool runtime protection</li>
+        </ul>
+        <p>G300-based systems are scheduled to ship in 2026.</p>
+      </div>
+
+      <div class="why-box">
+        <div class="why-box-label">
+          <span class="vi-content">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT TẠI VIỆT NAM</span>
+          <span class="en-content" style="display:none">⚡ RELEVANCE FOR ELV/ICT PROJECTS IN VIETNAM</span>
+        </div>
+        <p class="vi-content">Cisco vẫn là nhà cung cấp hạ tầng mạng số một cho các dự án tòa nhà thông minh, data center và campus network tại Việt Nam. Các dự án ICT tích hợp (ELV Package) trong bệnh viện, trung tâm thương mại, tổ hợp văn phòng đều sử dụng Cisco Nexus/Catalyst làm core/distribution switch. Chip G300 và các module quang 800G/1.6T sẽ định hình roadmap nâng cấp hạ tầng mạng cho giai đoạn 2026–2030. Nhà tư vấn/thiết kế cần theo dõi cập nhật để tư vấn migration path phù hợp cho khách hàng.</p>
+        <p class="en-content" style="display:none">Cisco remains the #1 network infrastructure vendor for smart buildings, data centers, and campus networks in Vietnam. ELV/ICT packages for hospitals, commercial complexes, and office towers consistently specify Cisco Nexus/Catalyst as core/distribution switches. The G300 chip and 800G/1.6T optics will shape the 2026–2030 infrastructure upgrade roadmap. Consultants and designers should monitor these updates to advise clients on appropriate migration paths.</p>
+      </div>
+
+      <div class="news-source">
+        <span class="vi-content">Nguồn:</span>
+        <span class="en-content" style="display:none">Source:</span>
+        <a href="https://www.crnasia.com/news-network/2026/cisco-live-amsterdam-2026-the-5-new-networking-security-and-collaboration-products-on-display" target="_blank" rel="noopener">CRN Asia — Cisco Live Amsterdam 2026</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.cisilion.com/news-blog/cisco-live-amsterdam-2026-ai-ready-networking-to-reshape-enterprise-infrastructure/" target="_blank" rel="noopener">Cisilion Analysis</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ==================== NEWS ITEM 2 ==================== -->
+  <article class="news-item">
+    <div class="news-number">TIN 02 / NEWS 02</div>
+    <div class="news-tags">
+      <span class="tag">CISCO</span>
+      <span class="tag secondary">AV</span>
+      <span class="tag secondary">COLLABORATION</span>
+    </div>
+
+    <h2 class="news-title">
+      <span class="vi-content">Cisco Room Kit Pro G2 &amp; Webex: Giải Pháp Hội Nghị AI Cho Phòng Họp Lớn &amp; Dịch Thuật Thời Gian Thực</span>
+      <span class="en-content" style="display:none">Cisco Room Kit Pro G2 &amp; Webex: AI Meeting Room System &amp; Real-Time Speech Translation</span>
+    </h2>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Cisco tiếp tục công bố loạt sản phẩm AV/Collaboration tại Amsterdam, phù hợp trực tiếp với thiết kế phòng họp (conference room design):</p>
+        <ul>
+          <li><strong>Room Kit Pro G2</strong>: Hệ thống hội nghị dựa trên NVIDIA, kết nối nhiều camera, micro và thiết bị AV-over-IP chỉ với một cáp. Dành cho phòng họp lớn, phòng hội đồng (boardroom). Có thể đặt hàng từ Q2/2026</li>
+          <li><strong>Desk Pro G2</strong>: Hệ thống dual-camera cho phòng họp nhỏ (huddle room) — hiển thị cả người nói và toàn cảnh phòng</li>
+          <li><strong>Webex Real-Time Speech Translation</strong>: Dịch giọng nói sang giọng nói, giữ nguyên cảm xúc và ngữ điệu của người nói — công nghệ hỗ trợ cuộc họp đa quốc gia</li>
+          <li><strong>Contact Center AI</strong>: Định tuyến AI thông minh kết hợp tác nhân AI và nhân viên người</li>
+        </ul>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>Cisco also announced a suite of AV/Collaboration products at Amsterdam — directly relevant to conference room design:</p>
+        <ul>
+          <li><strong>Room Kit Pro G2</strong>: NVIDIA-based conferencing system connecting multiple cameras, microphones, and AV-over-IP devices over a single cable. Designed for large rooms and boardrooms. Orderable from Q2 2026</li>
+          <li><strong>Desk Pro G2</strong>: Dual-camera system for huddle rooms — shows both the speaker and room overview simultaneously</li>
+          <li><strong>Webex Real-Time Speech Translation</strong>: Speech-to-speech translation preserving tone, emotion, and cadence — ideal for multinational meetings</li>
+          <li><strong>Contact Center AI</strong>: Intelligent routing across AI and human agents with AI-based forecasting and scheduling</li>
+        </ul>
+      </div>
+
+      <div class="why-box">
+        <div class="why-box-label">
+          <span class="vi-content">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN AV TẠI VIỆT NAM</span>
+          <span class="en-content" style="display:none">⚡ RELEVANCE FOR AV PROJECTS IN VIETNAM</span>
+        </div>
+        <p class="vi-content">Room Kit Pro G2 là sản phẩm AV tích hợp cao (all-in-one) rất phù hợp cho các dự án tòa nhà văn phòng hạng A, trung tâm tài chính và khách sạn 5 sao tại TP.HCM và Hà Nội. Tính năng AV-over-IP và kết nối đơn cáp giúp đơn giản hóa thiết kế hệ thống, giảm chi phí cáp bổ sung. Nhà thiết kế AV nên xem xét đưa vào specification thay thế các giải pháp codec truyền thống.</p>
+        <p class="en-content" style="display:none">The Room Kit Pro G2 is a highly integrated AV solution ideal for Grade-A office towers, financial centers, and 5-star hotels in Ho Chi Minh City and Hanoi. AV-over-IP capability and single-cable connectivity simplify system design and reduce supplementary cabling costs. AV designers should consider specifying it as an alternative to traditional codec solutions.</p>
+      </div>
+
+      <div class="news-source">
+        <span class="vi-content">Nguồn:</span>
+        <span class="en-content" style="display:none">Source:</span>
+        <a href="https://www.crnasia.com/news-network/2026/cisco-live-amsterdam-2026-the-5-new-networking-security-and-collaboration-products-on-display" target="_blank" rel="noopener">CRN Asia — Cisco Live Amsterdam 2026</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ==================== NEWS ITEM 3 ==================== -->
+  <article class="news-item">
+    <div class="news-number">TIN 03 / NEWS 03</div>
+    <div class="news-tags">
+      <span class="tag">AXIS</span>
+      <span class="tag secondary">SECURITY</span>
+      <span class="tag secondary">AI SURVEILLANCE</span>
+    </div>
+
+    <h2 class="news-title">
+      <span class="vi-content">Axis Communications Ra Mắt Loạt Camera &amp; Giải Pháp An Ninh AI Thế Hệ Mới Tại Intersec Dubai 2026</span>
+      <span class="en-content" style="display:none">Axis Communications Launches Next-Generation AI-Powered Security Products at Intersec Dubai 2026</span>
+    </h2>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tại triển lãm Intersec Dubai 2026, <strong>Axis Communications</strong> — nhà sản xuất camera mạng hàng đầu thế giới — đã giới thiệu loạt sản phẩm và giải pháp an ninh AI thế hệ mới. Đây là một trong những sự kiện ra mắt sản phẩm quan trọng nhất của Axis trong năm nay, tập trung vào:</p>
+        <ul>
+          <li><strong>Camera AI thế hệ mới</strong>: Khả năng xử lý edge AI nâng cao — phân tích hành vi thông minh (behavior analysis), nhận diện đối tượng (object recognition) và phát hiện bất thường ngay tại thiết bị</li>
+          <li><strong>Hệ thống phân tích video thông minh (VMS integration)</strong>: Tích hợp sâu với các nền tảng quản lý video lớn (Genetec, Milestone, Axis Camera Station)</li>
+          <li><strong>Giải pháp an ninh AI cho đô thị thông minh</strong>: Bao gồm camera tầm xa, camera nhiệt và hệ thống giám sát giao thông thông minh</li>
+          <li><strong>Cybersecurity tích hợp</strong>: AXIS Edge Vault và firmware ký số đảm bảo an toàn từng thiết bị trong chuỗi cung ứng</li>
+        </ul>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>At Intersec Dubai 2026, <strong>Axis Communications</strong> — the world's leading network camera manufacturer — launched a range of next-generation AI security products and solutions. This is one of the year's most significant product launches by Axis, focused on:</p>
+        <ul>
+          <li><strong>Next-generation AI cameras</strong>: Enhanced edge AI processing — intelligent behavior analysis, object recognition, and anomaly detection on-device</li>
+          <li><strong>Intelligent video analytics (VMS integration)</strong>: Deep integration with major VMS platforms (Genetec, Milestone, Axis Camera Station)</li>
+          <li><strong>AI security for smart cities</strong>: Long-range cameras, thermal cameras, and intelligent traffic monitoring systems</li>
+          <li><strong>Integrated cybersecurity</strong>: AXIS Edge Vault and digitally signed firmware for device-level supply chain security</li>
+        </ul>
+      </div>
+
+      <div class="why-box">
+        <div class="why-box-label">
+          <span class="vi-content">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/SECURITY TẠI VIỆT NAM</span>
+          <span class="en-content" style="display:none">⚡ RELEVANCE FOR ELV/SECURITY PROJECTS IN VIETNAM</span>
+        </div>
+        <p class="vi-content">Axis Communications là một trong những thương hiệu camera IP được specify phổ biến nhất trong các dự án tòa nhà hạng A, sân bay, bệnh viện và khu công nghiệp tại Việt Nam. Tính năng edge AI mới cho phép camera tự phân tích mà không cần server riêng, giảm chi phí hạ tầng tổng thể. Các dự án ELV tích hợp (tòa nhà thông minh, campus) nên cập nhật spec để bao gồm các model AI mới nhất. Camera AI cũng giúp đáp ứng yêu cầu ngày càng tăng từ chủ đầu tư về "smart security" và "zero-trust perimeter".</p>
+        <p class="en-content" style="display:none">Axis Communications is one of the most widely specified IP camera brands in Grade-A buildings, airports, hospitals, and industrial zones in Vietnam. The new edge AI capabilities allow cameras to perform analytics without dedicated server hardware, reducing overall infrastructure costs. ELV/ICT projects (smart buildings, campuses) should update specifications to include the latest AI models. AI cameras also help meet growing investor demands for "smart security" and "zero-trust perimeter" architectures.</p>
+      </div>
+
+      <div class="news-source">
+        <span class="vi-content">Nguồn:</span>
+        <span class="en-content" style="display:none">Source:</span>
+        <a href="https://newsroom.axis.com/en-ae/news/axis-at-intersec-2026" target="_blank" rel="noopener">Axis Newsroom — Intersec Dubai 2026</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.securityinfowatch.com/video-surveillance/news/55366888/axis-communications-axis-communications-unveils-new-ai-driven-security-innovations-at-isc-west-2026" target="_blank" rel="noopener">Security Info Watch</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ==================== NEWS ITEM 4 ==================== -->
+  <article class="news-item">
+    <div class="news-number">TIN 04 / NEWS 04</div>
+    <div class="news-tags">
+      <span class="tag">SCHNEIDER</span>
+      <span class="tag secondary">BMS</span>
+      <span class="tag secondary">SMART BUILDING</span>
+    </div>
+
+    <h2 class="news-title">
+      <span class="vi-content">Schneider Electric Ra Mắt EcoCare for BMS: Giám Sát AI 24/7, Tiết Kiệm 25% Năng Lượng, Giảm 45% Thời Gian Ngừng Hoạt Động</span>
+      <span class="en-content" style="display:none">Schneider Electric Launches EcoCare for BMS: 24/7 AI Monitoring, 25% Energy Savings, 45% Less Downtime</span>
+    </h2>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p><strong>Schneider Electric</strong> vừa ra mắt dịch vụ <strong>EcoCare for BMS (Building Management System)</strong> — giải pháp giám sát liên tục dựa trên AI, mang lại trí tuệ vận hành thời gian thực cho các tòa nhà hiện đại. Theo Schneider, so với vận hành truyền thống, EcoCare for BMS mang lại:</p>
+        <ul>
+          <li><strong>Tiết kiệm năng lượng ~25%</strong> thông qua tối ưu hóa HVAC bằng AI</li>
+          <li><strong>Giảm 60% khiếu nại</strong> từ người sử dụng tòa nhà</li>
+          <li><strong>Tăng 30% hiệu suất vận hành hệ thống</strong></li>
+          <li><strong>Giảm 45% thời gian ngừng hoạt động (downtime)</strong></li>
+          <li>Hỗ trợ kỹ thuật từ xa và tại chỗ 24/7, phát hiện sự cố sớm trước khi ảnh hưởng hoạt động</li>
+        </ul>
+        <p>SVP Sadiq Syed của Schneider cho biết lợi ích tiết kiệm năng lượng AI cho HVAC thường đạt từ 5% đến trên 20%, tùy loại tòa nhà và tuổi đời thiết bị. EcoCare là gói dịch vụ vận hành — không phải phần cứng — áp dụng cho hệ thống BMS hiện hữu của khách hàng.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p><strong>Schneider Electric</strong> has launched <strong>EcoCare for BMS (Building Management System)</strong> — an AI-driven continuous monitoring service delivering real-time operational intelligence for modern buildings. According to Schneider, compared with traditional operations, EcoCare for BMS delivers:</p>
+        <ul>
+          <li><strong>~25% energy savings</strong> through AI-optimized HVAC management</li>
+          <li><strong>60% fewer occupant complaints</strong></li>
+          <li><strong>30% better system operational efficiency</strong></li>
+          <li><strong>~45% less system downtime</strong></li>
+          <li>24/7 remote and on-site technical support with early issue identification before disruption occurs</li>
+        </ul>
+        <p>Schneider's SVP Sadiq Syed noted that AI-driven HVAC energy savings typically range from ~5% to over 20%, depending on building type and asset age. EcoCare is a managed services offering — not hardware — applicable to customers' existing BMS infrastructure.</p>
+      </div>
+
+      <div class="why-box">
+        <div class="why-box-label">
+          <span class="vi-content">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN BMS/ELV TẠI VIỆT NAM</span>
+          <span class="en-content" style="display:none">⚡ RELEVANCE FOR BMS/ELV PROJECTS IN VIETNAM</span>
+        </div>
+        <p class="vi-content">Đây là xu hướng quan trọng: BMS đang chuyển từ "lắp đặt một lần" sang "dịch vụ vận hành liên tục có AI". Tại Việt Nam, nhiều tòa nhà thương mại và bệnh viện đã sử dụng Schneider EcoStruxure làm nền tảng BMS. EcoCare for BMS mở ra cơ hội aftermarket service cho các dự án đã hoàn thành. Đối với consultant/designer, đây là lý do để specification BMS cần bao gồm khả năng kết nối cloud và API mở — nhằm cho phép tích hợp dịch vụ AI sau này. Chi phí vận hành tòa nhà (OPEX) có thể giảm đáng kể, đây là lập luận thuyết phục với chủ đầu tư.</p>
+        <p class="en-content" style="display:none">This marks an important trend: BMS is shifting from "install-once" to "AI-driven continuous managed operations." In Vietnam, many commercial buildings and hospitals already use Schneider EcoStruxure as their BMS platform. EcoCare for BMS opens aftermarket service opportunities for completed projects. For consultants/designers, this reinforces the need for BMS specifications to include cloud connectivity and open APIs — enabling future AI service integration. Significant OPEX reductions provide compelling arguments for building investors.</p>
+      </div>
+
+      <div class="news-source">
+        <span class="vi-content">Nguồn:</span>
+        <span class="en-content" style="display:none">Source:</span>
+        <a href="https://www.facilitiesdive.com/news/schneider-electric-launches-ai-driven-continuous-bms-monitoring-service/822148/" target="_blank" rel="noopener">Facilities Dive — Schneider EcoCare for BMS</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.marketscale.com/industries/building-management/schneider-electric-launches-ecocare-for-bms-to-deliver-real-time-operational-intelligence-" target="_blank" rel="noopener">Market Scale</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ==================== NEWS ITEM 5 ==================== -->
+  <article class="news-item">
+    <div class="news-number">TIN 05 / NEWS 05</div>
+    <div class="news-tags">
+      <span class="tag">SECUTECH</span>
+      <span class="tag secondary">VIETNAM</span>
+      <span class="tag secondary">SMART BUILDING</span>
+    </div>
+
+    <h2 class="news-title">
+      <span class="vi-content">Secutech Vietnam 2026: 480 Thương Hiệu, 13.000m² Tại Hà Nội — Sự Kiện ELV/ICT Lớn Nhất Việt Nam Năm 2026</span>
+      <span class="en-content" style="display:none">Secutech Vietnam 2026: 480 Brands, 13,000m² in Hanoi — Vietnam's Largest ELV/ICT Event of 2026</span>
+    </h2>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p><strong>Secutech Vietnam 2026</strong> (09–12/09/2026) vừa kết thúc thành công tại <strong>Cung Hữu nghị Việt Xô, Hà Nội</strong> — lần đầu tiên sự kiện được tổ chức tại thủ đô sau nhiều năm. Đây là sự kiện chuyên ngành an ninh, phòng cháy chữa cháy và tòa nhà thông minh lớn nhất Việt Nam, với:</p>
+        <ul>
+          <li><strong>480+ thương hiệu</strong> từ Việt Nam và quốc tế</li>
+          <li><strong>13.000 m²</strong> diện tích triển lãm</li>
+          <li><strong>17.000+ lượt khách thương mại</strong> — chuyên gia ngành an ninh, PCCC, tòa nhà thông minh</li>
+          <li>Gian quốc gia: <strong>Nhật Bản, Hàn Quốc, Singapore</strong></li>
+          <li>Hỗ trợ chính thức từ <strong>Bộ Công an và Cảnh sát PCCC</strong> Việt Nam</li>
+        </ul>
+        <p>Các khu vực triển lãm gồm: Building Security &amp; Access Management; Disaster Prevention &amp; Emergency Response; <strong>ICT &amp; Building Infrastructure Solutions</strong>; PPE &amp; Industrial Safety; Robotics &amp; Drones. Sự kiện đánh dấu kỷ niệm 65 năm Ngày truyền thống Lực lượng Cảnh sát PCCC&amp;CNCH Việt Nam.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p><strong>Secutech Vietnam 2026</strong> (09–12 Sep 2026) concluded successfully at the <strong>Friendship Cultural Palace, Hanoi</strong> — the first time the event was held in the capital. It is Vietnam's largest specialized show for security, fire safety, and smart buildings, with:</p>
+        <ul>
+          <li><strong>480+ brands</strong> from Vietnam and internationally</li>
+          <li><strong>13,000 m²</strong> of exhibition space</li>
+          <li><strong>17,000+ trade visitors</strong> — security, fire safety, and smart building professionals</li>
+          <li>Country pavilions: <strong>Japan, South Korea, Singapore</strong></li>
+          <li>Official backing from <strong>Vietnam's Ministry of Public Security and Fire &amp; Rescue Police</strong></li>
+        </ul>
+        <p>Exhibition zones included: Building Security &amp; Access Management; Disaster Prevention &amp; Emergency Response; <strong>ICT &amp; Building Infrastructure Solutions</strong>; PPE &amp; Industrial Safety; Robotics &amp; Drones. The event coincided with the 65th anniversary of Vietnam's Fire Prevention and Fighting &amp; Rescue Police Force.</p>
+      </div>
+
+      <div class="why-box">
+        <div class="why-box-label">
+          <span class="vi-content">⚡ TẦM QUAN TRỌNG VỚI NGÀNH ELV TẠI VIỆT NAM</span>
+          <span class="en-content" style="display:none">⚡ RELEVANCE FOR VIETNAM'S ELV INDUSTRY</span>
+        </div>
+        <p class="vi-content">Secutech Vietnam là cầu nối quan trọng nhất giữa nhà sản xuất ELV quốc tế và thị trường Việt Nam. Sự kiện lần này tại Hà Nội — thay vì TP.HCM — phản ánh sự tăng trưởng mạnh mẽ của các dự án tòa nhà thông minh, bệnh viện và khu đô thị mới tại miền Bắc. Đặc biệt, khu ICT &amp; Building Infrastructure Solutions và SMABuilding (tự động hóa tòa nhà, IoT, hiệu quả năng lượng) là nơi trình diễn các giải pháp ELV tích hợp tiên tiến nhất hiện nay. Nếu bạn chưa tham dự lần này, hãy theo dõi Secutech Vietnam 2027!</p>
+        <p class="en-content" style="display:none">Secutech Vietnam is the most important bridge between international ELV manufacturers and the Vietnamese market. This year's event in Hanoi — rather than Ho Chi Minh City — reflects the strong growth of smart building, hospital, and new urban development projects in Northern Vietnam. In particular, the ICT &amp; Building Infrastructure Solutions zone and co-located SMABuilding (building automation, IoT, energy efficiency) showcase the latest integrated ELV solutions. If you missed this year's event, watch for Secutech Vietnam 2027!</p>
+      </div>
+
+      <div class="news-source">
+        <span class="vi-content">Nguồn:</span>
+        <span class="en-content" style="display:none">Source:</span>
+        <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/press/press-releases/2026/STVN26_PR1.html" target="_blank" rel="noopener">Secutech Vietnam 2026 — Official Press Release</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.snewsonline.com/en/secutech-vietnam-2026-driving-innovation-safety-smart-infrastructure/" target="_blank" rel="noopener">S News Online</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <h3 class="vi-content">Cần Tư Vấn Thiết Kế ELV/ICT/AV Cho Dự Án Của Bạn?</h3>
+    <h3 class="en-content" style="display:none">Need ELV/ICT/AV Design Consultation for Your Project?</h3>
+    <p class="vi-content">Paul Le là ELV/ICT/AV Design Director với kinh nghiệm tư vấn và thiết kế hệ thống ELV tích hợp cho tòa nhà thương mại, bệnh viện, khách sạn và khu công nghiệp tại Việt Nam.</p>
+    <p class="en-content" style="display:none">Paul Le is an ELV/ICT/AV Design Director with extensive experience in integrated ELV system consulting and design for commercial buildings, hospitals, hotels, and industrial zones in Vietnam.</p>
+    <a href="/index.html#contact" class="cta-btn">
+      <span class="vi-content">LIÊN HỆ TƯ VẤN →</span>
+      <span class="en-content" style="display:none">GET IN TOUCH →</span>
+    </a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Paul Le Consultant · ELV/ICT/AV Design Director · <a href="https://elvconsultant.com">elvconsultant.com</a></p>
+    <p>
+      <a href="/index.html">Home</a> &nbsp;·&nbsp;
+      <a href="/blog/index.html">Blog</a> &nbsp;·&nbsp;
+      <a href="/index.html#contact">Contact</a>
+    </p>
+    <p style="margin-top:10px; font-size:11px;">
+      Ảnh hero: <a href="https://unsplash.com/@scottrodgerson" target="_blank" rel="noopener">Scott Rodgerson</a> via <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>
+    </p>
+  </div>
+</footer>
+
+<!-- LANGUAGE TOGGLE JS -->
+<script>
+  function setLang(l) {
+    document.querySelectorAll('.vi-content').forEach(e => e.style.display = l === 'vi' ? '' : 'none');
+    document.querySelectorAll('.en-content').forEach(e => e.style.display = l === 'en' ? '' : 'none');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    try { localStorage.setItem('lang', l); } catch(e) {}
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    let saved = 'vi';
+    try { saved = localStorage.getItem('lang') || 'vi'; } catch(e) {}
+    setLang(saved);
+  });
+</script>
+
+</body>
+</html>
