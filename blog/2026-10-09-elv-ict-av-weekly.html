@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly — 09 Oct 2026 | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin tuần ELV/ICT/AV song ngữ: CISCO WebexOne, AXIS ISC West, BIAMP AV 2026, Schneider EcoCare BMS, Secutech Vietnam — Paul Le Consultant">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07111F;
+      --card-bg: #101E30;
+      --card-border: #1E3550;
+      --cyan: #00C8E0;
+      --cyan-dim: rgba(0,200,224,0.10);
+      --cyan-glow: rgba(0,200,224,0.28);
+      --silver: #A0B4C8;
+      --white: #F0F4F8;
+      --steel: #4A6280;
+      --navy: #1B2A4A;
+      --navy-deep: #0D1B35;
+      --grid-line: rgba(0,200,224,0.08);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    /* ── NAV ── */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 0 1rem;
+      height: 58px;
+      background: rgba(7,17,31,0.92);
+      border-bottom: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      text-decoration: none;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--cyan);
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.25rem;
+      margin-left: auto;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--silver);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cyan); }
+
+    /* ── LANG BAR ── */
+    .lang-bar {
+      display: flex;
+      gap: 0.35rem;
+      padding: 0.6rem 1rem;
+      justify-content: flex-end;
+      background: var(--navy-deep);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .lang-btn {
+      background: none;
+      border: 1px solid var(--steel);
+      color: var(--silver);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--cyan-dim);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    /* ── HERO ── */
+    .article-hero {
+      position: relative;
+      height: 520px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .article-hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.45) saturate(0.7);
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(7,17,31,0.96) 0%, rgba(7,17,31,0.45) 55%, transparent 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .hero-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.4rem, 4vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+    .hero-meta {
+      font-size: 0.78rem;
+      color: var(--silver);
+      letter-spacing: 0.05em;
+    }
+    .hero-meta span { color: var(--cyan); margin: 0 0.3rem; }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem 4rem;
+    }
+
+    /* ── NEWS ITEM ── */
+    .news-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .news-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: linear-gradient(to bottom, var(--cyan), transparent);
+    }
+    .news-number {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--cyan);
+      opacity: 0.7;
+      margin-bottom: 0.75rem;
+    }
+    .news-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    .tag {
+      background: var(--cyan-dim);
+      border: 1px solid rgba(0,200,224,0.3);
+      color: var(--cyan);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 2px;
+    }
+    .tag.secondary {
+      background: rgba(74,98,128,0.2);
+      border-color: var(--steel);
+      color: var(--silver);
+    }
+    .news-title-vi {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+    .news-title-en {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--silver);
+      line-height: 1.3;
+      margin-bottom: 1.2rem;
+    }
+    .news-body { color: var(--silver); font-size: 0.92rem; margin-bottom: 1rem; }
+    .news-body strong { color: var(--white); }
+    .news-features {
+      list-style: none;
+      margin: 0.75rem 0 1rem;
+    }
+    .news-features li {
+      padding: 0.35rem 0 0.35rem 1.2rem;
+      position: relative;
+      font-size: 0.88rem;
+      color: var(--silver);
+      border-bottom: 1px solid var(--grid-line);
+    }
+    .news-features li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-size: 0.75rem;
+    }
+    .news-features li strong { color: var(--white); }
+    .news-source {
+      font-size: 0.78rem;
+      color: var(--steel);
+      margin-top: 1rem;
+    }
+    .news-source a { color: var(--cyan); text-decoration: none; }
+    .news-source a:hover { text-decoration: underline; }
+
+    /* ── WHY BOX ── */
+    .why-box {
+      background: linear-gradient(135deg, rgba(0,200,224,0.07), rgba(0,200,224,0.03));
+      border: 1px solid rgba(0,200,224,0.25);
+      border-radius: 6px;
+      padding: 1.1rem 1.3rem;
+      margin-top: 1.25rem;
+    }
+    .why-box h4 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--cyan);
+      margin-bottom: 0.6rem;
+    }
+    .why-box p { font-size: 0.88rem; color: var(--silver); }
+    .why-box p + p { margin-top: 0.5rem; }
+
+    /* ── CTA BOX ── */
+    .cta-box {
+      background: linear-gradient(135deg, var(--navy), var(--navy-deep));
+      border: 1px solid var(--cyan-glow);
+      border-radius: 8px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin-top: 3rem;
+      box-shadow: 0 0 40px var(--cyan-glow);
+    }
+    .cta-box h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 0.75rem;
+    }
+    .cta-box p { font-size: 0.9rem; color: var(--silver); margin-bottom: 1.5rem; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--cyan);
+      color: var(--bg);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      padding: 0.75rem 2rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--navy-deep);
+      border-top: 1px solid var(--card-border);
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--steel);
+    }
+    .site-footer a { color: var(--silver); text-decoration: none; margin: 0 0.5rem; }
+    .site-footer a:hover { color: var(--cyan); }
+    .site-footer p + p { margin-top: 0.5rem; }
+
+    @media (max-width: 600px) {
+      .article-hero { height: 360px; }
+      .news-item { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="/index.html" class="brand">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    PAUL LE CONSULTANT
+  </a>
+  <ul class="nav-links">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- HERO -->
+<section class="article-hero">
+  <img src="https://images.unsplash.com/photo-1566735069541-33b700a9eba3?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Network infrastructure dark blue technology">
+  <div class="hero-content">
+    <div class="hero-eyebrow vi-content">ELV / ICT / AV · BẢN TIN TUẦN</div>
+    <div class="hero-eyebrow en-content" style="display:none">ELV / ICT / AV · WEEKLY NEWSLETTER</div>
+    <h1 class="hero-title vi-content">Bản Tin Tuần ELV/ICT/AV<br>09 Tháng 10, 2026</h1>
+    <h1 class="hero-title en-content" style="display:none">ELV/ICT/AV Weekly Brief<br>09 October 2026</h1>
+    <p class="hero-meta">
+      09 Oct 2026 <span>·</span> Paul Le <span>·</span> elvconsultant.com
+    </p>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main>
+
+  <!-- ══ TIN 01: CISCO ══ -->
+  <article class="news-item">
+    <div class="news-number">TIN 01 / NEWS 01</div>
+    <div class="news-tags">
+      <span class="tag">CISCO</span>
+      <span class="tag secondary">UCaaS · AV</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Cisco Ra Mắt Trải Nghiệm Cộng Tác AI Tự Động Tại WebexOne 2026</div>
+      <p class="news-body">
+        Tại sự kiện WebexOne ngày 7/10/2026, Cisco công bố loạt nâng cấp lớn cho nền tảng Webex, tích hợp AI agent thế hệ mới, <strong>RoomOS 27</strong> và loa phòng họp AI <strong>Cisco Ceiling Speaker Pro</strong>. Đây là bước tiến quan trọng cho thiết kế phòng họp thông minh.
+      </p>
+      <ul class="news-features">
+        <li><strong>Claude in Webex:</strong> Tích hợp AI Anthropic Claude phân tích dữ liệu, tạo nội dung và thực hiện tác vụ đa bước trong Webex.</li>
+        <li><strong>RoomOS 27 (tháng 11):</strong> Hỗ trợ native Google Meet, bên cạnh Teams & Zoom. AI Assistant hỗ trợ 32 ngôn ngữ, điều khiển phòng thông minh (nhiệt độ, rèm cửa).</li>
+        <li><strong>Cisco Ceiling Speaker Pro:</strong> Loa trần AI thích ứng âm thanh theo phòng, kết nối qua 1 cáp Ethernet, tích hợp camera và microphone Cisco.</li>
+        <li><strong>Workplace Designer:</strong> Lập kế hoạch không gian làm việc trực quan từng phòng đến toàn tòa nhà, tạo bản vẽ từ địa chỉ đường phố.</li>
+        <li><strong>Dialog (CX):</strong> Nền tảng dịch vụ khách hàng agentic — lưu ngữ cảnh dài hạn, tự học từ mỗi tương tác.</li>
+      </ul>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <div class="news-title-en">Cisco Unveils Agentic Collaboration Experiences at WebexOne 2026</div>
+      <p class="news-body">
+        At WebexOne on Oct 7, 2026, Cisco announced major Webex platform upgrades including next-gen AI agents, <strong>RoomOS 27</strong> and the <strong>Cisco Ceiling Speaker Pro</strong> — a significant milestone for intelligent meeting room design.
+      </p>
+      <ul class="news-features">
+        <li><strong>Claude in Webex:</strong> Anthropic Claude integration analyzes data, generates content and executes multi-step tasks inside Webex with shared enterprise context.</li>
+        <li><strong>RoomOS 27 (November):</strong> Native Google Meet support alongside Teams & Zoom. AI Assistant supports 32 languages and controls room conditions (temperature, blinds).</li>
+        <li><strong>Cisco Ceiling Speaker Pro:</strong> AI ceiling speaker that adapts audio per room, connects via single Ethernet, integrates with Cisco cameras and microphones.</li>
+        <li><strong>Workplace Designer:</strong> Visual space planning from individual rooms to full buildings, generating blueprints from a street address.</li>
+        <li><strong>Dialog (CX):</strong> Agentic customer experience harness — persistent context, self-learning from every interaction.</li>
+      </ul>
+    </div>
+
+    <div class="why-box">
+      <h4>⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</h4>
+      <p class="vi-content">RoomOS 27 với hỗ trợ đa nền tảng (Webex + Teams + Google Meet + Zoom) là yếu tố quyết định khi thiết kế phòng họp video conference cho dự án văn phòng, ngân hàng, y tế tại Việt Nam. Cisco Ceiling Speaker Pro PoE là lựa chọn lý tưởng cho thiết kế ELV gọn nhẹ, giảm số lượng thiết bị và chi phí hạ tầng cáp.</p>
+      <p class="en-content" style="display:none">RoomOS 27 with multi-platform support (Webex + Teams + Google Meet + Zoom) is decisive for video-conference room design in Vietnam office, banking, and healthcare projects. Cisco Ceiling Speaker Pro via PoE simplifies ELV design by reducing device count and cabling infrastructure costs.</p>
+    </div>
+    <div class="news-source">
+      Nguồn / Source: <a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-unveils-new-agentic-collaboration-experiences.html" target="_blank">Cisco Newsroom — WebexOne 2026</a>
+    </div>
+  </article>
+
+  <!-- ══ TIN 02: AXIS COMMUNICATIONS ══ -->
+  <article class="news-item">
+    <div class="news-number">TIN 02 / NEWS 02</div>
+    <div class="news-tags">
+      <span class="tag">AXIS</span>
+      <span class="tag secondary">SECURITY · IP SURVEILLANCE</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Axis Communications Ra Mắt Loạt Giải Pháp Bảo Mật Hợp Nhất Tại ISC West 2026</div>
+      <p class="news-body">
+        Tại triển lãm ISC West Las Vegas (tháng 3/2026), Axis Communications công bố hàng loạt sản phẩm mới: camera global shutter, hệ thống camera bispectral nhiệt-4K, nhận diện biển số (LPR) và đầu đọc kiểm soát ra vào thế hệ mới với chip ARTPEC-9.
+      </p>
+      <ul class="news-features">
+        <li><strong>AXIS P1486-LE Global Shutter:</strong> Camera không nhòe chuyển động, chip ARTPEC-9, đèn IR tích hợp — lý tưởng cho giám sát vùng tốc độ cao.</li>
+        <li><strong>AXIS Q2802-E Bispectral:</strong> Kết hợp cảm biến nhiệt 640×480 + camera 4K, phát hiện từ xa và giám sát nhiệt độ.</li>
+        <li><strong>AXIS M4337/38 & M4347/48 PLVE:</strong> Camera toàn cảnh 360° IP66/IK10, 6MP và 12MP, tích hợp IR và microphone.</li>
+        <li><strong>AXIS License Plate Verifier:</strong> Ứng dụng LPR chạy trên edge camera, kiểm soát vào/ra và giao thông tự do.</li>
+        <li><strong>Đầu đọc IP &amp; OSDP mới:</strong> A4610/A4611 (IP), A4030-E/A4130-E/A4131-E (OSDP), chứng nhận EAL6+, quản lý từ xa qua AXIS Camera Station Secure Entry.</li>
+      </ul>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <div class="news-title-en">Axis Communications Introduces Next Wave of Unified Security Solutions at ISC West 2026</div>
+      <p class="news-body">
+        At ISC West Las Vegas (March 2026), Axis Communications announced a full new lineup: global shutter cameras, bispectral thermal-4K cameras, edge-based LPR, and next-gen access control readers powered by ARTPEC-9.
+      </p>
+      <ul class="news-features">
+        <li><strong>AXIS P1486-LE Global Shutter:</strong> Motion-blur-free camera, ARTPEC-9 chip, built-in IR — ideal for high-speed area surveillance.</li>
+        <li><strong>AXIS Q2802-E Bispectral:</strong> 640×480 thermal + 4K visual sensor for long-range detection and remote temperature monitoring.</li>
+        <li><strong>AXIS M4337/38 & M4347/48 PLVE:</strong> True 360° panoramic cameras IP66/IK10, 6MP and 12MP, built-in IR and integrated microphones.</li>
+        <li><strong>AXIS License Plate Verifier:</strong> Edge-based LPR app on compatible cameras for access control and free-flow traffic management.</li>
+        <li><strong>New IP & OSDP Readers:</strong> A4610/A4611 (IP), A4030-E/A4130-E/A4131-E (OSDP), EAL6+ certified, remote management via AXIS Camera Station Secure Entry.</li>
+      </ul>
+    </div>
+
+    <div class="why-box">
+      <h4>⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</h4>
+      <p class="vi-content">Camera bispectral nhiệt + 4K là công nghệ tối ưu cho các dự án an ninh tòa nhà cao tầng, kho bãi và khu công nghiệp tại Việt Nam. LPR trên edge camera giảm tải server và hạ chi phí triển khai cho bãi đỗ xe thông minh. Đầu đọc OSDP mới tương thích rộng với hệ thống kiểm soát ra vào nội địa.</p>
+      <p class="en-content" style="display:none">Bispectral thermal+4K cameras are optimal for high-rise building security, warehouse, and industrial zone projects in Vietnam. Edge LPR reduces server load and deployment cost for smart parking solutions. New OSDP readers offer broad compatibility with locally deployed access control systems.</p>
+    </div>
+    <div class="news-source">
+      Nguồn / Source: <a href="https://losspreventionmedia.com/axis-communications-introduces-the-next-wave-of-unified-security-solutions-at-isc-west-2026/" target="_blank">Loss Prevention Media — ISC West 2026</a>
+    </div>
+  </article>
+
+  <!-- ══ TIN 03: BIAMP ══ -->
+  <article class="news-item">
+    <div class="news-number">TIN 03 / NEWS 03</div>
+    <div class="news-tags">
+      <span class="tag">BIAMP</span>
+      <span class="tag secondary">AV · UNIFIED COMMS</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Biamp Ra Mắt Devio UCX và BMA 360D — Giải Pháp AV Phòng Họp Thế Hệ Mới</div>
+      <p class="news-body">
+        Biamp công bố 5 sản phẩm và giải pháp mới năm 2026, tập trung vào hệ sinh thái phòng họp thông minh tích hợp <strong>Microsoft Teams Rooms</strong> và <strong>Zoom Rooms</strong>, với dòng sản phẩm Devio UCX, BMA 360D và nền tảng Workplace Control.
+      </p>
+      <ul class="news-features">
+        <li><strong>Devio UCX:</strong> Thiết bị UC compute Android tích hợp DSP, là sản phẩm đầu tiên của Biamp trên Microsoft Device Ecosystem Platform — chạy trực tiếp MS Teams Rooms hoặc Zoom Rooms.</li>
+        <li><strong>Biamp BMA 360D:</strong> Mảng microphone trần thế hệ tiếp theo với beamforming tiên tiến, chứng nhận MS Teams Rooms &amp; Zoom Rooms, tích hợp hoàn toàn với Tesira.</li>
+        <li><strong>Workplace Control:</strong> Nền tảng điều khiển tích hợp TesiraFORTÉ X + Apprimo touch panels + phần mềm Workplace Control Designer — đơn giản hóa thiết kế và triển khai.</li>
+        <li><strong>Community LVH-900 + VenuePolar:</strong> Loa sân khấu định hướng beam steerable — kiểm soát phủ sóng như line array trong vỏ point-source nhỏ gọn.</li>
+        <li><strong>Evoko Kleeo:</strong> Giải pháp đặt chỗ bàn làm việc tích hợp Zoom Workspace Reservation, quét QR code qua app Zoom Mobile.</li>
+      </ul>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <div class="news-title-en">Biamp Launches Devio UCX & BMA 360D — Next-Gen AV Meeting Room Solutions</div>
+      <p class="news-body">
+        Biamp announced 5 new products and solutions in 2026 focused on the smart meeting room ecosystem integrating <strong>Microsoft Teams Rooms</strong> and <strong>Zoom Rooms</strong>, led by Devio UCX, BMA 360D, and the Workplace Control platform.
+      </p>
+      <ul class="news-features">
+        <li><strong>Devio UCX:</strong> Android-based UC compute device with built-in DSP — the first Biamp product on Microsoft Device Ecosystem Platform — runs MS Teams Rooms or Zoom Rooms natively.</li>
+        <li><strong>Biamp BMA 360D:</strong> Next-gen ceiling microphone array with advanced beamforming, MS Teams Rooms & Zoom Rooms certified, fully integrates with Tesira.</li>
+        <li><strong>Workplace Control:</strong> Control platform integrating TesiraFORTÉ X + Apprimo touch panels + Workplace Control Designer — simplifies control design and deployment.</li>
+        <li><strong>Community LVH-900 + VenuePolar:</strong> Steerable venue horn with line-array-like coverage in a compact point-source form factor.</li>
+        <li><strong>Evoko Kleeo:</strong> Desk booking solution integrated with Zoom Workspace Reservation — scan QR code via Zoom Mobile app.</li>
+      </ul>
+    </div>
+
+    <div class="why-box">
+      <h4>⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</h4>
+      <p class="vi-content">Devio UCX + BMA 360D là bộ đôi lý tưởng cho thiết kế phòng họp video conference tại các tòa nhà văn phòng, ngân hàng và bệnh viện ở Việt Nam. Chứng nhận kép MS Teams + Zoom cho phép một hệ thống phục vụ cả hai nền tảng phổ biến nhất hiện nay. Workplace Control Designer giúp các nhà thiết kế ELV/AV xây dựng hệ thống điều khiển chuyên nghiệp mà không cần lập trình sâu.</p>
+      <p class="en-content" style="display:none">Devio UCX + BMA 360D is the ideal pair for video-conference room design in office, banking, and hospital buildings in Vietnam. Dual MS Teams + Zoom certification means one system serves both dominant platforms. Workplace Control Designer enables ELV/AV designers to build professional control systems without deep programming expertise.</p>
+    </div>
+    <div class="news-source">
+      Nguồn / Source: <a href="https://www.biamp.com/latest-announcements/2026/june/prod/new-av-solutions-2026" target="_blank">Biamp — New AV Solutions 2026</a>
+    </div>
+  </article>
+
+  <!-- ══ TIN 04: SCHNEIDER ELECTRIC ══ -->
+  <article class="news-item">
+    <div class="news-number">TIN 04 / NEWS 04</div>
+    <div class="news-tags">
+      <span class="tag">SCHNEIDER</span>
+      <span class="tag secondary">BMS · AI · BUILDING</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Schneider Electric Ra Mắt EcoCare for BMS — Giám Sát BMS Thông Minh 24/7 Bằng AI</div>
+      <p class="news-body">
+        Schneider Electric giới thiệu <strong>EcoCare for BMS</strong> — dịch vụ giám sát liên tục và bảo trì dự đoán dựa trên AI cho hệ thống Building Management System (BMS). Kết hợp digital twin, phân tích thời gian thực và chuyên gia hỗ trợ 24/7, dịch vụ này mang lại hiệu quả vận hành đột phá.
+      </p>
+      <ul class="news-features">
+        <li><strong>Giám sát chuyên gia 24/7:</strong> Chuyên gia theo dõi hiệu suất hệ thống thời gian thực, phát hiện rủi ro trước khi xảy ra sự cố.</li>
+        <li><strong>Bảo trì dự đoán (Condition-based):</strong> AI lập lịch bảo trì dựa trên tình trạng thực tế, không chờ hỏng hóc.</li>
+        <li><strong>Digital Twin Insights:</strong> Bản sao kỹ thuật số của BMS cung cấp hướng dẫn tiết kiệm năng lượng và tối ưu tiện nghi.</li>
+        <li><strong>EcoStruxure Building Advisor:</strong> Kết nối phân tích thời gian thực với hỗ trợ kỹ thuật tại chỗ.</li>
+        <li><strong>Kết quả ghi nhận:</strong> Tiết kiệm 25% năng lượng · Giảm 45% thời gian chết · Tăng 30% hiệu quả vận hành · Giảm 60% khiếu nại cư dân.</li>
+      </ul>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <div class="news-title-en">Schneider Electric Launches EcoCare for BMS — AI-Driven 24/7 Building Intelligence Service</div>
+      <p class="news-body">
+        Schneider Electric introduced <strong>EcoCare for BMS</strong> — a continuous monitoring and AI-driven predictive maintenance service for Building Management Systems. Combining digital twin technology, real-time analytics, and 24/7 expert support, it delivers breakthrough operational efficiency.
+      </p>
+      <ul class="news-features">
+        <li><strong>24/7 Expert Monitoring:</strong> Specialists watch system performance in real time, proactively heading off risks before disruption.</li>
+        <li><strong>Condition-Based Maintenance:</strong> AI schedules maintenance based on actual system state, not on fixed intervals or failures.</li>
+        <li><strong>Digital Twin Insights:</strong> A digital twin of the BMS guides energy use, occupant comfort, and system performance optimization.</li>
+        <li><strong>EcoStruxure Building Advisor:</strong> Connects real-time analytics with on-site field expertise and HVAC specialist support.</li>
+        <li><strong>Reported Results:</strong> Up to 25% energy savings · 45% less downtime · 30% increase in operational efficiency · 60% fewer occupant complaints.</li>
+      </ul>
+    </div>
+
+    <div class="why-box">
+      <h4>⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</h4>
+      <p class="vi-content">EcoCare for BMS là giải pháp chiến lược cho các chủ đầu tư tòa nhà thương mại và khu phức hợp tại Việt Nam đang tìm cách tối ưu chi phí vận hành dài hạn. Digital Twin BMS kết hợp AI giám sát 24/7 đang trở thành tiêu chuẩn mới trong thiết kế BMS cho dự án cấp A và data center. Là ELV consultant, đây là giải pháp cần đưa vào đề xuất kỹ thuật cho các khách hàng quan tâm đến smart building lifecycle cost.</p>
+      <p class="en-content" style="display:none">EcoCare for BMS is a strategic solution for commercial building and mixed-use complex owners in Vietnam seeking to optimize long-term operational costs. AI-monitored BMS Digital Twins are becoming the new standard for Grade-A building and data center BMS design. As an ELV consultant, this is a solution to include in technical proposals for clients focused on smart building lifecycle cost optimization.</p>
+    </div>
+    <div class="news-source">
+      Nguồn / Source: <a href="https://www.se.com/us/en/about-us/newsroom/news/press-releases/Schneider-Electric-Launches-EcoCare-for-BMS-to-Deliver-RealTime-Operational-Intelligence-for-Modern-Buildings-6a0b46e9a9d67c9a280ed62d/" target="_blank">Schneider Electric Newsroom — EcoCare for BMS</a>
+    </div>
+  </article>
+
+  <!-- ══ TIN 05: SECUTECH VIETNAM 2026 ══ -->
+  <article class="news-item">
+    <div class="news-number">TIN 05 / NEWS 05</div>
+    <div class="news-tags">
+      <span class="tag">SECUTECH VN</span>
+      <span class="tag secondary">MARKET · AI · SECURITY</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Secutech Vietnam 2026 Tại Hà Nội — AI Thống Trị Thị Trường ELV/An Ninh Việt Nam</div>
+      <p class="news-body">
+        Lần thứ 19, Secutech Vietnam 2026 diễn ra ngày 12/9 tại Cung Văn hóa Hữu nghị Hà Nội với quy mô 13.000 m², <strong>480 thương hiệu</strong> từ 16 quốc gia và <strong>15.898 khách tham quan chuyên ngành</strong>. Sự kiện bên cạnh Fire & Safety Vietnam và SMABuilding — phản ánh xu hướng tích hợp ELV toàn diện.
+      </p>
+      <ul class="news-features">
+        <li><strong>AI thống trị:</strong> Khách hàng dự án hạ tầng ưa chuộng giải pháp tích hợp AI theo báo cáo của G20+ Alliance (liên minh 47 doanh nghiệp camera &amp; ELV).</li>
+        <li><strong>Camera AI &amp; Robotics:</strong> Nha An Toan trình diễn camera giám sát AI, phát hiện lửa bằng AI và robot giám sát hạ tầng.</li>
+        <li><strong>Phòng chống cháy thông minh:</strong> Nohmi Bosai nhấn mạnh phát hiện khói sớm cho data center, nhà máy bán dẫn, kho bãi và cơ sở lưu trữ pin.</li>
+        <li><strong>BMS &amp; AI tòa nhà:</strong> Lotte Property quan tâm đến camera AI phát hiện nguy cơ cháy, thermal imaging và camera báo cháy.</li>
+        <li><strong>Chuyển đổi từ sản phẩm đơn lẻ sang hệ thống kết nối:</strong> Regina Tsai (Messe Frankfurt) nhận định thị trường đang dịch chuyển sang giải pháp tích hợp toàn diện.</li>
+      </ul>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <div class="news-title-en">Secutech Vietnam 2026 Hanoi — AI Dominates Vietnam's ELV/Security Market</div>
+      <p class="news-body">
+        The 19th Secutech Vietnam 2026 held Sept 12 at Hanoi's Friendship Cultural Palace covered 13,000 sqm with <strong>480 brands</strong> from 16 countries and <strong>15,898 trade visitors</strong>. Co-located with Fire & Safety Vietnam and SMABuilding — reflecting the integrated ELV convergence trend.
+      </p>
+      <ul class="news-features">
+        <li><strong>AI Dominates:</strong> Infrastructure project customers increasingly prefer AI-integrated solutions per G20+ Alliance (47-member camera & ELV firm coalition) report.</li>
+        <li><strong>AI Cameras & Robotics:</strong> Nha An Toan demonstrated AI surveillance cameras, AI fire detection cameras, and infrastructure monitoring robots.</li>
+        <li><strong>Smart Fire Safety:</strong> Nohmi Bosai emphasized early smoke detection for data centers, semiconductor plants, warehouses, and battery storage facilities.</li>
+        <li><strong>BMS & Building AI:</strong> Lotte Property & Development showed interest in AI cameras flagging fire risks, thermal imaging, and fire alarm cameras.</li>
+        <li><strong>Shift to Connected Systems:</strong> Messe Frankfurt's Regina Tsai noted the market is transitioning from standalone products to fully connected integrated systems.</li>
+      </ul>
+    </div>
+
+    <div class="why-box">
+      <h4>⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</h4>
+      <p class="vi-content">Secutech Vietnam 2026 xác nhận xu hướng không thể đảo ngược: AI đã trở thành tiêu chuẩn kỳ vọng tối thiểu cho camera an ninh và hệ thống ELV tại Việt Nam. Chủ đầu tư từ cấp độ tòa nhà thương mại đến khu công nghiệp đều yêu cầu AI tích hợp — từ nhận diện biển số, phát hiện xâm nhập, đến phát hiện cháy sớm. Các ELV consultant và integrator cần cập nhật bộ tiêu chuẩn kỹ thuật và danh sách vendor để đáp ứng kỳ vọng mới này.</p>
+      <p class="en-content" style="display:none">Secutech Vietnam 2026 confirms an irreversible trend: AI has become the minimum expected standard for security cameras and ELV systems in Vietnam. Project owners from commercial buildings to industrial zones all demand AI integration — from LPR and intrusion detection to early fire detection. ELV consultants and integrators must update their technical specifications and vendor shortlists to meet these new expectations.</p>
+    </div>
+    <div class="news-source">
+      Nguồn / Source: <a href="https://www.securityinformed.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank">Security Informed — Secutech Vietnam 2026</a>
+      · <a href="https://secutechvietnam.tw.messefrankfurt.com/hochiminhcity/en/press/press-releases/2026/STVN26_FR.html" target="_blank">Messe Frankfurt Official</a>
+    </div>
+  </article>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3 class="vi-content">CẦN TƯ VẤN DỰ ÁN ELV/ICT/AV?</h3>
+    <h3 class="en-content" style="display:none">NEED ELV/ICT/AV PROJECT CONSULTATION?</h3>
+    <p class="vi-content">Paul Le — ELV/ICT/AV Design Director tại Duy Hoa Phat Corporation & HBP Project Management. Chuyên tư vấn thiết kế hệ thống ELV, ICT, AV và Smart Building cho các dự án tại Việt Nam và Đông Nam Á.</p>
+    <p class="en-content" style="display:none">Paul Le — ELV/ICT/AV Design Director at Duy Hoa Phat Corporation & HBP Project Management. Specializing in ELV, ICT, AV and Smart Building system design consultation for projects across Vietnam and Southeast Asia.</p>
+    <a href="/index.html#contact" class="cta-btn">LIÊN HỆ TƯ VẤN / CONTACT →</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>© 2026 Paul Le Consultant — elvconsultant.com</p>
+  <p>
+    <a href="/index.html">Home</a>
+    <a href="/blog/index.html">Blog</a>
+    <a href="/index.html#contact">Contact</a>
+  </p>
+  <p style="margin-top:0.5rem;font-size:0.7rem;opacity:0.6;">
+    Hero image: <a href="https://unsplash.com/photos/blue-and-white-led-shelves-eAqYbtfvGp0" target="_blank">Paul Steuber / Unsplash</a>
+  </p>
+</footer>
+
+<script>
+function setLang(l) {
+  document.querySelectorAll('.vi-content').forEach(e => e.style.display = l === 'vi' ? '' : 'none');
+  document.querySelectorAll('.en-content').forEach(e => e.style.display = l === 'en' ? '' : 'none');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+  try { localStorage.setItem('lang', l); } catch(e) {}
+}
+document.addEventListener('DOMContentLoaded', () => {
+  let saved = 'vi';
+  try { saved = localStorage.getItem('lang') || 'vi'; } catch(e) {}
+  setLang(saved);
+});
+</script>
+
+</body>
+</html>
