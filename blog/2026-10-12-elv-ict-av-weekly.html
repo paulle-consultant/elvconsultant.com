@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bản Tin ELV/ICT/AV Tuần 41 — 12 Tháng 10, 2026 | Paul Le Consultant</title>
+  <meta name="description" content="Tin tức nổi bật tuần này: HPE Self-Driving Networks, Schneider Electric EcoCare BMS, Genetec Security Center SaaS, Secutech Vietnam 2026, Schneider mua lại PTC $22.6 tỷ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07111F;
+      --card-bg: #101E30;
+      --card-border: #1E3550;
+      --cyan: #00C8E0;
+      --cyan-dim: rgba(0,200,224,0.10);
+      --cyan-glow: rgba(0,200,224,0.28);
+      --silver: #A0B4C8;
+      --white: #F0F4F8;
+      --steel: #4A6280;
+      --navy: #1B2A4A;
+      --navy-deep: #0D1B35;
+      --grid-line: rgba(0,200,224,0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7,17,31,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--white);
+    }
+    .nav-logo span {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--cyan);
+      line-height: 1.1;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--silver);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--cyan); }
+
+    /* LANG BAR */
+    .lang-bar {
+      background: var(--navy-deep);
+      border-bottom: 1px solid var(--grid-line);
+      padding: 8px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .lang-label {
+      font-size: 11px;
+      color: var(--steel);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--silver);
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--cyan-dim);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    /* HERO */
+    .article-hero {
+      position: relative;
+      height: 520px;
+      overflow: hidden;
+    }
+    .article-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .article-hero .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(7,17,31,0.85) 0%, rgba(0,200,224,0.10) 50%, rgba(7,17,31,0.90) 100%);
+    }
+    .hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 40px 48px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--cyan-dim);
+      border: 1px solid var(--cyan);
+      color: var(--cyan);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      padding: 5px 14px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+    .hero-eyebrow::before { content: '⬡'; font-size: 12px; }
+    .hero-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(24px, 4vw, 40px);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--white);
+      text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+      max-width: 780px;
+    }
+    .hero-title span { color: var(--cyan); }
+    .hero-meta {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--silver);
+    }
+    .hero-meta .dot { color: var(--steel); }
+
+    /* MAIN LAYOUT */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* INTRO */
+    .intro-block {
+      margin-bottom: 48px;
+      padding: 24px 28px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-left: 3px solid var(--cyan);
+      border-radius: 8px;
+    }
+    .intro-block .vi-content,
+    .intro-block .en-content {
+      font-size: 15px;
+      color: var(--silver);
+      line-height: 1.8;
+    }
+
+    /* NEWS ITEM */
+    .news-item {
+      margin-bottom: 36px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.25s, box-shadow 0.25s;
+    }
+    .news-item:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 24px var(--cyan-glow);
+    }
+    .news-item-header {
+      padding: 20px 24px 16px;
+      border-bottom: 1px solid var(--grid-line);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .news-num {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--card-border);
+      line-height: 1;
+      min-width: 36px;
+      user-select: none;
+    }
+    .news-header-right { flex: 1; }
+    .news-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .tag {
+      display: inline-block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 3px 9px;
+      border-radius: 3px;
+      border: 1px solid var(--card-border);
+      color: var(--silver);
+      background: var(--navy-deep);
+    }
+    .tag.primary {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: var(--cyan-dim);
+    }
+    .news-title-vi {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+    }
+    .news-title-en {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+    }
+    .news-body {
+      padding: 20px 24px;
+    }
+    .news-body .vi-content p,
+    .news-body .en-content p {
+      font-size: 14.5px;
+      color: var(--silver);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .news-body .vi-content p:last-child,
+    .news-body .en-content p:last-child { margin-bottom: 0; }
+
+    /* WHY BOX */
+    .why-box {
+      margin: 16px 0 0;
+      padding: 14px 18px;
+      background: var(--navy-deep);
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 6px 6px 0;
+    }
+    .why-label {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--cyan);
+      margin-bottom: 6px;
+    }
+    .why-box p {
+      font-size: 13px !important;
+      color: var(--silver) !important;
+      margin-bottom: 0 !important;
+    }
+
+    /* SOURCE LINK */
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--steel);
+      text-decoration: none;
+      margin-top: 12px;
+      transition: color 0.2s;
+    }
+    .source-link:hover { color: var(--cyan); }
+    .source-link::before { content: '↗'; }
+
+    /* DIVIDER */
+    .news-divider {
+      height: 1px;
+      background: var(--grid-line);
+      margin: 0 24px;
+    }
+
+    /* CTA BOX */
+    .cta-box {
+      margin-top: 56px;
+      padding: 40px;
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+      border: 1px solid var(--cyan);
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 200px;
+      height: 200px;
+      background: var(--cyan-glow);
+      border-radius: 50%;
+      filter: blur(60px);
+    }
+    .cta-box h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .cta-box p {
+      font-size: 14px;
+      color: var(--silver);
+      margin-bottom: 24px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--cyan);
+      color: #07111F;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 12px 28px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy-deep);
+      border-top: 1px solid var(--card-border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    footer p {
+      font-size: 12px;
+      color: var(--steel);
+      margin-bottom: 8px;
+    }
+    footer a { color: var(--silver); text-decoration: none; }
+    footer a:hover { color: var(--cyan); }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 12px;
+    }
+
+    /* SECTION HEADER */
+    .section-header {
+      margin-bottom: 32px;
+    }
+    .section-header .eyebrow {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--cyan);
+      margin-bottom: 8px;
+    }
+    .section-header h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .cyan-line {
+      width: 48px;
+      height: 2px;
+      background: var(--cyan);
+      margin-top: 10px;
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 16px; }
+      .nav-links { gap: 16px; }
+      .hero-content { padding: 24px 20px; }
+      main { padding: 32px 16px 60px; }
+      .news-item-header { flex-direction: column; gap: 8px; }
+      .news-num { font-size: 20px; }
+      .cta-box { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <span>PAUL LE<br>CONSULTANT</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">HOME</a></li>
+    <li><a href="/blog/">BLOG</a></li>
+    <li><a href="/#contact">CONTACT</a></li>
+  </ul>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span class="lang-label">Ngôn ngữ / Language:</span>
+  <button class="lang-btn" data-lang="vi" onclick="setLang('vi')">🇻🇳 TIẾNG VIỆT</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇺🇸 ENGLISH</button>
+</div>
+
+<!-- HERO -->
+<section class="article-hero">
+  <img
+    src="https://images.unsplash.com/photo-1685720543547-cc4873188c75?w=1400&h=520&q=85&auto=format&fit=crop"
+    alt="ELV ICT AV control room technology"
+    loading="eager"
+  >
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">BẢN TIN TUẦN 41 · WEEKLY BRIEF W41</div>
+    <h1 class="hero-title">
+      <span class="vi-content">Tin Tức ELV / ICT / AV<br><span>Tuần 12 Tháng 10, 2026</span></span>
+      <span class="en-content">ELV / ICT / AV<br><span>Weekly — October 12, 2026</span></span>
+    </h1>
+    <div class="hero-meta">
+      <span>Paul Le · ELV/ICT/AV Design Director</span>
+      <span class="dot">·</span>
+      <span class="vi-content">5 tin nổi bật trong tuần</span>
+      <span class="en-content">5 industry highlights this week</span>
+      <span class="dot">·</span>
+      <span>12 Oct 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main>
+
+  <!-- INTRO -->
+  <div class="intro-block">
+    <p class="vi-content">
+      Chào mừng đến với bản tin ELV/ICT/AV tuần 41 — <strong>12 tháng 10, 2026</strong>. Tuần này nổi bật với các tin từ HPE về hạ tầng mạng tự hành, Schneider Electric ra mắt nền tảng BMS thông minh EcoCare, Genetec đưa bảo mật lên đám mây SaaS cùng sự hỗ trợ của Axis/Bosch/Hanwha, Secutech Vietnam 2026 quy tụ công nghệ AI tại Hà Nội, và thương vụ Schneider Electric mua lại PTC trị giá $22.6 tỷ làm rung chuyển ngành tự động hóa tòa nhà. Tất cả đều có tác động trực tiếp đến các dự án ELV/ICT/AV tại Việt Nam.
+    </p>
+    <p class="en-content">
+      Welcome to ELV/ICT/AV Weekly Brief W41 — <strong>October 12, 2026</strong>. This week features HPE's self-driving network expansion, Schneider Electric's EcoCare BMS launch for AI-driven building operations, Genetec Security Center SaaS backed by Axis/Bosch/Hanwha/i-PRO, Secutech Vietnam 2026 showcasing AI smart building tech in Hanoi, and Schneider Electric's landmark $22.6B acquisition of PTC reshaping the building automation landscape. All stories with direct relevance to ELV/ICT/AV projects in Vietnam.
+    </p>
+  </div>
+
+  <!-- SECTION HEADER -->
+  <div class="section-header">
+    <div class="eyebrow vi-content">TIN TỨC NỔI BẬT TUẦN NÀY</div>
+    <div class="eyebrow en-content">TOP STORIES THIS WEEK</div>
+    <h2 class="vi-content">5 Tin Quan Trọng Nhất</h2>
+    <h2 class="en-content">5 Key Industry Stories</h2>
+    <div class="cyan-line"></div>
+  </div>
+
+  <!-- NEWS 1: HPE ARUBA JUNIPER -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">01</div>
+      <div class="news-header-right">
+        <div class="news-tags">
+          <span class="tag primary">HPE ARUBA</span>
+          <span class="tag primary">JUNIPER</span>
+          <span class="tag">ICT NETWORKING</span>
+          <span class="tag">AI</span>
+        </div>
+        <h2 class="news-title-vi vi-content">HPE Mở Rộng Mạng Tự Hành (Self-Driving) Toàn Campus, Edge và AI Factory</h2>
+        <h2 class="news-title-en en-content">HPE Expands Self-Driving Networks Across Campus, Edge, Data Center & AI Factories</h2>
+      </div>
+    </div>
+    <div class="news-divider"></div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>
+          Tại HPE Discover 2026, Hewlett Packard Enterprise chính thức ra mắt thế hệ mạng tự hành mới — kết hợp AI của Aruba và Juniper Mist để tạo ra nền tảng mạng không cần can thiệp thủ công. Hệ thống sử dụng AI tác nhân (agentic AI) để tự động phát hiện sự cố, tự tối ưu hóa và tự khắc phục trên toàn bộ hạ tầng — từ campus Wi-Fi đến data center và các cụm AI factory.
+        </p>
+        <p>
+          HPE đã tích hợp sâu Juniper Mist AI vào nền tảng Aruba, cho phép wireless, wired và WAN vận hành như một hệ thống duy nhất. Mô hình "self-driving" có nghĩa IT manager có thể theo dõi toàn bộ network qua một dashboard duy nhất với dự đoán sự cố trước khi xảy ra.
+        </p>
+        <div class="why-box">
+          <div class="why-label">⬡ TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT TẠI VIỆT NAM</div>
+          <p>Với các tòa nhà thông minh, bệnh viện, trường đại học và khu công nghiệp tại Việt Nam đang đầu tư mạnh vào hạ tầng mạng, giải pháp HPE Aruba + Juniper Mist AI mang đến cơ hội thiết kế hạ tầng ICT tương lai với chi phí vận hành thấp hơn và độ tin cậy cao hơn. ELV consultant cần đưa vào spec "AI-native wireless + wired infrastructure" thay vì network truyền thống.</p>
+        </div>
+        <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/06/hpe-expands-self-driving-networks-across-edge-campus-data-center-and-ai-factories.html" target="_blank" class="source-link">Nguồn: HPE Newsroom, Tháng 6/2026</a>
+      </div>
+      <div class="en-content">
+        <p>
+          At HPE Discover 2026, Hewlett Packard Enterprise unveiled the next generation of its self-driving network platform — combining Aruba and Juniper Mist AI to create an infrastructure that operates with minimal human intervention. The system leverages agentic AI to automatically detect issues, self-optimize, and self-heal across the entire estate — from campus Wi-Fi to data centers and AI factories.
+        </p>
+        <p>
+          HPE deeply integrated Juniper Mist AI into its Aruba platform, enabling wireless, wired, and WAN to function as a unified system. The "self-driving" model means IT managers can oversee the entire network from a single dashboard with predictive fault identification before issues occur.
+        </p>
+        <div class="why-box">
+          <div class="why-label">⬡ WHY THIS MATTERS FOR ELV/ICT PROJECTS IN VIETNAM</div>
+          <p>As smart buildings, hospitals, universities and industrial parks in Vietnam invest heavily in network infrastructure, the HPE Aruba + Juniper Mist AI solution offers the opportunity to design future-ready ICT infrastructure with lower operational costs and higher reliability. ELV consultants should now spec "AI-native wireless + wired infrastructure" rather than conventional networking stacks.</p>
+        </div>
+        <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/06/hpe-expands-self-driving-networks-across-edge-campus-data-center-and-ai-factories.html" target="_blank" class="source-link">Source: HPE Newsroom, June 2026</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- NEWS 2: SCHNEIDER ECOCARE BMS -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">02</div>
+      <div class="news-header-right">
+        <div class="news-tags">
+          <span class="tag primary">SCHNEIDER ELECTRIC</span>
+          <span class="tag">BMS</span>
+          <span class="tag">AI ANALYTICS</span>
+        </div>
+        <h2 class="news-title-vi vi-content">Schneider Electric Ra Mắt EcoCare for BMS — Giám Sát AI 24/7 Cho Hệ Thống Tòa Nhà</h2>
+        <h2 class="news-title-en en-content">Schneider Electric Launches EcoCare for BMS — AI-Driven 24/7 Building Management</h2>
+      </div>
+    </div>
+    <div class="news-divider"></div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>
+          Schneider Electric ra mắt dịch vụ <strong>EcoCare for BMS</strong> — nền tảng giám sát thông minh cho hệ thống quản lý tòa nhà (Building Management System) với khả năng theo dõi liên tục 24/7 và phân tích dự đoán (predictive analytics) được hỗ trợ bởi AI. Hệ thống sử dụng dữ liệu thời gian thực từ các điểm đo trên toàn tòa nhà để phát hiện sớm sự cố và tối ưu hóa năng lượng.
+        </p>
+        <p>
+          EcoCare for BMS tích hợp với nền tảng EcoStruxure của Schneider, cho phép tương tác với các thiết bị HVAC, điện, chiếu sáng và thang máy. Nghiên cứu của Schneider cho thấy tích hợp AI vào BMS có thể tiết kiệm tới 22% năng lượng tòa nhà.
+        </p>
+        <div class="why-box">
+          <div class="why-label">⬡ TẠI SAO QUAN TRỌNG VỚI DỰ ÁN BMS/ELV TẠI VIỆT NAM</div>
+          <p>Các chủ đầu tư tòa nhà văn phòng hạng A, bệnh viện và khu công nghiệp tại Việt Nam ngày càng yêu cầu BMS thông minh hơn. EcoCare for BMS là giải pháp Schneider có thể được ELV consultant đề xuất trong các dự án mới như một dịch vụ O&M (Operations & Maintenance) tích hợp, thay vì chỉ bán phần cứng.</p>
+        </div>
+        <a href="https://www.prnewswire.com/news-releases/schneider-electric-launches-ecocare-for-bms-to-deliver-real-time-operational-intelligence-for-modern-buildings-302787588.html" target="_blank" class="source-link">Nguồn: PR Newswire / Schneider Electric</a>
+      </div>
+      <div class="en-content">
+        <p>
+          Schneider Electric has launched <strong>EcoCare for BMS</strong> — an intelligent monitoring service for Building Management Systems featuring continuous 24/7 surveillance and AI-powered predictive analytics. The system uses real-time data from measurement points across the building to detect faults early and optimize energy consumption.
+        </p>
+        <p>
+          EcoCare for BMS integrates with Schneider's EcoStruxure platform, enabling interoperability with HVAC, electrical, lighting and elevator systems. Schneider research indicates that integrating AI into BMS can reduce building energy consumption by up to 22%.
+        </p>
+        <div class="why-box">
+          <div class="why-label">⬡ WHY THIS MATTERS FOR BMS/ELV PROJECTS IN VIETNAM</div>
+          <p>Grade A office towers, hospitals and industrial parks in Vietnam increasingly demand smarter BMS solutions. EcoCare for BMS is a Schneider offering that ELV consultants can propose in new projects as an integrated O&M (Operations & Maintenance) service — shifting conversations from hardware-only to ongoing intelligent building management.</p>
+        </div>
+        <a href="https://www.prnewswire.com/news-releases/schneider-electric-launches-ecocare-for-bms-to-deliver-real-time-operational-intelligence-for-modern-buildings-302787588.html" target="_blank" class="source-link">Source: PR Newswire / Schneider Electric</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- NEWS 3: GENETEC SECURITY CENTER SAAS -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">03</div>
+      <div class="news-header-right">
+        <div class="news-tags">
+          <span class="tag primary">GENETEC</span>
+          <span class="tag primary">AXIS</span>
+          <span class="tag primary">BOSCH</span>
+          <span class="tag">SECURITY</span>
+          <span class="tag">CLOUD SAAS</span>
+        </div>
+        <h2 class="news-title-vi vi-content">Genetec Security Center SaaS — Bảo Mật Đám Mây Với Hỗ Trợ Axis, Bosch, Hanwha & i-PRO</h2>
+        <h2 class="news-title-en en-content">Genetec Security Center SaaS — Cloud Security With Axis, Bosch, Hanwha & i-PRO Support</h2>
+      </div>
+    </div>
+    <div class="news-divider"></div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>
+          Genetec chính thức ra mắt <strong>Security Center SaaS</strong> — nền tảng bảo mật đám mây hợp nhất video giám sát và kiểm soát ra vào. Điểm nổi bật: Security Center SaaS nhận được hỗ trợ chính thức từ các nhà sản xuất camera và thiết bị bảo mật hàng đầu gồm <strong>Axis Communications, Bosch Security, Hanwha Vision</strong> và <strong>i-PRO (Panasonic)</strong>.
+        </p>
+        <p>
+          Nền tảng này kết nối trực tiếp với camera cloud-native, đồng thời tương thích ngược với hạ tầng camera truyền thống đang có. Doanh nghiệp có thể tích hợp từng phần lên cloud mà không cần thay thế toàn bộ hệ thống. Access control, video analytics và incident management đều trên một giao diện.
+        </p>
+        <div class="why-box">
+          <div class="why-label">⬡ TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/SECURITY TẠI VIỆT NAM</div>
+          <p>Xu hướng hybrid cloud trong hệ thống an ninh đang tăng tốc tại Việt Nam. Genetec SaaS với sự tích hợp Axis, Bosch, Hanwha — tất cả đều có mặt trên thị trường Việt — mở ra cơ hội thiết kế hệ thống bảo mật scalable, dễ quản lý từ xa và giảm chi phí server tại chỗ. ELV consultant nên nghiên cứu mô hình Camera-as-a-Service cho các dự án tòa nhà và khu đô thị mới.</p>
+        </div>
+        <a href="https://www.sdmmag.com/articles/103060-genetec-saas-announces-support-for-axis-bosch-hanwha-and-i-pro-devices" target="_blank" class="source-link">Nguồn: SDM Magazine / Genetec</a>
+      </div>
+      <div class="en-content">
+        <p>
+          Genetec officially launched <strong>Security Center SaaS</strong> — a unified cloud security platform combining video surveillance and access control. The key announcement: Security Center SaaS receives official device support from leading security manufacturers including <strong>Axis Communications, Bosch Security, Hanwha Vision</strong> and <strong>i-PRO (Panasonic)</strong>.
+        </p>
+        <p>
+          The platform connects directly to cloud-native cameras while maintaining backward compatibility with existing on-premise infrastructure. Organizations can migrate to the cloud incrementally without a full rip-and-replace. Access control, video analytics and incident management are unified under one interface.
+        </p>
+        <div class="why-box">
+          <div class="why-label">⬡ WHY THIS MATTERS FOR ELV/SECURITY PROJECTS IN VIETNAM</div>
+          <p>The hybrid cloud trend in security systems is accelerating in Vietnam. Genetec SaaS with Axis, Bosch, Hanwha integration — all widely represented in the Vietnamese market — opens opportunities to design scalable, remotely-managed security systems with reduced on-site server costs. ELV consultants should explore Camera-as-a-Service models for new mixed-use and commercial building projects.</p>
+        </div>
+        <a href="https://www.sdmmag.com/articles/103060-genetec-saas-announces-support-for-axis-bosch-hanwha-and-i-pro-devices" target="_blank" class="source-link">Source: SDM Magazine / Genetec</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- NEWS 4: SECUTECH VIETNAM 2026 -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">04</div>
+      <div class="news-header-right">
+        <div class="news-tags">
+          <span class="tag primary">SECUTECH VIETNAM</span>
+          <span class="tag">VIETNAM</span>
+          <span class="tag">SMART BUILDING</span>
+          <span class="tag">AI SECURITY</span>
+        </div>
+        <h2 class="news-title-vi vi-content">Secutech Vietnam 2026 Trở Lại Hà Nội — AI & Smart Building Lên Ngôi</h2>
+        <h2 class="news-title-en en-content">Secutech Vietnam 2026 Returns to Hanoi — AI & Smart Building Tech Takes Center Stage</h2>
+      </div>
+    </div>
+    <div class="news-divider"></div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>
+          <strong>Secutech Vietnam 2026</strong> — triển lãm quốc tế về an ninh, phòng cháy chữa cháy và công nghệ tòa nhà thông minh — đã trở lại Hà Nội với quy mô lớn hơn và tập trung rõ ràng vào <strong>AI tích hợp trong hệ thống bảo mật và smart building</strong>. Triển lãm thu hút hàng trăm nhà sản xuất và hàng nghìn chuyên gia ngành từ Việt Nam và Đông Nam Á.
+        </p>
+        <p>
+          Các chủ đề nổi bật gồm: camera AI nhận diện hành vi bất thường, robot an ninh tuần tra tự động, hệ thống phòng cháy thông minh tích hợp BMS, và giải pháp kiểm soát ra vào không tiếp xúc. Nhu cầu triển khai ELV tại các dự án bất động sản, công nghiệp và y tế tại Việt Nam được dự báo tăng mạnh đến 2028.
+        </p>
+        <div class="why-box">
+          <div class="why-label">⬡ TẠI SAO QUAN TRỌNG VỚI ELV CONSULTANT TẠI VIỆT NAM</div>
+          <p>Secutech Vietnam là cơ hội để cập nhật xu hướng công nghệ ELV/BMS/PCCC mới nhất đang được áp dụng tại Việt Nam. Sự hiện diện của các thương hiệu quốc tế hàng đầu tại Hà Nội cho thấy thị trường Việt Nam đang trưởng thành và sẵn sàng tiếp nhận giải pháp AI-native trong các hệ thống hạ tầng an ninh và tòa nhà thông minh.</p>
+        </div>
+        <a href="https://www.securityinformed.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" class="source-link">Nguồn: SecurityInformed / Secutech Vietnam 2026</a>
+      </div>
+      <div class="en-content">
+        <p>
+          <strong>Secutech Vietnam 2026</strong> — the international exhibition for security, fire safety and smart building technology — returned to Hanoi with greater scale and a sharp focus on <strong>AI-integrated security and smart building systems</strong>. The event drew hundreds of manufacturers and thousands of industry professionals from Vietnam and across Southeast Asia.
+        </p>
+        <p>
+          Key themes included: AI cameras for abnormal behavior detection, autonomous security patrol robots, intelligent fire detection systems integrated with BMS, and contactless access control solutions. ELV deployment demand for real estate, industrial and healthcare projects in Vietnam is forecast to grow strongly through 2028.
+        </p>
+        <div class="why-box">
+          <div class="why-label">⬡ WHY THIS MATTERS FOR ELV CONSULTANTS IN VIETNAM</div>
+          <p>Secutech Vietnam is the prime opportunity to update on the latest ELV/BMS/fire safety technology trends being deployed in Vietnam. The presence of leading international brands in Hanoi signals a maturing market ready to adopt AI-native solutions across security and smart building infrastructure. This is a must-attend reference point for writing tech specifications.</p>
+        </div>
+        <a href="https://www.securityinformed.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" class="source-link">Source: SecurityInformed / Secutech Vietnam 2026</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- NEWS 5: SCHNEIDER ACQUIRES PTC -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">05</div>
+      <div class="news-header-right">
+        <div class="news-tags">
+          <span class="tag primary">SCHNEIDER ELECTRIC</span>
+          <span class="tag">M&A</span>
+          <span class="tag">DIGITAL TWIN</span>
+          <span class="tag">BMS / BAS</span>
+        </div>
+        <h2 class="news-title-vi vi-content">Schneider Electric Mua Lại PTC Với Giá $22.6 Tỷ — Cuộc Cách Mạng AI Công Nghiệp</h2>
+        <h2 class="news-title-en en-content">Schneider Electric Acquires PTC for $22.6 Billion — Industrial AI Revolution Incoming</h2>
+      </div>
+    </div>
+    <div class="news-divider"></div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>
+          Trong thương vụ M&A lớn nhất ngành tự động hóa công nghiệp năm 2026, <strong>Schneider Electric</strong> công bố mua lại <strong>PTC Inc.</strong> — công ty phần mềm công nghiệp nổi tiếng với nền tảng ThingWorx IoT, Vuforia AR và Windchill PLM — với giá <strong>$22.6 tỷ USD</strong>. Thương vụ này định vị Schneider trở thành "cường quốc AI công nghiệp" toàn diện.
+        </p>
+        <p>
+          Với việc sở hữu PTC, Schneider Electric sẽ tích hợp khả năng <strong>digital twin</strong>, <strong>industrial IoT</strong> và <strong>AR/VR</strong> trực tiếp vào nền tảng EcoStruxure — cho phép mô phỏng tòa nhà số (building digital twin) kết hợp với BMS/SCADA trong một hệ sinh thái duy nhất.
+        </p>
+        <div class="why-box">
+          <div class="why-label">⬡ TẠI SAO QUAN TRỌNG VỚI DỰ ÁN BAS/BMS TẠI VIỆT NAM</div>
+          <p>Thương vụ này báo hiệu tương lai của BMS sẽ hợp nhất với digital twin và industrial AI. Các ELV consultant tại Việt Nam cần cập nhật roadmap kỹ thuật để chuẩn bị cho thế hệ tòa nhà số kế tiếp — nơi BMS không chỉ điều khiển thiết bị mà còn tối ưu hóa và mô phỏng toàn bộ vòng đời vận hành tòa nhà. Đây là tín hiệu mạnh để đầu tư vào năng lực tư vấn BMS thế hệ mới.</p>
+        </div>
+        <a href="https://ptc.com/en/news/2026/schneider-electric-to-acquire-ptc" target="_blank" class="source-link">Nguồn: PTC.com / Schneider Electric</a>
+      </div>
+      <div class="en-content">
+        <p>
+          In the largest M&A deal in industrial automation of 2026, <strong>Schneider Electric</strong> announced the acquisition of <strong>PTC Inc.</strong> — the industrial software company behind ThingWorx IoT, Vuforia AR and Windchill PLM — for <strong>$22.6 billion USD</strong>. This deal positions Schneider as a comprehensive "industrial AI powerhouse."
+        </p>
+        <p>
+          With PTC under its umbrella, Schneider Electric will integrate <strong>digital twin</strong>, <strong>industrial IoT</strong> and <strong>AR/VR</strong> capabilities directly into its EcoStruxure platform — enabling building digital twin simulations combined with BMS/SCADA within a single unified ecosystem.
+        </p>
+        <div class="why-box">
+          <div class="why-label">⬡ WHY THIS MATTERS FOR BAS/BMS PROJECTS IN VIETNAM</div>
+          <p>This deal signals that the future of BMS will converge with digital twin and industrial AI. ELV consultants in Vietnam need to update their technical roadmaps to prepare for the next generation of digital buildings — where BMS doesn't just control equipment but optimizes and simulates the entire building lifecycle. This is a strong signal to invest in next-generation BMS consulting capability.</p>
+        </div>
+        <a href="https://ptc.com/en/news/2026/schneider-electric-to-acquire-ptc" target="_blank" class="source-link">Source: PTC.com / Schneider Electric</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <h3 class="vi-content">Cần Tư Vấn ELV/ICT/AV Cho Dự Án Của Bạn?</h3>
+    <h3 class="en-content">Need ELV/ICT/AV Consulting For Your Project?</h3>
+    <p class="vi-content">Paul Le — ELV/ICT/AV Design Director tại Duy Hoa Phat Corporation & HBP Project Management. Tư vấn thiết kế hệ thống hạ tầng thông minh từ ý tưởng đến triển khai.</p>
+    <p class="en-content">Paul Le — ELV/ICT/AV Design Director at Duy Hoa Phat Corporation & HBP Project Management. Smart infrastructure consulting from concept through deployment.</p>
+    <a href="/#contact" class="cta-btn">
+      <span class="vi-content">LIÊN HỆ TƯ VẤN NGAY →</span>
+      <span class="en-content">GET IN TOUCH →</span>
+    </a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Paul Le Consultant — ELV / ICT / AV Design Director</p>
+  <p>Duy Hoa Phat Corporation · HBP Project Management · Ho Chi Minh City, Vietnam</p>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+  function setLang(l) {
+    document.querySelectorAll('.vi-content').forEach(e => e.style.display = l === 'vi' ? '' : 'none');
+    document.querySelectorAll('.en-content').forEach(e => e.style.display = l === 'en' ? '' : 'none');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    localStorage.setItem('lang', l);
+  }
+  document.addEventListener('DOMContentLoaded', () => setLang(localStorage.getItem('lang') || 'vi'));
+</script>
+
+</body>
+</html>
