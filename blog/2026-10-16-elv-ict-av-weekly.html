@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bản Tin ELV/ICT/AV Tuần 16/10/2026 | Paul Le Consultant</title>
+<meta name="description" content="Bản tin tuần ELV/ICT/AV song ngữ Việt-Anh: Cisco WebexOne 2026, AXIS/Hanwha camera AI, Honeywell Forge Cognition BMS, Smart Building maturation, Secutech Vietnam 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #07111F;
+    --card-bg: #101E30;
+    --card-border: #1E3550;
+    --cyan: #00C8E0;
+    --cyan-dim: rgba(0,200,224,0.10);
+    --cyan-glow: rgba(0,200,224,0.28);
+    --silver: #A0B4C8;
+    --white: #F0F4F8;
+    --steel: #4A6280;
+    --navy: #1B2A4A;
+    --navy-deep: #0D1B35;
+    --grid-line: rgba(0,200,224,0.08);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(7,17,31,0.95);
+    border-bottom: 1px solid var(--card-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .nav-logo-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+  }
+  .nav-logo-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    color: var(--silver);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--silver);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--cyan); }
+
+  /* LANG BAR */
+  .lang-bar {
+    background: var(--navy-deep);
+    border-bottom: 1px solid var(--card-border);
+    padding: 8px 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    max-width: 100%;
+  }
+  .lang-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+    padding: 0 24px;
+  }
+  .lang-label {
+    font-size: 11px;
+    color: var(--steel);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-right: 4px;
+  }
+  .lang-btn {
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--silver);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.06em;
+  }
+  .lang-btn:hover { border-color: var(--cyan); color: var(--cyan); }
+  .lang-btn.active {
+    background: var(--cyan);
+    border-color: var(--cyan);
+    color: #07111F;
+  }
+
+  /* HERO */
+  .article-hero {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+  }
+  .article-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.45) saturate(1.2);
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(7,17,31,0.3) 40%,
+      rgba(7,17,31,0.85) 75%,
+      var(--bg) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 48px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+  .hero-eyebrow {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--cyan);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: var(--cyan);
+  }
+  .hero-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(22px, 3.5vw, 38px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.25;
+    max-width: 760px;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.6);
+    margin-bottom: 12px;
+  }
+  .hero-date {
+    font-size: 13px;
+    color: var(--silver);
+    font-weight: 400;
+  }
+
+  /* MAIN */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+  }
+  .section-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--grid-line);
+  }
+
+  /* NEWS ITEMS */
+  .news-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin-bottom: 24px;
+    position: relative;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .news-item:hover {
+    border-color: var(--cyan-glow);
+    box-shadow: 0 0 32px var(--cyan-dim);
+  }
+  .news-item-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .news-number {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--cyan-glow);
+    line-height: 1;
+    flex-shrink: 0;
+    min-width: 44px;
+  }
+  .news-meta {
+    flex: 1;
+  }
+  .news-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .tag {
+    background: var(--cyan-dim);
+    border: 1px solid rgba(0,200,224,0.2);
+    color: var(--cyan);
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.12em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+  .tag-cat {
+    background: rgba(74,98,128,0.15);
+    border-color: rgba(74,98,128,0.3);
+    color: var(--silver);
+  }
+  .news-title-vi {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+  .news-title-en {
+    font-size: 14px;
+    color: var(--silver);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.4;
+  }
+  .news-body {
+    font-size: 15px;
+    color: var(--silver);
+    line-height: 1.75;
+    margin-top: 16px;
+  }
+  .news-body p { margin-bottom: 10px; }
+  .news-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  .news-body ul li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 6px;
+    color: var(--silver);
+  }
+  .news-body ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+    font-size: 11px;
+    top: 3px;
+  }
+  .news-source {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--steel);
+  }
+  .news-source a {
+    color: var(--cyan);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .news-source a:hover { text-decoration: underline; }
+
+  /* WHY BOX */
+  .why-box {
+    margin-top: 20px;
+    padding: 18px 22px;
+    background: rgba(0,200,224,0.05);
+    border-left: 3px solid var(--cyan);
+    border-radius: 0 8px 8px 0;
+  }
+  .why-box-label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .why-box p {
+    font-size: 14px;
+    color: var(--silver);
+    line-height: 1.65;
+  }
+
+  /* CTA BOX */
+  .cta-box {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 100%);
+    border: 1px solid var(--card-border);
+    border-top: 2px solid var(--cyan);
+    border-radius: 12px;
+    padding: 40px 48px;
+    text-align: center;
+    margin-top: 48px;
+  }
+  .cta-box h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .cta-box p {
+    font-size: 15px;
+    color: var(--silver);
+    margin-bottom: 24px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--cyan);
+    color: #07111F;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .cta-btn:hover {
+    background: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px var(--cyan-glow);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy-deep);
+    border-top: 1px solid var(--card-border);
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  footer p {
+    font-size: 13px;
+    color: var(--steel);
+    margin-bottom: 8px;
+  }
+  footer a {
+    color: var(--silver);
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 13px;
+    transition: color 0.2s;
+  }
+  footer a:hover { color: var(--cyan); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .article-hero { height: 360px; }
+    .hero-overlay { padding: 32px 20px; }
+    .news-item { padding: 24px 20px; }
+    .cta-box { padding: 32px 24px; }
+    main { padding: 32px 16px 48px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/index.html" class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      </svg>
+      <div>
+        <div class="nav-logo-text">PAUL LE CONSULTANT</div>
+        <div class="nav-logo-sub">ELV · ICT · AV Design Director</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/blog/index.html">Blog</a></li>
+      <li><a href="/index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <div class="lang-bar-inner">
+    <span class="lang-label">Ngôn ngữ / Language:</span>
+    <button class="lang-btn" data-lang="vi" onclick="setLang('vi')">🇻🇳 Tiếng Việt</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 English</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1683322499436-f4383dd59f5a?w=1400&h=520&q=85&auto=format&fit=crop" alt="Network infrastructure blue cables technology">
+  <div class="hero-overlay">
+    <div class="hero-eyebrow">
+      <span class="vi-content">Bản Tin Tuần · ELV / ICT / AV</span>
+      <span class="en-content">Weekly Newsletter · ELV / ICT / AV</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="vi-content">AI Tự Chủ, Camera Thông Minh & Hội Tụ Hạ Tầng Số — Tuần 16.10.2026</span>
+      <span class="en-content">Agentic AI, Smart Cameras & Digital Infrastructure Convergence — Week of 16 Oct 2026</span>
+    </h1>
+    <div class="hero-date">
+      <span class="vi-content">16 Tháng 10, 2026 · Paul Le · ELV/ICT/AV Consultant</span>
+      <span class="en-content">16 October 2026 · Paul Le · ELV/ICT/AV Consultant</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+  <div class="section-label">
+    <span class="vi-content">5 Tin Nổi Bật Tuần Này</span>
+    <span class="en-content">5 Top Stories This Week</span>
+  </div>
+
+  <!-- NEWS 1: CISCO -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="news-number">01</div>
+      <div class="news-meta">
+        <div class="news-tags">
+          <span class="tag">CISCO</span>
+          <span class="tag tag-cat">AV · UC</span>
+          <span class="tag tag-cat">AI AGENT</span>
+        </div>
+        <div class="news-title-vi vi-content">Cisco WebexOne 2026: RoomOS 27 Hỗ Trợ Google Meet Native + Ceiling Speaker Pro AI</div>
+        <div class="news-title-en en-content">Cisco WebexOne 2026: RoomOS 27 Native Google Meet + AI Ceiling Speaker Pro</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tại sự kiện WebexOne 2026, Cisco công bố một loạt cập nhật lớn trong hệ sinh thái hợp tác doanh nghiệp, nổi bật gồm:</p>
+        <ul>
+          <li><strong>RoomOS 27</strong> (ra mắt tháng 11): Hỗ trợ Google Meet chạy native trên thiết bị phòng họp Cisco, bên cạnh Webex, Microsoft Teams và Zoom – thực sự trở thành nền tảng hội nghị đa-giao-thức.</li>
+          <li><strong>Cisco Ceiling Speaker Pro</strong>: Loa trần AI tự động điều chỉnh âm thanh theo phòng, kết nối qua một cáp Ethernet duy nhất – giảm đáng kể chi phí thi công đi dây AV.</li>
+          <li><strong>Claude AI trong Webex</strong>: Tích hợp Claude (Anthropic) như AI agent nội bộ, có thể phân tích dữ liệu, tạo nội dung, thực hiện đa bước tác vụ ngay trong nền tảng.</li>
+          <li><strong>Workplace Designer</strong>: Công cụ quy hoạch thị giác từ phòng họp đơn lẻ đến toàn bộ tầng văn phòng, tích hợp networking, collaboration và occupancy analytics.</li>
+        </ul>
+      </div>
+      <div class="en-content">
+        <p>At WebexOne 2026, Cisco announced sweeping updates to its enterprise collaboration ecosystem, including:</p>
+        <ul>
+          <li><strong>RoomOS 27</strong> (November release): Native Google Meet support alongside Webex, Microsoft Teams, and Zoom — making Cisco room devices truly multi-protocol.</li>
+          <li><strong>Cisco Ceiling Speaker Pro</strong>: AI-driven ceiling speaker that auto-adjusts audio across the room, connecting over a single Ethernet cable — significantly reducing AV wiring cost.</li>
+          <li><strong>Claude AI in Webex</strong>: Integration of Claude (Anthropic) as an enterprise AI agent to analyze data, generate content, and handle multi-step tasks inside the platform.</li>
+          <li><strong>Workplace Designer</strong>: Visual planning tool scaling from individual rooms to entire floors, integrating networking, collaboration, and occupancy analytics.</li>
+        </ul>
+      </div>
+      <div class="news-source">
+        Nguồn / Source:
+        <a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-unveils-new-agentic-collaboration-experiences.html" target="_blank" rel="noopener">Cisco Newsroom – WebexOne 2026</a>
+      </div>
+    </div>
+    <div class="why-box">
+      <div class="why-box-label">
+        <span class="vi-content">📌 Tầm Quan Trọng với Dự Án Việt Nam</span>
+        <span class="en-content">📌 Relevance to Vietnam Projects</span>
+      </div>
+      <p class="vi-content">Nhiều dự án văn phòng và bệnh viện tại Việt Nam đang đồng thời dùng cả Zoom và Teams. RoomOS 27 giúp phòng họp Cisco trở nên linh hoạt hơn, không cần đầu tư thêm thiết bị. Cisco Ceiling Speaker Pro đặc biệt phù hợp phòng họp Việt Nam (diện tích 30–80m²), cắt giảm chi phí đi dây AV và đơn giản hóa thi công. Đây là lựa chọn thuyết phục cho RFP phòng họp tại các toà nhà văn phòng hạng A và bệnh viện cao tầng.</p>
+      <p class="en-content">Many Vietnamese office and hospital projects use both Zoom and Teams simultaneously. RoomOS 27 makes Cisco room devices multi-protocol without additional hardware investment. The Ceiling Speaker Pro is particularly well-suited to typical Vietnamese meeting rooms (30–80m²), reducing AV cabling cost and simplifying installation. A compelling option for meeting room RFPs in Grade-A offices and high-rise hospitals.</p>
+    </div>
+  </div>
+
+  <!-- NEWS 2: AXIS / HANWHA -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="news-number">02</div>
+      <div class="news-meta">
+        <div class="news-tags">
+          <span class="tag">AXIS</span>
+          <span class="tag">HANWHA</span>
+          <span class="tag tag-cat">SECURITY · CCTV</span>
+          <span class="tag tag-cat">AI CAMERA</span>
+        </div>
+        <div class="news-title-vi vi-content">AXIS D2124-VE Radar 360° & Hanwha Wisenet 9: Thế Hệ Camera AI Mới Tháng 10/2026</div>
+        <div class="news-title-en en-content">AXIS D2124-VE 360° Radar & Hanwha Wisenet 9: New AI Camera Generation October 2026</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p><strong>AXIS Communications</strong> ra mắt một số sản phẩm quan trọng trong tháng 10/2026:</p>
+        <ul>
+          <li><strong>AXIS D2124-VE Radar</strong>: Radar radar phát hiện 360° gắn cột, phân loại người và phương tiện trong vùng bán kính 200m, kết hợp autotracking với camera PTZ Q62 series. Dự kiến Q4/2026.</li>
+          <li><strong>AXIS X1100 PTZ</strong>: Camera PTZ 4K chống cháy nổ Zone 1/Division 1, vỏ thép không gỉ 316L – phục vụ các công trình công nghiệp và nhà máy hoá chất.</li>
+          <li>Cập nhật tốc độ khung nhiệt (8.3fps) trên nhiều dòng camera nhiệt với giá bán như cũ.</li>
+        </ul>
+        <p><strong>Hanwha Vision</strong> ra mắt dòng <strong>Wisenet 9 AI</strong> với 9 model mới (2MP, 5MP, 4K) – dome trong nhà, dome chống phá hoại và bullet – xây dựng trên chipset Wisenet 9 thế hệ mới. Cùng với đó là các recording server BLAZE và WAVE thế hệ mới, dung lượng từ 48–560TB.</p>
+      </div>
+      <div class="en-content">
+        <p><strong>AXIS Communications</strong> released several notable products in October 2026:</p>
+        <ul>
+          <li><strong>AXIS D2124-VE Radar</strong>: Pole-mounted 360° radar detecting people and vehicles up to 200m, pairing with Q62 PTZ autotracking. Expected Q4 2026.</li>
+          <li><strong>AXIS X1100 PTZ</strong>: 4K explosion-protected PTZ for Zone 1/Division 1 environments in 316L stainless steel — designed for industrial and petrochemical sites.</li>
+          <li>Thermal frame rate updates (8.3fps) added across multiple thermal models at unchanged pricing.</li>
+        </ul>
+        <p><strong>Hanwha Vision</strong> launched the <strong>Wisenet 9 AI</strong> lineup with 9 new models (2MP, 5MP, 4K) — indoor domes, vandal domes, and bullets — built on the new Wisenet 9 chipset. Also released: next-gen BLAZE and WAVE recording servers ranging from 48 to 560TB.</p>
+      </div>
+      <div class="news-source">
+        Nguồn / Source:
+        <a href="http://camcentral.net/2026/10/04/october-2026-axis-hanwha-product-update/" target="_blank" rel="noopener">CamCentral – October 2026 AXIS/Hanwha Product Update</a>
+      </div>
+    </div>
+    <div class="why-box">
+      <div class="why-box-label">
+        <span class="vi-content">📌 Tầm Quan Trọng với Dự Án Việt Nam</span>
+        <span class="en-content">📌 Relevance to Vietnam Projects</span>
+      </div>
+      <p class="vi-content">AXIS D2124-VE phù hợp với các dự án khu công nghiệp, sân bay, cảng biển – nơi cần phân loại đối tượng từ xa mà không cần camera dày đặc. Hanwha Wisenet 9 cung cấp lựa chọn camera AI tầm trung cho các dự án chung cư, bệnh viện, trường học tại Việt Nam vốn bị hạn chế ngân sách. Cần lưu ý xu hướng loại bỏ (EOL) của AXIS để tư vấn replacement đúng thời điểm.</p>
+      <p class="en-content">The AXIS D2124-VE fits industrial parks, airports, and seaports requiring long-range object classification without dense camera coverage. Hanwha Wisenet 9 offers a mid-range AI camera option for budget-sensitive Vietnamese residential, hospital, and school projects. The AXIS EOL list should be tracked for timely replacement recommendations.</p>
+    </div>
+  </div>
+
+  <!-- NEWS 3: HONEYWELL -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="news-number">03</div>
+      <div class="news-meta">
+        <div class="news-tags">
+          <span class="tag">HONEYWELL</span>
+          <span class="tag tag-cat">BMS · BUILDING AUTO</span>
+          <span class="tag tag-cat">AI PLATFORM</span>
+        </div>
+        <div class="news-title-vi vi-content">Honeywell Ra Mắt Forge Cognition: AI Agent Quản Lý Toà Nhà, Giảm 90% Cảnh Báo Nhiễu</div>
+        <div class="news-title-en en-content">Honeywell Launches Forge Cognition: AI Agent Building Management, Cutting Alerts 90%</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Ngày 14/10/2026, <strong>Honeywell Technologies</strong> giới thiệu nền tảng AI mới <strong>Forge Cognition</strong> – kết hợp AI agents với dữ liệu thời gian thực để tự động hoá vận hành toà nhà thương mại, campus và cơ sở công nghiệp.</p>
+        <ul>
+          <li>Phát triển cùng <strong>Nvidia</strong> và <strong>Dell Technologies</strong>.</li>
+          <li>Thử nghiệm tại campus Voyager (Nvidia): cắt giảm cảnh báo không cần thiết đến <strong>90%</strong>, tiết kiệm năng lượng lên tới <strong>10%</strong> trong khi vẫn duy trì sự thoải mái cho người dùng.</li>
+          <li>Nhắm vào thị trường tòa nhà thương mại, campus đại học, cơ sở y tế và nhà máy.</li>
+        </ul>
+        <p>Đây là động thái tách biệt sau khi Honeywell tách mảng building technologies thành công ty riêng vào đầu 2026, tập trung hoàn toàn vào AI và số hoá hạ tầng tòa nhà.</p>
+      </div>
+      <div class="en-content">
+        <p>On October 14, 2026, <strong>Honeywell Technologies</strong> unveiled <strong>Forge Cognition</strong> — a new AI platform combining AI agents with real-time data to automate operations across commercial buildings, campuses, and industrial facilities.</p>
+        <ul>
+          <li>Developed in partnership with <strong>Nvidia</strong> and <strong>Dell Technologies</strong>.</li>
+          <li>Piloted at Nvidia's Voyager campus: reduced unnecessary alerts by up to <strong>90%</strong>, identified energy savings of up to <strong>10%</strong> while maintaining occupant comfort.</li>
+          <li>Targets commercial buildings, university campuses, healthcare facilities, and industrial plants.</li>
+        </ul>
+        <p>This follows Honeywell's 2026 spin-off of its building technologies division, now exclusively focused on AI-driven building infrastructure digitization.</p>
+      </div>
+      <div class="news-source">
+        Nguồn / Source:
+        <a href="https://www.facilitiesdive.com/news/honeywell-technologies-beefs-up-forge-platform-with-operational-ai-capabili/833108/" target="_blank" rel="noopener">Facilities Dive – Honeywell Forge Cognition</a>
+      </div>
+    </div>
+    <div class="why-box">
+      <div class="why-box-label">
+        <span class="vi-content">📌 Tầm Quan Trọng với Dự Án Việt Nam</span>
+        <span class="en-content">📌 Relevance to Vietnam Projects</span>
+      </div>
+      <p class="vi-content">Honeywell đang là một trong những nhà cung cấp BMS phổ biến nhất tại Việt Nam (bệnh viện, toà nhà văn phòng, trung tâm thương mại). Forge Cognition mở ra hướng tư vấn mới: không chỉ thiết kế hệ thống BMS mới mà còn nâng cấp BMS hiện hữu bằng lớp AI để giảm chi phí vận hành – đặc biệt phù hợp với các dự án retrofit toà nhà cũ đang rất phổ biến tại TP.HCM và Hà Nội.</p>
+      <p class="en-content">Honeywell is one of the most widely deployed BMS providers in Vietnam (hospitals, offices, shopping centers). Forge Cognition opens a new consulting angle: not just designing new BMS but retrofitting existing systems with an AI layer to cut operational costs — especially relevant for the growing building retrofit market in Ho Chi Minh City and Hanoi.</p>
+    </div>
+  </div>
+
+  <!-- NEWS 4: SMART BUILDING MATURATION -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="news-number">04</div>
+      <div class="news-meta">
+        <div class="news-tags">
+          <span class="tag">SMART BUILDING</span>
+          <span class="tag tag-cat">BMS · IT/OT</span>
+          <span class="tag tag-cat">STRATEGY</span>
+        </div>
+        <div class="news-title-vi vi-content">Công Nghệ Toà Nhà Thông Minh Đã Chín Muồi — Thách Thức Mới: Đưa Vào Vận Hành Thực Tế</div>
+        <div class="news-title-en en-content">Smart Building Tech Has Matured — The New Challenge: Putting It to Real-World Use</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Báo cáo mới nhất từ ngành (15/10/2026) khẳng định: công nghệ toà nhà thông minh không còn là điểm khác biệt cạnh tranh nữa — nó đã trở thành hàng hoá phổ thông. Thách thức thực sự đã chuyển sang <strong>triển khai vận hành và tạo ra kết quả đo lường được</strong>.</p>
+        <p>Các điểm chính từ báo cáo:</p>
+        <ul>
+          <li><strong>Thiếu nhân lực kỹ thuật số</strong>: Analytics, giám sát từ xa và nền tảng dịch vụ kết nối giúp đội vận hành phát hiện sự cố sớm hơn – nhưng cần người có khả năng đọc và hành động theo dữ liệu.</li>
+          <li><strong>Hội tụ IT/OT</strong>: Mạng tự động hoá toà nhà ngày càng kết nối, đòi hỏi rõ ràng về phân công trách nhiệm giữa đội IT và đội OT, và coi quản lý mạng là nhiệm vụ vận hành liên tục.</li>
+          <li><strong>Chất lượng dữ liệu</strong>: Đặt tên thiết bị nhất quán, hồ sơ thiết bị đầy đủ và tích hợp có cấu trúc phải được lên kế hoạch từ giai đoạn thiết kế – sửa sau khi vận hành tốn kém hơn nhiều.</li>
+        </ul>
+      </div>
+      <div class="en-content">
+        <p>A latest industry analysis (Oct 15, 2026) confirms: smart building technology is no longer a competitive differentiator — it has become a commodity. The real challenge has shifted to <strong>operational implementation and measurable outcomes</strong>.</p>
+        <p>Key takeaways:</p>
+        <ul>
+          <li><strong>Workforce gap</strong>: Analytics, remote monitoring, and connected service platforms help catch problems early — but require people who can read and act on data, not just the tools themselves.</li>
+          <li><strong>IT/OT convergence</strong>: Building automation networks require clear ownership between IT and OT teams, with network management treated as an ongoing operational function, not one-time setup.</li>
+          <li><strong>Data readiness</strong>: Consistent naming, complete equipment records, and structured integration must be planned at design stage — retroactively cleaning data in operating buildings is far costlier.</li>
+        </ul>
+      </div>
+      <div class="news-source">
+        Nguồn / Source:
+        <a href="https://albireoenergy.com/2026/10/15/smart-building-technology-has-matured-now-the-focus-is-on-putting-it-to-work/" target="_blank" rel="noopener">Albiro Energy – Smart Building Technology Maturation (Oct 15, 2026)</a>
+      </div>
+    </div>
+    <div class="why-box">
+      <div class="why-box-label">
+        <span class="vi-content">📌 Tầm Quan Trọng với Dự Án Việt Nam</span>
+        <span class="en-content">📌 Relevance to Vietnam Projects</span>
+      </div>
+      <p class="vi-content">Đây là quan sát rất thực tiễn cho thị trường Việt Nam: nhiều dự án ELV/BMS được thiết kế tốt nhưng vận hành kém hiệu quả do thiếu nhân lực kỹ thuật số và dữ liệu không chuẩn. Tư vấn ELV cần chuyển dịch sang mô hình cung cấp cả <em>thiết kế hệ thống</em> lẫn <em>tư vấn vận hành</em> – bao gồm lập sơ đồ phân công IT/OT, chuẩn hoá đặt tên thiết bị ngay từ bản vẽ thiết kế và đào tạo đội vận hành.</p>
+      <p class="en-content">A highly practical insight for the Vietnamese market: many ELV/BMS projects are well-designed but poorly operated due to digital workforce gaps and poor data quality. ELV consultants should shift toward providing both <em>system design</em> and <em>operational advisory</em> — including IT/OT responsibility mapping, device naming standards from design drawings, and operator training.</p>
+    </div>
+  </div>
+
+  <!-- NEWS 5: SECUTECH VIETNAM -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="news-number">05</div>
+      <div class="news-meta">
+        <div class="news-tags">
+          <span class="tag">SECUTECH VIETNAM</span>
+          <span class="tag tag-cat">VIETNAM · ASEAN</span>
+          <span class="tag tag-cat">EVENT · SECURITY</span>
+        </div>
+        <div class="news-title-vi vi-content">Secutech Vietnam 2026 Trở Lại Hà Nội: 480 Thương Hiệu, 17.000 Khách Chuyên Ngành</div>
+        <div class="news-title-en en-content">Secutech Vietnam 2026 Returns to Hanoi: 480 Brands, 17,000 Trade Visitors</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p><strong>Secutech Vietnam 2026</strong> diễn ra từ ngày <strong>9–12 tháng 9, 2026</strong> tại Cung Hữu Nghị Văn Hoá, Hà Nội – triển lãm an ninh, phòng cháy và toà nhà thông minh lớn nhất miền Bắc Việt Nam.</p>
+        <ul>
+          <li><strong>Quy mô</strong>: 480 thương hiệu, 13.000m², hơn 17.000 khách chuyên ngành.</li>
+          <li><strong>Chủ đề trọng tâm</strong>: AI, IoT và ICT cho toà nhà thông minh; giám sát video AI; kiểm soát ra vào; tự động hoá toà nhà; hệ thống an toàn kết nối.</li>
+          <li><strong>Khu triển lãm chuyên ngành</strong>: Building Security & Access Management; ICT & Building Infrastructure; BMS/IoT/Năng lượng.</li>
+          <li><strong>Sự kiện song song</strong>: Fire & Safety Vietnam; SMABuilding (tự động hoá toà nhà và hiệu quả năng lượng).</li>
+          <li><strong>Gian quốc tế</strong>: Nhật Bản, Hàn Quốc, Singapore.</li>
+          <li>Secutech Vietnam 2027 dự kiến tổ chức tại TP.HCM, ngày 18–20/8/2027.</li>
+        </ul>
+      </div>
+      <div class="en-content">
+        <p><strong>Secutech Vietnam 2026</strong> took place <strong>September 9–12, 2026</strong> at the Friendship Cultural Palace, Hanoi — the largest security, fire safety, and smart building exhibition in northern Vietnam.</p>
+        <ul>
+          <li><strong>Scale</strong>: 480 brands, 13,000m², over 17,000 trade visitors.</li>
+          <li><strong>Focus themes</strong>: AI, IoT, and ICT for smart buildings; AI video surveillance; access control; building automation; connected safety systems.</li>
+          <li><strong>Specialist zones</strong>: Building Security & Access Management; ICT & Building Infrastructure; BMS/IoT/Energy.</li>
+          <li><strong>Concurrent shows</strong>: Fire & Safety Vietnam; SMABuilding (building automation and energy efficiency).</li>
+          <li><strong>International pavilions</strong>: Japan, Korea, Singapore.</li>
+          <li>Secutech Vietnam 2027 planned in Ho Chi Minh City, August 18–20, 2027.</li>
+        </ul>
+      </div>
+      <div class="news-source">
+        Nguồn / Source:
+        <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/press/press-releases/2026/STVN26_PR1.html" target="_blank" rel="noopener">Secutech Vietnam 2026 – Official Press Release</a>
+        &nbsp;|&nbsp;
+        <a href="https://www.snewsonline.com/en/secutech-vietnam-2026-driving-innovation-safety-smart-infrastructure/" target="_blank" rel="noopener">Security News Online</a>
+      </div>
+    </div>
+    <div class="why-box">
+      <div class="why-box-label">
+        <span class="vi-content">📌 Tầm Quan Trọng với Dự Án Việt Nam</span>
+        <span class="en-content">📌 Relevance to Vietnam Projects</span>
+      </div>
+      <p class="vi-content">Secutech Vietnam là cầu nối trực tiếp giữa nhà thiết kế ELV Việt Nam và các nhà cung cấp toàn cầu – đặc biệt với các thương hiệu chưa có văn phòng đại diện chính thức tại Việt Nam. Các chủ đề nổi bật năm 2026 (AI surveillance, BMS tích hợp, hệ thống PCCC thông minh) phản ánh đúng hướng phát triển của thị trường xây dựng Việt Nam. Cần đánh dấu lịch Secutech 2027 tại TP.HCM để lên kế hoạch tham quan/tham dự sớm.</p>
+      <p class="en-content">Secutech Vietnam is the key bridge between Vietnamese ELV designers and global vendors — especially brands without official local representation. The 2026 themes (AI surveillance, integrated BMS, intelligent fire systems) directly reflect Vietnamese construction market trends. Mark Secutech 2027 in HCMC on the calendar for early planning.</p>
+    </div>
+  </div>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <h3>
+      <span class="vi-content">Cần Tư Vấn ELV/ICT/AV Cho Dự Án Của Bạn?</span>
+      <span class="en-content">Need ELV/ICT/AV Consulting for Your Project?</span>
+    </h3>
+    <p class="vi-content">Paul Le là ELV/ICT/AV Design Director tại Duy Hoa Phat Corporation & HBP Project Management. Tư vấn thiết kế, lập RFP, BoM và đặc tả kỹ thuật cho các hệ thống nhược điện, ICT và audio-visual.</p>
+    <p class="en-content">Paul Le is ELV/ICT/AV Design Director at Duy Hoa Phat Corporation & HBP Project Management. Consulting for design, RFP preparation, BoM, and technical specifications for ELV, ICT, and audio-visual systems.</p>
+    <a href="/index.html#contact" class="cta-btn">
+      <span class="vi-content">Liên Hệ Tư Vấn →</span>
+      <span class="en-content">Get in Touch →</span>
+    </a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <p>© 2026 Paul Le Consultant · ELV/ICT/AV Design Director · Duy Hoa Phat Corporation & HBP Project Management</p>
+    <div>
+      <a href="/index.html">Home</a>
+      <a href="/blog/index.html">Blog</a>
+      <a href="/index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setLang(l) {
+  document.querySelectorAll('.vi-content').forEach(e => e.style.display = l === 'vi' ? '' : 'none');
+  document.querySelectorAll('.en-content').forEach(e => e.style.display = l === 'en' ? '' : 'none');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+  try { localStorage.setItem('lang', l); } catch(e) {}
+}
+document.addEventListener('DOMContentLoaded', () => {
+  let saved;
+  try { saved = localStorage.getItem('lang'); } catch(e) {}
+  setLang(saved || 'vi');
+});
+</script>
+</body>
+</html>
