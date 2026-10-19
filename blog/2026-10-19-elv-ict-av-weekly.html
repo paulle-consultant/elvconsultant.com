@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly 19 Tháng 10, 2026 | Paul Le Consultant</title>
+  <meta name="description" content="HPE Juniper+Aruba AI Mạng Tự Lái · Genetec SaaS Direct-Cloud Axis/Bosch/Hanwha · Secutech Vietnam 2026 Hà Nội · Biamp AV 2026 · Thị trường Camera AI $49 tỷ — Bản tin ELV/ICT/AV tuần song ngữ Việt–Anh.">
+  <meta name="keywords" content="HPE Juniper Aruba AI networking, Genetec SaaS direct cloud, Secutech Vietnam 2026, Biamp AV, camera AI surveillance, ELV ICT AV news Vietnam">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-10-19-elv-ict-av-weekly.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+      background:radial-gradient(900px 600px at -10% 20%,rgba(0,200,224,.06),transparent 60%),
+                 radial-gradient(900px 700px at 110% 70%,rgba(27,42,74,.55),transparent 60%)}
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.95);
+      border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);
+      padding:0 clamp(1rem,4vw,4rem);display:flex;align-items:center;
+      justify-content:space-between;height:68px}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-text{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--white);letter-spacing:1px}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px}
+    .nav-links{display:flex;gap:clamp(1rem,2vw,2rem);list-style:none}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:.5px;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:8px 20px;
+      border-radius:999px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;
+      letter-spacing:.5px;transition:all .2s;text-decoration:none}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg)}
+    @media(max-width:768px){.nav-links{display:none}}
+
+    /* LANG BAR */
+    .lang-bar{position:relative;z-index:2;background:rgba(16,30,48,.85);
+      border-bottom:1px solid var(--card-border);padding:.6rem clamp(1rem,4vw,4rem);
+      display:flex;align-items:center;gap:.75rem;backdrop-filter:blur(8px)}
+    .lang-bar span{font-size:11px;color:var(--steel);font-family:'Orbitron',monospace;letter-spacing:1px}
+    .lang-btn{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:1.5px;
+      padding:5px 14px;border-radius:4px;border:1px solid var(--card-border);
+      background:transparent;color:var(--silver);cursor:pointer;transition:all .2s}
+    .lang-btn.active,.lang-btn:hover{background:var(--cyan);color:var(--bg);border-color:var(--cyan)}
+
+    /* HERO */
+    .article-hero{position:relative;z-index:1;width:100%;height:clamp(340px,42vw,520px);overflow:hidden}
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.72) saturate(.85)}
+    .article-hero-overlay{position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(7,17,31,.15) 0%,rgba(7,17,31,.35) 45%,rgba(7,17,31,.9) 85%,var(--bg) 100%)}
+    .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:clamp(1.5rem,4vw,3rem) clamp(1rem,4vw,4rem) clamp(1.5rem,3vw,2.5rem)}
+    .hero-eyebrow{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:3px;color:var(--cyan);
+      margin-bottom:.75rem;display:flex;align-items:center;gap:10px}
+    .hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
+    .article-hero h1{font-family:'Orbitron',monospace;font-size:clamp(1.25rem,3vw,2.2rem);font-weight:900;
+      color:var(--white);line-height:1.15;max-width:860px}
+    .hero-meta{margin-top:.75rem;font-size:12px;color:var(--silver);letter-spacing:.5px}
+
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:clamp(2rem,4vw,3.5rem) clamp(1rem,4vw,2rem)}
+
+    /* NEWS ITEM CARD */
+    .news-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;
+      padding:clamp(1.5rem,3vw,2rem);margin-bottom:1.5rem;position:relative;overflow:hidden;
+      transition:border-color .3s,box-shadow .3s}
+    .news-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+      background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity .3s}
+    .news-item:hover{border-color:rgba(0,200,224,.4);box-shadow:0 0 0 1px rgba(0,200,224,.2),0 8px 32px -8px rgba(0,200,224,.25)}
+    .news-item:hover::before{opacity:1}
+
+    .news-num{font-family:'Orbitron',monospace;font-size:11px;letter-spacing:2px;color:var(--steel);
+      margin-bottom:.6rem;display:flex;align-items:center;gap:8px}
+    .news-num::after{content:'';flex:1;height:1px;background:var(--card-border)}
+
+    .news-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.85rem}
+    .tag{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1px;padding:3px 9px;
+      border-radius:3px;border:1px solid rgba(0,200,224,.3);color:var(--cyan);background:var(--cyan-dim)}
+    .tag.primary{background:rgba(0,200,224,.18);border-color:rgba(0,200,224,.5);font-weight:700}
+
+    .news-title{font-family:'Orbitron',monospace;font-size:clamp(14px,1.5vw,17px);font-weight:700;
+      color:var(--white);line-height:1.35;margin-bottom:1rem}
+
+    .news-body{font-size:14px;color:var(--silver);line-height:1.8}
+    .news-body p{margin-bottom:.8rem}
+    .news-body strong{color:var(--white)}
+
+    .why-box{background:rgba(0,200,224,.05);border:1px solid rgba(0,200,224,.2);border-radius:6px;
+      padding:1rem 1.25rem;margin-top:1.25rem}
+    .why-box .why-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
+      color:var(--cyan);margin-bottom:.5rem}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.7}
+
+    .news-src{margin-top:.9rem;font-size:11px;color:var(--steel)}
+    .news-src a{color:var(--steel);text-decoration:none;border-bottom:1px solid transparent;transition:all .2s}
+    .news-src a:hover{color:var(--cyan);border-color:rgba(0,200,224,.4)}
+
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,rgba(0,200,224,.08),rgba(27,42,74,.4));
+      border:1px solid rgba(0,200,224,.25);border-radius:10px;padding:2rem;
+      text-align:center;margin:2rem 0}
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:clamp(14px,2vw,18px);color:var(--white);margin-bottom:.75rem}
+    .cta-box p{font-size:14px;color:var(--silver);margin-bottom:1.25rem;line-height:1.7}
+    .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);font-family:'Orbitron',monospace;
+      font-size:11px;font-weight:700;letter-spacing:2px;padding:12px 28px;border-radius:999px;
+      text-decoration:none;transition:all .3s}
+    .cta-btn:hover{background:var(--white);transform:translateY(-2px)}
+
+    /* FOOTER */
+    footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
+      background:var(--card-bg);padding:clamp(2rem,4vw,3.5rem) clamp(1rem,4vw,4rem) 2rem;margin-top:3rem}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;align-items:start}
+    .footer-brand p{font-size:12px;color:var(--steel);line-height:1.7;margin-top:.75rem}
+    .footer-col h5{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;color:var(--cyan);margin-bottom:1rem}
+    .footer-col a{display:block;font-size:13px;color:var(--steel);text-decoration:none;margin-bottom:.4rem;transition:color .2s}
+    .footer-col a:hover{color:var(--silver)}
+    .footer-bottom{max-width:1100px;margin:1.5rem auto 0;padding-top:1.5rem;
+      border-top:1px solid var(--card-border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+    .footer-copy{font-size:12px;color:var(--steel)}
+    .footer-domain{font-family:'Orbitron',monospace;font-size:12px;color:var(--cyan)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div>
+      <span class="logo-text">PAUL LE CONSULTANT</span>
+      <span class="logo-sub">AV · ICT · ELV CONSULTANT</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Trang chủ</a></li>
+    <li><a href="/#services">Dịch vụ</a></li>
+    <li><a href="/#portfolio">Dự án</a></li>
+    <li><a href="/blog/" class="active">Tin tức</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư vấn</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span>NGÔN NGỮ / LANGUAGE:</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">🇻🇳 TIẾNG VIỆT</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇺🇸 ENGLISH</button>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1683322499436-f4383dd59f5a?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="ELV ICT AV Weekly Newsletter 19 October 2026 — Paul Le Consultant">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="hero-eyebrow">BẢN TIN TUẦN · WEEKLY NEWSLETTER</div>
+    <h1 class="vi-content">HPE Juniper+Aruba AI · Genetec SaaS Cloud · Secutech Hà Nội · Biamp AV · Camera AI $49 Tỷ</h1>
+    <h1 class="en-content" style="display:none">HPE Juniper+Aruba AI Network · Genetec SaaS Direct-Cloud · Secutech Hanoi · Biamp AV 2026 · AI Surveillance $49B</h1>
+    <div class="hero-meta">
+      <span class="vi-content">THỨ HAI · 19 THÁNG 10, 2026 — TUẦN 43 — 5 TIN NỔI BẬT</span>
+      <span class="en-content" style="display:none">MONDAY · 19 OCTOBER 2026 — WEEK 43 — 5 INDUSTRY HIGHLIGHTS</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- ══ TIN 1: HPE JUNIPER + ARUBA ══ -->
+  <div class="news-item">
+    <div class="news-num">01 / 05</div>
+    <div class="news-tags">
+      <span class="tag primary">HPE JUNIPER</span>
+      <span class="tag">ARUBA</span>
+      <span class="tag">ICT NETWORKING</span>
+      <span class="tag">AI AUTOMATION</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title">HPE ra mắt mạng campus tự lái AI: Tích hợp Juniper Mist + Aruba mang lại nền tảng AIOps thống nhất edge-to-cloud</div>
+      <div class="news-body">
+        <p>HPE (Hewlett Packard Enterprise) đã chính thức tung ra sản phẩm tích hợp đầu tiên kết hợp hai nền tảng mạng hàng đầu: <strong>Juniper Mist AI</strong> và <strong>Aruba Central</strong>. Giải pháp mới — được giới thiệu tại HPE Discover 2026 — cung cấp một "bộ não mạng AI thống nhất" duy nhất, quản lý toàn bộ edge, campus, data center và AI factory từ một giao diện.</p>
+        <p>Điểm nổi bật: mạng "self-driving" (tự lái) sử dụng AI để tự động phát hiện, chẩn đoán và khắc phục sự cố mà không cần can thiệp thủ công. Công nghệ này kết hợp <strong>Wi-Fi AI của Aruba</strong> với <strong>Mist AI intent-based networking của Juniper</strong>, tạo ra một platform AIOps hoàn chỉnh từ edge đến cloud.</p>
+        <p>Hãng khẳng định đây là bước đi quan trọng trong cạnh tranh trực tiếp với Cisco, đặc biệt trong phân khúc campus AI networking và enterprise Wi-Fi 7.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT VIỆT NAM</div>
+        <p>Tích hợp Juniper+Aruba rất quan trọng cho các dự án campus lớn tại Việt Nam (bệnh viện, trường đại học, khu công nghiệp, tòa nhà văn phòng). Nền tảng AI AIOps thống nhất giúp giảm thiểu nhu cầu nhân sự IT tại chỗ — lợi thế lớn tại thị trường thiếu kỹ sư mạng. Khi thiết kế hệ thống ICT cho dự án mới, HPE Aruba+Juniper là lựa chọn cạnh tranh mạnh với Cisco Catalyst.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <div class="news-title">HPE Launches Self-Driving AI Campus Network: Juniper Mist + Aruba Integration Creates Unified AIOps Platform Edge-to-Cloud</div>
+      <div class="news-body">
+        <p>HPE officially launched its first integrated product combining two leading networking platforms: <strong>Juniper Mist AI</strong> and <strong>Aruba Central</strong>. The new solution — unveiled at HPE Discover 2026 — delivers a single "unified AI network brain" managing edge, campus, data center, and AI factory from one interface.</p>
+        <p>The key feature is a "self-driving" network using AI to automatically detect, diagnose, and resolve issues without manual intervention. This combines <strong>Aruba's Wi-Fi AI</strong> with <strong>Juniper's Mist AI intent-based networking</strong>, creating a complete AIOps platform from edge to cloud.</p>
+        <p>HPE positions this as a direct challenge to Cisco, particularly in the campus AI networking and enterprise Wi-Fi 7 segments.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">⚡ RELEVANCE TO ELV/ICT PROJECTS IN VIETNAM</div>
+        <p>The Juniper+Aruba integration is highly relevant for large campus projects in Vietnam (hospitals, universities, industrial parks, office buildings). The unified AI AIOps platform reduces on-site IT staffing needs — a significant advantage in Vietnam's market where network engineers are scarce. When designing ICT systems for new projects, HPE Aruba+Juniper is a strong competitive choice against Cisco Catalyst.</p>
+      </div>
+    </div>
+
+    <div class="news-src">
+      Nguồn / Source:
+      <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/06/hpe-expands-self-driving-networks-across-edge-campus-data-center-and-ai-factories.html" target="_blank" rel="noopener">HPE Newsroom</a> ·
+      <a href="https://www.theregister.com/networks/2026/05/08/hpe-drops-first-juniper-x-aruba-collab-self-driving-wi-fi/5235463" target="_blank" rel="noopener">The Register</a> ·
+      <a href="https://siliconangle.com/2025/12/03/aruba-meets-juniper-mist-discover-hpe-unveils-unified-ai-native-network-brain/" target="_blank" rel="noopener">SiliconAngle</a>
+    </div>
+  </div>
+
+  <!-- ══ TIN 2: GENETEC SAAS DIRECT-TO-CLOUD ══ -->
+  <div class="news-item">
+    <div class="news-num">02 / 05</div>
+    <div class="news-tags">
+      <span class="tag primary">GENETEC</span>
+      <span class="tag">AXIS</span>
+      <span class="tag">BOSCH</span>
+      <span class="tag">HANWHA</span>
+      <span class="tag">SECURITY</span>
+      <span class="tag">VMS CLOUD</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title">Genetec Security Center SaaS hỗ trợ kết nối trực tiếp lên cloud cho camera Axis, Bosch, Hanwha &amp; i-PRO — loại bỏ server VMS tại chỗ</div>
+      <div class="news-body">
+        <p><strong>Genetec</strong> đã thông báo nền tảng <strong>Security Center SaaS</strong> của mình giờ đây hỗ trợ thiết bị "direct-to-cloud" từ các thương hiệu lớn: <strong>Axis Communications, Bosch Security Systems, Hanwha Vision</strong> và <strong>i-PRO</strong>. Đây là sự kiện hợp tác lớn nhất trong ngành VMS cloud cho đến nay.</p>
+        <p>Camera từ 4 hãng trên giờ có thể kết nối trực tiếp lên Genetec Security Center SaaS mà không cần Genetec Archiver (server VMS tại chỗ). Ảnh hưởng: giảm chi phí phần cứng, đơn giản hóa triển khai, và mang lại mô hình <strong>security-as-a-service</strong> thực sự cho dự án vừa và lớn.</p>
+        <p>Đồng thời, <strong>Bosch</strong> cũng tích hợp tính năng <strong>Visual Intelligence</strong> trực tiếp vào nền tảng — cho phép phân tích hành vi, nhận diện phương tiện và phát hiện đám đông thông qua AI ngay trên nền tảng SaaS.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN SECURITY VIỆT NAM</div>
+        <p>Đây là chuyển dịch lớn trong ngành: VMS cloud thực sự đã đến. Các dự án tòa nhà thương mại, bệnh viện, trường học tại Việt Nam có thể chỉ định giải pháp camera AI kết hợp Genetec SaaS thay vì đầu tư server on-premise tốn kém. Khi tư vấn thiết kế hệ thống camera giám sát mới, phương án cloud-native này cần được xem xét song song với giải pháp on-premise truyền thống.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <div class="news-title">Genetec Security Center SaaS Supports Direct-to-Cloud for Axis, Bosch, Hanwha &amp; i-PRO Cameras — Eliminating On-Premise VMS Servers</div>
+      <div class="news-body">
+        <p><strong>Genetec</strong> announced that its <strong>Security Center SaaS</strong> platform now supports "direct-to-cloud" devices from major brands: <strong>Axis Communications, Bosch Security Systems, Hanwha Vision</strong>, and <strong>i-PRO</strong>. This is the largest cloud VMS collaboration in the industry to date.</p>
+        <p>Cameras from these 4 brands can now connect directly to Genetec Security Center SaaS without needing a Genetec Archiver (on-premise VMS server). The impact: reduced hardware costs, simplified deployment, and a true <strong>security-as-a-service</strong> model for medium and large projects.</p>
+        <p>Additionally, <strong>Bosch</strong> has integrated its <strong>Visual Intelligence</strong> capabilities directly into the platform — enabling behavior analysis, vehicle recognition, and crowd detection through AI on the SaaS platform.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">⚡ RELEVANCE TO SECURITY PROJECTS IN VIETNAM</div>
+        <p>This is a major industry shift: true cloud VMS has arrived. Commercial buildings, hospitals, and schools in Vietnam can now specify AI camera solutions combined with Genetec SaaS instead of investing in expensive on-premise servers. When consulting on new surveillance system designs, this cloud-native approach should be evaluated alongside traditional on-premise solutions.</p>
+      </div>
+    </div>
+
+    <div class="news-src">
+      Nguồn / Source:
+      <a href="https://www.sdmmag.com/articles/103060-genetec-saas-announces-support-for-axis-bosch-hanwha-and-i-pro-devices" target="_blank" rel="noopener">SDM Magazine</a> ·
+      <a href="https://www.sdmmag.com/articles/103827-bosch-enables-direct-to-cloud-and-enhances-visual-intelligence-for-genetec-security-center-saas" target="_blank" rel="noopener">SDM — Bosch Visual Intelligence</a> ·
+      <a href="https://www.securityinfowatch.com/isc-west/press-release/55017426/genetec-genetec-security-center-saas-connects-to-direct-to-cloud-devices-maximizes-existing-access-control-and-camera-investments" target="_blank" rel="noopener">Security Info Watch</a>
+    </div>
+  </div>
+
+  <!-- ══ TIN 3: SECUTECH VIETNAM 2026 HÀ NỘI ══ -->
+  <div class="news-item">
+    <div class="news-num">03 / 05</div>
+    <div class="news-tags">
+      <span class="tag primary">SECUTECH VN</span>
+      <span class="tag">VIETNAM</span>
+      <span class="tag">AI SECURITY</span>
+      <span class="tag">SMART BUILDING</span>
+      <span class="tag">FIRE SAFETY</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title">Secutech Vietnam 2026 tại Hà Nội: Giải pháp AI an ninh tích hợp, hạ tầng thông minh và an toàn PCCC dẫn đầu thị trường Đông Nam Á</div>
+      <div class="news-body">
+        <p><strong>Secutech Vietnam 2026</strong> đã trở lại Hà Nội trong bối cảnh nhu cầu về an ninh thông minh và hạ tầng tích hợp tăng vọt tại Việt Nam. Triển lãm năm nay tập trung vào 3 xu hướng chính: <strong>giải pháp AI an ninh tích hợp</strong>, <strong>hệ thống PCCC thế hệ mới</strong> và <strong>cơ sở hạ tầng thông minh (ELV/ICT/AV)</strong>.</p>
+        <p>Các công ty tham gia từ Đài Loan, Hàn Quốc, Nhật Bản và Việt Nam đã trình diễn các giải pháp camera AI với nhận dạng khuôn mặt, kiểm soát ra vào tích hợp, hệ thống báo cháy kết nối đám mây, cùng với hạ tầng mạng dành riêng cho tòa nhà thông minh. Triển lãm thu hút hàng nghìn chuyên gia đến từ các công ty xây dựng, M&amp;E và ELV tại Việt Nam.</p>
+        <p>Đáng chú ý: <strong>nhu cầu từ bệnh viện, trường học, khu công nghiệp</strong> và tòa nhà văn phòng tại các tỉnh ngoài Hà Nội và TP.HCM đang tăng mạnh, mở ra cơ hội lớn cho các chuyên gia tư vấn ELV tại Việt Nam.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">⚡ TẦM QUAN TRỌNG VỚI THỊ TRƯỜNG ELV VIỆT NAM</div>
+        <p>Secutech Vietnam là triển lãm quan trọng nhất trong năm cho ngành ELV/ICT/AV tại Việt Nam. Thông tin từ triển lãm phản ánh sản phẩm thực tế có thể mua được tại thị trường Việt Nam, không phải chỉ là xu hướng toàn cầu. Đây là cơ hội để cập nhật spec cho các dự án đang thiết kế và gặp gỡ nhà phân phối mới.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <div class="news-title">Secutech Vietnam 2026 in Hanoi: AI-Integrated Security, Smart Infrastructure &amp; Fire Safety Lead Southeast Asian Market Trends</div>
+      <div class="news-body">
+        <p><strong>Secutech Vietnam 2026</strong> returned to Hanoi amid surging demand for smart security and integrated infrastructure in Vietnam. This year's exhibition focused on 3 key trends: <strong>AI-integrated security solutions</strong>, <strong>next-gen fire safety systems</strong>, and <strong>smart infrastructure (ELV/ICT/AV)</strong>.</p>
+        <p>Companies from Taiwan, South Korea, Japan, and Vietnam demonstrated AI camera solutions with facial recognition, integrated access control, cloud-connected fire alarm systems, and network infrastructure for smart buildings. The exhibition attracted thousands of professionals from construction, M&amp;E, and ELV companies across Vietnam.</p>
+        <p>Notably, <strong>demand from hospitals, schools, industrial parks</strong> and office buildings in provinces beyond Hanoi and Ho Chi Minh City is growing strongly, opening major opportunities for ELV consultants in Vietnam.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">⚡ RELEVANCE TO VIETNAM ELV MARKET</div>
+        <p>Secutech Vietnam is the most important annual exhibition for the ELV/ICT/AV industry in Vietnam. Information from the show reflects products actually available in the Vietnamese market, not just global trends. It's an opportunity to update specifications for projects currently in design and to meet new distributors.</p>
+      </div>
+    </div>
+
+    <div class="news-src">
+      Nguồn / Source:
+      <a href="https://www.securityinformed.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" rel="noopener">Security Informed — AI Solutions at Secutech VN 2026</a> ·
+      <a href="https://securitymiddleeastmag.com/digital-transformation/secutech-vietnam-2026-returns-to-hanoi-amid-surging-demand-for-smart-safety-and-infrastructure/" target="_blank" rel="noopener">Security Middle East Magazine</a> ·
+      <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/press/press-releases/2026/STVN26_PR2.html" target="_blank" rel="noopener">Secutech Vietnam Official</a>
+    </div>
+  </div>
+
+  <!-- ══ TIN 4: BIAMP AV 2026 ══ -->
+  <div class="news-item">
+    <div class="news-num">04 / 05</div>
+    <div class="news-tags">
+      <span class="tag primary">BIAMP</span>
+      <span class="tag">AV</span>
+      <span class="tag">CONFERENCING</span>
+      <span class="tag">50 YEARS</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title">Biamp kỷ niệm 50 năm ra mắt loạt giải pháp AV mới 2026: Tập trung vào phòng hội nghị AI, âm thanh đa vùng và hội nhập UC</div>
+      <div class="news-body">
+        <p><strong>Biamp Systems</strong> — nhà sản xuất thiết bị âm thanh/hội nghị chuyên nghiệp hàng đầu thế giới — đánh dấu <strong>kỷ niệm 50 năm thành lập</strong> bằng loạt thông báo sản phẩm và giải pháp mới trong năm 2026. Biamp tập trung vào ba lĩnh vực:</p>
+        <p><strong>1. Phòng hội nghị AI-native:</strong> Tích hợp xử lý âm thanh AI (beam-forming, noise cancellation, acoustic echo cancellation) trực tiếp vào firmware, không cần DSP riêng lẻ. <strong>2. Âm thanh đa vùng (Multi-zone audio):</strong> Giải pháp cho tòa nhà văn phòng, bệnh viện, trường học với phân vùng linh hoạt và điều khiển qua app. <strong>3. UC Integration:</strong> Hỗ trợ native cho Microsoft Teams, Zoom và Google Meet — quan trọng cho các dự án phòng họp hybrid tại Việt Nam.</p>
+        <p>Sản phẩm mới từ Biamp 2026 được tối ưu cho <strong>phòng họp từ nhỏ (huddle room) đến hội trường lớn</strong>, với khả năng kết nối IP và quản lý tập trung qua nền tảng Biamp Cloud.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN AV VIỆT NAM</div>
+        <p>Biamp là thương hiệu premium trong các dự án AV chuyên nghiệp tại Việt Nam (hội trường, phòng họp cấp cao, giảng đường đại học, tòa nhà văn phòng A+). Các tính năng AI mới giúp giảm chi phí tư vấn âm học và cài đặt phức tạp. Đặc biệt trong bối cảnh làm việc hybrid tại VN, giải pháp UC-native của Biamp rất phù hợp cho các dự án văn phòng mới.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <div class="news-title">Biamp Marks 50 Years with New 2026 AV Solutions: Focus on AI Conference Rooms, Multi-Zone Audio &amp; UC Integration</div>
+      <div class="news-body">
+        <p><strong>Biamp Systems</strong> — a world-leading professional audio/conferencing equipment manufacturer — marked its <strong>50th anniversary</strong> with a series of new product and solution announcements in 2026. Biamp focuses on three areas:</p>
+        <p><strong>1. AI-native conference rooms:</strong> AI audio processing (beam-forming, noise cancellation, acoustic echo cancellation) integrated directly into firmware — no separate DSP needed. <strong>2. Multi-zone audio:</strong> Solutions for office buildings, hospitals, schools with flexible zoning and app-based control. <strong>3. UC Integration:</strong> Native support for Microsoft Teams, Zoom, and Google Meet — critical for hybrid meeting room projects in Vietnam.</p>
+        <p>New 2026 Biamp products are optimized for <strong>rooms from small huddle spaces to large auditoriums</strong>, with IP connectivity and centralized management via the Biamp Cloud platform.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">⚡ RELEVANCE TO AV PROJECTS IN VIETNAM</div>
+        <p>Biamp is a premium brand for professional AV projects in Vietnam (auditoriums, executive boardrooms, university lecture halls, Class-A office buildings). New AI features reduce acoustic consulting costs and complex setup requirements. Especially given the hybrid work trend in Vietnam, Biamp's UC-native solutions are well-suited for new office projects.</p>
+      </div>
+    </div>
+
+    <div class="news-src">
+      Nguồn / Source:
+      <a href="https://www.biamp.com/latest-announcements/2026/june/prod/new-av-solutions-2026" target="_blank" rel="noopener">Biamp New AV Solutions 2026</a> ·
+      <a href="https://www.biamp.com/company/newsletters/2026/june" target="_blank" rel="noopener">Biamp 50 Years Newsletter June 2026</a>
+    </div>
+  </div>
+
+  <!-- ══ TIN 5: AI SURVEILLANCE MARKET ══ -->
+  <div class="news-item">
+    <div class="news-num">05 / 05</div>
+    <div class="news-tags">
+      <span class="tag primary">AI SURVEILLANCE</span>
+      <span class="tag">HIKVISION</span>
+      <span class="tag">DAHUA</span>
+      <span class="tag">MARKET TREND</span>
+      <span class="tag">22.56% CAGR</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title">Thị trường camera giám sát AI toàn cầu sẽ đạt 49 tỷ USD vào năm 2035 — tốc độ tăng trưởng 22.56%/năm, dẫn đầu bởi Hikvision, Dahua và Axis</div>
+      <div class="news-body">
+        <p>Theo báo cáo thị trường mới nhất, <strong>thị trường AI trong lĩnh vực giám sát video toàn cầu</strong> dự kiến đạt <strong>49.02 tỷ USD vào năm 2035</strong>, tăng từ ~10 tỷ USD hiện tại với CAGR 22.56% — một trong những tốc độ tăng trưởng cao nhất trong ngành công nghệ.</p>
+        <p>Động lực tăng trưởng chính bao gồm: <strong>yêu cầu an ninh thành phố thông minh</strong> (smart city surveillance), <strong>AI phân tích hành vi</strong> (behavior analytics) tích hợp trong camera, <strong>video analytics trên edge</strong> giảm băng thông, và <strong>nhu cầu từ châu Á-Thái Bình Dương</strong> (đặc biệt Đông Nam Á) chiếm tỷ trọng ngày càng lớn.</p>
+        <p>Các hãng dẫn đầu: <strong>Hikvision, Dahua Technology, Axis Communications, Bosch Security, Hanwha Vision, i-PRO, Avigilon (Motorola)</strong>. Xu hướng chuyển dịch sang camera AI edge-computing với chip NPU tích hợp đang thay thế camera IP truyền thống.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">⚡ TẦM QUAN TRỌNG VỚI TƯ VẤN ELV VIỆT NAM</div>
+        <p>Với tốc độ tăng trưởng 22.56%/năm, thị trường camera AI tại Việt Nam sẽ tăng tốc mạnh trong 5–10 năm tới. Đây là tín hiệu rõ ràng để điều chỉnh specification: ưu tiên camera AI edge-processing thay vì camera IP thông thường, ngay cả cho các dự án tầm trung. Chi phí camera AI đang giảm nhanh trong khi tính năng tăng vọt — điều này thay đổi cách chúng ta thiết kế hệ thống CCTV ngày nay.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <div class="news-title">Global AI Video Surveillance Market to Reach $49 Billion by 2035 — Growing at 22.56% CAGR, Led by Hikvision, Dahua &amp; Axis</div>
+      <div class="news-body">
+        <p>According to the latest market report, the <strong>global AI in video surveillance market</strong> is projected to reach <strong>$49.02 billion by 2035</strong>, growing from ~$10 billion currently at a CAGR of 22.56% — one of the highest growth rates in the technology industry.</p>
+        <p>Key growth drivers include: <strong>smart city surveillance requirements</strong>, <strong>behavior analytics AI</strong> integrated in cameras, <strong>edge video analytics</strong> reducing bandwidth demands, and <strong>Asia-Pacific demand</strong> (particularly Southeast Asia) taking an increasingly large share.</p>
+        <p>Market leaders: <strong>Hikvision, Dahua Technology, Axis Communications, Bosch Security, Hanwha Vision, i-PRO, Avigilon (Motorola)</strong>. The shift toward edge-computing AI cameras with integrated NPU chips is replacing traditional IP cameras.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">⚡ RELEVANCE TO ELV CONSULTANTS IN VIETNAM</div>
+        <p>With 22.56% annual growth, Vietnam's AI camera market will accelerate strongly over the next 5–10 years. This is a clear signal to adjust specifications: prioritize AI edge-processing cameras over conventional IP cameras, even for mid-range projects. AI camera costs are dropping rapidly while features surge — this changes how we design CCTV systems today.</p>
+      </div>
+    </div>
+
+    <div class="news-src">
+      Nguồn / Source:
+      <a href="https://openpr.com/news/4663885/ai-in-video-surveillance-market-to-reach-usd-49-02-billion" target="_blank" rel="noopener">OpenPR — AI Video Surveillance Market Report</a> ·
+      <a href="https://www.forasoft.com/blog/article/ai-powered-ip-cameras-trends" target="_blank" rel="noopener">Best AI IP Cameras 2026 — Fora Soft</a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <div class="vi-content">
+      <h3>CẦN TƯ VẤN THIẾT KẾ ELV / ICT / AV?</h3>
+      <p>Paul Le — ELV/ICT/AV Design Director với kinh nghiệm thiết kế hệ thống cho bệnh viện, trường học, tòa nhà văn phòng và khu công nghiệp tại Việt Nam. Liên hệ để được tư vấn miễn phí về specification và lựa chọn công nghệ phù hợp dự án của bạn.</p>
+      <a href="/#contact" class="cta-btn">LIÊN HỆ TƯ VẤN NGAY →</a>
+    </div>
+    <div class="en-content" style="display:none">
+      <h3>NEED ELV / ICT / AV DESIGN CONSULTING?</h3>
+      <p>Paul Le — ELV/ICT/AV Design Director with experience designing systems for hospitals, schools, office buildings, and industrial parks in Vietnam. Contact us for a free consultation on specifications and technology selection for your project.</p>
+      <a href="/#contact" class="cta-btn">GET FREE CONSULTATION →</a>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" style="text-decoration:none;display:flex;align-items:center;gap:10px;margin-bottom:.75rem">
+        <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text></svg>
+        <span class="logo-text" style="font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:#F0F4F8">PAUL LE</span>
+      </a>
+      <p>ELV/ICT/AV Design Director — Duy Hoa Phat Corporation &amp; HBP Project Management. Chuyên thiết kế hệ thống ELV, ICT, AV cho dự án thương mại, công nghiệp và dân dụng tại Việt Nam.</p>
+    </div>
+    <div class="footer-col">
+      <h5>CHUYÊN MỤC</h5>
+      <a href="/blog/">Tất cả tin tức</a>
+      <a href="/blog/#ict">ICT &amp; Networking</a>
+      <a href="/blog/#security">Security &amp; Surveillance</a>
+      <a href="/blog/#av">Audio Visual</a>
+      <a href="/blog/#bms">BMS &amp; Smart Building</a>
+    </div>
+    <div class="footer-col">
+      <h5>LIÊN KẾT</h5>
+      <a href="/">Trang chủ</a>
+      <a href="/#services">Dịch vụ</a>
+      <a href="/#portfolio">Dự án</a>
+      <a href="/#contact">Liên hệ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Paul Le Consultant. All rights reserved.</span>
+    <span class="footer-domain">ELVCONSULTANT.COM</span>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',function(){
+  var saved='vi';
+  try{saved=localStorage.getItem('lang')||'vi';}catch(e){}
+  setLang(saved);
+});
+</script>
+</body>
+</html>
