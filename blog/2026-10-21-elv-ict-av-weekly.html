@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly — 21 Tháng 10, 2026 | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin tuần ELV/ICT/AV song ngữ Việt–Anh: AXIS D2124-VE Radar AI, HPE Aruba+Juniper AIOps, Secutech Vietnam 2026, Honeywell BMS, QSC Q-SYS Platform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #07111F;
+      --card-bg: #101E30;
+      --card-border: #1E3550;
+      --cyan: #00C8E0;
+      --cyan-dim: rgba(0,200,224,0.10);
+      --cyan-glow: rgba(0,200,224,0.28);
+      --silver: #A0B4C8;
+      --white: #F0F4F8;
+      --steel: #4A6280;
+      --navy: #1B2A4A;
+      --navy-deep: #0D1B35;
+      --grid-line: rgba(0,200,224,0.08);
+      --tag-bg: rgba(0,200,224,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── GRID BACKGROUND ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7,17,31,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--cyan);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--silver);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--cyan); }
+
+    /* ── LANGUAGE BAR ── */
+    .lang-bar {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--navy-deep);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--card-border);
+      color: var(--silver);
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      padding: 4px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .lang-btn:hover, .lang-btn.active {
+      background: var(--cyan-dim);
+      border-color: var(--cyan);
+      color: var(--cyan);
+    }
+
+    /* ── HERO ── */
+    .article-hero {
+      position: relative;
+      width: 100%;
+      height: 420px;
+      overflow: hidden;
+      z-index: 1;
+    }
+    .article-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(0,200,224,0.18) 0%,
+        rgba(7,17,31,0.72) 50%,
+        rgba(7,17,31,0.92) 100%
+      );
+    }
+    .hero-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 32px 32px 32px;
+    }
+    .hero-eyebrow {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--cyan);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .hero-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(18px, 3.5vw, 30px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      text-shadow: 0 2px 24px rgba(0,0,0,0.7);
+      max-width: 780px;
+    }
+    .hero-meta {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--silver);
+    }
+    .hero-meta span { color: var(--cyan); font-weight: 600; }
+
+    /* ── MAIN ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .section-label {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    /* ── NEWS CARDS ── */
+    .news-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color .25s, box-shadow .25s;
+    }
+    .news-item:hover {
+      border-color: rgba(0,200,224,0.4);
+      box-shadow: 0 0 32px rgba(0,200,224,0.08);
+    }
+    .news-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: linear-gradient(180deg, var(--cyan), rgba(0,200,224,0.2));
+      border-radius: 12px 0 0 12px;
+    }
+
+    .item-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .item-number {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--cyan-glow);
+      line-height: 1;
+      min-width: 36px;
+      text-align: center;
+      opacity: 0.5;
+    }
+    .item-meta { flex: 1; }
+    .item-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+    .tag {
+      background: var(--tag-bg);
+      border: 1px solid rgba(0,200,224,0.22);
+      color: var(--cyan);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .tag.secondary {
+      background: rgba(74,98,128,0.2);
+      border-color: rgba(74,98,128,0.4);
+      color: var(--silver);
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.06em;
+    }
+
+    .item-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(13px, 1.8vw, 16px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+    .item-body {
+      color: var(--silver);
+      font-size: 14.5px;
+      line-height: 1.75;
+    }
+    .item-body p { margin-bottom: 10px; }
+    .item-body strong { color: var(--white); }
+
+    .why-box {
+      background: rgba(0,200,224,0.05);
+      border: 1px solid rgba(0,200,224,0.18);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-top: 16px;
+    }
+    .why-label {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--cyan);
+      margin-bottom: 6px;
+    }
+    .why-box p {
+      font-size: 13.5px;
+      color: var(--silver);
+      margin: 0;
+    }
+
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      color: var(--steel);
+      text-decoration: none;
+      margin-top: 12px;
+      transition: color .2s;
+    }
+    .source-link:hover { color: var(--cyan); }
+    .source-link::before { content: '↗ '; }
+
+    /* ── CTA ── */
+    .cta-box {
+      background: linear-gradient(135deg, var(--navy-deep), var(--navy));
+      border: 1px solid var(--cyan-glow);
+      border-radius: 12px;
+      padding: 36px 32px;
+      text-align: center;
+      margin-top: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: 50%; transform: translateX(-50%);
+      width: 300px; height: 120px;
+      background: radial-gradient(ellipse, rgba(0,200,224,0.15) 0%, transparent 70%);
+    }
+    .cta-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .cta-sub {
+      color: var(--silver);
+      font-size: 14px;
+      margin-bottom: 24px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--cyan);
+      color: var(--bg);
+      font-family: 'Orbitron', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      padding: 14px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity .2s, box-shadow .2s;
+    }
+    .cta-btn:hover {
+      opacity: 0.88;
+      box-shadow: 0 0 24px var(--cyan-glow);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      background: var(--navy-deep);
+      border-top: 1px solid var(--card-border);
+      padding: 28px 24px;
+      text-align: center;
+      color: var(--steel);
+      font-size: 13px;
+    }
+    footer a { color: var(--cyan); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { padding: 0 16px; }
+      .hero-content { padding: 20px 16px; }
+      .article-hero { height: 280px; }
+      main { padding: 32px 16px 60px; }
+      .news-item { padding: 20px 16px 18px; }
+      .item-header { gap: 10px; }
+      .cta-box { padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="/" class="nav-brand">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    PAUL LE CONSULTANT
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ── LANGUAGE BAR ── -->
+<div class="lang-bar">
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">🇻🇳 VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 EN</button>
+</div>
+
+<!-- ── HERO ── -->
+<div class="article-hero">
+  <img
+    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1400&h=520&q=85&auto=format&fit=crop"
+    alt="ELV ICT AV Weekly Newsletter — Network Infrastructure Technology"
+    loading="eager"
+  >
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow vi-content">📡 BẢN TIN TUẦN · ELV / ICT / AV</div>
+    <div class="hero-eyebrow en-content" style="display:none;">📡 WEEKLY DIGEST · ELV / ICT / AV</div>
+    <h1 class="hero-title">
+      <span class="vi-content">AXIS Radar AI 40.000m² · HPE Aruba+Juniper · Secutech Vietnam · Honeywell BMS · QSC Q-SYS</span>
+      <span class="en-content" style="display:none;">AXIS AI Radar 40,000m² · HPE Aruba+Juniper · Secutech Vietnam · Honeywell BMS · QSC Q-SYS</span>
+    </h1>
+    <div class="hero-meta">
+      <span>21 Tháng 10 · October 21, 2026</span>
+      &nbsp;·&nbsp; Paul Le Consultant
+    </div>
+  </div>
+</div>
+
+<!-- ── MAIN ── -->
+<main>
+  <div class="section-label">
+    <span class="vi-content">5 TIN NỔI BẬT TUẦN NÀY — ELV / ICT / AV / BMS</span>
+    <span class="en-content" style="display:none;">5 TOP STORIES THIS WEEK — ELV / ICT / AV / BMS</span>
+  </div>
+
+  <!-- ══════════════════════════════ NEWS 1 ══════════════════════════════ -->
+  <article class="news-item">
+    <div class="item-header">
+      <div class="item-number">01</div>
+      <div class="item-meta">
+        <div class="item-tags">
+          <span class="tag">AXIS</span>
+          <span class="tag secondary">SECURITY</span>
+          <span class="tag secondary">AI RADAR</span>
+        </div>
+        <h2 class="item-title">
+          <span class="vi-content">AXIS D2124-VE: Radar AI 360° Phủ 40.000m² Cho Giám Sát Vành Đai</span>
+          <span class="en-content" style="display:none;">AXIS D2124-VE: 360° AI Radar Covering 40,000m² for Perimeter Surveillance</span>
+        </h2>
+      </div>
+    </div>
+    <div class="item-body">
+      <!-- VIETNAMESE -->
+      <div class="vi-content">
+        <p>Axis Communications vừa công bố <strong>AXIS D2124-VE</strong> — sản phẩm radar AI thế hệ mới được giới thiệu tại Security Exhibition & Conference 2026 (Sydney, tháng 9/2026). Đây là camera radar PoE độc lập có khả năng phủ sóng <strong>40.000m²</strong> với tầm phát hiện người lên đến <strong>140m</strong>, hoạt động liên tục 24/7 trong mọi điều kiện thời tiết và ánh sáng.</p>
+        <p>Thiết bị được xây dựng trên nền tảng <strong>ARTPEC-9</strong>, sử dụng AI phân loại vật thể và cơ chế xác nhận "double-knock" (cả radar lẫn camera video đều phải xác nhận mới phát cảnh báo). Tích hợp 4 dải LED động có thể cảnh báo trực quan hoặc tắt hoàn toàn cho giám sát bí mật. Công suất trung bình chỉ <strong>14.8W</strong> — lý tưởng cho hệ thống điện mặt trời hoặc thiết bị di động. Hỗ trợ kết nối PoE out cho camera PTZ AXIS Q6225-LE qua midspan 120W.</p>
+      </div>
+      <!-- ENGLISH -->
+      <div class="en-content" style="display:none;">
+        <p>Axis Communications unveiled the <strong>AXIS D2124-VE</strong> — a next-generation AI radar showcased at Security Exhibition & Conference 2026 (Sydney, September 2026). This standalone PoE radar covers <strong>40,000m²</strong> and detects humans at up to <strong>140m</strong>, operating continuously 24/7 in all weather and lighting conditions.</p>
+        <p>Built on the <strong>ARTPEC-9</strong> platform, it features AI object classification and a "double-knock" verification mechanism (both radar and video must confirm before an alarm fires). Four integrated dynamic LED strips can deter, warn, or be switched off for covert monitoring. Average power draw is just <strong>14.8W</strong> — ideal for solar-powered or mobile surveillance trailers. Supports PoE out to power the AXIS Q6225-LE PTZ camera via a 120W midspan.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM?</div>
+        <div class="why-label en-content" style="display:none;">WHY THIS MATTERS FOR VIETNAM PROJECTS?</div>
+        <p class="vi-content">Với các dự án khu công nghiệp, cảng biển, năng lượng tái tạo (điện mặt trời, điện gió) đang bùng nổ tại Việt Nam, radar AI phủ vùng rộng là giải pháp tối ưu cho an ninh vành đai. Tiêu thụ điện thấp (14.8W) phù hợp với hệ thống độc lập trên điện mặt trời tại các khu vực xa lưới điện. Một thiết bị thay thế nhiều camera thông thường, tiết giảm chi phí cáp và đầu ghi.</p>
+        <p class="en-content" style="display:none;">With industrial zones, seaports, and renewable energy sites (solar, wind) booming in Vietnam, wide-area AI radar is the optimal perimeter security solution. The 14.8W power draw suits off-grid solar installations in remote areas. One device replaces multiple conventional cameras, reducing cable and recorder costs significantly.</p>
+      </div>
+      <a href="https://newsroom.axis.com/en-au/press-release/axis-d2124-ve" target="_blank" class="source-link">newsroom.axis.com — AXIS D2124-VE Press Release</a>
+    </div>
+  </article>
+
+  <!-- ══════════════════════════════ NEWS 2 ══════════════════════════════ -->
+  <article class="news-item">
+    <div class="item-header">
+      <div class="item-number">02</div>
+      <div class="item-meta">
+        <div class="item-tags">
+          <span class="tag">HPE ARUBA</span>
+          <span class="tag secondary">NETWORKING</span>
+          <span class="tag secondary">AI / AIOPS</span>
+        </div>
+        <h2 class="item-title">
+          <span class="vi-content">HPE Thống Nhất Aruba + Juniper: Mạng "Tự Lái" Với AIOps Chung Và Marvis Actions</span>
+          <span class="en-content" style="display:none;">HPE Unifies Aruba + Juniper: "Self-Driving" Networks With Shared AIOps and Marvis Actions</span>
+        </h2>
+      </div>
+    </div>
+    <div class="item-body">
+      <div class="vi-content">
+        <p>Tại <strong>HPE Discover 2026</strong>, HPE công bố kế hoạch hợp nhất toàn bộ danh mục mạng Aruba và Juniper vào một nền tảng AIOps chung, nhắm đến mục tiêu "mạng tự lái" (self-driving networks). Tính năng <strong>Marvis Actions</strong> của Juniper Mist sẽ có mặt trong HPE Aruba Central, đồng thời công nghệ Agentic Mesh của Aruba được triển khai sang Mist.</p>
+        <p>Phần cứng mới ra mắt: switch trung tâm dữ liệu <strong>Juniper QFX5252</strong> làm mát bằng chất lỏng (tổng thông lượng 102.4Tbps), router <strong>Juniper MX301</strong> chuẩn edge inference (1.6Tbps, cổng 400G). CX switch của Aruba nay có thể quản lý qua Mist Portal. OpsRamp và Apstra được tích hợp sâu hơn để hỗ trợ tự động hóa vòng đời cho toàn bộ compute + storage + networking.</p>
+      </div>
+      <div class="en-content" style="display:none;">
+        <p>At <strong>HPE Discover 2026</strong>, HPE announced plans to unify the entire Aruba and Juniper networking portfolio under a common AIOps framework, targeting "self-driving networks." <strong>Marvis Actions</strong> from Juniper Mist will be available in HPE Aruba Central, while Aruba's Agentic Mesh technology extends to Mist.</p>
+        <p>New hardware announced: <strong>Juniper QFX5252</strong> liquid-cooled DC switch (102.4Tbps throughput), <strong>Juniper MX301</strong> edge inference router (1.6Tbps, 400G interfaces). Aruba CX switches can now be managed via the Mist Portal. OpsRamp and Apstra receive deeper integration for full-lifecycle automation across compute, storage, and networking.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM?</div>
+        <div class="why-label en-content" style="display:none;">WHY THIS MATTERS FOR VIETNAM PROJECTS?</div>
+        <p class="vi-content">Nhiều dự án bệnh viện, campus đại học và khu công nghiệp tại Việt Nam đang dùng song song thiết bị Aruba lẫn Juniper. Việc HPE hợp nhất quản lý giúp đơn vị thiết kế ELV/ICT chỉ cần một hệ thống quản lý tập trung (NMS) duy nhất, giảm chi phí vận hành. Marvis Actions với AI chẩn đoán mạng tự động đặc biệt hữu ích cho các tòa nhà thông minh quy mô lớn cần SLA cao.</p>
+        <p class="en-content" style="display:none;">Many hospital, university campus, and industrial zone projects in Vietnam operate both Aruba and Juniper equipment in parallel. HPE's unified management allows ELV/ICT designers to rely on a single NMS, reducing operational costs. AI-powered Marvis Actions for autonomous network diagnostics is especially valuable in large smart buildings requiring high SLA guarantees.</p>
+      </div>
+      <a href="https://itwire.com/business-it-news/networking/hpe-unifies-aruba-and-juniper-aiops-as-it-pushes-toward-self-driving-networks.html" target="_blank" class="source-link">itwire.com — HPE Unifies Aruba and Juniper AIOps</a>
+    </div>
+  </article>
+
+  <!-- ══════════════════════════════ NEWS 3 ══════════════════════════════ -->
+  <article class="news-item">
+    <div class="item-header">
+      <div class="item-number">03</div>
+      <div class="item-meta">
+        <div class="item-tags">
+          <span class="tag">VIETNAM</span>
+          <span class="tag secondary">SECUTECH</span>
+          <span class="tag secondary">SMART BUILDING</span>
+        </div>
+        <h2 class="item-title">
+          <span class="vi-content">Secutech Vietnam 2026 Hà Nội: 480 Thương Hiệu, ICT & Hạ Tầng Tòa Nhà Thông Minh</span>
+          <span class="en-content" style="display:none;">Secutech Vietnam 2026 Hanoi: 480 Brands, ICT & Smart Building Infrastructure</span>
+        </h2>
+      </div>
+    </div>
+    <div class="item-body">
+      <div class="vi-content">
+        <p><strong>Secutech Vietnam 2026</strong> (9–12/9/2026) tổ chức tại Cung Hữu Nghị, Hà Nội — lần đầu tiên triển lãm di chuyển ra thủ đô. Quy mô: <strong>480 thương hiệu</strong> trưng bày trên <strong>13.000m²</strong>, kỳ vọng hơn <strong>17.000 khách thương mại</strong>. Sự kiện có sự bảo trợ của Bộ Công an và Cảnh sát PCCC Việt Nam, trùng dịp kỷ niệm 65 năm Ngày truyền thống Cảnh sát PCCC.</p>
+        <p>5 khu vực trưng bày: <strong>(1) An ninh tòa nhà & Kiểm soát ra vào</strong> — <strong>(2) Phòng ngừa thảm họa & Ứng phó khẩn cấp</strong> — <strong>(3) Giải pháp ICT & Hạ tầng tòa nhà</strong> — <strong>(4) BHLĐ & An toàn công nghiệp</strong> — <strong>(5) Robot & Drone</strong>. Sự kiện kết hợp: Fire & Safety Vietnam, <strong>SMABuilding</strong> (tự động hóa tòa nhà, IoT, tiết kiệm năng lượng), SPS Stage Vietnam (công nghệ sản xuất tiên tiến). Gian hàng quốc tế: Nhật, Hàn, Singapore.</p>
+      </div>
+      <div class="en-content" style="display:none;">
+        <p><strong>Secutech Vietnam 2026</strong> (Sept. 9–12, 2026) was held at Friendship Cultural Palace, Hanoi — the first time the exhibition moved to the capital. Scale: <strong>480 exhibiting brands</strong> across <strong>13,000m²</strong>, with over <strong>17,000 trade visitors</strong> expected. The event was backed by Vietnam's Ministry of Public Security and the Fire & Rescue Police, coinciding with the 65th anniversary of the Fire Prevention and Fighting Police Force.</p>
+        <p>Five exhibition zones: <strong>(1) Building Security & Access Management</strong> — <strong>(2) Disaster Prevention & Emergency Response</strong> — <strong>(3) ICT & Building Infrastructure Solutions</strong> — <strong>(4) PPE & Industrial Safety</strong> — <strong>(5) Robotics & Drones</strong>. Co-located events: Fire & Safety Vietnam, <strong>SMABuilding</strong> (building automation, IoT, energy efficiency), SPS Stage Vietnam. International pavilions from Japan, Korea, and Singapore.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM?</div>
+        <div class="why-label en-content" style="display:none;">WHY THIS MATTERS FOR VIETNAM PROJECTS?</div>
+        <p class="vi-content">Secutech Vietnam là sự kiện B2B quan trọng nhất về ELV/ICT/PCCC tại thị trường Việt Nam. Việc chuyển về Hà Nội phản ánh sự gia tăng nhu cầu đầu tư hạ tầng an ninh và tòa nhà thông minh tại miền Bắc, đặc biệt các dự án KCN Hà Nam, Bắc Ninh, Hải Phòng. Khu ICT & Hạ tầng tòa nhà là điểm giao thương trực tiếp giữa nhà sản xuất quốc tế và các nhà tư vấn/thi công ELV trong nước.</p>
+        <p class="en-content" style="display:none;">Secutech Vietnam is the most important B2B event for ELV/ICT/Fire Safety in the Vietnamese market. The move to Hanoi reflects growing demand for security and smart building investment in northern Vietnam, particularly industrial zones in Ha Nam, Bac Ninh, and Hai Phong. The ICT & Building Infrastructure zone is the key trading point between international manufacturers and local ELV consultants and contractors.</p>
+      </div>
+      <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/press/press-releases/2026/STVN26_PR1.html" target="_blank" class="source-link">secutechvietnam.com — Secutech Vietnam 2026 Press Release</a>
+    </div>
+  </article>
+
+  <!-- ══════════════════════════════ NEWS 4 ══════════════════════════════ -->
+  <article class="news-item">
+    <div class="item-header">
+      <div class="item-number">04</div>
+      <div class="item-meta">
+        <div class="item-tags">
+          <span class="tag">HONEYWELL</span>
+          <span class="tag secondary">BMS</span>
+          <span class="tag secondary">BUILDING AUTOMATION</span>
+        </div>
+        <h2 class="item-title">
+          <span class="vi-content">Honeywell Advance Control: Hệ Thống BMS Thế Hệ Mới Với Machine Learning & An Ninh Mạng Tích Hợp</span>
+          <span class="en-content" style="display:none;">Honeywell Advance Control: Next-Gen BMS With Integrated Machine Learning & Cybersecurity</span>
+        </h2>
+      </div>
+    </div>
+    <div class="item-body">
+      <div class="vi-content">
+        <p>Honeywell Building Management Systems ra mắt <strong>Advance Control for Buildings</strong> — hệ thống BMS thế hệ mới với điểm nổi bật là <strong>tương thích dây cáp hiện hữu</strong> (không cần đi dây mới), giảm đáng kể chi phí nâng cấp cho các tòa nhà đang vận hành. Nền tảng sử dụng machine learning để tự động hóa quyết định quản lý năng lượng, được phát triển với đối tác <strong>NXP Semiconductors</strong> (chip ML) và <strong>Analog Devices</strong> (kết nối kỹ thuật số).</p>
+        <p>Tính năng nổi bật: <strong>An ninh mạng tích hợp sẵn</strong> (built-in cybersecurity), tốc độ mạng nhanh hơn, tích hợp với Honeywell Forge for Buildings. Hướng đến các quản lý tòa nhà đang chịu áp lực về chi phí năng lượng, yêu cầu bền vững (ESG/Net Zero) và thiếu hụt kỹ thuật viên lành nghề cho bảo trì BMS.</p>
+      </div>
+      <div class="en-content" style="display:none;">
+        <p>Honeywell Building Management Systems launched <strong>Advance Control for Buildings</strong> — a next-generation BMS whose standout feature is <strong>compatibility with existing wiring</strong> (no new cabling required), dramatically reducing upgrade costs for operating buildings. The platform uses machine learning for autonomous energy management decisions, co-developed with <strong>NXP Semiconductors</strong> (ML chip) and <strong>Analog Devices</strong> (digital connectivity).</p>
+        <p>Key features: <strong>Built-in cybersecurity</strong>, faster network speeds, and integration with Honeywell Forge for Buildings. Targets building managers under pressure from rising energy costs, sustainability mandates (ESG/Net Zero), and a shortage of skilled BMS technicians.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM?</div>
+        <div class="why-label en-content" style="display:none;">WHY THIS MATTERS FOR VIETNAM PROJECTS?</div>
+        <p class="vi-content">Một phần lớn tòa nhà văn phòng, khách sạn và bệnh viện tại Việt Nam đang vận hành BMS cũ (thế hệ 2000–2015). Tính năng "dùng cáp cũ" của Honeywell Advance Control giúp chủ đầu tư nâng cấp lên BMS thông minh mà không phải phá dỡ hạ tầng. Với yêu cầu Net Zero và tiêu chí LEED/EDGE ngày càng phổ biến trong đấu thầu quốc tế tại Việt Nam, đây là đối số tư vấn quan trọng.</p>
+        <p class="en-content" style="display:none;">A large portion of office buildings, hotels, and hospitals in Vietnam operate legacy BMS (2000–2015 generation). Honeywell Advance Control's "use existing wiring" approach lets building owners upgrade to intelligent BMS without demolishing infrastructure. With Net Zero requirements and LEED/EDGE criteria increasingly common in international tenders in Vietnam, this is a key consulting argument.</p>
+      </div>
+      <a href="https://www.facilitiesdive.com/news/honeywell-advance-controls-building-automation-system-/705353/" target="_blank" class="source-link">facilitiesdive.com — Honeywell Advance Control BMS</a>
+    </div>
+  </article>
+
+  <!-- ══════════════════════════════ NEWS 5 ══════════════════════════════ -->
+  <article class="news-item">
+    <div class="item-header">
+      <div class="item-number">05</div>
+      <div class="item-meta">
+        <div class="item-tags">
+          <span class="tag">QSC</span>
+          <span class="tag secondary">AV</span>
+          <span class="tag secondary">Q-SYS PLATFORM</span>
+        </div>
+        <h2 class="item-title">
+          <span class="vi-content">QSC Mở Rộng Nền Tảng Q-SYS: Thư Viện Plugin, AI Tools & Quản Lý AV Toàn Diện</span>
+          <span class="en-content" style="display:none;">QSC Expands Q-SYS Platform: Plugin Library, AI Tools & Full-Stack AV Management</span>
+        </h2>
+      </div>
+    </div>
+    <div class="item-body">
+      <div class="vi-content">
+        <p>QSC tiếp tục mở rộng hệ sinh thái <strong>Q-SYS Full Stack AV Platform</strong> với loạt cập nhật đáng chú ý: ra mắt <strong>Q-SYS Library</strong> — kho plugin mở rộng cho phép tích hợp hàng trăm thiết bị AV bên thứ ba; bổ sung <strong>AI Tools</strong> cho phân tích và tự động hóa phòng họp; nâng cấp bộ xử lý core mới với hiệu năng cao hơn; và triển khai dịch vụ quản lý dựa trên cloud cho chuỗi phòng họp quy mô doanh nghiệp.</p>
+        <p>Q-SYS hiện là nền tảng thống nhất cho audio, video và điều khiển — hướng đến các ứng dụng: phòng họp hội nghị (boardroom), giảng đường thông minh, trung tâm chỉ huy (command center) và không gian hợp tác hybrid. Tích hợp sẵn với Zoom, Microsoft Teams, Cisco Webex và các nền tảng UC hàng đầu.</p>
+      </div>
+      <div class="en-content" style="display:none;">
+        <p>QSC continues expanding the <strong>Q-SYS Full Stack AV Platform</strong> with notable updates: the launch of <strong>Q-SYS Library</strong> — an extensible plugin repository enabling integration with hundreds of third-party AV devices; addition of <strong>AI Tools</strong> for meeting room analytics and automation; new higher-performance processing cores; and cloud-based management services for enterprise-scale meeting room chains.</p>
+        <p>Q-SYS is now a unified platform for audio, video, and control — targeting boardrooms, smart lecture halls, command centers, and hybrid collaboration spaces. Native integration with Zoom, Microsoft Teams, Cisco Webex, and leading UC platforms.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM?</div>
+        <div class="why-label en-content" style="display:none;">WHY THIS MATTERS FOR VIETNAM PROJECTS?</div>
+        <p class="vi-content">Nhu cầu AV hội nghị cao cấp (corporate boardroom, phòng họp hybrid) đang tăng mạnh tại các tòa nhà văn phòng hạng A, trụ sở ngân hàng và bệnh viện quốc tế tại Hà Nội, TP.HCM và Đà Nẵng. Q-SYS Library giảm thời gian lập trình tích hợp xuống còn vài giờ thay vì vài tuần, là lợi thế cạnh tranh lớn cho nhà thầu AV. AI analytics giúp chủ đầu tư theo dõi hiệu quả sử dụng phòng họp theo thời gian thực.</p>
+        <p class="en-content" style="display:none;">Demand for premium AV conferencing (corporate boardroom, hybrid meeting rooms) is growing sharply in Grade-A office buildings, bank headquarters, and international hospitals in Hanoi, Ho Chi Minh City, and Da Nang. Q-SYS Library reduces integration programming time from weeks to hours — a major competitive advantage for AV contractors. AI analytics helps building owners monitor meeting room utilization in real time.</p>
+      </div>
+      <a href="https://www.prosoundweb.com/q-sys-expands-full-stack-av-platform-with-launch-of-q-sys-library/" target="_blank" class="source-link">prosoundweb.com — Q-SYS Expands Full Stack AV Platform</a>
+    </div>
+  </article>
+
+  <!-- ── CTA ── -->
+  <div class="cta-box">
+    <div class="cta-title vi-content">Cần Tư Vấn Thiết Kế ELV / ICT / AV?</div>
+    <div class="cta-title en-content" style="display:none;">Need ELV / ICT / AV Design Consulting?</div>
+    <p class="cta-sub vi-content">Paul Le cung cấp dịch vụ tư vấn thiết kế hệ thống ELV, ICT và AV cho dự án bệnh viện, văn phòng, trung tâm thương mại, KCN và tòa nhà cao tầng tại Việt Nam.</p>
+    <p class="cta-sub en-content" style="display:none;">Paul Le provides ELV, ICT, and AV system design consulting for hospitals, offices, shopping centers, industrial zones, and high-rise buildings in Vietnam.</p>
+    <a href="/#contact" class="cta-btn">
+      <span class="vi-content">LIÊN HỆ TƯ VẤN →</span>
+      <span class="en-content" style="display:none;">GET IN TOUCH →</span>
+    </a>
+  </div>
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>&copy; 2026 <a href="/">Paul Le Consultant</a> · ELV / ICT / AV Design Director · Duy Hoa Phat &amp; HBP Project Management</p>
+  <p style="margin-top:6px;">
+    <a href="/blog/">Blog</a> &nbsp;·&nbsp; <a href="/#contact">Contact</a> &nbsp;·&nbsp;
+    <span style="color:var(--steel);">Photo: Taylor Vick / Unsplash</span>
+  </p>
+</footer>
+
+<script>
+function setLang(l) {
+  document.querySelectorAll('.vi-content').forEach(e => e.style.display = l === 'vi' ? '' : 'none');
+  document.querySelectorAll('.en-content').forEach(e => e.style.display = l === 'en' ? '' : 'none');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+  try { localStorage.setItem('lang', l); } catch(e) {}
+}
+document.addEventListener('DOMContentLoaded', () => {
+  let saved = 'vi';
+  try { saved = localStorage.getItem('lang') || 'vi'; } catch(e) {}
+  setLang(saved);
+});
+</script>
+</body>
+</html>
