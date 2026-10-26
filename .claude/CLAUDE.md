@@ -19,3 +19,9 @@ Static site on GitHub Pages (`index.html`, `blog/`, `english/`). Single-file pag
 ## Content
 - All UI strings are bilingual in the `i18n` object (`en` / `vi`); `data-i18n` sets text, `data-i18n-html` sets markup.
 - The interface matrix (`MATRIX` in the script) is the page's live element; keep its entries technically correct.
+
+## Publishing (standing instruction from Paul)
+- Every change to this site is committed and pushed to `origin main` right away, without asking for confirmation. GitHub Pages deploys from `main`.
+- Before pushing a page change, run the taste-skill inspector; fix FAILs first.
+- Never force-push and never rewrite history on `main`.
+- Commit only the files you changed; leave unrelated working-tree changes (e.g. CRLF-only diffs in `english/`) alone.
