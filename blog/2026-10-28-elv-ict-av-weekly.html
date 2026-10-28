@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly W44 | 28/10/2026 – HPE AI Networking · Genetec SaaS · Schneider EcoCare BMS · QSC NVM · Secutech VN | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 44 – 2026: HPE AI Networking Discover 2026, Genetec Security Center SaaS, Schneider EcoCare BMS AI, QSC Q-SYS NVM Series, Secutech Vietnam 2026.">
+  <meta name="keywords" content="HPE Aruba Juniper AI networking, Genetec Security Center SaaS, Schneider EcoCare BMS, QSC Q-SYS NVM, Secutech Vietnam 2026, ELV ICT AV weekly">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-10-28-elv-ict-av-weekly.html">
+  <meta property="og:title" content="ELV/ICT/AV Weekly W44 | 28 Oct 2026 – Paul Le Consultant">
+  <meta property="og:description" content="HPE AI Networking, Genetec SaaS Axis/Bosch/Hanwha, Schneider EcoCare BMS Digital Twin, QSC Q-SYS NVM Series, Secutech Vietnam 2026.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1782945217386-300f33f22069?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6}
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.96);border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-text{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--white);letter-spacing:1px}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:8px 20px;border-radius:4px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all 0.2s;text-decoration:none}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg)}
+
+    /* LANG BAR */
+    .lang-bar{position:relative;z-index:1;display:flex;justify-content:flex-end;align-items:center;gap:8px;padding:10px 2rem;border-bottom:1px solid rgba(30,53,80,0.5);background:rgba(7,17,31,0.7)}
+    .lang-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel)}
+    .lang-btn{background:transparent;border:1px solid var(--card-border);color:var(--silver);padding:4px 14px;border-radius:3px;font-size:11px;font-weight:600;cursor:pointer;font-family:'Orbitron',monospace;letter-spacing:1px;transition:all 0.2s}
+    .lang-btn.active,.lang-btn:hover{background:var(--cyan);border-color:var(--cyan);color:var(--bg)}
+
+    /* HERO */
+    .article-hero{position:relative;z-index:1;width:100%;height:420px;overflow:hidden}
+    .article-hero img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.75) saturate(0.9)}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,17,31,0.25) 0%,rgba(7,17,31,0.55) 50%,rgba(7,17,31,0.92) 100%)}
+    .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:2rem 2.5rem 2.5rem;max-width:1000px}
+    .article-eyebrow{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:4px;color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:12px}
+    .article-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
+    .article-hero-content h1{font-family:'Orbitron',monospace;font-size:clamp(1.3rem,3.5vw,2.4rem);font-weight:900;color:var(--white);line-height:1.15;text-shadow:0 2px 20px rgba(0,0,0,0.7)}
+    .article-hero-meta{display:flex;gap:1.5rem;margin-top:0.75rem;flex-wrap:wrap}
+    .article-hero-meta span{font-size:12px;color:var(--silver);display:flex;align-items:center;gap:5px}
+
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+    .intro-box{background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid var(--cyan);border-radius:6px;padding:1.25rem 1.5rem;margin-bottom:2.5rem;font-size:14px;color:var(--silver);line-height:1.8}
+
+    /* NEWS ITEM */
+    .news-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:2rem;margin-bottom:1.75rem;position:relative;overflow:hidden;transition:border-color 0.3s}
+    .news-item:hover{border-color:rgba(0,200,224,0.4)}
+    .news-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity 0.3s}
+    .news-item:hover::before{opacity:1}
+    .news-num{position:absolute;top:1.5rem;right:1.75rem;font-family:'Orbitron',monospace;font-size:32px;font-weight:900;color:rgba(0,200,224,0.06);line-height:1}
+    .news-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.9rem}
+    .tag{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:1.5px;padding:3px 9px;border-radius:3px;border:1px solid rgba(0,200,224,0.35);color:var(--cyan);background:rgba(0,200,224,0.08)}
+    .tag-cat{border-color:rgba(160,180,200,0.25);color:var(--silver);background:rgba(160,180,200,0.06)}
+    .news-item h2{font-family:'Orbitron',monospace;font-size:clamp(13px,1.5vw,16px);font-weight:700;color:var(--white);line-height:1.4;margin-bottom:1rem}
+    .news-content{font-size:14px;color:var(--silver);line-height:1.85}
+    .news-content p{margin-bottom:0.75rem}
+    .news-content ul{padding-left:1.25rem;margin-bottom:0.75rem}
+    .news-content ul li{margin-bottom:0.35rem}
+    .news-content strong{color:var(--white);font-weight:600}
+    .source-link{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--cyan);text-decoration:none;margin-top:0.75rem;padding-bottom:2px;border-bottom:1px solid rgba(0,200,224,0.25);transition:border-color 0.2s;font-weight:500;letter-spacing:0.3px}
+    .source-link:hover{border-color:var(--cyan)}
+
+    /* WHY BOX */
+    .why-box{margin-top:1.25rem;background:rgba(0,200,224,0.05);border:1px solid rgba(0,200,224,0.15);border-radius:6px;padding:1rem 1.25rem}
+    .why-box-title{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:2px;color:var(--cyan);margin-bottom:0.5rem}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.75}
+
+    /* DIAGRAM */
+    .diagram-box{margin-top:1.25rem;background:var(--navy-deep);border:1px solid var(--card-border);border-radius:6px;padding:1.25rem;overflow-x:auto}
+    .diagram-title{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel);margin-bottom:0.75rem}
+    .diagram-box pre{font-family:'Courier New',monospace;font-size:11.5px;color:var(--silver);line-height:1.6;white-space:pre}
+    .diagram-box .cyan{color:var(--cyan)}
+    .diagram-box .white{color:var(--white)}
+
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,rgba(27,42,74,0.9),rgba(13,27,53,0.9));border:1px solid rgba(0,200,224,0.25);border-radius:8px;padding:2.5rem;text-align:center;margin-top:3rem}
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.75rem}
+    .cta-box p{font-size:14px;color:var(--silver);max-width:520px;margin:0 auto 1.5rem}
+    .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);font-family:'Orbitron',monospace;font-size:11px;font-weight:700;letter-spacing:2px;padding:12px 32px;border-radius:4px;text-decoration:none;transition:all 0.2s}
+    .cta-btn:hover{background:#00e8ff;box-shadow:0 0 20px rgba(0,200,224,0.4)}
+
+    /* FOOTER */
+    footer{position:relative;z-index:1;border-top:1px solid var(--card-border);background:var(--card-bg);padding:2.5rem 2rem;margin-top:2rem}
+    .footer-inner{max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-copy{font-size:12px;color:var(--steel)}
+    .footer-domain{font-family:'Orbitron',monospace;font-size:12px;color:var(--cyan)}
+    .footer-links{display:flex;gap:1rem}
+    .footer-links a{font-size:12px;color:var(--steel);text-decoration:none;transition:color 0.2s}
+    .footer-links a:hover{color:var(--silver)}
+
+    @media(max-width:768px){
+      nav{padding:0 1rem}
+      .nav-links{display:none}
+      .article-hero{height:320px}
+      .article-hero-content{padding:1.5rem 1.25rem 2rem}
+      main{padding:1.5rem 1rem 3rem}
+      .news-item{padding:1.5rem 1.25rem}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text></svg>
+    <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Trang chủ</a></li>
+    <li><a href="/#services">Dịch vụ</a></li>
+    <li><a href="/#portfolio">Dự án</a></li>
+    <li><a href="/blog/" class="active">Tin tức</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư vấn</a>
+</nav>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- HERO IMAGE -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1782945217386-300f33f22069?w=1400&h=520&q=85&auto=format&fit=crop" alt="Blue-lit control room — ELV ICT AV Weekly W44 Oct 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="article-eyebrow">
+      <span class="vi-content">BẢN TIN TUẦN 44 · 2026</span>
+      <span class="en-content" style="display:none">WEEKLY BULLETIN W44 · 2026</span>
+    </div>
+    <h1 class="vi-content">HPE AI Networking Discover 2026 · Genetec Security SaaS · Schneider EcoCare BMS Digital Twin · QSC Q-SYS NVM Series · Secutech Vietnam 2026</h1>
+    <h1 class="en-content" style="display:none">HPE AI Networking Discover 2026 · Genetec Security SaaS · Schneider EcoCare BMS Digital Twin · QSC Q-SYS NVM Series · Secutech Vietnam 2026</h1>
+    <div class="article-hero-meta">
+      <span>📅 THỨ TƯ · 28 THÁNG 10, 2026</span>
+      <span>✍️ Paul Le Consultant</span>
+      <span>🏷️ W44 · ELV · ICT · AV · BMS · SECURITY</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- INTRO BOX -->
+  <div class="intro-box">
+    <span class="vi-content"><strong style="color:var(--cyan)">5 TIN NỔI BẬT TUẦN 44 — 28/10/2026:</strong> HPE hợp nhất Aruba+Juniper AI networking tại Discover 2026 · Genetec Security Center SaaS direct-to-cloud hỗ trợ Axis/Bosch/Hanwha/i-PRO · Schneider Electric ra mắt EcoCare for BMS với Digital Twin tiết kiệm 25% năng lượng · QSC tung loạt encoder/decoder NVM Series cho phân phối video quy mô lớn · Secutech Vietnam 2026 Hà Nội: AI+Robot+Fire Safety hội tụ cho thị trường xây dựng thông minh.</span>
+    <span class="en-content" style="display:none"><strong style="color:var(--cyan)">5 TOP STORIES W44 — 28/10/2026:</strong> HPE converges Aruba+Juniper AI networking at Discover 2026 · Genetec Security Center SaaS direct-to-cloud supports Axis/Bosch/Hanwha/i-PRO · Schneider Electric launches EcoCare for BMS with Digital Twin saving 25% energy · QSC releases NVM Series encoder/decoder for large-scale video distribution · Secutech Vietnam 2026 Hanoi: AI+Robotics+Fire Safety converging for the smart building market.</span>
+  </div>
+
+  <!-- ═══════════════════ NEWS 1 — HPE ═══════════════════ -->
+  <div class="news-item">
+    <div class="news-num">01</div>
+    <div class="news-tags">
+      <span class="tag">HPE ARUBA</span>
+      <span class="tag">JUNIPER</span>
+      <span class="tag tag-cat">NETWORKING · ICT</span>
+    </div>
+
+    <h2 class="vi-content">HPE DISCOVER 2026: Aruba+Juniper AI Networking — Switch AI, AIOps Thống Nhất & Mạng Tự Lái</h2>
+    <h2 class="en-content" style="display:none">HPE DISCOVER 2026: Aruba+Juniper AI Networking — AI Switches, Unified AIOps & Self-Driving Networks</h2>
+
+    <div class="news-content vi-content">
+      <p>Tại HPE Discover 2026, HPE chính thức hợp nhất hệ sinh thái Aruba và Juniper Networks thành nền tảng mạng AI thống nhất — bước tiến lớn nhất kể từ thương vụ mua lại Juniper Networks trị giá 14 tỷ USD hoàn tất đầu 2025.</p>
+      <p><strong>Sản phẩm mới nổi bật:</strong></p>
+      <ul>
+        <li><strong>QFX5252 Switch Tray</strong> — Module tích hợp vào rack AMD Helios AI, cung cấp switching băng thông cực cao, độ trễ cực thấp cho AI inferencing cluster</li>
+        <li><strong>QFX5140 Edge Switch</strong> — Được thiết kế cho edge inferencing cluster, tích hợp HPE AI Factory validated design</li>
+        <li><strong>Mist AIOps mở rộng</strong> — Predictive maintenance phân tích telemetry điện năng, nhiệt độ, trạng thái quang học để ngăn outage trước khi xảy ra</li>
+        <li><strong>Aruba Central + Marvis</strong> — Tính năng self-driving AI (Marvis Actions) từ Juniper được mở rộng sang Aruba Central, bao trùm wired, wireless và SD-WAN</li>
+      </ul>
+      <a class="source-link" href="https://www.itpro.com/technology/artificial-intelligence/hpe-unveils-a-raft-of-new-networking-products-for-ai-workloads-at-discover-2026" target="_blank" rel="noopener">→ NGUỒN: IT Pro / HPE Discover 2026</a>
+    </div>
+
+    <div class="news-content en-content" style="display:none">
+      <p>At HPE Discover 2026, HPE formally unified the Aruba and Juniper Networks ecosystems into one AI networking platform — the most significant milestone since the $14B Juniper acquisition closed in early 2025.</p>
+      <p><strong>Key new products:</strong></p>
+      <ul>
+        <li><strong>QFX5252 Switch Tray</strong> — Modular blade for AMD's Helios AI rack-scale platform, delivering high-bandwidth, ultra-low-latency switching for AI inferencing clusters</li>
+        <li><strong>QFX5140 Edge Switch</strong> — Built for edge inferencing, validated within the HPE AI Factory reference design</li>
+        <li><strong>Expanded Mist AIOps</strong> — Predictive maintenance that analyzes power, temperature, optics and system health telemetry to prevent outages before they occur</li>
+        <li><strong>Aruba Central + Marvis</strong> — Juniper's self-driving Marvis Actions AI extended to HPE Aruba Central, covering wired, wireless, and SD-WAN environments</li>
+      </ul>
+      <a class="source-link" href="https://www.itpro.com/technology/artificial-intelligence/hpe-unveils-a-raft-of-new-networking-products-for-ai-workloads-at-discover-2026" target="_blank" rel="noopener">→ SOURCE: IT Pro / HPE Discover 2026</a>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-title">ARCHITECTURE / SƠ ĐỒ: HPE UNIFIED AI NETWORKING PLATFORM</div>
+      <pre><span class="cyan">┌─────────────────────────────────────────────────────────┐
+│          HPE ARUBA + JUNIPER AI NETWORKING              │
+├─────────────┬───────────────────┬───────────────────────┤
+│  CLOUD      │     AIOps ENGINE  │   SELF-DRIVING NET    │
+│ Aruba       │  ┌─ Mist AI ─────┤  Marvis Actions       │
+│ Central     │  │  Predictive    │  (Juniper → Aruba)    │
+│  +          │  │  Maintenance   │  Wired + Wireless     │
+│ Mist AI     │  └─ Anomaly Det. ─┤  + SD-WAN             │
+├─────────────┴───────────────────┴───────────────────────┤
+│               AI FACTORY SWITCHES                       │
+│  QFX5252 (AMD Helios AI rack) │ QFX5140 (Edge Infer.)  │
+│  → Ultra-low latency           │ → Inference cluster     │
+│  → High-bandwidth fabric       │ → HPE AI Factory design │
+└─────────────────────────────────────────────────────────┘</span></pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-title">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN TẠI VIỆT NAM / WHY IT MATTERS</div>
+      <p class="vi-content">Với các dự án data center và tòa nhà thông minh tại Việt Nam đang bùng nổ, sự tích hợp Aruba+Juniper+Mist AI mang lại khả năng quản lý mạng toàn campus duy nhất — giảm chi phí vận hành và tăng khả năng phòng ngừa sự cố. Đặc biệt quan trọng cho các bệnh viện, trường đại học và khu công nghiệp cần uptime cao. HPE là đối tác ICT hàng đầu tại nhiều dự án lớn ở Hà Nội và TP.HCM.</p>
+      <p class="en-content" style="display:none">As data center and smart building projects boom in Vietnam, the Aruba+Juniper+Mist AI integration delivers single-pane-of-glass campus management — reducing OPEX and enabling proactive fault prevention. Particularly critical for hospitals, universities, and industrial parks requiring high uptime. HPE is a leading ICT partner in major Hanoi and HCMC projects.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NEWS 2 — GENETEC ═══════════════════ -->
+  <div class="news-item">
+    <div class="news-num">02</div>
+    <div class="news-tags">
+      <span class="tag">GENETEC</span>
+      <span class="tag">AXIS</span>
+      <span class="tag">BOSCH</span>
+      <span class="tag tag-cat">SECURITY · IP SURVEILLANCE</span>
+    </div>
+
+    <h2 class="vi-content">GENETEC SECURITY CENTER SaaS: Axis, Bosch, Hanwha & i-PRO Hỗ Trợ Direct-to-Cloud</h2>
+    <h2 class="en-content" style="display:none">GENETEC SECURITY CENTER SaaS: Axis, Bosch, Hanwha & i-PRO Direct-to-Cloud Support</h2>
+
+    <div class="news-content vi-content">
+      <p>Genetec ra mắt Security Center SaaS — nền tảng bảo mật đám mây mở với sự hỗ trợ từ 4 nhà sản xuất camera hàng đầu thế giới, cho phép kết nối thiết bị trực tiếp lên cloud mà không cần NVR on-premise.</p>
+      <p><strong>Chi tiết tích hợp từng hãng:</strong></p>
+      <ul>
+        <li><strong>Axis Communications</strong> — Hỗ trợ Axis Cloud Connect và Axis Powered by Genetec door controller. Camera, metadata và dữ liệu access control stream thẳng lên cloud</li>
+        <li><strong>Bosch</strong> — Firmware 9.21 (dự kiến cuối năm): camera Bosch kết nối trực tiếp cloud, configuration và xem video qua Security Center SaaS</li>
+        <li><strong>Hanwha Vision</strong> — Dòng Q series tương thích hoàn toàn; mở rộng toàn product line theo lộ trình</li>
+        <li><strong>i-PRO</strong> — Camera AI-enabled cài thêm app để truy cập Security Center SaaS trực tiếp</li>
+        <li><strong>Genetec Cloudlink</strong> — Appliance chuyển đổi hạ tầng camera/access control cũ lên cloud, bảo vệ đầu tư hiện có</li>
+      </ul>
+      <a class="source-link" href="https://www.securityworldmarket.com/int/News/Business-News/new-genetec-saas-supported-by-axis-bosch-hanwha-and-i-pro" target="_blank" rel="noopener">→ NGUỒN: Security World Market / Genetec SaaS</a>
+    </div>
+
+    <div class="news-content en-content" style="display:none">
+      <p>Genetec launches Security Center SaaS — an open-architecture cloud security platform with support from 4 of the world's leading camera manufacturers, enabling direct-to-cloud device connections without on-premise NVR.</p>
+      <p><strong>Per-manufacturer integration details:</strong></p>
+      <ul>
+        <li><strong>Axis Communications</strong> — Supports Axis Cloud Connect and Axis Powered by Genetec door controller. Video, metadata, and access control data stream directly to the cloud</li>
+        <li><strong>Bosch</strong> — Firmware 9.21 (expected later this year): Bosch cameras connect directly, configurable and viewable via Security Center SaaS</li>
+        <li><strong>Hanwha Vision</strong> — Q series fully compatible; expanding to full product line over time</li>
+        <li><strong>i-PRO</strong> — AI-enabled cameras install an app for direct Security Center SaaS access</li>
+        <li><strong>Genetec Cloudlink</strong> — Appliance migrates existing camera/access control infrastructure to cloud, preserving current investments</li>
+      </ul>
+      <a class="source-link" href="https://www.securityworldmarket.com/int/News/Business-News/new-genetec-saas-supported-by-axis-bosch-hanwha-and-i-pro" target="_blank" rel="noopener">→ SOURCE: Security World Market / Genetec SaaS</a>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-title">ARCHITECTURE / SƠ ĐỒ: GENETEC SECURITY CENTER SaaS — DIRECT-TO-CLOUD</div>
+      <pre><span class="cyan">  CAMERA MANUFACTURERS          GENETEC CLOUD
+  ┌─────────────────┐           ┌──────────────────────┐
+  │ AXIS (Cloud     │───────────▶  Security Center SaaS│
+  │   Connect)      │           │  ┌──────────────────┐│
+  │ BOSCH (FW 9.21) │───────────▶  │  Video Management ││
+  │ HANWHA (Q-ser.) │───────────▶  │  Access Control   ││
+  │ i-PRO (App)     │───────────▶  │  Analytics + AI   ││
+  └─────────────────┘           │  └──────────────────┘│
+  ┌─────────────────┐           └──────────────────────┘
+  │ LEGACY DEVICES  │                      │
+  │ Old cameras     │──[Cloudlink]──────────┘
+  │ Old AC readers  │   (migration appliance)
+  └─────────────────┘</span></pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-title">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN TẠI VIỆT NAM / WHY IT MATTERS</div>
+      <p class="vi-content">Kiến trúc direct-to-cloud của Genetec SaaS giải quyết bài toán lớn trong thiết kế hệ thống camera IP tại Việt Nam: không cần NVR phòng máy chủ đắt tiền, giảm hạ tầng ELV phức tạp, mở ra mô hình subscription OPEX thay CAPEX. Đặc biệt phù hợp với chuỗi bán lẻ, tòa nhà văn phòng và khách sạn đa điểm — phân khúc đang tăng trưởng mạnh tại Hà Nội và TP.HCM.</p>
+      <p class="en-content" style="display:none">Genetec's direct-to-cloud architecture solves a major challenge in Vietnam IP camera system design: eliminates expensive NVR server rooms, reduces complex ELV infrastructure, enables OPEX subscription model over CAPEX. Ideal for retail chains, office buildings, and multi-site hotels — segments growing strongly in Hanoi and HCMC.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NEWS 3 — SCHNEIDER ═══════════════════ -->
+  <div class="news-item">
+    <div class="news-num">03</div>
+    <div class="news-tags">
+      <span class="tag">SCHNEIDER</span>
+      <span class="tag tag-cat">BMS · BUILDING AUTOMATION</span>
+    </div>
+
+    <h2 class="vi-content">SCHNEIDER ELECTRIC EcoCare for BMS: AI Monitoring 24/7 + Digital Twin — Tiết Kiệm 25% Năng Lượng</h2>
+    <h2 class="en-content" style="display:none">SCHNEIDER ELECTRIC EcoCare for BMS: 24/7 AI Monitoring + Digital Twin — 25% Energy Savings</h2>
+
+    <div class="news-content vi-content">
+      <p>Schneider Electric chính thức ra mắt EcoCare for BMS tại Realcomm IBcon 2026 — gói dịch vụ AI-driven cho hệ thống quản lý tòa nhà, kết hợp giám sát liên tục 24/7 với chuyên gia từ xa và Digital Twin.</p>
+      <p><strong>Tính năng chính của EcoCare for BMS:</strong></p>
+      <ul>
+        <li><strong>Expert Monitoring 24/7</strong> — Chuyên gia từ xa giám sát liên tục, phát hiện rủi ro trước khi leo thang</li>
+        <li><strong>Condition-based Maintenance</strong> — Bảo trì dự báo thay vì lịch định kỳ, lên lịch trước khi sự cố xảy ra</li>
+        <li><strong>Digital Twin Insights</strong> — Mô hình số của BMS tích hợp EcoStruxure Building Advisor, tối ưu năng lượng và tiện nghi người dùng</li>
+        <li><strong>Priority Response</strong> — Kỹ thuật viên hiện trường + chuyên gia HVAC phối hợp giải quyết sự cố ưu tiên</li>
+      </ul>
+      <p><strong>Kết quả thực tế từ khách hàng (vendor-reported):</strong> −25% tiêu thụ năng lượng · −45% downtime · +30% hiệu quả vận hành · −60% khiếu nại cư dân</p>
+      <a class="source-link" href="https://www.prnewswire.com/news-releases/schneider-electric-launches-ecocare-for-bms-to-deliver-real-time-operational-intelligence-for-modern-buildings-302787588.html" target="_blank" rel="noopener">→ NGUỒN: PR Newswire / Schneider Electric EcoCare BMS</a>
+    </div>
+
+    <div class="news-content en-content" style="display:none">
+      <p>Schneider Electric officially launched EcoCare for BMS at Realcomm IBcon 2026 — an AI-driven service package for building management systems combining 24/7 continuous monitoring with remote experts and a Digital Twin.</p>
+      <p><strong>Key EcoCare for BMS features:</strong></p>
+      <ul>
+        <li><strong>24/7 Expert Monitoring</strong> — Remote specialists continuously surveil systems, identifying risks before they escalate</li>
+        <li><strong>Condition-based Maintenance</strong> — Predictive maintenance replacing fixed schedules, scheduling interventions before failures occur</li>
+        <li><strong>Digital Twin Insights</strong> — BMS digital model integrated with EcoStruxure Building Advisor, optimizing energy use and occupant comfort</li>
+        <li><strong>Priority Response</strong> — Field technicians and HVAC specialists coordinated for priority issue resolution</li>
+      </ul>
+      <p><strong>Customer-reported results (vendor claims):</strong> −25% energy consumption · −45% downtime · +30% operational efficiency · −60% occupant complaints</p>
+      <a class="source-link" href="https://www.prnewswire.com/news-releases/schneider-electric-launches-ecocare-for-bms-to-deliver-real-time-operational-intelligence-for-modern-buildings-302787588.html" target="_blank" rel="noopener">→ SOURCE: PR Newswire / Schneider Electric EcoCare BMS</a>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ / DIAGRAM: SCHNEIDER EcoCare for BMS — ARCHITECTURE</div>
+      <pre><span class="cyan">  ┌────────────────────────────────────────────────┐
+  │            EcoCare for BMS Platform            │
+  │  ┌──────────────┐    ┌───────────────────────┐ │
+  │  │  DIGITAL     │    │  EcoStruxure Building │ │
+  │  │  TWIN        │◀───│  Advisor (Cloud)      │ │
+  │  │  (BMS Model) │    │  Real-time Analytics  │ │
+  │  └──────┬───────┘    └───────────────────────┘ │
+  │         │                                       │
+  │  ┌──────▼──────┐    ┌──────────────────────┐   │
+  │  │ PREDICTIVE  │    │  24/7 REMOTE EXPERTS │   │
+  │  │ MAINTENANCE │────▶  + Field Technicians │   │
+  │  │ Scheduling  │    │  + HVAC Specialists  │   │
+  │  └─────────────┘    └──────────────────────┘   │
+  │         ▲                                       │
+  └─────────┼───────────────────────────────────────┘
+            │
+  [Physical BMS: HVAC, Lighting, Access, Power]</span></pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-title">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN TẠI VIỆT NAM / WHY IT MATTERS</div>
+      <p class="vi-content">EcoCare for BMS là đột phá cho các chủ tòa nhà tại Việt Nam đang bị áp lực tăng chi phí vận hành và tiết kiệm năng lượng theo cam kết Net Zero 2050. Digital Twin + giám sát từ xa giúp tòa nhà hạng A tại Hà Nội/TP.HCM có thể vận hành hiệu quả mà không cần đội kỹ thuật lớn tại chỗ. Schneider Electric có hơn 6.000 khách hàng dịch vụ toàn cầu và đang mở rộng mạnh tại Đông Nam Á.</p>
+      <p class="en-content" style="display:none">EcoCare for BMS is a breakthrough for Vietnam building owners facing rising OPEX pressure and energy reduction commitments under Net Zero 2050. Digital Twin + remote monitoring lets Grade-A buildings in Hanoi/HCMC operate efficiently without large on-site technical teams. Schneider Electric serves over 6,000 service customers globally and is expanding aggressively in Southeast Asia.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NEWS 4 — QSC ═══════════════════ -->
+  <div class="news-item">
+    <div class="news-num">04</div>
+    <div class="news-tags">
+      <span class="tag">QSC</span>
+      <span class="tag tag-cat">AV · VIDEO DISTRIBUTION</span>
+    </div>
+
+    <h2 class="vi-content">QSC Q-SYS NVM SERIES: Phân Phối Video Mạng Quy Mô Lớn — Thiết Kế Không Cần Code</h2>
+    <h2 class="en-content" style="display:none">QSC Q-SYS NVM SERIES: Large-Scale Network Video Distribution — Code-Free Design</h2>
+
+    <div class="news-content vi-content">
+      <p>QSC ra mắt dòng sản phẩm Q-SYS NVM Series — thiết bị endpoint video phân phối mạng tích hợp vào nền tảng Q-SYS Full Stack AV Platform, nhắm đến các triển khai quy mô lớn như khách sạn, toà nhà văn phòng, giải trí, chính phủ và giáo dục.</p>
+      <p><strong>Thông số và tính năng chính:</strong></p>
+      <ul>
+        <li><strong>NVM-302E Encoder</strong> — 1 channel mặc định, mở rộng lên 2 channel qua software license; I/O mật độ thấp phù hợp phân tán</li>
+        <li><strong>NVM-302D Decoder</strong> — Giải mã 1 channel; tích hợp Q-SYS Mediacast transport protocol cho video mạng băng thông thấp</li>
+        <li><strong>NVM Designer Tool</strong> — Tích hợp trong Q-SYS Designer Software: cấu hình hàng trăm endpoint không cần code, trong cùng môi trường thiết kế DSP, routing và control</li>
+        <li><strong>Q-SYS Mediacast</strong> — Protocol vận chuyển video mạng bandwidth thấp của QSC, tối ưu cho triển khai quy mô lớn</li>
+      </ul>
+      <a class="source-link" href="https://www.avnation.tv/2026/06/18/qsc-unlocks-scalable-network-video-distribution-with-q-sys-nvm-series/" target="_blank" rel="noopener">→ NGUỒN: AVNation / QSC Q-SYS NVM Series</a>
+    </div>
+
+    <div class="news-content en-content" style="display:none">
+      <p>QSC launches the Q-SYS NVM Series — network video distribution endpoints integrated into the Q-SYS Full Stack AV Platform, targeting large-scale deployments in hospitality, corporate, entertainment, government, and education.</p>
+      <p><strong>Key specifications and features:</strong></p>
+      <ul>
+        <li><strong>NVM-302E Encoder</strong> — 1 channel by default, software-expandable to 2 channels; low-density I/O for distributed deployments</li>
+        <li><strong>NVM-302D Decoder</strong> — 1-channel decode; integrates Q-SYS Mediacast transport for low-bandwidth network video</li>
+        <li><strong>NVM Designer Tool</strong> — Embedded in Q-SYS Designer Software: configure hundreds of endpoints without coding, in the same design environment as DSP, routing, and control</li>
+        <li><strong>Q-SYS Mediacast</strong> — QSC's low-bandwidth network video transport protocol, optimized for large-scale deployments</li>
+      </ul>
+      <a class="source-link" href="https://www.avnation.tv/2026/06/18/qsc-unlocks-scalable-network-video-distribution-with-q-sys-nvm-series/" target="_blank" rel="noopener">→ SOURCE: AVNation / QSC Q-SYS NVM Series</a>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ / DIAGRAM: Q-SYS NVM SERIES — NETWORK VIDEO DISTRIBUTION</div>
+      <pre><span class="cyan">  VIDEO SOURCES                   DISPLAYS / ENDPOINTS
+  ┌─────────────┐                 ┌────────────────────┐
+  │ Camera      │──[NVM-302E]──┐  │ Screen A (NVM-302D)│
+  │ PC / Laptop │  Encoder     │  │ Screen B (NVM-302D)│
+  │ IPTV Feed   │  1–2 channel │  │ Screen C ...       │
+  └─────────────┘              │  └────────────────────┘
+                               │
+                    ┌──────────▼─────────────────┐
+                    │  IP NETWORK (Low Bandwidth) │
+                    │  Q-SYS Mediacast Transport  │
+                    └──────────────────────────────┘
+                               │
+                    ┌──────────▼─────────────────┐
+                    │  Q-SYS DESIGNER SOFTWARE   │
+                    │  NVM Designer Tool          │
+                    │  DSP + Routing + Control    │
+                    │  (100s endpoints, no code)  │
+                    └────────────────────────────┘</span></pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-title">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN TẠI VIỆT NAM / WHY IT MATTERS</div>
+      <p class="vi-content">NVM Series của QSC giải quyết bài toán phân phối video trên mạng IP cho các dự án AV lớn tại Việt Nam — khách sạn 5 sao, trung tâm hội nghị, sân vận động và campus đại học. Tích hợp hoàn toàn vào Q-SYS (âm thanh + video + điều khiển cùng một platform) giúp đơn giản hóa thiết kế và giảm chi phí tích hợp đáng kể. Đây là hướng phát triển AV-over-IP chủ đạo cho thập kỷ 2020–2030.</p>
+      <p class="en-content" style="display:none">QSC's NVM Series solves the IP network video distribution challenge for large AV projects in Vietnam — 5-star hotels, conference centers, stadiums, and university campuses. Full integration into Q-SYS (audio + video + control on one platform) significantly simplifies design and reduces integration costs. This is the mainstream AV-over-IP direction for the 2020–2030 decade.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NEWS 5 — SECUTECH VIETNAM ═══════════════════ -->
+  <div class="news-item">
+    <div class="news-num">05</div>
+    <div class="news-tags">
+      <span class="tag">SECUTECH VN</span>
+      <span class="tag tag-cat">VIETNAM · SMART BUILDING</span>
+    </div>
+
+    <h2 class="vi-content">SECUTECH VIETNAM 2026 — AI, Robot & Fire Safety: Thị Trường Hà Nội Đang Chín Muồi</h2>
+    <h2 class="en-content" style="display:none">SECUTECH VIETNAM 2026 — AI, Robotics & Fire Safety: Hanoi Market Maturing Fast</h2>
+
+    <div class="news-content vi-content">
+      <p>Secutech Vietnam 2026 tại Hà Nội xác nhận sự dịch chuyển mạnh mẽ của thị trường Việt Nam từ thiết bị rời sang hệ thống kết nối tích hợp AI — đặc biệt trong lĩnh vực an ninh, báo cháy thông minh và tự động hóa tòa nhà.</p>
+      <p><strong>Highlights nổi bật từ triển lãm:</strong></p>
+      <ul>
+        <li><strong>AI Surveillance & Robotics</strong> — Nha An Toan trình diễn camera AI, camera phát hiện cháy AI và robot cho cơ sở hạ tầng; G20+ Alliance xác nhận khách hàng hạ tầng ưu tiên giải pháp AI-integrated</li>
+        <li><strong>Early Smoke Detection</strong> — Nohmi Bosai trình diễn phát hiện khói sớm cho data center, nhà máy bán dẫn, kho hàng và pin — phân khúc cực kỳ quan trọng cho Việt Nam đang thu hút FDI</li>
+        <li><strong>International Standards</strong> — UL Solutions ghi nhận quan tâm ngày càng tăng từ các chủ đầu tư Việt Nam về chứng nhận tiêu chuẩn quốc tế UL/FM</li>
+        <li><strong>AI Camera & Thermal</strong> — Lotte P&D quan tâm camera AI tích hợp, thermal imaging và camera báo cháy AI phát hiện sớm</li>
+        <li><strong>Training & Demo</strong> — Chương trình đào tạo kỹ thuật viên lắp đặt, demo live các công cụ AI-enabled</li>
+      </ul>
+      <a class="source-link" href="https://www.sourcesecurity.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" rel="noopener">→ NGUỒN: SourceSecurity / Secutech Vietnam 2026</a>
+    </div>
+
+    <div class="news-content en-content" style="display:none">
+      <p>Secutech Vietnam 2026 in Hanoi confirmed Vietnam's market is strongly shifting from standalone products to AI-integrated connected systems — particularly in security, smart fire detection, and building automation.</p>
+      <p><strong>Key exhibition highlights:</strong></p>
+      <ul>
+        <li><strong>AI Surveillance & Robotics</strong> — Nha An Toan demonstrated AI cameras, AI fire detection cameras, and infrastructure robotics; G20+ Alliance confirmed infrastructure clients increasingly prefer AI-integrated solutions</li>
+        <li><strong>Early Smoke Detection</strong> — Nohmi Bosai showcased early smoke detection for data centers, semiconductor factories, warehouses, and battery facilities — a critical segment as Vietnam attracts FDI</li>
+        <li><strong>International Standards</strong> — UL Solutions noted growing interest from Vietnamese developers in UL/FM international certification</li>
+        <li><strong>AI Camera & Thermal</strong> — Lotte P&D interested in AI-integrated cameras, thermal imaging, and AI fire alarm cameras for early warning</li>
+        <li><strong>Training & Demo</strong> — Technical installer training programs, live demonstrations of AI-enabled tools</li>
+      </ul>
+      <a class="source-link" href="https://www.sourcesecurity.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" rel="noopener">→ SOURCE: SourceSecurity / Secutech Vietnam 2026</a>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-title">THỐNG KÊ / OVERVIEW: SECUTECH VIETNAM 2026 — AI-INTEGRATED SYSTEMS ADOPTION</div>
+      <pre><span class="cyan">  PHÂN KHÚC / SEGMENT           CÔNG NGHỆ NỔI BẬT / KEY TECH
+  ┌──────────────────────────────────────────────────────┐
+  │ IP Camera & AI Surveillance │ AI detection, Thermal  │
+  │ Fire Detection & Early Warn.│ Smoke detect. + robots │
+  │ Access Control              │ Cloud-based, biometric │
+  │ Building Automation (BMS)   │ AI edge intelligence   │
+  │ Data Center Protection      │ Early smoke, robotics  │
+  └──────────────────────────────────────────────────────┘
+  KEY TREND: Standalone ──▶ AI-Integrated Connected Systems
+  MARKET: Vietnam Smart Building $15B+ target by 2028
+  GDP: 8.02% growth, attracting global ELV brands</span></pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-title">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN TẠI VIỆT NAM / WHY IT MATTERS</div>
+      <p class="vi-content">Secutech Vietnam 2026 phản ánh trực tiếp xu hướng nhu cầu tại Việt Nam: chủ đầu tư lớn như Lotte P&D và các tập đoàn FDI đang yêu cầu hệ thống AI-integrated đầy đủ — không còn chấp nhận camera hay báo cháy độc lập. Đây là cơ hội vàng cho các tư vấn ELV/ICT/AV định vị tư vấn giải pháp tích hợp AI từ đầu thiết kế. Chứng nhận UL/FM ngày càng được yêu cầu trong tender của chủ đầu tư quốc tế tại Việt Nam.</p>
+      <p class="en-content" style="display:none">Secutech Vietnam 2026 directly reflects Vietnam demand trends: major developers like Lotte P&D and FDI corporations are requiring fully AI-integrated systems — no longer accepting standalone cameras or fire alarms. This is a golden opportunity for ELV/ICT/AV consultants to position AI-integrated solution consulting from the design stage. UL/FM certification is increasingly required in tenders by international developers in Vietnam.</p>
+    </div>
+  </div>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <h3 class="vi-content">CẦN TƯ VẤN THIẾT KẾ ELV/ICT/AV?</h3>
+    <h3 class="en-content" style="display:none">NEED ELV/ICT/AV DESIGN CONSULTATION?</h3>
+    <p class="vi-content">Paul Le — ELV/ICT/AV Design Director với 15+ năm kinh nghiệm. Chuyên thiết kế hệ thống thông minh cho dự án thương mại, công nghiệp và hạ tầng tại Việt Nam.</p>
+    <p class="en-content" style="display:none">Paul Le — ELV/ICT/AV Design Director with 15+ years of experience. Specializing in intelligent system design for commercial, industrial, and infrastructure projects in Vietnam.</p>
+    <a href="/#contact" class="cta-btn">LIÊN HỆ TƯ VẤN / CONTACT →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text></svg>
+        <span class="logo-text" style="font-family:'Orbitron',monospace;font-size:13px;font-weight:700;color:#F0F4F8">PAUL LE CONSULTANT</span>
+      </div>
+      <span class="footer-copy">© 2026 Paul Le Consultant · AV · ICT · ELV Design Director</span>
+    </div>
+    <div class="footer-links">
+      <a href="/blog/">← Blog</a>
+      <a href="/">Trang chủ</a>
+      <a href="/#contact">Liên hệ</a>
+    </div>
+    <span class="footer-domain">elvconsultant.com</span>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
