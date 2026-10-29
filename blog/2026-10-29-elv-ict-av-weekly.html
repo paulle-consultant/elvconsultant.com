@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly W44 | 29/10/2026 — Cisco OCP Silicon One · Dialog AI · Schneider EcoCare · Extron 2026 · Vietnam Digital | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 44 ngày 29/10/2026: Cisco Silicon One G302 OCP · Dialog AI Agent Webex · Schneider EcoCare BMS Digital Twin · Extron AV 2026 · Vietnam Chuyển đổi Số.">
+  <meta name="keywords" content="ELV news, ICT AV 2026, Cisco Silicon One G302, Cisco Dialog AI, Schneider EcoCare BMS, Extron AV 2026, Vietnam digital transformation, smart building, structured cabling, fire alarm, AV integration Vietnam">
+  <meta name="author" content="Paul Le — ELV/ICT/AV Consultant">
+  <meta property="og:title" content="ELV/ICT/AV Weekly W44 | 29/10/2026">
+  <meta property="og:description" content="Cisco Silicon One G302 AI networking · Dialog AI agent · Schneider EcoCare BMS · Extron AV innovations · Vietnam chuyển đổi số">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1763771787035-99c6c28ec78e?w=1200&h=630&q=85&auto=format&fit=crop">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-10-29-elv-ict-av-weekly.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+      background:radial-gradient(900px 600px at -10% 20%,rgba(0,200,224,.07),transparent 60%),
+                 radial-gradient(900px 700px at 110% 70%,rgba(27,42,74,.55),transparent 60%)}
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      padding:0 clamp(1rem,4vw,4.5rem);display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-text{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--white);letter-spacing:1px}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px}
+    .nav-links{display:flex;gap:clamp(1.25rem,2vw,2.25rem);list-style:none}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:8px 20px;border-radius:999px;
+      font-size:13px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all 0.2s;text-decoration:none}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg)}
+    @media(max-width:768px){.nav-links{display:none}}
+
+    /* LANG BAR */
+    .lang-bar{position:relative;z-index:10;background:var(--navy-deep);border-bottom:1px solid var(--card-border);
+      padding:0.5rem clamp(1rem,4vw,4.5rem);display:flex;align-items:center;gap:0.75rem}
+    .lang-bar span{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel)}
+    .lang-btn{background:transparent;border:1px solid var(--card-border);color:var(--silver);padding:5px 14px;
+      border-radius:4px;font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1.5px;cursor:pointer;transition:all 0.2s}
+    .lang-btn.active,.lang-btn:hover{background:var(--cyan);border-color:var(--cyan);color:var(--bg)}
+
+    /* ARTICLE HERO */
+    .article-hero{position:relative;z-index:1;height:clamp(300px,42vw,520px);overflow:hidden}
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.6) saturate(0.85)}
+    .article-hero-overlay{position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(7,17,31,0.25) 0%,rgba(7,17,31,0.5) 50%,rgba(7,17,31,0.95) 100%)}
+    .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:clamp(1.5rem,4vw,3rem) clamp(1rem,4vw,4.5rem)}
+    .hero-eyebrow{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:4px;color:var(--cyan);
+      margin-bottom:0.75rem;display:flex;align-items:center;gap:12px}
+    .hero-eyebrow::before{content:'';width:32px;height:1px;background:var(--cyan)}
+    .hero-title{font-family:'Orbitron',monospace;font-size:clamp(1.1rem,3vw,2rem);font-weight:900;
+      color:var(--white);line-height:1.2;max-width:900px;text-shadow:0 2px 16px rgba(0,0,0,0.7)}
+    .hero-meta{margin-top:0.75rem;font-size:12px;color:var(--silver);display:flex;gap:1.5rem;flex-wrap:wrap}
+    .hero-meta span{display:flex;align-items:center;gap:6px}
+
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:clamp(2rem,4vw,3.5rem) clamp(1rem,4vw,2rem)}
+
+    /* NEWS ITEMS */
+    .news-item{border:1px solid var(--card-border);border-radius:10px;background:var(--card-bg);
+      margin-bottom:2rem;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s}
+    .news-item:hover{border-color:rgba(0,200,224,0.4);box-shadow:0 0 0 1px rgba(0,200,224,0.2),0 8px 32px -8px rgba(0,200,224,0.25)}
+    .news-header{padding:1.5rem 1.75rem 1rem;border-bottom:1px solid rgba(0,200,224,0.08)}
+    .news-num{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:3px;color:var(--steel);margin-bottom:0.5rem}
+    .news-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.75rem}
+    .tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1.5px;padding:3px 9px;border-radius:3px;
+      border:1px solid rgba(0,200,224,0.35);color:var(--cyan);background:rgba(0,200,224,0.08)}
+    .tag.mfr{border-color:var(--cyan);background:rgba(0,200,224,0.15);font-weight:700}
+    .news-title{font-size:18px;font-weight:700;color:var(--white);line-height:1.3}
+    .news-title-en{font-size:14px;font-weight:400;color:var(--silver);margin-top:0.25rem;line-height:1.4}
+    .news-body{padding:1.25rem 1.75rem}
+    .news-body p{font-size:14px;color:var(--silver);line-height:1.8;margin-bottom:0.75rem}
+    .news-body strong{color:var(--white)}
+    .news-body ul{margin:0.5rem 0 0.75rem 1.25rem}
+    .news-body li{font-size:13.5px;color:var(--silver);line-height:1.7;margin-bottom:0.3rem}
+    .news-body li::marker{color:var(--cyan)}
+
+    /* WHY BOX */
+    .why-box{margin:1rem 0 0;padding:1rem 1.25rem;border-left:3px solid var(--cyan);
+      background:rgba(0,200,224,0.06);border-radius:0 6px 6px 0}
+    .why-box h4{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--cyan);margin-bottom:0.5rem}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.7;margin:0}
+
+    /* DIVIDER */
+    .section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--cyan-glow),transparent);margin:0.5rem 0 1.5rem}
+
+    /* CTA BOX */
+    .cta-box{position:relative;z-index:1;max-width:960px;margin:0 auto 4rem;padding:0 clamp(1rem,4vw,2rem)}
+    .cta-inner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);
+      border:1px solid var(--cyan);border-radius:12px;padding:2.5rem;text-align:center}
+    .cta-inner h3{font-family:'Orbitron',monospace;font-size:clamp(1rem,2vw,1.4rem);color:var(--white);margin-bottom:0.75rem}
+    .cta-inner p{font-size:14px;color:var(--silver);line-height:1.7;max-width:560px;margin:0 auto 1.5rem}
+    .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);padding:12px 32px;border-radius:999px;
+      font-family:'Orbitron',monospace;font-size:11px;letter-spacing:2px;font-weight:700;text-decoration:none;transition:opacity 0.2s}
+    .cta-btn:hover{opacity:0.85}
+
+    /* FOOTER */
+    footer{position:relative;z-index:1;border-top:1px solid var(--card-border);background:var(--card-bg);padding:clamp(2.5rem,4vw,4rem) 0 2rem}
+    .footer-inner{max-width:960px;margin:0 auto;padding:0 clamp(1rem,4vw,2rem);display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;align-items:start}
+    .footer-brand p{font-size:12px;color:var(--steel);line-height:1.7;margin-top:0.75rem}
+    .footer-col h5{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;color:var(--cyan);margin-bottom:1rem}
+    .footer-col a{display:block;font-size:13px;color:var(--steel);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s}
+    .footer-col a:hover{color:var(--silver)}
+    .footer-bottom{max-width:960px;margin:1.5rem auto 0;padding:1.5rem clamp(1rem,4vw,2rem) 0;
+      border-top:1px solid var(--card-border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+    .footer-copy{font-size:12px;color:var(--steel)}
+    .footer-domain{font-family:'Orbitron',monospace;font-size:12px;color:var(--cyan)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr}.footer-bottom{flex-direction:column}}
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV DESIGN</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư vấn</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span>NGÔN NGỮ / LANGUAGE:</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">TIẾNG VIỆT</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">ENGLISH</button>
+</div>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1763771787035-99c6c28ec78e?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Network server racks illuminated blue — ELV ICT AV Weekly W44 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="hero-eyebrow">BẢN TIN TUẦN · WEEKLY BULLETIN</div>
+    <div class="vi-content">
+      <h1 class="hero-title">ELV/ICT/AV WEEKLY W44 · 29/10/2026<br>Cisco Silicon One G302 · Dialog AI · Schneider EcoCare BMS · Extron AV 2026 · Vietnam Chuyển đổi Số</h1>
+    </div>
+    <div class="en-content" style="display:none">
+      <h1 class="hero-title">ELV/ICT/AV WEEKLY W44 · 29 OCT 2026<br>Cisco Silicon One G302 · Dialog AI Agent · Schneider EcoCare BMS · Extron AV 2026 · Vietnam Digital Transformation</h1>
+    </div>
+    <div class="hero-meta">
+      <span>📅 29 THÁNG 10, 2026</span>
+      <span>✍️ PAUL LE CONSULTANT</span>
+      <span>🏷️ TUẦN 44 / WEEK 44</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- ═══ TIN 1: CISCO OCP 2026 — Silicon One G302 ═══ -->
+  <article class="news-item">
+    <div class="news-header">
+      <div class="news-num">TIN 01 · NEWS 01</div>
+      <div class="news-tags">
+        <span class="tag mfr">CISCO</span>
+        <span class="tag">ICT</span>
+        <span class="tag">AI NETWORKING</span>
+        <span class="tag">DATA CENTER</span>
+      </div>
+      <div class="vi-content">
+        <div class="news-title">Cisco OCP 2026: Silicon One G302 (51.2T, 200G SerDes) + USFP 400Gb/s — Hạ tầng mạng AI thế hệ kế tiếp</div>
+        <div class="news-title-en">Cisco at OCP Global Summit 2026: Silicon One G302 & USFP Ultra-Dense Optics for AI-Scale Networks</div>
+      </div>
+      <div class="en-content" style="display:none">
+        <div class="news-title">Cisco OCP 2026: Silicon One G302 (51.2T, 200G SerDes) + USFP 400Gb/s — Next-Gen AI Network Infrastructure</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tại <strong>OCP Global Summit 2026</strong> (12/10/2026, San Jose, California), Cisco công bố hai đột phá lớn trong lĩnh vực mạng dành cho AI: chip <strong>Silicon One G302</strong> và chuẩn quang mới <strong>USFP 400Gb/s/lane</strong>.</p>
+        <ul>
+          <li><strong>Silicon One G302 (51.2T, 200G SerDes):</strong> chip switch thế hệ mới cho top-of-rack, hỗ trợ cáp quang 1.6T và làm mát chất lỏng trực tiếp vào chip — dự kiến ra mắt trước cuối 2026.</li>
+          <li><strong>Silicon One G300 (102.4T):</strong> đã sẵn sàng cho khách hàng lấy mẫu, hệ thống đầu tiên đang vận chuyển — mật độ cao nhất thị trường.</li>
+          <li><strong>USFP (Ultra-Dense Small Form Factor Pluggable):</strong> module quang 400Gb/s/lane mới cùng NVIDIA — tăng 4× mật độ băng thông và 1.3× hiệu suất năng lượng so với thế hệ 200G. Cisco và NVIDIA sẽ mở chuẩn này qua dự án multi-source cộng đồng.</li>
+          <li><strong>Scale-Across Architecture:</strong> kiến trúc liên kết các AI cluster xuyên data center site hoạt động như một cluster duy nhất, tích hợp Silicon One P200, deep-buffered systems và coherent optics — đang triển khai tại Microsoft và Alibaba.</li>
+          <li><strong>Cisco 8001:</strong> hệ thống quản lý out-of-band chạy SONiC, phiên bản 10G và 1G.</li>
+        </ul>
+        <div class="why-box">
+          <h4>⚡ TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT VIỆT NAM</h4>
+          <p>Silicon One G302 và USFP định hình tiêu chuẩn mạng data center thế hệ tới. Với hạ tầng cloud và AI ngày càng mở rộng tại Việt Nam (data center tăng trưởng 2 chữ số), kiến trúc Scale-Across và SONiC mở ra khả năng thiết kế campus backbone 400G/1.6T hiệu quả chi phí hơn — ảnh hưởng trực tiếp đến BoM và spec ELV/ICT cho dự án data center, tòa nhà thông minh cao cấp.</p>
+        </div>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>At <strong>OCP Global Summit 2026</strong> (Oct 12, San Jose, CA), Cisco made two major announcements for AI networking: the <strong>Silicon One G302</strong> chip and the new <strong>USFP 400Gb/s/lane</strong> optical standard.</p>
+        <ul>
+          <li><strong>Silicon One G302 (51.2T, 200G SerDes):</strong> next-gen top-of-rack switch chip with 1.6T optics support and direct-to-chip liquid cooling — shipping before end of 2026.</li>
+          <li><strong>Silicon One G300 (102.4T):</strong> available for customer sampling; first systems now shipping — highest density on market.</li>
+          <li><strong>USFP (Ultra-Dense SFP):</strong> new 400Gb/s/lane optical module co-developed with NVIDIA — 4× bandwidth density, 1.3× power efficiency vs. 200G generation. Will become open industry specification via multi-source community project.</li>
+          <li><strong>Scale-Across Architecture:</strong> links AI clusters across data center sites to operate as a single cluster, combining Silicon One P200, deep-buffered systems, and coherent optics. Already in production at Microsoft and Alibaba.</li>
+          <li><strong>Cisco 8001:</strong> out-of-band management system running SONiC; available in 10G and 1G versions.</li>
+        </ul>
+        <div class="why-box">
+          <h4>⚡ WHY THIS MATTERS FOR ELV/ICT PROJECTS IN VIETNAM</h4>
+          <p>Silicon One G302 and USFP set the standard for next-generation data center networking. With Vietnam's cloud and AI infrastructure growing at double-digit rates, the Scale-Across architecture and open SONiC ecosystem enable cost-effective 400G/1.6T campus backbone designs — directly impacting BoM and technical specifications for data center and high-end smart building ELV/ICT projects.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══ TIN 2: CISCO WebexOne — Dialog AI Agent ═══ -->
+  <article class="news-item">
+    <div class="news-header">
+      <div class="news-num">TIN 02 · NEWS 02</div>
+      <div class="news-tags">
+        <span class="tag mfr">CISCO</span>
+        <span class="tag">AV</span>
+        <span class="tag">COLLABORATION</span>
+        <span class="tag">AI AGENT</span>
+      </div>
+      <div class="vi-content">
+        <div class="news-title">WebexOne 2026: Dialog AI Agent Platform — Tích hợp Claude + OpenAI MCP vào Webex, RoomOS 27 hỗ trợ 32 ngôn ngữ</div>
+        <div class="news-title-en">WebexOne 2026: Dialog Agentic Harness + Claude/OpenAI MCP Integration, RoomOS 27 in 32 Languages</div>
+      </div>
+      <div class="en-content" style="display:none">
+        <div class="news-title">WebexOne 2026: Dialog AI Agent Platform — Claude + OpenAI MCP in Webex, RoomOS 27 Supports 32 Languages</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Ngày <strong>7/10/2026</strong> tại Austin, Texas, Cisco tổ chức <strong>WebexOne 2026</strong> với loạt công bố về AI agentic cho không gian làm việc — bước chuyển lớn nhất của Webex trong nhiều năm.</p>
+        <ul>
+          <li><strong>Dialog — AI Agentic Harness:</strong> nền tảng mới cho Webex AI Agent, tiếp tục xử lý vấn đề khách hàng <em>sau khi</em> cuộc hội thoại kết thúc, duy trì ngữ cảnh liên tục xuyên kênh (omni-channel continuous context). Ứng dụng trực tiếp cho tổng đài doanh nghiệp và ITSM trong smart building.</li>
+          <li><strong>Claude in Webex (MCP):</strong> AI agent Claude của Anthropic được tích hợp native vào Webex — phân tích dữ liệu, sinh nội dung, thực hiện multi-step tasks trong shared team context. OpenAI ChatGPT cũng nhận Webex context qua MCP integration.</li>
+          <li><strong>Intelligent Workplace:</strong> Cisco Cloud Control kết hợp networking, thiết bị collaboration và không gian vật lý thành một kiến trúc quản lý thống nhất. Workplace Designer (lập kế hoạch không gian trực quan) và Workplace Insights (theo dõi phân tích sử dụng văn phòng).</li>
+          <li><strong>RoomOS 27 (tháng 11/2026):</strong> hệ điều hành mới cho thiết bị phòng họp Cisco — thêm Google Meet native song song Webex/Teams/Zoom, Cisco AI Assistant mở rộng lên 32 ngôn ngữ.</li>
+          <li><strong>Cisco Ceiling Speaker Pro:</strong> loa IP trần thông minh dùng AI điều chỉnh âm thanh theo không gian, kết nối qua một cáp Ethernet duy nhất (PoE).</li>
+        </ul>
+        <div class="why-box">
+          <h4>⚡ TẠI SAO QUAN TRỌNG VỚI DỰ ÁN AV VIỆT NAM</h4>
+          <p>RoomOS 27 và Ceiling Speaker Pro định nghĩa lại hệ thống phòng họp PoE 1-cáp — giảm hạ tầng cáp, chi phí lắp đặt và vận hành cho dự án smart office Việt Nam. Dialog AI agent và tích hợp Claude/OpenAI mở ra thế hệ hệ thống ITSM và tổng đài thông minh cho tòa nhà hạng A — cần xem xét khi thiết kế hệ thống AV/UC cho khách hàng corporate và bệnh viện.</p>
+        </div>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>On <strong>October 7, 2026</strong> in Austin, Texas, Cisco held <strong>WebexOne 2026</strong> with sweeping AI agentic announcements — the biggest transformation for Webex in years.</p>
+        <ul>
+          <li><strong>Dialog — Agentic Harness:</strong> new platform for Webex AI Agent that keeps working on customer issues <em>after</em> the conversation ends, maintaining continuous context across all channels (omni-channel). Direct application for enterprise help desks and ITSM in smart buildings.</li>
+          <li><strong>Claude in Webex (MCP):</strong> Anthropic's Claude AI agent natively integrated into Webex — analyzing data, generating content, executing multi-step tasks within shared team context. OpenAI ChatGPT also gains Webex context via MCP integration.</li>
+          <li><strong>Intelligent Workplace:</strong> Cisco Cloud Control unifies networking, collaboration devices, and physical spaces into one managed architecture. Workplace Designer (visual space planning) and Workplace Insights (office utilization analytics).</li>
+          <li><strong>RoomOS 27 (November 2026):</strong> new OS for Cisco room devices — adds native Google Meet alongside Webex/Teams/Zoom, Cisco AI Assistant expands to 32 languages.</li>
+          <li><strong>Cisco Ceiling Speaker Pro:</strong> AI-powered IP ceiling speaker that adapts audio to the room, connecting via a single Ethernet cable (PoE).</li>
+        </ul>
+        <div class="why-box">
+          <h4>⚡ WHY THIS MATTERS FOR AV PROJECTS IN VIETNAM</h4>
+          <p>RoomOS 27 and Ceiling Speaker Pro redefine the single-cable PoE meeting room — reducing infrastructure, installation cost, and operational complexity for Vietnam smart office projects. Dialog AI and Claude/OpenAI integration open a new generation of intelligent ITSM and enterprise helpdesk systems for Grade-A buildings — worth considering when designing AV/UC systems for corporate and hospital clients.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══ TIN 3: SCHNEIDER ELECTRIC — EcoCare for BMS ═══ -->
+  <article class="news-item">
+    <div class="news-header">
+      <div class="news-num">TIN 03 · NEWS 03</div>
+      <div class="news-tags">
+        <span class="tag mfr">SCHNEIDER ELECTRIC</span>
+        <span class="tag">BMS</span>
+        <span class="tag">SMART BUILDING</span>
+        <span class="tag">AI ANALYTICS</span>
+      </div>
+      <div class="vi-content">
+        <div class="news-title">Schneider Electric ra mắt EcoCare for BMS: Digital Twin AI — tiết kiệm 25% năng lượng, giảm 45% downtime</div>
+        <div class="news-title-en">Schneider Electric Launches EcoCare for BMS: AI Digital Twin — 25% Energy Savings, 45% Less Downtime</div>
+      </div>
+      <div class="en-content" style="display:none">
+        <div class="news-title">Schneider Electric EcoCare for BMS: AI Digital Twin Delivers 25% Energy Savings & 45% Downtime Reduction</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tại <strong>Realcomm IBcon 2026</strong> (2/6/2026, San Diego), <strong>Schneider Electric</strong> giới thiệu <strong>EcoCare for BMS</strong> — gói dịch vụ BMS kỹ thuật số thế hệ mới, tích hợp AI analytics và Digital Twin để chuyển hóa bảo trì từ phản ứng (reactive) sang dự báo (predictive).</p>
+        <ul>
+          <li><strong>Giám sát 24/7 từ xa:</strong> đội vận hành từ xa kết hợp kỹ thuật viên tại chỗ, hỗ trợ không gián đoạn.</li>
+          <li><strong>AI-driven Analytics + Digital Twin:</strong> nhân bản số của toàn bộ hệ thống BMS — phân tích tiêu thụ năng lượng, mức độ tiện nghi cư dân, hiệu suất thiết bị theo thời gian thực.</li>
+          <li><strong>Condition-Based Maintenance:</strong> bảo trì theo trạng thái thực tế của thiết bị, loại bỏ lịch bảo trì cứng nhắc định kỳ.</li>
+          <li><strong>Tích hợp EcoStruxure Building Advisor:</strong> hoạt động song song với phần mềm EcoStruxure hiện có của Schneider.</li>
+          <li><strong>Kết quả thực tế (theo Schneider):</strong> tiết kiệm tới 25% năng lượng, giảm 45% downtime, tăng 30% hiệu suất vận hành, giảm 60% khiếu nại từ cư dân so với bảo trì phản ứng.</li>
+        </ul>
+        <div class="why-box">
+          <h4>⚡ TẠI SAO QUAN TRỌNG VỚI DỰ ÁN BMS VIỆT NAM</h4>
+          <p>EcoCare for BMS đặt ra tiêu chuẩn mới cho hợp đồng bảo trì BMS tòa nhà cao tầng và khu đô thị tại Việt Nam — đặc biệt với xu hướng ESG và green building đang tăng mạnh. Digital Twin + AI analytics là điểm bán kỹ thuật quan trọng khi tư vấn spec BMS cho chủ đầu tư hạng A/B tại TP.HCM và Hà Nội.</p>
+        </div>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>At <strong>Realcomm IBcon 2026</strong> (June 2, 2026, San Diego), <strong>Schneider Electric</strong> launched <strong>EcoCare for BMS</strong> — a next-generation BMS service package integrating AI analytics and Digital Twin technology to shift maintenance from reactive to predictive.</p>
+        <ul>
+          <li><strong>24/7 Remote Monitoring:</strong> remote operations team combined with on-site technicians for continuous support.</li>
+          <li><strong>AI-driven Analytics + Digital Twin:</strong> a digital replica of the entire BMS — real-time insights on energy consumption, occupant comfort, and equipment performance.</li>
+          <li><strong>Condition-Based Maintenance:</strong> maintenance triggered by actual equipment status, eliminating rigid periodic schedules.</li>
+          <li><strong>EcoStruxure Building Advisor Integration:</strong> runs alongside existing Schneider EcoStruxure software.</li>
+          <li><strong>Vendor-reported results:</strong> up to 25% energy savings, 45% less downtime, 30% gain in operational efficiency, 60% fewer occupant complaints vs. reactive maintenance.</li>
+        </ul>
+        <div class="why-box">
+          <h4>⚡ WHY THIS MATTERS FOR BMS PROJECTS IN VIETNAM</h4>
+          <p>EcoCare for BMS sets a new standard for BMS maintenance contracts in high-rise and urban development projects in Vietnam — especially as ESG and green building requirements intensify. Digital Twin + AI analytics is a compelling technical differentiator when specifying BMS for Grade A/B developers in Ho Chi Minh City and Hanoi.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══ TIN 4: EXTRON — 2026 New Products Brochure 2nd Ed ═══ -->
+  <article class="news-item">
+    <div class="news-header">
+      <div class="news-num">TIN 04 · NEWS 04</div>
+      <div class="news-tags">
+        <span class="tag mfr">EXTRON</span>
+        <span class="tag">AV</span>
+        <span class="tag">SIGNAL MANAGEMENT</span>
+        <span class="tag">AV OVER IP</span>
+      </div>
+      <div class="vi-content">
+        <div class="news-title">Extron 2026 New Products Brochure 2nd Ed: Loạt sản phẩm AV mới — DTP, HDMI 2.1 và phân phối tín hiệu thế hệ kế tiếp</div>
+        <div class="news-title-en">Extron 2026 New Products Brochure 2nd Edition: New DTP, HDMI 2.1 Signal Management & AV Distribution Solutions</div>
+      </div>
+      <div class="en-content" style="display:none">
+        <div class="news-title">Extron 2026 New Products Brochure 2nd Edition: New DTP, HDMI 2.1, AV Signal Management & Distribution</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p><strong>Extron Electronics</strong> vừa phát hành <strong>2026 New Products Brochure — Second Edition</strong>, giới thiệu loạt sản phẩm AV mới phục vụ tích hợp hệ thống cho doanh nghiệp, giáo dục, chính phủ và giải trí.</p>
+        <ul>
+          <li><strong>DTP3 Series — AV over Twisted Pair thế hệ 3:</strong> mở rộng phạm vi HDMI 4K/60 qua cáp CAT xứng đáng với tiêu chuẩn mới, giảm độ trễ (ultra-low latency) phù hợp phòng họp và phòng điều khiển.</li>
+          <li><strong>HDMI 2.1 Matrix Switcher:</strong> các ma trận chuyển mạch 8×8 và 16×16 hỗ trợ HDMI 2.1 (48Gbps) + HDR10, đáp ứng màn hình 8K/4K@120Hz — cần thiết cho control room và digital signage cao cấp.</li>
+          <li><strong>XTP II CrossPoint:</strong> cập nhật nền tảng AV switching quy mô lớn, tích hợp USB-C và audio embedding/de-embedding cho họp hybrid.</li>
+          <li><strong>ShareLink 2000 Series Update:</strong> nâng cấp wireless collaboration cho phòng họp BYOD — hỗ trợ Miracast, AirPlay 2, Chromecast đồng thời với bảo mật enterprise.</li>
+          <li><strong>MediaPort 200 (Dante/AES67):</strong> giao diện audio mạng thế hệ mới cho hệ thống âm thanh phân tán, tích hợp DSP onboard.</li>
+        </ul>
+        <div class="why-box">
+          <h4>⚡ TẠI SAO QUAN TRỌNG VỚI DỰ ÁN AV VIỆT NAM</h4>
+          <p>Extron là xương sống tín hiệu AV trong phần lớn dự án văn phòng hạng A, phòng họp và khán phòng đa năng tại Việt Nam. DTP3 và HDMI 2.1 Matrix Switcher mới cần cập nhật vào spec kỹ thuật và BoM ngay — đặc biệt với dự án yêu cầu 8K digital signage hoặc control room IP. ShareLink 2000 xử lý bài toán BYOD hybrid meeting cho khách hàng corporate và bệnh viện.</p>
+        </div>
+      </div>
+      <div class="en-content" style="display:none">
+        <p><strong>Extron Electronics</strong> released its <strong>2026 New Products Brochure — Second Edition</strong>, showcasing new AV solutions for enterprise, education, government, and entertainment integration.</p>
+        <ul>
+          <li><strong>DTP3 Series — 3rd Gen AV over Twisted Pair:</strong> extends HDMI 4K/60 over CAT cable with reduced latency (ultra-low) for meeting rooms and control rooms.</li>
+          <li><strong>HDMI 2.1 Matrix Switcher:</strong> 8×8 and 16×16 matrices supporting HDMI 2.1 (48Gbps) + HDR10, handling 8K/4K@120Hz displays — essential for premium control rooms and digital signage.</li>
+          <li><strong>XTP II CrossPoint:</strong> large-scale AV switching platform update, integrating USB-C and audio embedding/de-embedding for hybrid meetings.</li>
+          <li><strong>ShareLink 2000 Series Update:</strong> upgraded wireless collaboration for BYOD meeting rooms — simultaneous Miracast, AirPlay 2, and Chromecast with enterprise-grade security.</li>
+          <li><strong>MediaPort 200 (Dante/AES67):</strong> next-gen networked audio interface for distributed audio systems, with onboard DSP.</li>
+        </ul>
+        <div class="why-box">
+          <h4>⚡ WHY THIS MATTERS FOR AV PROJECTS IN VIETNAM</h4>
+          <p>Extron is the AV signal backbone in the majority of Grade A office, meeting room, and multi-purpose auditorium projects in Vietnam. DTP3 and the new HDMI 2.1 Matrix Switcher should be updated in technical specs and BoMs immediately — especially for projects requiring 8K digital signage or IP control rooms. ShareLink 2000 addresses the BYOD hybrid meeting challenge for corporate and hospital clients.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══ TIN 5: VIETNAM — Digital Transformation Day 2026 ═══ -->
+  <article class="news-item">
+    <div class="news-header">
+      <div class="news-num">TIN 05 · NEWS 05</div>
+      <div class="news-tags">
+        <span class="tag mfr">VIETNAM</span>
+        <span class="tag">SMART BUILDING</span>
+        <span class="tag">DIGITAL TRANSFORMATION</span>
+        <span class="tag">AI INFRASTRUCTURE</span>
+      </div>
+      <div class="vi-content">
+        <div class="news-title">Vietnam Digital Transformation Day 2026: AI Infrastructure cho Kinh tế Số + Smart Factory miền Nam — Cơ hội ELV/ICT nội địa</div>
+        <div class="news-title-en">Vietnam Digital Transformation Day 2026: AI Infrastructure for Digital Economy + Southern Smart Factory — ELV/ICT Opportunity</div>
+      </div>
+      <div class="en-content" style="display:none">
+        <div class="news-title">Vietnam Digital Transformation Day 2026: AI Infrastructure Drives Digital Economy & Southern Smart Factory Growth</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tháng 10/2026, Việt Nam chứng kiến hai sự kiện lớn thúc đẩy nhu cầu hạ tầng ELV/ICT nội địa: <strong>National Digital Transformation Day 2026</strong> và làn sóng phát triển <strong>smart factory</strong> tại các tỉnh phía Nam.</p>
+        <ul>
+          <li><strong>National Digital Transformation Day 2026:</strong> trọng tâm là AI Infrastructure cho nền kinh tế số thế hệ tiếp theo — Chính phủ thúc đẩy đầu tư vào hạ tầng ICT cho các ngành y tế, giáo dục, cơ quan hành chính công và khu công nghiệp.</li>
+          <li><strong>Smart Factory miền Nam:</strong> dự án chứng minh hiệu quả triển khai smart factory tại các tỉnh phía Nam — hệ thống BMS/SCADA tích hợp, giám sát năng lượng, camera AI, mạng công nghiệp (OT network) và ELV tích hợp.</li>
+          <li><strong>Secutech Vietnam 2026 (Hà Nội):</strong> triển lãm an ninh, an toàn và hạ tầng thông minh tích hợp — 480+ thương hiệu quốc tế, diện tích 13,000m²; tập trung vào AI camera, fire safety robot và hệ thống ELV hội tụ.</li>
+          <li><strong>Vietnam ICT GDP impact:</strong> tốc độ tăng trưởng GDP 8%+ kéo theo nhu cầu đầu tư ELV/ICT tòa nhà văn phòng hạng A, bệnh viện, trường học và khu đô thị mới tăng mạnh Q4/2026.</li>
+        </ul>
+        <div class="why-box">
+          <h4>⚡ TẠI SAO QUAN TRỌNG VỚI NGƯỜI THIẾT KẾ ELV/ICT TẠI VIỆT NAM</h4>
+          <p>Làn sóng số hóa và smart factory ở Việt Nam đang tạo ra nhu cầu thực tế cho hệ thống ELV/ICT tích hợp — từ cáp có cấu trúc, camera AI, fire alarm đến BMS và mạng công nghiệp OT. Đây là cơ hội trực tiếp cho tư vấn và nhà tích hợp ELV/ICT tại TP.HCM, Hà Nội, Bình Dương và Đồng Nai trong H1/2027. Cần cập nhật spec và BoM theo tiêu chuẩn mới nhất từ các hãng để cạnh tranh hiệu quả.</p>
+        </div>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>In October 2026, Vietnam witnessed two major events driving domestic ELV/ICT infrastructure demand: <strong>National Digital Transformation Day 2026</strong> and the growing <strong>smart factory</strong> wave across southern provinces.</p>
+        <ul>
+          <li><strong>National Digital Transformation Day 2026:</strong> focus on AI Infrastructure for the next-generation digital economy — the government is driving ICT infrastructure investment across healthcare, education, public administration, and industrial zones.</li>
+          <li><strong>Southern Smart Factory:</strong> pilot projects proving smart factory implementation effectiveness in southern provinces — integrated BMS/SCADA, energy monitoring, AI cameras, industrial OT networks, and converged ELV systems.</li>
+          <li><strong>Secutech Vietnam 2026 (Hanoi):</strong> showcase of integrated security, safety, and smart infrastructure — 480+ international brands, 13,000m²; focused on AI cameras, fire safety robots, and converged ELV systems.</li>
+          <li><strong>Vietnam ICT GDP impact:</strong> 8%+ GDP growth driving strong demand for Grade A office, hospital, school, and new urban development ELV/ICT investment in Q4/2026.</li>
+        </ul>
+        <div class="why-box">
+          <h4>⚡ WHY THIS MATTERS FOR ELV/ICT DESIGNERS IN VIETNAM</h4>
+          <p>Vietnam's digitalization and smart factory wave is creating real demand for integrated ELV/ICT systems — from structured cabling, AI cameras, and fire alarms to BMS and industrial OT networks. This is a direct opportunity for ELV/ICT consultants and system integrators in Ho Chi Minh City, Hanoi, Binh Duong, and Dong Nai heading into H1/2027. Update specs and BoMs to the latest standards from leading manufacturers to compete effectively.</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<!-- CTA BOX -->
+<div class="cta-box">
+  <div class="cta-inner">
+    <div class="vi-content">
+      <h3>CẦN TƯ VẤN THIẾT KẾ ELV/ICT/AV?</h3>
+      <p>Paul Le — ELV/ICT/AV Design Director với kinh nghiệm thiết kế hàng chục dự án thực tế tại Việt Nam. Từ RFP, BoM, spec kỹ thuật đến tư vấn tích hợp SI — liên hệ để được hỗ trợ.</p>
+    </div>
+    <div class="en-content" style="display:none">
+      <h3>NEED ELV/ICT/AV DESIGN CONSULTING?</h3>
+      <p>Paul Le — ELV/ICT/AV Design Director with hands-on experience across dozens of real projects in Vietnam. From RFP, BoM, technical specs to SI integration consulting — get in touch.</p>
+    </div>
+    <a href="mailto:contact@elvconsultant.com" class="cta-btn">LIÊN HỆ NGAY / CONTACT</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" style="margin-bottom:0.75rem;display:inline-flex">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+        </svg>
+        <div style="margin-left:10px"><span class="logo-text">PAUL LE</span><span class="logo-sub">ELV · ICT · AV CONSULTANT</span></div>
+      </a>
+      <p>ELV/ICT/AV Design Director tại Duy Hoa Phat Corporation &amp; HBP Project Management. Tư vấn thiết kế, RFP, BoM, tích hợp hệ thống tại Việt Nam.</p>
+    </div>
+    <div class="footer-col">
+      <h5>CHUYÊN MỤC</h5>
+      <a href="/blog/">Tất cả bài viết</a>
+      <a href="/blog/#cabling">Cabling &amp; Infrastructure</a>
+      <a href="/blog/#ict">ICT Networking</a>
+      <a href="/blog/#security">ELV &amp; Security</a>
+      <a href="/blog/#av">AV &amp; Collaboration</a>
+      <a href="/blog/#bms">BMS &amp; Smart Building</a>
+    </div>
+    <div class="footer-col">
+      <h5>KẾT NỐI</h5>
+      <a href="https://elvconsultant.com" target="_blank" rel="noopener">elvconsultant.com</a>
+      <a href="https://www.facebook.com/elvconsultant.com" target="_blank" rel="noopener">Facebook Page</a>
+      <a href="https://x.com/PLELVCONSULTANT" target="_blank" rel="noopener">X @PLELVCONSULTANT</a>
+      <a href="/#contact">Tư vấn dự án</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Paul Le Consultant. Bảo lưu mọi quyền.</span>
+    <span class="footer-domain">ELVCONSULTANT.COM</span>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
