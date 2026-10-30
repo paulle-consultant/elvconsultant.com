@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly W44 — 30 Oct 2026 | Cisco · Axis · Honeywell · Mitsubishi · Vietnam Data Center | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 44 — 5 tin nổi bật: Cisco Agentic Webex · Axis ISC West 2026 · Honeywell NOTIFIER INSPIRE · Mitsubishi Electric Smart Building Berlin · Vietnam Data Center Boom 2026.">
+  <meta name="keywords" content="Cisco Webex AI, Axis ISC West 2026, Honeywell NOTIFIER INSPIRE, Mitsubishi Electric BMS, Vietnam data center 2026, ELV ICT AV weekly, Paul Le Consultant">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-10-30-elv-ict-av-weekly.html">
+  <meta property="og:title" content="ELV/ICT/AV Weekly W44 | Cisco · Axis · Honeywell · Mitsubishi · Vietnam DC">
+  <meta property="og:description" content="5 tin nổi bật tuần 44: Cisco Agentic Webex · Axis ISC West · Honeywell NOTIFIER INSPIRE · Mitsubishi BMS Berlin · Vietnam Data Center $2.1B">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1643633927981-8c50f1746dde?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --bg:#07111F;
+      --card-bg:#101E30;
+      --card-border:#1E3550;
+      --cyan:#00C8E0;
+      --cyan-dim:rgba(0,200,224,0.10);
+      --cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;
+      --white:#F0F4F8;
+      --steel:#4A6280;
+      --navy:#1B2A4A;
+      --navy-deep:#0D1B35;
+      --grid-line:rgba(0,200,224,0.08);
+    }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--white); overflow-x:hidden; line-height:1.7; }
+
+    /* GRID BG */
+    .grid-bg {
+      position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;
+    }
+    body::before {
+      content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
+      background:radial-gradient(900px 600px at -10% 20%,rgba(0,200,224,.07),transparent 60%),
+                 radial-gradient(900px 700px at 110% 70%,rgba(27,42,74,.55),transparent 60%);
+    }
+
+    /* NAV */
+    nav {
+      position:sticky; top:0; z-index:100;
+      background:rgba(7,17,31,0.96); border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+      padding:0 clamp(1rem,4vw,4.5rem); display:flex; align-items:center; justify-content:space-between; height:68px;
+    }
+    .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+    .logo-text { font-family:'Orbitron',monospace; font-size:15px; font-weight:700; color:var(--white); letter-spacing:1px; }
+    .logo-sub { font-size:9px; color:var(--cyan); letter-spacing:2px; display:block; margin-top:-2px; }
+    .nav-links { display:flex; gap:clamp(1.25rem,2vw,2.25rem); list-style:none; }
+    .nav-links a { color:var(--silver); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:0.5px; transition:color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color:var(--cyan); }
+    .nav-cta {
+      background:transparent; border:1px solid var(--cyan); color:var(--cyan);
+      padding:8px 20px; border-radius:999px; font-size:13px; font-weight:500;
+      cursor:pointer; font-family:'Inter',sans-serif; letter-spacing:0.5px;
+      transition:all 0.2s; text-decoration:none;
+    }
+    .nav-cta:hover { background:var(--cyan); color:var(--bg); }
+    @media(max-width:768px) { .nav-links { display:none; } nav { padding:0 1rem; } }
+
+    /* LANG BAR */
+    .lang-bar {
+      position:relative; z-index:2;
+      background:rgba(16,30,48,0.8); border-bottom:1px solid var(--card-border);
+      padding:0.6rem clamp(1rem,4vw,4.5rem); display:flex; align-items:center; gap:0.75rem;
+    }
+    .lang-label { font-family:'Orbitron',monospace; font-size:9px; letter-spacing:2px; color:var(--steel); }
+    .lang-btn {
+      font-family:'Orbitron',monospace; font-size:10px; letter-spacing:1.5px; font-weight:700;
+      padding:4px 14px; border-radius:4px; border:1px solid var(--card-border);
+      background:transparent; color:var(--silver); cursor:pointer; transition:all 0.2s;
+    }
+    .lang-btn.active { background:var(--cyan); color:var(--bg); border-color:var(--cyan); }
+    .lang-btn:hover:not(.active) { border-color:var(--cyan); color:var(--cyan); }
+
+    /* ARTICLE HERO */
+    .article-hero {
+      position:relative; z-index:1; height:clamp(320px,40vw,520px); overflow:hidden;
+    }
+    .article-hero img {
+      width:100%; height:100%; object-fit:cover; object-position:center;
+      filter:brightness(0.6) saturate(0.8);
+    }
+    .article-hero-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(180deg,rgba(7,17,31,0.2) 0%,rgba(7,17,31,0.5) 40%,rgba(7,17,31,0.92) 100%);
+    }
+    .article-hero-content {
+      position:absolute; bottom:0; left:0; right:0;
+      padding:clamp(1.5rem,4vw,3rem) clamp(1rem,4vw,4.5rem);
+    }
+    .article-eyebrow {
+      font-family:'Orbitron',monospace; font-size:9px; letter-spacing:4px; color:var(--cyan);
+      margin-bottom:0.75rem; display:flex; align-items:center; gap:10px;
+    }
+    .article-eyebrow::before { content:''; width:24px; height:1px; background:var(--cyan); }
+    .article-hero h1 {
+      font-family:'Orbitron',monospace;
+      font-size:clamp(1.2rem,3.2vw,2.4rem); font-weight:900;
+      color:var(--white); line-height:1.15; max-width:800px;
+      text-shadow:0 2px 16px rgba(0,0,0,0.7);
+    }
+    .article-meta { margin-top:0.75rem; display:flex; flex-wrap:wrap; gap:1rem; align-items:center; }
+    .article-date { font-family:'Orbitron',monospace; font-size:10px; letter-spacing:2px; color:var(--cyan); }
+    .article-author { font-size:12px; color:var(--silver); }
+    .article-badge {
+      font-family:'Orbitron',monospace; font-size:8px; font-weight:700; letter-spacing:1.5px;
+      background:var(--cyan); color:var(--bg); padding:3px 10px; border-radius:3px;
+    }
+
+    /* MAIN CONTENT */
+    main { position:relative; z-index:1; max-width:900px; margin:0 auto; padding:3rem clamp(1rem,4vw,2rem) 4rem; }
+
+    /* NEWS ITEMS */
+    .news-item {
+      background:var(--card-bg); border:1px solid var(--card-border); border-radius:10px;
+      padding:2rem; margin-bottom:1.5rem; position:relative; overflow:hidden;
+      transition:border-color 0.3s, box-shadow 0.3s;
+    }
+    .news-item::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:2px;
+      background:linear-gradient(90deg, var(--cyan), transparent);
+    }
+    .news-item:hover { border-color:rgba(0,200,224,0.4); box-shadow:0 0 0 1px rgba(0,200,224,0.2), 0 8px 32px -8px rgba(0,200,224,0.3); }
+    .news-number {
+      position:absolute; top:1.5rem; right:1.75rem;
+      font-family:'Orbitron',monospace; font-size:clamp(2.5rem,4vw,3.5rem); font-weight:900;
+      color:rgba(0,200,224,0.07); letter-spacing:-2px; line-height:1;
+    }
+    .news-tags { display:flex; gap:0.4rem; flex-wrap:wrap; margin-bottom:1rem; }
+    .news-tag {
+      font-family:'Orbitron',monospace; font-size:9px; letter-spacing:1.5px; font-weight:700;
+      padding:3px 10px; border-radius:3px; border:1px solid rgba(0,200,224,0.35);
+      color:var(--cyan); background:rgba(0,200,224,0.08); transition:all 0.2s;
+    }
+    .news-tag.brand { background:rgba(0,200,224,0.15); border-color:rgba(0,200,224,0.5); }
+    .news-title-vi {
+      font-family:'Orbitron',monospace; font-size:clamp(0.95rem,1.8vw,1.15rem); font-weight:700;
+      color:var(--white); line-height:1.35; margin-bottom:0.5rem;
+    }
+    .news-title-en {
+      font-size:clamp(0.9rem,1.5vw,1.05rem); font-weight:600;
+      color:var(--silver); line-height:1.35; margin-bottom:1.25rem;
+      font-style:italic;
+    }
+    .news-body { font-size:14px; color:var(--silver); line-height:1.8; }
+    .news-body p { margin-bottom:0.75rem; }
+    .news-body p:last-child { margin-bottom:0; }
+    .news-source {
+      margin-top:1rem; padding-top:0.75rem; border-top:1px solid var(--card-border);
+      font-size:12px; color:var(--steel);
+    }
+    .news-source a { color:var(--cyan); text-decoration:none; transition:opacity 0.2s; }
+    .news-source a:hover { opacity:0.8; text-decoration:underline; }
+
+    /* WHY BOX */
+    .why-box {
+      margin-top:1.25rem; padding:1rem 1.25rem;
+      background:rgba(0,200,224,0.06); border:1px solid rgba(0,200,224,0.18);
+      border-left:3px solid var(--cyan); border-radius:6px;
+    }
+    .why-box-title {
+      font-family:'Orbitron',monospace; font-size:9px; letter-spacing:2px; color:var(--cyan);
+      margin-bottom:0.6rem; display:flex; align-items:center; gap:8px;
+    }
+    .why-box-title::before { content:'▸'; }
+    .why-box-body { font-size:13px; color:var(--silver); line-height:1.75; }
+    .why-box-body strong { color:var(--white); }
+
+    /* DIAGRAM BOX */
+    .diagram-box {
+      margin-top:1.25rem; padding:1.25rem;
+      background:var(--navy-deep); border:1px solid var(--card-border);
+      border-radius:6px; font-family:monospace; font-size:11.5px;
+      color:var(--silver); line-height:1.9; overflow-x:auto;
+    }
+    .diagram-box .diagram-title {
+      font-family:'Orbitron',monospace; font-size:8px; letter-spacing:2px;
+      color:var(--steel); margin-bottom:0.75rem;
+    }
+    .diagram-box .c { color:var(--cyan); }
+    .diagram-box .w { color:var(--white); }
+    .diagram-box .g { color:#4CAF50; }
+
+    /* CTA BOX */
+    .cta-box {
+      background:linear-gradient(135deg, rgba(0,200,224,0.08), rgba(27,42,74,0.6));
+      border:1px solid rgba(0,200,224,0.3); border-radius:10px;
+      padding:2.5rem; text-align:center; margin-top:3rem;
+    }
+    .cta-box h3 {
+      font-family:'Orbitron',monospace; font-size:1.1rem; font-weight:700;
+      color:var(--white); margin-bottom:0.75rem;
+    }
+    .cta-box p { font-size:14px; color:var(--silver); line-height:1.7; margin-bottom:1.5rem; }
+    .cta-btn {
+      display:inline-block; padding:12px 32px; background:var(--cyan); color:var(--bg);
+      font-family:'Orbitron',monospace; font-size:11px; font-weight:700; letter-spacing:2px;
+      border-radius:6px; text-decoration:none; transition:all 0.3s;
+      box-shadow:0 4px 20px rgba(0,200,224,0.35);
+    }
+    .cta-btn:hover { background:#00e5ff; box-shadow:0 6px 28px rgba(0,200,224,0.5); transform:translateY(-2px); }
+
+    /* FOOTER */
+    footer {
+      position:relative; z-index:1; border-top:1px solid var(--card-border);
+      background:var(--card-bg); padding:clamp(2rem,4vw,3.5rem) clamp(1rem,4vw,4.5rem) 2rem;
+    }
+    .footer-inner { max-width:900px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr 1fr; gap:2rem; align-items:start; }
+    .footer-brand p { font-size:12px; color:var(--steel); line-height:1.7; margin-top:0.6rem; }
+    .footer-col h5 { font-family:'Orbitron',monospace; font-size:9px; letter-spacing:2px; color:var(--cyan); margin-bottom:0.85rem; }
+    .footer-col a { display:block; font-size:13px; color:var(--steel); text-decoration:none; margin-bottom:0.35rem; transition:color 0.2s; }
+    .footer-col a:hover { color:var(--silver); }
+    .footer-bottom { max-width:900px; margin:1.5rem auto 0; padding-top:1.25rem; border-top:1px solid var(--card-border); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; }
+    .footer-copy { font-size:11px; color:var(--steel); }
+    .footer-domain { font-family:'Orbitron',monospace; font-size:11px; color:var(--cyan); }
+    @media(max-width:640px) { .footer-inner { grid-template-columns:1fr; } }
+
+    /* BACK LINK */
+    .back-link { display:inline-flex; align-items:center; gap:8px; color:var(--steel); font-size:13px; text-decoration:none; margin-bottom:2rem; transition:color 0.2s; }
+    .back-link:hover { color:var(--cyan); }
+    .back-link::before { content:'←'; }
+
+    /* Section divider */
+    .section-label {
+      font-family:'Orbitron',monospace; font-size:9px; letter-spacing:3px; color:var(--steel);
+      text-align:center; margin:2.5rem 0 1.5rem; display:flex; align-items:center; gap:1rem;
+    }
+    .section-label::before, .section-label::after { content:''; flex:1; height:1px; background:var(--card-border); }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV DESIGN</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư Vấn</a>
+</nav>
+
+<!-- LANGUAGE BAR -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">🇻🇳 TIẾNG VIỆT</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇺🇸 ENGLISH</button>
+</div>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1643633927981-8c50f1746dde?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Smart building technology illuminated — ELV ICT AV Weekly W44 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="article-eyebrow">
+      <span class="vi-content">BẢN TIN ELV/ICT/AV · TUẦN 44</span>
+      <span class="en-content" style="display:none">ELV/ICT/AV WEEKLY BULLETIN · WEEK 44</span>
+    </div>
+    <h1>
+      <span class="vi-content">Cisco Agentic Webex · Axis ISC West 2026 · Honeywell NOTIFIER INSPIRE · Mitsubishi Smart Building · Vietnam Data Center Boom</span>
+      <span class="en-content" style="display:none">Cisco Agentic Webex · Axis ISC West 2026 · Honeywell NOTIFIER INSPIRE · Mitsubishi Smart Building · Vietnam Data Center Boom</span>
+    </h1>
+    <div class="article-meta">
+      <span class="article-date">THỨ SÁU · 30 THÁNG 10, 2026</span>
+      <span class="article-author">by Paul Le Consultant</span>
+      <span class="article-badge">W44 · 2026</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <a href="/blog/" class="back-link">Tất cả bài viết / All Posts</a>
+
+  <div class="section-label">5 TIN NỔI BẬT TUẦN NÀY / TOP 5 STORIES THIS WEEK</div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- NEWS 1: CISCO -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="news-item">
+    <div class="news-number">01</div>
+    <div class="news-tags">
+      <span class="news-tag brand">CISCO</span>
+      <span class="news-tag">AI AGENT</span>
+      <span class="news-tag">COLLABORATION</span>
+      <span class="news-tag">UCaaS</span>
+    </div>
+    <div class="vi-content">
+      <div class="news-title-vi">Cisco Công Bố Tính Năng Agentic AI Mới Trên Webex, Workplace & CX — Tự Động Hóa Hội Họp & Giao Tiếp Doanh Nghiệp</div>
+      <div class="news-body">
+        <p>Cisco vừa ra mắt một thế hệ tính năng <strong>Agentic AI</strong> mới trên toàn bộ hệ sinh thái Webex, bao gồm hội họp (Meetings), tin nhắn (Messaging), gọi điện (Calling) và quản lý khách hàng (Customer Experience – CX). Các AI agent mới có khả năng tự xử lý các tác vụ phức tạp xuyên suốt cuộc họp, duy trì ngữ cảnh liên tục và chuyển giao thông tin mượt mà giữa các kênh giao tiếp.</p>
+        <p>Điểm nổi bật bao gồm: tóm tắt và giao nhiệm vụ sau cuộc họp tự động, AI agent xử lý yêu cầu khách hàng không cần chuyển tiếp thủ công, và khả năng tích hợp với hệ thống CRM/ERP thông qua API mở. Cisco xác nhận các tính năng này sẽ tích hợp trực tiếp vào phòng họp thông qua RoomOS và các thiết bị phần cứng Webex.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-box-title">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN AV/ICT VIỆT NAM</div>
+        <div class="why-box-body">
+          Các dự án <strong>phòng họp thông minh (Smart Meeting Room)</strong> và hạ tầng UCaaS đang tăng mạnh tại Việt Nam. Tính năng Agentic AI của Cisco Webex tác động trực tiếp đến thiết kế phòng họp: cần đảm bảo mic array, camera AI và màn hình tương tác đủ tương thích với nền tảng RoomOS để khai thác đầy đủ AI agent. <strong>Lưu ý khi thiết kế: ưu tiên Cisco-certified AV devices (Webex Board, Desk Pro, Room Bar Pro)</strong> cho các phòng họp hạng A yêu cầu AI meeting intelligence.
+        </div>
+      </div>
+    </div>
+    <div class="en-content" style="display:none">
+      <div class="news-title-en">Cisco Unveils New Agentic AI Experiences Across Webex, Workplace & Customer Experience (CX)</div>
+      <div class="news-body">
+        <p>Cisco unveiled a new generation of <strong>Agentic AI</strong> capabilities across its entire Webex ecosystem — spanning Meetings, Messaging, Calling, and Customer Experience (CX). The new AI agents can autonomously handle complex tasks, maintain continuous context across sessions, and seamlessly transfer information across communication channels without human intervention.</p>
+        <p>Key highlights include automatic post-meeting summarization and action item assignment, AI agents that resolve customer requests end-to-end without manual escalation, and open API integration with CRM/ERP systems. Cisco confirmed these capabilities integrate directly into meeting rooms via RoomOS and Webex hardware devices.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-box-title">WHY IT MATTERS FOR ELV/AV PROJECTS IN VIETNAM</div>
+        <div class="why-box-body">
+          <strong>Smart Meeting Room</strong> and UCaaS infrastructure projects are rapidly growing across Vietnam's enterprise, hospitality, and government sectors. Cisco Webex's Agentic AI directly impacts AV room design — specifiers must ensure mic arrays, AI cameras, and interactive displays are fully RoomOS-compatible to unlock AI agent functionality. <strong>Design note: prioritize Cisco-certified AV devices (Webex Board, Desk Pro, Room Bar Pro)</strong> for Grade-A meeting spaces requiring AI meeting intelligence.
+        </div>
+      </div>
+    </div>
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ / SYSTEM PRINCIPLE DIAGRAM — CISCO AGENTIC AI MEETING ROOM</div>
+<span class="c">  ┌─────────────────────────────────────────────────────────────────┐</span>
+<span class="c">  │              CISCO WEBEX AGENTIC AI ARCHITECTURE               │</span>
+<span class="c">  └─────────────────────────────────────────────────────────────────┘</span>
+
+<span class="w">  ROOM LAYER</span>               <span class="w">CLOUD LAYER</span>               <span class="w">ENTERPRISE LAYER</span>
+  ┌──────────────┐          ┌──────────────────┐        ┌──────────────────┐
+  │ Webex Board  │          │  Cisco AI Cloud  │        │  CRM / ERP       │
+  │ Room Bar Pro │◄────────►│  AI Agent Engine │◄──────►│  (Salesforce,    │
+  │ Desk Pro     │          │  - Context Store │        │   ServiceNow...) │
+  └──────┬───────┘          │  - Task Router   │        └──────────────────┘
+         │PoE+              │  - Meeting Bot   │
+  ┌──────▼───────┐          └───────┬──────────┘
+  │  Cisco       │                  │ HTTPS/WebRTC
+  │  PoE Switch  │          ┌───────▼──────────┐
+  │  (Catalyst)  │          │  Webex Control   │
+  └──────────────┘          │  Hub (Admin)     │
+                             └──────────────────┘
+  <span class="g">  Giao thức: SIP/H.323 → RoomOS 27+, TLS 1.3, E2E Encryption</span>
+    </div>
+    <div class="news-source vi-content">
+      Nguồn: <a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-unveils-new-agentic-collaboration-experiences.html" target="_blank" rel="noopener">Cisco Newsroom — Cisco Unveils New Agentic Collaboration Experiences (Oct 2026)</a>
+    </div>
+    <div class="news-source en-content" style="display:none">
+      Source: <a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-unveils-new-agentic-collaboration-experiences.html" target="_blank" rel="noopener">Cisco Newsroom — Cisco Unveils New Agentic Collaboration Experiences (Oct 2026)</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- NEWS 2: AXIS COMMUNICATIONS -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="news-item">
+    <div class="news-number">02</div>
+    <div class="news-tags">
+      <span class="news-tag brand">AXIS</span>
+      <span class="news-tag">SECURITY</span>
+      <span class="news-tag">IP CAMERA</span>
+      <span class="news-tag">AI ANALYTICS</span>
+    </div>
+    <div class="vi-content">
+      <div class="news-title-vi">Axis Communications Ra Mắt Giải Pháp Bảo Mật Hợp Nhất Thế Hệ Mới Tại ISC West 2026 — Camera AI Ngoài Trời & Kiểm Soát Ra Vào Thống Nhất</div>
+      <div class="news-body">
+        <p>Tại triển lãm ISC West 2026, <strong>Axis Communications</strong> giới thiệu làn sóng tiếp theo của các giải pháp bảo mật hợp nhất (Unified Security Solutions), bao gồm thế hệ camera AI ngoài trời mới với global shutter, phân tích video cạnh (edge AI) nâng cao, và khả năng tích hợp liền mạch với hệ sinh thái kiểm soát ra vào IP (IP Access Control).</p>
+        <p>Các sản phẩm nổi bật tại ISC West 2026: camera dome mới với chip ARTPEC-9, radar 360° phát hiện chuyển động đến 200m, và nền tảng AXIS Camera Station Pro hỗ trợ đa site cloud-managed. Axis cũng mở rộng chương trình tích hợp với Bosch, Genetec và Milestone.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-box-title">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV VIỆT NAM</div>
+        <div class="why-box-body">
+          Giải pháp <strong>Unified Security</strong> của Axis (camera + access control + radar trên một nền tảng) rất phù hợp với xu hướng tích hợp ELV tại Việt Nam, đặc biệt cho <strong>khu đô thị, tòa nhà văn phòng hạng A, sân bay và khu công nghiệp</strong>. Camera với global shutter giúp nhận dạng biển số xe (LPR) chính xác hơn ở tốc độ cao — nhu cầu đang tăng mạnh tại các dự án bãi đỗ xe thông minh và cổng vào khu dân cư.
+        </div>
+      </div>
+    </div>
+    <div class="en-content" style="display:none">
+      <div class="news-title-en">Axis Communications Introduces Next Wave of Unified Security Solutions at ISC West 2026 — AI Outdoor Cameras & Integrated Access Control</div>
+      <div class="news-body">
+        <p>At ISC West 2026, <strong>Axis Communications</strong> unveiled its next generation of Unified Security Solutions, featuring new AI outdoor cameras with global shutters, advanced edge AI video analytics, and seamless integration across IP access control and surveillance ecosystems.</p>
+        <p>Key highlights at ISC West 2026 include: new dome cameras with ARTPEC-9 chip, 360° radar detecting motion up to 200m, and AXIS Camera Station Pro with multi-site cloud management. Axis also expanded integration partnerships with Bosch, Genetec, and Milestone Systems.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-box-title">WHY IT MATTERS FOR ELV PROJECTS IN VIETNAM</div>
+        <div class="why-box-body">
+          Axis's <strong>Unified Security</strong> approach (camera + access control + radar on one platform) aligns perfectly with Vietnam's ELV integration trend, especially for <strong>Grade-A office buildings, airports, urban developments, and industrial zones</strong>. Cameras with global shutter improve license plate recognition (LPR) accuracy at high vehicle speeds — a key requirement growing in smart parking and residential gate projects across Vietnam.
+        </div>
+      </div>
+    </div>
+    <div class="diagram-box">
+      <div class="diagram-title">SƠGIẢI PHÁP / SOLUTION OVERVIEW — AXIS UNIFIED SECURITY</div>
+<span class="c">  ┌─────────────────────────── AXIS UNIFIED SECURITY PLATFORM ──────────────────────────┐</span>
+<span class="c">  │                                                                                      │</span>
+<span class="w">  │  PERIMETER LAYER           BUILDING LAYER              MANAGEMENT LAYER             │</span>
+<span class="c">  │  ┌───────────────┐         ┌─────────────────┐        ┌──────────────────────────┐ │</span>
+<span class="c">  │  │ 360° Radar    │         │ ARTPEC-9 Cameras│        │  AXIS Camera Station Pro │ │</span>
+<span class="c">  │  │ (200m detect) │───────► │ Global Shutter  │───────►│  - Multi-site cloud mgmt │ │</span>
+<span class="c">  │  │ D2124-VE      │         │ Edge AI LPR     │        │  - AI Event Management   │ │</span>
+<span class="c">  │  └───────────────┘         └─────────────────┘        │  - Open API (REST/ONVIF) │ │</span>
+<span class="c">  │                                                        └──────────────────────────┘ │</span>
+<span class="c">  │  ┌───────────────┐         ┌─────────────────┐                                     │</span>
+<span class="c">  │  │ IP Access     │         │ Video Analytics  │        PARTNER INTEGRATIONS         │</span>
+<span class="c">  │  │ Control A8207 │         │ AXIS Video Guard │        Genetec · Milestone · Bosch  │</span>
+<span class="c">  │  │ OSDP / Wiegand│─────────│ Face Recognition │                                     │</span>
+<span class="c">  │  └───────────────┘         └─────────────────┘                                     │</span>
+<span class="c">  └──────────────────────────────────────────────────────────────────────────────────────┘</span>
+<span class="g">  Giao thức: ONVIF Profile S/G/T, HTTPS, TLS 1.3, IEEE 802.1X</span>
+    </div>
+    <div class="news-source vi-content">
+      Nguồn: <a href="https://newsroom.axis.com/en-us/press-release/isc-west-2026" target="_blank" rel="noopener">Axis Communications Newsroom — ISC West 2026 Press Release</a>
+    </div>
+    <div class="news-source en-content" style="display:none">
+      Source: <a href="https://newsroom.axis.com/en-us/press-release/isc-west-2026" target="_blank" rel="noopener">Axis Communications Newsroom — ISC West 2026 Press Release</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- NEWS 3: HONEYWELL / NOTIFIER -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="news-item">
+    <div class="news-number">03</div>
+    <div class="news-tags">
+      <span class="news-tag brand">HONEYWELL</span>
+      <span class="news-tag brand">NOTIFIER</span>
+      <span class="news-tag">FIRE ALARM</span>
+      <span class="news-tag">LIFE SAFETY</span>
+    </div>
+    <div class="vi-content">
+      <div class="news-title-vi">Honeywell Ra Mắt NOTIFIER INSPIRE — Nền Tảng An Toàn Sự Sống Kết Nối AI, Kiểm Soát Khói Nâng Cao & Giám Sát Từ Xa</div>
+      <div class="news-body">
+        <p>Honeywell mở rộng danh mục phòng cháy chữa cháy với <strong>NOTIFIER INSPIRE</strong> — nền tảng an toàn sự sống thế hệ mới tích hợp AI phát hiện sớm, kết nối đám mây và hệ thống kiểm soát khói nâng cao. INSPIRE được thiết kế để tối ưu quy trình sơ tán và hội tụ với hạ tầng BMS/Building IoT.</p>
+        <p>Điểm nổi bật: bảng điều khiển NFS3-640 thế hệ mới với màn hình cảm ứng 10", giao thức SigNET thế hệ tiếp theo, tích hợp trực tiếp với Honeywell Building Technologies và khả năng giám sát từ xa qua đám mây với cảnh báo real-time cho đội bảo trì và đội chữa cháy.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-box-title">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN PCCC VIỆT NAM</div>
+        <div class="why-box-body">
+          Với các dự án tuân thủ <strong>TCVN 5738, TCVN 3890, NFPA 72</strong>, NOTIFIER INSPIRE mang đến giải pháp giám sát từ xa theo thời gian thực — đặc biệt cần thiết cho <strong>bệnh viện, trường học, tòa nhà cao tầng và khu công nghiệp</strong>. Tích hợp BMS/Cloud giúp tối ưu chi phí bảo trì và tuân thủ tiêu chuẩn kiểm tra định kỳ. <strong>Lưu ý: NOTIFIER hiện có phân phối tại Việt Nam qua hệ thống Honeywell Building Technologies.</strong>
+        </div>
+      </div>
+    </div>
+    <div class="en-content" style="display:none">
+      <div class="news-title-en">Honeywell Launches NOTIFIER INSPIRE — Connected Life Safety Platform with AI Detection, Advanced Smoke Control & Cloud Monitoring</div>
+      <div class="news-body">
+        <p>Honeywell expanded its fire and life safety portfolio with <strong>NOTIFIER INSPIRE</strong> — a next-generation connected life safety platform featuring AI-based early detection, cloud connectivity, and advanced smoke control. INSPIRE is designed to optimize evacuation workflows and converge with BMS/Building IoT infrastructure.</p>
+        <p>Key highlights include: new NFS3-640 control panel with 10" touchscreen, next-generation SigNET protocol, direct integration with Honeywell Building Technologies, and cloud-based remote monitoring with real-time alerts for maintenance teams and fire response crews.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-box-title">WHY IT MATTERS FOR FIRE ALARM PROJECTS IN VIETNAM</div>
+        <div class="why-box-body">
+          For projects complying with <strong>TCVN 5738, TCVN 3890, and NFPA 72</strong>, NOTIFIER INSPIRE provides real-time remote monitoring — especially critical for <strong>hospitals, schools, high-rise buildings, and industrial facilities</strong>. BMS/Cloud integration reduces maintenance costs and simplifies compliance with mandatory periodic inspection requirements. <strong>Note: NOTIFIER products are distributed in Vietnam through Honeywell Building Technologies channels.</strong>
+        </div>
+      </div>
+    </div>
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ / SYSTEM PRINCIPLE — NOTIFIER INSPIRE FIRE ALARM</div>
+<span class="c">  ┌──────────────────────── NOTIFIER INSPIRE ARCHITECTURE ────────────────────────────┐</span>
+
+<span class="w">  DETECTION LAYER         CONTROL LAYER            CLOUD LAYER</span>
+<span class="c">  ┌──────────────┐         ┌──────────────────┐     ┌──────────────────────────────┐</span>
+<span class="c">  │Multi-sensor  │         │ NFS3-640 Panel   │     │ Honeywell Cloud Platform     │</span>
+<span class="c">  │Detector      │──SigNET►│ 10" Touchscreen  │────►│  - Remote Monitoring 24/7   │</span>
+<span class="c">  │(Smoke+Heat   │         │ AI Event Engine  │     │  - Real-time Alerts          │</span>
+<span class="c">  │+CO+CO2)      │         │ SigNET Next-Gen  │     │  - Maintenance Scheduling    │</span>
+<span class="c">  └──────────────┘         └────────┬─────────┘     └──────────────────────────────┘</span>
+
+<span class="c">  ┌──────────────┐                  │ BACnet/IP                                        </span>
+<span class="c">  │Manual Call   │         ┌────────▼─────────┐     ┌──────────────────────────────┐</span>
+<span class="c">  │Point (MCP)   │         │ BMS Integration  │     │ Fire Brigade Interface       │</span>
+<span class="c">  │Pull Stations │         │ Smoke Control    │────►│ (DACT/Dialer, Panel-to-panel)│</span>
+<span class="c">  └──────────────┘         │ Elevator Recall  │     └──────────────────────────────┘</span>
+<span class="c">                           └──────────────────┘</span>
+<span class="g">  Tiêu chuẩn: NFPA 72 / UL 864 / TCVN 5738:2021 / EN 54</span>
+    </div>
+    <div class="news-source vi-content">
+      Nguồn: <a href="https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-expands-fire-portfolio-with-advanced-smoke-control-and-connected-life-safety-innovations" target="_blank" rel="noopener">Honeywell Press Release — Expands Fire Portfolio with Advanced Smoke Control (Jun 2026)</a>
+    </div>
+    <div class="news-source en-content" style="display:none">
+      Source: <a href="https://www.honeywell.com/us/en/news/press-releases/2026/06/honeywell-expands-fire-portfolio-with-advanced-smoke-control-and-connected-life-safety-innovations" target="_blank" rel="noopener">Honeywell Press Release — Expands Fire Portfolio with Advanced Smoke Control (Jun 2026)</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- NEWS 4: MITSUBISHI ELECTRIC -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="news-item">
+    <div class="news-number">04</div>
+    <div class="news-tags">
+      <span class="news-tag brand">MITSUBISHI</span>
+      <span class="news-tag">BMS</span>
+      <span class="news-tag">SMART BUILDING</span>
+      <span class="news-tag">ENERGY AI</span>
+    </div>
+    <div class="vi-content">
+      <div class="news-title-vi">Mitsubishi Electric Trình Diễn Công Nghệ Tòa Nhà Thông Minh Tại Berlin — BMS Tích Hợp AI & Kết Nối Building-to-Grid</div>
+      <div class="news-body">
+        <p><strong>Mitsubishi Electric</strong> đã trình diễn các công nghệ tòa nhà thông minh và thành phố thông minh mới nhất tại dự án Urban Tech Republic, Berlin — một tòa nhà lịch sử được cải tạo thành hệ sinh thái công nghệ. Giải pháp bao gồm: <strong>BMS tích hợp hoàn chỉnh</strong> (HVAC + ánh sáng + an ninh + năng lượng), tối ưu năng lượng bằng AI, và kết nối building-to-grid cho tích hợp điện mặt trời và lưu trữ năng lượng.</p>
+        <p>Dự án Berlin là minh chứng điển hình cho cách Mitsubishi áp dụng ICONICS GENESIS64 SCADA/HMI và nền tảng IoT cloud để quản lý tòa nhà cũ trở thành net-zero building. Mitsubishi cũng đã công bố chương trình Hệ thống Tích hợp Toàn cầu (Global System Integrator Program) mới.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-box-title">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN BMS VIỆT NAM</div>
+        <div class="why-box-body">
+          Mitsubishi Electric có hệ thống phân phối rộng tại Việt Nam (HVAC, thang máy, hệ thống điện). Với giải pháp <strong>BMS tích hợp</strong> (ICONICS GENESIS64 + OpenBlue-compatible), đây là lựa chọn mạnh cho <strong>bệnh viện, tòa nhà văn phòng hạng A, khách sạn 5 sao và khu đô thị lớn</strong> tại Việt Nam muốn đạt chứng chỉ EDGE/LEED. <strong>Building-to-grid cho phép tích hợp điện mặt trời áp mái và hệ thống lưu trữ BESS — xu hướng đang phát triển mạnh tại TP.HCM và Hà Nội.</strong>
+        </div>
+      </div>
+    </div>
+    <div class="en-content" style="display:none">
+      <div class="news-title-en">Mitsubishi Electric Demonstrates Smart Building & Smart City Technologies at Berlin's Urban Tech Republic — Integrated BMS with AI Energy Optimization</div>
+      <div class="news-body">
+        <p><strong>Mitsubishi Electric</strong> demonstrated its latest smart building and smart city technologies at the Urban Tech Republic project in Berlin — a historic building transformed into a technology ecosystem. The solution features: <strong>fully integrated BMS</strong> (HVAC + lighting + security + energy), AI-driven energy optimization, and building-to-grid connectivity for solar PV and battery energy storage (BESS) integration.</p>
+        <p>The Berlin project exemplifies how Mitsubishi applies ICONICS GENESIS64 SCADA/HMI and cloud IoT platform to transform legacy buildings into net-zero facilities. Mitsubishi also announced a new Global System Integrator Program expanding certified integrator network worldwide.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-box-title">WHY IT MATTERS FOR BMS PROJECTS IN VIETNAM</div>
+        <div class="why-box-body">
+          Mitsubishi Electric has an extensive distribution network in Vietnam (HVAC, elevators, electrical systems). Its <strong>integrated BMS solution</strong> (ICONICS GENESIS64 + OpenBlue-compatible) is a strong candidate for <strong>hospitals, Grade-A office towers, 5-star hotels, and large urban developments</strong> targeting EDGE/LEED certification. <strong>Building-to-grid enablement supports rooftop solar PV and BESS integration — a fast-growing requirement in Ho Chi Minh City and Hanoi developments.</strong>
+        </div>
+      </div>
+    </div>
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ / ARCHITECTURE — MITSUBISHI BMS INTEGRATED PLATFORM</div>
+<span class="c">  ┌─────────────────── MITSUBISHI ELECTRIC SMART BUILDING STACK ──────────────────────┐</span>
+
+<span class="w">  FIELD LAYER              CONTROLLER LAYER          MANAGEMENT LAYER</span>
+<span class="c">  ┌────────────────┐        ┌──────────────────┐      ┌──────────────────────────────┐</span>
+<span class="c">  │ HVAC / VRF     │        │ MELANS           │      │ ICONICS GENESIS64 SCADA/HMI  │</span>
+<span class="c">  │ Chillers       │──M-Net►│ Controller       │─────►│  - Real-time Dashboard       │</span>
+<span class="c">  │ Air Handling   │        │                  │      │  - KPI / Energy Analytics    │</span>
+<span class="c">  │ FCU            │        │ ┌──────────────┐ │      │  - BACnet/IP Gateway         │</span>
+<span class="c">  └────────────────┘        │ │BACnet/Modbus │ │      └──────────────────────────────┘</span>
+<span class="c">                            │ │ Bridge       │ │</span>
+<span class="c">  ┌────────────────┐        │ └──────────────┘ │      ┌──────────────────────────────┐</span>
+<span class="c">  │ Lighting       │        └────────┬─────────┘      │ Cloud IoT Platform           │</span>
+<span class="c">  │ (DALI/KNX)     │                 │                │  - Building-to-Grid          │</span>
+<span class="c">  │ Solar PV / BESS│                 │ BACnet/IP       │  - Predictive Maintenance    │</span>
+<span class="c">  │ EV Charging    │─────────────────┘                │  - Carbon Footprint Tracking │</span>
+<span class="c">  └────────────────┘                                  └──────────────────────────────┘</span>
+<span class="g">  Tiêu chuẩn: BACnet/IP (ISO 16484-5), DALI-2, KNX, Modbus TCP/RTU, IEC 61850</span>
+    </div>
+    <div class="news-source vi-content">
+      Nguồn: <a href="https://mea.mitsubishielectric.com/en/pr/global/2026/0825_rd/" target="_blank" rel="noopener">Mitsubishi Electric — Smart Building & Smart City Demo at Berlin Urban Tech Republic (Aug 2026)</a>
+    </div>
+    <div class="news-source en-content" style="display:none">
+      Source: <a href="https://mea.mitsubishielectric.com/en/pr/global/2026/0825_rd/" target="_blank" rel="noopener">Mitsubishi Electric — Smart Building & Smart City Demo at Berlin Urban Tech Republic (Aug 2026)</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- NEWS 5: VIETNAM DATA CENTER -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="news-item">
+    <div class="news-number">05</div>
+    <div class="news-tags">
+      <span class="news-tag brand">VIETNAM</span>
+      <span class="news-tag">DATA CENTER</span>
+      <span class="news-tag">AI INVESTMENT</span>
+      <span class="news-tag">ICT INFRA</span>
+    </div>
+    <div class="vi-content">
+      <div class="news-title-vi">Việt Nam Bùng Nổ Data Center: Hàng Tỷ USD Đổ Vào Khi Nhu Cầu AI Tăng Vọt — AIC Xây 2.1 Tỷ USD, FPT–G42 Hợp Tác Hyperscale</div>
+      <div class="news-body">
+        <p>Thị trường data center Việt Nam đang bùng nổ chưa từng có với hàng tỷ USD vốn đầu tư quốc tế khi nhu cầu tính toán AI (AI compute) tăng vọt toàn cầu. <strong>AIC</strong> (Abu Dhabi-based) đã công bố xây dựng trung tâm dữ liệu AI trị giá <strong>2,1 tỷ USD</strong> tại TP.HCM. Đồng thời, <strong>FPT</strong> ký kết hợp tác chiến lược với <strong>G42</strong> (UAE) để phát triển cơ sở hạ tầng hyperscale tại Việt Nam.</p>
+        <p>Việt Nam đang nổi lên như điểm nóng data center của Đông Nam Á, thu hút các hyperscaler và cloud titan lớn nhờ chi phí điện cạnh tranh, lực lượng kỹ thuật viên chất lượng cao và vị trí địa chiến lược. TP.HCM và Đà Nẵng là hai trung tâm chính, với công suất dự kiến tăng gấp nhiều lần vào 2028.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-box-title">TẠI SAO QUAN TRỌNG VỚI KỸ SƯ ELV/ICT VIỆT NAM</div>
+        <div class="why-box-body">
+          Bùng nổ data center tạo <strong>cơ hội nghề nghiệp và dự án khổng lồ</strong> cho kỹ sư ELV/ICT Việt Nam: thiết kế hệ thống cabling có cấu trúc (TIA-942 Tier III/IV), BMS/DCIM tích hợp, UPS, máy phát điện, chiller, hệ thống phòng cháy chữa cháy đặc thù data center (FM200, VESDA), kiểm soát ra vào sinh trắc học, và CCTV AI. <strong>Nhu cầu tư vấn ELV cho data center tại Việt Nam sẽ tăng mạnh trong 2027–2030.</strong>
+        </div>
+      </div>
+    </div>
+    <div class="en-content" style="display:none">
+      <div class="news-title-en">Vietnam Data Center Boom: Billions USD Flow In as AI Demand Accelerates — AIC Plans $2.1B AI DC, FPT Partners with G42 for Hyperscale</div>
+      <div class="news-body">
+        <p>Vietnam's data center market is experiencing an unprecedented boom with billions of USD in international investment flowing in as global AI compute demand accelerates. <strong>AIC</strong> (Abu Dhabi-based) announced a <strong>$2.1 billion AI data center</strong> in Ho Chi Minh City. Simultaneously, <strong>FPT</strong> signed a strategic partnership with <strong>G42</strong> (UAE) to develop hyperscale infrastructure across Vietnam.</p>
+        <p>Vietnam is rapidly emerging as Southeast Asia's premier data center hotspot, attracting hyperscalers and cloud titans with competitive power costs, a high-quality technical workforce, and strategic geographic positioning. Ho Chi Minh City and Da Nang are the two primary hubs, with capacity projected to multiply several times by 2028.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-box-title">WHY IT MATTERS FOR ELV/ICT ENGINEERS IN VIETNAM</div>
+        <div class="why-box-body">
+          Vietnam's data center boom creates <strong>enormous project and career opportunities</strong> for ELV/ICT engineers: structured cabling design (TIA-942 Tier III/IV), BMS/DCIM integration, UPS, generators, chillers, data center-specific fire suppression (FM200, VESDA), biometric access control, and AI CCTV. <strong>Demand for ELV consulting services for data centers in Vietnam will surge strongly through 2027–2030.</strong>
+        </div>
+      </div>
+    </div>
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ HẠ TẦNG / INFRASTRUCTURE MAP — VIETNAM DATA CENTER ELV SYSTEMS</div>
+<span class="c">  ┌─────────────────── VIETNAM AI DATA CENTER — ELV SYSTEM OVERVIEW ────────────────┐</span>
+
+<span class="w">  STRUCTURED CABLING (TIA-942 Tier III)</span>
+<span class="c">  ┌──────────────────────────────────────────────────────────────────────────────────┐</span>
+<span class="c">  │ MDA (Main Distribution Area)                                                     │</span>
+<span class="c">  │   ► 400G OM5 MMF / OS2 SMF Backbone  ► HDA (Horizontal Distribution Area)       │</span>
+<span class="c">  │   ► Cat8 / Cat6A Cu to EDA (Equipment Distribution Area)                        │</span>
+<span class="c">  └──────────────────────────────────────────────────────────────────────────────────┘</span>
+
+<span class="w">  POWER (N+1/2N Redundancy)</span>
+<span class="c">  Utility A/B ► UPS (Lithium/VRLA) ► PDU ► Server Rack (≤ 20kW/rack)</span>
+<span class="c">  Generator (2N) ► ATS ► MV Switchgear                                              </span>
+<span class="w">  COOLING</span>
+<span class="c">  Chiller Plant ► CRAC/CRAH ► In-Row Cooling ► Hot Aisle Containment                </span>
+<span class="w">  ELV SYSTEMS</span>
+<span class="c">  CCTV AI: Axis/Hikvision + DCIM integration  ║  Access: Biometric + HID OSDP       </span>
+<span class="c">  Fire: FM200 / VESDA LAFD (Early Warning)    ║  BMS/DCIM: Schneider/ABB EcoStruxure </span>
+<span class="g">  Tiêu chuẩn: TIA-942, ANSI/BICSI-002, NFPA 75/76, EN 50600, ISO/IEC 22237</span>
+    </div>
+    <div class="news-source vi-content">
+      Nguồn: <a href="https://e.vnexpress.net/news/tech/vietnam-innovation/vietnam-data-center-boom-draws-billions-dollars-as-ai-demand-accelerates-5113451.html" target="_blank" rel="noopener">VnExpress — Vietnam Data Center Boom Draws Billions USD as AI Demand Accelerates (2026)</a> |
+      <a href="https://itpc.hochiminhcity.gov.vn/web/en/-/aic-to-build-2-1bn-ai-data-centre-in-ho-chi-minh-city" target="_blank" rel="noopener">ITPC HCM — AIC $2.1B AI Data Center</a>
+    </div>
+    <div class="news-source en-content" style="display:none">
+      Source: <a href="https://e.vnexpress.net/news/tech/vietnam-innovation/vietnam-data-center-boom-draws-billions-dollars-as-ai-demand-accelerates-5113451.html" target="_blank" rel="noopener">VnExpress — Vietnam Data Center Boom Draws Billions USD (2026)</a> |
+      <a href="https://itpc.hochiminhcity.gov.vn/web/en/-/aic-to-build-2-1bn-ai-data-centre-in-ho-chi-minh-city" target="_blank" rel="noopener">ITPC HCM — AIC $2.1B AI Data Center</a>
+    </div>
+  </div>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <h3 class="vi-content">CẦN TƯ VẤN THIẾT KẾ ELV/ICT/AV?</h3>
+    <h3 class="en-content" style="display:none">NEED ELV/ICT/AV DESIGN CONSULTATION?</h3>
+    <p class="vi-content">Paul Le Consultant — Chuyên gia thiết kế ELV, ICT, AV tại Duy Hoa Phat Corporation & HBP Project Management. Kinh nghiệm thiết kế hệ thống tòa nhà thông minh, data center, khu đô thị và dự án đặc thù.</p>
+    <p class="en-content" style="display:none">Paul Le Consultant — ELV, ICT, AV Design Director at Duy Hoa Phat Corporation & HBP Project Management. Experienced in smart building systems, data centers, urban developments, and specialized projects across Vietnam.</p>
+    <a href="/#contact" class="cta-btn vi-content">LIÊN HỆ TƯ VẤN →</a>
+    <a href="/#contact" class="cta-btn en-content" style="display:none">GET IN TOUCH →</a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" style="text-decoration:none;">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+        </svg>
+        <div><span class="logo-text">PAUL LE</span><span class="logo-sub">ELV · ICT · AV CONSULTANT</span></div>
+      </a>
+      <p>ELV/ICT/AV Design Director tại Duy Hoa Phat Corp & HBP Project Management. Bản tin ngành song ngữ Việt–Anh hàng tuần.</p>
+    </div>
+    <div class="footer-col">
+      <h5>LIÊN KẾT / LINKS</h5>
+      <a href="/">Trang chủ / Home</a>
+      <a href="/blog/">Tin tức / Blog</a>
+      <a href="/#services">Dịch vụ / Services</a>
+      <a href="/#contact">Liên hệ / Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>THEO DÕI / FOLLOW</h5>
+      <a href="https://www.facebook.com/elvconsultant" target="_blank" rel="noopener">Facebook: Elvconsultant.com</a>
+      <a href="https://x.com/PLELVCONSULTANT" target="_blank" rel="noopener">X: @PLELVCONSULTANT</a>
+      <a href="https://elvconsultant.com" target="_blank" rel="noopener">elvconsultant.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Paul Le Consultant. All rights reserved.</span>
+    <span class="footer-domain">ELVCONSULTANT.COM</span>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
