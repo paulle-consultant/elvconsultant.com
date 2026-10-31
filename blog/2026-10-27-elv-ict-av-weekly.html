@@ -14,15 +14,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     :root{
-      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
-      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
-      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
-      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+      --bg:#0C0B09;--card-bg:#15130F;--card-border:#2A251C;
+      --cyan:#C9A96A;--cyan-dim:rgba(201,169,106,0.10);--cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C;--white:#F3EDE2;--steel:#8A8172;
+      --navy:#2A251C;--navy-deep:#121009;--grid-line:rgba(201,169,106,0.08);
     }
     html{scroll-behavior:smooth}
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.7}
@@ -35,7 +34,7 @@
     /* ─── NAV ─── */
     nav{
       position:sticky;top:0;z-index:100;
-      background:rgba(7,17,31,0.96);border-bottom:1px solid var(--card-border);
+      background:rgba(12,11,9,0.96);border-bottom:1px solid var(--card-border);
       backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
       padding:0 clamp(1rem,3vw,2.5rem);display:flex;align-items:center;justify-content:space-between;height:64px;
     }
@@ -51,7 +50,7 @@
 
     /* ─── LANG BAR ─── */
     .lang-bar{
-      position:relative;z-index:2;background:rgba(16,30,48,0.9);
+      position:relative;z-index:2;background:rgba(21,19,15,0.9);
       border-bottom:1px solid var(--card-border);
       padding:8px clamp(1rem,3vw,2.5rem);
       display:flex;align-items:center;gap:12px;
@@ -76,10 +75,10 @@
     .article-hero-overlay{
       position:absolute;inset:0;
       background:linear-gradient(180deg,
-        rgba(7,17,31,0.2) 0%,
-        rgba(7,17,31,0.15) 30%,
-        rgba(7,17,31,0.6) 65%,
-        rgba(7,17,31,0.95) 100%);
+        rgba(12,11,9,0.2) 0%,
+        rgba(12,11,9,0.15) 30%,
+        rgba(12,11,9,0.6) 65%,
+        rgba(12,11,9,0.95) 100%);
     }
     .article-hero-content{
       position:absolute;bottom:0;left:0;right:0;
@@ -119,20 +118,20 @@
       content:'';position:absolute;top:0;left:0;right:0;height:2px;
       background:linear-gradient(90deg,var(--cyan),transparent);
     }
-    .news-item:hover{border-color:rgba(0,200,224,0.4);box-shadow:0 0 0 1px rgba(0,200,224,0.2),0 8px 32px -8px rgba(0,200,224,0.2)}
+    .news-item:hover{border-color:rgba(201,169,106,0.4);box-shadow:0 0 0 1px rgba(201,169,106,0.2),0 8px 32px -8px rgba(201,169,106,0.2)}
     .news-item-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1rem;flex-wrap:wrap}
     .news-number{
       font-family:'Orbitron',monospace;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;
-      color:rgba(0,200,224,0.15);line-height:1;min-width:52px;text-align:center;flex-shrink:0;
+      color:rgba(201,169,106,0.15);line-height:1;min-width:52px;text-align:center;flex-shrink:0;
     }
     .news-header-right{flex:1;min-width:0}
     .news-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0.5rem}
     .news-tag{
       font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1.5px;font-weight:700;
-      padding:3px 10px;border-radius:3px;border:1px solid rgba(0,200,224,0.35);
-      color:var(--cyan);background:rgba(0,200,224,0.08);
+      padding:3px 10px;border-radius:3px;border:1px solid rgba(201,169,106,0.35);
+      color:var(--cyan);background:rgba(201,169,106,0.08);
     }
-    .news-tag.tag-secondary{color:var(--silver);border-color:rgba(160,180,200,0.25);background:rgba(160,180,200,0.06)}
+    .news-tag.tag-secondary{color:var(--silver);border-color:rgba(181,172,156,0.25);background:rgba(181,172,156,0.06)}
     .news-title-vi{font-family:'Orbitron',monospace;font-size:clamp(13px,1.5vw,16px);font-weight:700;color:var(--white);line-height:1.35;margin-bottom:0.25rem}
     .news-title-en{font-size:13px;color:var(--silver);font-style:italic;line-height:1.4;margin-bottom:0}
 
@@ -141,7 +140,7 @@
     .news-body strong{color:var(--white);font-weight:600}
 
     .why-box{
-      background:rgba(0,200,224,0.06);border:1px solid rgba(0,200,224,0.2);
+      background:rgba(201,169,106,0.06);border:1px solid rgba(201,169,106,0.2);
       border-radius:6px;padding:1rem 1.25rem;margin-top:1rem;
     }
     .why-box-label{
@@ -173,7 +172,7 @@
     }
     .cta-box::before{
       content:'';position:absolute;top:-40%;left:-20%;width:140%;height:180%;
-      background:radial-gradient(ellipse,rgba(0,200,224,0.07) 0%,transparent 65%);
+      background:radial-gradient(ellipse,rgba(201,169,106,0.07) 0%,transparent 65%);
       pointer-events:none;
     }
     .cta-box h3{font-family:'Orbitron',monospace;font-size:clamp(14px,2vw,18px);font-weight:900;color:var(--white);margin-bottom:0.75rem}
@@ -183,7 +182,7 @@
       font-family:'Orbitron',monospace;font-size:11px;font-weight:700;letter-spacing:2px;
       padding:12px 28px;border-radius:4px;text-decoration:none;transition:all 0.2s;
     }
-    .cta-btn:hover{background:var(--white);box-shadow:0 0 24px rgba(0,200,224,0.4)}
+    .cta-btn:hover{background:var(--white);box-shadow:0 0 24px rgba(201,169,106,0.4)}
 
     /* ─── FOOTER ─── */
     footer{
@@ -209,6 +208,7 @@
     /* ─── HIDDEN CLASSES ─── */
     .vi-content,.en-content{display:none}
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -217,8 +217,8 @@
 <nav>
   <a href="/" class="nav-logo">
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
     </svg>
     <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
   </a>
@@ -470,8 +470,8 @@
     <div class="footer-brand">
       <a href="/" class="nav-logo" style="text-decoration:none">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
         </svg>
         <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
       </a>

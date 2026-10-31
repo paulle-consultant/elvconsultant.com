@@ -17,15 +17,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
     :root{
-      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
-      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
-      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
-      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+      --bg:#0C0B09;--card-bg:#15130F;--card-border:#2A251C;
+      --cyan:#C9A96A;--cyan-dim:rgba(201,169,106,0.10);--cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C;--white:#F3EDE2;--steel:#8A8172;
+      --navy:#2A251C;--navy-deep:#121009;--grid-line:rgba(201,169,106,0.08);
     }
     html{scroll-behavior:smooth;}
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;}
@@ -38,7 +37,7 @@
     /* NAV */
     nav{
       position:sticky;top:0;z-index:100;
-      background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+      background:rgba(12,11,9,0.95);border-bottom:1px solid var(--card-border);
       backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
       padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;
     }
@@ -75,10 +74,10 @@
     .article-hero-overlay{
       position:absolute;inset:0;
       background:linear-gradient(180deg,
-        rgba(7,17,31,0.2) 0%,
-        rgba(7,17,31,0.3) 40%,
-        rgba(7,17,31,0.85) 75%,
-        rgba(7,17,31,1) 100%);
+        rgba(12,11,9,0.2) 0%,
+        rgba(12,11,9,0.3) 40%,
+        rgba(12,11,9,0.85) 75%,
+        rgba(12,11,9,1) 100%);
     }
     .article-hero-content{
       position:absolute;bottom:0;left:0;right:0;
@@ -96,7 +95,7 @@
     }
     .hero-meta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:0.5rem;}
     .hero-date{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--silver);}
-    .hero-tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1px;padding:3px 8px;border-radius:3px;border:1px solid rgba(0,200,224,0.4);color:var(--cyan);background:rgba(0,200,224,0.08);}
+    .hero-tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1px;padding:3px 8px;border-radius:3px;border:1px solid rgba(201,169,106,0.4);color:var(--cyan);background:rgba(201,169,106,0.08);}
 
     /* MAIN CONTENT */
     main{position:relative;z-index:1;max-width:920px;margin:0 auto;padding:3rem 2rem;}
@@ -107,7 +106,7 @@
       padding:2rem;margin-bottom:1.75rem;position:relative;overflow:hidden;
       transition:border-color 0.3s;
     }
-    .news-item:hover{border-color:rgba(0,200,224,0.4);}
+    .news-item:hover{border-color:rgba(201,169,106,0.4);}
     .news-item::before{
       content:'';position:absolute;top:0;left:0;right:0;height:2px;
       background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity 0.3s;
@@ -116,15 +115,15 @@
     .news-number{
       position:absolute;top:1.5rem;right:1.75rem;
       font-family:'Orbitron',monospace;font-size:36px;font-weight:900;
-      color:rgba(0,200,224,0.07);line-height:1;user-select:none;
+      color:rgba(201,169,106,0.07);line-height:1;user-select:none;
     }
     .news-tags{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:0.75rem;}
     .news-tag{
       font-family:'Orbitron',monospace;font-size:8px;font-weight:700;letter-spacing:1.5px;
-      padding:3px 10px;border-radius:3px;border:1px solid rgba(0,200,224,0.35);
-      color:var(--cyan);background:rgba(0,200,224,0.08);
+      padding:3px 10px;border-radius:3px;border:1px solid rgba(201,169,106,0.35);
+      color:var(--cyan);background:rgba(201,169,106,0.08);
     }
-    .news-tag.tag-mfr{border-color:var(--cyan);background:rgba(0,200,224,0.15);}
+    .news-tag.tag-mfr{border-color:var(--cyan);background:rgba(201,169,106,0.15);}
     .news-title-vi{font-size:18px;font-weight:600;color:var(--white);line-height:1.4;margin-bottom:0.4rem;}
     .news-title-en{font-size:14px;font-weight:500;color:var(--silver);line-height:1.4;margin-bottom:1.25rem;font-style:italic;}
     .news-body{font-size:14px;color:var(--silver);line-height:1.8;}
@@ -135,7 +134,7 @@
 
     /* WHY BOX */
     .why-box{
-      background:var(--navy-deep);border:1px solid rgba(0,200,224,0.2);border-left:3px solid var(--cyan);
+      background:var(--navy-deep);border:1px solid rgba(201,169,106,0.2);border-left:3px solid var(--cyan);
       border-radius:4px;padding:1rem 1.25rem;margin-top:1.25rem;
     }
     .why-label{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;color:var(--cyan);margin-bottom:0.5rem;}
@@ -148,17 +147,17 @@
       color:var(--steel);text-decoration:none;border-bottom:1px solid transparent;
       transition:color 0.2s,border-color 0.2s;
     }
-    .source-link:hover{color:var(--cyan);border-color:rgba(0,200,224,0.4);}
+    .source-link:hover{color:var(--cyan);border-color:rgba(201,169,106,0.4);}
 
     /* CTA BOX */
     .cta-box{
       background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);
-      border:1px solid rgba(0,200,224,0.3);border-radius:8px;
+      border:1px solid rgba(201,169,106,0.3);border-radius:8px;
       padding:2.5rem;text-align:center;margin-top:3rem;position:relative;overflow:hidden;
     }
     .cta-box::before{
       content:'';position:absolute;inset:-50%;
-      background:radial-gradient(circle at 50% 50%,rgba(0,200,224,0.06) 0%,transparent 70%);
+      background:radial-gradient(circle at 50% 50%,rgba(201,169,106,0.06) 0%,transparent 70%);
       pointer-events:none;
     }
     .cta-box h3{font-family:'Orbitron',monospace;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.75rem;}
@@ -193,6 +192,7 @@
       .news-item{padding:1.5rem;}
     }
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -201,15 +201,15 @@
 <nav>
   <a href="/" class="nav-logo">
     <svg width="32" height="36" viewBox="0 0 120 140" fill="none">
-      <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#1B2A4A" stroke="#4A6280" stroke-width="4"/>
-      <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#0D1B35"/>
-      <path d="M60 18 L60 124 Q22 105 22 72 L22 34 Z" fill="#1B2A4A"/>
-      <circle cx="52" cy="72" r="8" fill="none" stroke="#F0F4F8" stroke-width="2.5"/>
-      <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#F0F4F8"/>
-      <line x1="56" y1="71" x2="63" y2="71" stroke="#F0F4F8" stroke-width="2.5"/>
-      <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#F0F4F8" stroke-width="2"/>
-      <line x1="66" y1="71" x2="66" y2="83" stroke="#F0F4F8" stroke-width="2"/>
-      <circle cx="66" cy="84" r="3" fill="#F0F4F8"/>
+      <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#2A251C" stroke="#8A8172" stroke-width="4"/>
+      <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#121009"/>
+      <path d="M60 18 L60 124 Q22 105 22 72 L22 34 Z" fill="#2A251C"/>
+      <circle cx="52" cy="72" r="8" fill="none" stroke="#F3EDE2" stroke-width="2.5"/>
+      <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#F3EDE2"/>
+      <line x1="56" y1="71" x2="63" y2="71" stroke="#F3EDE2" stroke-width="2.5"/>
+      <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#F3EDE2" stroke-width="2"/>
+      <line x1="66" y1="71" x2="66" y2="83" stroke="#F3EDE2" stroke-width="2"/>
+      <circle cx="66" cy="84" r="3" fill="#F3EDE2"/>
     </svg>
     <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
   </a>
@@ -531,15 +531,15 @@
     <div class="footer-brand">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.75rem;">
         <svg width="28" height="32" viewBox="0 0 120 140" fill="none">
-          <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#1B2A4A" stroke="#4A6280" stroke-width="4"/>
-          <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#0D1B35"/>
-          <path d="M60 18 L60 124 Q22 105 22 72 L22 34 Z" fill="#1B2A4A"/>
-          <circle cx="52" cy="72" r="8" fill="none" stroke="#F0F4F8" stroke-width="2.5"/>
-          <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#F0F4F8"/>
-          <line x1="56" y1="71" x2="63" y2="71" stroke="#F0F4F8" stroke-width="2.5"/>
-          <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#F0F4F8" stroke-width="2"/>
-          <line x1="66" y1="71" x2="66" y2="83" stroke="#F0F4F8" stroke-width="2"/>
-          <circle cx="66" cy="84" r="3" fill="#F0F4F8"/>
+          <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#2A251C" stroke="#8A8172" stroke-width="4"/>
+          <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#121009"/>
+          <path d="M60 18 L60 124 Q22 105 22 72 L22 34 Z" fill="#2A251C"/>
+          <circle cx="52" cy="72" r="8" fill="none" stroke="#F3EDE2" stroke-width="2.5"/>
+          <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#F3EDE2"/>
+          <line x1="56" y1="71" x2="63" y2="71" stroke="#F3EDE2" stroke-width="2.5"/>
+          <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#F3EDE2" stroke-width="2"/>
+          <line x1="66" y1="71" x2="66" y2="83" stroke="#F3EDE2" stroke-width="2"/>
+          <circle cx="66" cy="84" r="3" fill="#F3EDE2"/>
         </svg>
         <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
       </div>

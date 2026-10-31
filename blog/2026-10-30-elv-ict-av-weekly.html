@@ -15,23 +15,22 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     :root {
-      --bg:#07111F;
-      --card-bg:#101E30;
-      --card-border:#1E3550;
-      --cyan:#00C8E0;
-      --cyan-dim:rgba(0,200,224,0.10);
-      --cyan-glow:rgba(0,200,224,0.28);
-      --silver:#A0B4C8;
-      --white:#F0F4F8;
-      --steel:#4A6280;
-      --navy:#1B2A4A;
-      --navy-deep:#0D1B35;
-      --grid-line:rgba(0,200,224,0.08);
+      --bg:#0C0B09;
+      --card-bg:#15130F;
+      --card-border:#2A251C;
+      --cyan:#C9A96A;
+      --cyan-dim:rgba(201,169,106,0.10);
+      --cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C;
+      --white:#F3EDE2;
+      --steel:#8A8172;
+      --navy:#2A251C;
+      --navy-deep:#121009;
+      --grid-line:rgba(201,169,106,0.08);
     }
     html { scroll-behavior:smooth; }
     body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--white); overflow-x:hidden; line-height:1.7; }
@@ -44,14 +43,14 @@
     }
     body::before {
       content:''; position:fixed; inset:0; pointer-events:none; z-index:0;
-      background:radial-gradient(900px 600px at -10% 20%,rgba(0,200,224,.07),transparent 60%),
-                 radial-gradient(900px 700px at 110% 70%,rgba(27,42,74,.55),transparent 60%);
+      background:radial-gradient(900px 600px at -10% 20%,rgba(201,169,106,.07),transparent 60%),
+                 radial-gradient(900px 700px at 110% 70%,rgba(42,37,28,.55),transparent 60%);
     }
 
     /* NAV */
     nav {
       position:sticky; top:0; z-index:100;
-      background:rgba(7,17,31,0.96); border-bottom:1px solid var(--card-border);
+      background:rgba(12,11,9,0.96); border-bottom:1px solid var(--card-border);
       backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
       padding:0 clamp(1rem,4vw,4.5rem); display:flex; align-items:center; justify-content:space-between; height:68px;
     }
@@ -73,7 +72,7 @@
     /* LANG BAR */
     .lang-bar {
       position:relative; z-index:2;
-      background:rgba(16,30,48,0.8); border-bottom:1px solid var(--card-border);
+      background:rgba(21,19,15,0.8); border-bottom:1px solid var(--card-border);
       padding:0.6rem clamp(1rem,4vw,4.5rem); display:flex; align-items:center; gap:0.75rem;
     }
     .lang-label { font-family:'Orbitron',monospace; font-size:9px; letter-spacing:2px; color:var(--steel); }
@@ -95,7 +94,7 @@
     }
     .article-hero-overlay {
       position:absolute; inset:0;
-      background:linear-gradient(180deg,rgba(7,17,31,0.2) 0%,rgba(7,17,31,0.5) 40%,rgba(7,17,31,0.92) 100%);
+      background:linear-gradient(180deg,rgba(12,11,9,0.2) 0%,rgba(12,11,9,0.5) 40%,rgba(12,11,9,0.92) 100%);
     }
     .article-hero-content {
       position:absolute; bottom:0; left:0; right:0;
@@ -133,19 +132,19 @@
       content:''; position:absolute; top:0; left:0; right:0; height:2px;
       background:linear-gradient(90deg, var(--cyan), transparent);
     }
-    .news-item:hover { border-color:rgba(0,200,224,0.4); box-shadow:0 0 0 1px rgba(0,200,224,0.2), 0 8px 32px -8px rgba(0,200,224,0.3); }
+    .news-item:hover { border-color:rgba(201,169,106,0.4); box-shadow:0 0 0 1px rgba(201,169,106,0.2), 0 8px 32px -8px rgba(201,169,106,0.3); }
     .news-number {
       position:absolute; top:1.5rem; right:1.75rem;
       font-family:'Orbitron',monospace; font-size:clamp(2.5rem,4vw,3.5rem); font-weight:900;
-      color:rgba(0,200,224,0.07); letter-spacing:-2px; line-height:1;
+      color:rgba(201,169,106,0.07); letter-spacing:-2px; line-height:1;
     }
     .news-tags { display:flex; gap:0.4rem; flex-wrap:wrap; margin-bottom:1rem; }
     .news-tag {
       font-family:'Orbitron',monospace; font-size:9px; letter-spacing:1.5px; font-weight:700;
-      padding:3px 10px; border-radius:3px; border:1px solid rgba(0,200,224,0.35);
-      color:var(--cyan); background:rgba(0,200,224,0.08); transition:all 0.2s;
+      padding:3px 10px; border-radius:3px; border:1px solid rgba(201,169,106,0.35);
+      color:var(--cyan); background:rgba(201,169,106,0.08); transition:all 0.2s;
     }
-    .news-tag.brand { background:rgba(0,200,224,0.15); border-color:rgba(0,200,224,0.5); }
+    .news-tag.brand { background:rgba(201,169,106,0.15); border-color:rgba(201,169,106,0.5); }
     .news-title-vi {
       font-family:'Orbitron',monospace; font-size:clamp(0.95rem,1.8vw,1.15rem); font-weight:700;
       color:var(--white); line-height:1.35; margin-bottom:0.5rem;
@@ -168,7 +167,7 @@
     /* WHY BOX */
     .why-box {
       margin-top:1.25rem; padding:1rem 1.25rem;
-      background:rgba(0,200,224,0.06); border:1px solid rgba(0,200,224,0.18);
+      background:rgba(201,169,106,0.06); border:1px solid rgba(201,169,106,0.18);
       border-left:3px solid var(--cyan); border-radius:6px;
     }
     .why-box-title {
@@ -196,8 +195,8 @@
 
     /* CTA BOX */
     .cta-box {
-      background:linear-gradient(135deg, rgba(0,200,224,0.08), rgba(27,42,74,0.6));
-      border:1px solid rgba(0,200,224,0.3); border-radius:10px;
+      background:linear-gradient(135deg, rgba(201,169,106,0.08), rgba(42,37,28,0.6));
+      border:1px solid rgba(201,169,106,0.3); border-radius:10px;
       padding:2.5rem; text-align:center; margin-top:3rem;
     }
     .cta-box h3 {
@@ -209,9 +208,9 @@
       display:inline-block; padding:12px 32px; background:var(--cyan); color:var(--bg);
       font-family:'Orbitron',monospace; font-size:11px; font-weight:700; letter-spacing:2px;
       border-radius:6px; text-decoration:none; transition:all 0.3s;
-      box-shadow:0 4px 20px rgba(0,200,224,0.35);
+      box-shadow:0 4px 20px rgba(201,169,106,0.35);
     }
-    .cta-btn:hover { background:#00e5ff; box-shadow:0 6px 28px rgba(0,200,224,0.5); transform:translateY(-2px); }
+    .cta-btn:hover { background:#00e5ff; box-shadow:0 6px 28px rgba(201,169,106,0.5); transform:translateY(-2px); }
 
     /* FOOTER */
     footer {
@@ -240,6 +239,7 @@
     }
     .section-label::before, .section-label::after { content:''; flex:1; height:1px; background:var(--card-border); }
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -248,8 +248,8 @@
 <nav>
   <a href="/" class="nav-logo">
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
     </svg>
     <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV DESIGN</span></div>
   </a>
@@ -641,8 +641,8 @@
     <div class="footer-brand">
       <a href="/" class="nav-logo" style="text-decoration:none;">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
         </svg>
         <div><span class="logo-text">PAUL LE</span><span class="logo-sub">ELV · ICT · AV CONSULTANT</span></div>
       </a>

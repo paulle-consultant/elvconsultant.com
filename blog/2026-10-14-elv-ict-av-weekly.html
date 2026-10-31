@@ -14,15 +14,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     :root {
-      --bg:#07111F; --card-bg:#101E30; --card-border:#1E3550;
-      --cyan:#00C8E0; --cyan-dim:rgba(0,200,224,0.10); --cyan-glow:rgba(0,200,224,0.28);
-      --silver:#A0B4C8; --white:#F0F4F8; --steel:#4A6280;
-      --navy:#1B2A4A; --navy-deep:#0D1B35; --grid-line:rgba(0,200,224,0.08);
+      --bg:#0C0B09; --card-bg:#15130F; --card-border:#2A251C;
+      --cyan:#C9A96A; --cyan-dim:rgba(201,169,106,0.10); --cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C; --white:#F3EDE2; --steel:#8A8172;
+      --navy:#2A251C; --navy-deep:#121009; --grid-line:rgba(201,169,106,0.08);
     }
     html { scroll-behavior:smooth; }
     body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--white); overflow-x:hidden; }
@@ -34,7 +33,7 @@
     /* NAV */
     nav {
       position:sticky; top:0; z-index:100;
-      background:rgba(7,17,31,0.95); border-bottom:1px solid var(--card-border);
+      background:rgba(12,11,9,0.95); border-bottom:1px solid var(--card-border);
       backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
       padding:0 2rem; display:flex; align-items:center; justify-content:space-between; height:64px;
     }
@@ -66,7 +65,7 @@
     .article-hero img { width:100%; height:100%; object-fit:cover; filter:brightness(0.6) saturate(0.85); display:block; }
     .article-hero-overlay {
       position:absolute; inset:0;
-      background:linear-gradient(180deg, rgba(7,17,31,0.1) 0%, rgba(7,17,31,0.35) 40%, rgba(7,17,31,0.92) 85%, var(--bg) 100%);
+      background:linear-gradient(180deg, rgba(12,11,9,0.1) 0%, rgba(12,11,9,0.35) 40%, rgba(12,11,9,0.92) 85%, var(--bg) 100%);
     }
     .article-hero-content {
       position:absolute; bottom:0; left:0; right:0; padding:2rem 2rem 2.5rem;
@@ -95,16 +94,16 @@
       content:''; position:absolute; top:0; left:0; right:0; height:2px;
       background:linear-gradient(90deg, var(--cyan), transparent);
     }
-    .news-item:hover { border-color:rgba(0,200,224,0.4); }
+    .news-item:hover { border-color:rgba(201,169,106,0.4); }
     .news-num {
       position:absolute; top:1.75rem; right:1.75rem;
       font-family:'Orbitron',monospace; font-size:32px; font-weight:900;
-      color:rgba(0,200,224,0.08); line-height:1;
+      color:rgba(201,169,106,0.08); line-height:1;
     }
     .news-tags { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem; }
     .tag {
       font-family:'Orbitron',monospace; font-size:9px; font-weight:700; letter-spacing:1.5px;
-      padding:4px 10px; border-radius:3px; border:1px solid rgba(0,200,224,0.35);
+      padding:4px 10px; border-radius:3px; border:1px solid rgba(201,169,106,0.35);
       color:var(--cyan); background:var(--cyan-dim);
     }
     .tag.tag-sec { border-color:rgba(255,180,0,0.35); color:#FFB400; background:rgba(255,180,0,0.08); }
@@ -118,7 +117,7 @@
     .why-box {
       background:var(--navy-deep); border:1px solid var(--card-border); border-radius:6px;
       padding:1rem 1.25rem; margin-top:1.25rem;
-      border-left:2px solid rgba(0,200,224,0.5);
+      border-left:2px solid rgba(201,169,106,0.5);
     }
     .why-box .why-label { font-family:'Orbitron',monospace; font-size:9px; letter-spacing:2px; color:var(--cyan); margin-bottom:0.5rem; }
     .why-box p { font-size:13px; color:var(--silver); line-height:1.75; }
@@ -129,7 +128,7 @@
     .cta-box {
       background:var(--card-bg); border:1px solid var(--card-border); border-radius:8px;
       padding:2.5rem 2rem; text-align:center; margin-top:3rem;
-      background-image:radial-gradient(ellipse at 50% 0%, rgba(0,200,224,0.07) 0%, transparent 70%);
+      background-image:radial-gradient(ellipse at 50% 0%, rgba(201,169,106,0.07) 0%, transparent 70%);
     }
     .cta-box .eyebrow { font-family:'Orbitron',monospace; font-size:9px; letter-spacing:3px; color:var(--cyan); margin-bottom:0.75rem; }
     .cta-box h3 { font-family:'Orbitron',monospace; font-size:1.2rem; font-weight:700; color:var(--white); margin-bottom:0.75rem; }
@@ -160,6 +159,7 @@
       .news-num { font-size:22px; }
     }
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -168,8 +168,8 @@
 <nav>
   <a href="/" class="nav-logo">
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
     </svg>
     <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
   </a>
@@ -467,7 +467,7 @@
 
   <!-- BACK TO BLOG -->
   <div style="text-align:center; margin-top:2rem;">
-    <a href="/blog/" style="font-family:'Orbitron',monospace; font-size:11px; letter-spacing:2px; color:var(--cyan); text-decoration:none; border:1px solid rgba(0,200,224,0.3); padding:10px 24px; border-radius:4px; transition:all 0.2s; display:inline-block;">
+    <a href="/blog/" style="font-family:'Orbitron',monospace; font-size:11px; letter-spacing:2px; color:var(--cyan); text-decoration:none; border:1px solid rgba(201,169,106,0.3); padding:10px 24px; border-radius:4px; transition:all 0.2s; display:inline-block;">
       ← TẤT CẢ BÀI VIẾT · ALL POSTS
     </a>
   </div>

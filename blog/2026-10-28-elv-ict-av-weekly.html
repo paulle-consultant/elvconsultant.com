@@ -14,21 +14,20 @@
   <meta property="og:type" content="article">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     :root{
-      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
-      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
-      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
-      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+      --bg:#0C0B09;--card-bg:#15130F;--card-border:#2A251C;
+      --cyan:#C9A96A;--cyan-dim:rgba(201,169,106,0.10);--cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C;--white:#F3EDE2;--steel:#8A8172;
+      --navy:#2A251C;--navy-deep:#121009;--grid-line:rgba(201,169,106,0.08);
     }
     html{scroll-behavior:smooth}
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6}
     .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
 
     /* NAV */
-    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.96);border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+    nav{position:sticky;top:0;z-index:100;background:rgba(12,11,9,0.96);border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
     .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
     .logo-text{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--white);letter-spacing:1px}
     .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px}
@@ -39,7 +38,7 @@
     .nav-cta:hover{background:var(--cyan);color:var(--bg)}
 
     /* LANG BAR */
-    .lang-bar{position:relative;z-index:1;display:flex;justify-content:flex-end;align-items:center;gap:8px;padding:10px 2rem;border-bottom:1px solid rgba(30,53,80,0.5);background:rgba(7,17,31,0.7)}
+    .lang-bar{position:relative;z-index:1;display:flex;justify-content:flex-end;align-items:center;gap:8px;padding:10px 2rem;border-bottom:1px solid rgba(42,37,28,0.5);background:rgba(12,11,9,0.7)}
     .lang-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel)}
     .lang-btn{background:transparent;border:1px solid var(--card-border);color:var(--silver);padding:4px 14px;border-radius:3px;font-size:11px;font-weight:600;cursor:pointer;font-family:'Orbitron',monospace;letter-spacing:1px;transition:all 0.2s}
     .lang-btn.active,.lang-btn:hover{background:var(--cyan);border-color:var(--cyan);color:var(--bg)}
@@ -47,7 +46,7 @@
     /* HERO */
     .article-hero{position:relative;z-index:1;width:100%;height:420px;overflow:hidden}
     .article-hero img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.75) saturate(0.9)}
-    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,17,31,0.25) 0%,rgba(7,17,31,0.55) 50%,rgba(7,17,31,0.92) 100%)}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,11,9,0.25) 0%,rgba(12,11,9,0.55) 50%,rgba(12,11,9,0.92) 100%)}
     .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:2rem 2.5rem 2.5rem;max-width:1000px}
     .article-eyebrow{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:4px;color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:12px}
     .article-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
@@ -61,24 +60,24 @@
 
     /* NEWS ITEM */
     .news-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;padding:2rem;margin-bottom:1.75rem;position:relative;overflow:hidden;transition:border-color 0.3s}
-    .news-item:hover{border-color:rgba(0,200,224,0.4)}
+    .news-item:hover{border-color:rgba(201,169,106,0.4)}
     .news-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity 0.3s}
     .news-item:hover::before{opacity:1}
-    .news-num{position:absolute;top:1.5rem;right:1.75rem;font-family:'Orbitron',monospace;font-size:32px;font-weight:900;color:rgba(0,200,224,0.06);line-height:1}
+    .news-num{position:absolute;top:1.5rem;right:1.75rem;font-family:'Orbitron',monospace;font-size:32px;font-weight:900;color:rgba(201,169,106,0.06);line-height:1}
     .news-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.9rem}
-    .tag{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:1.5px;padding:3px 9px;border-radius:3px;border:1px solid rgba(0,200,224,0.35);color:var(--cyan);background:rgba(0,200,224,0.08)}
-    .tag-cat{border-color:rgba(160,180,200,0.25);color:var(--silver);background:rgba(160,180,200,0.06)}
+    .tag{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:1.5px;padding:3px 9px;border-radius:3px;border:1px solid rgba(201,169,106,0.35);color:var(--cyan);background:rgba(201,169,106,0.08)}
+    .tag-cat{border-color:rgba(181,172,156,0.25);color:var(--silver);background:rgba(181,172,156,0.06)}
     .news-item h2{font-family:'Orbitron',monospace;font-size:clamp(13px,1.5vw,16px);font-weight:700;color:var(--white);line-height:1.4;margin-bottom:1rem}
     .news-content{font-size:14px;color:var(--silver);line-height:1.85}
     .news-content p{margin-bottom:0.75rem}
     .news-content ul{padding-left:1.25rem;margin-bottom:0.75rem}
     .news-content ul li{margin-bottom:0.35rem}
     .news-content strong{color:var(--white);font-weight:600}
-    .source-link{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--cyan);text-decoration:none;margin-top:0.75rem;padding-bottom:2px;border-bottom:1px solid rgba(0,200,224,0.25);transition:border-color 0.2s;font-weight:500;letter-spacing:0.3px}
+    .source-link{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--cyan);text-decoration:none;margin-top:0.75rem;padding-bottom:2px;border-bottom:1px solid rgba(201,169,106,0.25);transition:border-color 0.2s;font-weight:500;letter-spacing:0.3px}
     .source-link:hover{border-color:var(--cyan)}
 
     /* WHY BOX */
-    .why-box{margin-top:1.25rem;background:rgba(0,200,224,0.05);border:1px solid rgba(0,200,224,0.15);border-radius:6px;padding:1rem 1.25rem}
+    .why-box{margin-top:1.25rem;background:rgba(201,169,106,0.05);border:1px solid rgba(201,169,106,0.15);border-radius:6px;padding:1rem 1.25rem}
     .why-box-title{font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:2px;color:var(--cyan);margin-bottom:0.5rem}
     .why-box p{font-size:13px;color:var(--silver);line-height:1.75}
 
@@ -90,11 +89,11 @@
     .diagram-box .white{color:var(--white)}
 
     /* CTA */
-    .cta-box{background:linear-gradient(135deg,rgba(27,42,74,0.9),rgba(13,27,53,0.9));border:1px solid rgba(0,200,224,0.25);border-radius:8px;padding:2.5rem;text-align:center;margin-top:3rem}
+    .cta-box{background:linear-gradient(135deg,rgba(42,37,28,0.9),rgba(18,16,9,0.9));border:1px solid rgba(201,169,106,0.25);border-radius:8px;padding:2.5rem;text-align:center;margin-top:3rem}
     .cta-box h3{font-family:'Orbitron',monospace;font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.75rem}
     .cta-box p{font-size:14px;color:var(--silver);max-width:520px;margin:0 auto 1.5rem}
     .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);font-family:'Orbitron',monospace;font-size:11px;font-weight:700;letter-spacing:2px;padding:12px 32px;border-radius:4px;text-decoration:none;transition:all 0.2s}
-    .cta-btn:hover{background:#00e8ff;box-shadow:0 0 20px rgba(0,200,224,0.4)}
+    .cta-btn:hover{background:#00e8ff;box-shadow:0 0 20px rgba(201,169,106,0.4)}
 
     /* FOOTER */
     footer{position:relative;z-index:1;border-top:1px solid var(--card-border);background:var(--card-bg);padding:2.5rem 2rem;margin-top:2rem}
@@ -114,13 +113,14 @@
       .news-item{padding:1.5rem 1.25rem}
     }
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
 
 <nav>
   <a href="/" class="nav-logo">
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text></svg>
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text></svg>
     <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
   </a>
   <ul class="nav-links">
@@ -491,8 +491,8 @@
   <div class="footer-inner">
     <div>
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text></svg>
-        <span class="logo-text" style="font-family:'Orbitron',monospace;font-size:13px;font-weight:700;color:#F0F4F8">PAUL LE CONSULTANT</span>
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text></svg>
+        <span class="logo-text" style="font-family:'Orbitron',monospace;font-size:13px;font-weight:700;color:#F3EDE2">PAUL LE CONSULTANT</span>
       </div>
       <span class="footer-copy">© 2026 Paul Le Consultant · AV · ICT · ELV Design Director</span>
     </div>

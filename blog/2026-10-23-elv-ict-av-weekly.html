@@ -10,15 +10,14 @@
 <link rel="canonical" href="https://elvconsultant.com/blog/2026-10-23-elv-ict-av-weekly.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
-  --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
-  --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
-  --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+  --bg:#0C0B09;--card-bg:#15130F;--card-border:#2A251C;
+  --cyan:#C9A96A;--cyan-dim:rgba(201,169,106,0.10);--cyan-glow:rgba(201,169,106,0.28);
+  --silver:#B5AC9C;--white:#F3EDE2;--steel:#8A8172;
+  --navy:#2A251C;--navy-deep:#121009;--grid-line:rgba(201,169,106,0.08);
 }
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;min-height:100vh}
@@ -28,11 +27,11 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);over
   background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
   background-size:48px 48px;pointer-events:none;z-index:0}
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-  background:radial-gradient(900px 600px at -10% 20%,rgba(0,200,224,.07),transparent 60%),
-             radial-gradient(900px 700px at 110% 70%,rgba(27,42,74,.55),transparent 60%)}
+  background:radial-gradient(900px 600px at -10% 20%,rgba(201,169,106,.07),transparent 60%),
+             radial-gradient(900px 700px at 110% 70%,rgba(42,37,28,.55),transparent 60%)}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.96);
+nav{position:sticky;top:0;z-index:100;background:rgba(12,11,9,0.96);
   border-bottom:1px solid var(--card-border);backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);padding:0 2rem;
   display:flex;align-items:center;justify-content:space-between;height:64px}
@@ -50,7 +49,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.96);
 @media(max-width:768px){.nav-links{display:none}nav{padding:0 1rem}}
 
 /* LANGUAGE TOGGLE */
-.lang-bar{position:relative;z-index:10;background:rgba(16,30,48,0.8);
+.lang-bar{position:relative;z-index:10;background:rgba(21,19,15,0.8);
   border-bottom:1px solid var(--card-border);
   display:flex;align-items:center;justify-content:flex-end;gap:0.5rem;padding:8px 2rem}
 .lang-btn{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;
@@ -63,7 +62,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.96);
 .article-hero{position:relative;z-index:1;height:clamp(300px,40vw,520px);overflow:hidden}
 .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.7) saturate(0.85)}
 .article-hero-overlay{position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(7,17,31,0.2) 0%,rgba(7,17,31,0.5) 50%,rgba(7,17,31,0.92) 100%)}
+  background:linear-gradient(180deg,rgba(12,11,9,0.2) 0%,rgba(12,11,9,0.5) 50%,rgba(12,11,9,0.92) 100%)}
 .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:2rem clamp(1rem,4vw,4rem) 2.5rem}
 .hero-eyebrow{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:4px;
   color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:10px}
@@ -74,7 +73,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.96);
 .hero-meta{margin-top:0.75rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
 .hero-date{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;color:var(--cyan)}
 .hero-edition{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1.5px;
-  padding:3px 10px;border:1px solid rgba(0,200,224,0.4);border-radius:3px;color:var(--cyan)}
+  padding:3px 10px;border:1px solid rgba(201,169,106,0.4);border-radius:3px;color:var(--cyan)}
 
 /* MAIN CONTENT */
 main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:3rem clamp(1rem,4vw,2rem)}
@@ -84,15 +83,15 @@ main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:3rem cla
   border-radius:10px;padding:2rem;margin-bottom:2rem;position:relative;overflow:hidden;
   transition:border-color 0.3s,box-shadow 0.3s}
 .news-item::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--cyan)}
-.news-item:hover{border-color:rgba(0,200,224,.4);box-shadow:0 8px 32px -8px rgba(0,200,224,.2)}
+.news-item:hover{border-color:rgba(201,169,106,.4);box-shadow:0 8px 32px -8px rgba(201,169,106,.2)}
 
 .news-num{font-family:'Orbitron',monospace;font-size:11px;letter-spacing:2px;
   color:var(--steel);margin-bottom:0.5rem}
 .news-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.75rem}
 .tag{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1px;
-  padding:3px 8px;border-radius:3px;border:1px solid rgba(0,200,224,0.3);
-  color:var(--cyan);background:rgba(0,200,224,0.08)}
-.tag-mfr{background:rgba(0,200,224,0.15);border-color:var(--cyan)}
+  padding:3px 8px;border-radius:3px;border:1px solid rgba(201,169,106,0.3);
+  color:var(--cyan);background:rgba(201,169,106,0.08)}
+.tag-mfr{background:rgba(201,169,106,0.15);border-color:var(--cyan)}
 
 .news-title-vi,.news-title-en{font-size:1.1rem;font-weight:700;color:var(--white);
   line-height:1.35;margin-bottom:0.75rem}
@@ -106,13 +105,13 @@ main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:3rem cla
 .news-content-vi strong,.news-content-en strong{color:var(--white);font-weight:600}
 
 /* DIAGRAM */
-.news-diagram{background:rgba(11,20,34,0.8);border:1px solid var(--card-border);
+.news-diagram{background:rgba(18,16,9,0.8);border:1px solid var(--card-border);
   border-radius:8px;padding:1rem;margin-top:1rem}
 .diagram-title{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
   color:var(--cyan);margin-bottom:0.75rem;text-align:center}
 
 /* WHY BOX */
-.why-box{background:rgba(0,200,224,0.06);border:1px solid rgba(0,200,224,0.2);
+.why-box{background:rgba(201,169,106,0.06);border:1px solid rgba(201,169,106,0.2);
   border-radius:8px;padding:1rem 1.25rem;margin-top:1.25rem}
 .why-box h4{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
   color:var(--cyan);margin-bottom:0.5rem}
@@ -121,12 +120,12 @@ main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:3rem cla
 .source-link{display:inline-flex;align-items:center;gap:5px;
   font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1px;
   color:var(--cyan);text-decoration:none;margin-top:0.75rem;
-  border-bottom:1px solid rgba(0,200,224,0.3);padding-bottom:2px;transition:all 0.2s}
+  border-bottom:1px solid rgba(201,169,106,0.3);padding-bottom:2px;transition:all 0.2s}
 .source-link:hover{border-color:var(--cyan);gap:8px}
 
 /* CTA BOX */
 .cta-box{background:linear-gradient(135deg,var(--navy),var(--navy-deep));
-  border:1px solid rgba(0,200,224,0.3);border-radius:10px;
+  border:1px solid rgba(201,169,106,0.3);border-radius:10px;
   padding:2.5rem;margin:3rem 0;text-align:center}
 .cta-box h3{font-family:'Orbitron',monospace;font-size:clamp(0.9rem,2vw,1.2rem);
   font-weight:700;color:var(--white);margin-bottom:0.75rem}
@@ -134,7 +133,7 @@ main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:3rem cla
 .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);
   font-family:'Orbitron',monospace;font-size:11px;letter-spacing:2px;font-weight:700;
   padding:12px 28px;border-radius:999px;text-decoration:none;transition:all 0.2s}
-.cta-btn:hover{box-shadow:0 0 24px rgba(0,200,224,.5);transform:translateY(-2px)}
+.cta-btn:hover{box-shadow:0 0 24px rgba(201,169,106,.5);transform:translateY(-2px)}
 
 /* FOOTER */
 footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
@@ -152,6 +151,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
 .footer-copy{font-size:11px;color:var(--steel)}
 .footer-domain{font-family:'Orbitron',monospace;font-size:11px;color:var(--cyan)}
 </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -160,8 +160,8 @@ footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
 <nav>
   <a href="/" class="nav-logo">
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
     </svg>
     <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV DESIGN</span></div>
   </a>
@@ -247,51 +247,51 @@ footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
     <svg viewBox="0 0 760 200" width="100%" style="max-height:200px" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <marker id="arr1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
-          <path d="M0,0 L6,3 L0,6 Z" fill="#00C8E0"/>
+          <path d="M0,0 L6,3 L0,6 Z" fill="#C9A96A"/>
         </marker>
       </defs>
       <!-- Boxes -->
-      <rect x="10" y="70" width="120" height="60" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1"/>
-      <text x="70" y="97" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">WEBEX CLOUD</text>
-      <text x="70" y="112" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#A0B4C8">AI Managed Agents</text>
-      <text x="70" y="124" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Claude · GPT · Gemini</text>
+      <rect x="10" y="70" width="120" height="60" rx="6" fill="#2A251C" stroke="#C9A96A" stroke-width="1"/>
+      <text x="70" y="97" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">WEBEX CLOUD</text>
+      <text x="70" y="112" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#B5AC9C">AI Managed Agents</text>
+      <text x="70" y="124" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Claude · GPT · Gemini</text>
 
-      <rect x="180" y="40" width="120" height="55" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="240" y="65" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">SWITCH PoE+</text>
-      <text x="240" y="80" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">IEEE 802.3bt</text>
-      <text x="240" y="92" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">1 cable per device</text>
+      <rect x="180" y="40" width="120" height="55" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="240" y="65" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">SWITCH PoE+</text>
+      <text x="240" y="80" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">IEEE 802.3bt</text>
+      <text x="240" y="92" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">1 cable per device</text>
 
-      <rect x="180" y="110" width="120" height="55" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="240" y="133" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">ROOM BAR PRO</text>
-      <text x="240" y="148" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">RoomOS 27</text>
-      <text x="240" y="160" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Webex/Teams/Zoom/Meet</text>
+      <rect x="180" y="110" width="120" height="55" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="240" y="133" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">ROOM BAR PRO</text>
+      <text x="240" y="148" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">RoomOS 27</text>
+      <text x="240" y="160" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Webex/Teams/Zoom/Meet</text>
 
-      <rect x="355" y="20" width="130" height="55" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="420" y="44" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">CEILING SPEAKER PRO</text>
-      <text x="420" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">AI Beam Steering</text>
-      <text x="420" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">PoE+ · 1 cable · Cloud-managed</text>
+      <rect x="355" y="20" width="130" height="55" rx="6" fill="#2A251C" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="420" y="44" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">CEILING SPEAKER PRO</text>
+      <text x="420" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">AI Beam Steering</text>
+      <text x="420" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">PoE+ · 1 cable · Cloud-managed</text>
 
-      <rect x="355" y="90" width="130" height="50" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="420" y="112" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">DISPLAY / LED WALL</text>
-      <text x="420" y="127" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">HDMI · USB-C · Wireless</text>
+      <rect x="355" y="90" width="130" height="50" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="420" y="112" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">DISPLAY / LED WALL</text>
+      <text x="420" y="127" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">HDMI · USB-C · Wireless</text>
 
-      <rect x="355" y="155" width="130" height="40" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="420" y="172" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">AI ROOM CONTROL</text>
-      <text x="420" y="188" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Lighting · HVAC · Blinds · 32 Lang</text>
+      <rect x="355" y="155" width="130" height="40" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="420" y="172" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">AI ROOM CONTROL</text>
+      <text x="420" y="188" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Lighting · HVAC · Blinds · 32 Lang</text>
 
-      <rect x="540" y="55" width="120" height="90" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="600" y="80" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">CISCO CONTROL</text>
-      <text x="600" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Cloud Hub</text>
-      <text x="600" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Workplace Designer</text>
-      <text x="600" y="124" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Experience Metrics</text>
-      <text x="600" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Workspace Insights</text>
+      <rect x="540" y="55" width="120" height="90" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="600" y="80" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">CISCO CONTROL</text>
+      <text x="600" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Cloud Hub</text>
+      <text x="600" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Workplace Designer</text>
+      <text x="600" y="124" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Experience Metrics</text>
+      <text x="600" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Workspace Insights</text>
 
       <!-- Arrows -->
-      <line x1="130" y1="100" x2="178" y2="75" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr1)"/>
-      <line x1="300" y1="68" x2="353" y2="47" stroke="#00C8E0" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="300" y1="115" x2="353" y2="115" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="240" y1="95" x2="240" y2="108" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="485" y1="100" x2="538" y2="100" stroke="#1E3550" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="130" y1="100" x2="178" y2="75" stroke="#C9A96A" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr1)"/>
+      <line x1="300" y1="68" x2="353" y2="47" stroke="#C9A96A" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="300" y1="115" x2="353" y2="115" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="240" y1="95" x2="240" y2="108" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="485" y1="100" x2="538" y2="100" stroke="#2A251C" stroke-width="1" marker-end="url(#arr1)"/>
     </svg>
   </div>
 
@@ -350,61 +350,61 @@ footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
     <div class="diagram-title">SƠ ĐỒ · RAPIDSCALE MODULAR AI DATA CENTER ARCHITECTURE</div>
     <svg viewBox="0 0 760 180" width="100%" style="max-height:180px" xmlns="http://www.w3.org/2000/svg">
       <!-- Power block -->
-      <rect x="10" y="20" width="130" height="140" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="75" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">POWER</text>
-      <rect x="25" y="55" width="100" height="25" rx="4" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="75" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">UPS / Generator</text>
-      <rect x="25" y="86" width="100" height="25" rx="4" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="75" y="101" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">PDU / Busway</text>
-      <rect x="25" y="117" width="100" height="25" rx="4" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="75" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Transfer Switch</text>
+      <rect x="10" y="20" width="130" height="140" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="75" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">POWER</text>
+      <rect x="25" y="55" width="100" height="25" rx="4" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="75" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">UPS / Generator</text>
+      <rect x="25" y="86" width="100" height="25" rx="4" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="75" y="101" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">PDU / Busway</text>
+      <rect x="25" y="117" width="100" height="25" rx="4" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="75" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Transfer Switch</text>
 
       <!-- Cooling block -->
-      <rect x="155" y="20" width="130" height="140" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="220" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">LIQUID COOLING</text>
-      <rect x="170" y="55" width="100" height="25" rx="4" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="220" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">CDU / Rear-door HX</text>
-      <rect x="170" y="86" width="100" height="25" rx="4" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="220" y="101" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Smart Temp Control</text>
-      <rect x="170" y="117" width="100" height="25" rx="4" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="220" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">PUE Target: ≤1.25</text>
+      <rect x="155" y="20" width="130" height="140" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="220" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">LIQUID COOLING</text>
+      <rect x="170" y="55" width="100" height="25" rx="4" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="220" y="70" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">CDU / Rear-door HX</text>
+      <rect x="170" y="86" width="100" height="25" rx="4" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="220" y="101" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Smart Temp Control</text>
+      <rect x="170" y="117" width="100" height="25" rx="4" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="220" y="132" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">PUE Target: ≤1.25</text>
 
       <!-- IT / GPU block -->
-      <rect x="300" y="20" width="160" height="140" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="380" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">AI COMPUTE PODS</text>
-      <rect x="315" y="55" width="130" height="30" rx="4" fill="#0D1B35" stroke="#4A6280" stroke-width="1"/>
-      <text x="380" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">NVIDIA Vera Rubin GPU</text>
-      <text x="380" y="80" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">High-density compute</text>
-      <rect x="315" y="91" width="130" height="25" rx="4" fill="#0D1B35" stroke="#4A6280" stroke-width="1"/>
-      <text x="380" y="107" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">NVMe Storage / NVLink</text>
-      <rect x="315" y="122" width="130" height="25" rx="4" fill="#0D1B35" stroke="#4A6280" stroke-width="1"/>
-      <text x="380" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Network Fabric 400GbE</text>
+      <rect x="300" y="20" width="160" height="140" rx="6" fill="#2A251C" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="380" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">AI COMPUTE PODS</text>
+      <rect x="315" y="55" width="130" height="30" rx="4" fill="#121009" stroke="#8A8172" stroke-width="1"/>
+      <text x="380" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">NVIDIA Vera Rubin GPU</text>
+      <text x="380" y="80" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">High-density compute</text>
+      <rect x="315" y="91" width="130" height="25" rx="4" fill="#121009" stroke="#8A8172" stroke-width="1"/>
+      <text x="380" y="107" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">NVMe Storage / NVLink</text>
+      <rect x="315" y="122" width="130" height="25" rx="4" fill="#121009" stroke="#8A8172" stroke-width="1"/>
+      <text x="380" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Network Fabric 400GbE</text>
 
       <!-- EcoStruxure -->
-      <rect x="475" y="20" width="140" height="140" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="545" y="43" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">ECOSTRUXURE</text>
-      <text x="545" y="56" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">SOFTWARE + SERVICES</text>
-      <rect x="488" y="65" width="115" height="22" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="545" y="79" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">EcoCare Monitoring 24/7</text>
-      <rect x="488" y="93" width="115" height="22" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="545" y="107" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Digital Twin + AI Predict</text>
-      <rect x="488" y="121" width="115" height="22" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="545" y="135" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Lifecycle Services</text>
-      <rect x="488" y="149" width="115" height="6" rx="2" fill="#00C8E0" opacity="0.4"/>
-      <text x="545" y="158" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#00C8E0">90% in-house mfg</text>
+      <rect x="475" y="20" width="140" height="140" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="545" y="43" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">ECOSTRUXURE</text>
+      <text x="545" y="56" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">SOFTWARE + SERVICES</text>
+      <rect x="488" y="65" width="115" height="22" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="545" y="79" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">EcoCare Monitoring 24/7</text>
+      <rect x="488" y="93" width="115" height="22" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="545" y="107" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Digital Twin + AI Predict</text>
+      <rect x="488" y="121" width="115" height="22" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="545" y="135" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Lifecycle Services</text>
+      <rect x="488" y="149" width="115" height="6" rx="2" fill="#C9A96A" opacity="0.4"/>
+      <text x="545" y="158" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#C9A96A">90% in-house mfg</text>
 
       <!-- Result badge -->
-      <rect x="620" y="60" width="130" height="80" rx="6" fill="#0D1B35" stroke="rgba(0,200,224,0.5)" stroke-width="1.5"/>
-      <text x="685" y="80" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">KHAI THÁC</text>
-      <text x="685" y="95" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="18" font-weight="700" fill="#00C8E0">80%</text>
-      <text x="685" y="112" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">faster install</text>
-      <text x="685" y="125" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">75.5h → 15h/pod</text>
+      <rect x="620" y="60" width="130" height="80" rx="6" fill="#121009" stroke="rgba(201,169,106,0.5)" stroke-width="1.5"/>
+      <text x="685" y="80" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">KHAI THÁC</text>
+      <text x="685" y="95" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="18" font-weight="700" fill="#C9A96A">80%</text>
+      <text x="685" y="112" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">faster install</text>
+      <text x="685" y="125" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">75.5h → 15h/pod</text>
 
       <!-- Arrows -->
-      <line x1="140" y1="90" x2="153" y2="90" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="285" y1="90" x2="298" y2="90" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="460" y1="90" x2="473" y2="90" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="615" y1="90" x2="618" y2="90" stroke="#00C8E0" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="140" y1="90" x2="153" y2="90" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="285" y1="90" x2="298" y2="90" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="460" y1="90" x2="473" y2="90" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="615" y1="90" x2="618" y2="90" stroke="#C9A96A" stroke-width="1" marker-end="url(#arr1)"/>
     </svg>
   </div>
 
@@ -464,47 +464,47 @@ footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
     <div class="diagram-title">SƠ ĐỒ · PERIMETER PROTECTION — AXIS RADAR + AI CAMERA INTEGRATION</div>
     <svg viewBox="0 0 760 170" width="100%" style="max-height:170px" xmlns="http://www.w3.org/2000/svg">
       <!-- Radar node -->
-      <circle cx="90" cy="85" r="50" fill="none" stroke="rgba(0,200,224,0.15)" stroke-width="1" stroke-dasharray="4,4"/>
-      <circle cx="90" cy="85" r="30" fill="none" stroke="rgba(0,200,224,0.25)" stroke-width="1" stroke-dasharray="3,3"/>
-      <rect x="65" y="65" width="50" height="40" rx="5" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="90" y="82" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">D2124-VE</text>
-      <text x="90" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">RADAR 360°</text>
-      <text x="90" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">200m range · PoE</text>
-      <text x="90" y="148" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">1 device = 40,000m²</text>
+      <circle cx="90" cy="85" r="50" fill="none" stroke="rgba(201,169,106,0.15)" stroke-width="1" stroke-dasharray="4,4"/>
+      <circle cx="90" cy="85" r="30" fill="none" stroke="rgba(201,169,106,0.25)" stroke-width="1" stroke-dasharray="3,3"/>
+      <rect x="65" y="65" width="50" height="40" rx="5" fill="#2A251C" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="90" y="82" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">D2124-VE</text>
+      <text x="90" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">RADAR 360°</text>
+      <text x="90" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">200m range · PoE</text>
+      <text x="90" y="148" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">1 device = 40,000m²</text>
 
       <!-- PTZ -->
-      <rect x="175" y="55" width="100" height="55" rx="5" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="225" y="74" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">AXIS X1100</text>
-      <text x="225" y="86" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">4K PTZ ATEX</text>
-      <text x="225" y="97" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Zone 1 · 31x zoom</text>
-      <text x="225" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Oil &amp; Gas / Chemical</text>
+      <rect x="175" y="55" width="100" height="55" rx="5" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="225" y="74" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">AXIS X1100</text>
+      <text x="225" y="86" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">4K PTZ ATEX</text>
+      <text x="225" y="97" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Zone 1 · 31x zoom</text>
+      <text x="225" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Oil &amp; Gas / Chemical</text>
 
       <!-- Wisenet 9 -->
-      <rect x="295" y="55" width="110" height="55" rx="5" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="350" y="74" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">WISENET 9</text>
-      <text x="350" y="86" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Dual NPU · 4K AI</text>
-      <text x="350" y="97" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Object + Behavior</text>
-      <text x="350" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">simultaneous detect</text>
+      <rect x="295" y="55" width="110" height="55" rx="5" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="350" y="74" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">WISENET 9</text>
+      <text x="350" y="86" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Dual NPU · 4K AI</text>
+      <text x="350" y="97" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Object + Behavior</text>
+      <text x="350" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">simultaneous detect</text>
 
       <!-- NVR/VMS -->
-      <rect x="455" y="40" width="130" height="90" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1"/>
-      <text x="520" y="62" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">VMS / NVR</text>
-      <text x="520" y="76" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Axis Camera Station</text>
-      <text x="520" y="89" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Genetec / Milestone</text>
-      <text x="520" y="102" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">AI Analytics Engine</text>
-      <text x="520" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Radar → PTZ auto-track</text>
+      <rect x="455" y="40" width="130" height="90" rx="6" fill="#2A251C" stroke="#C9A96A" stroke-width="1"/>
+      <text x="520" y="62" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">VMS / NVR</text>
+      <text x="520" y="76" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Axis Camera Station</text>
+      <text x="520" y="89" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Genetec / Milestone</text>
+      <text x="520" y="102" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">AI Analytics Engine</text>
+      <text x="520" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Radar → PTZ auto-track</text>
 
       <!-- Control -->
-      <rect x="610" y="55" width="140" height="60" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="680" y="74" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">MONITORING CENTER</text>
-      <text x="680" y="88" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Alert + Auto-PTZ slew</text>
-      <text x="680" y="102" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Mobile app + Response</text>
+      <rect x="610" y="55" width="140" height="60" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="680" y="74" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">MONITORING CENTER</text>
+      <text x="680" y="88" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Alert + Auto-PTZ slew</text>
+      <text x="680" y="102" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Mobile app + Response</text>
 
       <!-- Connections -->
-      <line x1="140" y1="85" x2="173" y2="82" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="275" y1="82" x2="293" y2="82" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="405" y1="82" x2="453" y2="82" stroke="#00C8E0" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="585" y1="85" x2="608" y2="85" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="140" y1="85" x2="173" y2="82" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="275" y1="82" x2="293" y2="82" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="405" y1="82" x2="453" y2="82" stroke="#C9A96A" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="585" y1="85" x2="608" y2="85" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
     </svg>
   </div>
 
@@ -562,56 +562,56 @@ footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
     <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ · BIAMP VOCIA CAMPUS PA SYSTEM</div>
     <svg viewBox="0 0 760 165" width="100%" style="max-height:165px" xmlns="http://www.w3.org/2000/svg">
       <!-- Fire alarm integration -->
-      <rect x="10" y="15" width="120" height="45" rx="5" fill="#1B2A4A" stroke="rgba(255,80,80,0.6)" stroke-width="1"/>
+      <rect x="10" y="15" width="120" height="45" rx="5" fill="#2A251C" stroke="rgba(255,80,80,0.6)" stroke-width="1"/>
       <text x="70" y="35" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#FF8080">FIRE ALARM</text>
-      <text x="70" y="48" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">FACP / EN54-16</text>
-      <text x="70" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">NFPA 72 / AS 7240</text>
+      <text x="70" y="48" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">FACP / EN54-16</text>
+      <text x="70" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">NFPA 72 / AS 7240</text>
 
       <!-- Vocia Master -->
-      <rect x="170" y="10" width="130" height="145" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="235" y="32" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">VOCIA</text>
-      <text x="235" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">SYSTEM MANAGER</text>
-      <rect x="182" y="55" width="106" height="20" rx="3" fill="#0D1B35" stroke="#4A6280" stroke-width="1"/>
-      <text x="235" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Priority Matrix</text>
-      <rect x="182" y="80" width="106" height="20" rx="3" fill="#0D1B35" stroke="#4A6280" stroke-width="1"/>
-      <text x="235" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Zone Scheduling</text>
-      <rect x="182" y="105" width="106" height="20" rx="3" fill="#0D1B35" stroke="#4A6280" stroke-width="1"/>
-      <text x="235" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Fault Auto-Recovery</text>
-      <rect x="182" y="130" width="106" height="20" rx="3" fill="#0D1B35" stroke="#4A6280" stroke-width="1"/>
-      <text x="235" y="143" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">IP Network · PoE</text>
+      <rect x="170" y="10" width="130" height="145" rx="6" fill="#2A251C" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="235" y="32" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">VOCIA</text>
+      <text x="235" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">SYSTEM MANAGER</text>
+      <rect x="182" y="55" width="106" height="20" rx="3" fill="#121009" stroke="#8A8172" stroke-width="1"/>
+      <text x="235" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Priority Matrix</text>
+      <rect x="182" y="80" width="106" height="20" rx="3" fill="#121009" stroke="#8A8172" stroke-width="1"/>
+      <text x="235" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Zone Scheduling</text>
+      <rect x="182" y="105" width="106" height="20" rx="3" fill="#121009" stroke="#8A8172" stroke-width="1"/>
+      <text x="235" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Fault Auto-Recovery</text>
+      <rect x="182" y="130" width="106" height="20" rx="3" fill="#121009" stroke="#8A8172" stroke-width="1"/>
+      <text x="235" y="143" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">IP Network · PoE</text>
 
       <!-- PoE Switch -->
-      <rect x="340" y="60" width="100" height="45" rx="5" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="390" y="79" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">PoE SWITCH</text>
-      <text x="390" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">per building / floor</text>
-      <text x="390" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Scalable → no amp rack</text>
+      <rect x="340" y="60" width="100" height="45" rx="5" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="390" y="79" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">PoE SWITCH</text>
+      <text x="390" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">per building / floor</text>
+      <text x="390" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Scalable → no amp rack</text>
 
       <!-- Zone endpoints -->
-      <rect x="475" y="20" width="100" height="35" rx="4" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="525" y="36" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">CLASSROOMS</text>
-      <text x="525" y="48" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Ceiling speaker · PoE</text>
+      <rect x="475" y="20" width="100" height="35" rx="4" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="525" y="36" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">CLASSROOMS</text>
+      <text x="525" y="48" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Ceiling speaker · PoE</text>
 
-      <rect x="475" y="65" width="100" height="35" rx="4" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="525" y="81" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">CORRIDORS</text>
-      <text x="525" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Horn speaker · IP</text>
+      <rect x="475" y="65" width="100" height="35" rx="4" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="525" y="81" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">CORRIDORS</text>
+      <text x="525" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Horn speaker · IP</text>
 
-      <rect x="475" y="110" width="100" height="35" rx="4" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="525" y="126" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">OUTDOOR</text>
-      <text x="525" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">IP66 column speaker</text>
+      <rect x="475" y="110" width="100" height="35" rx="4" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="525" y="126" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">OUTDOOR</text>
+      <text x="525" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">IP66 column speaker</text>
 
       <!-- Uptime badge -->
-      <rect x="600" y="45" width="150" height="75" rx="6" fill="#0D1B35" stroke="rgba(0,200,224,0.5)" stroke-width="1.5"/>
-      <text x="675" y="70" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">UPTIME</text>
-      <text x="675" y="95" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="20" font-weight="700" fill="#00C8E0">10+</text>
-      <text x="675" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#A0B4C8">Years · Zero Downtime</text>
+      <rect x="600" y="45" width="150" height="75" rx="6" fill="#121009" stroke="rgba(201,169,106,0.5)" stroke-width="1.5"/>
+      <text x="675" y="70" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A">UPTIME</text>
+      <text x="675" y="95" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="20" font-weight="700" fill="#C9A96A">10+</text>
+      <text x="675" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#B5AC9C">Years · Zero Downtime</text>
 
       <!-- Connections -->
       <line x1="130" y1="38" x2="168" y2="60" stroke="rgba(255,80,80,0.5)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr1)"/>
-      <line x1="300" y1="83" x2="338" y2="83" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="440" y1="65" x2="473" y2="38" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="440" y1="83" x2="473" y2="83" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="440" y1="100" x2="473" y2="128" stroke="#4A6280" stroke-width="1" marker-end="url(#arr1)"/>
-      <line x1="575" y1="83" x2="598" y2="83" stroke="#00C8E0" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="300" y1="83" x2="338" y2="83" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="440" y1="65" x2="473" y2="38" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="440" y1="83" x2="473" y2="83" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="440" y1="100" x2="473" y2="128" stroke="#8A8172" stroke-width="1" marker-end="url(#arr1)"/>
+      <line x1="575" y1="83" x2="598" y2="83" stroke="#C9A96A" stroke-width="1" marker-end="url(#arr1)"/>
     </svg>
   </div>
 
@@ -671,52 +671,52 @@ footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
     <div class="diagram-title">THỊ TRƯỜNG ELV/ICT/AV VIỆT NAM 2026 · MARKET SNAPSHOT</div>
     <svg viewBox="0 0 760 150" width="100%" style="max-height:150px" xmlns="http://www.w3.org/2000/svg">
       <!-- GDP -->
-      <rect x="10" y="20" width="110" height="110" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="65" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">GDP GROWTH</text>
-      <text x="65" y="75" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="22" font-weight="700" fill="#00C8E0">8.02%</text>
-      <text x="65" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Vietnam 2025</text>
-      <text x="65" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Top 3 ASEAN</text>
+      <rect x="10" y="20" width="110" height="110" rx="6" fill="#2A251C" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="65" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">GDP GROWTH</text>
+      <text x="65" y="75" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="22" font-weight="700" fill="#C9A96A">8.02%</text>
+      <text x="65" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Vietnam 2025</text>
+      <text x="65" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Top 3 ASEAN</text>
 
       <!-- Market Size -->
-      <rect x="135" y="20" width="120" height="110" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="195" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">SMART BUILDING</text>
-      <text x="195" y="57" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">MARKET VN</text>
-      <text x="195" y="85" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="18" font-weight="700" fill="#00C8E0">$15B</text>
-      <text x="195" y="102" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">by 2028</text>
-      <text x="195" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">CAGR ~16%</text>
+      <rect x="135" y="20" width="120" height="110" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="195" y="45" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">SMART BUILDING</text>
+      <text x="195" y="57" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">MARKET VN</text>
+      <text x="195" y="85" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="18" font-weight="700" fill="#C9A96A">$15B</text>
+      <text x="195" y="102" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">by 2028</text>
+      <text x="195" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">CAGR ~16%</text>
 
       <!-- Event stats -->
-      <rect x="270" y="20" width="135" height="110" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="337" y="40" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">SECUTECH VN 2026</text>
-      <text x="337" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Hanoi · 9-12 Sep 2026</text>
-      <text x="337" y="74" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">480 thương hiệu / brands</text>
-      <text x="337" y="89" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">17,000+ trade visitors</text>
-      <text x="337" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">13,000 m² exhibition</text>
-      <text x="337" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">JP · KR · SG pavilions</text>
+      <rect x="270" y="20" width="135" height="110" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="337" y="40" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">SECUTECH VN 2026</text>
+      <text x="337" y="58" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Hanoi · 9-12 Sep 2026</text>
+      <text x="337" y="74" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">480 thương hiệu / brands</text>
+      <text x="337" y="89" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">17,000+ trade visitors</text>
+      <text x="337" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">13,000 m² exhibition</text>
+      <text x="337" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">JP · KR · SG pavilions</text>
 
       <!-- Segments -->
-      <rect x="420" y="20" width="330" height="110" rx="6" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-      <text x="585" y="40" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#00C8E0">KHU VỰC TRƯNG BÀY · EXHIBITION ZONES</text>
-      <rect x="432" y="50" width="90" height="24" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="477" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">AI Security &amp; CCTV</text>
-      <rect x="432" y="80" width="90" height="24" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="477" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Fire Safety</text>
-      <rect x="432" y="110" width="90" height="15" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="477" y="121" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Access Control</text>
+      <rect x="420" y="20" width="330" height="110" rx="6" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+      <text x="585" y="40" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#C9A96A">KHU VỰC TRƯNG BÀY · EXHIBITION ZONES</text>
+      <rect x="432" y="50" width="90" height="24" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="477" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">AI Security &amp; CCTV</text>
+      <rect x="432" y="80" width="90" height="24" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="477" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Fire Safety</text>
+      <rect x="432" y="110" width="90" height="15" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="477" y="121" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Access Control</text>
 
-      <rect x="534" y="50" width="100" height="24" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="584" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">ICT Infrastructure</text>
-      <rect x="534" y="80" width="100" height="24" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="584" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Smart Building / BMS</text>
-      <rect x="534" y="110" width="100" height="15" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="584" y="121" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Robotics &amp; Drones</text>
+      <rect x="534" y="50" width="100" height="24" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="584" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">ICT Infrastructure</text>
+      <rect x="534" y="80" width="100" height="24" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="584" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Smart Building / BMS</text>
+      <rect x="534" y="110" width="100" height="15" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="584" y="121" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Robotics &amp; Drones</text>
 
-      <rect x="646" y="50" width="94" height="24" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="693" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">SPS Manufacturing</text>
-      <rect x="646" y="80" width="94" height="24" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="693" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">SMABuilding</text>
-      <rect x="646" y="110" width="94" height="15" rx="3" fill="#1B2A4A" stroke="#4A6280" stroke-width="1"/>
-      <text x="693" y="121" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">Fire &amp; Safety VN</text>
+      <rect x="646" y="50" width="94" height="24" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="693" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">SPS Manufacturing</text>
+      <rect x="646" y="80" width="94" height="24" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="693" y="95" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">SMABuilding</text>
+      <rect x="646" y="110" width="94" height="15" rx="3" fill="#2A251C" stroke="#8A8172" stroke-width="1"/>
+      <text x="693" y="121" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">Fire &amp; Safety VN</text>
     </svg>
   </div>
 
@@ -752,7 +752,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="/" class="nav-logo" style="display:flex;align-items:center;gap:8px;text-decoration:none;margin-bottom:0.5rem">
-        <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text></svg>
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text></svg>
         <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">ELV · ICT · AV DESIGN</span></div>
       </a>
       <p>ELV/ICT/AV Design Director<br>Duy Hoa Phat Corporation<br>HBP Project Management</p>

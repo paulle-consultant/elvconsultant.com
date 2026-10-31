@@ -11,27 +11,26 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     :root{
-      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
-      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
-      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
-      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+      --bg:#0C0B09;--card-bg:#15130F;--card-border:#2A251C;
+      --cyan:#C9A96A;--cyan-dim:rgba(201,169,106,0.10);--cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C;--white:#F3EDE2;--steel:#8A8172;
+      --navy:#2A251C;--navy-deep:#121009;--grid-line:rgba(201,169,106,0.08);
     }
     html{scroll-behavior:smooth}
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden}
     body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
-      background:radial-gradient(900px 600px at -10% 20%,rgba(0,200,224,.06),transparent 60%),
-                 radial-gradient(900px 700px at 110% 70%,rgba(27,42,74,.55),transparent 60%)}
+      background:radial-gradient(900px 600px at -10% 20%,rgba(201,169,106,.06),transparent 60%),
+                 radial-gradient(900px 700px at 110% 70%,rgba(42,37,28,.55),transparent 60%)}
     .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;
       background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
       background-size:48px 48px;pointer-events:none;z-index:0}
 
     /* NAV */
-    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.95);
+    nav{position:sticky;top:0;z-index:100;background:rgba(12,11,9,0.95);
       border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);
       padding:0 clamp(1rem,4vw,4rem);display:flex;align-items:center;
       justify-content:space-between;height:68px}
@@ -48,7 +47,7 @@
     @media(max-width:768px){.nav-links{display:none}}
 
     /* LANG BAR */
-    .lang-bar{position:relative;z-index:2;background:rgba(16,30,48,.85);
+    .lang-bar{position:relative;z-index:2;background:rgba(21,19,15,.85);
       border-bottom:1px solid var(--card-border);padding:.6rem clamp(1rem,4vw,4rem);
       display:flex;align-items:center;gap:.75rem;backdrop-filter:blur(8px)}
     .lang-bar span{font-size:11px;color:var(--steel);font-family:'Orbitron',monospace;letter-spacing:1px}
@@ -61,7 +60,7 @@
     .article-hero{position:relative;z-index:1;width:100%;height:clamp(340px,42vw,520px);overflow:hidden}
     .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.72) saturate(.85)}
     .article-hero-overlay{position:absolute;inset:0;
-      background:linear-gradient(180deg,rgba(7,17,31,.15) 0%,rgba(7,17,31,.35) 45%,rgba(7,17,31,.9) 85%,var(--bg) 100%)}
+      background:linear-gradient(180deg,rgba(12,11,9,.15) 0%,rgba(12,11,9,.35) 45%,rgba(12,11,9,.9) 85%,var(--bg) 100%)}
     .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:clamp(1.5rem,4vw,3rem) clamp(1rem,4vw,4rem) clamp(1.5rem,3vw,2.5rem)}
     .hero-eyebrow{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:3px;color:var(--cyan);
       margin-bottom:.75rem;display:flex;align-items:center;gap:10px}
@@ -79,7 +78,7 @@
       transition:border-color .3s,box-shadow .3s}
     .news-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
       background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity .3s}
-    .news-item:hover{border-color:rgba(0,200,224,.4);box-shadow:0 0 0 1px rgba(0,200,224,.2),0 8px 32px -8px rgba(0,200,224,.25)}
+    .news-item:hover{border-color:rgba(201,169,106,.4);box-shadow:0 0 0 1px rgba(201,169,106,.2),0 8px 32px -8px rgba(201,169,106,.25)}
     .news-item:hover::before{opacity:1}
 
     .news-num{font-family:'Orbitron',monospace;font-size:11px;letter-spacing:2px;color:var(--steel);
@@ -88,8 +87,8 @@
 
     .news-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.85rem}
     .tag{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1px;padding:3px 9px;
-      border-radius:3px;border:1px solid rgba(0,200,224,.3);color:var(--cyan);background:var(--cyan-dim)}
-    .tag.primary{background:rgba(0,200,224,.18);border-color:rgba(0,200,224,.5);font-weight:700}
+      border-radius:3px;border:1px solid rgba(201,169,106,.3);color:var(--cyan);background:var(--cyan-dim)}
+    .tag.primary{background:rgba(201,169,106,.18);border-color:rgba(201,169,106,.5);font-weight:700}
 
     .news-title{font-family:'Orbitron',monospace;font-size:clamp(14px,1.5vw,17px);font-weight:700;
       color:var(--white);line-height:1.35;margin-bottom:1rem}
@@ -98,7 +97,7 @@
     .news-body p{margin-bottom:.8rem}
     .news-body strong{color:var(--white)}
 
-    .why-box{background:rgba(0,200,224,.05);border:1px solid rgba(0,200,224,.2);border-radius:6px;
+    .why-box{background:rgba(201,169,106,.05);border:1px solid rgba(201,169,106,.2);border-radius:6px;
       padding:1rem 1.25rem;margin-top:1.25rem}
     .why-box .why-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
       color:var(--cyan);margin-bottom:.5rem}
@@ -106,11 +105,11 @@
 
     .news-src{margin-top:.9rem;font-size:11px;color:var(--steel)}
     .news-src a{color:var(--steel);text-decoration:none;border-bottom:1px solid transparent;transition:all .2s}
-    .news-src a:hover{color:var(--cyan);border-color:rgba(0,200,224,.4)}
+    .news-src a:hover{color:var(--cyan);border-color:rgba(201,169,106,.4)}
 
     /* CTA */
-    .cta-box{background:linear-gradient(135deg,rgba(0,200,224,.08),rgba(27,42,74,.4));
-      border:1px solid rgba(0,200,224,.25);border-radius:10px;padding:2rem;
+    .cta-box{background:linear-gradient(135deg,rgba(201,169,106,.08),rgba(42,37,28,.4));
+      border:1px solid rgba(201,169,106,.25);border-radius:10px;padding:2rem;
       text-align:center;margin:2rem 0}
     .cta-box h3{font-family:'Orbitron',monospace;font-size:clamp(14px,2vw,18px);color:var(--white);margin-bottom:.75rem}
     .cta-box p{font-size:14px;color:var(--silver);margin-bottom:1.25rem;line-height:1.7}
@@ -133,6 +132,7 @@
     .footer-domain{font-family:'Orbitron',monospace;font-size:12px;color:var(--cyan)}
     @media(max-width:768px){.footer-inner{grid-template-columns:1fr}}
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -141,8 +141,8 @@
 <nav>
   <a href="/" class="nav-logo">
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
     </svg>
     <div>
       <span class="logo-text">PAUL LE CONSULTANT</span>
@@ -427,8 +427,8 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="/" class="nav-logo" style="text-decoration:none;display:flex;align-items:center;gap:10px;margin-bottom:.75rem">
-        <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text></svg>
-        <span class="logo-text" style="font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:#F0F4F8">PAUL LE</span>
+        <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text></svg>
+        <span class="logo-text" style="font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:#F3EDE2">PAUL LE</span>
       </a>
       <p>ELV/ICT/AV Design Director — Duy Hoa Phat Corporation &amp; HBP Project Management. Chuyên thiết kế hệ thống ELV, ICT, AV cho dự án thương mại, công nghiệp và dân dụng tại Việt Nam.</p>
     </div>
