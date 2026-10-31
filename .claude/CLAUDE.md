@@ -3,18 +3,19 @@
 Static site on GitHub Pages (`index.html`, `blog/`, `english/`). Single-file pages, no build step.
 
 ## Skills in this repo (`.claude/skills/`)
-- `taste-skill` (design-taste-frontend, leonxlnx, MIT): art direction, house rules, `scripts/inspect.mjs` gate. Run `node .claude/skills/taste-skill/scripts/inspect.mjs index.html` before shipping a page change; 0 FAIL is the bar.
+- `taste-skill` (design-taste-frontend, leonxlnx, MIT): art direction, house rules, `scripts/inspect.mjs` gate. Run `node .claude/skills/taste-skill/scripts/inspect.mjs index.html` before shipping a page change; 0 FAIL is the bar, except the accepted luxury FAILs listed under Design system.
 - `impeccable` (pbakaus, Apache-2.0): `/impeccable critique|audit|polish|animate …` for review and refinement.
 - `emil-design-eng`, `animate`, `improve-animations`, `review-animations`, `animation-*`, `find-animation-opportunities` (Emil Kowalski, MIT): motion decisions and review.
 
-## Design system (homepage, Oct 2026 redesign)
-- Direction: "Type and nothing else" (taste-skill seed 261786366), brand palette kept.
-- Font: Be Vietnam Pro 400/500/600, self-hosted in `assets/fonts/` (full Vietnamese diacritics). No Orbitron, no monospace.
-- Tokens: `--bg #07111F`, `--surface #0D1A2C`, `--ink #EEF3F8`, `--muted #B4C2D3`, `--accent #00C8E0`, `--accent-ink #032A31`, `--paper #EDF2F7`.
-- Chapters are full fields: `.field-dark`, `.field-deep`, `.field-paper`, `.field-accent`, each with `data-tone`; the fixed header takes the tone of the chapter under it.
-- Type steps only: `--step-small`, `--step-body`, `--step-lead`, `--step-mid`, `--step-head`, `--step-display`.
-- Motion: `--ease-out cubic-bezier(.23,1,.32,1)`; transform/opacity/clip-path only; every hidden start state lives inside `@media (prefers-reduced-motion: no-preference)`; buttons `scale(.97)` on `:active`; hover effects behind `(hover:hover) and (pointer:fine)`.
-- Banned: eyebrow labels, 01/02 numbering, tiny uppercase tracked labels, gradients, glows, glass, icon-topped card grids, em dashes in new copy.
+## Design system (homepage, "Maison" luxury restyle, 2026-10-31)
+- Direction: luxury-house look requested by Paul ("phong cách website hàng hiệu cao cấp"). Supersedes the Oct 2026 "Type and nothing else" palette.
+- Fonts, self-hosted in `assets/fonts/` (full Vietnamese): display `--serif` Cormorant Garamond 400/500 + 400 italic; body Be Vietnam Pro 300 (400/500/600 kept for emphasis).
+- Tokens: `--bg #0C0B09` noir, `--surface #15130F`, `--ink #F3EDE2` ivory, `--muted #B5AC9C`, `--accent #C9A96A` champagne gold, `--accent-ink #16120B`, `--sand #E6D9BF`, `--paper #F7F3EC`, `--bronze #7A5A26`.
+- Fields: `.field-dark` noir, `.field-deep` deep noir, `.field-paper` ivory, `.field-accent` champagne sand. Per-field `--ac` = accent text colour that passes contrast on that field (gold on noir, bronze on ivory/sand); use `--ac`, never raw `--accent`, for text. `--line` = hairline colour.
+- Signature details (deliberate, accepted inspector FAILs `micro-label`, `hairline`, `eyebrow`): uppercase tracked 13px labels/nav/buttons (`--track .16em`), 1px hairline rules instead of zebra fills, square corners (no pills), gold underline highlights.
+- Type steps only: `--step-small`, `--step-body`, `--step-lead`, `--step-mid`, `--step-head`, `--step-display`; nothing under 13px.
+- Motion: `--ease-out cubic-bezier(.23,1,.32,1)`; transform/opacity/clip-path only; hidden start states inside `@media (prefers-reduced-motion: no-preference)`; buttons `scale(.97)` on `:active`; hover behind `(hover:hover) and (pointer:fine)`.
+- Banned: gradients, glows, glass, icon-topped card grids, 01/02 numbering, em dashes in new copy.
 
 ## Content
 - All UI strings are bilingual in the `i18n` object (`en` / `vi`); `data-i18n` sets text, `data-i18n-html` sets markup.
