@@ -26,3 +26,6 @@ Static site on GitHub Pages (`index.html`, `blog/`, `english/`). Single-file pag
 - Before pushing a page change, run the taste-skill inspector; fix FAILs first.
 - Never force-push and never rewrite history on `main`.
 - Commit only the files you changed; leave unrelated working-tree changes (e.g. CRLF-only diffs in `english/`) alone.
+
+## Blog theme guard
+- Blog pages share `assets/maison.css`. `.github/workflows/maison-blog.yml` runs `scripts/maison_blog.py` on every push to `blog/` and auto-commits: it recolours old navy/cyan literals, removes Google Fonts and links `../assets/maison.css`. New newsletter posts end up in the luxury theme even if generated from the old template.
