@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly W45 | 02 Nov 2026 — HPE AI Network · Shure InfoComm · Bosch-Genetec · Axis ISC · Vietnam DC</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 45 (02/11/2026): HPE Self-Driving Network, Shure InfoComm 2026, Bosch+Genetec Cloud, Axis ISC West, Vietnam Data Center $7B. Song ngữ Việt–Anh.">
+  <meta name="author" content="Paul Le Consultant">
+  <meta property="og:title" content="ELV/ICT/AV Weekly W45 | Paul Le Consultant">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1606237842320-91be72dd4442?w=1200&h=630&q=85&auto=format&fit=crop">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-02-elv-ict-av-weekly.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.7;}
+    /* GRID BACKGROUND */
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0;}
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.95);
+      border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-text{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px;}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px;}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan);}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:8px 20px;
+      border-radius:4px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;
+      letter-spacing:0.5px;transition:all 0.2s;text-decoration:none;}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg);}
+    /* LANG BAR */
+    .lang-bar{position:relative;z-index:10;display:flex;align-items:center;justify-content:flex-end;
+      gap:0.5rem;padding:0.6rem 2rem;background:var(--navy-deep);border-bottom:1px solid var(--card-border);}
+    .lang-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel);margin-right:0.5rem;}
+    .lang-btn{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:1.5px;
+      padding:5px 14px;border-radius:3px;border:1px solid var(--card-border);
+      background:transparent;color:var(--silver);cursor:pointer;transition:all 0.2s;}
+    .lang-btn.active{background:var(--cyan);color:var(--bg);border-color:var(--cyan);}
+    /* HERO */
+    .article-hero{position:relative;z-index:1;height:420px;overflow:hidden;}
+    .article-hero img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.6) saturate(0.85);}
+    .article-hero-overlay{position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(7,17,31,0.2) 0%,rgba(7,17,31,0.45) 40%,rgba(7,17,31,0.92) 80%,var(--bg) 100%);}
+    .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem 2rem;}
+    .article-eyebrow{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:10px;}
+    .article-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan);}
+    .article-hero-content h1{font-family:'Orbitron',monospace;font-size:clamp(1.3rem,3vw,2rem);font-weight:900;
+      color:var(--white);line-height:1.2;max-width:860px;text-shadow:0 2px 20px rgba(0,0,0,0.7);}
+    .article-meta{margin-top:1rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .article-date{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;color:var(--silver);}
+    .article-week{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:1px;color:var(--cyan);
+      border:1px solid var(--cyan);padding:3px 10px;border-radius:3px;}
+    /* MAIN CONTENT */
+    main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:3rem 2rem 4rem;}
+    /* NEWS ITEM CARD */
+    .news-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;
+      margin-bottom:2rem;overflow:hidden;transition:border-color 0.3s;}
+    .news-item:hover{border-color:var(--cyan-glow);}
+    .news-item-header{padding:1.5rem 1.75rem 1.25rem;border-bottom:1px solid var(--card-border);}
+    .news-number{font-family:'Orbitron',monospace;font-size:28px;font-weight:900;color:var(--cyan);
+      opacity:0.18;float:right;margin-left:1rem;line-height:1;}
+    .news-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.75rem;}
+    .tag{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1.5px;
+      padding:3px 9px;border-radius:3px;border:1px solid var(--card-border);
+      color:var(--cyan);background:var(--cyan-dim);}
+    .tag.cat{color:var(--steel);background:transparent;border-color:var(--steel);}
+    .news-title-vi{font-family:'Orbitron',monospace;font-size:clamp(14px,1.8vw,17px);font-weight:700;
+      color:var(--white);line-height:1.35;margin-bottom:0.35rem;}
+    .news-title-en{font-size:13px;color:var(--silver);font-style:italic;line-height:1.5;}
+    .news-body{padding:1.5rem 1.75rem;}
+    .news-body p{font-size:14px;color:var(--silver);line-height:1.8;margin-bottom:1rem;}
+    .news-body p:last-child{margin-bottom:0;}
+    .news-body strong{color:var(--white);}
+    /* DIAGRAM / SCHEMA BOX */
+    .schema-box{background:var(--navy-deep);border:1px solid var(--card-border);border-radius:6px;
+      padding:1.25rem 1.5rem;margin:1.25rem 0;font-family:'Orbitron',monospace;font-size:11px;
+      color:var(--cyan);letter-spacing:0.5px;line-height:2;}
+    .schema-box .schema-title{font-size:9px;letter-spacing:3px;color:var(--steel);margin-bottom:0.75rem;}
+    .schema-flow{color:var(--white);font-size:12px;letter-spacing:0px;}
+    .schema-arrow{color:var(--cyan);}
+    /* WHY BOX */
+    .why-box{background:linear-gradient(135deg,rgba(0,200,224,0.07),rgba(27,42,74,0.5));
+      border:1px solid rgba(0,200,224,0.25);border-left:3px solid var(--cyan);
+      border-radius:6px;padding:1.25rem 1.5rem;margin-top:1.25rem;}
+    .why-box .why-title{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:0.6rem;}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.75;margin:0;}
+    .why-box strong{color:var(--white);}
+    /* SOURCE LINK */
+    .source-line{margin-top:1rem;font-size:12px;color:var(--steel);}
+    .source-line a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(0,200,224,0.3);}
+    .source-line a:hover{color:var(--white);}
+    /* CTA BOX */
+    .cta-box{background:linear-gradient(135deg,var(--navy),var(--navy-deep));
+      border:1px solid var(--card-border);border-radius:8px;padding:2.5rem 2rem;
+      text-align:center;margin:2.5rem 0;}
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:18px;font-weight:700;color:var(--cyan);margin-bottom:0.75rem;}
+    .cta-box p{font-size:14px;color:var(--silver);max-width:500px;margin:0 auto 1.5rem;}
+    .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);padding:12px 32px;
+      border-radius:4px;font-family:'Orbitron',monospace;font-size:11px;font-weight:700;
+      letter-spacing:1.5px;text-decoration:none;transition:opacity 0.2s;}
+    .cta-btn:hover{opacity:0.85;}
+    /* BACK LINK */
+    .back-link{display:inline-flex;align-items:center;gap:8px;font-family:'Orbitron',monospace;
+      font-size:10px;letter-spacing:2px;color:var(--cyan);text-decoration:none;
+      padding:0.5rem 0;margin-bottom:2rem;border-bottom:1px solid transparent;transition:border-color 0.2s;}
+    .back-link:hover{border-color:var(--cyan);}
+    /* FOOTER */
+    footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
+      background:var(--navy-deep);padding:2.5rem 2rem;text-align:center;}
+    .footer-inner{max-width:900px;margin:0 auto;}
+    .footer-logo-text{font-family:'Orbitron',monospace;font-size:13px;font-weight:700;color:var(--white);}
+    .footer-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;display:block;margin-top:4px;}
+    .footer-copy{font-size:12px;color:var(--steel);margin-top:1.5rem;line-height:1.7;}
+    .footer-links{display:flex;justify-content:center;gap:1.5rem;margin-top:1rem;}
+    .footer-links a{font-size:12px;color:var(--steel);text-decoration:none;transition:color 0.2s;}
+    .footer-links a:hover{color:var(--cyan);}
+    @media(max-width:768px){
+      nav{padding:0 1rem;}
+      .nav-links{display:none;}
+      .article-hero{height:320px;}
+      main{padding:2rem 1rem 3rem;}
+      .news-item-header,.news-body{padding:1.25rem 1.25rem;}
+      .news-number{font-size:20px;}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div>
+      <span class="logo-text">PAUL LE CONSULTANT</span>
+      <span class="logo-sub">ELV · ICT · AV DESIGN DIRECTOR</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư vấn</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1606237842320-91be72dd4442?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Dark blue smart building infrastructure — ELV ICT AV Weekly Week 45 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="article-eyebrow">BẢN TIN ELV/ICT/AV TUẦN 45 · 2026 · WEEKLY NEWSLETTER</div>
+    <h1>HPE AI Network · Shure InfoComm · Bosch–Genetec Cloud · Axis ISC West · Vietnam Data Center $7B</h1>
+    <div class="article-meta">
+      <span class="article-date">THỨ HAI · 02 THÁNG 11, 2026</span>
+      <span class="article-week">WEEK 45</span>
+      <span class="article-date">by Paul Le — ELV/ICT/AV Consultant</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+  <a href="/blog/" class="back-link">← BLOG INDEX</a>
+
+  <!-- ═══════════════════════════════════════════════════
+       NEWS ITEM 1 — HPE ARUBA / JUNIPER
+       ═══════════════════════════════════════════════════ -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <span class="news-number">01</span>
+      <div class="news-tags">
+        <span class="tag">HPE ARUBA</span>
+        <span class="tag">JUNIPER</span>
+        <span class="tag cat">ICT NETWORKING</span>
+        <span class="tag cat">AI NETWORKING</span>
+      </div>
+      <div class="vi-content">
+        <div class="news-title-vi">HPE Discover 2026: "Self-Driving Network" — Mạng Tự Động Hóa Toàn Diện Cho AI Factory, Campus & Data Center</div>
+        <div class="news-title-en">HPE Discover 2026: Self-Driving Networks Ship Across AI Factories, Campus & Data Centers — Juniper Integration Complete</div>
+      </div>
+      <div class="en-content" style="display:none">
+        <div class="news-title-vi">HPE Discover 2026: Self-Driving Networks Ship Across AI Factories, Campus & Data Centers — Juniper Integration Complete</div>
+        <div class="news-title-en">HPE completes the $14B Juniper acquisition integration, shipping the full AI networking stack with Mist AI AIOps across all environments.</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tại <strong>HPE Discover 2026</strong>, Hewlett Packard Enterprise chính thức hoàn thành việc tích hợp Juniper Networks (thương vụ $14B) và ra mắt "Self-Driving Network" — kiến trúc mạng tự động hóa hoàn toàn dựa trên <strong>Mist AI AIOps</strong> cho ba môi trường: <strong>AI Factory</strong> (GPU cluster), <strong>Campus/Branch</strong>, và <strong>Data Center</strong>.</p>
+        <p>Các sản phẩm mới nổi bật: Switch <strong>QFX5252-64C</strong> (800GbE per port, EVPN/VXLAN) cho AI fabric, <strong>QFX5140-48JH</strong> (400G/100G campus aggregation), và nền tảng <strong>HPE Aruba Central + Mist AI</strong> tích hợp giúp tự động detect lỗi, dự đoán sự cố và tự healing mà không cần can thiệp thủ công. CEO Antonio Neri tuyên bố: <em>"AI begins with the network — without intelligent networking, agentic AI cannot function at scale."</em></p>
+        <div class="schema-box">
+          <div class="schema-title">SƠ ĐỒ KIẾN TRÚC HPE SELF-DRIVING NETWORK</div>
+          <div class="schema-flow">
+GPU/AI Factory<br>
+└─ QFX5252-64C (800GbE spine) <span class="schema-arrow">→</span> InfiniBand/RoCE v2 overlay<br>
+&nbsp;&nbsp;&nbsp;└─ QFX5140-48JH (leaf) <span class="schema-arrow">→</span> GPU racks<br><br>
+Campus/Branch<br>
+└─ Aruba CX10000 (AI-powered edge) <span class="schema-arrow">→</span> Mist AI telemetry<br>
+&nbsp;&nbsp;&nbsp;└─ Aruba AP700 (Wi-Fi 7) <span class="schema-arrow">→</span> Mist location<br><br>
+Data Center<br>
+└─ HPE Central + Mist AIOps cloud <span class="schema-arrow">→</span> auto-remediation<br>
+&nbsp;&nbsp;&nbsp;└─ 99.99% SLA prediction + self-healing
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-title">TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT TẠI VIỆT NAM</div>
+          <p>Các dự án <strong>campus networking & data center</strong> tại Việt Nam (bệnh viện, trường đại học, văn phòng tòa nhà thương mại) đang tiến lên <strong>Wi-Fi 7 + 10GbE PoE</strong>. Kiến trúc HPE Aruba + Mist AIOps giúp <strong>giảm 70% thời gian troubleshoot</strong> nhờ AI diagnosis — rất thực tế cho đội IT nhỏ tại các toà nhà thông minh Vietnam. Đặc biệt các dự án AI factory (GPU cluster cho nghiên cứu, AI startup) cần <strong>RoCE v2 / InfiniBand</strong> mà QFX5252 hỗ trợ tốt.</p>
+        </div>
+        <div class="source-line">Nguồn: <a href="https://www.techtarget.com/searchnetworking/opinion/Networking-takes-center-stage-at-HPE-Discover-2026" target="_blank">TechTarget</a> · <a href="https://www.itpro.com/technology/artificial-intelligence/hpe-unveils-a-raft-of-new-networking-products-for-ai-workloads-at-discover-2026" target="_blank">ITPro</a> · <a href="https://nand-research.com/hpe-discover-2026-recap/" target="_blank">NAND Research Recap</a></div>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>At <strong>HPE Discover 2026</strong>, Hewlett Packard Enterprise completed its $14B Juniper Networks integration and launched the <strong>"Self-Driving Network"</strong> — a fully automated networking architecture powered by <strong>Mist AI AIOps</strong> across three environments: <strong>AI Factories</strong> (GPU clusters), <strong>Campus/Branch</strong>, and <strong>Data Centers</strong>.</p>
+        <p>Key new products: <strong>QFX5252-64C</strong> switch (800GbE per port, EVPN/VXLAN) for AI fabric interconnect, <strong>QFX5140-48JH</strong> (400G/100G campus aggregation), and the unified <strong>HPE Aruba Central + Mist AI</strong> platform enabling automatic fault detection, predictive anomaly detection, and self-healing without manual intervention. CEO Antonio Neri stated: <em>"AI begins with the network — without intelligent networking, agentic AI cannot function at scale."</em></p>
+        <div class="schema-box">
+          <div class="schema-title">HPE SELF-DRIVING NETWORK ARCHITECTURE</div>
+          <div class="schema-flow">
+GPU/AI Factory<br>
+└─ QFX5252-64C (800GbE spine) <span class="schema-arrow">→</span> InfiniBand/RoCE v2 overlay<br>
+&nbsp;&nbsp;&nbsp;└─ QFX5140-48JH (leaf) <span class="schema-arrow">→</span> GPU racks<br><br>
+Campus/Branch<br>
+└─ Aruba CX10000 (AI-powered edge) <span class="schema-arrow">→</span> Mist AI telemetry<br>
+&nbsp;&nbsp;&nbsp;└─ Aruba AP700 (Wi-Fi 7) <span class="schema-arrow">→</span> Mist location<br><br>
+Data Center<br>
+└─ HPE Central + Mist AIOps cloud <span class="schema-arrow">→</span> auto-remediation<br>
+&nbsp;&nbsp;&nbsp;└─ 99.99% SLA prediction + self-healing
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-title">RELEVANCE FOR VIETNAM ELV/ICT PROJECTS</div>
+          <p>Vietnam's <strong>campus networking and data center projects</strong> (hospitals, universities, commercial offices) are transitioning to <strong>Wi-Fi 7 + 10GbE PoE</strong>. The HPE Aruba + Mist AIOps architecture reduces <strong>troubleshooting time by 70%</strong> through AI-driven diagnostics — extremely practical for small IT teams managing smart buildings in Vietnam. AI factory projects requiring <strong>RoCE v2/InfiniBand</strong> for GPU clusters also benefit from the QFX5252 platform.</p>
+        </div>
+        <div class="source-line">Sources: <a href="https://www.techtarget.com/searchnetworking/opinion/Networking-takes-center-stage-at-HPE-Discover-2026" target="_blank">TechTarget</a> · <a href="https://www.itpro.com/technology/artificial-intelligence/hpe-unveils-a-raft-of-new-networking-products-for-ai-workloads-at-discover-2026" target="_blank">ITPro</a> · <a href="https://nand-research.com/hpe-discover-2026-recap/" target="_blank">NAND Research Recap</a></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════════
+       NEWS ITEM 2 — SHURE / InfoComm 2026
+       ═══════════════════════════════════════════════════ -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <span class="news-number">02</span>
+      <div class="news-tags">
+        <span class="tag">SHURE</span>
+        <span class="tag">BIAMP</span>
+        <span class="tag">CRESTRON</span>
+        <span class="tag cat">AV &amp; COLLABORATION</span>
+        <span class="tag cat">INFOCOMM 2026</span>
+      </div>
+      <div class="vi-content">
+        <div class="news-title-vi">InfoComm 2026: Shure Là Đối Tác Headline — Biamp, Crestron & LG Ra Mắt Giải Pháp AV Thế Hệ Mới</div>
+        <div class="news-title-en">InfoComm 2026: Shure Named Exclusive Headline Partner + Biamp, Crestron & LG Next-Gen AV Solutions Launch</div>
+      </div>
+      <div class="en-content" style="display:none">
+        <div class="news-title-vi">InfoComm 2026: Shure Named Exclusive Headline Partner + Biamp, Crestron & LG Next-Gen AV Solutions Launch</div>
+        <div class="news-title-en">AVIXA names Shure as InfoComm 2026's exclusive headline partner; 19 exhibitors unveil breakthrough AV innovations at inaugural Media Day.</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p><strong>AVIXA</strong> (tổ chức chủ quản InfoComm) chính thức công bố <strong>Shure</strong> là Đối Tác Headline Độc Quyền của <strong>InfoComm 2026</strong>. Đây là lần đầu tiên trong lịch sử của triển lãm, một nhà sản xuất AV được trao vị trí headline partner — phản ánh vai trò ngày càng quan trọng của <strong>audio intelligence</strong> trong hội họp hybrid và không gian hợp tác.</p>
+        <p>Tại <strong>InfoComm 2026 Media Day</strong> (lần đầu tiên tổ chức), 19 exhibitors công bố đồng thời các sản phẩm mới. Nổi bật:</p>
+        <p>• <strong>Biamp</strong>: Tesira SERVER-IO Gen3 — DSP xử lý audio cho phòng hội nghị lớn với AI background noise cancellation, tích hợp Microsoft Teams Room & Zoom natively<br>
+        • <strong>Crestron</strong>: Flex Room System nâng cấp — One-touch join cho 15+ UC platforms, AI-driven room booking auto-configuration<br>
+        • <strong>LG Business</strong>: DVLED Cinema LED wall 4K HDR cho auditorium & training center, pitch 0.9mm<br>
+        • <strong>Shure</strong>: MXA910 v2 Array Microphone với IntelliMix P300 DSP embedded — beam steering tự động 180° coverage</p>
+        <div class="schema-box">
+          <div class="schema-title">SƠ ĐỒ HỆ THỐNG PHÒNG HỌP HYBRID TÍCH HỢP (INFOCOMM 2026 CONCEPT)</div>
+          <div class="schema-flow">
+Phòng Hội Nghị Hybrid<br>
+├─ Shure MXA910 v2 (ceiling array mic) <span class="schema-arrow">→</span> IntelliMix P300 DSP<br>
+├─ Biamp Tesira SERVER-IO Gen3 (AI audio engine)<br>
+├─ LG DVLED 4K (main display) + UHD camera 4K PTZ<br>
+├─ Crestron Flex (control panel + UC switcher)<br>
+└─ Network: PoE++ 802.3bt switch (AVoIP) <span class="schema-arrow">→</span> 1GbE to cloud
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-title">TẦM QUAN TRỌNG VỚI DỰ ÁN AV VIỆT NAM</div>
+          <p>Xu hướng <strong>Hybrid Meeting Room</strong> đang bùng nổ tại Việt Nam — đặc biệt các tòa nhà văn phòng hạng A, bệnh viện, và campus đại học đang yêu cầu hệ thống hội nghị tích hợp với <strong>Microsoft Teams / Zoom / Webex natively</strong>. Shure MXA910 v2 + Biamp Tesira là bộ đôi tiêu chuẩn cho <strong>phòng hội nghị từ 30m² đến 200m²</strong>. Designer ELV/AV cần nắm rõ các tính năng AI audio mới để specify cho tender 2027.</p>
+        </div>
+        <div class="source-line">Nguồn: <a href="https://www.avixa.org/resources/press-releases/infocomm-2026-names-shure-as-exclusive-headline-partner-showcasing-audio-and-collaboration-innovation-across-key-activations-and-stages" target="_blank">AVIXA Press Release</a> · <a href="https://www.bcsconsultants.com/blog/infocomm-2026-recap-key-innovations-from-biamp-crestron-shure-and-lg-shaping-the-future-of-av/" target="_blank">BCS Consultants Recap</a></div>
+      </div>
+      <div class="en-content" style="display:none">
+        <p><strong>AVIXA</strong> (InfoComm's governing body) officially announced <strong>Shure</strong> as the <strong>Exclusive Headline Partner of InfoComm 2026</strong> — marking the first time in the show's history that an AV manufacturer has held this position, reflecting the growing importance of <strong>audio intelligence</strong> in hybrid meeting and collaborative spaces.</p>
+        <p>At <strong>InfoComm 2026's inaugural Media Day</strong>, 19 exhibitors simultaneously unveiled new products. Key highlights:</p>
+        <p>• <strong>Biamp</strong>: Tesira SERVER-IO Gen3 — large conference room DSP with AI background noise cancellation, native Microsoft Teams Room & Zoom integration<br>
+        • <strong>Crestron</strong>: Flex Room System upgrade — one-touch join for 15+ UC platforms, AI-driven room booking auto-configuration<br>
+        • <strong>LG Business</strong>: DVLED Cinema LED wall 4K HDR for auditoriums & training centers, 0.9mm pixel pitch<br>
+        • <strong>Shure</strong>: MXA910 v2 Array Microphone with embedded IntelliMix P300 DSP — automatic beam steering with 180° coverage</p>
+        <div class="schema-box">
+          <div class="schema-title">INTEGRATED HYBRID MEETING ROOM SYSTEM (INFOCOMM 2026 CONCEPT)</div>
+          <div class="schema-flow">
+Hybrid Conference Room<br>
+├─ Shure MXA910 v2 (ceiling array mic) <span class="schema-arrow">→</span> IntelliMix P300 DSP<br>
+├─ Biamp Tesira SERVER-IO Gen3 (AI audio engine)<br>
+├─ LG DVLED 4K (main display) + PTZ UHD camera<br>
+├─ Crestron Flex (control panel + UC switcher)<br>
+└─ Network: PoE++ 802.3bt switch (AVoIP) <span class="schema-arrow">→</span> 1GbE to cloud
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-title">RELEVANCE FOR VIETNAM AV PROJECTS</div>
+          <p>The <strong>Hybrid Meeting Room</strong> trend is booming in Vietnam — especially Grade-A office towers, hospitals, and university campuses requiring conferencing systems with <strong>native Microsoft Teams / Zoom / Webex integration</strong>. Shure MXA910 v2 + Biamp Tesira is the standard specification for <strong>conference rooms from 30m² to 200m²</strong>. ELV/AV designers must master the new AI audio features to spec correctly in 2027 tenders.</p>
+        </div>
+        <div class="source-line">Sources: <a href="https://www.avixa.org/resources/press-releases/infocomm-2026-names-shure-as-exclusive-headline-partner-showcasing-audio-and-collaboration-innovation-across-key-activations-and-stages" target="_blank">AVIXA Press Release</a> · <a href="https://www.bcsconsultants.com/blog/infocomm-2026-recap-key-innovations-from-biamp-crestron-shure-and-lg-shaping-the-future-of-av/" target="_blank">BCS Consultants Recap</a></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════════
+       NEWS ITEM 3 — BOSCH + GENETEC
+       ═══════════════════════════════════════════════════ -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <span class="news-number">03</span>
+      <div class="news-tags">
+        <span class="tag">BOSCH</span>
+        <span class="tag">GENETEC</span>
+        <span class="tag cat">SECURITY / ELV</span>
+        <span class="tag cat">CLOUD VMS</span>
+      </div>
+      <div class="vi-content">
+        <div class="news-title-vi">Bosch + Genetec: Camera IP Kết Nối Trực Tiếp Cloud — Không Cần NVR On-Premise</div>
+        <div class="news-title-en">Bosch Enables Direct-to-Cloud & Enhances Visual Intelligence for Genetec Security Center SaaS</div>
+      </div>
+      <div class="en-content" style="display:none">
+        <div class="news-title-vi">Bosch Enables Direct-to-Cloud & Enhances Visual Intelligence for Genetec Security Center SaaS</div>
+        <div class="news-title-en">Bosch Security Systems integrates with Genetec Security Center SaaS to enable direct cloud-to-camera connectivity, eliminating the on-premise NVR requirement.</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p><strong>Bosch Security Systems</strong> công bố tích hợp sâu với nền tảng <strong>Genetec Security Center SaaS</strong> — cho phép camera IP Bosch kết nối <strong>trực tiếp lên cloud</strong> mà không cần qua NVR/server on-premise. Đây là bước tiến quan trọng trong xu hướng chuyển đổi hệ thống camera an ninh sang mô hình <strong>VSaaS (Video Surveillance as a Service)</strong>.</p>
+        <p>Tính năng mới nổi bật:</p>
+        <p>• <strong>Direct-to-Cloud Workflow</strong>: Camera Bosch series FLEXIDOME IP, DINION IP kết nối thẳng Genetec SaaS qua HTTPS — không cần Genetec Archiver server tại chỗ<br>
+        • <strong>Visual Intelligence Enhancement</strong>: Tích hợp AI analytics của Bosch (người/xe/hành vi) trực tiếp vào Genetec Security Center dashboard<br>
+        • <strong>Cyber-hardened onboarding</strong>: Certificate-based provisioning, end-to-end TLS 1.3 encryption<br>
+        • Tương thích với Axis Communications, Hanwha Vision, i-PRO (Panasonic) cùng hệ sinh thái</p>
+        <div class="schema-box">
+          <div class="schema-title">SƠ ĐỒ KIẾN TRÚC CLOUD VMS (BOSCH + GENETEC SAAS)</div>
+          <div class="schema-flow">
+Camera IP Bosch FLEXIDOME/DINION<br>
+└─ HTTPS / TLS 1.3 (cert-based) <span class="schema-arrow">→</span> Internet<br>
+&nbsp;&nbsp;&nbsp;└─ Genetec Security Center SaaS (cloud)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ Video streaming + storage (cloud)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ Bosch AI analytics (người/xe/hành vi)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ Genetec Access Control SaaS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ Security Desk (unified dashboard)<br><br>
+✗ Không cần: NVR / Archiver server on-site<br>
+✓ Yêu cầu: Internet uplink ổn định ≥ 2Mbps/camera
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-title">TẦM QUAN TRỌNG VỚI DỰ ÁN SECURITY TẠI VIỆT NAM</div>
+          <p>Mô hình <strong>VSaaS (Video Surveillance as a Service)</strong> đang bắt đầu xuất hiện tại các dự án tòa nhà thương mại và bán lẻ Việt Nam — đặc biệt các chuỗi retail, co-working space. Bosch + Genetec SaaS giúp <strong>giảm CAPEX đáng kể</strong> (không cần server room, không cần NVR), chi phí vận hành chuyển sang OPEX theo subscription. Designer ELV cần nắm rõ để <strong>tư vấn đúng giải pháp</strong> cho từng loại dự án, đặc biệt là so sánh TCO 5 năm giữa on-premise vs cloud.</p>
+        </div>
+        <div class="source-line">Nguồn: <a href="https://www.sdmmag.com/articles/103827-bosch-enables-direct-to-cloud-and-enhances-visual-intelligence-for-genetec-security-center-saas" target="_blank">SDM Magazine</a> · <a href="https://securitysales.com/news/bosch-genetec-alliance-leverages-cloud-technologies-for-improved-saas/164050" target="_blank">Security Sales</a></div>
+      </div>
+      <div class="en-content" style="display:none">
+        <p><strong>Bosch Security Systems</strong> announced deep integration with the <strong>Genetec Security Center SaaS</strong> platform — enabling Bosch IP cameras to connect <strong>directly to the cloud</strong> without an on-premise NVR/server. This represents a significant step in the industry's shift toward <strong>VSaaS (Video Surveillance as a Service)</strong> architectures.</p>
+        <p>Key new features:</p>
+        <p>• <strong>Direct-to-Cloud Workflow</strong>: Bosch FLEXIDOME IP and DINION IP cameras connect directly to Genetec SaaS via HTTPS — no Genetec Archiver server required on-site<br>
+        • <strong>Visual Intelligence Enhancement</strong>: Bosch AI analytics (people/vehicle/behavior detection) integrated directly into Genetec Security Center dashboard<br>
+        • <strong>Cyber-hardened onboarding</strong>: Certificate-based provisioning, end-to-end TLS 1.3 encryption<br>
+        • Compatible with Axis, Hanwha Vision, and i-PRO (Panasonic) in the same ecosystem</p>
+        <div class="schema-box">
+          <div class="schema-title">CLOUD VMS ARCHITECTURE (BOSCH + GENETEC SAAS)</div>
+          <div class="schema-flow">
+Bosch FLEXIDOME/DINION IP Camera<br>
+└─ HTTPS / TLS 1.3 (cert-based) <span class="schema-arrow">→</span> Internet<br>
+&nbsp;&nbsp;&nbsp;└─ Genetec Security Center SaaS (cloud)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ Video streaming + cloud storage<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ Bosch AI analytics (people/vehicle/behavior)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ Genetec Access Control SaaS<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ Security Desk (unified dashboard)<br><br>
+✗ No longer needed: NVR / Archiver server on-site<br>
+✓ Required: Stable internet uplink ≥ 2Mbps/camera
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-title">RELEVANCE FOR VIETNAM SECURITY PROJECTS</div>
+          <p>The <strong>VSaaS (Video Surveillance as a Service)</strong> model is beginning to appear in Vietnam's commercial and retail projects — especially retail chains and co-working spaces. Bosch + Genetec SaaS significantly <strong>reduces CAPEX</strong> (no server room, no NVR required), shifting operational costs to an OPEX subscription model. ELV designers need to understand this architecture to <strong>specify the right solution</strong>, particularly for 5-year TCO comparisons between on-premise vs. cloud deployments.</p>
+        </div>
+        <div class="source-line">Sources: <a href="https://www.sdmmag.com/articles/103827-bosch-enables-direct-to-cloud-and-enhances-visual-intelligence-for-genetec-security-center-saas" target="_blank">SDM Magazine</a> · <a href="https://securitysales.com/news/bosch-genetec-alliance-leverages-cloud-technologies-for-improved-saas/164050" target="_blank">Security Sales</a></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════════
+       NEWS ITEM 4 — AXIS COMMUNICATIONS
+       ═══════════════════════════════════════════════════ -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <span class="news-number">04</span>
+      <div class="news-tags">
+        <span class="tag">AXIS</span>
+        <span class="tag cat">SECURITY / ELV</span>
+        <span class="tag cat">AI SURVEILLANCE</span>
+        <span class="tag cat">ISC WEST 2026</span>
+      </div>
+      <div class="vi-content">
+        <div class="news-title-vi">Axis Communications ISC West 2026: Thế Hệ Mới Camera AI Edge Analytics + Radar + Bispectral PTZ</div>
+        <div class="news-title-en">Axis ISC West 2026: Next-Gen Unified Security — AI Edge Analytics, Radar Integration & Bispectral PTZ Camera</div>
+      </div>
+      <div class="en-content" style="display:none">
+        <div class="news-title-vi">Axis ISC West 2026: Next-Gen Unified Security — AI Edge Analytics, Radar Integration & Bispectral PTZ Camera</div>
+        <div class="news-title-en">Axis Communications unveils a unified security platform with AI edge analytics, radar-camera fusion, and new bispectral PTZ at ISC West 2026.</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tại <strong>ISC West 2026</strong> (Las Vegas), <strong>Axis Communications</strong> ra mắt thế hệ giải pháp an ninh thống nhất tiếp theo với trọng tâm là <strong>AI edge analytics</strong> và tích hợp đa sensor. Đây là lần đầu tiên Axis giới thiệu kiến trúc <strong>"Unified Security Platform"</strong> — một VMS/access control/video analytics chạy hoàn toàn on-camera hoặc on-edge, không cần server trung tâm.</p>
+        <p>Sản phẩm mới nổi bật:</p>
+        <p>• <strong>AXIS P3267-V Bispectral PTZ</strong>: Kết hợp optical (visible light) + thermal trong cùng một camera PTZ — phát hiện người/phương tiện trong bóng tối hoàn toàn, sương mù, khói<br>
+        • <strong>AXIS D2110-VE Radar</strong>: Radar perimeter detection 250m, phối hợp với camera PTZ tự động slew-to-cue<br>
+        • <strong>AXIS Camera Station Pro 6.0</strong>: VMS mới với AI search by appearance (tìm theo trang phục/màu sắc) và forensic heatmap<br>
+        • <strong>ACAP 4.0</strong>: SDK mở cho edge AI apps của bên thứ 3 (Milestone, Genetec plugin)</p>
+        <div class="schema-box">
+          <div class="schema-title">SƠ ĐỒ TÍCH HỢP RADAR + CAMERA AXIS (ISC WEST 2026)</div>
+          <div class="schema-flow">
+AXIS D2110-VE Radar (perimeter 250m)<br>
+└─ Phát hiện chuyển động <span class="schema-arrow">→</span> trigger event<br>
+&nbsp;&nbsp;&nbsp;└─ AXIS P3267-V Bispectral PTZ<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ Auto slew-to-cue (PTZ đến vị trí radar)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ Optical camera (màu, số biển xe)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ Thermal camera (phát hiện người trong bóng tối)<br>
+&nbsp;&nbsp;&nbsp;└─ AXIS Camera Station Pro 6.0 (VMS)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ AI forensic search + heatmap<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ Access Control integration (AXIS A1601)
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-title">TẦM QUAN TRỌNG VỚI DỰ ÁN SECURITY VIỆT NAM</div>
+          <p>Camera <strong>bispectral (optical + thermal)</strong> đang trở thành yêu cầu bắt buộc cho các dự án <strong>khu công nghiệp, nhà máy, perimeter bệnh viện</strong> tại Việt Nam — nơi cần giám sát 24/7 ngay cả trong điều kiện thiếu sáng. Tích hợp <strong>Radar + PTZ slew-to-cue</strong> giảm số lượng camera cần thiết cho một perimeter dài, tiết kiệm chi phí đáng kể. Designer ELV cần cập nhật spec để include bispectral PTZ vào các dự án khu công nghiệp từ Q1 2027.</p>
+        </div>
+        <div class="source-line">Nguồn: <a href="https://www.securityinfowatch.com/video-surveillance/news/55366888/axis-communications-axis-communications-unveils-new-ai-driven-security-innovations-at-isc-west-2026" target="_blank">SecurityInfoWatch</a> · <a href="https://losspreventionmedia.com/axis-communications-introduces-the-next-wave-of-unified-security-solutions-at-isc-west-2026/" target="_blank">LPM</a> · <a href="https://sen.news/axis-releases-bispectral-ptz-camera" target="_blank">SEN News</a></div>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>At <strong>ISC West 2026</strong> (Las Vegas), <strong>Axis Communications</strong> unveiled the next generation of its unified security solutions, focusing on <strong>AI edge analytics</strong> and multi-sensor integration. For the first time, Axis introduced a <strong>"Unified Security Platform"</strong> architecture — a VMS/access control/video analytics system running entirely on-camera or on-edge, without requiring a central server.</p>
+        <p>Key new products:</p>
+        <p>• <strong>AXIS P3267-V Bispectral PTZ</strong>: Combines optical (visible light) + thermal in a single PTZ camera — detecting people/vehicles in complete darkness, fog, and smoke<br>
+        • <strong>AXIS D2110-VE Radar</strong>: 250m perimeter detection radar, auto slew-to-cue integration with PTZ cameras<br>
+        • <strong>AXIS Camera Station Pro 6.0</strong>: New VMS with AI search by appearance (clothing/color) and forensic heatmap<br>
+        • <strong>ACAP 4.0</strong>: Open SDK for third-party edge AI apps (Milestone, Genetec plugins)</p>
+        <div class="schema-box">
+          <div class="schema-title">AXIS RADAR + CAMERA INTEGRATION (ISC WEST 2026)</div>
+          <div class="schema-flow">
+AXIS D2110-VE Radar (250m perimeter)<br>
+└─ Motion detection <span class="schema-arrow">→</span> trigger event<br>
+&nbsp;&nbsp;&nbsp;└─ AXIS P3267-V Bispectral PTZ<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ Auto slew-to-cue (PTZ points to radar location)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ Optical camera (color, license plates)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ Thermal camera (people in complete darkness)<br>
+&nbsp;&nbsp;&nbsp;└─ AXIS Camera Station Pro 6.0 (VMS)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ AI forensic search + heatmap<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ Access Control integration (AXIS A1601)
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-title">RELEVANCE FOR VIETNAM SECURITY PROJECTS</div>
+          <p><strong>Bispectral (optical + thermal)</strong> cameras are becoming mandatory requirements for <strong>industrial zones, factories, and hospital perimeters</strong> in Vietnam — where 24/7 surveillance is needed even in low-light conditions. <strong>Radar + PTZ slew-to-cue</strong> integration reduces the number of cameras needed for long perimeters, significantly cutting costs. ELV designers should update specifications to include bispectral PTZ for industrial zone projects starting Q1 2027.</p>
+        </div>
+        <div class="source-line">Sources: <a href="https://www.securityinfowatch.com/video-surveillance/news/55366888/axis-communications-axis-communications-unveils-new-ai-driven-security-innovations-at-isc-west-2026" target="_blank">SecurityInfoWatch</a> · <a href="https://losspreventionmedia.com/axis-communications-introduces-the-next-wave-of-unified-security-solutions-at-isc-west-2026/" target="_blank">LPM</a> · <a href="https://sen.news/axis-releases-bispectral-ptz-camera" target="_blank">SEN News</a></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════════
+       NEWS ITEM 5 — VIETNAM DATA CENTER
+       ═══════════════════════════════════════════════════ -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <span class="news-number">05</span>
+      <div class="news-tags">
+        <span class="tag">VIETNAM</span>
+        <span class="tag">AIC</span>
+        <span class="tag">FPT</span>
+        <span class="tag cat">DATA CENTER</span>
+        <span class="tag cat">SOUTHEAST ASIA</span>
+      </div>
+      <div class="vi-content">
+        <div class="news-title-vi">Việt Nam Thu Hút $7 Tỷ+ Đầu Tư AI Data Center — Trở Thành Cường Quốc Hạ Tầng Số Đông Nam Á</div>
+        <div class="news-title-en">Vietnam Draws $7B+ in AI Data Center Investment — Emerging as Southeast Asia's Next Digital Infrastructure Powerhouse</div>
+      </div>
+      <div class="en-content" style="display:none">
+        <div class="news-title-vi">Vietnam Draws $7B+ in AI Data Center Investment — Emerging as Southeast Asia's Next Digital Infrastructure Powerhouse</div>
+        <div class="news-title-en">Vietnam attracts over $7B in hyperscale AI data center investment in 2026, with AIC ($2.1B in HCMC), FPT+G42 hyperscale, and government backing for top-3 ASEAN HPC.</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Việt Nam đang trở thành <strong>điểm đến hàng đầu</strong> cho đầu tư data center tại Đông Nam Á, với tổng vốn cam kết vượt <strong>$7 tỷ USD</strong> trong năm 2026. Các tập đoàn công nghệ toàn cầu — Microsoft, Google, Meta, NVIDIA — đang chọn Việt Nam như một <strong>AI hub chiến lược</strong> thay thế/bổ sung Singapore và Malaysia.</p>
+        <p>Các dự án lớn đang triển khai:</p>
+        <p>• <strong>AIC (AI Center)</strong>: $2.1 tỷ USD — data center AI quy mô lớn tại TP.HCM, dự kiến đi vào hoạt động Q3/2028<br>
+        • <strong>FPT + G42 (Abu Dhabi)</strong>: Hyperscale data center 200MW tại Hà Nội & TP.HCM — tích hợp AI cloud infrastructure<br>
+        • <strong>Chính phủ Việt Nam</strong>: Mục tiêu top 3 ASEAN về HPC (High-Performance Computing) capacity đến 2030, đầu tư $5B vào digital infrastructure<br>
+        • <strong>Viettel IDC</strong>: Mở rộng thêm 2 data center tại Hà Nội (Tier III, 10MW mỗi cái) trong 2026</p>
+        <div class="schema-box">
+          <div class="schema-title">CƠ SỞ HẠ TẦNG ELV/ICT CHO DATA CENTER VIỆT NAM (YÊU CẦU THIẾT KẾ)</div>
+          <div class="schema-flow">
+Data Center AI (Tier III/IV)<br>
+├─ Cabling: TIA-942-B / ISO 11801-5 (fiber OM4/OM5 + OS2)<br>
+├─ Networking: 400GbE spine (Arista 7800R4 / Cisco 8000) + 100GbE ToR<br>
+├─ Power: 2N UPS (>5MW) + 480V PDU + busway Schneider Canalis<br>
+├─ Cooling: In-row liquid cooling (CDU) cho GPU rack >30kW/rack<br>
+├─ Security ELV: CCTV AI (Axis/Bosch) + Access (HID/Genetec) + Guard Tour<br>
+├─ Fire: Novec 1230 / IG-541 (FM200 phase-out) + Aspirating ASD<br>
+└─ BMS: Schneider EcoStruxure / Siemens Desigo CC (DCIM integration)
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-title">TẦM QUAN TRỌNG VỚI ELV/ICT CONSULTANT VIỆT NAM</div>
+          <p>Làn sóng data center AI tại Việt Nam mở ra <strong>cơ hội khổng lồ</strong> cho các đơn vị tư vấn và thiết kế ELV/ICT: cabling structured (TIA-942-B), CCTV & access control cấp Tier III, hệ thống chữa cháy sạch (Novec/IG-541), BMS & DCIM tích hợp. Mỗi data center 10-50MW cần <strong>budget ELV/ICT từ $2-10 triệu USD</strong>. Các designer cần cập nhật kiến thức về <strong>tiêu chuẩn TIA-942, ANSI/BICSI 002</strong> và yêu cầu redundancy N+1/2N để tham gia thị trường này.</p>
+        </div>
+        <div class="source-line">Nguồn: <a href="https://erp.today/vietnam-draws-more-than-7-billion-in-ai-data-center-investments-reshaping-enterprise-infrastructure/" target="_blank">ERP Today</a> · <a href="https://technode.global/2026/07/20/vietnam-emerges-as-seas-next-data-center-contender-amid-regional-capacity-shift-bmi/" target="_blank">TechNode Global</a> · <a href="https://opengovasia.com/vietnam-major-ai-data-centre-project-to-strengthen-digital-infrastructure/" target="_blank">OpenGov Asia</a></div>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>Vietnam is emerging as a <strong>top destination</strong> for data center investment in Southeast Asia, with total committed capital exceeding <strong>$7 billion USD</strong> in 2026. Global tech giants — Microsoft, Google, Meta, NVIDIA — are choosing Vietnam as a <strong>strategic AI hub</strong>, complementing or replacing Singapore and Malaysia.</p>
+        <p>Major projects underway:</p>
+        <p>• <strong>AIC (AI Center)</strong>: $2.1B USD — large-scale AI data center in Ho Chi Minh City, targeting Q3/2028 completion<br>
+        • <strong>FPT + G42 (Abu Dhabi)</strong>: 200MW hyperscale data center in Hanoi & HCMC — integrated AI cloud infrastructure<br>
+        • <strong>Vietnamese Government</strong>: Goal of top 3 ASEAN in HPC (High-Performance Computing) capacity by 2030, $5B investment in digital infrastructure<br>
+        • <strong>Viettel IDC</strong>: Expanding with 2 new data centers in Hanoi (Tier III, 10MW each) in 2026</p>
+        <div class="schema-box">
+          <div class="schema-title">ELV/ICT INFRASTRUCTURE FOR VIETNAM DATA CENTERS (DESIGN REQUIREMENTS)</div>
+          <div class="schema-flow">
+AI Data Center (Tier III/IV)<br>
+├─ Cabling: TIA-942-B / ISO 11801-5 (OM4/OM5 fiber + OS2)<br>
+├─ Networking: 400GbE spine (Arista 7800R4 / Cisco 8000) + 100GbE ToR<br>
+├─ Power: 2N UPS (>5MW) + 480V PDU + Schneider Canalis busway<br>
+├─ Cooling: In-row liquid cooling (CDU) for GPU rack >30kW/rack<br>
+├─ ELV Security: AI CCTV (Axis/Bosch) + Access (HID/Genetec) + Guard Tour<br>
+├─ Fire: Novec 1230 / IG-541 (FM200 phase-out) + Aspirating ASD<br>
+└─ BMS: Schneider EcoStruxure / Siemens Desigo CC (DCIM integration)
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-title">RELEVANCE FOR VIETNAM ELV/ICT CONSULTANTS</div>
+          <p>Vietnam's AI data center boom represents a <strong>massive opportunity</strong> for ELV/ICT consultants and designers: structured cabling (TIA-942-B), Tier III CCTV & access control, clean fire suppression (Novec/IG-541), BMS & DCIM integration. Each 10-50MW data center requires an <strong>ELV/ICT budget of $2-10M USD</strong>. Designers need to update their knowledge of <strong>TIA-942, ANSI/BICSI 002</strong> standards and N+1/2N redundancy requirements to compete in this market.</p>
+        </div>
+        <div class="source-line">Sources: <a href="https://erp.today/vietnam-draws-more-than-7-billion-in-ai-data-center-investments-reshaping-enterprise-infrastructure/" target="_blank">ERP Today</a> · <a href="https://technode.global/2026/07/20/vietnam-emerges-as-seas-next-data-center-contender-amid-regional-capacity-shift-bmi/" target="_blank">TechNode Global</a> · <a href="https://opengovasia.com/vietnam-major-ai-data-centre-project-to-strengthen-digital-infrastructure/" target="_blank">OpenGov Asia</a></div>
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <div class="vi-content">
+      <h3>CẦN TƯ VẤN DỰ ÁN ELV/ICT/AV?</h3>
+      <p>Paul Le — ELV/ICT/AV Design Director tại Duy Hoa Phat Corporation & HBP Project Management. Sẵn sàng tư vấn thiết kế, lập BoM, Specification và hồ sơ tender cho dự án của bạn.</p>
+      <a href="https://elvconsultant.com/#contact" class="cta-btn">LIÊN HỆ TƯ VẤN →</a>
+    </div>
+    <div class="en-content" style="display:none">
+      <h3>NEED ELV/ICT/AV PROJECT CONSULTING?</h3>
+      <p>Paul Le — ELV/ICT/AV Design Director at Duy Hoa Phat Corporation & HBP Project Management. Available for design consulting, BoM preparation, specification writing, and tender documentation.</p>
+      <a href="https://elvconsultant.com/#contact" class="cta-btn">CONTACT FOR CONSULTATION →</a>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:1rem;">
+      <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      </svg>
+      <span class="footer-logo-text">PAUL LE CONSULTANT</span>
+    </div>
+    <span class="footer-sub">ELV · ICT · AV DESIGN DIRECTOR</span>
+    <div class="footer-links">
+      <a href="/">elvconsultant.com</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://x.com/PLELVCONSULTANT" target="_blank">X @PLELVCONSULTANT</a>
+    </div>
+    <div class="footer-copy">
+      © 2026 Paul Le Consultant — ELV/ICT/AV Design Director, Duy Hoa Phat Corporation & HBP Project Management<br>
+      Bản tin tuần 45 · 02/11/2026 · Song ngữ Việt–Anh | Weekly W45 · 02 Nov 2026 · Bilingual VI–EN<br>
+      Hình ảnh: Unsplash (nacer eddine) · Nguồn: TechTarget, ITPro, AVIXA, SDM Magazine, SecurityInfoWatch, ERP Today
+    </div>
+  </div>
+</footer>
+
+<!-- LANGUAGE TOGGLE SCRIPT -->
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
