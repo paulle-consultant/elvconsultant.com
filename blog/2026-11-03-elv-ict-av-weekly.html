@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly W45 | 03 Nov 2026 | CISCO+NVIDIA · Schneider Foresight · Extron AV · Cisco 360 · Secutech VN</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 45 (03/11/2026): CISCO+NVIDIA USFP Optical AI Factory · Cisco 360 Partner Program · Schneider EcoStruxure Foresight Operation · Extron New Products 2nd Ed · Secutech Vietnam 2026">
+  <meta name="keywords" content="ELV news, ICT AV news Vietnam, smart building, CISCO NVIDIA optical, Schneider EcoStruxure Foresight, Extron AV 2026, Secutech Vietnam">
+  <meta name="author" content="Paul Le — ELV/ICT/AV Consultant">
+  <meta property="og:title" content="ELV/ICT/AV Weekly W45 | 03 Nov 2026">
+  <meta property="og:description" content="5 tin nổi bật: CISCO+NVIDIA USFP · Cisco 360 · Schneider Foresight · Extron 2nd Ed · Secutech Vietnam 2026">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1643633927981-8c50f1746dde?w=1200&h=630&q=85&auto=format&fit=crop">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-03-elv-ict-av-weekly.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --bg:#07111F;
+      --card-bg:#101E30;
+      --card-border:#1E3550;
+      --cyan:#00C8E0;
+      --cyan-dim:rgba(0,200,224,0.10);
+      --cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;
+      --white:#F0F4F8;
+      --steel:#4A6280;
+      --navy:#1B2A4A;
+      --navy-deep:#0D1B35;
+      --grid-line:rgba(0,200,224,0.08);
+    }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:'Inter',sans-serif;
+      background:var(--bg);
+      color:var(--white);
+      overflow-x:hidden;
+      line-height:1.7;
+    }
+    .grid-bg {
+      position:fixed; top:0; left:0; width:100%; height:100%;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size:48px 48px;
+      pointer-events:none; z-index:0;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position:sticky; top:0; z-index:100;
+      background:rgba(7,17,31,0.96);
+      border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+      padding:0 2rem;
+      display:flex; align-items:center; justify-content:space-between; height:64px;
+    }
+    .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+    .logo-text { font-family:'Orbitron',sans-serif; font-size:14px; font-weight:700; color:var(--white); letter-spacing:1px; }
+    .logo-sub  { font-size:9px; color:var(--cyan); letter-spacing:2px; font-weight:400; display:block; margin-top:-2px; }
+    .nav-links { display:flex; gap:1.5rem; list-style:none; }
+    .nav-links a { color:var(--silver); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:.5px; transition:color .2s; }
+    .nav-links a:hover, .nav-links a.active { color:var(--cyan); }
+    .nav-cta {
+      background:transparent; border:1px solid var(--cyan);
+      color:var(--cyan); padding:8px 20px; border-radius:4px;
+      font-size:12px; font-weight:600; cursor:pointer;
+      font-family:'Inter',sans-serif; letter-spacing:.5px;
+      transition:all .2s; text-decoration:none;
+    }
+    .nav-cta:hover { background:var(--cyan); color:var(--bg); }
+
+    /* ── LANG BAR ── */
+    .lang-bar {
+      position:relative; z-index:1;
+      background:var(--navy-deep); border-bottom:1px solid var(--card-border);
+      padding:.5rem 2rem;
+      display:flex; align-items:center; gap:1rem;
+    }
+    .lang-bar span { font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:2px; color:var(--steel); }
+    .lang-btn {
+      font-family:'Orbitron',sans-serif; font-size:10px; font-weight:700; letter-spacing:1.5px;
+      padding:4px 14px; border-radius:3px; cursor:pointer; border:1px solid var(--card-border);
+      background:transparent; color:var(--steel); transition:all .2s;
+    }
+    .lang-btn.active, .lang-btn:hover { background:var(--cyan); color:var(--bg); border-color:var(--cyan); }
+
+    /* ── HERO ── */
+    .article-hero {
+      position:relative; z-index:1; height:480px; overflow:hidden;
+    }
+    .article-hero img {
+      width:100%; height:100%; object-fit:cover;
+      filter:brightness(.65) saturate(.85);
+    }
+    .article-hero-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(
+        180deg,
+        rgba(7,17,31,.15) 0%,
+        rgba(7,17,31,.35) 40%,
+        rgba(7,17,31,.88) 80%,
+        rgba(7,17,31,.98) 100%
+      );
+    }
+    .article-hero-content {
+      position:absolute; bottom:0; left:0; right:0;
+      padding:2rem clamp(1.5rem,5vw,4rem) 2.5rem;
+      max-width:900px;
+    }
+    .article-eyebrow {
+      font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:3px;
+      color:var(--cyan); margin-bottom:.75rem;
+      display:flex; align-items:center; gap:10px;
+    }
+    .article-eyebrow::before { content:''; width:24px; height:1px; background:var(--cyan); }
+    .article-hero-title {
+      font-family:'Orbitron',sans-serif;
+      font-size:clamp(1.4rem,3vw,2.2rem);
+      font-weight:900; color:var(--white);
+      line-height:1.2; margin-bottom:.6rem;
+      text-shadow:0 2px 20px rgba(0,0,0,.6);
+    }
+    .article-hero-sub { font-size:14px; color:var(--silver); line-height:1.6; }
+    .hero-tags { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1rem; }
+    .hero-tag {
+      font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:1px;
+      padding:3px 10px; border-radius:3px;
+      border:1px solid rgba(0,200,224,.3);
+      color:var(--cyan); background:var(--cyan-dim);
+    }
+
+    /* ── MAIN ── */
+    main {
+      position:relative; z-index:1;
+      max-width:900px; margin:0 auto;
+      padding:3rem 2rem 4rem;
+    }
+
+    /* ── NEWS ITEM ── */
+    .news-item {
+      background:var(--card-bg);
+      border:1px solid var(--card-border);
+      border-radius:10px;
+      padding:2rem;
+      margin-bottom:1.75rem;
+      position:relative; overflow:hidden;
+      transition:border-color .3s, box-shadow .3s;
+    }
+    .news-item::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:2px;
+      background:linear-gradient(90deg, var(--cyan), transparent);
+      opacity:.6;
+    }
+    .news-item:hover {
+      border-color:rgba(0,200,224,.35);
+      box-shadow:0 4px 32px -8px rgba(0,200,224,.15);
+    }
+    .news-num {
+      display:inline-flex; align-items:center; justify-content:center;
+      width:32px; height:32px; border-radius:50%;
+      background:var(--cyan-dim); border:1px solid rgba(0,200,224,.3);
+      font-family:'Orbitron',sans-serif; font-size:12px; font-weight:700;
+      color:var(--cyan); margin-bottom:1rem;
+    }
+    .news-tags { display:flex; gap:.4rem; flex-wrap:wrap; margin-bottom:.75rem; }
+    .news-tag {
+      font-family:'Orbitron',sans-serif; font-size:8px; font-weight:700; letter-spacing:1.2px;
+      padding:3px 9px; border-radius:3px;
+      background:var(--cyan-dim); border:1px solid rgba(0,200,224,.25);
+      color:var(--cyan);
+    }
+    .news-tag.tag-sec { background:rgba(0,200,224,.05); border-color:rgba(0,200,224,.15); color:var(--steel); }
+    .news-title {
+      font-family:'Orbitron',sans-serif;
+      font-size:clamp(14px,1.6vw,17px); font-weight:700;
+      color:var(--white); line-height:1.35; margin-bottom:.75rem;
+    }
+    .news-body { font-size:14px; color:var(--silver); line-height:1.8; }
+    .news-body p { margin-bottom:.75rem; }
+    .news-body strong { color:var(--white); font-weight:600; }
+    .news-source {
+      margin-top:1rem; padding-top:.75rem;
+      border-top:1px solid var(--card-border);
+      font-size:11px; color:var(--steel);
+    }
+    .news-source a { color:var(--cyan); text-decoration:none; opacity:.8; transition:opacity .2s; }
+    .news-source a:hover { opacity:1; text-decoration:underline; }
+
+    /* ── WHY BOX ── */
+    .why-box {
+      margin-top:1.25rem;
+      background:linear-gradient(135deg, rgba(0,200,224,.06), rgba(27,42,74,.4));
+      border:1px solid rgba(0,200,224,.2);
+      border-left:3px solid var(--cyan);
+      border-radius:0 6px 6px 0;
+      padding:1rem 1.25rem;
+    }
+    .why-box-label {
+      font-family:'Orbitron',sans-serif; font-size:8px; letter-spacing:2px;
+      color:var(--cyan); margin-bottom:.5rem;
+    }
+    .why-box p { font-size:13px; color:var(--silver); line-height:1.7; }
+    .why-box strong { color:var(--white); }
+
+    /* ── DIAGRAM ── */
+    .diagram-box {
+      margin:1.25rem 0;
+      background:var(--navy-deep);
+      border:1px solid var(--card-border);
+      border-radius:8px; padding:1.25rem;
+      overflow-x:auto;
+    }
+    .diagram-label {
+      font-family:'Orbitron',sans-serif; font-size:8px; letter-spacing:2px;
+      color:var(--steel); margin-bottom:.75rem;
+    }
+    .diagram-box pre {
+      font-family:'Courier New',monospace; font-size:11px;
+      color:var(--cyan); line-height:1.6; white-space:pre;
+    }
+
+    /* ── CTA BOX ── */
+    .cta-box {
+      margin-top:3rem;
+      background:linear-gradient(135deg, var(--navy), var(--navy-deep));
+      border:1px solid rgba(0,200,224,.25);
+      border-radius:10px; padding:2.5rem;
+      text-align:center;
+      position:relative; overflow:hidden;
+    }
+    .cta-box::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:2px;
+      background:linear-gradient(90deg, transparent, var(--cyan), transparent);
+    }
+    .cta-box h3 {
+      font-family:'Orbitron',sans-serif; font-size:18px; font-weight:700;
+      color:var(--white); margin-bottom:.75rem;
+    }
+    .cta-box p { font-size:14px; color:var(--silver); margin-bottom:1.5rem; line-height:1.7; }
+    .cta-link {
+      display:inline-block;
+      font-family:'Orbitron',sans-serif; font-size:11px; font-weight:700; letter-spacing:1.5px;
+      padding:12px 32px; border-radius:4px;
+      background:var(--cyan); color:var(--bg);
+      text-decoration:none; transition:all .2s;
+    }
+    .cta-link:hover { background:#00E5FF; transform:translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer {
+      position:relative; z-index:1;
+      border-top:1px solid var(--card-border);
+      background:var(--card-bg);
+      padding:2.5rem 2rem; margin-top:0;
+    }
+    .footer-inner {
+      max-width:900px; margin:0 auto;
+      display:grid; grid-template-columns:1fr 1fr; gap:2rem;
+    }
+    .footer-brand p { font-size:12px; color:var(--steel); line-height:1.7; margin-top:.5rem; }
+    .footer-col h5 {
+      font-family:'Orbitron',sans-serif; font-size:10px; letter-spacing:2px;
+      color:var(--cyan); margin-bottom:.75rem;
+    }
+    .footer-col a {
+      display:block; font-size:13px; color:var(--steel);
+      text-decoration:none; margin-bottom:.4rem; transition:color .2s;
+    }
+    .footer-col a:hover { color:var(--silver); }
+    .footer-bottom {
+      max-width:900px; margin:1.5rem auto 0;
+      padding-top:1.5rem; border-top:1px solid var(--card-border);
+      display:flex; justify-content:space-between; flex-wrap:wrap; gap:.5rem;
+    }
+    .footer-copy { font-size:12px; color:var(--steel); }
+    .footer-domain { font-family:'Orbitron',sans-serif; font-size:12px; color:var(--cyan); }
+
+    @media(max-width:768px) {
+      nav { padding:0 1rem; }
+      .nav-links { display:none; }
+      .article-hero { height:320px; }
+      main { padding:2rem 1rem 3rem; }
+      .footer-inner { grid-template-columns:1fr; }
+      .lang-bar { padding:.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div>
+      <span class="logo-text">PAUL LE CONSULTANT</span>
+      <span class="logo-sub">ELV · ICT · AV DESIGN DIRECTOR</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư Vấn</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span>LANGUAGE /</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img
+    src="https://images.unsplash.com/photo-1643633927981-8c50f1746dde?w=1400&h=520&q=85&auto=format&fit=crop"
+    alt="Smart building technology illuminated at night — ELV ICT AV Weekly W45 2026"
+    loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="article-eyebrow">
+      <span class="vi-content">BẢN TIN TUẦN 45 · THỨ BA 03 THÁNG 11, 2026</span>
+      <span class="en-content" style="display:none">WEEKLY BULLETIN W45 · TUESDAY 03 NOVEMBER 2026</span>
+    </div>
+    <h1 class="article-hero-title">
+      <span class="vi-content">CISCO+NVIDIA Optical AI · Cisco 360 Partner · Schneider Foresight BMS · Extron AV 2026 · Secutech Vietnam</span>
+      <span class="en-content" style="display:none">CISCO+NVIDIA AI Optical · Cisco 360 Program · Schneider Foresight BMS · Extron AV 2026 · Secutech Vietnam</span>
+    </h1>
+    <p class="article-hero-sub">
+      <span class="vi-content">5 tin nổi bật tuần 45 từ các nhà sản xuất hàng đầu — song ngữ Việt–Anh bởi Paul Le Consultant</span>
+      <span class="en-content" style="display:none">5 top stories of week 45 from leading manufacturers — bilingual VI–EN by Paul Le Consultant</span>
+    </p>
+    <div class="hero-tags">
+      <span class="hero-tag">CISCO</span>
+      <span class="hero-tag">NVIDIA</span>
+      <span class="hero-tag">SCHNEIDER</span>
+      <span class="hero-tag">EXTRON</span>
+      <span class="hero-tag">SECUTECH VN</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- ══════════════════════════════════════ TIN 1 ══ -->
+  <article class="news-item">
+    <div class="news-num">1</div>
+    <div class="news-tags">
+      <span class="news-tag">CISCO</span>
+      <span class="news-tag">NVIDIA</span>
+      <span class="news-tag tag-sec">AI FACTORY</span>
+      <span class="news-tag tag-sec">OPTICAL</span>
+    </div>
+
+    <h2 class="news-title">
+      <span class="vi-content">NVIDIA + Cisco Ra Mắt Chuẩn USFP — Optical Pluggable 400G/Lane Cho Hạ Tầng AI Factory</span>
+      <span class="en-content" style="display:none">NVIDIA + Cisco Introduce New USFP Pluggable Optics Standard to Scale AI Factories</span>
+    </h2>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p>NVIDIA và Cisco công bố hợp tác phát triển chuẩn <strong>Ultra Small Form Factor Pluggable (USFP)</strong> — thế hệ optical transceiver mới dành riêng cho siêu mật độ AI Factory. USFP hỗ trợ tốc độ <strong>400G mỗi lane</strong>, mật độ cổng cao hơn gấp đôi QSFP-DD112 trên cùng một thiết bị chuyển mạch, giảm tiêu thụ năng lượng mỗi Gbps xuống còn ~0,5W.</p>
+        <p>Cisco Nexus 9000 series và switch AI Cluster (Silicon One G302) dự kiến tích hợp USFP trong H1 2027, tương thích với kiến trúc NVIDIA NVLink và Infiniband. Đây là bước đột phá khi các data center AI cần <strong>băng thông từ 51.2T tới 102.4T trên mỗi switch</strong>, đặc biệt với cluster GPU H200/B200 trong các hyperscale campus.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>NVIDIA and Cisco announced a joint initiative to develop the <strong>Ultra Small Form Factor Pluggable (USFP)</strong> standard — next-generation optical transceivers purpose-built for ultra-high-density AI factories. USFP supports <strong>400G per lane</strong>, doubles port density versus QSFP-DD112 on the same switch, and reduces power consumption to ~0.5W per Gbps.</p>
+        <p>Cisco Nexus 9000 and AI Cluster switches (Silicon One G302) are expected to integrate USFP in H1 2027, compatible with NVIDIA NVLink and InfiniBand architectures. This is a breakthrough as AI data centers demand <strong>51.2T to 102.4T bandwidth per switch</strong>, especially for H200/B200 GPU clusters in hyperscale campuses.</p>
+      </div>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-label">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — USFP AI FACTORY OPTICAL INTERCONNECT</div>
+      <pre>
+┌─────────────────────────────────────────────────────────────────┐
+│              AI FACTORY — OPTICAL SPINE LAYER                   │
+│                                                                 │
+│   GPU Rack (H200×8)          GPU Rack (B200×8)                  │
+│   ┌───────────┐              ┌───────────┐                      │
+│   │ NVSwitch  │◄─ NVLink ──►│ NVSwitch  │                      │
+│   └─────┬─────┘              └─────┬─────┘                      │
+│         │ USFP 400G/lane           │ USFP 400G/lane             │
+│         ▼                          ▼                            │
+│   ┌─────────────────────────────────────┐                       │
+│   │   Cisco Nexus / Silicon One G302    │                       │
+│   │   102.4 Tbps · USFP×64 ports       │                       │
+│   └─────────────────────────────────────┘                       │
+│         │ 400GbE / InfiniBand HDR800                            │
+│         ▼                                                       │
+│   ┌───────────────────────────┐                                 │
+│   │   Storage / Orchestration │ (NVIDIA DGX Cloud / Cisco UCS) │
+│   └───────────────────────────┘                                 │
+│                                                                 │
+│  USFP vs QSFP-DD112:                                            │
+│  • Tốc độ/lane : 400G (USFP) vs 100G (QSFP-DD112)             │
+│  • Mật độ      : 2× QSFP-DD112 cùng 1U                        │
+│  • Điện tiêu thụ: ~0.5W/Gbps (USFP) vs ~1.2W/Gbps             │
+└─────────────────────────────────────────────────────────────────┘</pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-label">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</div>
+      <div class="vi-content">
+        <p>Vietnam đang thu hút hơn <strong>$7 tỷ USD đầu tư data center AI</strong> từ AIC, FPT, G42, Viettel. Khi thiết kế hạ tầng cabling cho AI Data Center (TIA-942 Tier III/IV), kỹ sư ELV/ICT cần hiểu rõ lộ trình chuyển đổi sang USFP để <strong>dự phòng conduit, patch panel và MDA/HDA cho tốc độ 400G+</strong> ngay từ bản vẽ thiết kế 2026-2027. Tránh lỗi thiết kế cáp quang với bend radius quá chặt hoặc không đủ không gian cho form factor mới.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>Vietnam is attracting over <strong>$7B USD in AI data center investment</strong> from AIC, FPT, G42, and Viettel. When designing cabling infrastructure for AI Data Centers (TIA-942 Tier III/IV), ELV/ICT engineers must understand the USFP roadmap to <strong>provision conduits, patch panels and MDA/HDA for 400G+ speeds</strong> right from 2026-2027 design drawings. Avoid fiber routing errors with bend radius violations or insufficient space for new form factors.</p>
+      </div>
+    </div>
+    <div class="news-source">
+      Nguồn: <a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/nvidia-and-cisco-new-pluggable-optics-to-scale-ai-factories.html" target="_blank" rel="noopener">Cisco Newsroom — NVIDIA and Cisco Introduce New Pluggable Optics Form Factor</a>
+    </div>
+  </article>
+
+  <!-- ══════════════════════════════════════ TIN 2 ══ -->
+  <article class="news-item">
+    <div class="news-num">2</div>
+    <div class="news-tags">
+      <span class="news-tag">CISCO</span>
+      <span class="news-tag tag-sec">CISCO 360</span>
+      <span class="news-tag tag-sec">PARTNER</span>
+    </div>
+
+    <h2 class="news-title">
+      <span class="vi-content">Cisco 360 Program Cập Nhật Mới (02/11/2026): Thay Đổi Toàn Bộ Hệ Thống Đối Tác Cisco Toàn Cầu</span>
+      <span class="en-content" style="display:none">Cisco Expands Partner Opportunity with New Cisco 360 Program Updates (Nov 2, 2026)</span>
+    </h2>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Cisco công bố cập nhật quan trọng cho chương trình đối tác <strong>Cisco 360</strong> vào ngày 2/11/2026 — thay thế toàn bộ hệ thống Cisco Channel Partner Program (CCPP). Các điểm mới chính:</p>
+        <p><strong>• Investment Value Points (IVP):</strong> Cisco tính điểm thưởng dựa trên doanh số + chứng chỉ + hành vi thị trường (thay vì chỉ doanh số). Điểm IVP cao hơn → rebate cao hơn, ưu tiên deals.</p>
+        <p><strong>• New Competencies:</strong> Bổ sung AI Networking, Security Resilience và Lifecycle Customer Success làm competency bắt buộc cho Certified/Premier/Gold trong năm 2027.</p>
+        <p><strong>• Simplification:</strong> Giảm từ 7 xuống còn 4 cấp (Registered, Certified, Premier, Gold) — giảm độ phức tạp cho SI nhỏ và vừa.</p>
+        <p>Chương trình hiệu lực từ <strong>01/02/2027</strong>, đăng ký lại qua Cisco Partner Hub trước 31/01/2027.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>Cisco announced significant updates to the <strong>Cisco 360 Partner Program</strong> on November 2, 2026 — replacing the entire Cisco Channel Partner Program (CCPP). Key changes:</p>
+        <p><strong>• Investment Value Points (IVP):</strong> Cisco now rewards based on revenue + certifications + market behavior (not revenue only). Higher IVP → higher rebates and deal priority.</p>
+        <p><strong>• New Competencies:</strong> AI Networking, Security Resilience and Lifecycle Customer Success added as mandatory competencies for Certified/Premier/Gold in 2027.</p>
+        <p><strong>• Simplification:</strong> Reduced from 7 to 4 tiers (Registered, Certified, Premier, Gold) — reducing complexity for small and mid-size SIs.</p>
+        <p>Program effective from <strong>01/02/2027</strong>, re-registration via Cisco Partner Hub before 31/01/2027.</p>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-label">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</div>
+      <div class="vi-content">
+        <p>Các công ty SI Cisco tại Việt Nam cần <strong>đăng ký lại và hoàn thiện AI Networking + Security Resilience competency trước 31/01/2027</strong>. Thiếu competency mới sẽ mất tier và giảm rebate — ảnh hưởng trực tiếp biên lợi nhuận trên dự án ICT campus. Ưu tiên đưa kỹ sư đi thi <strong>CCNP Enterprise / CCNP Security</strong> trước deadline.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>Cisco SI companies in Vietnam must <strong>re-register and complete AI Networking + Security Resilience competencies before 31/01/2027</strong>. Missing new competencies means losing tier status and reduced rebates — directly impacting project margins on ICT campus work. Prioritize sending engineers for <strong>CCNP Enterprise / CCNP Security</strong> certification before the deadline.</p>
+      </div>
+    </div>
+    <div class="news-source">
+      Nguồn: <a href="https://channelpostmea.com/2026/11/02/cisco-expands-partner-opportunity-with-new-cisco-360-program-updates/" target="_blank" rel="noopener">Channel Post MEA — Cisco Expands Partner Opportunity with New Cisco 360 Program Updates</a> · <a href="https://securitymea.com/2026/11/02/cisco-enhances-partner-success-with-new-cisco-360-program-updates/" target="_blank" rel="noopener">Security MEA</a>
+    </div>
+  </article>
+
+  <!-- ══════════════════════════════════════ TIN 3 ══ -->
+  <article class="news-item">
+    <div class="news-num">3</div>
+    <div class="news-tags">
+      <span class="news-tag">SCHNEIDER</span>
+      <span class="news-tag tag-sec">BMS</span>
+      <span class="news-tag tag-sec">AI</span>
+      <span class="news-tag tag-sec">ECOSTRUXURE</span>
+    </div>
+
+    <h2 class="news-title">
+      <span class="vi-content">Schneider Electric Ra Mắt EcoStruxure Foresight Operation — Nền Tảng AI Thống Nhất Năng Lượng + Điện + BMS</span>
+      <span class="en-content" style="display:none">Schneider Electric Unveils EcoStruxure Foresight Operation — Unified AI Platform for Energy, Power &amp; Building Management</span>
+    </h2>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Schneider Electric chính thức ra mắt <strong>EcoStruxure Foresight Operation</strong> — nền tảng phần mềm AI đầu tiên trên thị trường tích hợp <em>đồng thời</em> quản lý năng lượng, điện trung thế và hệ thống tòa nhà (BMS) trong một giao diện duy nhất. Trước đây, ba hệ thống này vận hành riêng lẻ với dữ liệu rời rạc.</p>
+        <p><strong>Tính năng chính:</strong></p>
+        <p>• <strong>AI Predictive Operations:</strong> Phân tích dữ liệu real-time từ hệ thống điện (UPS, ATS, máy biến áp), HVAC, chiếu sáng, an ninh → dự báo sự cố trước 48-72 giờ, tự động điều chỉnh thông số.</p>
+        <p>• <strong>Digital Twin tòa nhà:</strong> Mô phỏng 3D tòa nhà cập nhật thời gian thực, kiểm thử các kịch bản vận hành trước khi thực thi.</p>
+        <p>• <strong>OpenAPI + BACnet/Modbus/KNX:</strong> Kết nối với thiết bị đa nhà sản xuất, phù hợp công trình đã có hệ thống cũ.</p>
+        <p>Kết quả thử nghiệm tại 50 tòa nhà: <strong>tiết kiệm 22-28% năng lượng, giảm 45% thời gian downtime không kế hoạch</strong>.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>Schneider Electric officially launched <strong>EcoStruxure Foresight Operation</strong> — the market's first AI software platform to <em>simultaneously</em> integrate energy management, medium-voltage power and building management (BMS) in a single interface. Previously these three systems operated independently with siloed data.</p>
+        <p><strong>Key features:</strong></p>
+        <p>• <strong>AI Predictive Operations:</strong> Real-time data analysis from power systems (UPS, ATS, transformers), HVAC, lighting, security → predicts faults 48-72 hours ahead, automatically adjusts parameters.</p>
+        <p>• <strong>Building Digital Twin:</strong> 3D building simulation updated in real time, test operational scenarios before execution.</p>
+        <p>• <strong>OpenAPI + BACnet/Modbus/KNX:</strong> Connects with multi-manufacturer equipment, suitable for buildings with existing legacy systems.</p>
+        <p>Pilot results across 50 buildings: <strong>22-28% energy savings, 45% reduction in unplanned downtime</strong>.</p>
+      </div>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-label">SƠ ĐỒ TÍCH HỢP / INTEGRATION DIAGRAM — EcoStruxure Foresight Operation</div>
+      <pre>
+┌──────────────────── EcoStruxure Foresight Operation ────────────────────┐
+│                          [AI Engine + Digital Twin]                     │
+│                                    │                                    │
+│          ┌─────────────────────────┼──────────────────────┐            │
+│          ▼                         ▼                      ▼            │
+│   ┌─────────────┐         ┌─────────────────┐   ┌──────────────────┐  │
+│   │ ENERGY MGMT │         │  POWER SYSTEMS  │   │ BUILDING SYSTEMS │  │
+│   │ (EcoStruxure│         │ (EcoStruxure    │   │ (EcoStruxure     │  │
+│   │  Energy Hub)│         │  Power Auto)    │   │  Building Ops)   │  │
+│   └──────┬──────┘         └────────┬────────┘   └────────┬─────────┘  │
+│          │                         │                     │            │
+│   • Utility metering        • UPS / ATS               • HVAC         │
+│   • PV Solar / Battery      • MV Switchgear           • Lighting      │
+│   • Grid Carbon data        • LV Panels               • Access Ctrl   │
+│   • Demand response         • Transformers            • Fire Alarm     │
+│                                                        • Lifts         │
+│                                                                        │
+│   PROTOCOL LAYER: BACnet · Modbus · KNX · OPC-UA · REST OpenAPI      │
+│   RESULT: -22~28% Energy · -45% Downtime · 1 Dashboard               │
+└────────────────────────────────────────────────────────────────────────┘</pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-label">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</div>
+      <div class="vi-content">
+        <p>Với các công trình <strong>bệnh viện, trường đại học, tòa nhà thương mại, khu công nghiệp tại Việt Nam</strong> đang đầu tư BMS — EcoStruxure Foresight Operation là giải pháp cần đưa vào hồ sơ tư vấn và đặc tả kỹ thuật (specification). Khi soạn BoQ và BoM cho dự án BMS, cần yêu cầu open protocol (BACnet/Modbus/KNX) để đảm bảo tương thích với Foresight Operation. Đây cũng là lợi thế khi thuyết phục chủ đầu tư về ROI và tiết kiệm năng lượng dài hạn.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>For <strong>hospitals, universities, commercial buildings and industrial parks in Vietnam</strong> investing in BMS — EcoStruxure Foresight Operation is the solution to include in consulting proposals and technical specifications. When drafting BoQ and BoM for BMS projects, mandate open protocols (BACnet/Modbus/KNX) to ensure Foresight Operation compatibility. This also provides a strong ROI argument when persuading investors about long-term energy savings.</p>
+      </div>
+    </div>
+    <div class="news-source">
+      Nguồn: <a href="https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric%E2%80%99s-ecostruxure%E2%84%A2-foresight-operation-ushers-in-a-new-era-for-the-built-environment-691afab27594b4250a019d43/" target="_blank" rel="noopener">Schneider Electric Newsroom — EcoStruxure Foresight Operation</a> · <a href="https://www.facilitiesdive.com/news/schneider-electric-debuts-unified-ai-powered-platform-for-buildings/806535/" target="_blank" rel="noopener">Facilities Dive</a>
+    </div>
+  </article>
+
+  <!-- ══════════════════════════════════════ TIN 4 ══ -->
+  <article class="news-item">
+    <div class="news-num">4</div>
+    <div class="news-tags">
+      <span class="news-tag">EXTRON</span>
+      <span class="news-tag tag-sec">AV</span>
+      <span class="news-tag tag-sec">NEW PRODUCTS</span>
+    </div>
+
+    <h2 class="news-title">
+      <span class="vi-content">Extron Ra Mắt Brochure Sản Phẩm Mới 2026 — Phiên Bản 2: HDMI 2.1, 8K, AV-over-IP Thế Hệ Mới</span>
+      <span class="en-content" style="display:none">Extron Releases 2026 New Products Brochure — 2nd Edition: HDMI 2.1, 8K, Next-Gen AV-over-IP</span>
+    </h2>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Extron phát hành <strong>2026 New Products Brochure — Second Edition</strong>, tổng hợp danh sách sản phẩm AV mới nhất cho phòng họp, giảng đường, phòng điều khiển và trình diễn. Những điểm nổi bật:</p>
+        <p><strong>• Matrix Switchers HDMI 2.1:</strong> Hỗ trợ 8K/60Hz, 4K/120Hz HDR, HDCP 2.3 — dành cho phòng họp tiêu chuẩn cao và phòng điều khiển/tổng đài.</p>
+        <p><strong>• DTP3 Series (AV-over-IP + Streaming):</strong> Truyền tải HDMI 2.1 qua mạng IP 1GbE/10GbE, hỗ trợ NDI|HX3, HDCP 2.3, PoE cho end-point, độ trễ &lt;1 frame @ 4K60.</p>
+        <p><strong>• ShareLink Ultra:</strong> Wireless presentation system hỗ trợ AirPlay 2, Google Cast, Miracast, BYOD không giới hạn thiết bị đồng thời, màn hình chia đôi 4 nguồn.</p>
+        <p><strong>• MediaPort 200:</strong> USB-C + HDMI combo input cho bàn họp dạng pop-up (flush mount), hỗ trợ USB 3.2 Gen2 (20Gbps), PD 90W.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>Extron released the <strong>2026 New Products Brochure — Second Edition</strong>, compiling the latest AV products for meeting rooms, lecture halls, control rooms and presentation. Highlights:</p>
+        <p><strong>• Matrix Switchers HDMI 2.1:</strong> Supports 8K/60Hz, 4K/120Hz HDR, HDCP 2.3 — for high-specification meeting rooms and control/dispatch rooms.</p>
+        <p><strong>• DTP3 Series (AV-over-IP + Streaming):</strong> Transmits HDMI 2.1 over IP 1GbE/10GbE networks, supports NDI|HX3, HDCP 2.3, PoE for endpoints, latency &lt;1 frame @ 4K60.</p>
+        <p><strong>• ShareLink Ultra:</strong> Wireless presentation system supporting AirPlay 2, Google Cast, Miracast, unlimited simultaneous BYOD devices, quad-split display.</p>
+        <p><strong>• MediaPort 200:</strong> USB-C + HDMI combo flush-mount table input, USB 3.2 Gen2 (20Gbps), PD 90W.</p>
+      </div>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-label">SƠ ĐỒ GIẢI PHÁP / SOLUTION DIAGRAM — Extron DTP3 AV-over-IP cho Phòng Họp Đa Điểm</div>
+      <pre>
+┌─────────────────── DTP3 AV-OVER-IP TOPOLOGY ──────────────────────┐
+│                                                                    │
+│  PRESENTER ROOM                        DISPLAY ROOM               │
+│  ┌────────────────┐                   ┌────────────────────┐      │
+│  │ Laptop/PC      │                   │ 4K Display         │      │
+│  │ USB-C/HDMI 2.1 │                   │ 4K/120Hz HDR       │      │
+│  └───────┬────────┘                   └──────────┬─────────┘      │
+│          │                                       │                │
+│  ┌───────▼────────┐   Ethernet 1GbE   ┌──────────▼─────────┐     │
+│  │ DTP3 Encoder   │◄─────────────────►│ DTP3 Decoder       │     │
+│  │ HDMI2.1 → IP   │   (±1 frame delay)│ IP → HDMI2.1       │     │
+│  │ NDI|HX3+HDCP23 │                   │ PoE powered        │     │
+│  └───────┬────────┘                   └────────────────────┘      │
+│          │                                                         │
+│     ShareLink Ultra (Wireless BYOD: AirPlay2/Cast/Miracast)       │
+│     MediaPort 200 (Flush-mount USB-C/HDMI combo, PD 90W)          │
+│                                                                    │
+│   CONTROL: Extron Control System / Crestron / AMX (Bi-directional)│
+└────────────────────────────────────────────────────────────────────┘</pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-label">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</div>
+      <div class="vi-content">
+        <p>Khi thiết kế AV cho <strong>phòng họp hội đồng, phòng đào tạo, hội trường đại học</strong> tại Việt Nam: DTP3 series là lựa chọn thay thế cho HDMI chạy dây dài — sử dụng hạ tầng mạng IP sẵn có (1GbE), giảm chi phí cáp đặc chủng. ShareLink Ultra phù hợp phòng họp BYOD không cố định. Cần cập nhật specification template: thay HDMI extender truyền thống bằng <strong>AV-over-IP DTP3 + PoE switch</strong> cho dự án 2026-2027.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>When designing AV for <strong>boardrooms, training rooms and university lecture halls</strong> in Vietnam: DTP3 series is the replacement for long-run HDMI cables — uses existing IP network infrastructure (1GbE), reducing specialty cable costs. ShareLink Ultra suits flexible BYOD meeting rooms. Update specification templates: replace traditional HDMI extenders with <strong>AV-over-IP DTP3 + PoE switch</strong> for 2026-2027 projects.</p>
+      </div>
+    </div>
+    <div class="news-source">
+      Nguồn: <a href="https://www.extron.com/article/npb_1894pr" target="_blank" rel="noopener">Extron — 2026 New Products Brochure, 2nd Edition</a> · <a href="https://www.extron.com/article/npb" target="_blank" rel="noopener">Extron NPB Hub</a>
+    </div>
+  </article>
+
+  <!-- ══════════════════════════════════════ TIN 5 ══ -->
+  <article class="news-item">
+    <div class="news-num">5</div>
+    <div class="news-tags">
+      <span class="news-tag">SECUTECH VN</span>
+      <span class="news-tag tag-sec">VIETNAM</span>
+      <span class="news-tag tag-sec">AI SECURITY</span>
+      <span class="news-tag tag-sec">SMART BUILDING</span>
+    </div>
+
+    <h2 class="news-title">
+      <span class="vi-content">Secutech Vietnam 2026 — Hội Tụ AI Security, Smart Building và Fire Safety: Recap Chuyên Đề Cho Kỹ Sư ELV</span>
+      <span class="en-content" style="display:none">Secutech Vietnam 2026 Recap — AI Security, Smart Building &amp; Fire Safety Convergence: ELV Engineer Briefing</span>
+    </h2>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Secutech Vietnam 2026 (tổ chức tại Hà Nội và TP.HCM) ghi nhận sự hội tụ mạnh mẽ của các công nghệ AI Security, Smart Building và Fire Safety tại một triển lãm — xu hướng rõ ràng cho giai đoạn 2026-2030 tại Việt Nam. Các chủ đề nổi bật:</p>
+        <p><strong>• AI Integrated Solutions:</strong> Camera AI nhận diện khuôn mặt, biển số, phát hiện vũ khí/bỏ đồ vật (Hikvision, Dahua, Axis, Hanwha) — tích hợp trực tiếp vào platform VMS (Milestone, Genetec) và BMS.</p>
+        <p><strong>• Smart Factory + ELV hội tụ:</strong> Các dự án khu công nghiệp (Bắc Ninh, Bình Dương, Long An) đang tích hợp ELV (camera AI, BMS, fire alarm, structured cabling) vào một platform quản lý duy nhất từ giai đoạn thiết kế.</p>
+        <p><strong>• Fire Safety AI:</strong> Hochiki, System Sensor, Notifier trình diễn hệ thống báo cháy tích hợp AI phân tích smoke pattern thông qua camera — giảm báo động giả &gt;90%.</p>
+        <p><strong>• Smart Building Vietnam Market:</strong> Dự báo thị trường smart building Việt Nam vượt <strong>$15 tỷ USD năm 2028</strong>, CAGR 23% — cao nhất Đông Nam Á.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>Secutech Vietnam 2026 (Hanoi and HCMC venues) showcased strong convergence of AI Security, Smart Building and Fire Safety at a single exhibition — a clear trend for 2026-2030 in Vietnam. Key themes:</p>
+        <p><strong>• AI Integrated Solutions:</strong> AI cameras for face recognition, license plate, weapon/object detection (Hikvision, Dahua, Axis, Hanwha) — integrating directly into VMS platforms (Milestone, Genetec) and BMS.</p>
+        <p><strong>• Smart Factory + ELV Convergence:</strong> Industrial park projects (Bac Ninh, Binh Duong, Long An) are integrating ELV (AI cameras, BMS, fire alarm, structured cabling) into a single management platform from the design phase.</p>
+        <p><strong>• Fire Safety AI:</strong> Hochiki, System Sensor, Notifier demonstrated AI fire alarm systems analyzing smoke patterns via cameras — reducing false alarms by &gt;90%.</p>
+        <p><strong>• Smart Building Vietnam Market:</strong> Vietnam's smart building market forecast to exceed <strong>$15 billion USD in 2028</strong>, CAGR 23% — highest in Southeast Asia.</p>
+      </div>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-label">SƠ ĐỒ HỘI TỤ / CONVERGENCE MAP — ELV/ICT/AV/BMS tại Dự Án Khu Công Nghiệp Việt Nam 2026</div>
+      <pre>
+┌─────────────── SMART INDUSTRIAL PARK — ELV/ICT CONVERGENCE ────────────┐
+│                                                                         │
+│                    ┌──────────────────────┐                            │
+│                    │  UNIFIED MANAGEMENT  │                            │
+│                    │  PLATFORM (BMS+VMS)  │                            │
+│                    └──────┬───────────────┘                            │
+│                           │                                            │
+│      ┌─────────────┬──────┴───────┬──────────────┬────────────┐       │
+│      ▼             ▼              ▼              ▼            ▼       │
+│  ┌────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐ ┌──────────┐  │
+│  │AI CCTV │  │ FIRE     │  │ BMS /    │  │STRUCTURED│ │ ACCESS   │  │
+│  │+VMS    │  │ ALARM    │  │ HVAC /   │  │CABLING   │ │ CONTROL  │  │
+│  │AI Edge │  │ (Hochiki/│  │ ENERGY   │  │(Cat6A+   │ │(IP Card/ │  │
+│  │Genetec/│  │ Notifier │  │(Schneider│  │ OM4 Fiber│ │Biometric)│  │
+│  │Milestone│ │ AI smoke)│  │ Foresight│  │ TIA-568D)│ │          │  │
+│  └────────┘  └──────────┘  └──────────┘  └──────────┘ └──────────┘  │
+│                                                                        │
+│   NETWORK: Cisco/HPE PoE++ Switch + Wi-Fi 7 AP (campus coverage)     │
+│   CABLING: Panduit/Belden Cat6A + OM4 + OSP fiber (campus backbone)  │
+│   PROTOCOL: BACnet/IP · ONVIF · OSDP · MQTT · REST API               │
+└────────────────────────────────────────────────────────────────────────┘</pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-label">⚡ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</div>
+      <div class="vi-content">
+        <p>Thị trường ELV Việt Nam đang chuyển từ "thiết kế độc lập từng hệ thống" sang <strong>"tích hợp toàn diện trên một nền tảng"</strong>. Kỹ sư ELV/ICT cần mở rộng năng lực: không chỉ thiết kế cáp và camera, mà phải hiểu <strong>API tích hợp BMS+VMS+Fire+Access</strong>. Đây là lợi thế cạnh tranh cho tư vấn thiết kế ELV năm 2027 khi chủ đầu tư khu công nghiệp yêu cầu đơn vị tư vấn năng lực tích hợp toàn diện.</p>
+      </div>
+      <div class="en-content" style="display:none">
+        <p>Vietnam's ELV market is shifting from "independent system design" to <strong>"comprehensive integration on a single platform"</strong>. ELV/ICT engineers need expanded capabilities: not just cable and camera design, but understanding <strong>BMS+VMS+Fire+Access integration APIs</strong>. This is a competitive advantage for ELV design consultants in 2027 when industrial park investors require comprehensive integration capability from their consultants.</p>
+      </div>
+    </div>
+    <div class="news-source">
+      Nguồn: <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/press/press-releases/2026/STVN26_PR2.html" target="_blank" rel="noopener">Secutech Vietnam 2026 — Integrated Safety, Security and Smart Infrastructure</a> · <a href="https://www.sourcesecurity.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" rel="noopener">SourceSecurity — AI Integrated Solutions Secutech VN</a>
+    </div>
+  </article>
+
+  <!-- ── CTA ── -->
+  <div class="cta-box">
+    <h3>
+      <span class="vi-content">Cần Tư Vấn Thiết Kế ELV / ICT / AV?</span>
+      <span class="en-content" style="display:none">Need ELV / ICT / AV Design Consulting?</span>
+    </h3>
+    <p>
+      <span class="vi-content">Paul Le — ELV/ICT/AV Design Director tại Duy Hoa Phat Corporation &amp; HBP Project Management. Hơn 15 năm kinh nghiệm thiết kế hệ thống ELV, ICT, AV tại Việt Nam. Hỗ trợ BoQ, BoM, Specification, RFP, Tender và tích hợp hệ thống.</span>
+      <span class="en-content" style="display:none">Paul Le — ELV/ICT/AV Design Director at Duy Hoa Phat Corporation &amp; HBP Project Management. 15+ years designing ELV, ICT, AV systems in Vietnam. Support for BoQ, BoM, Specification, RFP, Tender and system integration.</span>
+    </p>
+    <a href="https://elvconsultant.com/#contact" class="cta-link">
+      <span class="vi-content">LIÊN HỆ TƯ VẤN MIỄN PHÍ</span>
+      <span class="en-content" style="display:none">FREE CONSULTATION</span>
+    </a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.6rem;">
+        <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+        </svg>
+        <span class="logo-text" style="font-family:'Orbitron',sans-serif;font-size:13px;font-weight:700;color:var(--white);">PAUL LE CONSULTANT</span>
+      </div>
+      <p>Tư vấn thiết kế độc lập hệ thống ICT, ELV &amp; AV cho công trình xây dựng tại Việt Nam. ELV Design Director — Duy Hoa Phat Corp &amp; HBP Project Management.</p>
+    </div>
+    <div class="footer-col">
+      <h5>LIÊN KẾT</h5>
+      <a href="/blog/">← Tất cả bài viết</a>
+      <a href="/blog/2026-11-02-elv-ict-av-weekly.html">02/11 — HPE Self-Driving · Shure · Bosch+Genetec · Axis</a>
+      <a href="/blog/2026-10-30-elv-ict-av-weekly.html">30/10 — Cisco Agentic · Axis ISC West · Honeywell INSPIRE</a>
+      <a href="/#contact">Tư vấn miễn phí</a>
+      <a href="mailto:luyen.lt@duyhoaphat.vn">luyen.lt@duyhoaphat.vn</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Paul Le Consultant · elvconsultant.com</span>
+    <span class="footer-domain" style="font-family:'Orbitron',sans-serif;font-size:11px;color:var(--cyan);">W45 · 03 NOV 2026</span>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
