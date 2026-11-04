@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bản Tin ELV/ICT/AV Tuần 45 | 04 Tháng 11, 2026 — Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 45 (2026-11-04): Crestron DM NVX 370 SoC, Belden mua RUCKUS $1.85B, Schneider AI-BMS -22% điện, Barco+Huddly+Shure Teams, Vietnam AI DC $7B+.">
+  <meta name="keywords" content="Crestron DM NVX 370, Belden RUCKUS, Schneider BMS AI, Barco ClickShare Teams, Vietnam data center 2026, ELV ICT AV Vietnam">
+  <meta name="author" content="Paul Le Consultant">
+  <meta property="og:title" content="Bản Tin ELV/ICT/AV Tuần 45 — 04 Nov 2026">
+  <meta property="og:description" content="5 tin nổi bật: Crestron DM NVX 370 SoC · Belden mua RUCKUS $1.85B · Schneider AI BMS -22% · Barco Teams Bundle · Vietnam AI DC $7B+">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?w=1200&h=630&q=85&auto=format&fit=crop">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-04-elv-ict-av-weekly.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;min-height:100vh;}
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0;}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.95);
+      border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);padding:0 2rem;display:flex;
+      align-items:center;justify-content:space-between;height:64px;}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-text{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px;}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px;}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan);}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);
+      padding:8px 20px;border-radius:4px;font-size:13px;font-weight:500;cursor:pointer;
+      font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all 0.2s;text-decoration:none;}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg);}
+
+    /* LANG BAR */
+    .lang-bar{position:relative;z-index:10;display:flex;align-items:center;justify-content:flex-end;
+      gap:0.5rem;padding:0.6rem 2rem;background:rgba(16,30,48,0.6);
+      border-bottom:1px solid var(--card-border);}
+    .lang-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel);}
+    .lang-btn{background:transparent;border:1px solid var(--card-border);color:var(--silver);
+      padding:4px 14px;border-radius:3px;font-family:'Orbitron',monospace;font-size:9px;
+      letter-spacing:1.5px;cursor:pointer;transition:all 0.2s;}
+    .lang-btn.active,.lang-btn:hover{background:var(--cyan);border-color:var(--cyan);color:var(--bg);}
+
+    /* HERO */
+    .article-hero{position:relative;z-index:1;height:520px;overflow:hidden;}
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.65) saturate(0.8);}
+    .article-hero-overlay{position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(7,17,31,0.1) 0%,rgba(7,17,31,0.3) 40%,rgba(7,17,31,0.92) 100%);}
+    .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2.5rem 2.5rem;max-width:900px;}
+    .article-eyebrow{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:10px;}
+    .article-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan);}
+    .article-title{font-family:'Orbitron',monospace;font-size:clamp(1.4rem,3vw,2rem);
+      font-weight:900;color:var(--white);line-height:1.2;margin-bottom:0.75rem;
+      text-shadow:0 2px 20px rgba(0,0,0,0.6);}
+    .article-meta{font-size:12px;color:var(--silver);letter-spacing:0.5px;}
+
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:3rem 2rem 4rem;}
+    .intro-block{background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;
+      padding:1.5rem 1.75rem;margin-bottom:2.5rem;border-left:3px solid var(--cyan);}
+    .intro-block p{font-size:14px;color:var(--silver);line-height:1.8;}
+    .intro-block strong{color:var(--cyan);}
+
+    /* NEWS ITEMS */
+    .news-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;
+      padding:1.75rem;margin-bottom:1.75rem;transition:border-color 0.3s;position:relative;overflow:hidden;}
+    .news-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+      background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity 0.3s;}
+    .news-item:hover{border-color:rgba(0,200,224,0.4);}
+    .news-item:hover::before{opacity:1;}
+    .news-num{font-family:'Orbitron',monospace;font-size:11px;color:var(--steel);
+      letter-spacing:1px;margin-bottom:0.75rem;}
+    .news-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.9rem;}
+    .tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1.5px;
+      padding:3px 9px;border-radius:3px;border:1px solid rgba(0,200,224,0.3);
+      color:var(--cyan);background:var(--cyan-dim);}
+    .tag.mfr{background:rgba(0,200,224,0.18);border-color:rgba(0,200,224,0.5);}
+    .news-title-vi,.news-title-en{font-family:'Orbitron',monospace;font-size:clamp(0.9rem,1.5vw,1.1rem);
+      font-weight:700;color:var(--white);line-height:1.4;margin-bottom:0.75rem;}
+    .news-body{font-size:14px;color:var(--silver);line-height:1.8;margin-bottom:1rem;}
+    .why-box{background:var(--navy-deep);border:1px solid rgba(0,200,224,0.2);
+      border-radius:6px;padding:1rem 1.25rem;margin-top:1rem;}
+    .why-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
+      color:var(--cyan);margin-bottom:0.5rem;}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.75;}
+    .source-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;
+      color:var(--cyan);text-decoration:none;margin-top:0.75rem;opacity:0.8;transition:opacity 0.2s;}
+    .source-link:hover{opacity:1;}
+
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);
+      border:1px solid rgba(0,200,224,0.3);border-radius:12px;padding:2.5rem 2rem;
+      text-align:center;margin-top:3rem;}
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:1rem;font-weight:700;
+      color:var(--white);margin-bottom:0.75rem;}
+    .cta-box p{font-size:14px;color:var(--silver);line-height:1.75;margin-bottom:1.5rem;}
+    .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);
+      font-family:'Orbitron',monospace;font-size:11px;letter-spacing:2px;font-weight:700;
+      padding:12px 32px;border-radius:5px;text-decoration:none;transition:all 0.3s;}
+    .cta-btn:hover{box-shadow:0 0 24px var(--cyan-glow);transform:translateY(-2px);}
+
+    /* FOOTER */
+    footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
+      background:var(--card-bg);padding:2rem;margin-top:0;}
+    .footer-inner{max-width:860px;margin:0 auto;display:flex;justify-content:space-between;
+      align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-copy{font-size:12px;color:var(--steel);}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{font-size:12px;color:var(--steel);text-decoration:none;transition:color 0.2s;}
+    .footer-links a:hover{color:var(--cyan);}
+    @media(max-width:768px){
+      nav{padding:0 1rem;}
+      .nav-links{display:none;}
+      .article-hero{height:380px;}
+      .article-hero-content{padding:1.5rem;}
+      main{padding:2rem 1rem 3rem;}
+      .footer-inner{flex-direction:column;text-align:center;}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV DESIGN</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư Vấn</a>
+</nav>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE:</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">🇻🇳 VIỆT</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 ENGLISH</button>
+</div>
+
+<!-- HERO IMAGE -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Server racks in data center — ELV ICT AV Weekly Newsletter" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="article-eyebrow vi-content">BẢN TIN TUẦN 45 · 04 THÁNG 11, 2026</div>
+    <div class="article-eyebrow en-content">WEEKLY BULLETIN WEEK 45 · NOVEMBER 04, 2026</div>
+    <h1 class="article-title vi-content">5 TIN NỔI BẬT ELV/ICT/AV<br>TUẦN NÀY</h1>
+    <h1 class="article-title en-content">TOP 5 ELV/ICT/AV NEWS<br>THIS WEEK</h1>
+    <div class="article-meta">Crestron · Belden · Schneider Electric · Barco · Vietnam Data Center</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <!-- INTRO VI -->
+  <div class="intro-block vi-content">
+    <p>Chào mừng đến <strong>Bản Tin ELV/ICT/AV Tuần 45</strong> (04/11/2026) từ <strong>Paul Le Consultant</strong>. Tuần này nổi bật với sự kiện <strong>Crestron</strong> tung chip SoC tự thiết kế cho AV-over-IP, <strong>Belden</strong> thâu tóm RUCKUS Networks $1.85B, <strong>Schneider Electric</strong> công bố AI-BMS giảm 22% điện, <strong>Barco</strong> ra mắt bundle Teams-certified, và làn sóng đầu tư <strong>$7B+</strong> vào AI Data Center tại Việt Nam.</p>
+  </div>
+  <!-- INTRO EN -->
+  <div class="intro-block en-content">
+    <p>Welcome to <strong>ELV/ICT/AV Weekly Bulletin Week 45</strong> (04 Nov 2026) from <strong>Paul Le Consultant</strong>. This week highlights: <strong>Crestron</strong> launches its first proprietary AV-over-IP SoC, <strong>Belden</strong> acquires RUCKUS Networks for $1.85B, <strong>Schneider Electric</strong> AI-BMS cuts energy by 22%, <strong>Barco</strong> releases a Teams-certified room bundle, and <strong>$7B+</strong> in AI Data Center investments pour into Vietnam.</p>
+  </div>
+
+  <!-- ═══ NEWS 1: CRESTRON ═══ -->
+  <div class="news-item">
+    <div class="news-num">01 / 05</div>
+    <div class="news-tags">
+      <span class="tag mfr">CRESTRON</span>
+      <span class="tag">AV-OVER-IP</span>
+      <span class="tag">AV</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Crestron DM NVX 370 — Chip SoC Tự Thiết Kế Đầu Tiên Cho AV-over-IP</div>
+      <div class="news-body">
+        Crestron đã công bố dòng sản phẩm <strong>DM NVX 370</strong> — bộ encoder/decoder AV-over-IP mới nhất với chip <strong>System-on-Chip (SoC) tự phát triển lần đầu tiên</strong> trong lịch sử hãng. Chip DM NVX SoC được tối ưu hoàn toàn cho nhiệm vụ nén và giải nén video 4K60 với độ trễ cực thấp (ultra-low latency), không phụ thuộc vào CPU thương mại từ Intel hay AMD.
+        <br><br>
+        DM NVX 370 hỗ trợ cả encode và decode trong cùng một thiết bị, truyền tín hiệu video/audio/control qua mạng 1G/10G Ethernet tiêu chuẩn. Crestron khẳng định chip SoC riêng mang lại hiệu suất bền vững hơn, giảm điện năng tiêu thụ, và bảo mật phần cứng vượt trội so với giải pháp dùng chip thương mại.
+      </div>
+      <div class="why-box">
+        <div class="why-label">↗ TẦM QUAN TRỌNG VỚI DỰ ÁN VN</div>
+        <p>Crestron DM NVX 370 với SoC riêng là lựa chọn chiến lược cho các dự án AV phân phối tại Việt Nam: tòa nhà văn phòng hạng A, trung tâm hội nghị, đại học và hospitality cao cấp. TCO thấp hơn, giảm số lượng thiết bị, và tích hợp liền mạch với hệ thống Crestron đang có. Nhà tư vấn AV cần cập nhật spec sheet và so sánh với Extron NAV/DTP khi thiết kế hạ tầng AV-over-IP.</p>
+      </div>
+      <a href="https://www.crestron.com/News/Press-Releases/2026/Crestron-Advances-DM-NVX-Platform-with-New-Hardwar" target="_blank" rel="noopener" class="source-link">↗ Nguồn: Crestron Press Release</a>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Crestron DM NVX 370 — First Proprietary SoC for AV-over-IP</div>
+      <div class="news-body">
+        Crestron announced the <strong>DM NVX 370 series</strong> — the latest AV-over-IP encoder/decoder line featuring the company's <strong>first proprietary System-on-Chip (SoC)</strong>. The DM NVX SoC is purpose-built for 4K60 video compression/decompression with ultra-low latency, eliminating dependence on commercial Intel/AMD CPUs.
+        <br><br>
+        The DM NVX 370 supports both encode and decode in a single unit, distributing video, audio, and control over standard 1G/10G Ethernet. Crestron claims the custom SoC delivers sustained performance, reduced power consumption, and superior hardware security compared to commercial chip-based solutions.
+      </div>
+      <div class="why-box">
+        <div class="why-label">↗ RELEVANCE FOR VIETNAM PROJECTS</div>
+        <p>The Crestron DM NVX 370 with its proprietary SoC is a strategic choice for AV distribution projects across Vietnam: Grade-A office buildings, convention centers, universities, and premium hospitality. Lower TCO, reduced device count, and seamless integration with existing Crestron systems. AV consultants should update spec sheets and compare with Extron NAV/DTP when designing AV-over-IP infrastructure.</p>
+      </div>
+      <a href="https://www.commercialintegrator.com/news/crestron-announces-new-dm-nvx-370-hardware-and-custom-silicon-chip/150591/" target="_blank" rel="noopener" class="source-link">↗ Source: Commercial Integrator</a>
+    </div>
+  </div>
+
+  <!-- ═══ NEWS 2: BELDEN ═══ -->
+  <div class="news-item">
+    <div class="news-num">02 / 05</div>
+    <div class="news-tags">
+      <span class="tag mfr">BELDEN</span>
+      <span class="tag mfr">RUCKUS</span>
+      <span class="tag">CABLING</span>
+      <span class="tag">NETWORKING</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Belden Thâu Tóm RUCKUS Networks $1.85 Tỷ — Từ Cáp Đến Cloud</div>
+      <div class="news-body">
+        <strong>Belden Inc.</strong> — nhà sản xuất cáp hạ tầng hàng đầu thế giới (Belden, Hirschmann, PPC) — thông báo mua lại <strong>RUCKUS Networks</strong> từ Vistance Networks với giá khoảng <strong>1.85 tỷ USD</strong>. Đây là thương vụ định hình lại thị trường cabling & networking toàn diện, biến Belden từ nhà cung cấp cáp vật lý thành nhà cung cấp "full-stack networking solutions".
+        <br><br>
+        RUCKUS nổi tiếng với nền tảng Wi-Fi 6E/7 và switching cho campus, hospitality, healthcare. Hậu M&A, Belden sẽ cung cấp bộ giải pháp hoàn chỉnh từ cáp structured cabling đến wireless access point đến cloud management (RUCKUS One) — cạnh tranh trực tiếp với CommScope/Panduit trong phân khúc tích hợp.
+      </div>
+      <div class="why-box">
+        <div class="why-label">↗ TẦM QUAN TRỌNG VỚI DỰ ÁN VN</div>
+        <p>Thương vụ Belden+RUCKUS tạo ra đối thủ cạnh tranh trực tiếp với CommScope, Panduit và Cisco Meraki trong phân khúc cabling+wireless tích hợp tại Việt Nam. Các nhà tư vấn ELV/ICT cần cập nhật so sánh portfolio khi thiết kế hạ tầng campus (hospital, school, office). Belden RUCKUS One cloud management có thể là lựa chọn thay thế Cisco Meraki với CAPEX thấp hơn.</p>
+      </div>
+      <a href="https://investor.belden.com/news/news-details/2026/Belden-to-Acquire-RUCKUS-Networks-from-Vistance-Networks-Accelerating-its-Transformation-into-a-Full-Stack-Networking-Solutions-Provider/default.aspx" target="_blank" rel="noopener" class="source-link">↗ Nguồn: Belden Investor Relations</a>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Belden Acquires RUCKUS Networks for $1.85B — From Cable to Cloud</div>
+      <div class="news-body">
+        <strong>Belden Inc.</strong> — a world-leading infrastructure cable manufacturer (Belden, Hirschmann, PPC) — announced the acquisition of <strong>RUCKUS Networks</strong> from Vistance Networks for approximately <strong>$1.85 billion</strong>. This deal reshapes the cabling & networking market, transforming Belden from a physical cable supplier into a full-stack networking solutions provider.
+        <br><br>
+        RUCKUS is renowned for its Wi-Fi 6E/7 platforms and switching for campus, hospitality, and healthcare. Post-M&A, Belden will offer a complete solution stack from structured cabling to wireless access points to cloud management (RUCKUS One) — competing directly with CommScope/Panduit in integrated infrastructure.
+      </div>
+      <div class="why-box">
+        <div class="why-label">↗ RELEVANCE FOR VIETNAM PROJECTS</div>
+        <p>The Belden+RUCKUS deal creates a direct competitor to CommScope, Panduit, and Cisco Meraki in the integrated cabling+wireless segment in Vietnam. ELV/ICT consultants need to update portfolio comparisons when designing campus infrastructure (hospitals, schools, offices). Belden RUCKUS One cloud management may serve as a Cisco Meraki alternative with lower CAPEX.</p>
+      </div>
+      <a href="https://www.networkworld.com/article/4166854/ruckus-networks-on-the-move-again-this-time-acquired-by-belden-for-1-85-billion.html" target="_blank" rel="noopener" class="source-link">↗ Source: Network World</a>
+    </div>
+  </div>
+
+  <!-- ═══ NEWS 3: SCHNEIDER ═══ -->
+  <div class="news-item">
+    <div class="news-num">03 / 05</div>
+    <div class="news-tags">
+      <span class="tag mfr">SCHNEIDER</span>
+      <span class="tag">BMS</span>
+      <span class="tag">AI</span>
+      <span class="tag">ENERGY</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Schneider Electric: AI + BMS Giảm 22% Tiêu Thụ Điện — EcoCare 24/7</div>
+      <div class="news-body">
+        <strong>Schneider Electric</strong> công bố kết quả nghiên cứu cho thấy tích hợp <strong>AI vào hệ thống BMS (Building Management System)</strong> có thể giảm mức tiêu thụ điện năng tòa nhà lên tới <strong>22%</strong>, tiết kiệm chi phí vận hành và giảm carbon phát thải đáng kể. Các nghiên cứu độc lập khác chỉ ra AI-BMS có thể giảm tiêu thụ HVAC tới 27%.
+        <br><br>
+        Song song, Schneider ra mắt dịch vụ <strong>EcoCare for BMS</strong> với khả năng giám sát liên tục 24/7 và phân tích dự đoán (predictive analytics), kết hợp <strong>EcoStruxure Building Advisor AI</strong> để tối ưu hóa đồng thời hệ thống HVAC, chiếu sáng, cấp điện và thang máy — tất cả từ một nền tảng cloud duy nhất.
+      </div>
+      <div class="why-box">
+        <div class="why-label">↗ TẦM QUAN TRỌNG VỚI DỰ ÁN VN</div>
+        <p>Với xu hướng Green Building và Net Zero ngày càng được yêu cầu tại Việt Nam (tiêu chuẩn LEED, LOTUS, EDGE), giải pháp AI-BMS EcoStruxure của Schneider là điểm bán hàng mạnh với chủ đầu tư. Tiết kiệm 22% điện trên tổng mức tiêu thụ tòa nhà là con số cực kỳ có sức thuyết phục trong đề xuất ROI cho bệnh viện, trường học và tòa nhà văn phòng hạng A tại Việt Nam.</p>
+      </div>
+      <a href="https://www.se.com/us/en/about-us/newsroom/news/press-releases/Schneider-Electric-finds-AIenabled-buildings-can-cut-energy-use-by-up-to-22-save-on-annual-utility-costs-and-carbon-6ab0dfed92c09675dc0ef083/" target="_blank" rel="noopener" class="source-link">↗ Nguồn: Schneider Electric Newsroom</a>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Schneider Electric: AI + BMS Cuts Energy Use by 22% — EcoCare 24/7</div>
+      <div class="news-body">
+        <strong>Schneider Electric</strong> released research showing that integrating <strong>AI into Building Management Systems (BMS)</strong> can reduce building energy consumption by up to <strong>22%</strong>, delivering significant utility cost savings and carbon emission reductions. Independent studies indicate AI-BMS can reduce HVAC energy consumption by as much as 27%.
+        <br><br>
+        Concurrently, Schneider launched <strong>EcoCare for BMS</strong>, a 24/7 continuous monitoring service with predictive analytics, integrated with <strong>EcoStruxure Building Advisor AI</strong> to simultaneously optimize HVAC, lighting, power distribution, and elevators — all from a single cloud platform.
+      </div>
+      <div class="why-box">
+        <div class="why-label">↗ RELEVANCE FOR VIETNAM PROJECTS</div>
+        <p>With Green Building and Net Zero requirements growing in Vietnam (LEED, LOTUS, EDGE standards), Schneider's AI-BMS EcoStruxure solution is a compelling sales point for investors. A 22% energy reduction on total building consumption is an extremely persuasive ROI figure in proposals for hospitals, schools, and Grade-A office buildings in Vietnam.</p>
+      </div>
+      <a href="https://www.facilitiesdive.com/news/adding-ai-to-building-management-systems-can-cut-energy-use-by-22-schneid/831621/" target="_blank" rel="noopener" class="source-link">↗ Source: Facilities Dive</a>
+    </div>
+  </div>
+
+  <!-- ═══ NEWS 4: BARCO ═══ -->
+  <div class="news-item">
+    <div class="news-num">04 / 05</div>
+    <div class="news-tags">
+      <span class="tag mfr">BARCO</span>
+      <span class="tag mfr">SHURE</span>
+      <span class="tag">AV</span>
+      <span class="tag">COLLABORATION</span>
+      <span class="tag">TEAMS</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Barco ClickShare Hub Pro + Huddly + Shure — Chứng Nhận Microsoft Teams</div>
+      <div class="news-body">
+        <strong>Barco</strong> ra mắt bộ giải pháp <strong>ClickShare Hub Pro</strong> tích hợp camera AI <strong>Huddly</strong> và micro <strong>Shure MXA</strong>, được <strong>chứng nhận chính thức bởi Microsoft Teams</strong>. Bundle không dây này giúp thiết lập phòng họp plug-and-play không cần lập trình DSP phức tạp — AI tracking tự động speaker, khử tiếng ồn Shure IntelliMix, và wireless presentation không dây cho mọi thiết bị.
+        <br><br>
+        ClickShare Hub Pro là "hub" trung tâm kết nối tất cả: màn hình, camera Huddly IQ/L, micro Shure MXA910/920, và laptop người dùng qua wireless button hoặc app — tất cả được quản lý tập trung qua XMS Cloud. Giải pháp phù hợp cho phòng họp trung bình và lớn (medium/large room) trong các doanh nghiệp vừa và lớn.
+      </div>
+      <div class="why-box">
+        <div class="why-label">↗ TẦM QUAN TRỌNG VỚI DỰ ÁN VN</div>
+        <p>Với sự bùng nổ của không gian làm việc hybrid tại Việt Nam sau 2024, bundle Barco+Huddly+Shure Teams-certified là giải pháp "plug-and-play" tiêu chuẩn cho phòng họp doanh nghiệp. Nhà tư vấn AV có thể dùng bộ này làm sản phẩm mẫu khi thiết kế collaboration room, giảm thời gian lập trình DSP và tích hợp so với giải pháp rời từng component.</p>
+      </div>
+      <a href="https://www.barco.com/en/news/press-releases/2026/barco-introduces-a-clickshare-hub-bundle-with-huddly-and-shure" target="_blank" rel="noopener" class="source-link">↗ Nguồn: Barco Press Release</a>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Barco ClickShare Hub Pro + Huddly + Shure — Certified for Microsoft Teams</div>
+      <div class="news-body">
+        <strong>Barco</strong> launched the <strong>ClickShare Hub Pro</strong> bundle integrated with <strong>Huddly</strong> AI camera and <strong>Shure MXA</strong> microphones, officially <strong>certified for Microsoft Teams</strong>. This wireless solution enables plug-and-play room setup without complex DSP programming — automatic AI speaker tracking, Shure IntelliMix noise cancellation, and wireless presentation from any device.
+        <br><br>
+        The ClickShare Hub Pro serves as a central hub connecting everything: displays, Huddly IQ/L camera, Shure MXA910/920 microphones, and user laptops via wireless button or app — all centrally managed via XMS Cloud. Ideal for medium and large meeting rooms in mid-to-large enterprise environments.
+      </div>
+      <div class="why-box">
+        <div class="why-label">↗ RELEVANCE FOR VIETNAM PROJECTS</div>
+        <p>With the explosion of hybrid workspaces in Vietnam post-2024, the Barco+Huddly+Shure Teams-certified bundle is the standard plug-and-play solution for enterprise meeting rooms. AV consultants can use this bundle as a reference product when designing collaboration rooms, significantly reducing DSP programming and integration time compared to component-by-component approaches.</p>
+      </div>
+      <a href="https://www.systemsintegrationasia.com/smarter-audio-and-video-comes-to-barco-teams-rooms-with-new-huddly-and-shure-bundle/" target="_blank" rel="noopener" class="source-link">↗ Source: Systems Integration Asia</a>
+    </div>
+  </div>
+
+  <!-- ═══ NEWS 5: VIETNAM DC ═══ -->
+  <div class="news-item">
+    <div class="news-num">05 / 05</div>
+    <div class="news-tags">
+      <span class="tag mfr">VIETNAM</span>
+      <span class="tag">DATA CENTER</span>
+      <span class="tag">ICT</span>
+      <span class="tag">AI INFRA</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Việt Nam Thu Hút Hơn $7 Tỷ Đầu Tư AI Data Center — Cơ Hội Vàng ELV</div>
+      <div class="news-body">
+        Việt Nam đã trở thành điểm đến chiến lược của đầu tư toàn cầu vào hạ tầng AI Data Center, với tổng vốn thu hút vượt mốc <strong>7 tỷ USD</strong> trong năm 2026. Các tập đoàn lớn bao gồm <strong>Google, AIC, FPT, G42 (UAE), và nhiều nhà đầu tư châu Á</strong> đang triển khai hoặc cam kết xây dựng các trung tâm dữ liệu hyperscale và AI-ready tại Việt Nam.
+        <br><br>
+        Làn sóng đầu tư này tạo ra nhu cầu khổng lồ cho toàn bộ chuỗi hạ tầng: cabling Tier-III/IV theo TIA-942/EN 50173, hệ thống cấp nguồn dự phòng (UPS/Generator), làm mát (precision cooling), hệ thống giám sát môi trường (EMS/DCIM), kiểm soát ra vào (access control), camera AI/CCTV, BMS, và hệ thống chữa cháy FM200/inert gas.
+      </div>
+      <div class="why-box">
+        <div class="why-label">↗ TẦM QUAN TRỌNG VỚI DỰ ÁN VN</div>
+        <p>Làn sóng Data Center $7B+ là cơ hội lớn nhất cho các nhà tư vấn ELV/ICT Việt Nam trong thập kỷ này. Mỗi data center Tier-III/IV quy mô lớn cần: hàng nghìn km cáp quang + đồng (Panduit/Belden/CommScope), hệ thống ELV đầy đủ (Access Control, CCTV AI, BMS, Fire FM200), và tích hợp DCIM. Cơ hội đặc biệt lớn với các nhà tư vấn có kinh nghiệm thiết kế theo TIA-942 và EN 50600.</p>
+      </div>
+      <a href="https://erp.today/vietnam-draws-more-than-7-billion-in-ai-data-center-investments-reshaping-enterprise-infrastructure/" target="_blank" rel="noopener" class="source-link">↗ Nguồn: ERP Today</a>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Vietnam Attracts $7B+ in AI Data Center Investment — Golden ELV Opportunity</div>
+      <div class="news-body">
+        Vietnam has become a strategic destination for global AI Data Center investment, with total capital exceeding <strong>$7 billion</strong> in 2026. Major players including <strong>Google, AIC, FPT, G42 (UAE), and multiple Asian investors</strong> are deploying or committing to hyperscale and AI-ready data center campuses across Vietnam.
+        <br><br>
+        This investment wave creates massive demand across the entire infrastructure chain: Tier-III/IV cabling per TIA-942/EN 50173, redundant power systems (UPS/Generator), precision cooling, environmental monitoring (EMS/DCIM), access control, AI/CCTV surveillance, BMS, and FM200/inert gas suppression systems.
+      </div>
+      <div class="why-box">
+        <div class="why-label">↗ RELEVANCE FOR VIETNAM PROJECTS</div>
+        <p>The $7B+ Data Center wave is the largest opportunity for Vietnam ELV/ICT consultants this decade. Each large-scale Tier-III/IV data center requires: thousands of km of fiber + copper cabling (Panduit/Belden/CommScope), complete ELV systems (Access Control, AI CCTV, BMS, FM200 Fire), and DCIM integration. Especially significant for consultants experienced in TIA-942 and EN 50600 design.</p>
+      </div>
+      <a href="https://blog.datacore.vn/en/vietnam-ai-data-center-2026/" target="_blank" rel="noopener" class="source-link">↗ Source: Datacore Vietnam Blog</a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <div class="vi-content">
+      <h3>CẦN TƯ VẤN THIẾT KẾ ELV/ICT/AV?</h3>
+      <p>Paul Le Consultant — Chuyên gia thiết kế hệ thống ELV, ICT, AV cho dự án doanh nghiệp, bệnh viện, trường học và data center tại Việt Nam. Liên hệ để được tư vấn miễn phí.</p>
+      <a href="https://elvconsultant.com/#contact" class="cta-btn">LIÊN HỆ TƯ VẤN →</a>
+    </div>
+    <div class="en-content">
+      <h3>NEED ELV/ICT/AV DESIGN CONSULTING?</h3>
+      <p>Paul Le Consultant — Expert in ELV, ICT, and AV system design for enterprise, hospital, school, and data center projects in Vietnam. Contact us for a free consultation.</p>
+      <a href="https://elvconsultant.com/#contact" class="cta-btn">GET IN TOUCH →</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">© 2026 Paul Le Consultant — elvconsultant.com</div>
+    <div class="footer-links">
+      <a href="/blog/">← Blog</a>
+      <a href="/">Home</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
