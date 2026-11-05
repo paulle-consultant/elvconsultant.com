@@ -9,14 +9,13 @@
   <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-05-elv-ict-av-weekly.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
     :root{
-      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
-      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
-      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
-      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+      --bg:#0C0B09;--card-bg:#15130F;--card-border:#2A251C;
+      --cyan:#C9A96A;--cyan-dim:rgba(201,169,106,0.10);--cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C;--white:#F3EDE2;--steel:#8A8172;
+      --navy:#2A251C;--navy-deep:#121009;--grid-line:rgba(201,169,106,0.08);
     }
     html{scroll-behavior:smooth;}
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6;}
@@ -24,7 +23,7 @@
       background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
       background-size:48px 48px;pointer-events:none;z-index:0;}
     /* NAV */
-    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+    nav{position:sticky;top:0;z-index:100;background:rgba(12,11,9,0.95);border-bottom:1px solid var(--card-border);
       backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0 2rem;
       display:flex;align-items:center;justify-content:space-between;height:64px;}
     .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
@@ -49,7 +48,7 @@
     .article-hero{position:relative;z-index:1;height:520px;overflow:hidden;}
     .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.55) saturate(0.85);}
     .article-hero-overlay{position:absolute;inset:0;
-      background:linear-gradient(180deg,rgba(7,17,31,0.1) 0%,rgba(7,17,31,0.35) 40%,rgba(7,17,31,0.94) 100%);}
+      background:linear-gradient(180deg,rgba(12,11,9,0.1) 0%,rgba(12,11,9,0.35) 40%,rgba(12,11,9,0.94) 100%);}
     .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2.5rem 2rem;}
     .hero-eyebrow{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan);margin-bottom:0.75rem;}
     .hero-title{font-family:'Orbitron',monospace;font-size:clamp(1rem,2.4vw,1.7rem);font-weight:900;
@@ -69,15 +68,15 @@
     /* NEWS ITEM */
     .news-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;
       margin-bottom:1.75rem;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s;}
-    .news-item:hover{border-color:var(--cyan-glow);box-shadow:0 4px 24px rgba(0,200,224,0.08);}
-    .news-header{padding:1.5rem 1.75rem 1rem;border-bottom:1px solid rgba(30,53,80,0.6);}
+    .news-item:hover{border-color:var(--cyan-glow);box-shadow:0 4px 24px rgba(201,169,106,0.08);}
+    .news-header{padding:1.5rem 1.75rem 1rem;border-bottom:1px solid rgba(42,37,28,0.6);}
     .news-num-row{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.9rem;}
     .news-num{font-family:'Orbitron',monospace;font-size:11px;font-weight:900;color:var(--bg);
       background:var(--cyan);width:28px;height:28px;border-radius:50%;
       display:flex;align-items:center;justify-content:center;flex-shrink:0;}
     .news-tags{display:flex;gap:0.4rem;flex-wrap:wrap;}
     .news-tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1px;padding:2px 7px;
-      border-radius:2px;background:var(--cyan-dim);border:1px solid rgba(0,200,224,0.25);color:var(--cyan);}
+      border-radius:2px;background:var(--cyan-dim);border:1px solid rgba(201,169,106,0.25);color:var(--cyan);}
     .news-title-vi{font-family:'Orbitron',monospace;font-size:clamp(0.88rem,1.6vw,1.05rem);font-weight:700;
       color:var(--white);line-height:1.4;margin-bottom:0.3rem;}
     .news-title-en{font-size:12px;color:var(--steel);font-style:italic;line-height:1.5;}
@@ -86,20 +85,20 @@
     .news-body p{font-size:14px;color:var(--silver);line-height:1.85;margin-bottom:1rem;}
     .news-body p strong{color:var(--white);}
     /* SCHEMA BOX */
-    .schema-box{background:var(--navy-deep);border:1px solid rgba(30,53,80,0.9);border-radius:6px;
+    .schema-box{background:var(--navy-deep);border:1px solid rgba(42,37,28,0.9);border-radius:6px;
       padding:1.25rem 1.4rem;margin:1.1rem 0;overflow-x:auto;}
     .schema-title{font-family:'Orbitron',monospace;font-size:8.5px;letter-spacing:2px;color:var(--steel);
       margin-bottom:0.9rem;text-transform:uppercase;}
     .schema-flow{font-family:'Orbitron',monospace;font-size:11px;color:var(--silver);line-height:2.2;white-space:pre-wrap;}
     .schema-hl{color:var(--cyan);font-weight:700;}
     /* WHY BOX */
-    .why-box{background:linear-gradient(135deg,rgba(0,200,224,0.05),rgba(27,42,74,0.4));
-      border:1px solid rgba(0,200,224,0.18);border-radius:6px;padding:1.25rem 1.4rem;margin-top:1.1rem;}
+    .why-box{background:linear-gradient(135deg,rgba(201,169,106,0.05),rgba(42,37,28,0.4));
+      border:1px solid rgba(201,169,106,0.18);border-radius:6px;padding:1.25rem 1.4rem;margin-top:1.1rem;}
     .why-label{font-family:'Orbitron',monospace;font-size:8.5px;letter-spacing:2px;color:var(--cyan);
       margin-bottom:0.6rem;text-transform:uppercase;}
     .why-box p{font-size:13px;color:var(--silver);line-height:1.8;margin:0;}
     /* SOURCE */
-    .news-source{padding:0.8rem 1.75rem 1.1rem;border-top:1px solid rgba(30,53,80,0.5);}
+    .news-source{padding:0.8rem 1.75rem 1.1rem;border-top:1px solid rgba(42,37,28,0.5);}
     .news-source a{font-size:11px;color:var(--steel);text-decoration:none;transition:color 0.2s;word-break:break-all;}
     .news-source a:hover{color:var(--cyan);}
     /* CTA */
@@ -131,6 +130,7 @@
       .lang-bar{padding:7px 1rem;}
     }
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -139,8 +139,8 @@
 <nav>
   <a href="/" class="nav-logo">
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
     </svg>
     <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV</span></div>
   </a>
