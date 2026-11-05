@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly — Tuần 45/2026 | 05 Nov 2026 | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 45: HPE Juniper Ships AI Stack · InfoComm 2026 Biamp+LG · BMS/BACS Market AI · Secutech Vietnam 2026 · Vietnam $5B Digital">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-05-elv-ict-av-weekly.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6;}
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0;}
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0 2rem;
+      display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-text{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px;}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px;}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan);}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:8px 20px;border-radius:4px;
+      font-size:12px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all 0.2s;text-decoration:none;}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg);}
+    /* LANG BAR */
+    .lang-bar{position:relative;z-index:10;display:flex;align-items:center;justify-content:flex-end;gap:8px;
+      padding:7px 2rem;background:var(--navy-deep);border-bottom:1px solid var(--card-border);}
+    .lang-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel);}
+    .lang-btn{background:transparent;border:1px solid var(--card-border);color:var(--silver);
+      padding:4px 14px;border-radius:3px;font-family:'Orbitron',monospace;font-size:9px;font-weight:700;
+      letter-spacing:1.5px;cursor:pointer;transition:all 0.2s;}
+    .lang-btn.active{background:var(--cyan);border-color:var(--cyan);color:var(--bg);}
+    .lang-sep{color:var(--steel);font-size:12px;}
+    /* HERO */
+    .article-hero{position:relative;z-index:1;height:520px;overflow:hidden;}
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.55) saturate(0.85);}
+    .article-hero-overlay{position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(7,17,31,0.1) 0%,rgba(7,17,31,0.35) 40%,rgba(7,17,31,0.94) 100%);}
+    .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2.5rem 2rem;}
+    .hero-eyebrow{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan);margin-bottom:0.75rem;}
+    .hero-title{font-family:'Orbitron',monospace;font-size:clamp(1rem,2.4vw,1.7rem);font-weight:900;
+      color:var(--white);line-height:1.3;max-width:860px;text-shadow:0 2px 16px rgba(0,0,0,0.6);}
+    .hero-meta{margin-top:1rem;display:flex;gap:0.6rem;flex-wrap:wrap;}
+    .hero-tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1.5px;padding:3px 10px;
+      border:1px solid var(--cyan);border-radius:3px;color:var(--cyan);}
+    /* BACK LINK */
+    .back-link{position:relative;z-index:1;padding:1rem 2.5rem;border-bottom:1px solid var(--card-border);}
+    .back-link a{font-size:12px;color:var(--steel);text-decoration:none;font-family:'Orbitron',monospace;letter-spacing:1px;transition:color 0.2s;}
+    .back-link a:hover{color:var(--cyan);}
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:2.5rem 2rem 3rem;}
+    .article-intro{font-size:15px;color:var(--silver);line-height:1.85;margin-bottom:2.5rem;
+      padding-bottom:2rem;border-bottom:1px solid var(--card-border);}
+    .article-intro strong{color:var(--white);}
+    /* NEWS ITEM */
+    .news-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;
+      margin-bottom:1.75rem;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s;}
+    .news-item:hover{border-color:var(--cyan-glow);box-shadow:0 4px 24px rgba(0,200,224,0.08);}
+    .news-header{padding:1.5rem 1.75rem 1rem;border-bottom:1px solid rgba(30,53,80,0.6);}
+    .news-num-row{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.9rem;}
+    .news-num{font-family:'Orbitron',monospace;font-size:11px;font-weight:900;color:var(--bg);
+      background:var(--cyan);width:28px;height:28px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .news-tags{display:flex;gap:0.4rem;flex-wrap:wrap;}
+    .news-tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1px;padding:2px 7px;
+      border-radius:2px;background:var(--cyan-dim);border:1px solid rgba(0,200,224,0.25);color:var(--cyan);}
+    .news-title-vi{font-family:'Orbitron',monospace;font-size:clamp(0.88rem,1.6vw,1.05rem);font-weight:700;
+      color:var(--white);line-height:1.4;margin-bottom:0.3rem;}
+    .news-title-en{font-size:12px;color:var(--steel);font-style:italic;line-height:1.5;}
+    /* BODY */
+    .news-body{padding:1.25rem 1.75rem;}
+    .news-body p{font-size:14px;color:var(--silver);line-height:1.85;margin-bottom:1rem;}
+    .news-body p strong{color:var(--white);}
+    /* SCHEMA BOX */
+    .schema-box{background:var(--navy-deep);border:1px solid rgba(30,53,80,0.9);border-radius:6px;
+      padding:1.25rem 1.4rem;margin:1.1rem 0;overflow-x:auto;}
+    .schema-title{font-family:'Orbitron',monospace;font-size:8.5px;letter-spacing:2px;color:var(--steel);
+      margin-bottom:0.9rem;text-transform:uppercase;}
+    .schema-flow{font-family:'Orbitron',monospace;font-size:11px;color:var(--silver);line-height:2.2;white-space:pre-wrap;}
+    .schema-hl{color:var(--cyan);font-weight:700;}
+    /* WHY BOX */
+    .why-box{background:linear-gradient(135deg,rgba(0,200,224,0.05),rgba(27,42,74,0.4));
+      border:1px solid rgba(0,200,224,0.18);border-radius:6px;padding:1.25rem 1.4rem;margin-top:1.1rem;}
+    .why-label{font-family:'Orbitron',monospace;font-size:8.5px;letter-spacing:2px;color:var(--cyan);
+      margin-bottom:0.6rem;text-transform:uppercase;}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.8;margin:0;}
+    /* SOURCE */
+    .news-source{padding:0.8rem 1.75rem 1.1rem;border-top:1px solid rgba(30,53,80,0.5);}
+    .news-source a{font-size:11px;color:var(--steel);text-decoration:none;transition:color 0.2s;word-break:break-all;}
+    .news-source a:hover{color:var(--cyan);}
+    /* CTA */
+    .cta-box{background:linear-gradient(135deg,var(--navy),var(--navy-deep));
+      border:1px solid var(--cyan-glow);border-radius:8px;padding:2rem 2rem;margin:3rem 0 1rem;text-align:center;}
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:clamp(0.9rem,1.8vw,1.2rem);font-weight:900;
+      color:var(--white);margin-bottom:0.6rem;line-height:1.3;}
+    .cta-box p{font-size:13px;color:var(--silver);margin-bottom:1.5rem;line-height:1.75;}
+    .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);padding:11px 30px;
+      border-radius:4px;font-family:'Orbitron',monospace;font-size:10px;font-weight:700;
+      letter-spacing:1.5px;text-decoration:none;transition:all 0.2s;}
+    .cta-btn:hover{background:var(--white);transform:translateY(-2px);}
+    /* FOOTER */
+    footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
+      background:var(--card-bg);padding:2rem 2.5rem;}
+    .footer-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;
+      align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-copy{font-size:12px;color:var(--steel);}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{font-size:12px;color:var(--steel);text-decoration:none;transition:color 0.2s;}
+    .footer-links a:hover{color:var(--cyan);}
+    @media(max-width:768px){
+      nav{padding:0 1rem;}
+      .nav-links{display:none;}
+      .article-hero{height:360px;}
+      .article-hero-content{padding:1.5rem 1.25rem 1.25rem;}
+      main{padding:1.75rem 1rem 2.5rem;}
+      .news-header,.news-body,.news-source{padding-left:1.1rem;padding-right:1.1rem;}
+      .lang-bar{padding:7px 1rem;}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">TƯ VẤN / CONSULT</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span class="lang-label">LANGUAGE</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <span class="lang-sep">|</span>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1791782060424-ec94ef00ce2a?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Video production control room technology — ELV ICT AV Weekly 05 Nov 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="hero-eyebrow">📡 BẢN TIN ELV/ICT/AV · TUẦN 45 · 05 THÁNG 11, 2026</div>
+    <div class="hero-title">HPE Juniper AI Stack Ships · InfoComm 2026 Biamp+LG · BMS/BACS Market AI · Secutech VN AI · Vietnam $5B Digital</div>
+    <div class="hero-meta">
+      <span class="hero-tag">HPE</span>
+      <span class="hero-tag">BIAMP</span>
+      <span class="hero-tag">SCHNEIDER</span>
+      <span class="hero-tag">SECUTECH VN</span>
+      <span class="hero-tag">VIETNAM DIGITAL</span>
+    </div>
+  </div>
+</div>
+
+<div class="back-link"><a href="/blog/">← BLOG / TIN TỨC</a></div>
+
+<main>
+  <div class="article-intro">
+    <span class="vi-content">5 tin nổi bật tuần 45 (03–09/11/2026): HPE chính thức ship <strong>AI Networking Stack</strong> tích hợp Juniper+Aruba với QFX5252 400G · <strong>InfoComm 2026</strong> recap — Biamp Tesira AI DSP, LG LED collaboration, Crestron Flex 3.0 · Thị trường <strong>BMS/BACS 2026</strong> cạnh tranh AI — Schneider EcoStruxure / Siemens Desigo / ABB / JCI OpenBlue · <strong>Secutech Vietnam 2026</strong> AI-integrated security & smart building · Chính phủ Việt Nam đầu tư <strong>$5B hạ tầng số</strong>. Phân tích từ Paul Le — ELV/ICT/AV Design Director.</span>
+    <span class="en-content" style="display:none;">5 highlights Week 45 (03–09/11/2026): HPE officially ships <strong>AI Networking Stack</strong> integrating Juniper+Aruba with QFX5252 400G · <strong>InfoComm 2026</strong> recap — Biamp Tesira AI DSP, LG LED collaboration, Crestron Flex 3.0 · <strong>BMS/BACS 2026</strong> market AI competition — Schneider EcoStruxure / Siemens Desigo / ABB / JCI OpenBlue · <strong>Secutech Vietnam 2026</strong> AI-integrated security & smart building · Vietnam Government <strong>$5B digital infrastructure</strong> investment. Analysis from Paul Le — ELV/ICT/AV Design Director.</span>
+  </div>
+
+  <!-- ═══════════════════════ TIN 1 ═══════════════════════ -->
+  <div class="news-item">
+    <div class="news-header">
+      <div class="news-num-row">
+        <div class="news-num">1</div>
+        <div class="news-tags">
+          <span class="news-tag">HPE</span>
+          <span class="news-tag">ARUBA</span>
+          <span class="news-tag">JUNIPER</span>
+          <span class="news-tag">NETWORKING</span>
+          <span class="news-tag">ICT</span>
+        </div>
+      </div>
+      <div class="vi-content">
+        <div class="news-title-vi">HPE Discover 2026: AI Networking Stack Aruba+Juniper Chính Thức Ship — Self-Driving Network Vào Thực Chiến</div>
+        <div class="news-title-en">HPE Discover 2026 Closes: Juniper Integration Ships AI Networking Stack to Production</div>
+      </div>
+      <div class="en-content" style="display:none;">
+        <div class="news-title-vi">HPE Discover 2026: Juniper + Aruba AI Networking Stack Ships — Self-Driving Networks Enter Production</div>
+        <div class="news-title-en">AI-driven unified platform merges Aruba campus/edge with Juniper data center/WAN into one stack</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tại HPE Discover 2026, HPE chính thức đóng gói và chuyển giao <strong>AI Networking Stack</strong> tích hợp hoàn toàn Aruba (campus/edge) và Juniper Networks (data center/WAN). Nền tảng "Self-Driving Networks" dùng Mist AIOps để tự động phát hiện sự cố, tối ưu hóa cấu hình và dự đoán lỗi mạng trước khi xảy ra. Bộ chuyển mạch <strong>QFX5252</strong> mới của Juniper hỗ trợ AI Factory workload với port 400G. CEO Antonio Neri định vị HPE là giải pháp duy nhất có thể "vượt qua nút thắt mạng AI" từ edge đến AI Factory.</p>
+        <p>Điểm đột phá: Mist AI tự động hóa toàn bộ vòng đời mạng (zero-touch provisioning, root-cause analysis, predictive alerting) không cần can thiệp thủ công của admin mạng.</p>
+        <div class="schema-box">
+          <div class="schema-title">SƠ ĐỒ NGUYÊN LÝ — HPE SELF-DRIVING NETWORK ARCHITECTURE</div>
+          <div class="schema-flow"><span class="schema-hl">[CAMPUS / EDGE]</span>  Aruba APs (Wi-Fi 7) + CX Switches + Mist AIOps
+     ↓  Fabric Connect (Encrypted Tunnel / EVPN-VXLAN)
+<span class="schema-hl">[WAN / CORE]</span>    Juniper MX (SD-WAN) + SRX (NGFW AI-IPS)
+     ↓  AI Policy Engine (HPE GreenLake Cloud)
+<span class="schema-hl">[DATA CENTER]</span>  QFX5252 (400G AI Factory) + Virtual QFX (overlay)
+     ↓  Mist AI: Intent-based Automation + Root-cause Analysis
+<span class="schema-hl">[MANAGEMENT]</span>  HPE GreenLake Unified Console (Cloud + On-prem hybrid)</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM?</div>
+          <p>Cho campus thông minh, tòa nhà hỗn hợp, hospital và trường đại học tại Việt Nam — Aruba+Juniper AI giúp thiết kế mạng hội tụ ICT-ELV, giảm 40–60% chi phí vận hành và hỗ trợ IoT/BMS/CCTV trên cùng một platform. Khi thiết kế BoM cho IDF/MDF, cần xem xét khả năng mở rộng AI workload. Platform này đủ tiêu chuẩn cho các dự án Grade A tại Việt Nam 2026–2030.</p>
+        </div>
+      </div>
+      <div class="en-content" style="display:none;">
+        <p>At HPE Discover 2026, HPE officially delivered the <strong>AI Networking Stack</strong> fully integrating Aruba (campus/edge) and Juniper Networks (data center/WAN). The "Self-Driving Networks" platform uses Mist AIOps to automatically detect issues, optimize configurations and predict network faults before they occur. Juniper's new <strong>QFX5252</strong> switches support AI Factory workloads with 400G ports. CEO Antonio Neri positions HPE as the only solution able to "transcend the AI network bottleneck" from edge to AI Factory.</p>
+        <p>Breakthrough: Mist AI automates the full network lifecycle (zero-touch provisioning, root-cause analysis, predictive alerting) without manual admin intervention.</p>
+        <div class="schema-box">
+          <div class="schema-title">SOLUTION ARCHITECTURE — HPE SELF-DRIVING NETWORK</div>
+          <div class="schema-flow"><span class="schema-hl">[CAMPUS / EDGE]</span>  Aruba APs (Wi-Fi 7) + CX Switches + Mist AIOps
+     ↓  Fabric Connect (Encrypted Tunnel / EVPN-VXLAN)
+<span class="schema-hl">[WAN / CORE]</span>    Juniper MX (SD-WAN) + SRX (NGFW AI-IPS)
+     ↓  AI Policy Engine (HPE GreenLake Cloud)
+<span class="schema-hl">[DATA CENTER]</span>  QFX5252 (400G AI Factory) + Virtual QFX (overlay)
+     ↓  Mist AI: Intent-based Automation + Root-cause Analysis
+<span class="schema-hl">[MANAGEMENT]</span>  HPE GreenLake Unified Console (Cloud + On-prem hybrid)</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS?</div>
+          <p>For smart campus, mixed-use, hospital and university projects in Vietnam — Aruba+Juniper AI enables converged ICT-ELV network design, reduces operating costs by 40–60%, and supports IoT/BMS/CCTV on a unified platform. When designing BoM for IDF/MDF, AI workload scalability should be built in from day one. This platform meets Grade A project standards in Vietnam 2026–2030.</p>
+        </div>
+      </div>
+    </div>
+    <div class="news-source">
+      <a href="https://www.techtimes.com/articles/318609/20260618/hpe-discover-2026-closes-juniper-integration-ships-ai-networking-stack.htm" target="_blank" rel="noopener">📎 TechTimes — HPE Discover 2026 Closes: Juniper Integration Ships AI Networking Stack</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ TIN 2 ═══════════════════════ -->
+  <div class="news-item">
+    <div class="news-header">
+      <div class="news-num-row">
+        <div class="news-num">2</div>
+        <div class="news-tags">
+          <span class="news-tag">BIAMP</span>
+          <span class="news-tag">CRESTRON</span>
+          <span class="news-tag">LG</span>
+          <span class="news-tag">SHURE</span>
+          <span class="news-tag">AV</span>
+          <span class="news-tag">INFOCOMM</span>
+        </div>
+      </div>
+      <div class="vi-content">
+        <div class="news-title-vi">InfoComm 2026 Recap: Biamp Tesira AI DSP · Crestron Flex 3.0 · LG LED Collaboration · Shure MXA920 AI — Tương Lai Phòng Họp</div>
+        <div class="news-title-en">InfoComm 2026 Top Innovations: Biamp, Crestron, Shure & LG shaping next-gen AV collaboration</div>
+      </div>
+      <div class="en-content" style="display:none;">
+        <div class="news-title-vi">InfoComm 2026 Recap: Biamp Tesira AI DSP · Crestron Flex 3.0 · LG LED Collaboration · Shure MXA920 AI — The Future Meeting Room</div>
+        <div class="news-title-en">Key innovations from InfoComm 2026 redefine the standard for professional AV collaboration spaces</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>InfoComm 2026 (Las Vegas) đã trở thành sân khấu của loạt giải pháp AV đột phá: <strong>Biamp</strong> giới thiệu Tesira SERVER-IO với AI noise suppression và acoustic echo cancellation thế hệ mới (processing tại edge, không cần cloud) · <strong>Crestron</strong> tập trung vào "Culture of Collaboration" với Crestron Flex 3.0 — AI room management tự động điều chỉnh âm thanh/chiếu sáng · <strong>LG Business</strong> ra mắt màn hình LED liền khối thế hệ mới cho phòng họp executive · <strong>Shure</strong> MXA920 tích hợp sâu hơn với Microsoft Teams (AI beamforming, certified).</p>
+        <p>Xu hướng chính InfoComm 2026: AI xử lý âm thanh tại thiết bị (edge AI — không cloud dependency), hội tụ UC&C, tích hợp không dây không ma sát và "net zero" room automation.</p>
+        <div class="schema-box">
+          <div class="schema-title">SƠ ĐỒ — PHÒNG HỌP CHUẨN INFOCOMM 2026 (UC&C + AV CONVERGED)</div>
+          <div class="schema-flow"><span class="schema-hl">[DISPLAY]</span>     LG LED All-in-One hoặc Samsung QMR-B Series
+      ↕  HDMI 2.1 / HDBaseT 3.0
+<span class="schema-hl">[DSP / AUDIO]</span> Biamp Tesira SERVER-IO (AI NLP edge processing)
+      ↕  Dante AoIP Network (Gigabit)
+<span class="schema-hl">[MIC ARRAY]</span>  Shure MXA920 (AI beamforming 360°) × 2 units
+      ↕  USB-C / PoE+ Ethernet (IEEE 802.3bt)
+<span class="schema-hl">[CONTROL]</span>    Crestron Flex 3.0 (Teams / Zoom / Webex certified)
+      ↕  Cloud Room Management + Analytics
+<span class="schema-hl">[IT INFRA]</span>   Aruba AP-635 (Wi-Fi 7) + HPE CX 6300 PoE++ Switch</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM?</div>
+          <p>Phòng họp executive, hội trường tại khách sạn 5 sao, văn phòng tập đoàn, trường đại học và bệnh viện tại Việt Nam đang upgrade lên tiêu chuẩn UC&C mới post-InfoComm 2026. Biamp Tesira AI DSP + Shure MXA920 là combo DSP+mic chuẩn hiện nay cho dự án trên 3.000 m². Cần đưa các sản phẩm này vào BoM/RFP các dự án AV từ 2026 trở đi để đảm bảo tương thích Microsoft Teams / Zoom tiêu chuẩn quốc tế.</p>
+        </div>
+      </div>
+      <div class="en-content" style="display:none;">
+        <p>InfoComm 2026 (Las Vegas) became the stage for major AV launches: <strong>Biamp</strong> introduced Tesira SERVER-IO with next-gen AI noise suppression and acoustic echo cancellation (edge processing, no cloud dependency) · <strong>Crestron</strong> focused on "Culture of Collaboration" with Crestron Flex 3.0 — AI room management auto-adjusting audio/lighting · <strong>LG Business</strong> launched next-gen all-in-one LED displays for executive meeting rooms · <strong>Shure</strong> MXA920 deepened Microsoft Teams integration (AI beamforming, certified).</p>
+        <p>InfoComm 2026 key trends: Edge AI audio processing (no cloud dependency), UC&C convergence, frictionless wireless integration and "net zero" room automation.</p>
+        <div class="schema-box">
+          <div class="schema-title">DIAGRAM — STANDARD MEETING ROOM INFOCOMM 2026 (UC&C + AV CONVERGED)</div>
+          <div class="schema-flow"><span class="schema-hl">[DISPLAY]</span>     LG LED All-in-One or Samsung QMR-B Series
+      ↕  HDMI 2.1 / HDBaseT 3.0
+<span class="schema-hl">[DSP / AUDIO]</span> Biamp Tesira SERVER-IO (AI NLP edge processing)
+      ↕  Dante AoIP Network (Gigabit)
+<span class="schema-hl">[MIC ARRAY]</span>  Shure MXA920 (AI beamforming 360°) × 2 units
+      ↕  USB-C / PoE+ Ethernet (IEEE 802.3bt)
+<span class="schema-hl">[CONTROL]</span>    Crestron Flex 3.0 (Teams / Zoom / Webex certified)
+      ↕  Cloud Room Management + Analytics
+<span class="schema-hl">[IT INFRA]</span>   Aruba AP-635 (Wi-Fi 7) + HPE CX 6300 PoE++ Switch</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS?</div>
+          <p>Executive meeting rooms, 5-star hotel ballrooms, corporate offices, universities and hospitals in Vietnam are upgrading to new UC&C standards post-InfoComm 2026. Biamp Tesira AI DSP + Shure MXA920 is now the standard DSP+mic combo for projects over 3,000 m². These products should be included in BoM/RFP for AV projects from 2026 onwards to ensure international Microsoft Teams / Zoom compliance.</p>
+        </div>
+      </div>
+    </div>
+    <div class="news-source">
+      <a href="https://www.bcsconsultants.com/blog/infocomm-2026-recap-key-innovations-from-biamp-crestron-shure-and-lg-shaping-the-future-of-av/" target="_blank" rel="noopener">📎 BCS Consultants — InfoComm 2026 Recap: Biamp, Crestron, Shure & LG Innovations</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ TIN 3 ═══════════════════════ -->
+  <div class="news-item">
+    <div class="news-header">
+      <div class="news-num-row">
+        <div class="news-num">3</div>
+        <div class="news-tags">
+          <span class="news-tag">SCHNEIDER</span>
+          <span class="news-tag">SIEMENS</span>
+          <span class="news-tag">ABB</span>
+          <span class="news-tag">BMS</span>
+          <span class="news-tag">BACS</span>
+          <span class="news-tag">SMART BUILDING</span>
+        </div>
+      </div>
+      <div class="vi-content">
+        <div class="news-title-vi">Thị Trường BACS 2026: Schneider EcoStruxure · Siemens Desigo CC · ABB Ability · JCI OpenBlue Cạnh Tranh Qua AI & IIoT</div>
+        <div class="news-title-en">Building Automation & Control Systems Market 2026: Innovation Race Among Schneider, Siemens, ABB & JCI</div>
+      </div>
+      <div class="en-content" style="display:none;">
+        <div class="news-title-vi">BACS Market 2026: Schneider EcoStruxure · Siemens Desigo CC · ABB Ability · JCI OpenBlue — AI & IIoT Race</div>
+        <div class="news-title-en">The building automation market accelerates AI-powered integration across all major platform players</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Thị trường Building Automation & Control Systems (BACS) 2026 chứng kiến cuộc đua đổi mới giữa 4 ông lớn: <strong>Schneider Electric EcoStruxure</strong> với AI-powered energy optimization, BACnet-SC và KNX open protocol · <strong>Siemens Desigo CC</strong> tích hợp AI analytics và digital twin building · <strong>ABB Ability™</strong> với IIoT-native architecture cho công nghiệp lẫn thương mại · <strong>Johnson Controls OpenBlue</strong> mở rộng AI carbon management và ESG reporting tự động.</p>
+        <p>Điểm chung: tất cả đều chuyển sang <strong>open API (REST/MQTT/BACnet-SC)</strong>, AI anomaly detection và cloud-based digital twin. Hội tụ OT-IT ngày càng sâu hơn.</p>
+        <div class="schema-box">
+          <div class="schema-title">SƠ ĐỒ — KIẾN TRÚC BMS/BACS HIỆN ĐẠI 2026 (OPEN PLATFORM)</div>
+          <div class="schema-flow"><span class="schema-hl">[FIELD LEVEL]</span>   Cảm biến IoT · BACnet/IP · Modbus · Smart meters · KNX
+      ↓  BACnet-SC / MQTT over IP / LonWorks
+<span class="schema-hl">[AUTOMATION]</span>  DDC Controllers (Schneider SBO / Siemens PX / ABB AC500 / JCI FX)
+      ↓  OPC-UA / REST API / BACnet/SC
+<span class="schema-hl">[SUPERVISORY]</span> BMS Platform (EcoStruxure / Desigo CC / Ability / OpenBlue)
+      ↓  Cloud Connector (TLS 1.3 encrypted)
+<span class="schema-hl">[AI ENGINE]</span>   Anomaly detection · Energy optimization · Predictive maintenance
+      ↓  REST API / Webhook
+<span class="schema-hl">[INTEGRATION]</span> CCTV VMS ↔ Access Control ↔ Fire Alarm ↔ HVAC ↔ Lighting BAS</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM?</div>
+          <p>BMS/BACS là lớp tích hợp trung tâm kết nối toàn bộ hệ thống ELV (PCCC, CCTV, kiểm soát ra vào, chiếu sáng, HVAC). Chọn platform BMS (Schneider/Siemens/ABB) ảnh hưởng quyết định đến chi phí tích hợp và khả năng mở rộng 10–20 năm. Khuyến nghị cho dự án Việt Nam: ưu tiên platform hỗ trợ BACnet-SC, open REST API và AI analytics cho hospital, campus, high-rise và data center từ 2026 trở đi.</p>
+        </div>
+      </div>
+      <div class="en-content" style="display:none;">
+        <p>The Building Automation & Control Systems (BACS) market 2026 sees an innovation race among 4 giants: <strong>Schneider Electric EcoStruxure</strong> with AI-powered energy optimization, BACnet-SC and KNX open protocols · <strong>Siemens Desigo CC</strong> integrating AI analytics and digital twin building · <strong>ABB Ability™</strong> with IIoT-native architecture for industrial and commercial · <strong>Johnson Controls OpenBlue</strong> expanding AI carbon management and automated ESG reporting.</p>
+        <p>Common direction: all transitioning to <strong>open API (REST/MQTT/BACnet-SC)</strong>, AI anomaly detection and cloud-based digital twin. OT-IT convergence is deepening rapidly.</p>
+        <div class="schema-box">
+          <div class="schema-title">DIAGRAM — MODERN BMS/BACS ARCHITECTURE 2026 (OPEN PLATFORM)</div>
+          <div class="schema-flow"><span class="schema-hl">[FIELD LEVEL]</span>   IoT Sensors · BACnet/IP · Modbus · Smart meters · KNX
+      ↓  BACnet-SC / MQTT over IP / LonWorks
+<span class="schema-hl">[AUTOMATION]</span>  DDC Controllers (Schneider SBO / Siemens PX / ABB AC500 / JCI FX)
+      ↓  OPC-UA / REST API / BACnet/SC
+<span class="schema-hl">[SUPERVISORY]</span> BMS Platform (EcoStruxure / Desigo CC / Ability / OpenBlue)
+      ↓  Cloud Connector (TLS 1.3 encrypted)
+<span class="schema-hl">[AI ENGINE]</span>   Anomaly detection · Energy optimization · Predictive maintenance
+      ↓  REST API / Webhook
+<span class="schema-hl">[INTEGRATION]</span> CCTV VMS ↔ Access Control ↔ Fire Alarm ↔ HVAC ↔ Lighting BAS</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS?</div>
+          <p>BMS/BACS is the central integration layer connecting all ELV systems (fire alarm, CCTV, access control, lighting, HVAC). Platform choice (Schneider/Siemens/ABB) critically impacts integration cost and 10–20 year scalability. Recommendation for Vietnam projects: prioritize platforms supporting BACnet-SC, open REST API and AI analytics for hospital, campus, high-rise and data center projects from 2026 onwards.</p>
+        </div>
+      </div>
+    </div>
+    <div class="news-source">
+      <a href="https://natlawreview.com/press-releases/building-automation-and-control-system-market-2026-firms-competing-through" target="_blank" rel="noopener">📎 National Law Review — Building Automation & Control System Market 2026: Firms Competing Through Innovation</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ TIN 4 ═══════════════════════ -->
+  <div class="news-item">
+    <div class="news-header">
+      <div class="news-num-row">
+        <div class="news-num">4</div>
+        <div class="news-tags">
+          <span class="news-tag">SECUTECH VN</span>
+          <span class="news-tag">SECURITY AI</span>
+          <span class="news-tag">FIRE</span>
+          <span class="news-tag">ELV</span>
+          <span class="news-tag">VIETNAM</span>
+        </div>
+      </div>
+      <div class="vi-content">
+        <div class="news-title-vi">Secutech Vietnam 2026: AI-Integrated Security & Smart Infrastructure — Thị Trường Việt Nam Tăng Vọt</div>
+        <div class="news-title-en">Secutech Vietnam 2026: AI-Integrated Solutions Lead Safety, Security & Smart Infrastructure</div>
+      </div>
+      <div class="en-content" style="display:none;">
+        <div class="news-title-vi">Secutech Vietnam 2026: AI-Integrated Security & Smart Infrastructure — Vietnam Market Surging</div>
+        <div class="news-title-en">AI-integrated solutions dominate Secutech Vietnam 2026, reflecting Vietnam's rapidly expanding ELV market</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Secutech Vietnam 2026 (Hà Nội & TP.HCM) là diễn đàn trọng điểm cho ngành ELV Việt Nam, với loạt giải pháp AI-integrated dẫn đầu: camera AI edge-processing, hệ thống PCCC tích hợp cloud, kiểm soát truy cập sinh trắc học và smart building platform. Triển lãm phản ánh nhu cầu thị trường Việt Nam đang tăng vọt cho các hệ thống an toàn thông minh tích hợp.</p>
+        <p>Điểm nổi bật: <strong>AI fire safety</strong> (early warning, multi-sensor smoke/heat) và <strong>integrated security platform</strong> kết nối VMS+BMS+Access Control đang được ưa chuộng trong dự án hospital, trường học và tòa nhà thương mại hạng A. Các hãng như Hochiki, Notifier, Hikvision, Genetec và Siemens đều triển lãm giải pháp mới.</p>
+        <div class="schema-box">
+          <div class="schema-title">SƠ ĐỒ — INTEGRATED SECURITY PLATFORM (CHUẨN ELV VIỆT NAM 2026)</div>
+          <div class="schema-flow"><span class="schema-hl">[CAMERAS]</span>      AI IP Camera (Edge AI) × N — PoE switch Layer 2
+      ↓  Gigabit Ethernet → Core Switch (VLAN CCTV)
+<span class="schema-hl">[VMS]</span>         Genetec Security Center / Milestone XProtect (AI Analytics)
+      ↕  Open API (REST / SDK)
+<span class="schema-hl">[ACCESS]</span>      Biometric Readers (Face + Fingerprint) → AC Controller
+      ↕  BACnet/IP / Wiegand / OSDP v2
+<span class="schema-hl">[FIRE ALARM]</span>  Addressable FACP (Hochiki / Notifier) + Multi-sensor detectors
+      ↕  OPC-UA / BACnet (read-only to BMS)
+<span class="schema-hl">[BMS/PSIM]</span>   Central Platform → Alarm Dashboard + Mobile App Alert</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM?</div>
+          <p>Triển lãm ngay tại Việt Nam giúp nhà tư vấn, chủ đầu tư và nhà thầu ELV tiếp cận công nghệ mới nhất, gặp gỡ nhà phân phối và đánh giá giải pháp phù hợp dự án trong nước. Xu hướng AI-integrated security và unified platform (VMS+BMS+Fire) đang trở thành yêu cầu bắt buộc trong RFP các dự án hạng A tại Việt Nam từ 2026. Nhà tư vấn ELV cần cập nhật danh sách sản phẩm khuyến nghị theo xu hướng này.</p>
+        </div>
+      </div>
+      <div class="en-content" style="display:none;">
+        <p>Secutech Vietnam 2026 (Hanoi & Ho Chi Minh City) is the key forum for Vietnam's ELV industry, with AI-integrated solutions leading the way: edge-processing AI cameras, cloud-integrated fire protection, biometric access control and smart building platforms. The exhibition reflects Vietnam's rapidly surging market demand for intelligent, integrated safety systems.</p>
+        <p>Highlights: <strong>AI fire safety</strong> (early warning, multi-sensor smoke/heat) and <strong>integrated security platforms</strong> connecting VMS+BMS+Access Control are gaining traction in hospital, school and Class-A commercial building projects. Brands like Hochiki, Notifier, Hikvision, Genetec and Siemens all exhibited new solutions.</p>
+        <div class="schema-box">
+          <div class="schema-title">DIAGRAM — INTEGRATED SECURITY PLATFORM (ELV VIETNAM 2026 STANDARD)</div>
+          <div class="schema-flow"><span class="schema-hl">[CAMERAS]</span>      AI IP Camera (Edge AI) × N — PoE switch Layer 2
+      ↓  Gigabit Ethernet → Core Switch (VLAN CCTV)
+<span class="schema-hl">[VMS]</span>         Genetec Security Center / Milestone XProtect (AI Analytics)
+      ↕  Open API (REST / SDK)
+<span class="schema-hl">[ACCESS]</span>      Biometric Readers (Face + Fingerprint) → AC Controller
+      ↕  BACnet/IP / Wiegand / OSDP v2
+<span class="schema-hl">[FIRE ALARM]</span>  Addressable FACP (Hochiki / Notifier) + Multi-sensor Detectors
+      ↕  OPC-UA / BACnet (read-only to BMS)
+<span class="schema-hl">[BMS/PSIM]</span>   Central Platform → Alarm Dashboard + Mobile App Alert</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS?</div>
+          <p>Vietnam-based exhibitions help consultants, investors and ELV contractors access the latest technology, meet distributors and evaluate solutions for local projects. The trend toward AI-integrated security and unified platforms (VMS+BMS+Fire) is becoming mandatory in RFPs for Class-A projects in Vietnam from 2026. ELV consultants should update their recommended product lists to reflect this shift.</p>
+        </div>
+      </div>
+    </div>
+    <div class="news-source">
+      <a href="https://www.securityinformed.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" rel="noopener">📎 SecurityInformed — AI-Integrated Solutions Lead at Secutech Vietnam 2026</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ TIN 5 ═══════════════════════ -->
+  <div class="news-item">
+    <div class="news-header">
+      <div class="news-num-row">
+        <div class="news-num">5</div>
+        <div class="news-tags">
+          <span class="news-tag">VIETNAM</span>
+          <span class="news-tag">DIGITAL INFRA</span>
+          <span class="news-tag">ICT</span>
+          <span class="news-tag">DATA CENTER</span>
+          <span class="news-tag">GOVERNMENT</span>
+        </div>
+      </div>
+      <div class="vi-content">
+        <div class="news-title-vi">Chính Phủ Việt Nam Đầu Tư $5B Hạ Tầng Số 2026: AI, Data Center, Digital Economy — Cơ Hội Thập Kỷ Cho ELV/ICT</div>
+        <div class="news-title-en">Vietnam Government $5B Digital Infrastructure Bet 2026 — Decade Opportunity for ELV/ICT Sector</div>
+      </div>
+      <div class="en-content" style="display:none;">
+        <div class="news-title-vi">Vietnam Government $5B Digital Infrastructure Investment 2026 — Decade-Defining Opportunity for ELV/ICT</div>
+        <div class="news-title-en">Vietnam's strategic $5B digital investment signals massive ELV/ICT/AV demand wave through 2030</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Chính phủ Việt Nam chính thức công bố đầu tư <strong>$5 tỷ USD</strong> vào hạ tầng số năm 2026, bao gồm: hạ tầng AI quốc gia, data center Tier III/IV, mạng 5G toàn quốc và chương trình chuyển đổi số cho cơ quan nhà nước (smartgov). Báo cáo từ Gradion gọi đây là "cược hạ tầng số lớn nhất lịch sử Việt Nam".</p>
+        <p>Trực tiếp dẫn đến làn sóng dự án: smart government building, digital hospital, smart school, data center hiện đại — tất cả đều yêu cầu hệ thống ELV/ICT/AV tích hợp đầy đủ theo tiêu chuẩn quốc tế. Nhu cầu tư vấn thiết kế ELV sẽ tăng mạnh giai đoạn 2026–2030.</p>
+        <div class="schema-box">
+          <div class="schema-title">SƠ ĐỒ — ELV/ICT/AV ĐẦY ĐỦ CHO DỰ ÁN CHÍNH PHỦ SỐ VIỆT NAM</div>
+          <div class="schema-flow"><span class="schema-hl">[DATA CENTER T3/T4]</span> Cat6A/OM4 cabling · ODF · DCS · PDU · UPS
+      ↓
+<span class="schema-hl">[ICT CAMPUS]</span>      Campus Network (Cisco/HPE) · Wi-Fi 7 · SD-WAN · 5G CPE
+      ↓
+<span class="schema-hl">[ELV INTEGRATION]</span>  CCTV AI · Kiểm soát ra vào · PCCC addressable · BMS
+      ↓
+<span class="schema-hl">[AV / UC&C]</span>       Phòng họp Teams/Zoom · Digital Signage · Public Address
+      ↓
+<span class="schema-hl">[IOC DASHBOARD]</span>   Integrated Operations Center — AI monitoring tất cả hệ thống</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM?</div>
+          <p>Đầu tư $5B hạ tầng số tạo ra làn sóng dự án ELV/ICT/AV quy mô lớn trên cả nước trong giai đoạn 2026–2030. Đây là cơ hội lớn nhất cho ngành tư vấn ELV trong thập kỷ. Nhà tư vấn, nhà thầu và nhà phân phối ELV cần chuẩn bị portfolio dự án chính phủ, hiểu yêu cầu đấu thầu nhà nước và xây dựng năng lực thiết kế tích hợp ELV/ICT/AV để tham gia thị trường này.</p>
+        </div>
+      </div>
+      <div class="en-content" style="display:none;">
+        <p>The Vietnamese Government officially announced a <strong>$5 billion USD</strong> digital infrastructure investment in 2026, covering: national AI infrastructure, Tier III/IV data centers, nationwide 5G network and digital government transformation (smartgov). Gradion's report calls this "Vietnam's biggest digital infrastructure bet in history."</p>
+        <p>This directly generates a wave of projects: smart government buildings, digital hospitals, smart schools, modern data centers — all requiring fully integrated ELV/ICT/AV systems to international standards. ELV design consulting demand will surge strongly in 2026–2030.</p>
+        <div class="schema-box">
+          <div class="schema-title">DIAGRAM — FULL ELV/ICT/AV FOR VIETNAM DIGITAL GOVERNMENT PROJECTS</div>
+          <div class="schema-flow"><span class="schema-hl">[DATA CENTER T3/T4]</span> Cat6A/OM4 cabling · ODF · DCS · PDU · UPS
+      ↓
+<span class="schema-hl">[ICT CAMPUS]</span>      Campus Network (Cisco/HPE) · Wi-Fi 7 · SD-WAN · 5G CPE
+      ↓
+<span class="schema-hl">[ELV INTEGRATION]</span>  CCTV AI · Access Control · Addressable Fire Alarm · BMS
+      ↓
+<span class="schema-hl">[AV / UC&C]</span>       Teams/Zoom Meeting Rooms · Digital Signage · Public Address
+      ↓
+<span class="schema-hl">[IOC DASHBOARD]</span>   Integrated Operations Center — AI monitoring all systems</div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS?</div>
+          <p>The $5B digital infrastructure investment creates a wave of large-scale ELV/ICT/AV projects nationwide through 2026–2030. This is the biggest opportunity for the ELV consulting industry this decade. Consultants, contractors and ELV distributors need to build government project portfolios, understand public tender requirements and develop integrated ELV/ICT/AV design capabilities to access this market.</p>
+        </div>
+      </div>
+    </div>
+    <div class="news-source">
+      <a href="https://gradion.com/en/blog/vietnam-digital-infrastructure-investment-in-2026" target="_blank" rel="noopener">📎 Gradion — Vietnam's Government Just Made a $5B Digital Infrastructure Bet. Here's What It Means.</a>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3>
+      <span class="vi-content">CẦN TƯ VẤN THIẾT KẾ ELV / ICT / AV?</span>
+      <span class="en-content" style="display:none;">NEED ELV / ICT / AV SYSTEM DESIGN CONSULTING?</span>
+    </h3>
+    <p>
+      <span class="vi-content">Paul Le — ELV/ICT/AV Design Director với 10+ năm kinh nghiệm thiết kế hạ tầng thông minh tại Việt Nam. Hỗ trợ toàn diện: RFP, BoM, thiết kế kỹ thuật, đấu thầu và tích hợp hệ thống SI.</span>
+      <span class="en-content" style="display:none;">Paul Le — ELV/ICT/AV Design Director with 10+ years of smart infrastructure design experience in Vietnam. Full support: RFP, BoM, technical design, tendering and SI system integration.</span>
+    </p>
+    <a href="https://elvconsultant.com/#contact" class="cta-btn">
+      <span class="vi-content">LIÊN HỆ TƯ VẤN →</span>
+      <span class="en-content" style="display:none;">CONTACT FOR CONSULTING →</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-copy">© 2026 Paul Le Consultant — <a href="https://elvconsultant.com" style="color:var(--cyan);text-decoration:none;">elvconsultant.com</a></div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
