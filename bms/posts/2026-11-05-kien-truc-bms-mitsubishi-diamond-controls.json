@@ -26,8 +26,8 @@
   {
    "h_vi": "Vấn đề",
    "h_en": "The problem",
-   "vi": "<p>Nhiều tòa nhà 10 đến 15 năm tuổi tại Việt Nam có BMS chạy phần mềm đóng: muốn thêm một AHU phải gọi đúng nhà tích hợp cũ, báo giá do họ quyết. Từ 01/01/2026, Luật 77/2025/QH15 yêu cầu cơ sở sử dụng năng lượng trọng điểm duy trì hệ thống đo đếm đạt chuẩn và lập cân bằng năng lượng. BMS đóng biến yêu cầu này thành chi phí lớn.</p>",
-   "en": "<p>Many 10 to 15 year old buildings in Vietnam run a closed BMS: adding one AHU means calling the original integrator, at their price. From 1 January 2026, Law 77/2025/QH15 requires designated energy users to keep compliant metering and produce an energy balance. A closed BMS turns that into a large bill.</p>"
+   "vi": "<p>Nhiều tòa nhà 10 đến 15 năm tuổi tại Việt Nam có BMS chạy phần mềm đóng: muốn thêm một AHU phải gọi đúng nhà tích hợp cũ vì không ai khác mở được chương trình. Từ 01/01/2026, Luật 77/2025/QH15 yêu cầu cơ sở sử dụng năng lượng trọng điểm duy trì hệ thống đo đếm đạt chuẩn và lập cân bằng năng lượng. Với BMS đóng, thêm đồng hồ và báo cáo năng lượng phụ thuộc hoàn toàn vào một đơn vị.</p>",
+   "en": "<p>Many 10 to 15 year old buildings in Vietnam run a closed BMS: adding one AHU means calling the original integrator, because nobody else can open the program. From 1 January 2026, Law 77/2025/QH15 requires designated energy users to keep compliant metering and produce an energy balance. With a closed BMS, adding meters and energy reports depends entirely on one vendor.</p>"
   },
   {
    "h_vi": "Giải pháp: 4 tầng, giao thức mở",
@@ -104,7 +104,7 @@
   }
  ],
  "x_post": "BMS lock-in starts at the controller.\n\nMitsubishi Diamond Controls splits it into 4 open levels:\n• Niagara 4 Supervisor + ICONICS GENESIS\n• DCM 9000, licence from 5 to 200 devices\n• DCM-8044-D / DCM-8446 DDC, BACnet + Modbus\n• Plain 0-10V, 4-20mA field I/O\n\nFull schematic on the blog, link in bio.",
- "fb_post": "BMS đóng là lý do nhiều tòa nhà phải trả giá cao mỗi lần thêm một AHU.\n\nKiến trúc Mitsubishi Electric Diamond Controls tách thành 4 tầng mở:\n1. Quản lý: Niagara 4 Supervisor + ICONICS GENESIS (dashboard năng lượng, FDD, báo cáo theo Luật 77/2025)\n2. Tự động hóa: DCM 9000, license từ 5 đến 200 thiết bị\n3. Hiện trường: DDC DCM-8044-D (8UI/4DO/4AO, BTL) và DCM-8446 (22 đến 30 điểm)\n4. Thiết bị: 0–10V, 4–20mA, NTC 10K, tiếp điểm khô\n\nBa giới hạn cần ghi vào thiết kế: Modbus Master tối đa 4 slave, GW-112 tối đa 32 thiết bị/cổng, DCM 9000 tối đa 16 IO-R-16.\n\nSơ đồ nguyên lý đầy đủ và bảng chọn controller:\nhttps://elvconsultant.com/blog/bms/2026-11-05-kien-truc-bms-mitsubishi-diamond-controls.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #MitsubishiElectric #Niagara4 #SmartBuilding #ELV",
+ "fb_post": "BMS đóng là lý do nhiều tòa nhà phải gọi đúng một nhà tích hợp mỗi lần thêm một AHU.\n\nKiến trúc Mitsubishi Electric Diamond Controls tách thành 4 tầng mở:\n1. Quản lý: Niagara 4 Supervisor + ICONICS GENESIS (dashboard năng lượng, FDD, báo cáo theo Luật 77/2025)\n2. Tự động hóa: DCM 9000, license từ 5 đến 200 thiết bị\n3. Hiện trường: DDC DCM-8044-D (8UI/4DO/4AO, BTL) và DCM-8446 (22 đến 30 điểm)\n4. Thiết bị: 0–10V, 4–20mA, NTC 10K, tiếp điểm khô\n\nBa giới hạn cần ghi vào thiết kế: Modbus Master tối đa 4 slave, GW-112 tối đa 32 thiết bị/cổng, DCM 9000 tối đa 16 IO-R-16.\n\nSơ đồ nguyên lý đầy đủ và bảng chọn controller:\nhttps://elvconsultant.com/blog/bms/2026-11-05-kien-truc-bms-mitsubishi-diamond-controls.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #MitsubishiElectric #Niagara4 #SmartBuilding #ELV",
  "hero_image": {
   "src": "https://images.unsplash.com/photo-1507337272725-eec743fbdc31?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
   "alt": "Ống kỹ thuật trên tường bê tông trong phòng máy",
