@@ -1,6 +1,6 @@
 # Daily BMS Mitsubishi post: runbook
 
-Owner: Paul Le (DHP, official Mitsubishi Electric partner). Runs every day, fully automatic, no approval step. Push straight to `main`.
+Owner: Paul Le (DHP, official Mitsubishi Electric partner). Runs every day at 09:34 Asia/Saigon (not 07:00, that slot belongs to the ELV News task), fully automatic, no approval step. Push straight to `main`.
 
 ## 1. Pick the topic
 - Open `bms/content-calendar.json`. Take the item whose `date` = today (Asia/Saigon). If none, take the first `planned` item with the earliest date.
@@ -9,7 +9,7 @@ Owner: Paul Le (DHP, official Mitsubishi Electric partner). Runs every day, full
 ## 2. Facts
 - Product specs ONLY from `bms/product-facts.md`. Never invent a number, price, project reference or client name.
 - Regulations, market data, news: look up with web search, open the page, cite it in `sources`.
-- Prices: give none unless from a cited source. Use relative words ("chi phí license thấp hơn").
+- NO prices, costs, discounts or price comparisons anywhere (article, X, Facebook). Compare brands only on technical strengths and solutions: protocols, openness, IO, integration, applications.
 
 ## 3. Write `bms/posts/<date>-<slug>.json`
 Keys (see `scripts/bms_post.py` docstring and the 2026-11-05 post as the model):
@@ -38,8 +38,8 @@ Writing rules: Vietnamese the way an engineer writes to a client, direct. No em 
 4. `git add bms blog/bms && git commit -m "BMS post <date>: <title_en>"` with the session attribution lines, `git fetch origin main && git rebase origin/main && git push origin HEAD:main`.
 
 ## 6. Social (after push)
-- X via Typefully, social set 352801 (@PLELVCONSULTANT): one post, English, ≤ 270 characters, NO URL in the text (X rejects API posts with links: 403). End with "Full schematic on the blog, link in bio." publish_at today 08:30 +07:00 (if already past, now + 15 min).
-- Facebook page via Metricool, brand 7679282 (Elvconsultant.com), `facebookData.type` POST, `autoPublish` true, media = hero image URL, Vietnamese text 120–220 words ending with the link, the 48-hour SĐNL + BoM offer and 4–5 hashtags. Time 11:30 +07:00 (if past, now + 20 min).
+- X via Typefully, social set 352801 (@PLELVCONSULTANT): one post, English, ≤ 270 characters, NO URL in the text (X rejects API posts with links: 403). End with "Full schematic on the blog, link in bio." publish_at today 10:00 +07:00 (if already past, now + 15 min).
+- Facebook page via Metricool, brand 7679282 (Elvconsultant.com), `facebookData.type` POST, `autoPublish` true, media = hero image URL, Vietnamese text 120–220 words ending with the link, the 48-hour SĐNL + BoM offer and 4–5 hashtags. Time 13:00 +07:00 (if past, now + 20 min).
 - Both texts: no em dash, no clichés, one concrete number in the first line.
 
 ## 7. Report
