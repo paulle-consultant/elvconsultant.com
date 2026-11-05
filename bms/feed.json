@@ -1,0 +1,11 @@
+[
+ {
+  "date": "2026-11-05",
+  "slug": "kien-truc-bms-mitsubishi-diamond-controls",
+  "title_vi": "BMS Mitsubishi trong 4 tầng",
+  "title_en": "Mitsubishi BMS in four levels",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-05-kien-truc-bms-mitsubishi-diamond-controls.html",
+  "x_post": "Most BMS lock-in starts at the controller.\n\nMitsubishi Diamond Controls splits it into 4 open levels:\n• Niagara 4 Supervisor + ICONICS GENESIS\n• DCM 9000 (5 to 200 device licence)\n• DCM-8044-D / DCM-8446 DDC, BACnet + Modbus\n• Plain 0-10V, 4-20mA field I/O\n\nFull schematic:\nhttps://elvconsultant.com/blog/bms/2026-11-05-kien-truc-bms-mitsubishi-diamond-controls.html",
+  "fb_post": "BMS đóng là lý do nhiều tòa nhà phải trả giá cao mỗi lần thêm một AHU.\n\nKiến trúc Mitsubishi Electric Diamond Controls tách thành 4 tầng mở:\n1. Quản lý: Niagara 4 Supervisor + ICONICS GENESIS (dashboard năng lượng, FDD, báo cáo theo Luật 77/2025)\n2. Tự động hóa: DCM 9000, license từ 5 đến 200 thiết bị\n3. Hiện trường: DDC DCM-8044-D (8UI/4DO/4AO, BTL) và DCM-8446 (22 đến 30 điểm)\n4. Thiết bị: 0–10V, 4–20mA, NTC 10K, tiếp điểm khô\n\nBa giới hạn cần ghi vào thiết kế: Modbus Master tối đa 4 slave, GW-112 tối đa 32 thiết bị/cổng, DCM 9000 tối đa 16 IO-R-16.\n\nSơ đồ nguyên lý đầy đủ và bảng chọn controller:\nhttps://elvconsultant.com/blog/bms/2026-11-05-kien-truc-bms-mitsubishi-diamond-controls.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #MitsubishiElectric #Niagara4 #SmartBuilding #ELV"
+ }
+]

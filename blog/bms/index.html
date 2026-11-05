@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMS Mitsubishi Electric · Diamond Controls | Paul Le · DHP</title>
+<meta name="description" content="Giải pháp BMS Mitsubishi Electric Diamond Controls (Niagara 4): sơ đồ nguyên lý, cấu hình DDC, ứng dụng khách sạn, văn phòng, bệnh viện, nhà máy.">
+<meta name="author" content="Paul Le · DHP Technology &amp; Integration">
+<link rel="canonical" href="https://elvconsultant.com/blog/bms/">
+<meta property="og:type" content="article"><meta property="og:title" content="BMS Mitsubishi Electric · Diamond Controls | Paul Le · DHP"><meta property="og:description" content="Giải pháp BMS Mitsubishi Electric Diamond Controls (Niagara 4): sơ đồ nguyên lý, cấu hình DDC, ứng dụng khách sạn, văn phòng, bệnh viện, nhà máy."><meta property="og:url" content="https://elvconsultant.com/blog/bms/">
+<meta name="twitter:card" content="summary">
+<style>@font-face{font-family:'Maison Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/cormorant-garamond-vietnamese-400-normal.woff2) format('woff2')}@font-face{font-family:'Maison Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/cormorant-garamond-latin-ext-400-normal.woff2) format('woff2')}@font-face{font-family:'Maison Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/cormorant-garamond-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'Maison Serif';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/cormorant-garamond-vietnamese-500-normal.woff2) format('woff2')}@font-face{font-family:'Maison Serif';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/cormorant-garamond-latin-ext-500-normal.woff2) format('woff2')}@font-face{font-family:'Maison Serif';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2')}@font-face{font-family:'Maison Serif';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/cormorant-garamond-vietnamese-400-italic.woff2) format('woff2')}@font-face{font-family:'Maison Serif';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/cormorant-garamond-latin-ext-400-italic.woff2) format('woff2')}@font-face{font-family:'Maison Serif';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/cormorant-garamond-latin-400-italic.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:300;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-vietnamese-300-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:300;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-latin-ext-300-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:300;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-latin-300-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-vietnamese-400-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-latin-ext-400-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-vietnamese-500-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-latin-ext-500-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-latin-500-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-vietnamese-600-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-latin-ext-600-normal.woff2) format('woff2')}@font-face{font-family:'Maison Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/be-vietnam-pro-latin-600-normal.woff2) format('woff2')}
+:root{--bg:#0C0B09;--surface:#15130F;--ink:#F3EDE2;--muted:#B5AC9C;--accent:#C9A96A;--accent-ink:#16120B;--line:#2A251C;--paper:#F7F3EC;--bronze:#7A5A26;
+--serif:'Maison Serif',Georgia,serif;--sans:'Maison Sans',system-ui,sans-serif;--track:.16em;--maxw:1080px;--gut:clamp(16px,4vw,40px);--ease-out:cubic-bezier(.23,1,.32,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.75;overflow-x:hidden}
+a{color:var(--accent)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--gut)}
+.label{font-size:13px;letter-spacing:var(--track);text-transform:uppercase;font-weight:500;color:var(--accent)}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
+.brand{font-family:var(--serif);font-size:22px;color:var(--ink);text-decoration:none;letter-spacing:.02em}
+.nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.nav a{color:var(--muted);text-decoration:none;font-size:13px;letter-spacing:var(--track);text-transform:uppercase}
+.lang{display:flex;border:1px solid var(--line)}
+.lang button{background:none;border:0;color:var(--muted);font:500 13px var(--sans);letter-spacing:var(--track);padding:6px 12px;cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--accent);color:var(--accent-ink)}
+.lang button:active{transform:scale(.97)}
+.hero{padding:clamp(48px,8vw,104px) 0 clamp(32px,5vw,56px);border-bottom:1px solid var(--line)}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,8vw,116px);line-height:1.12;letter-spacing:-.015em;margin:18px 0 26px;max-width:14ch}
+.hero .actions{margin-top:28px}.btn-solid{display:inline-flex;align-items:center;min-height:48px;background:var(--accent);color:var(--accent-ink);text-decoration:none;padding:0 24px;font-size:13px;letter-spacing:var(--track);text-transform:uppercase;font-weight:500}.btn-solid:active{transform:scale(.97)}
+.photo{margin:0;position:relative}.photo img{display:block;width:100%;height:clamp(260px,46vw,620px);object-fit:cover}.photo figcaption{font-size:13px;color:var(--muted);padding:10px 0 0}
+h2.fig{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2;margin-bottom:18px}
+@media (prefers-reduced-motion:no-preference){.rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}.rv.in{opacity:1;transform:none}}
+.hero .lead{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:62ch}
+.meta{display:flex;gap:10px 24px;flex-wrap:wrap;margin-top:28px;color:var(--muted);font-size:13px;letter-spacing:var(--track);text-transform:uppercase}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.tags span{border:1px solid var(--line);padding:3px 10px;font-size:13px;color:var(--muted)}
+figure.sdnl{margin:clamp(40px,6vw,72px) 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 0}
+figure.sdnl .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+figure.sdnl svg{display:block;width:100%;min-width:720px;height:auto}
+figure.sdnl .hint{display:none;color:var(--muted);font-size:13px;margin-bottom:8px}@media(max-width:760px){figure.sdnl .hint{display:block}}
+figure.sdnl figcaption{margin-top:14px;color:var(--muted);font-size:15px}
+article .sec{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;padding:clamp(28px,4vw,44px) 0;border-bottom:1px solid var(--line)}
+@media(min-width:900px){article .sec{grid-template-columns:260px minmax(0,1fr);gap:48px}}
+article h2{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2}
+article .body p{margin-bottom:14px;max-width:68ch}
+article .body ul,article .body ol{margin:0 0 14px 22px;max-width:66ch}
+article .body li{margin-bottom:6px}
+article .body strong{font-weight:500;color:var(--ink)}
+article .body code{font-size:15px;background:var(--surface);padding:1px 6px;border:1px solid var(--line)}
+.tbl{overflow-x:auto;margin:clamp(28px,4vw,44px) 0}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+caption{caption-side:top;text-align:left;margin-bottom:12px;color:var(--muted);font-size:13px;letter-spacing:var(--track);text-transform:uppercase}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:500;color:var(--accent);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.cta{margin:clamp(48px,7vw,88px) 0;padding:clamp(28px,4vw,48px);background:var(--paper);color:#1B1814}
+.cta h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,36px);line-height:1.2;margin-bottom:10px}
+.cta p{color:#4A4339;max-width:60ch;margin-bottom:20px}
+.cta a.btn{display:inline-block;background:#16120B;color:var(--paper);text-decoration:none;padding:12px 22px;font-size:13px;letter-spacing:var(--track);text-transform:uppercase}
+.cta a.btn:active{transform:scale(.97)}
+.src{padding-bottom:56px;color:var(--muted);font-size:15px}
+.src ol{margin-left:20px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px;letter-spacing:.06em}
+.list{padding:clamp(32px,5vw,56px) 0}
+.item{display:grid;grid-template-columns:minmax(0,1fr);gap:6px 40px;padding:28px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+@media(min-width:900px){.item{grid-template-columns:220px minmax(0,1fr)}}
+.item h2{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.8vw,32px);line-height:1.2}
+.item p{color:var(--muted);margin-top:8px;max-width:70ch}
+@media (hover:hover) and (pointer:fine){.item h2{transition:color .2s var(--ease-out)}.item:hover h2{color:var(--accent)}.nav a:hover{color:var(--ink)}}
+[data-l=en]{display:none}
+html[lang=en] [data-l=vi]{display:none}
+html[lang=en] [data-l=en]{display:revert}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="/">Paul Le · ELV Consultant</a>
+<nav class="nav"><a href="/blog/bms/">BMS Mitsubishi</a><a href="/blog/">Blog</a><a href="/#contact"><span data-l="vi">Liên hệ</span><span data-l="en">Contact</span></a>
+<div class="lang" role="group" aria-label="Language"><button data-set="vi" aria-pressed="true">VI</button><button data-set="en" aria-pressed="false">EN</button></div></nav>
+</div></header>
+<main class="wrap"><section class="hero"><div class="label"><span data-l="vi">Chuyên mục hằng ngày</span><span data-l="en">Daily series</span></div><h1><span data-l="vi">BMS Mitsubishi, từng sơ đồ một</span><span data-l="en">Mitsubishi BMS, one schematic a day</span></h1><p class="lead"><span data-l="vi">Mỗi ngày một giải pháp BMS Diamond Controls trên nền Niagara 4: sơ đồ nguyên lý, cấu hình DDC, point schedule và cách áp dụng cho dự án tại Việt Nam.</span><span data-l="en">One Diamond Controls BMS solution a day on Niagara 4: schematics, DDC configuration, point schedules and how to apply them to projects in Vietnam.</span></p></section><section class="list"><a class="item rv" href="/blog/bms/2026-11-05-kien-truc-bms-mitsubishi-diamond-controls.html"><div class="label"><span data-l="vi">THỨ NĂM · 05/11/2026</span><span data-l="en">THURSDAY · 05 NOV 2026</span><br><span data-l="vi">Kiến trúc hệ thống</span><span data-l="en">System architecture</span></div><div><h2><span data-l="vi">BMS Mitsubishi trong 4 tầng</span><span data-l="en">Mitsubishi BMS in four levels</span></h2><p><span data-l="vi">Kiến trúc Diamond Controls từ cảm biến đến Niagara 4: thiết bị nào nằm ở tầng nào, giới hạn cần ghi vào thiết kế, và vì sao cách chia này giúp chủ đầu tư không bị khóa vào một nhà tích hợp.</span><span data-l="en">The Diamond Controls architecture from sensor to Niagara 4: which device sits on which level, the limits to write into the design, and why this split keeps owners free of single-integrator lock-in.</span></p></div></a></section></main><footer><div class="wrap">© 2026 Paul Le · DHP Technology &amp; Integration · <span data-l="vi">Đối tác chính thức Mitsubishi Electric, giải pháp BMS Diamond Controls</span><span data-l="en">Official Mitsubishi Electric partner, Diamond Controls BMS solutions</span> · <a href="/">elvconsultant.com</a></div></footer>
+<script>
+(function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}var io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -10% 0px'});els.forEach(e=>io.observe(e))})();
+function setLang(l){document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.set===l));try{localStorage.setItem('lang',l)}catch(e){}}
+(function(){var l='vi';try{l=localStorage.getItem('lang')||'vi'}catch(e){}setLang(l);document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.set)))})();
+</script>
+</body>
+</html>

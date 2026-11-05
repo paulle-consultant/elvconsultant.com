@@ -1,0 +1,257 @@
+{
+ "rules": "Mỗi ngày 1 bài theo trụ của thứ trong tuần. Hết topic planned thì tự lập thêm 14 topic mới cùng trụ, không trùng các bài đã published.",
+ "items": [
+  {
+   "date": "2026-11-05",
+   "pillar": "Kiến trúc hệ thống",
+   "topic": "BMS Mitsubishi trong 4 tầng",
+   "status": "published",
+   "slug": "kien-truc-bms-mitsubishi-diamond-controls"
+  },
+  {
+   "date": "2026-11-06",
+   "pillar": "Tích hợp hệ thống",
+   "pillar_en": "System integration",
+   "topic": "VRF City Multi vào Niagara qua BACnet: sơ đồ và point map",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-07",
+   "pillar": "Bài toán thực tế",
+   "pillar_en": "Worked example",
+   "topic": "Point schedule chiller plant 3 máy, 3 bơm, 2 tháp",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-08",
+   "pillar": "Hỏi đáp & tổng hợp",
+   "pillar_en": "Q&A and recap",
+   "topic": "5 lỗi hay gặp khi nghiệm thu BMS",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-09",
+   "pillar": "Giải pháp theo phân khúc",
+   "pillar_en": "Solutions by segment",
+   "topic": "BMS khách sạn 300 phòng với DCM-9025: AHU, PAU, VRF, thang máy về một giao diện",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-10",
+   "pillar": "Kỹ thuật sản phẩm",
+   "pillar_en": "Product engineering",
+   "topic": "DCM-8044-D điều khiển AHU VAV: gán 8UI/4DO/4AO và mở rộng IO-V6002",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-11",
+   "pillar": "So sánh & TCO",
+   "pillar_en": "Comparison & TCO",
+   "topic": "Niagara mở và BMS đóng: chi phí 10 năm cho tòa 1.000 điểm",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-12",
+   "pillar": "Năng lượng & pháp lý",
+   "pillar_en": "Energy & compliance",
+   "topic": "Luật 77/2025/QH15: tòa nhà cần đo đếm gì từ 2026",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-13",
+   "pillar": "Tích hợp hệ thống",
+   "pillar_en": "System integration",
+   "topic": "Tích hợp thang máy Mitsubishi vào BMS: giám sát trạng thái và lỗi",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-14",
+   "pillar": "Bài toán thực tế",
+   "pillar_en": "Worked example",
+   "topic": "Tính số DDC cho tòa 15 tầng từ bản vẽ M&E",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-15",
+   "pillar": "Hỏi đáp & tổng hợp",
+   "pillar_en": "Q&A and recap",
+   "topic": "Hỏi đáp: BMS có cần cho tòa nhà dưới 10.000 m²?",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-16",
+   "pillar": "Giải pháp theo phân khúc",
+   "pillar_en": "Solutions by segment",
+   "topic": "BMS bệnh viện: giám sát chênh áp phòng mổ, phòng cách ly theo dải Pa",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-17",
+   "pillar": "Kỹ thuật sản phẩm",
+   "pillar_en": "Product engineering",
+   "topic": "DCM-8446 + IO-6020 cho PAU: point list 30 điểm",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-18",
+   "pillar": "So sánh & TCO",
+   "pillar_en": "Comparison & TCO",
+   "topic": "Mitsubishi Diamond Controls và Honeywell WEBs: cùng Niagara, khác gì",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-19",
+   "pillar": "Năng lượng & pháp lý",
+   "pillar_en": "Energy & compliance",
+   "topic": "QCVN 09:2017/BXD và yêu cầu điều khiển HVAC",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-20",
+   "pillar": "Tích hợp hệ thống",
+   "pillar_en": "System integration",
+   "topic": "Interface BMS với báo cháy: tín hiệu, ưu tiên và thử nghiệm",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-21",
+   "pillar": "Bài toán thực tế",
+   "pillar_en": "Worked example",
+   "topic": "Sơ đồ tủ DDC: nguồn 24 VAC, relay, đấu dây UI/AO",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-22",
+   "pillar": "Hỏi đáp & tổng hợp",
+   "pillar_en": "Q&A and recap",
+   "topic": "Tổng hợp tuần: cấu hình DDC chuẩn cho AHU, FCU, bơm",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-23",
+   "pillar": "Giải pháp theo phân khúc",
+   "pillar_en": "Solutions by segment",
+   "topic": "BMS văn phòng hạng B 20.000 m² với DCM-9100 và đồng hồ điện tầng",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-24",
+   "pillar": "Kỹ thuật sản phẩm",
+   "pillar_en": "Product engineering",
+   "topic": "DCM 9000 license: chọn 9005/9010/9025/9100/9200 thế nào",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-25",
+   "pillar": "So sánh & TCO",
+   "pillar_en": "Comparison & TCO",
+   "topic": "Diamond Controls và Siemens Desigo CC cho dự án khách sạn",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-26",
+   "pillar": "Năng lượng & pháp lý",
+   "pillar_en": "Energy & compliance",
+   "topic": "BEMS cho LEED, EDGE, LOTUS: điểm số nào BMS lấy được",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-27",
+   "pillar": "Tích hợp hệ thống",
+   "pillar_en": "System integration",
+   "topic": "Đồng hồ điện Modbus TCP/RTU: địa chỉ, baudrate, register map",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-28",
+   "pillar": "Bài toán thực tế",
+   "pillar_en": "Worked example",
+   "topic": "Nghiệm thu BMS: checklist point-to-point và end-to-end",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-29",
+   "pillar": "Hỏi đáp & tổng hợp",
+   "pillar_en": "Q&A and recap",
+   "topic": "Hỏi đáp: Niagara 4 có cần license client không?",
+   "status": "planned"
+  },
+  {
+   "date": "2026-11-30",
+   "pillar": "Giải pháp theo phân khúc",
+   "pillar_en": "Solutions by segment",
+   "topic": "EMS nhà máy FDI Nhật: ICONICS GENESIS + PLC MELSEC + biến tần FR",
+   "status": "planned"
+  },
+  {
+   "date": "2026-12-01",
+   "pillar": "Kỹ thuật sản phẩm",
+   "pillar_en": "Product engineering",
+   "topic": "GW-112 biến DCM-8446 thành DDC IP: Modbus bridge và BACnet router 32 thiết bị",
+   "status": "planned"
+  },
+  {
+   "date": "2026-12-02",
+   "pillar": "So sánh & TCO",
+   "pillar_en": "Comparison & TCO",
+   "topic": "BACnet BTL nghĩa là gì và vì sao ghi vào hồ sơ mời thầu",
+   "status": "planned"
+  },
+  {
+   "date": "2026-12-03",
+   "pillar": "Năng lượng & pháp lý",
+   "pillar_en": "Energy & compliance",
+   "topic": "Chiến lược tối ưu chiller plant: reset nhiệt độ nước lạnh",
+   "status": "planned"
+  },
+  {
+   "date": "2026-12-04",
+   "pillar": "Tích hợp hệ thống",
+   "pillar_en": "System integration",
+   "topic": "BMS và GRMS khách sạn: ai điều khiển FCU phòng",
+   "status": "planned"
+  },
+  {
+   "date": "2026-12-05",
+   "pillar": "Bài toán thực tế",
+   "pillar_en": "Worked example",
+   "topic": "Thiết kế mạng BMS IP: VLAN, IP plan, bảo mật Niagara Fox TLS",
+   "status": "planned"
+  },
+  {
+   "date": "2026-12-06",
+   "pillar": "Hỏi đáp & tổng hợp",
+   "pillar_en": "Q&A and recap",
+   "topic": "Tổng hợp: chọn controller theo quy mô dự án",
+   "status": "planned"
+  },
+  {
+   "date": "2026-12-07",
+   "pillar": "Giải pháp theo phân khúc",
+   "pillar_en": "Solutions by segment",
+   "topic": "BMS resort nhiều villa: DCM-8044-D theo cụm, mạng IP phân tán",
+   "status": "planned"
+  },
+  {
+   "date": "2026-12-08",
+   "pillar": "Kỹ thuật sản phẩm",
+   "pillar_en": "Product engineering",
+   "topic": "Remote IO-0800/6020/0008-485: khi nào dùng thay DDC",
+   "status": "planned"
+  },
+  {
+   "date": "2026-12-09",
+   "pillar": "So sánh & TCO",
+   "pillar_en": "Comparison & TCO",
+   "topic": "Chi phí license, phần cứng, lập trình: bóc tách BoM BMS",
+   "status": "planned"
+  },
+  {
+   "date": "2026-12-10",
+   "pillar": "Năng lượng & pháp lý",
+   "pillar_en": "Energy & compliance",
+   "topic": "ESCO và hợp đồng hiệu quả năng lượng với BMS",
+   "status": "planned"
+  }
+ ]
+}

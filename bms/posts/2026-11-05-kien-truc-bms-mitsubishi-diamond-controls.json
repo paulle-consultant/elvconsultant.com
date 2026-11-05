@@ -1,0 +1,114 @@
+{
+ "date": "2026-11-05",
+ "slug": "kien-truc-bms-mitsubishi-diamond-controls",
+ "pillar_vi": "Kiến trúc hệ thống",
+ "pillar_en": "System architecture",
+ "title_vi": "BMS Mitsubishi trong 4 tầng",
+ "title_en": "Mitsubishi BMS in four levels",
+ "lead_vi": "Kiến trúc Diamond Controls từ cảm biến đến Niagara 4: thiết bị nào nằm ở tầng nào, giới hạn cần ghi vào thiết kế, và vì sao cách chia này giúp chủ đầu tư không bị khóa vào một nhà tích hợp.",
+ "lead_en": "The Diamond Controls architecture from sensor to Niagara 4: which device sits on which level, the limits to write into the design, and why this split keeps owners free of single-integrator lock-in.",
+ "tags": [
+  "Mitsubishi Electric",
+  "Diamond Controls",
+  "Niagara 4",
+  "DCM 9000",
+  "DCM-8044-D",
+  "DCM-8446",
+  "BACnet",
+  "Modbus"
+ ],
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 660\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Kiến trúc BMS Mitsubishi Electric Diamond Controls 4 tầng\" font-family=\"'Maison Sans',system-ui,sans-serif\">\n<style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em;}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.ld{stroke:#B5AC9C;stroke-width:1;stroke-dasharray:4 4;fill:none}.p{fill:#C9A96A;font-size:12px;}</style>\n\n<rect class=\"b\" x=\"20\" y=\"40\" width=\"290\" height=\"78\"/><text class=\"t\" x=\"36\" y=\"68\">Niagara 4 Supervisor</text><text class=\"s\" x=\"36\" y=\"90\">Graphics · alarm · trend · schedule</text><text class=\"s\" x=\"36\" y=\"107\">SMS / email · user roles</text>\n<rect class=\"b\" x=\"335\" y=\"40\" width=\"290\" height=\"78\"/><text class=\"t\" x=\"351\" y=\"68\">ICONICS GENESIS (BEMS)</text><text class=\"s\" x=\"351\" y=\"90\">Energy dashboard · FDD</text><text class=\"s\" x=\"351\" y=\"107\">Carbon / Law 77/2025 reports</text>\n<rect class=\"b2\" x=\"650\" y=\"40\" width=\"290\" height=\"78\"/><text class=\"t\" x=\"666\" y=\"68\">Web / mobile client</text><text class=\"s\" x=\"666\" y=\"90\">HTML5 browser, no client licence</text><text class=\"s\" x=\"666\" y=\"107\">Remote access via VPN</text>\n<path class=\"ln\" d=\"M165 118V160M480 118V160M795 118V160M20 160H940\"/>\n\n\n<path class=\"ln\" d=\"M165 160V226M480 160V226M795 160V226\"/>\n<rect class=\"b\" x=\"20\" y=\"226\" width=\"290\" height=\"92\"/><text class=\"t\" x=\"36\" y=\"254\">DCM 9000 controller</text><text class=\"s\" x=\"36\" y=\"276\">Niagara 4.13+ · 2× RS-485 · 2× GbE</text><text class=\"s\" x=\"36\" y=\"293\">Licence DCM-9005 … 9200</text><text class=\"s\" x=\"36\" y=\"310\">(5 → 200 devices)</text>\n<rect class=\"b\" x=\"335\" y=\"226\" width=\"290\" height=\"92\"/><text class=\"t\" x=\"351\" y=\"254\">DCM-8044-D IP DDC</text><text class=\"s\" x=\"351\" y=\"276\">8UI · 4DO · 4AO · LCD · BTL</text><text class=\"s\" x=\"351\" y=\"293\">BACnet router / Modbus bridge</text><text class=\"s\" x=\"351\" y=\"310\">+ IO-V6002 (6UI · 2DO)</text>\n<rect class=\"b2\" x=\"650\" y=\"226\" width=\"290\" height=\"92\"/><text class=\"t\" x=\"666\" y=\"254\">Third-party systems</text><text class=\"s\" x=\"666\" y=\"276\">VRF City Multi · chillers · lifts</text><text class=\"s\" x=\"666\" y=\"293\">Power meters · gensets · FA I/F</text><text class=\"s\" x=\"666\" y=\"310\">BACnet/IP or Modbus TCP</text>\n<path class=\"ln\" d=\"M165 318V368M60 368H600\"/><path class=\"ln\" d=\"M480 318V368\"/>\n\n\n<path class=\"ln\" d=\"M120 368V434M340 368V434M560 368V434\"/>\n<rect class=\"b\" x=\"20\" y=\"434\" width=\"200\" height=\"92\"/><text class=\"t\" x=\"34\" y=\"462\">DCM-8446 + IO-6020</text><text class=\"s\" x=\"34\" y=\"484\">14AI · 4DI · 6AO · 6DO</text><text class=\"s\" x=\"34\" y=\"501\">AHU / PAU control</text>\n<rect class=\"b\" x=\"240\" y=\"434\" width=\"200\" height=\"92\"/><text class=\"t\" x=\"254\" y=\"462\">DCM-8446 + IO-0800</text><text class=\"s\" x=\"254\" y=\"484\">8AI · 12DI · 4AO · 6DO</text><text class=\"s\" x=\"254\" y=\"501\">Pumps · fans · status</text>\n<rect class=\"b\" x=\"460\" y=\"434\" width=\"200\" height=\"92\"/><text class=\"t\" x=\"474\" y=\"462\">Remote IO-485</text><text class=\"s\" x=\"474\" y=\"484\">IO-0800 · IO-6020 · IO-0008</text><text class=\"s\" x=\"474\" y=\"501\">Scattered points</text>\n<rect class=\"b2\" x=\"680\" y=\"434\" width=\"260\" height=\"92\"/><text class=\"t\" x=\"694\" y=\"462\">Rule of thumb</text><text class=\"s\" x=\"694\" y=\"484\">1 DDC per plant item</text><text class=\"s\" x=\"694\" y=\"501\">≤ 30 points per DCM-8446 set</text><text class=\"s\" x=\"694\" y=\"518\">≤ 4 slaves in Modbus-master mode</text>\n<path class=\"ld\" d=\"M120 526V570M340 526V570M560 526V570\"/>\n\n\n<text class=\"s\" x=\"20\" y=\"644\">T / RH / CO₂ sensors   ·   differential pressure   ·   2-way / 3-way valves   ·   VSD fans &amp; pumps   ·   run / trip / auto status   ·   start / stop</text>\n<rect x=\"16.0\" y=\"13.5\" width=\"161.6\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16.0\" y=\"167.5\" width=\"374.6\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16.0\" y=\"199.5\" width=\"156.2\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16.0\" y=\"375.5\" width=\"507.6\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16.0\" y=\"407.5\" width=\"100.7\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16.0\" y=\"573.5\" width=\"454.8\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16.0\" y=\"603.5\" width=\"71.0\" height=\"19.4\" fill=\"#0C0B09\"/><text class=\"k\" x=\"20\" y=\"28\">MANAGEMENT LEVEL</text><text class=\"p\" x=\"20\" y=\"182\">BMS IP NETWORK · BACnet/IP · Modbus TCP · Niagara Fox (TLS)</text><text class=\"k\" x=\"20\" y=\"214\">AUTOMATION LEVEL</text><text class=\"p\" x=\"20\" y=\"390\">RS-485 FIELD BUS · BACnet MS/TP · Modbus RTU (max 32 devices per GW-112 bridge)</text><text class=\"k\" x=\"20\" y=\"422\">FIELD LEVEL</text><text class=\"p\" x=\"20\" y=\"588\">HARD-WIRED I/O · 0–10 V · 4–20 mA · NTC 10K · dry contact · relay 30 VDC 1 A</text><text class=\"k\" x=\"20\" y=\"618\">DEVICES</text></svg>",
+  "caption_vi": "SĐNL BMS Diamond Controls 4 tầng: quản lý (Niagara 4 Supervisor, ICONICS GENESIS), tự động hóa (DCM 9000, DCM-8044-D), hiện trường (DCM-8446, remote IO) và thiết bị. Thông số theo catalog Mitsubishi Electric Asia.",
+  "caption_en": "Four-level Diamond Controls BMS: management (Niagara 4 Supervisor, ICONICS GENESIS), automation (DCM 9000, DCM-8044-D), field (DCM-8446, remote IO) and devices. Ratings per Mitsubishi Electric Asia catalogue."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>Nhiều tòa nhà 10 đến 15 năm tuổi tại Việt Nam có BMS chạy phần mềm đóng: muốn thêm một AHU phải gọi đúng nhà tích hợp cũ, báo giá do họ quyết. Từ 01/01/2026, Luật 77/2025/QH15 yêu cầu cơ sở sử dụng năng lượng trọng điểm duy trì hệ thống đo đếm đạt chuẩn và lập cân bằng năng lượng. BMS đóng biến yêu cầu này thành chi phí lớn.</p>",
+   "en": "<p>Many 10 to 15 year old buildings in Vietnam run a closed BMS: adding one AHU means calling the original integrator, at their price. From 1 January 2026, Law 77/2025/QH15 requires designated energy users to keep compliant metering and produce an energy balance. A closed BMS turns that into a large bill.</p>"
+  },
+  {
+   "h_vi": "Giải pháp: 4 tầng, giao thức mở",
+   "h_en": "Solution: four levels, open protocols",
+   "vi": "<ul><li><strong>Tầng quản lý:</strong> Niagara 4 Supervisor gom alarm, trend, lịch vận hành; ICONICS GENESIS (cùng tập đoàn Mitsubishi Electric) làm dashboard năng lượng, phát hiện lỗi FDD và báo cáo.</li><li><strong>Tầng tự động hóa:</strong> DCM 9000 chạy Niagara 4.13+, 2 cổng RS-485 cách ly, 2 cổng GbE, license theo số thiết bị từ DCM-9005 (5 thiết bị, 250 điểm) đến DCM-9200 (200 thiết bị, 10.000 điểm). DCM-8044-D là DDC IP 8UI/4DO/4AO có LCD, chứng nhận BTL, làm được BACnet router và Modbus bridge.</li><li><strong>Tầng hiện trường:</strong> DCM-8446 có 22 điểm (8UI/4DI/4AO/6DO), ghép IO-6020 hoặc IO-0800 lên 30 điểm; remote IO-485 cho điểm lẻ.</li><li><strong>Thiết bị:</strong> cảm biến 0–10 V, 4–20 mA, NTC 10K, tiếp điểm khô, relay 30 VDC 1 A.</li></ul>",
+   "en": "<ul><li><strong>Management:</strong> Niagara 4 Supervisor for alarms, trends and schedules; ICONICS GENESIS (also Mitsubishi Electric) for energy dashboards, fault detection (FDD) and reports.</li><li><strong>Automation:</strong> DCM 9000 runs Niagara 4.13+, two isolated RS-485 ports, two GbE ports, licensed by device count from DCM-9005 (5 devices, 250 points) to DCM-9200 (200 devices, 10,000 points). DCM-8044-D is a BTL-listed IP DDC with 8UI/4DO/4AO and LCD, able to act as BACnet router and Modbus bridge.</li><li><strong>Field:</strong> DCM-8446 has 22 points (8UI/4DI/4AO/6DO) and grows to 30 with IO-6020 or IO-0800; IO-485 remote modules cover scattered points.</li><li><strong>Devices:</strong> 0–10 V, 4–20 mA, NTC 10K, dry contacts, 30 VDC 1 A relays.</li></ul>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<p>Ba giới hạn cần ghi vào thiết kế để tránh phát sinh khi nghiệm thu:</p><ol><li>DCM-8044 ở chế độ Modbus Master chỉ đọc tối đa 4 thiết bị họ 8446 (DCM-8446, IO-0800/6020/0008-485).</li><li>GW-112 làm Modbus bridge hoặc BACnet router tối đa 32 thiết bị mỗi cổng.</li><li>DCM 9000 nhận tối đa 16 module IO-R-16 hoặc 8 module IO-R-34; mỗi IO-R-34 cấp nguồn được 4 IO-R-16.</li></ol><p>Với tòa nhà văn phòng 20.000 m², cấu hình hợp lý là 1 DCM-9100 cho khối kỹ thuật, mỗi AHU một bộ DCM-8446 + IO-6020, chiller và VRF lấy dữ liệu qua BACnet/IP, đồng hồ điện tầng qua Modbus TCP.</p>",
+   "en": "<p>Three limits belong in the design so they do not surface at commissioning:</p><ol><li>In Modbus Master mode a DCM-8044 polls at most 4 devices of the 8446 family (DCM-8446, IO-0800/6020/0008-485).</li><li>A GW-112 bridges or routes at most 32 devices per port.</li><li>A DCM 9000 takes up to 16 IO-R-16 or 8 IO-R-34 modules; each IO-R-34 powers four IO-R-16.</li></ol><p>For a 20,000 m² office, a sensible set-up is one DCM-9100 for the plant, one DCM-8446 + IO-6020 per AHU, chillers and VRF over BACnet/IP, and floor power meters over Modbus TCP.</p>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<p><strong>Khách sạn 4 đến 5 sao:</strong> AHU, PAU, bơm nước nóng, VRF City Multi và thang máy Mitsubishi về một giao diện. <strong>Bệnh viện:</strong> giám sát chênh áp phòng mổ, phòng cách ly, chiller plant. <strong>Nhà máy FDI Nhật:</strong> ICONICS GENESIS kết nối PLC MELSEC và biến tần FR, đo đếm điện theo dây chuyền. <strong>Tòa nhà cũ:</strong> DCM-9005 cộng đồng hồ Modbus để đáp ứng Luật 77/2025 mà không thay BMS cũ ngay.</p>",
+   "en": "<p><strong>4 to 5 star hotels:</strong> AHUs, PAUs, hot water pumps, City Multi VRF and Mitsubishi lifts on one front end. <strong>Hospitals:</strong> theatre and isolation room pressure, chiller plant. <strong>Japanese FDI factories:</strong> ICONICS GENESIS with MELSEC PLCs and FR drives, metering per production line. <strong>Existing buildings:</strong> DCM-9005 plus Modbus meters to meet Law 77/2025 without ripping out the old BMS.</p>"
+  }
+ ],
+ "table": {
+  "caption_vi": "Chọn controller theo quy mô",
+  "caption_en": "Choosing the controller by size",
+  "head": [
+   "Model",
+   "Thiết bị / Devices",
+   "Điểm / Points",
+   "Dùng cho / Use"
+  ],
+  "rows": [
+   [
+    "DCM-9005",
+    "5",
+    "250",
+    "Retrofit đo đếm / metering retrofit"
+   ],
+   [
+    "DCM-9010",
+    "10",
+    "500",
+    "Tòa nhà nhỏ / small building"
+   ],
+   [
+    "DCM-9025",
+    "25",
+    "1.250",
+    "Khách sạn, văn phòng vừa / hotel, mid office"
+   ],
+   [
+    "DCM-9100",
+    "100",
+    "5.000",
+    "Văn phòng lớn, bệnh viện / large office, hospital"
+   ],
+   [
+    "DCM-9200",
+    "200",
+    "10.000",
+    "Khu phức hợp / mixed-use campus"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "Mitsubishi Electric Asia, Diamond Controls catalogue (DCM 8000, DCM 9000, DCM-8446, GW-112, IO modules, DCM-8044/8044-D)"
+  },
+  {
+   "title": "Mitsubishi Electric Vietnam, Building Management System",
+   "url": "https://buildingsolutions.mitsubishi-electric.vn/en/bms/"
+  },
+  {
+   "title": "LuatVietnam, Luật 77/2025/QH15 sửa đổi Luật Sử dụng năng lượng tiết kiệm và hiệu quả",
+   "url": "https://luatvietnam.vn/cong-nghiep/luat-su-dung-nang-luong-tiet-kiem-va-hieu-qua-sua-doi-2025-so-77-2025-qh15-404895-d1.html"
+  }
+ ],
+ "x_post": "Most BMS lock-in starts at the controller.\n\nMitsubishi Diamond Controls splits it into 4 open levels:\n• Niagara 4 Supervisor + ICONICS GENESIS\n• DCM 9000 (5 to 200 device licence)\n• DCM-8044-D / DCM-8446 DDC, BACnet + Modbus\n• Plain 0-10V, 4-20mA field I/O\n\nFull schematic:\nhttps://elvconsultant.com/blog/bms/2026-11-05-kien-truc-bms-mitsubishi-diamond-controls.html",
+ "fb_post": "BMS đóng là lý do nhiều tòa nhà phải trả giá cao mỗi lần thêm một AHU.\n\nKiến trúc Mitsubishi Electric Diamond Controls tách thành 4 tầng mở:\n1. Quản lý: Niagara 4 Supervisor + ICONICS GENESIS (dashboard năng lượng, FDD, báo cáo theo Luật 77/2025)\n2. Tự động hóa: DCM 9000, license từ 5 đến 200 thiết bị\n3. Hiện trường: DDC DCM-8044-D (8UI/4DO/4AO, BTL) và DCM-8446 (22 đến 30 điểm)\n4. Thiết bị: 0–10V, 4–20mA, NTC 10K, tiếp điểm khô\n\nBa giới hạn cần ghi vào thiết kế: Modbus Master tối đa 4 slave, GW-112 tối đa 32 thiết bị/cổng, DCM 9000 tối đa 16 IO-R-16.\n\nSơ đồ nguyên lý đầy đủ và bảng chọn controller:\nhttps://elvconsultant.com/blog/bms/2026-11-05-kien-truc-bms-mitsubishi-diamond-controls.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #MitsubishiElectric #Niagara4 #SmartBuilding #ELV",
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1507337272725-eec743fbdc31?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Ống kỹ thuật trên tường bê tông trong phòng máy",
+  "credit": "Mykyta Martynenko",
+  "credit_url": "https://unsplash.com/photos/gray-pipes-mounted-on-concrete-wall-arrangement-6TIMIpsYOws"
+ }
+}
