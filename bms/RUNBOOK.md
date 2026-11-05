@@ -38,7 +38,7 @@ Writing rules: Vietnamese the way an engineer writes to a client, direct. No em 
 4. `git add bms blog/bms && git commit -m "BMS post <date>: <title_en>"` with the session attribution lines, `git fetch origin main && git rebase origin/main && git push origin HEAD:main`.
 
 ## 6. Social (after push)
-- X via Typefully, social set 352801 (@PLELVCONSULTANT): one post, English, ≤ 280 characters incl. link (X counts a link as 23), publish_at today 08:30 +07:00 (if already past, now + 15 min).
+- X via Typefully, social set 352801 (@PLELVCONSULTANT): one post, English, ≤ 270 characters, NO URL in the text (X rejects API posts with links: 403). End with "Full schematic on the blog, link in bio." publish_at today 08:30 +07:00 (if already past, now + 15 min).
 - Facebook page via Metricool, brand 7679282 (Elvconsultant.com), `facebookData.type` POST, `autoPublish` true, media = hero image URL, Vietnamese text 120–220 words ending with the link, the 48-hour SĐNL + BoM offer and 4–5 hashtags. Time 11:30 +07:00 (if past, now + 20 min).
 - Both texts: no em dash, no clichés, one concrete number in the first line.
 
