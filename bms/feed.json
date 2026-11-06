@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-06",
+  "slug": "vrf-city-multi-niagara-bacnet",
+  "title_vi": "VRF City Multi vào Niagara qua BACnet",
+  "title_en": "City Multi VRF into Niagara via BACnet",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-06-vrf-city-multi-niagara-bacnet.html",
+  "x_post": "120 VRF units on dry contacts: 240 IO points, no setpoint.\n\nCity Multi to Niagara 4:\n• M-NET to Mitsubishi BACnet/IP gateway\n• DCM 9000 as client, COV reads\n• 7 points per indoor unit\n• Read gateway PICS before sizing licence\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "120 dàn lạnh VRF kéo tiếp điểm khô về DDC là 240 điểm IO, mà BMS vẫn không chỉnh được nhiệt độ phòng.\n\nCách đưa VRF City Multi lên Niagara 4 đúng bài:\n1. Dàn nóng, dàn lạnh, Lossnay trên bus M-NET\n2. Gateway BACnet/IP của Mitsubishi Electric xuất mỗi dàn lạnh thành nhóm object BACnet\n3. DCM 9000 chạy Niagara 4.13+ làm BACnet client, đọc theo COV\n4. Point map 7 điểm mỗi dàn: on/off, mode, setpoint, nhiệt độ phòng, tốc độ quạt, báo lỗi, mã lỗi\n\nHai việc phải chốt khi thiết kế: kiểm tra PICS gateway để biết tính 1 device hay 120 device (quyết định DCM-9025 hay DCM-9200), và quy tắc ai ra lệnh sau cùng giữa remote phòng với BMS. Dừng VRF khi cháy luôn đi thêm tiếp điểm khô cứng, không chỉ dựa vào mạng.\n\nSơ đồ nguyên lý và point map đầy đủ:\nhttps://elvconsultant.com/blog/bms/2026-11-06-vrf-city-multi-niagara-bacnet.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #MitsubishiElectric #CityMulti #Niagara4 #VRF"
+ },
+ {
   "date": "2026-11-05",
   "slug": "kien-truc-bms-mitsubishi-diamond-controls",
   "title_vi": "BMS Mitsubishi trong 4 tầng",

@@ -13,7 +13,8 @@
    "pillar": "Tích hợp hệ thống",
    "pillar_en": "System integration",
    "topic": "VRF City Multi vào Niagara qua BACnet: sơ đồ và point map",
-   "status": "planned"
+   "status": "published",
+   "slug": "vrf-city-multi-niagara-bacnet"
   },
   {
    "date": "2026-11-07",
