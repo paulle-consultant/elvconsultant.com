@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly — Tuần 45 | 06 Nov 2026 | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 45: Johnson Controls OpenBlue AI · Hochiki UL268 7th Ed · HPE Agentic NetOps · SEA BMS Market · Vietnam Smart Building — song ngữ Việt–Anh.">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-06-elv-ict-av-weekly.html">
+  <meta property="og:title" content="ELV/ICT/AV Weekly W45 | 06 Nov 2026">
+  <meta property="og:description" content="Johnson Controls OpenBlue AI · Hochiki UL268 · HPE Agentic NetOps · SEA BMS Market · Vietnam Smart Building">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1691435828932-911a7801adfb?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:url" content="https://elvconsultant.com/blog/2026-11-06-elv-ict-av-weekly.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#0C0B09; --card-bg:#15130F; --card-border:#2A251C;
+      --cyan:#C9A96A; --cyan-dim:rgba(201,169,106,0.10); --cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C; --white:#F3EDE2; --steel:#8A8172;
+      --navy:#2A251C; --navy-deep:#121009; --grid-line:rgba(201,169,106,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6}
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+    body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(900px 600px at -10% 20%,rgba(201,169,106,.07),transparent 60%),radial-gradient(900px 700px at 110% 70%,rgba(42,37,28,.4),transparent 60%)}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(12,11,9,0.95);border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0 clamp(1rem,4vw,4.5rem);display:flex;align-items:center;justify-content:space-between;height:68px}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-text{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:var(--white);letter-spacing:1px}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px}
+    .nav-links{display:flex;gap:clamp(1.25rem,2vw,2.25rem);list-style:none}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:8px 20px;border-radius:999px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all 0.2s;text-decoration:none}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg)}
+    @media(max-width:768px){.nav-links{display:none}nav{padding:0 1rem}}
+
+    /* LANGUAGE BAR */
+    .lang-bar{position:relative;z-index:10;display:flex;justify-content:flex-end;align-items:center;gap:0.5rem;padding:0.6rem clamp(1rem,4vw,4.5rem);border-bottom:1px solid var(--card-border);background:rgba(12,11,9,0.6)}
+    .lang-label{font-size:11px;color:var(--steel);letter-spacing:1px;margin-right:0.25rem}
+    .lang-btn{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:1.5px;padding:4px 12px;border-radius:3px;border:1px solid var(--card-border);background:transparent;color:var(--steel);cursor:pointer;transition:all 0.2s}
+    .lang-btn.active,.lang-btn:hover{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim)}
+
+    /* ARTICLE HERO */
+    .article-hero{position:relative;z-index:1;height:clamp(240px,38vw,520px);overflow:hidden}
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.65) saturate(0.8)}
+    .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,11,9,0.95) 0%,rgba(12,11,9,0.55) 45%,rgba(12,11,9,0.2) 100%)}
+    .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:clamp(1.5rem,4vw,3rem) clamp(1rem,4vw,4.5rem)}
+    .article-eyebrow{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:3px;color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:10px}
+    .article-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
+    .article-hero h1{font-family:'Orbitron',monospace;font-size:clamp(1.1rem,3.2vw,2.4rem);font-weight:900;color:var(--white);line-height:1.15;letter-spacing:-0.3px;text-shadow:0 2px 16px rgba(0,0,0,0.6);max-width:860px}
+    .article-meta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem;font-size:12px;color:var(--steel);letter-spacing:0.5px}
+    .article-meta span{display:flex;align-items:center;gap:5px}
+
+    /* MAIN CONTENT */
+    main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:clamp(2rem,4vw,3.5rem) clamp(1rem,4vw,2rem)}
+
+    /* NEWS ITEM CARDS */
+    .news-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:10px;padding:clamp(1.25rem,3vw,2rem);margin-bottom:1.5rem;position:relative;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s}
+    .news-item:hover{border-color:rgba(201,169,106,0.4);box-shadow:0 0 0 1px rgba(201,169,106,0.18),0 8px 32px -8px rgba(201,169,106,0.2)}
+    .news-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity 0.3s}
+    .news-item:hover::before{opacity:1}
+    .news-num{position:absolute;top:1.25rem;right:1.5rem;font-family:'Orbitron',monospace;font-size:40px;font-weight:900;color:rgba(201,169,106,0.06);line-height:1;user-select:none}
+    .news-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:0.9rem}
+    .news-tag{font-family:'Orbitron',monospace;font-size:8px;font-weight:700;letter-spacing:1.5px;padding:3px 9px;border-radius:3px;border:1px solid rgba(201,169,106,0.3);color:var(--cyan);background:rgba(201,169,106,0.08)}
+    .news-tag.primary{border-color:var(--cyan);background:rgba(201,169,106,0.14)}
+    .news-title-vi{font-family:'Orbitron',monospace;font-size:clamp(0.85rem,1.8vw,1.05rem);font-weight:700;color:var(--white);line-height:1.4;margin-bottom:0.3rem}
+    .news-title-en{font-size:clamp(0.78rem,1.4vw,0.9rem);font-weight:500;color:var(--cyan);margin-bottom:1rem;line-height:1.4;font-style:italic}
+    .news-body{font-size:14px;color:var(--silver);line-height:1.75;margin-bottom:1rem}
+    .news-source{font-size:11px;color:var(--steel);margin-bottom:1rem}
+    .news-source a{color:var(--steel);text-decoration:none;border-bottom:1px dotted var(--steel);transition:color 0.2s}
+    .news-source a:hover{color:var(--cyan)}
+
+    /* WHY BOX */
+    .why-box{background:rgba(201,169,106,0.06);border:1px solid rgba(201,169,106,0.18);border-left:3px solid var(--cyan);border-radius:0 6px 6px 0;padding:0.9rem 1rem;margin-top:0.75rem}
+    .why-box .why-label{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;color:var(--cyan);margin-bottom:0.4rem;display:flex;align-items:center;gap:6px}
+    .why-box .why-label::before{content:'▶';font-size:6px}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.65}
+
+    /* DIAGRAM / SCHEMATIC BOX */
+    .diagram-box{background:rgba(12,11,9,0.8);border:1px solid var(--card-border);border-radius:6px;padding:1rem 1.25rem;margin:0.9rem 0;font-family:'Orbitron',monospace;font-size:11px;color:var(--steel);line-height:1.8;overflow-x:auto}
+    .diagram-box .diagram-title{font-size:9px;letter-spacing:2px;color:var(--cyan);margin-bottom:0.6rem}
+    .diagram-box .flow{color:var(--white);font-size:12px}
+    .diagram-box .flow span{color:var(--cyan)}
+
+    /* SECTION HEADER */
+    .section-header{font-family:'Orbitron',monospace;font-size:11px;letter-spacing:3px;color:var(--cyan);margin:2.5rem 0 1.25rem;display:flex;align-items:center;gap:12px}
+    .section-header::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(201,169,106,0.3),transparent)}
+
+    /* CTA BOX */
+    .cta-box{background:linear-gradient(135deg,var(--card-bg),rgba(201,169,106,0.04));border:1px solid rgba(201,169,106,0.3);border-radius:10px;padding:clamp(1.5rem,4vw,2.5rem);text-align:center;margin:3rem 0 1rem}
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:clamp(0.9rem,2vw,1.2rem);font-weight:700;color:var(--white);margin-bottom:0.75rem}
+    .cta-box p{font-size:14px;color:var(--silver);line-height:1.7;max-width:540px;margin:0 auto 1.5rem}
+    .cta-btn{display:inline-block;background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:12px 32px;border-radius:999px;font-family:'Orbitron',monospace;font-size:11px;font-weight:700;letter-spacing:1.5px;text-decoration:none;transition:all 0.2s}
+    .cta-btn:hover{background:var(--cyan);color:var(--bg)}
+
+    /* FOOTER */
+    footer{position:relative;z-index:1;border-top:1px solid var(--card-border);background:var(--card-bg);padding:clamp(2rem,4vw,3rem) clamp(1rem,4vw,4.5rem) 2rem;margin-top:2rem}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;align-items:start}
+    .footer-brand p{font-size:12px;color:var(--steel);line-height:1.7;margin-top:0.75rem}
+    .footer-col h5{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:2px;color:var(--cyan);margin-bottom:1rem}
+    .footer-col a{display:block;font-size:13px;color:var(--steel);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s}
+    .footer-col a:hover{color:var(--silver)}
+    .footer-bottom{max-width:1100px;margin:1.5rem auto 0;padding-top:1.5rem;border-top:1px solid var(--card-border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+    .footer-copy{font-size:12px;color:var(--steel)}
+    .footer-domain{font-family:'Orbitron',monospace;font-size:12px;color:var(--cyan)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr}}
+
+    /* BACK LINK */
+    .back-link{display:inline-flex;align-items:center;gap:6px;font-family:'Orbitron',monospace;font-size:10px;letter-spacing:1.5px;color:var(--steel);text-decoration:none;padding:0.5rem 0;margin-bottom:1.5rem;transition:color 0.2s}
+    .back-link:hover{color:var(--cyan)}
+
+    /* SHARE ROW */
+    .share-row{display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;padding:1.25rem 0;border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);margin:2rem 0}
+    .share-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel)}
+    .share-btn{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1px;padding:5px 14px;border-radius:999px;border:1px solid var(--card-border);color:var(--steel);text-decoration:none;transition:all 0.2s;white-space:nowrap}
+    .share-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="32" height="36" viewBox="0 0 120 140" fill="none">
+      <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#2A251C" stroke="#8A8172" stroke-width="4"/>
+      <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#121009"/>
+      <path d="M60 18 L60 124 Q22 105 22 72 L22 34 Z" fill="#2A251C"/>
+      <circle cx="52" cy="72" r="8" fill="none" stroke="#F3EDE2" stroke-width="2.5"/>
+      <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#F3EDE2"/>
+      <line x1="56" y1="71" x2="63" y2="71" stroke="#F3EDE2" stroke-width="2.5"/>
+      <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#F3EDE2" stroke-width="2"/>
+      <line x1="66" y1="71" x2="66" y2="83" stroke="#F3EDE2" stroke-width="2"/>
+      <circle cx="66" cy="84" r="3" fill="#F3EDE2"/>
+    </svg>
+    <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Trang chủ</a></li>
+    <li><a href="/#services">Dịch vụ</a></li>
+    <li><a href="/#portfolio">Dự án</a></li>
+    <li><a href="/blog/" class="active">Tin tức</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư vấn</a>
+</nav>
+
+<!-- LANGUAGE BAR -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1691435828932-911a7801adfb?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Network infrastructure technology — ELV ICT AV Weekly W45 06 Nov 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="article-eyebrow">
+      <span class="vi-content">BẢN TIN ELV · ICT · AV — TUẦN 45 | 06.11.2026</span>
+      <span class="en-content" style="display:none">ELV · ICT · AV WEEKLY — WEEK 45 | 06 NOV 2026</span>
+    </div>
+    <h1 class="vi-content">Johnson Controls OpenBlue AI · Hochiki UL268 7th Ed · HPE Agentic NetOps · SEA BMS Market · Vietnam Smart Infra</h1>
+    <h1 class="en-content" style="display:none">Johnson Controls OpenBlue AI · Hochiki UL268 7th Ed · HPE Agentic NetOps · SEA BMS Market · Vietnam Smart Infra</h1>
+    <div class="article-meta">
+      <span>📅 Thứ Sáu, 06 Tháng 11, 2026</span>
+      <span>✍️ Paul Le Consultant</span>
+      <span>🔖 5 tin nổi bật · W45</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <a href="/blog/" class="back-link">← BLOG / TIN TỨC</a>
+
+  <div class="section-header vi-content">5 TIN NỔI BẬT TUẦN NÀY</div>
+  <div class="section-header en-content" style="display:none">5 TOP STORIES THIS WEEK</div>
+
+  <!-- ═══════════════════════════════════════════════
+       NEWS 1: JOHNSON CONTROLS — OpenBlue AI
+  ════════════════════════════════════════════════ -->
+  <article class="news-item">
+    <div class="news-num">01</div>
+    <div class="news-tags">
+      <span class="news-tag primary">JOHNSON CONTROLS</span>
+      <span class="news-tag">BMS</span>
+      <span class="news-tag">SMART BUILDING</span>
+      <span class="news-tag">AI</span>
+    </div>
+
+    <div class="vi-content">
+      <h2 class="news-title-vi">Johnson Controls mở rộng OpenBlue AI — Tòa nhà tự vận hành thời gian thực</h2>
+      <p class="news-title-en">Johnson Controls Unveils AI-Powered OpenBlue Platform Expansions for Increased Efficiency</p>
+      <div class="news-body">
+        <p>Johnson Controls (JCI) vừa công bố mở rộng toàn diện nền tảng BMS/IBMS OpenBlue với các tính năng AI mới, cho phép tòa nhà tự động tối ưu hóa năng lượng, an toàn và vận hành mà không cần can thiệp thủ công liên tục.</p>
+        <p style="margin-top:0.75rem">Các tính năng mới của OpenBlue bao gồm:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li><strong style="color:var(--white)">AI-driven Energy Optimizer</strong> — tự động điều chỉnh HVAC, chiếu sáng và tải điện theo dự báo thời tiết và lịch sử sử dụng</li>
+          <li><strong style="color:var(--white)">Predictive Maintenance</strong> — cảnh báo sự cố thiết bị trước khi xảy ra dựa trên phân tích cảm biến IoT</li>
+          <li><strong style="color:var(--white)">Rapid Implementation</strong> — triển khai nhanh với module plug-and-play cho các tòa nhà đang cải tạo (retrofit)</li>
+          <li><strong style="color:var(--white)">OpenBlue Enterprise Manager</strong> — dashboard duy nhất quản lý toàn bộ hệ thống: an ninh, HVAC, phòng cháy, ánh sáng</li>
+        </ul>
+
+        <div class="diagram-box">
+          <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ — OPENBLUE AI PLATFORM</div>
+          <div class="flow">
+            <span>[IoT Sensors]</span> ──▶ <span>[OpenBlue Edge]</span> ──▶ <span>[AI Engine (Cloud)]</span>
+                ↕                                                              ↕
+            <span>[HVAC / AHU]</span>   <span>[BAS Controller]</span> ◀── <span>[Optimization Commands]</span>
+            <span>[Fire & Security]</span>  <span>[Lighting BACnet]</span>   <span>[Enterprise Manager UI]</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-source">Nguồn: <a href="https://www.johnsoncontrols.com/media-center/news/press-releases/2026/08/04/johnson-controls-unveils-ai-powered-openblue-platform-expansions" target="_blank" rel="noopener">Johnson Controls Newsroom, 04/08/2026</a></div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+        <p>OpenBlue là một trong 3 nền tảng BMS/IBMS hàng đầu thế giới (cùng Schneider EcoStruxure và Siemens Desigo CC). Tại Việt Nam, Johnson Controls đang được tích hợp trong các bệnh viện, khách sạn 5 sao và tổ hợp văn phòng thương mại lớn. Các tính năng AI mới giúp giảm chi phí vận hành 20–35%, đây là lợi điểm mạnh để thuyết phục chủ đầu tư trong giai đoạn tư vấn thiết kế ELV/BMS.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <h2 class="news-title-vi">Johnson Controls Expands OpenBlue with AI — Buildings Now Self-Operate in Real Time</h2>
+      <p class="news-title-en">Johnson Controls Unveils AI-Powered OpenBlue Platform Expansions for Increased Efficiency and Rapid Implementation</p>
+      <div class="news-body">
+        <p>Johnson Controls (JCI) announced a comprehensive expansion of its OpenBlue BMS/IBMS platform with new AI capabilities, enabling buildings to autonomously optimize energy, safety, and operations without continuous manual intervention.</p>
+        <p style="margin-top:0.75rem">New OpenBlue AI features include:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li><strong style="color:var(--white)">AI-driven Energy Optimizer</strong> — automatically adjusts HVAC, lighting, and electrical load based on weather forecasts and usage history</li>
+          <li><strong style="color:var(--white)">Predictive Maintenance</strong> — alerts equipment faults before they occur based on IoT sensor analytics</li>
+          <li><strong style="color:var(--white)">Rapid Implementation</strong> — fast deployment with plug-and-play modules for retrofit buildings</li>
+          <li><strong style="color:var(--white)">OpenBlue Enterprise Manager</strong> — single dashboard managing the entire building: security, HVAC, fire, lighting</li>
+        </ul>
+
+        <div class="diagram-box">
+          <div class="diagram-title">SYSTEM SCHEMATIC — OPENBLUE AI PLATFORM</div>
+          <div class="flow">
+            <span>[IoT Sensors]</span> ──▶ <span>[OpenBlue Edge]</span> ──▶ <span>[AI Engine (Cloud)]</span>
+                ↕                                                              ↕
+            <span>[HVAC / AHU]</span>   <span>[BAS Controller]</span> ◀── <span>[Optimization Commands]</span>
+            <span>[Fire & Security]</span>  <span>[Lighting BACnet]</span>   <span>[Enterprise Manager UI]</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-source">Source: <a href="https://www.johnsoncontrols.com/media-center/news/press-releases/2026/08/04/johnson-controls-unveils-ai-powered-openblue-platform-expansions" target="_blank" rel="noopener">Johnson Controls Newsroom, Aug 04, 2026</a></div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR ELV/ICT/AV IN VIETNAM</div>
+        <p>OpenBlue is one of the top 3 global BMS/IBMS platforms (alongside Schneider EcoStruxure and Siemens Desigo CC). In Vietnam, Johnson Controls is integrated in hospitals, 5-star hotels, and major commercial office complexes. The new AI features deliver 20–35% operational cost savings — a strong selling point when consulting on ELV/BMS design for new developments.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════
+       NEWS 2: HOCHIKI — UL268 7th Edition
+  ════════════════════════════════════════════════ -->
+  <article class="news-item">
+    <div class="news-num">02</div>
+    <div class="news-tags">
+      <span class="news-tag primary">HOCHIKI</span>
+      <span class="news-tag">FIRE ALARM</span>
+      <span class="news-tag">DETECTION</span>
+      <span class="news-tag">UL268</span>
+    </div>
+
+    <div class="vi-content">
+      <h2 class="news-title-vi">Hochiki ra mắt đầu báo khói UL268 Lần 7 — Giảm báo động giả với đa cảm biến</h2>
+      <p class="news-title-en">Hochiki Launches UL268 7th Edition Detectors with Multi-Sensor Analytics</p>
+      <div class="news-body">
+        <p>Hochiki Europe chính thức ra mắt dòng đầu báo khói mới đáp ứng tiêu chuẩn UL268 Lần 7 (7th Edition) — phiên bản nghiêm ngặt nhất từ trước đến nay về phát hiện đám cháy trong nhà. Dòng đầu báo mới tích hợp thuật toán phân tích đa cảm biến (multi-criteria detection algorithm) giúp phân biệt khói thật với các hạt bụi, hơi nước hoặc khói nấu ăn — giảm thiểu tỷ lệ báo động giả lên đến 80% so với thế hệ cũ.</p>
+        <p style="margin-top:0.75rem">Điểm nổi bật kỹ thuật:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li>Kết hợp cảm biến quang học (photoelectric) + nhiệt (heat) + CO trong một thiết bị</li>
+          <li>Tương thích giao thức CLIP và Apollo for Hochiki</li>
+          <li>Đạt cả UL268 7th Edition + EN54-7 — dùng được cho dự án quốc tế lẫn châu Âu</li>
+          <li>Base tiêu chuẩn 6" hoặc low-profile cho trần thạch cao hiện đại</li>
+        </ul>
+        <div class="diagram-box">
+          <div class="diagram-title">SƠ ĐỒ — HOCHIKI UL268 7th Ed. MULTI-CRITERIA DETECTOR</div>
+          <div class="flow">
+            <span>[Optical Sensor]</span> ─┐
+            <span>[Thermal Sensor]</span> ─┤─▶ <span>[Multi-Criteria Algorithm]</span> ─▶ <span>[FACP / Loop]</span>
+            <span>[CO Sensor]</span>      ─┘        ↕ False-alarm filtering
+                                             <span>[Cloud Analytics (optional)]</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-source">Nguồn: <a href="https://www.fsmatters.com/Hochiki-launches-UL268-7th-Edition-detectors" target="_blank" rel="noopener">Fire & Security Matters — Hochiki UL268 7th Edition</a> | <a href="https://internationalfireandsafetyjournal.com/?p=85447" target="_blank" rel="noopener">International Fire & Safety Journal</a></div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+        <p>UL268 Lần 7 là tiêu chuẩn mới nhất của Mỹ — bắt buộc từ 2024 cho các sản phẩm vào thị trường Mỹ và ngày càng được tham chiếu trong spec kỹ thuật của dự án quốc tế tại Việt Nam (tòa nhà đại sứ quán, trung tâm dữ liệu, nhà máy FDI). Hochiki từ lâu là lựa chọn ưa thích trong dự án bệnh viện và trường học tại VN — dòng mới này nâng cấp đáng kể độ tin cậy và tuân thủ tiêu chuẩn quốc tế.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <h2 class="news-title-vi">Hochiki Launches UL268 7th Edition Smoke Detectors — Multi-Sensor Cuts False Alarms by 80%</h2>
+      <p class="news-title-en">Hochiki Europe Introduces Groundbreaking Detectors to Ensure UL268 7th Edition Compliance</p>
+      <div class="news-body">
+        <p>Hochiki Europe has officially launched a new range of smoke detectors compliant with UL268 7th Edition — the most stringent version yet for indoor fire detection. The new detectors integrate a multi-criteria detection algorithm to differentiate real smoke from dust particles, steam, or cooking fumes, reducing false alarm rates by up to 80% compared to previous generations.</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li>Combines photoelectric + heat + CO sensing in a single device</li>
+          <li>Compatible with CLIP and Apollo for Hochiki protocols</li>
+          <li>Meets both UL268 7th Edition + EN54-7 — suitable for US, international, and European projects</li>
+          <li>Standard 6" or low-profile base for modern drywall/suspended ceilings</li>
+        </ul>
+        <div class="diagram-box">
+          <div class="diagram-title">SCHEMATIC — HOCHIKI UL268 7th Ed. MULTI-CRITERIA DETECTOR</div>
+          <div class="flow">
+            <span>[Optical Sensor]</span> ─┐
+            <span>[Thermal Sensor]</span> ─┤─▶ <span>[Multi-Criteria Algorithm]</span> ─▶ <span>[FACP / Loop]</span>
+            <span>[CO Sensor]</span>      ─┘        ↕ False-alarm filtering
+                                             <span>[Cloud Analytics (optional)]</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-source">Source: <a href="https://www.fsmatters.com/Hochiki-launches-UL268-7th-Edition-detectors" target="_blank" rel="noopener">Fire & Security Matters</a> | <a href="https://internationalfireandsafetyjournal.com/?p=85447" target="_blank" rel="noopener">International Fire & Safety Journal</a></div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR ELV/ICT/AV IN VIETNAM</div>
+        <p>UL268 7th Edition is the latest US standard — mandatory since 2024 for US-market products and increasingly referenced in technical specs for international projects in Vietnam (embassies, data centers, FDI factories). Hochiki has long been a preferred choice for hospital and school projects in VN — this new generation significantly enhances reliability and international compliance positioning.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════
+       NEWS 3: HPE — Agentic NetOps & SecOps
+  ════════════════════════════════════════════════ -->
+  <article class="news-item">
+    <div class="news-num">03</div>
+    <div class="news-tags">
+      <span class="news-tag primary">HPE ARUBA</span>
+      <span class="news-tag">ICT NETWORKING</span>
+      <span class="news-tag">AI AUTOMATION</span>
+      <span class="news-tag">SECOPS</span>
+    </div>
+
+    <div class="vi-content">
+      <h2 class="news-title-vi">HPE thống nhất portfolio Agentic NetOps + SecOps — Mạng tự vận hành và tự bảo vệ</h2>
+      <p class="news-title-en">HPE Unifies Portfolio to Accelerate Agentic NetOps and SecOps</p>
+      <div class="news-body">
+        <p>HPE vừa công bố việc thống nhất toàn bộ portfolio mạng Aruba và Juniper thành một nền tảng Agentic NetOps và SecOps duy nhất — cho phép hạ tầng mạng tự phát hiện sự cố, tự khắc phục và tự bảo vệ trước các mối đe dọa bảo mật mà không cần can thiệp của kỹ thuật viên mạng.</p>
+        <p style="margin-top:0.75rem"><strong style="color:var(--white)">Agentic NetOps</strong> sử dụng AI agent tự động:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li>Root cause analysis — xác định nguyên nhân sự cố mạng trong vài giây</li>
+          <li>Self-healing — tự cấu hình lại switch/AP để phục hồi kết nối</li>
+          <li>Predictive capacity planning — dự báo nhu cầu băng thông và cảnh báo sớm</li>
+        </ul>
+        <p style="margin-top:0.75rem"><strong style="color:var(--white)">Agentic SecOps</strong> tích hợp:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li>AI threat detection trên Aruba Central + Juniper Mist</li>
+          <li>Zero-trust policy enforcement tự động trên toàn campus</li>
+          <li>SOC integration với SIEM/SOAR platforms</li>
+        </ul>
+        <div class="diagram-box">
+          <div class="diagram-title">SƠ ĐỒ — HPE AGENTIC NETOPS + SECOPS PLATFORM</div>
+          <div class="flow">
+            <span>[Aruba Central]</span> ──┐                    ┌── <span>[Juniper Mist]</span>
+                                      └──▶ <span>[Unified AI Engine]</span> ◀─┘
+                                               ↕          ↕
+                                   <span>[NetOps Agent]</span>  <span>[SecOps Agent]</span>
+                                   Self-heal/Plan   ZT-Policy/Threat
+                                               ↕          ↕
+                        <span>[Campus/Edge/DC/AI Factory Fabric]</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-source">Nguồn: <a href="https://hyperframeresearch.com/2026/11/02/hpe-unifies-portfolio-to-accelerate-agentic-netops-and-secops/" target="_blank" rel="noopener">HyperFrame Research, 02/11/2026</a> | <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/06/hpe-expands-self-driving-networks-across-edge-campus-data-center-and-ai-factories.html" target="_blank" rel="noopener">HPE Newsroom</a></div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+        <p>Với các dự án campus mạng lớn (đại học, khu công nghiệp, bệnh viện đa khoa), nền tảng Agentic NetOps giúp giảm mạnh chi phí vận hành IT — đây là lợi thế cạnh tranh rõ ràng khi tư vấn hạ tầng ICT. Đặc biệt, tích hợp SecOps + Zero Trust phù hợp với yêu cầu ngày càng khắt khe về an ninh mạng trong các dự án FDI và tòa nhà chính phủ tại Việt Nam.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <h2 class="news-title-vi">HPE Unifies Agentic NetOps + SecOps Portfolio — Networks That Self-Operate and Self-Defend</h2>
+      <p class="news-title-en">HPE Unifies Portfolio to Accelerate Agentic NetOps and SecOps (November 2, 2026)</p>
+      <div class="news-body">
+        <p>HPE announced the unification of its entire Aruba and Juniper networking portfolio into a single Agentic NetOps and SecOps platform — enabling network infrastructure to autonomously detect issues, self-heal, and defend against security threats without network engineer intervention.</p>
+        <p style="margin-top:0.75rem"><strong style="color:var(--white)">Agentic NetOps</strong> uses AI agents to:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li>Root cause analysis — identify network fault causes in seconds</li>
+          <li>Self-healing — automatically reconfigure switches/APs to restore connectivity</li>
+          <li>Predictive capacity planning — forecast bandwidth needs and alert early</li>
+        </ul>
+        <p style="margin-top:0.75rem"><strong style="color:var(--white)">Agentic SecOps</strong> integrates:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li>AI threat detection across Aruba Central + Juniper Mist</li>
+          <li>Automated zero-trust policy enforcement across the entire campus</li>
+          <li>SOC integration with SIEM/SOAR platforms</li>
+        </ul>
+        <div class="diagram-box">
+          <div class="diagram-title">SCHEMATIC — HPE AGENTIC NETOPS + SECOPS PLATFORM</div>
+          <div class="flow">
+            <span>[Aruba Central]</span> ──┐                    ┌── <span>[Juniper Mist]</span>
+                                      └──▶ <span>[Unified AI Engine]</span> ◀─┘
+                                               ↕          ↕
+                                   <span>[NetOps Agent]</span>  <span>[SecOps Agent]</span>
+                                   Self-heal/Plan   ZT-Policy/Threat
+                                               ↕          ↕
+                        <span>[Campus/Edge/DC/AI Factory Fabric]</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-source">Source: <a href="https://hyperframeresearch.com/2026/11/02/hpe-unifies-portfolio-to-accelerate-agentic-netops-and-secops/" target="_blank" rel="noopener">HyperFrame Research, 02 Nov 2026</a> | <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/06/hpe-expands-self-driving-networks-across-edge-campus-data-center-and-ai-factories.html" target="_blank" rel="noopener">HPE Newsroom</a></div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR ELV/ICT/AV IN VIETNAM</div>
+        <p>For large campus network projects (universities, industrial parks, multi-specialty hospitals), Agentic NetOps significantly reduces IT operational costs — a clear competitive advantage when consulting on ICT infrastructure. The SecOps + Zero Trust integration is particularly relevant for increasingly stringent cybersecurity requirements in FDI projects and government buildings in Vietnam.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════
+       NEWS 4: SEA BMS MARKET 2026-2034
+  ════════════════════════════════════════════════ -->
+  <article class="news-item">
+    <div class="news-num">04</div>
+    <div class="news-tags">
+      <span class="news-tag primary">THỊ TRƯỜNG</span>
+      <span class="news-tag">BMS / BACS</span>
+      <span class="news-tag">ĐÔNG NAM Á</span>
+      <span class="news-tag">ENERGY EFFICIENCY</span>
+    </div>
+
+    <div class="vi-content">
+      <h2 class="news-title-vi">Thị trường BMS Đông Nam Á bùng nổ 2026–2034 — Hiệu quả năng lượng và AI dẫn dắt tăng trưởng</h2>
+      <p class="news-title-en">South East Asia BMS Market 2026–2034: Energy Efficiency and AI Drive Expansion</p>
+      <div class="news-body">
+        <p>Báo cáo mới nhất từ GlobeNewsWire (tháng 4/2026) dự báo thị trường BMS (Building Management System) khu vực Đông Nam Á sẽ tăng trưởng mạnh từ 2026 đến 2034, được thúc đẩy bởi ba yếu tố chính:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li><strong style="color:var(--white)">Hiệu quả năng lượng</strong> — các chính phủ SEA thắt chặt quy định tiết kiệm điện trong tòa nhà thương mại và công nghiệp</li>
+          <li><strong style="color:var(--white)">Sáng kiến bền vững</strong> — xu hướng công trình xanh (Green Building, LEED, LOTUS VN) thúc đẩy nhu cầu BMS/IBMS tích hợp</li>
+          <li><strong style="color:var(--white)">Quản lý cơ sở vật chất thông minh</strong> — AI và IoT cho phép quản lý toàn bộ tòa nhà từ xa qua một giao diện duy nhất</li>
+        </ul>
+        <p style="margin-top:0.75rem">Các nhà sản xuất BMS hàng đầu đang mở rộng hiện diện tại SEA: Schneider Electric, Siemens, Johnson Controls, Honeywell, ABB, Mitsubishi Electric (hệ thống tích hợp HVAC-BMS), và Distech Controls.</p>
+        <div class="diagram-box">
+          <div class="diagram-title">ĐỘ PHỦ THỊ TRƯỜNG BMS ĐÔNG NAM Á 2026</div>
+          <div class="flow">
+            Phân khúc lớn nhất: <span>Thương mại (văn phòng, trung tâm thương mại)</span>
+            Tăng trưởng nhanh nhất: <span>Bệnh viện · Trường học · Khu CN</span>
+            Công nghệ dẫn đầu: <span>BACnet/IP · KNX · DALI · LonWorks</span>
+            Xu hướng mới: <span>Cloud BMS · AI Analytics · Digital Twin</span>
+            Thị trường VN: <span>Dự báo Top 3 SEA cùng Singapore & Thái Lan</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-source">Nguồn: <a href="https://www.globenewswire.com/news-release/2026/04/24/3280860/28124/en/south-east-asia-building-management-system-bms-industry-report-2026-2034-surge-in-demand-for-energy-efficiency-sustainability-initiatives-and-intelligent-facility-management-drives.html" target="_blank" rel="noopener">GlobeNewsWire — SEA BMS Industry Report 2026–2034, 24/04/2026</a></div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+        <p>Việt Nam đang nổi lên là một trong những thị trường BMS tăng trưởng nhanh nhất Đông Nam Á, đặc biệt với làn sóng FDI vào bất động sản công nghiệp và thương mại. Với tư cách là ELV/BMS consultant, đây là thời điểm để định vị dịch vụ thiết kế hệ thống BMS tích hợp AI như là lợi thế cạnh tranh trong hồ sơ năng lực.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <h2 class="news-title-vi">SEA BMS Market Surges 2026–2034 — Energy Efficiency and AI Lead Growth</h2>
+      <p class="news-title-en">South East Asia BMS Industry Report 2026–2034: Surge in Demand Drives Expansion</p>
+      <div class="news-body">
+        <p>A new GlobeNewsWire report (April 2026) forecasts strong growth in the Southeast Asia Building Management System (BMS) market from 2026 to 2034, driven by three main factors:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li><strong style="color:var(--white)">Energy Efficiency</strong> — SEA governments tightening energy conservation regulations for commercial and industrial buildings</li>
+          <li><strong style="color:var(--white)">Sustainability Initiatives</strong> — green building trends (LEED, LOTUS VN) driving demand for integrated BMS/IBMS</li>
+          <li><strong style="color:var(--white)">Intelligent Facility Management</strong> — AI and IoT enabling remote management of entire buildings via a single interface</li>
+        </ul>
+        <p style="margin-top:0.75rem">Leading BMS manufacturers expanding in SEA: Schneider Electric, Siemens, Johnson Controls, Honeywell, ABB, Mitsubishi Electric (integrated HVAC-BMS), and Distech Controls.</p>
+        <div class="diagram-box">
+          <div class="diagram-title">SEA BMS MARKET LANDSCAPE 2026</div>
+          <div class="flow">
+            Largest segment: <span>Commercial (offices, malls)</span>
+            Fastest growing: <span>Hospitals · Schools · Industrial Parks</span>
+            Leading protocols: <span>BACnet/IP · KNX · DALI · LonWorks</span>
+            Emerging trends: <span>Cloud BMS · AI Analytics · Digital Twin</span>
+            Vietnam forecast: <span>Top 3 SEA alongside Singapore &amp; Thailand</span>
+          </div>
+        </div>
+      </div>
+      <div class="news-source">Source: <a href="https://www.globenewswire.com/news-release/2026/04/24/3280860/28124/en/south-east-asia-building-management-system-bms-industry-report-2026-2034-surge-in-demand-for-energy-efficiency-sustainability-initiatives-and-intelligent-facility-management-drives.html" target="_blank" rel="noopener">GlobeNewsWire — SEA BMS Industry Report 2026–2034, Apr 24, 2026</a></div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR ELV/ICT/AV IN VIETNAM</div>
+        <p>Vietnam is emerging as one of Southeast Asia's fastest-growing BMS markets, particularly with the wave of FDI into industrial and commercial real estate. As an ELV/BMS consultant, this is the moment to position AI-integrated BMS design services as a competitive advantage in capability portfolios.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════
+       NEWS 5: VIETNAM SMART BUILDING & DIGITAL INFRA
+  ════════════════════════════════════════════════ -->
+  <article class="news-item">
+    <div class="news-num">05</div>
+    <div class="news-tags">
+      <span class="news-tag primary">VIETNAM</span>
+      <span class="news-tag">SMART BUILDING</span>
+      <span class="news-tag">DIGITAL INFRA</span>
+      <span class="news-tag">IOT</span>
+    </div>
+
+    <div class="vi-content">
+      <h2 class="news-title-vi">Việt Nam đẩy mạnh hạ tầng thông minh — Nâng cấp số hóa dịch vụ công và công trình thông minh</h2>
+      <p class="news-title-en">Vietnam Smart Infrastructure: Digital Upgrades Modernise Public Services and Smart Buildings</p>
+      <div class="news-body">
+        <p>OpenGov Asia đưa tin về làn sóng nâng cấp hạ tầng số tại Việt Nam, với hàng loạt dự án triển khai IoT, BMS và công trình thông minh trong lĩnh vực công cộng và thương mại. Chính phủ Việt Nam tiếp tục ưu tiên chuyển đổi số hạ tầng vật lý như một phần trong chiến lược quốc gia về kinh tế số.</p>
+        <p style="margin-top:0.75rem">Các xu hướng nổi bật trong ELV/ICT tại Việt Nam hiện nay:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li><strong style="color:var(--white)">Smart Factory ELV</strong> — các nhà máy FDI (Samsung, LG, Intel, LEGO) yêu cầu hạ tầng ELV/ICT tích hợp BMS, cabling Category 6A/8 và hệ thống PA/EVAC tiên tiến</li>
+          <li><strong style="color:var(--white)">Hospital Smart Building</strong> — bệnh viện đa khoa và chuyên khoa đầu tư mạnh vào BMS+ELV tích hợp (nurse call, CCTV AI, kiểm soát ra vào, PA)</li>
+          <li><strong style="color:var(--white)">Commercial Real Estate</strong> — văn phòng hạng A tại Hà Nội và TP.HCM yêu cầu IBMS toàn diện từ giai đoạn thiết kế cơ sở (FEED)</li>
+          <li><strong style="color:var(--white)">Pandora / Luxury Factory</strong> — tổ hợp sản xuất trang sức Pandora tại Việt Nam áp dụng mô hình Smart Factory với ELV/IoT cao cấp</li>
+        </ul>
+        <div class="diagram-box">
+          <div class="diagram-title">MÔ HÌNH ELV TÍCH HỢP — CÔNG TRÌNH THÔNG MINH VIỆT NAM 2026</div>
+          <div class="flow">
+            <span>[IBMS Core]</span> ◀─── BACnet/IP / KNX / Modbus
+              ├── <span>[BMS/HVAC]</span> Schneider·JCI·Siemens
+              ├── <span>[Fire Alarm]</span> Hochiki·System Sensor·Siemens
+              ├── <span>[Security/CCTV]</span> Axis·Dahua·Hikvision AI
+              ├── <span>[Access Control]</span> HID·Suprema·Lenel
+              ├── <span>[Structured Cabling]</span> Panduit·CommScope Cat6A/OM4
+              ├── <span>[PA/EVAC]</span> Bosch·TOA·Inter-M
+              └── <span>[AV/UC]</span> Crestron·Extron·Biamp
+          </div>
+        </div>
+      </div>
+      <div class="news-source">Nguồn: <a href="https://opengovasia.com/vietnam-smart-infrastructure-digital-upgrades-modernise-public-services/?c=us" target="_blank" rel="noopener">OpenGov Asia — Vietnam Smart Infrastructure</a> | <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/facts-figures/Major_projects/Pandora_factory.html" target="_blank" rel="noopener">Pandora Smart Factory Vietnam</a></div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+        <p>Làn sóng smart building và smart factory đang tạo ra nhu cầu rất lớn cho dịch vụ tư vấn thiết kế ELV/ICT tích hợp tại Việt Nam. Mô hình IBMS tích hợp nhiều hệ thống ELV (BMS+Security+Fire+Cabling+AV) trên một nền tảng duy nhất là hướng đi tất yếu — và đây chính là thế mạnh tư vấn của Paul Le Consultant trong các dự án phức tạp.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <h2 class="news-title-vi">Vietnam Pushes Smart Infrastructure — Digital Upgrades Across Public Services and Smart Buildings</h2>
+      <p class="news-title-en">Vietnam Smart Infrastructure: Digital Upgrades Modernise Public Services</p>
+      <div class="news-body">
+        <p>OpenGov Asia reports a wave of digital infrastructure upgrades across Vietnam, with numerous IoT, BMS, and smart building projects across public and commercial sectors. The Vietnamese government continues to prioritize physical infrastructure digitization as part of its national digital economy strategy.</p>
+        <p style="margin-top:0.75rem">Key ELV/ICT trends in Vietnam right now:</p>
+        <ul style="margin:0.5rem 0 0.5rem 1.5rem;color:var(--silver);font-size:14px;line-height:1.9">
+          <li><strong style="color:var(--white)">Smart Factory ELV</strong> — FDI factories (Samsung, LG, Intel, LEGO) require ELV/ICT with integrated BMS, Cat 6A/8 cabling, and advanced PA/EVAC</li>
+          <li><strong style="color:var(--white)">Hospital Smart Building</strong> — general and specialist hospitals investing heavily in integrated BMS+ELV (nurse call, AI CCTV, access control, PA)</li>
+          <li><strong style="color:var(--white)">Commercial Real Estate</strong> — Grade A offices in Hanoi and HCMC requiring comprehensive IBMS from FEED stage</li>
+          <li><strong style="color:var(--white)">Pandora / Luxury Factory</strong> — Pandora jewelry complex in Vietnam implementing Smart Factory with premium ELV/IoT</li>
+        </ul>
+        <div class="diagram-box">
+          <div class="diagram-title">INTEGRATED ELV MODEL — VIETNAM SMART BUILDING 2026</div>
+          <div class="flow">
+            <span>[IBMS Core]</span> ◀─── BACnet/IP / KNX / Modbus
+              ├── <span>[BMS/HVAC]</span> Schneider·JCI·Siemens
+              ├── <span>[Fire Alarm]</span> Hochiki·System Sensor·Siemens
+              ├── <span>[Security/CCTV]</span> Axis·Dahua·Hikvision AI
+              ├── <span>[Access Control]</span> HID·Suprema·Lenel
+              ├── <span>[Structured Cabling]</span> Panduit·CommScope Cat6A/OM4
+              ├── <span>[PA/EVAC]</span> Bosch·TOA·Inter-M
+              └── <span>[AV/UC]</span> Crestron·Extron·Biamp
+          </div>
+        </div>
+      </div>
+      <div class="news-source">Source: <a href="https://opengovasia.com/vietnam-smart-infrastructure-digital-upgrades-modernise-public-services/?c=us" target="_blank" rel="noopener">OpenGov Asia — Vietnam Smart Infrastructure</a> | <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/facts-figures/Major_projects/Pandora_factory.html" target="_blank" rel="noopener">Pandora Smart Factory Vietnam</a></div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR ELV/ICT/AV IN VIETNAM</div>
+        <p>The smart building and smart factory wave is creating enormous demand for integrated ELV/ICT consulting services in Vietnam. The IBMS model integrating multiple ELV systems (BMS+Security+Fire+Cabling+AV) on a single platform is the inevitable direction — and this is precisely the consulting strength of Paul Le Consultant for complex projects.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- SHARE ROW -->
+  <div class="share-row">
+    <span class="share-label">CHIA SẺ / SHARE</span>
+    <a href="https://twitter.com/intent/tweet?url=https://elvconsultant.com/blog/2026-11-06-elv-ict-av-weekly.html&text=ELV/ICT/AV+Weekly+W45+%7C+Johnson+Controls+OpenBlue+AI+%C2%B7+Hochiki+UL268+%C2%B7+HPE+Agentic+NetOps+%E2%80%94+%40PLELVCONSULTANT" target="_blank" rel="noopener" class="share-btn">𝕏 TWITTER</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://elvconsultant.com/blog/2026-11-06-elv-ict-av-weekly.html" target="_blank" rel="noopener" class="share-btn">FACEBOOK</a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://elvconsultant.com/blog/2026-11-06-elv-ict-av-weekly.html" target="_blank" rel="noopener" class="share-btn">LINKEDIN</a>
+  </div>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <h3 class="vi-content">CẦN TƯ VẤN THIẾT KẾ ELV/ICT/AV?</h3>
+    <h3 class="en-content" style="display:none">NEED ELV/ICT/AV DESIGN CONSULTING?</h3>
+    <p class="vi-content">Paul Le cung cấp dịch vụ tư vấn thiết kế toàn diện cho hệ thống ELV, ICT, AV và BMS — từ giai đoạn FEED đến thiết kế bản vẽ thi công, lập BoQ, RFP và hỗ trợ đấu thầu cho các dự án tại Việt Nam.</p>
+    <p class="en-content" style="display:none">Paul Le provides comprehensive design consulting for ELV, ICT, AV, and BMS systems — from FEED to construction drawings, BoQ, RFP preparation, and tender support for projects across Vietnam.</p>
+    <a href="/#contact" class="cta-btn vi-content">LIÊN HỆ TƯ VẤN →</a>
+    <a href="/#contact" class="cta-btn en-content" style="display:none">CONTACT FOR CONSULTING →</a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:0.75rem">
+        <svg width="28" height="32" viewBox="0 0 120 140" fill="none">
+          <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#2A251C" stroke="#8A8172" stroke-width="4"/>
+          <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#121009"/>
+          <circle cx="52" cy="72" r="8" fill="none" stroke="#F3EDE2" stroke-width="2.5"/>
+          <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#F3EDE2"/>
+          <line x1="56" y1="71" x2="63" y2="71" stroke="#F3EDE2" stroke-width="2.5"/>
+          <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#F3EDE2" stroke-width="2"/>
+          <line x1="66" y1="71" x2="66" y2="83" stroke="#F3EDE2" stroke-width="2"/>
+          <circle cx="66" cy="84" r="3" fill="#F3EDE2"/>
+        </svg>
+        <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
+      </div>
+      <p>ELV/ICT/AV Design Director<br>Duy Hoa Phat Corporation &amp; HBP Project Management<br>elvconsultant.com</p>
+    </div>
+    <div class="footer-col">
+      <h5>ĐIỀU HƯỚNG</h5>
+      <a href="/">Trang chủ / Home</a>
+      <a href="/#services">Dịch vụ / Services</a>
+      <a href="/#portfolio">Dự án / Portfolio</a>
+      <a href="/blog/">Blog &amp; Tin tức</a>
+      <a href="/#contact">Liên hệ / Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>KẾT NỐI / CONNECT</h5>
+      <a href="https://www.facebook.com/elvconsultant" target="_blank" rel="noopener">Facebook Page</a>
+      <a href="https://twitter.com/PLELVCONSULTANT" target="_blank" rel="noopener">X @PLELVCONSULTANT</a>
+      <a href="https://elvconsultant.com/blog/" target="_blank">Newsletter Tuần</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Paul Le Consultant — Bản quyền bảo lưu</span>
+    <span class="footer-domain">ELVCONSULTANT.COM</span>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
