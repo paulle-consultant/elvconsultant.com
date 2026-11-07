@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-07",
+  "slug": "point-schedule-chiller-plant-3-chiller",
+  "title_vi": "Point schedule chiller plant 3-3-2",
+  "title_en": "Point schedule for a 3-3-2 chiller plant",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-07-point-schedule-chiller-plant-3-chiller.html",
+  "x_post": "A 3-chiller plant needs 82 hard IO points before any chiller data.\n\nOn DCM 9000 + Niagara 4:\n• 57 UI, 19 DO, 6 AO on 4x IO-R-34\n• 178 points, 9 devices: size the licence first\n• Flow switches hard-wired to the chiller panel\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Chiller plant 3 chiller, 3 bơm, 2 tháp cần 82 điểm IO cứng, chưa tính điểm đọc từ chiller.\n\nBài toán mẫu với DCM 9000 chạy Niagara 4:\n1. 46 DI + 11 AI = 57 UI, 19 DO, 6 AO, dùng 4 module IO-R-34, còn 7 UI dự phòng\n2. Cần dự phòng 20% thì thêm 1 IO-R-16, lên 72 UI\n3. Chiller đọc qua BACnet/IP, khoảng 20 điểm mỗi máy; 5 biến tần và đồng hồ BTU đi Modbus RTU\n4. Tổng 178 điểm trên 9 thiết bị mạng: chọn license DCM-9025 để còn chỗ đưa AHU, PAU vào sau\n\nMột điều không đổi: công tắc dòng chảy đấu thẳng vào tủ chiller, BMS chỉ đọc song song. Mất mạng không được làm chiller chạy khô.\n\nSơ đồ nguyên lý và point schedule đầy đủ:\nhttps://elvconsultant.com/blog/bms/2026-11-07-point-schedule-chiller-plant-3-chiller.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi danh sách thiết bị plant của anh chị, trong 48 giờ DHP gửi lại SĐNL và BoM.\n\n#BMS #Niagara4 #MitsubishiElectric #ChillerPlant #DiamondControls"
+ },
+ {
   "date": "2026-11-06",
   "slug": "vrf-city-multi-niagara-bacnet",
   "title_vi": "VRF City Multi vào Niagara qua BACnet",

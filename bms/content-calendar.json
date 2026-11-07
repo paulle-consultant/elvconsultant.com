@@ -21,7 +21,8 @@
    "pillar": "Bài toán thực tế",
    "pillar_en": "Worked example",
    "topic": "Point schedule chiller plant 3 máy, 3 bơm, 2 tháp",
-   "status": "planned"
+   "status": "published",
+   "slug": "point-schedule-chiller-plant-3-chiller"
   },
   {
    "date": "2026-11-08",
