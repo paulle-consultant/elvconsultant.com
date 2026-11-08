@@ -5,7 +5,7 @@
   "title_vi": "5 lỗi hay gặp khi nghiệm thu BMS",
   "title_en": "Five common BMS commissioning mistakes",
   "url": "https://elvconsultant.com/blog/bms/2026-11-08-5-loi-nghiem-thu-bms.html",
-  "x_post": "5 mistakes that delay BMS handover:\n\n1. RS-485: one baud rate, 120 Ω at both ends only\n2. NTC type 2 vs type 3: test 100% of points\n3. Unique BACnet device instances\n4. Licence must cover integrated points\n5. Fire stop by dry contact\n\nFull schematic on the blog, link in bio.",
+  "x_post": "5 mistakes that delay BMS handover:\n\n1. RS-485: one baud rate, 120 Ω at both ends only\n2. NTC type 2 vs type 3: test 100% of points\n3. Unique BACnet device instances\n4. Licence covers integrated points\n5. Fire stop by dry contact\n\nFull schematic on the blog, link in bio.",
   "fb_post": "5 lỗi làm trễ nghiệm thu BMS, và cả 5 đều kiểm tra được trước ngày giám sát xuống công trường.\n\n1. Trục RS-485: một baud rate, MAC không trùng, điện trở 120 Ω chỉ ở hai đầu. Tách MS/TP và Modbus RTU ra 2 cổng của DCM 9000.\n2. Cảm biến: NTC 10K type 2 khác type 3, chọn sai là lệch vài độ. Test 100% điểm.\n3. BACnet/IP: lập bảng device instance cho mọi hãng trước khi cấu hình.\n4. License Niagara: cộng cả điểm tích hợp. DCM-9025 là 25 thiết bị, 1.250 điểm.\n5. Liên động cháy: dừng AHU bằng tiếp điểm khô, tắt DDC rồi thử lại.\n\nBài viết có SĐNL đánh dấu 5 điểm lỗi và checklist pre-commissioning để đưa vào hồ sơ mời thầu:\nhttps://elvconsultant.com/blog/bms/2026-11-08-5-loi-nghiem-thu-bms.html\n\nGửi bản vẽ M&E, DHP gửi lại SĐNL và BoM sơ bộ trong 48 giờ.\n\n#BMS #Niagara4 #MitsubishiElectric #DiamondControls #NghiemThu"
  },
  {
