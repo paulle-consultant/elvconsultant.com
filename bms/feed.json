@@ -2,8 +2,8 @@
  {
   "date": "2026-11-09",
   "slug": "bms-khach-san-300-phong-dcm-9025",
-  "title_vi": "BMS khách sạn 300 phòng trên DCM-9025",
-  "title_en": "A 300-room hotel BMS on DCM-9025",
+  "title_vi": "BMS khách sạn 300 phòng",
+  "title_en": "Hotel BMS, 300 rooms",
   "url": "https://elvconsultant.com/blog/bms/2026-11-09-bms-khach-san-300-phong-dcm-9025.html",
   "x_post": "300 guest rooms at 7 points each = 2,100 points. Keep them on the GRMS.\n\nHotel BMS on one DCM-9025:\n• 6 AHU, 4 PAU, 80 VRF units\n• 8 lifts read-only, 8 meters\n• 881 of 1,250 points, 24 of 25 devices\n\nFull schematic on the blog, link in bio.",
   "fb_post": "300 phòng khách sạn, mỗi phòng 7 điểm là 2.100 điểm. Đưa hết vào BMS thì license DCM-9025 vỡ trước khi tính đến AHU.\n\nCấu hình BMS khách sạn 300 phòng trên một DCM 9000 chạy Niagara 4:\n1. 9 DCM-8044-D cho 6 AHU, quạt và bơm, BACnet/IP\n2. 4 DCM-8446 cho PAU trên MS/TP, 8 đồng hồ điện trên Modbus RTU\n3. 80 dàn lạnh VRF khu công cộng qua 2 gateway BACnet của Mitsubishi Electric\n4. Thang máy qua giao diện của hãng thang máy, BMS chỉ đọc\n5. Phòng khách để GRMS điều khiển\n\nKết quả: 881 trên 1.250 điểm, nhưng 24 trên 25 thiết bị. Giới hạn thật nằm ở số thiết bị, nên muốn đo điện theo tầng thì tính thêm gói DEVICE-10 hoặc chọn DCM-9100 ngay từ đầu. Lệnh cháy cho thang máy và AHU luôn đi mạch cứng, không qua mạng.\n\nSơ đồ nguyên lý và bảng ngân sách điểm đầy đủ:\nhttps://elvconsultant.com/blog/bms/2026-11-09-bms-khach-san-300-phong-dcm-9025.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #MitsubishiElectric #Niagara4 #KhachSan #DiamondControls"

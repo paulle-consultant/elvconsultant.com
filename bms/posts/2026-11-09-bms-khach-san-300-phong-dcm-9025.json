@@ -3,8 +3,8 @@
  "slug": "bms-khach-san-300-phong-dcm-9025",
  "pillar_vi": "Giải pháp theo phân khúc",
  "pillar_en": "Solutions by segment",
- "title_vi": "BMS khách sạn 300 phòng trên DCM-9025",
- "title_en": "A 300-room hotel BMS on DCM-9025",
+ "title_vi": "BMS khách sạn 300 phòng",
+ "title_en": "Hotel BMS, 300 rooms",
  "lead_vi": "AHU, PAU, VRF khu công cộng, quạt, bơm, đồng hồ điện và thang máy về một giao diện Niagara 4, gói gọn trong license DCM-9025 (25 thiết bị, 1.250 điểm) khi tách phòng khách sang GRMS.",
  "lead_en": "AHUs, PAUs, public-area VRF, fans, pumps, energy meters and lifts on one Niagara 4 front end, sized inside a DCM-9025 licence (25 devices, 1,250 points) once guest rooms stay on the GRMS.",
  "tags": [
@@ -30,16 +30,16 @@
    "en": "<p>A 300-room hotel usually runs 4 to 5 systems on their own: lobby and ballroom AHUs on their own panels, public-area VRF on its own central controller, lifts on the lift maker's monitor, energy meters read by hand at month end. The engineering team opens several screens to find which system is in fault. The second mistake is pulling all 300 guest rooms into the BMS: at 7 points per room, the rooms alone are 2,100 points, past a DCM-9025 licence before a single AHU is counted.</p>"
   },
   {
-   "h_vi": "Giải pháp: một DCM 9000, phòng khách để GRMS",
-   "h_en": "Solution: one DCM 9000, guest rooms on the GRMS",
+   "h_vi": "Giải pháp: một DCM 9000",
+   "h_en": "Solution: one DCM 9000",
    "vi": "<ul><li><strong>Controller trung tâm:</strong> DCM 9000 chạy Niagara 4.13+, license DCM-9025 (25 thiết bị, 1.250 điểm), 2 cổng RS-485 cách ly, 2 cổng Ethernet gigabit. Driver BACnet và Modbus có sẵn trong license.</li><li><strong>AHU, quạt, bơm:</strong> 9 DCM-8044-D (8UI/4DO/4AO, BTL) trên BACnet/IP. 6 bộ cho AHU gắn thêm IO-V6002 (6UI + 2DO), mỗi AHU có 14UI/6DO/4AO. 3 bộ còn lại cho quạt hút, quạt tăng áp giám sát và bơm.</li><li><strong>PAU và đồng hồ:</strong> 4 DCM-8446 (8UI/4DI/4AO/6DO) trên BACnet MS/TP ở RS-485 số 1. 8 đồng hồ điện tổng trên Modbus RTU ở RS-485 số 2.</li><li><strong>VRF khu công cộng:</strong> 80 dàn lạnh sảnh, F&amp;B, back-of-house qua 2 gateway BACnet của Mitsubishi Electric.</li><li><strong>Thang máy:</strong> giao diện BACnet/IP hoặc Modbus TCP do hãng thang máy cung cấp, BMS chỉ đọc.</li><li><strong>Phòng khách:</strong> GRMS điều khiển. BMS chỉ nhận trạng thái tổng hợp nếu chủ đầu tư cần.</li></ul>",
    "en": "<ul><li><strong>Central controller:</strong> a DCM 9000 on Niagara 4.13+, DCM-9025 licence (25 devices, 1,250 points), 2 isolated RS-485 ports, 2 gigabit Ethernet ports. BACnet and Modbus drivers are included in the licence.</li><li><strong>AHUs, fans, pumps:</strong> 9 DCM-8044-D (8UI/4DO/4AO, BTL) on BACnet/IP. The 6 AHU units each take an IO-V6002 (6UI + 2DO), giving 14UI/6DO/4AO per AHU. The other 3 cover exhaust fans, monitoring of pressurisation fans and pumps.</li><li><strong>PAUs and meters:</strong> 4 DCM-8446 (8UI/4DI/4AO/6DO) on BACnet MS/TP on RS-485 port 1. 8 main energy meters on Modbus RTU on RS-485 port 2.</li><li><strong>Public-area VRF:</strong> 80 indoor units in lobby, F&amp;B and back-of-house through 2 Mitsubishi Electric BACnet gateways.</li><li><strong>Lifts:</strong> a BACnet/IP or Modbus TCP interface supplied by the lift maker, read-only to the BMS.</li><li><strong>Guest rooms:</strong> controlled by the GRMS. The BMS takes a status summary only if the owner wants it.</li></ul>"
   },
   {
    "h_vi": "Phân tích kỹ thuật",
    "h_en": "Engineering notes",
-   "vi": "<ol><li><strong>Ngân sách điểm:</strong> bảng dưới cho 881 điểm trên 1.250, còn 369 điểm dự phòng (khoảng 30%). Đủ chỗ cho thêm trend và điểm ảo trong quá trình chạy thử.</li><li><strong>Ngân sách thiết bị mới là giới hạn thật:</strong> 24 trên 25 thiết bị. Mỗi đồng hồ Modbus là 1 thiết bị. Nếu chủ đầu tư muốn đo điện theo từng tầng, mua thêm gói nâng cấp DEVICE-10 hoặc chọn DCM-9100 (100 thiết bị, 5.000 điểm) ngay từ đầu.</li><li><strong>Kiểm tra PICS gateway VRF:</strong> gateway tính là 1 thiết bị hay tạo thiết bị ảo cho từng dàn lạnh sẽ đổi hẳn phép tính ở mục 2.</li><li><strong>Thang máy chỉ đọc:</strong> tầng, hướng, cửa, lỗi, chế độ chữa cháy. Lệnh gọi tầng và chế độ cháy đi theo mạch cứng của hãng thang máy và tủ báo cháy, không đi qua BMS.</li><li><strong>Tách VLAN:</strong> mạng BMS riêng, không chung với mạng khách và mạng PMS. Truy cập từ xa qua VPN.</li></ol>",
-   "en": "<ol><li><strong>Point budget:</strong> the table below gives 881 points out of 1,250, leaving 369 spare (about 30%). Enough room for trends and virtual points added during commissioning.</li><li><strong>The device budget is the real limit:</strong> 24 of 25 devices. Each Modbus meter is one device. If the owner wants metering per floor, add a DEVICE-10 upgrade or start with a DCM-9100 (100 devices, 5,000 points).</li><li><strong>Check the VRF gateway PICS:</strong> whether a gateway counts as one device or creates a virtual device per indoor unit changes note 2 completely.</li><li><strong>Lifts are read-only:</strong> floor, direction, door, fault, fire service mode. Car calls and fire mode stay on the hard-wired circuits between the lift maker and the fire panel, never through the BMS.</li><li><strong>Separate VLAN:</strong> the BMS network is its own, not shared with guest Wi-Fi or the PMS network. Remote access by VPN.</li></ol>"
+   "vi": "<ol><li><strong>Ngân sách điểm:</strong> bảng dưới (ví dụ thiết kế, đếm lại theo bản vẽ M&amp;E thực tế) cho 881 điểm trên 1.250, còn 369 điểm dự phòng (khoảng 30%). Đủ chỗ cho thêm trend và điểm ảo trong quá trình chạy thử.</li><li><strong>Ngân sách thiết bị mới là giới hạn thật:</strong> 24 trên 25 thiết bị. Mỗi đồng hồ Modbus là 1 thiết bị. Nếu chủ đầu tư muốn đo điện theo từng tầng, mua thêm gói nâng cấp DEVICE-10 hoặc chọn DCM-9100 (100 thiết bị, 5.000 điểm) ngay từ đầu.</li><li><strong>Kiểm tra PICS gateway VRF:</strong> gateway tính là 1 thiết bị hay tạo thiết bị ảo cho từng dàn lạnh sẽ đổi hẳn phép tính ở mục 2.</li><li><strong>Thang máy chỉ đọc:</strong> tầng, hướng, cửa, lỗi, chế độ chữa cháy. Lệnh gọi tầng và chế độ cháy đi theo mạch cứng của hãng thang máy và tủ báo cháy, không đi qua BMS.</li><li><strong>Tách VLAN:</strong> mạng BMS riêng, không chung với mạng khách và mạng PMS. Truy cập từ xa qua VPN.</li></ol>",
+   "en": "<ol><li><strong>Point budget:</strong> the table below (a design example, recount from the actual M&amp;E drawings) gives 881 points out of 1,250, leaving 369 spare (about 30%). Enough room for trends and virtual points added during commissioning.</li><li><strong>The device budget is the real limit:</strong> 24 of 25 devices. Each Modbus meter is one device. If the owner wants metering per floor, add a DEVICE-10 upgrade or start with a DCM-9100 (100 devices, 5,000 points).</li><li><strong>Check the VRF gateway PICS:</strong> whether a gateway counts as one device or creates a virtual device per indoor unit changes note 2 completely.</li><li><strong>Lifts are read-only:</strong> floor, direction, door, fault, fire service mode. Car calls and fire mode stay on the hard-wired circuits between the lift maker and the fire panel, never through the BMS.</li><li><strong>Separate VLAN:</strong> the BMS network is its own, not shared with guest Wi-Fi or the PMS network. Remote access by VPN.</li></ol>"
   },
   {
    "h_vi": "Ứng dụng",
@@ -49,8 +49,8 @@
   }
  ],
  "table": {
-  "caption_vi": "Ngân sách thiết bị và điểm trên DCM-9025 (ví dụ thiết kế, đếm lại theo bản vẽ M&E thực tế)",
-  "caption_en": "Device and point budget on DCM-9025 (design example, recount from the actual M&E drawings)",
+  "caption_vi": "Ngân sách thiết bị và điểm",
+  "caption_en": "Device and point budget",
   "head": [
    "Hệ / System",
    "SL / Qty",
