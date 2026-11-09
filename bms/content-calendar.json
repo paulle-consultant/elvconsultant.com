@@ -13,21 +13,24 @@
    "pillar": "Tích hợp hệ thống",
    "pillar_en": "System integration",
    "topic": "VRF City Multi vào Niagara qua BACnet: sơ đồ và point map",
-   "status": "planned"
+   "status": "published",
+   "slug": "vrf-city-multi-niagara-bacnet"
   },
   {
    "date": "2026-11-07",
    "pillar": "Bài toán thực tế",
    "pillar_en": "Worked example",
    "topic": "Point schedule chiller plant 3 máy, 3 bơm, 2 tháp",
-   "status": "planned"
+   "status": "published",
+   "slug": "point-schedule-chiller-plant-3-chiller"
   },
   {
    "date": "2026-11-08",
    "pillar": "Hỏi đáp & tổng hợp",
    "pillar_en": "Q&A and recap",
    "topic": "5 lỗi hay gặp khi nghiệm thu BMS",
-   "status": "planned"
+   "status": "published",
+   "slug": "5-loi-nghiem-thu-bms"
   },
   {
    "date": "2026-11-09",
