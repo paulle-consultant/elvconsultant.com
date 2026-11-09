@@ -37,7 +37,8 @@
    "pillar": "Giải pháp theo phân khúc",
    "pillar_en": "Solutions by segment",
    "topic": "BMS khách sạn 300 phòng với DCM-9025: AHU, PAU, VRF, thang máy về một giao diện",
-   "status": "planned"
+   "status": "published",
+   "slug": "bms-khach-san-300-phong-dcm-9025"
   },
   {
    "date": "2026-11-10",
