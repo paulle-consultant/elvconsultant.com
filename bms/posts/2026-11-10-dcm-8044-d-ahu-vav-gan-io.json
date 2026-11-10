@@ -1,0 +1,209 @@
+{
+ "date": "2026-11-10",
+ "slug": "dcm-8044-d-ahu-vav-gan-io",
+ "pillar_vi": "Kỹ thuật sản phẩm",
+ "pillar_en": "Product engineering",
+ "title_vi": "DCM-8044-D cho AHU VAV: gán IO",
+ "title_en": "DCM-8044-D on a VAV AHU: IO map",
+ "lead_vi": "Một AHU VAV có quạt cấp, quạt hồi và van nước lạnh cần 13 đầu vào, 3 đầu ra số và 4 đầu ra analog. Bài này gán từng điểm vào DCM-8044-D (8UI/4DO/4AO) và module IO-V6002, kèm SĐNL và point list.",
+ "lead_en": "A VAV AHU with supply fan, return fan and chilled-water valve needs 13 inputs, 3 digital outputs and 4 analog outputs. This post assigns every point to a DCM-8044-D (8UI/4DO/4AO) plus an IO-V6002 module, with the schematic and point list.",
+ "tags": [
+  "Mitsubishi Electric",
+  "Diamond Controls",
+  "DCM-8044-D",
+  "IO-V6002",
+  "AHU",
+  "VAV",
+  "BACnet/IP",
+  "Point list"
+ ],
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 640\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sơ đồ nguyên lý AHU VAV điều khiển bằng DCM-8044-D và IO-V6002\" font-family=\"'Maison Sans',system-ui,sans-serif\"><style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em;}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.ld{stroke:#B5AC9C;stroke-width:1;stroke-dasharray:4 4;fill:none}.p{fill:#C9A96A;font-size:12px;}</style><rect class=\"b\" x=\"20\" y=\"40\" width=\"440\" height=\"78\"/><text class=\"t\" x=\"36\" y=\"68\">Niagara 4 Supervisor</text><text class=\"s\" x=\"36\" y=\"90\">AHU graphic · trend SAT, duct static · alarm</text><text class=\"s\" x=\"36\" y=\"107\">Schedule, occupied / unoccupied</text><rect class=\"b2\" x=\"500\" y=\"40\" width=\"440\" height=\"78\"/><text class=\"t\" x=\"516\" y=\"68\">Web / mobile client</text><text class=\"s\" x=\"516\" y=\"90\">HTML5 browser, remote via VPN</text><path class=\"ln\" d=\"M240 118V160M720 118V160M20 160H940M165 160V226M480 160V226\"/><rect class=\"b\" x=\"20\" y=\"226\" width=\"290\" height=\"110\"/><text class=\"t\" x=\"36\" y=\"254\">DCM 9000 (Niagara 4.13+)</text><text class=\"s\" x=\"36\" y=\"276\">Static pressure reset from VAV</text><text class=\"s\" x=\"36\" y=\"293\">damper positions, writes setpoint</text><text class=\"s\" x=\"36\" y=\"310\">2× RS-485 · 2× GbE</text><rect class=\"b\" x=\"335\" y=\"226\" width=\"290\" height=\"110\"/><text class=\"t\" x=\"351\" y=\"254\">DCM-8044-D IP DDC</text><text class=\"s\" x=\"351\" y=\"276\">8 UI · 4 DO · 4 AO · LCD · BTL</text><text class=\"s\" x=\"351\" y=\"293\">Local PID: SAT, duct static</text><text class=\"s\" x=\"351\" y=\"310\">Fallback setpoint if IP link lost</text><rect class=\"b2\" x=\"650\" y=\"226\" width=\"290\" height=\"110\"/><text class=\"t\" x=\"666\" y=\"254\">IO-V6002 (right slot)</text><text class=\"s\" x=\"666\" y=\"276\">6 UI + 2 DO</text><text class=\"s\" x=\"666\" y=\"293\">Status, fire trip, filter, MAT</text><text class=\"s\" x=\"666\" y=\"310\">One expansion module per 8044</text><path class=\"ln\" d=\"M625 281H650\"/><path class=\"ln\" d=\"M165 336V434\"/><path class=\"ld\" d=\"M480 336V434M795 336V434\"/><rect class=\"b\" x=\"20\" y=\"434\" width=\"290\" height=\"110\"/><text class=\"t\" x=\"36\" y=\"462\">VAV boxes ×n</text><text class=\"s\" x=\"36\" y=\"484\">Controller per VAV box</text><text class=\"s\" x=\"36\" y=\"501\">Damper position, airflow</text><text class=\"s\" x=\"36\" y=\"518\">Zone temp and setpoint</text><rect class=\"b\" x=\"335\" y=\"434\" width=\"290\" height=\"110\"/><text class=\"t\" x=\"351\" y=\"462\">Sensors</text><text class=\"s\" x=\"351\" y=\"484\">SAT, RAT, MAT: NTC 10K</text><text class=\"s\" x=\"351\" y=\"501\">Duct static, RA RH: 4–20 mA</text><text class=\"s\" x=\"351\" y=\"518\">RA CO2: 0–10 V</text><text class=\"s\" x=\"351\" y=\"535\">Fan, filter DP switch: true DI</text><rect class=\"b\" x=\"650\" y=\"434\" width=\"290\" height=\"110\"/><text class=\"t\" x=\"666\" y=\"462\">MCC / VFD / actuators</text><text class=\"s\" x=\"666\" y=\"484\">SF, RF start via 24 VAC relay</text><text class=\"s\" x=\"666\" y=\"501\">VFD speed SF, RF: 0–10 V</text><text class=\"s\" x=\"666\" y=\"518\">CHW valve, OA damper: 0–10 V</text><text class=\"s\" x=\"666\" y=\"535\">Fire trip also hard-wired in MCC</text><text class=\"s\" x=\"20\" y=\"600\">IO used: 13 UI of 14 · 3 DO of 6 · 4 AO of 4   ·   AO full: extra dampers go to a DCM-8446 on the 8044 RS-485 (Modbus master)</text><rect x=\"16\" y=\"13.5\" width=\"180\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16\" y=\"167.5\" width=\"640\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16\" y=\"199.5\" width=\"175\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16\" y=\"375.5\" width=\"640\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16\" y=\"407.5\" width=\"115\" height=\"19.4\" fill=\"#0C0B09\"/><rect x=\"16\" y=\"559.5\" width=\"100\" height=\"19.4\" fill=\"#0C0B09\"/><text class=\"k\" x=\"20\" y=\"28\">MANAGEMENT LEVEL</text><text class=\"p\" x=\"20\" y=\"182\">BMS IP NETWORK · BACnet/IP UDP 47808 · Niagara Fox (TLS) · 8044-D and DCM 9000 on BMS VLAN</text><text class=\"k\" x=\"20\" y=\"214\">AUTOMATION LEVEL</text><text class=\"p\" x=\"20\" y=\"390\">RS-485 BACnet MS/TP (VAV trunk on DCM 9000)   ·   FIELD WIRING to 8044-D and IO-V6002 terminals</text><text class=\"k\" x=\"20\" y=\"422\">FIELD LEVEL</text><text class=\"k\" x=\"20\" y=\"574\">IO BUDGET</text></svg>",
+  "caption_vi": "SĐNL AHU VAV: DCM-8044-D và IO-V6002 điều khiển quạt cấp, quạt hồi, van nước lạnh, gió tươi; DCM 9000 chạy Niagara 4 gom vị trí damper VAV để reset áp suất tĩnh ống gió.",
+  "caption_en": "VAV AHU schematic: DCM-8044-D and IO-V6002 run supply fan, return fan, chilled-water valve and outdoor-air damper; a DCM 9000 on Niagara 4 collects VAV damper positions to reset duct static pressure."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>AHU VAV khó hơn AHU lưu lượng cố định ở chỗ quạt phải chạy theo áp suất tĩnh ống gió, còn áp suất đó lại phụ thuộc vào vị trí damper của hàng chục hộp VAV phía sau. Trên bản vẽ M&amp;E, AHU này thường có 2 biến tần (quạt cấp, quạt hồi), 1 van nước lạnh, 1 damper gió tươi và khoảng 10 cảm biến. DCM-8044-D chỉ có 16 điểm (8UI/4DO/4AO). Nếu gán IO không có kế hoạch, đầu vào sẽ thiếu ngay ở AHU đầu tiên, còn đầu ra analog thì hết sạch trước khi tính đến damper gió thải.</p>",
+   "en": "<p>A VAV AHU is harder than a constant-volume unit because the fan has to follow duct static pressure, and that pressure depends on the damper positions of dozens of VAV boxes downstream. On a typical M&amp;E drawing this AHU has 2 VFDs (supply and return fan), 1 chilled-water valve, 1 outdoor-air damper and about 10 sensors. A DCM-8044-D has 16 points (8UI/4DO/4AO). Without an IO plan you run out of inputs on the first AHU, and the analog outputs are gone before anyone thinks about the exhaust damper.</p>"
+  },
+  {
+   "h_vi": "Giải pháp: 8044-D, IO-V6002, Niagara reset",
+   "h_en": "Solution: 8044-D, IO-V6002, Niagara reset",
+   "vi": "<ul><li><strong>DCM-8044-D làm DDC của AHU:</strong> giữ các vòng PID cục bộ (nhiệt độ gió cấp qua van nước lạnh, áp suất tĩnh ống gió qua tốc độ quạt cấp). Màn hình LCD trên bản -D cho kỹ thuật viên xem và chỉnh tại tủ.</li><li><strong>IO-V6002 ở khe phải:</strong> thêm 6 UI và 2 DO, nâng tổng lên 14 UI, 6 DO, 4 AO. Mỗi DCM-8044 chỉ lắp được một module mở rộng.</li><li><strong>DCM 9000 chạy Niagara 4.13+:</strong> đọc vị trí damper các hộp VAV trên trunk BACnet MS/TP riêng, tính setpoint áp suất tĩnh và ghi xuống 8044-D qua BACnet/IP.</li><li><strong>Liên động cháy:</strong> tủ báo cháy cắt quạt bằng dây cứng trong tủ MCC. DDC chỉ đọc trạng thái fire trip để báo động và khóa lệnh chạy.</li></ul>",
+   "en": "<ul><li><strong>DCM-8044-D as the AHU DDC:</strong> it holds the local PID loops (supply air temperature through the chilled-water valve, duct static pressure through supply fan speed). The LCD on the -D version lets a technician read and adjust at the panel.</li><li><strong>IO-V6002 in the right slot:</strong> adds 6 UI and 2 DO, for 14 UI, 6 DO and 4 AO in total. Each DCM-8044 takes one expansion module.</li><li><strong>DCM 9000 on Niagara 4.13+:</strong> reads VAV damper positions on its own BACnet MS/TP trunk, computes the duct static setpoint and writes it to the 8044-D over BACnet/IP.</li><li><strong>Fire interlock:</strong> the fire panel stops the fans through hard wiring in the MCC. The DDC only reads fire-trip status to alarm and block the run command.</li></ul>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<ol><li><strong>Vòng điều khiển nằm trên bo chính.</strong> SAT, áp suất tĩnh, trạng thái quạt cấp và 4 AO đều gán vào DCM-8044-D. IO-V6002 nhận các điểm giám sát (MAT, quạt hồi, fire trip, Auto/Manual). Cảm biến và cơ cấu chấp hành của một vòng PID nằm chung một bo, dễ dò lỗi khi chạy thử.</li><li><strong>DO là relay 24 VAC/DC 1 A.</strong> Không đóng thẳng cuộn contactor 230 VAC. Lệnh chạy quạt đi qua relay trung gian 24 VAC trong tủ MCC.</li><li><strong>Chọn đúng kiểu UI.</strong> Nhiệt độ dùng NTC 10K, áp suất tĩnh và độ ẩm dùng 4–20 mA, CO2 dùng 0–10 V. Công tắc chênh áp quạt và lọc đặt jumper true DI. Ghi loại tín hiệu vào point list để thầu cơ điện mua đúng cảm biến.</li><li><strong>4 AO đã dùng hết.</strong> Nếu dự án cần thêm damper gió thải hoặc damper hồi điều khiển riêng, cổng RS-485 của 8044-D làm Modbus master cho tối đa 4 thiết bị, ví dụ một DCM-8446 có thêm 4 AO. Vì vậy trunk MS/TP của hộp VAV nên đi về DCM 9000, để RS-485 của 8044-D còn trống cho mở rộng.</li><li><strong>Mất mạng IP thì sao.</strong> 8044-D giữ setpoint áp suất tĩnh cố định đặt sẵn trong chương trình (lập trình bằng APM) cho tới khi Niagara ghi lại giá trị reset.</li></ol>",
+   "en": "<ol><li><strong>Control loops stay on the base board.</strong> SAT, duct static, supply fan status and all 4 AO go to the DCM-8044-D. The IO-V6002 takes monitoring points (MAT, return fan, fire trip, Auto/Manual). Each PID loop has its sensor and actuator on one board, which makes commissioning faults easier to trace.</li><li><strong>DO are 24 VAC/DC 1 A relays.</strong> Do not switch a 230 VAC contactor coil directly. Fan run commands go through a 24 VAC interposing relay in the MCC.</li><li><strong>Pick the right UI type.</strong> Temperatures on NTC 10K, duct static and humidity on 4–20 mA, CO2 on 0–10 V. Fan and filter DP switches use the true-DI jumper. Write the signal type in the point list so the mechanical contractor buys the right sensors.</li><li><strong>All 4 AO are used.</strong> If the project needs a separately controlled exhaust or return damper, the 8044-D RS-485 port acts as Modbus master for up to 4 devices, for example a DCM-8446 with 4 more AO. That is why the VAV MS/TP trunk should land on the DCM 9000, leaving the 8044-D RS-485 free for expansion.</li><li><strong>If the IP link drops.</strong> The 8044-D holds a fixed duct static setpoint written into its program (APM) until Niagara writes the reset value again.</li></ol>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<p><strong>Văn phòng nhiều tầng:</strong> mỗi tầng một AHU VAV, mỗi AHU một bộ DCM-8044-D và IO-V6002 trong tủ DDC tại phòng máy. <strong>Trung tâm thương mại:</strong> AHU sảnh và hành lang chạy VAV theo lịch mở cửa. <strong>Bệnh viện, trường học:</strong> AHU khu hành chính, lớp học, kèm CO2 gió hồi cho thông gió theo nhu cầu. Phòng sạch, phòng mổ cần điều khiển chênh áp riêng, không dùng cấu hình này nguyên bản.</p>",
+   "en": "<p><strong>Multi-storey offices:</strong> one VAV AHU per floor, one DCM-8044-D plus IO-V6002 per AHU in the plant-room DDC panel. <strong>Shopping malls:</strong> lobby and corridor AHUs on VAV following opening hours. <strong>Hospitals, schools:</strong> AHUs for admin areas and classrooms, with return-air CO2 for demand-controlled ventilation. Cleanrooms and operating theatres need dedicated pressure control and should not use this configuration as is.</p>"
+  }
+ ],
+ "table": {
+  "caption_vi": "Point list AHU VAV trên DCM-8044-D + IO-V6002 (24 kênh, dùng 20)",
+  "caption_en": "VAV AHU point list on DCM-8044-D + IO-V6002 (24 channels, 20 used)",
+  "head": [
+   "Kênh / Channel",
+   "Điểm / Point",
+   "Loại / Type",
+   "Tín hiệu / Signal"
+  ],
+  "rows": [
+   [
+    "8044 UI1",
+    "Nhiệt độ gió cấp / Supply air temp (SAT)",
+    "AI",
+    "NTC 10K"
+   ],
+   [
+    "8044 UI2",
+    "Nhiệt độ gió hồi / Return air temp (RAT)",
+    "AI",
+    "NTC 10K"
+   ],
+   [
+    "8044 UI3",
+    "Áp suất tĩnh ống gió / Duct static",
+    "AI",
+    "4–20 mA"
+   ],
+   [
+    "8044 UI4",
+    "Độ ẩm gió hồi / Return air RH",
+    "AI",
+    "4–20 mA"
+   ],
+   [
+    "8044 UI5",
+    "CO2 gió hồi / Return air CO2",
+    "AI",
+    "0–10 V"
+   ],
+   [
+    "8044 UI6",
+    "Trạng thái quạt cấp / Supply fan status",
+    "DI",
+    "DP switch, true DI"
+   ],
+   [
+    "8044 UI7",
+    "Lỗi biến tần quạt cấp / SF VFD fault",
+    "DI",
+    "Dry contact"
+   ],
+   [
+    "8044 UI8",
+    "Bẩn lọc / Filter dirty",
+    "DI",
+    "DP switch, true DI"
+   ],
+   [
+    "V6002 UI1",
+    "Nhiệt độ gió hòa trộn / Mixed air temp (MAT)",
+    "AI",
+    "NTC 10K"
+   ],
+   [
+    "V6002 UI2",
+    "Trạng thái quạt hồi / Return fan status",
+    "DI",
+    "DP switch, true DI"
+   ],
+   [
+    "V6002 UI3",
+    "Lỗi biến tần quạt hồi / RF VFD fault",
+    "DI",
+    "Dry contact"
+   ],
+   [
+    "V6002 UI4",
+    "Fire trip",
+    "DI",
+    "Dry contact from MCC"
+   ],
+   [
+    "V6002 UI5",
+    "Auto/Manual MCC",
+    "DI",
+    "Dry contact"
+   ],
+   [
+    "8044 DO1",
+    "Chạy quạt cấp / SF start",
+    "DO",
+    "Relay to 24 VAC interposing"
+   ],
+   [
+    "8044 DO2",
+    "Chạy quạt hồi / RF start",
+    "DO",
+    "Relay to 24 VAC interposing"
+   ],
+   [
+    "8044 DO3",
+    "Reset lỗi biến tần / VFD fault reset",
+    "DO",
+    "Relay"
+   ],
+   [
+    "8044 AO1",
+    "Tốc độ quạt cấp / SF speed",
+    "AO",
+    "0–10 V"
+   ],
+   [
+    "8044 AO2",
+    "Tốc độ quạt hồi / RF speed",
+    "AO",
+    "0–10 V"
+   ],
+   [
+    "8044 AO3",
+    "Van nước lạnh / CHW valve",
+    "AO",
+    "0–10 V"
+   ],
+   [
+    "8044 AO4",
+    "Damper gió tươi / OA damper",
+    "AO",
+    "0–10 V"
+   ],
+   [
+    "Dự phòng / Spare",
+    "V6002 UI6, 8044 DO4, V6002 DO1–DO2",
+    "",
+    "4 kênh / channels"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "Mitsubishi Electric Asia, DCM-8044/DCM-8044-D with IO Modules (2024): 8UI/4DO/4AO, IO-V6002, IO-V0800, RS-485 roles"
+  },
+  {
+   "title": "Mitsubishi Electric Asia, Diamond Controls catalogue (DCM 9000, DCM-8446)"
+  },
+  {
+   "title": "Mitsubishi Electric Vietnam, Building Management System",
+   "url": "https://buildingsolutions.mitsubishi-electric.vn/en/bms/"
+  }
+ ],
+ "x_post": "A VAV AHU needs 13 inputs, 3 DO and 4 AO. A DCM-8044-D has 16 points.\n\n• 8044-D keeps the PID loops: SAT, duct static\n• IO-V6002 adds 6 UI + 2 DO\n• Fans via 24 VAC interposing relays\n• Niagara resets static from VAV dampers\n\nFull schematic on the blog, link in bio.",
+ "fb_post": "Một AHU VAV có 2 quạt, 1 van nước lạnh và 1 damper gió tươi cần 13 đầu vào, 3 DO và 4 AO. DCM-8044-D chỉ có 16 điểm. Gán IO thế nào cho đủ và còn chỗ mở rộng?\n\nCấu hình bọn mình dùng:\n1. DCM-8044-D (8UI/4DO/4AO) giữ các vòng PID: nhiệt độ gió cấp qua van nước lạnh, áp suất tĩnh qua tốc độ quạt cấp\n2. IO-V6002 ở khe phải thêm 6 UI + 2 DO cho các điểm giám sát: MAT, quạt hồi, fire trip, Auto/Manual\n3. DO của 8044-D là relay 24 VAC/DC 1 A, lệnh chạy quạt đi qua relay trung gian trong tủ MCC\n4. DCM 9000 chạy Niagara 4 đọc vị trí damper các hộp VAV và reset setpoint áp suất tĩnh\n\n4 AO dùng hết, nên trunk MS/TP của VAV đưa về DCM 9000, để RS-485 của 8044-D làm Modbus master khi cần thêm DCM-8446. Mất mạng IP thì 8044-D giữ setpoint cố định.\n\nSơ đồ nguyên lý và point list 24 kênh:\nhttps://elvconsultant.com/blog/bms/2026-11-10-dcm-8044-d-ahu-vav-gan-io.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #MitsubishiElectric #DiamondControls #AHU #VAV",
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1615309662243-70f6df917b59?ixlib=rb-4.1.0&q=80&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Ống gió và đường ống kỹ thuật trong phòng máy",
+  "credit": "Compagnons",
+  "credit_url": "https://unsplash.com/photos/black-and-gray-metal-pipe-yZmHFF-g-W0"
+ }
+}

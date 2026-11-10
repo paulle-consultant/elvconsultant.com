@@ -45,7 +45,8 @@
    "pillar": "Kỹ thuật sản phẩm",
    "pillar_en": "Product engineering",
    "topic": "DCM-8044-D điều khiển AHU VAV: gán 8UI/4DO/4AO và mở rộng IO-V6002",
-   "status": "planned"
+   "status": "published",
+   "slug": "dcm-8044-d-ahu-vav-gan-io"
   },
   {
    "date": "2026-11-11",

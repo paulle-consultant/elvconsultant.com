@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-10",
+  "slug": "dcm-8044-d-ahu-vav-gan-io",
+  "title_vi": "DCM-8044-D cho AHU VAV: gán IO",
+  "title_en": "DCM-8044-D on a VAV AHU: IO map",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-10-dcm-8044-d-ahu-vav-gan-io.html",
+  "x_post": "A VAV AHU needs 13 inputs, 3 DO and 4 AO. A DCM-8044-D has 16 points.\n\n• 8044-D keeps the PID loops: SAT, duct static\n• IO-V6002 adds 6 UI + 2 DO\n• Fans via 24 VAC interposing relays\n• Niagara resets static from VAV dampers\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Một AHU VAV có 2 quạt, 1 van nước lạnh và 1 damper gió tươi cần 13 đầu vào, 3 DO và 4 AO. DCM-8044-D chỉ có 16 điểm. Gán IO thế nào cho đủ và còn chỗ mở rộng?\n\nCấu hình bọn mình dùng:\n1. DCM-8044-D (8UI/4DO/4AO) giữ các vòng PID: nhiệt độ gió cấp qua van nước lạnh, áp suất tĩnh qua tốc độ quạt cấp\n2. IO-V6002 ở khe phải thêm 6 UI + 2 DO cho các điểm giám sát: MAT, quạt hồi, fire trip, Auto/Manual\n3. DO của 8044-D là relay 24 VAC/DC 1 A, lệnh chạy quạt đi qua relay trung gian trong tủ MCC\n4. DCM 9000 chạy Niagara 4 đọc vị trí damper các hộp VAV và reset setpoint áp suất tĩnh\n\n4 AO dùng hết, nên trunk MS/TP của VAV đưa về DCM 9000, để RS-485 của 8044-D làm Modbus master khi cần thêm DCM-8446. Mất mạng IP thì 8044-D giữ setpoint cố định.\n\nSơ đồ nguyên lý và point list 24 kênh:\nhttps://elvconsultant.com/blog/bms/2026-11-10-dcm-8044-d-ahu-vav-gan-io.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #MitsubishiElectric #DiamondControls #AHU #VAV"
+ },
+ {
   "date": "2026-11-09",
   "slug": "bms-khach-san-300-phong-dcm-9025",
   "title_vi": "BMS khách sạn 300 phòng",
