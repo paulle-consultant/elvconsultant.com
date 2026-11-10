@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bản Tin ELV/ICT/AV Tuần 46 — 10/11/2026 | Paul Le Consultant</title>
+  <meta name="description" content="5 tin nổi bật tuần 46: HPE Aruba+Juniper AI Brain · Axis Unified Security ISC West · Crestron MTR+BYOD · Schneider EcoCare BMS · Secutech Vietnam 2026 — song ngữ Việt–Anh.">
+  <meta name="keywords" content="ELV news tuần 46, HPE Aruba Juniper AI, Axis ISC West, Crestron MTR, Schneider BMS EcoCare, Secutech Vietnam 2026, smart building Vietnam">
+  <meta name="author" content="Paul Le Consultant">
+  <meta property="og:title" content="Bản Tin ELV/ICT/AV Tuần 46 — 10/11/2026">
+  <meta property="og:description" content="HPE Aruba+Juniper AI · Axis Unified Security · Crestron MTR+BYOD · Schneider EcoCare BMS · Secutech VN 2026">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1648611648035-805e9ae87437?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-10-elv-ict-av-weekly.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;min-height:100vh;}
+    .grid-bg{
+      position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),
+        linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0;
+    }
+
+    /* ═══ NAV ═══ */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(7,17,31,0.96);border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;
+    }
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-text{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px;}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px;}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan);}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:7px 18px;border-radius:4px;font-size:12px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all 0.2s;text-decoration:none;}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg);}
+
+    /* ═══ LANG BAR ═══ */
+    .lang-bar{
+      position:relative;z-index:1;
+      background:var(--navy-deep);border-bottom:1px solid var(--card-border);
+      padding:0.5rem 2rem;display:flex;align-items:center;gap:1rem;
+    }
+    .lang-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel);}
+    .lang-btn{
+      font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:1.5px;
+      padding:4px 14px;border-radius:3px;border:1px solid var(--card-border);
+      background:transparent;color:var(--silver);cursor:pointer;transition:all 0.2s;
+    }
+    .lang-btn.active,.lang-btn:hover{background:var(--cyan);color:var(--bg);border-color:var(--cyan);}
+
+    /* ═══ ARTICLE HERO ═══ */
+    .article-hero{
+      position:relative;z-index:1;
+      height:clamp(300px,42vw,520px);overflow:hidden;
+    }
+    .article-hero img{
+      width:100%;height:100%;object-fit:cover;object-position:center;
+      filter:brightness(0.72) saturate(0.85);
+    }
+    .hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(180deg,
+        rgba(7,17,31,0.25) 0%,
+        rgba(7,17,31,0.1) 30%,
+        rgba(7,17,31,0.68) 65%,
+        rgba(7,17,31,0.97) 100%);
+    }
+    .hero-content{
+      position:absolute;bottom:0;left:0;right:0;
+      padding:clamp(1.5rem,4vw,3rem) clamp(1.5rem,5vw,4rem) clamp(2rem,4vw,3rem);
+      max-width:1100px;
+    }
+    .hero-eyebrow{
+      font-family:'Orbitron',monospace;font-size:10px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:10px;
+    }
+    .hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan);}
+    .hero-title{
+      font-family:'Orbitron',monospace;
+      font-size:clamp(1.4rem,3.5vw,2.6rem);font-weight:900;
+      color:var(--white);line-height:1.15;text-shadow:0 2px 20px rgba(0,0,0,0.6);
+    }
+    .hero-subtitle{
+      font-size:clamp(13px,1.1vw,15px);color:var(--silver);
+      margin-top:0.75rem;line-height:1.6;
+    }
+
+    /* ═══ MAIN CONTENT ═══ */
+    .article-main{
+      position:relative;z-index:1;
+      max-width:1100px;margin:0 auto;
+      padding:clamp(2rem,4vw,3.5rem) clamp(1.5rem,3vw,2rem);
+    }
+    .section-label{
+      font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:2rem;display:flex;align-items:center;gap:12px;
+    }
+    .section-label::after{content:'';flex:1;height:1px;background:var(--card-border);}
+
+    /* ═══ NEWS ITEM CARDS ═══ */
+    .news-item{
+      background:var(--card-bg);border:1px solid var(--card-border);
+      border-radius:10px;padding:clamp(1.5rem,3vw,2rem);
+      margin-bottom:1.5rem;position:relative;overflow:hidden;
+      transition:border-color 0.3s,box-shadow 0.3s;
+    }
+    .news-item::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:2px;
+      background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;
+      transition:opacity 0.3s;
+    }
+    .news-item:hover{border-color:rgba(0,200,224,0.35);box-shadow:0 0 0 1px rgba(0,200,224,0.15),0 8px 32px rgba(0,0,0,0.3);}
+    .news-item:hover::before{opacity:1;}
+    .news-num{
+      position:absolute;top:1.5rem;right:1.75rem;
+      font-family:'Orbitron',monospace;font-size:36px;font-weight:900;
+      color:rgba(0,200,224,0.08);line-height:1;user-select:none;
+    }
+    .news-tags{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+    .news-tag{
+      font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:1px;
+      padding:3px 10px;border-radius:3px;border:1px solid rgba(0,200,224,0.3);
+      color:var(--cyan);background:var(--cyan-dim);
+    }
+    .news-tag.mfr{background:rgba(0,200,224,0.18);border-color:var(--cyan);}
+    .news-title-vi{
+      font-family:'Orbitron',monospace;font-size:clamp(14px,1.4vw,17px);font-weight:700;
+      color:var(--white);line-height:1.4;margin-bottom:0.4rem;
+    }
+    .news-title-en{
+      font-family:'Orbitron',monospace;font-size:clamp(13px,1.1vw,15px);font-weight:600;
+      color:var(--cyan);line-height:1.4;margin-bottom:1.25rem;
+    }
+    .news-body{font-size:14px;color:var(--silver);line-height:1.75;margin-bottom:1.25rem;}
+    .news-body p{margin-bottom:0.75rem;}
+    .news-source{
+      font-size:12px;color:var(--steel);margin-bottom:1rem;
+    }
+    .news-source a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(0,200,224,0.3);}
+    .news-source a:hover{border-color:var(--cyan);}
+
+    /* WHY BOX */
+    .why-box{
+      background:rgba(0,200,224,0.06);border:1px solid rgba(0,200,224,0.2);
+      border-radius:6px;padding:1rem 1.25rem;margin-top:0.75rem;
+    }
+    .why-box-label{
+      font-family:'Orbitron',monospace;font-size:9px;font-weight:700;letter-spacing:2px;
+      color:var(--cyan);margin-bottom:0.6rem;display:flex;align-items:center;gap:8px;
+    }
+    .why-box-label::before{content:'▸';}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.7;}
+
+    /* ═══ DIAGRAM / SCHEMATIC BOX ═══ */
+    .diagram-box{
+      background:var(--navy-deep);border:1px solid var(--card-border);
+      border-radius:8px;padding:1.25rem 1.5rem;margin:1.25rem 0;
+      font-family:'Orbitron',monospace;font-size:11px;color:var(--cyan);
+      line-height:1.8;overflow-x:auto;white-space:pre;letter-spacing:0.3px;
+    }
+    .diagram-label{font-size:9px;letter-spacing:2px;color:var(--steel);margin-bottom:0.75rem;}
+
+    /* ═══ CTA BOX ═══ */
+    .cta-box{
+      background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);
+      border:1px solid var(--cyan);border-radius:10px;
+      padding:clamp(1.75rem,3vw,2.5rem);margin:3rem 0;text-align:center;
+      box-shadow:0 0 40px rgba(0,200,224,0.08);
+    }
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:clamp(14px,1.5vw,18px);font-weight:700;color:var(--white);margin-bottom:0.75rem;}
+    .cta-box p{font-size:14px;color:var(--silver);margin-bottom:1.5rem;line-height:1.7;}
+    .cta-btn{
+      display:inline-block;background:var(--cyan);color:var(--bg);
+      font-family:'Orbitron',monospace;font-size:11px;font-weight:700;letter-spacing:1.5px;
+      padding:12px 32px;border-radius:4px;text-decoration:none;transition:all 0.2s;
+    }
+    .cta-btn:hover{background:var(--white);box-shadow:0 0 20px var(--cyan-glow);}
+
+    /* ═══ FOOTER ═══ */
+    footer{
+      position:relative;z-index:1;
+      border-top:1px solid var(--card-border);background:var(--card-bg);
+      padding:2.5rem 2rem;margin-top:2rem;
+    }
+    .footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{color:var(--steel);font-size:13px;text-decoration:none;transition:color 0.2s;}
+    .footer-links a:hover{color:var(--cyan);}
+    .footer-copy{font-size:12px;color:var(--steel);}
+
+    @media(max-width:768px){
+      nav{padding:0 1rem;}
+      .nav-links{display:none;}
+      .hero-content{padding:1.5rem;}
+      .article-main{padding:1.5rem 1rem;}
+      .news-num{font-size:24px;}
+      .footer-inner{flex-direction:column;text-align:center;}
+      .footer-links{justify-content:center;}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">TƯ VẤN / CONSULT</a>
+</nav>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE</span>
+  <button class="lang-btn" data-lang="vi" onclick="setLang('vi')">🇻🇳 TIẾNG VIỆT</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 ENGLISH</button>
+</div>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1648611648035-805e9ae87437?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Control room with multiple screens — ELV ICT AV Weekly Week 46 2026" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="vi-content">BẢN TIN ELV/ICT/AV · TUẦN 46 · 10/11/2026</span>
+      <span class="en-content">ELV/ICT/AV WEEKLY · WEEK 46 · 10 NOV 2026</span>
+    </div>
+    <div class="vi-content">
+      <h1 class="hero-title">HPE Aruba AI · Axis ISC West · Crestron MTR+BYOD<br>Schneider EcoCare BMS · Secutech Vietnam 2026</h1>
+      <p class="hero-subtitle">5 tin nổi bật tuần 46 — ICT/Networking, Security, AV Collaboration, BMS &amp; thị trường Việt Nam</p>
+    </div>
+    <div class="en-content">
+      <h1 class="hero-title">HPE Aruba AI · Axis ISC West · Crestron MTR+BYOD<br>Schneider EcoCare BMS · Secutech Vietnam 2026</h1>
+      <p class="hero-subtitle">5 highlights of week 46 — ICT/Networking, Security, AV Collaboration, BMS &amp; Vietnam market</p>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="article-main">
+
+  <div class="section-label">
+    <span class="vi-content">5 TIN NỔI BẬT TUẦN NÀY</span>
+    <span class="en-content">5 TOP STORIES THIS WEEK</span>
+  </div>
+
+  <!-- ══ TIN 1: HPE ARUBA + JUNIPER AI ══ -->
+  <div class="news-item">
+    <div class="news-num">01</div>
+    <div class="news-tags">
+      <span class="news-tag mfr">HPE ARUBA</span>
+      <span class="news-tag">JUNIPER</span>
+      <span class="news-tag">NETWORKING</span>
+      <span class="news-tag">AI</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">HPE Aruba + Juniper Mist: Nền Tảng AI Mạng Thống Nhất — "AI-Native Network Brain" Chính Thức Ra Mắt</div>
+      <div class="news-body">
+        <p>Tại HPE Discover 2026, Hewlett Packard Enterprise đã công bố hoàn tất tích hợp Aruba Networks và Juniper Mist AI thành một "não bộ AI mạng" duy nhất — kết hợp Aruba Central (quản lý Wi-Fi doanh nghiệp) với Juniper Mist AI (AIOps + self-healing network). Nền tảng mới có khả năng phát hiện sự cố mạng tự động, dự đoán lỗi trước khi xảy ra và tối ưu hoá lưu lượng mạng theo thời gian thực.</p>
+        <p>Stack AI networking mới bao gồm: HPE Aruba Networking CX switching, Aruba Wi-Fi 7 access points, và Juniper QFX5252 AI-enhanced switches — tất cả được quản lý qua một giao diện thống nhất với AI recommendations và natural language troubleshooting.</p>
+      </div>
+      <div class="news-source">📌 Nguồn: <a href="https://zkresearch.com/aruba-meets-juniper-mist-at-discover-hpe-unveils-its-unified-ai-native-network-brain/" target="_blank" rel="noopener">ZK Research — Aruba Meets Juniper Mist at HPE Discover</a> | <a href="https://650group.com/blog/hpe-discover-2026-ai-aruba-juniper/" target="_blank" rel="noopener">650 Group Analysis</a></div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">HPE Aruba + Juniper Mist: Unified "AI-Native Network Brain" Now Available</div>
+      <div class="news-body">
+        <p>At HPE Discover 2026, Hewlett Packard Enterprise announced the completion of Aruba Networks and Juniper Mist AI integration into a single unified "AI-Native Network Brain" — combining Aruba Central (enterprise Wi-Fi management) with Juniper Mist AI (AIOps + self-healing networks). The new platform auto-detects network issues, predicts failures before they occur, and optimizes traffic flow in real time.</p>
+        <p>The new AI networking stack includes: HPE Aruba Networking CX switching, Aruba Wi-Fi 7 access points, and Juniper QFX5252 AI-enhanced switches — all managed through a unified interface with AI recommendations and natural language troubleshooting.</p>
+      </div>
+      <div class="news-source">📌 Source: <a href="https://zkresearch.com/aruba-meets-juniper-mist-at-discover-hpe-unveils-its-unified-ai-native-network-brain/" target="_blank" rel="noopener">ZK Research — Aruba Meets Juniper Mist</a> | <a href="https://650group.com/blog/hpe-discover-2026-ai-aruba-juniper/" target="_blank" rel="noopener">650 Group Analysis</a></div>
+    </div>
+
+    <div class="diagram-box"><div class="diagram-label">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — HPE AI-NATIVE NETWORK STACK</div>
+┌──────────────────────────────────────────────────────────────────┐
+│          HPE ARUBA + JUNIPER: AI-NATIVE NETWORK BRAIN            │
+├──────────────────────────────────────────────────────────────────┤
+│  MANAGEMENT PLANE (Cloud)                                        │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │   HPE Aruba Central  +  Juniper Mist AI                 │    │
+│  │   • AIOps Engine    • Self-Healing   • NL Troubleshoot  │    │
+│  │   • Wi-Fi Analytics • NetOps + SecOps Unified Dashboard │    │
+│  └─────────────────────────────────────────────────────────┘    │
+│                           │                                      │
+│  DATA PLANE (On-Premises)                                        │
+│  ┌────────────┐  ┌──────────────┐  ┌─────────────────────┐     │
+│  │ Aruba Wi-Fi│  │  Aruba CX    │  │  Juniper QFX5252    │     │
+│  │  7 APs     │→ │  Switching   │→ │  AI-Enhanced Switch │     │
+│  │ 802.11be   │  │  (Campus)    │  │  (Aggregation/Core) │     │
+│  └────────────┘  └──────────────┘  └─────────────────────┘     │
+│                                           │                      │
+│  SECURITY LAYER                                                  │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │  HPE Aruba EdgeConnect SASE  +  Zero-Trust NAC          │    │
+│  └─────────────────────────────────────────────────────────┘    │
+└──────────────────────────────────────────────────────────────────┘
+</div>
+
+    <div class="why-box">
+      <div class="why-box-label">
+        <span class="vi-content">TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT VIỆT NAM</span>
+        <span class="en-content">RELEVANCE FOR ELV/ICT PROJECTS IN VIETNAM</span>
+      </div>
+      <div class="vi-content"><p>Tích hợp Aruba+Juniper tạo ra một nền tảng AI mạng "turnkey" cho các tòa nhà thông minh, bệnh viện, trường đại học và khu công nghiệp tại Việt Nam. Với AI tự phục hồi mạng (self-healing), các dự án ELV/ICT lớn sẽ giảm đáng kể chi phí vận hành và nhân lực quản lý hạ tầng mạng. Đây là giải pháp phù hợp cho các dự án yêu cầu uptime cao như bệnh viện, data center, và tổ hợp căn hộ cao cấp.</p></div>
+      <div class="en-content"><p>The Aruba+Juniper integration creates a turnkey AI networking platform for smart buildings, hospitals, universities and industrial parks in Vietnam. With AI self-healing networks, large ELV/ICT projects will significantly reduce operational costs and staff needed to manage network infrastructure. This solution is ideal for high-uptime projects such as hospitals, data centers, and premium residential complexes.</p></div>
+    </div>
+  </div>
+
+  <!-- ══ TIN 2: AXIS ISC WEST 2026 ══ -->
+  <div class="news-item">
+    <div class="news-num">02</div>
+    <div class="news-tags">
+      <span class="news-tag mfr">AXIS</span>
+      <span class="news-tag">SECURITY</span>
+      <span class="news-tag">ISC WEST</span>
+      <span class="news-tag">AI CAMERA</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Axis Communications: "Làn Sóng Tiếp Theo" của An Ninh Thống Nhất tại ISC West 2026</div>
+      <div class="news-body">
+        <p>Axis Communications ra mắt dòng giải pháp Unified Security mới nhất tại ISC West 2026, bao gồm camera AI thế hệ tiếp theo với chip xử lý ARTPEC-9 mới, hệ thống radar phát hiện xâm nhập ngoài trời tầm xa, và nền tảng quản lý video thống nhất tích hợp AI analytics. Đặc biệt, Axis giới thiệu "AXIS OS 13" với zero-trust security framework cho toàn bộ thiết bị.</p>
+        <p>Các sản phẩm mới bao gồm: camera với edge AI nhận diện hành vi bất thường, radar AXIS D2210-VE tầm xa 100m trong mọi điều kiện thời tiết, và AXIS Camera Station 7 với AI-powered video search.</p>
+      </div>
+      <div class="news-source">📌 Nguồn: <a href="https://newsroom.axis.com/en-ca/press-release/isc-west-2026" target="_blank" rel="noopener">Axis Communications Newsroom — ISC West 2026</a> | <a href="https://losspreventionmedia.com/axis-communications-introduces-the-next-wave-of-unified-security-solutions-at-isc-west-2026/" target="_blank" rel="noopener">Loss Prevention Media</a></div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Axis Communications: "Next Wave" of Unified Security Solutions at ISC West 2026</div>
+      <div class="news-body">
+        <p>Axis Communications launched its latest Unified Security solutions at ISC West 2026, including next-generation AI cameras with the new ARTPEC-9 chip, long-range outdoor intrusion detection radar systems, and a unified video management platform with integrated AI analytics. Notably, Axis introduced "AXIS OS 13" with a zero-trust security framework for all devices.</p>
+        <p>New products include: cameras with edge AI for abnormal behavior detection, AXIS D2210-VE long-range radar up to 100m in all weather conditions, and AXIS Camera Station 7 with AI-powered video search.</p>
+      </div>
+      <div class="news-source">📌 Source: <a href="https://newsroom.axis.com/en-ca/press-release/isc-west-2026" target="_blank" rel="noopener">Axis Communications Newsroom — ISC West 2026</a> | <a href="https://losspreventionmedia.com/axis-communications-introduces-the-next-wave-of-unified-security-solutions-at-isc-west-2026/" target="_blank" rel="noopener">Loss Prevention Media</a></div>
+    </div>
+
+    <div class="diagram-box"><div class="diagram-label">SƠ ĐỒ NGUYÊN LÝ — AXIS UNIFIED SECURITY ARCHITECTURE 2026</div>
+┌──────────────────────────────────────────────────────────────────┐
+│                 AXIS UNIFIED SECURITY PLATFORM                   │
+├──────────────────────────────────────────────────────────────────┤
+│  MANAGEMENT LAYER                                                │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │  AXIS Camera Station 7  +  AXIS Device Manager Extend  │    │
+│  │  • AI Video Search    • Zero-Trust AXIS OS 13          │    │
+│  │  • Cybersecurity Dashboard  • Remote Secure Management  │    │
+│  └─────────────────────────────────────────────────────────┘    │
+│                           │                                      │
+│  EDGE DEVICES                                                    │
+│  ┌────────────┐  ┌──────────────┐  ┌─────────────────────┐     │
+│  │ AI Cameras │  │ ARTPEC-9 SoC │  │  Radar D2210-VE     │     │
+│  │ Edge AI    │  │ Onboard DSP  │  │  100m Detection     │     │
+│  │ Anomaly    │  │ Zero-Trust   │  │  All-Weather        │     │
+│  │ Detection  │  │ Secure Boot  │  │  360° Coverage      │     │
+│  └────────────┘  └──────────────┘  └─────────────────────┘     │
+│                                                                  │
+│  INTEGRATION LAYER                                               │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │  AXIS ACAP Apps  +  3rd Party VMS/PSIM/BMS APIs        │    │
+│  │  Genetec / Milestone / Honeywell ProWatch Integration   │    │
+│  └─────────────────────────────────────────────────────────┘    │
+└──────────────────────────────────────────────────────────────────┘
+</div>
+
+    <div class="why-box">
+      <div class="why-box-label">
+        <span class="vi-content">TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/SECURITY VIỆT NAM</span>
+        <span class="en-content">RELEVANCE FOR ELV/SECURITY PROJECTS IN VIETNAM</span>
+      </div>
+      <div class="vi-content"><p>AXIS OS 13 với zero-trust framework giải quyết vấn đề cybersecurity đang ngày càng được các chủ đầu tư Việt Nam quan tâm, đặc biệt trong các dự án ngân hàng, bệnh viện, và tòa nhà hành chính. Radar tầm xa D2210-VE mở ra cơ hội thiết kế bảo vệ vòng ngoài (perimeter protection) cho các khu công nghiệp và cảng biển tại Việt Nam mà không cần lắp đặt camera dày đặc.</p></div>
+      <div class="en-content"><p>AXIS OS 13 with zero-trust framework addresses cybersecurity concerns increasingly important to Vietnamese investors, especially in banking, hospital, and government building projects. The D2210-VE long-range radar opens opportunities for perimeter protection design at industrial zones and seaports in Vietnam without dense camera installation.</p></div>
+    </div>
+  </div>
+
+  <!-- ══ TIN 3: CRESTRON MTR + BYOD ══ -->
+  <div class="news-item">
+    <div class="news-num">03</div>
+    <div class="news-tags">
+      <span class="news-tag mfr">CRESTRON</span>
+      <span class="news-tag">AV</span>
+      <span class="news-tag">MTR</span>
+      <span class="news-tag">BYOD</span>
+      <span class="news-tag">COLLABORATION</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Crestron Ra Mắt Nền Tảng Collaboration Cho Microsoft Teams Rooms + BYOD (5/11/2026)</div>
+      <div class="news-body">
+        <p>Crestron Electronics công bố nền tảng AV collaboration thế hệ mới dành riêng cho Microsoft Teams Rooms (MTR) và môi trường BYOD (Bring Your Own Device), được thiết kế để phục vụ các không gian họp hỗn hợp (hybrid meeting rooms). Hệ thống mới tích hợp Crestron Flex Series với khả năng auto-switching giữa MTR và Zoom/BYOD mà không cần thao tác thủ công.</p>
+        <p>Điểm nổi bật: One-Touch Meeting Join cho cả MTR lẫn BYOD, wireless screen sharing tốc độ cao không cần adapter, camera AI auto-framing với nhận diện người nói, và tích hợp sâu với Microsoft 365 calendar.</p>
+      </div>
+      <div class="news-source">📌 Nguồn: <a href="https://www.avinteractive.com/news/products/crestron-unveils-collaboration-platform-for-mtr-and-byod-05-11-2026/" target="_blank" rel="noopener">AV Interactive — Crestron MTR &amp; BYOD Platform (05/11/2026)</a></div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Crestron Unveils Collaboration Platform for Microsoft Teams Rooms + BYOD (5 Nov 2026)</div>
+      <div class="news-body">
+        <p>Crestron Electronics announced a new generation AV collaboration platform designed specifically for Microsoft Teams Rooms (MTR) and BYOD (Bring Your Own Device) environments, intended to serve hybrid meeting rooms. The new system integrates Crestron Flex Series with auto-switching capability between MTR and Zoom/BYOD without manual intervention.</p>
+        <p>Key highlights: One-Touch Meeting Join for both MTR and BYOD, high-speed wireless screen sharing without adapters, AI auto-framing camera with active speaker tracking, and deep Microsoft 365 calendar integration.</p>
+      </div>
+      <div class="news-source">📌 Source: <a href="https://www.avinteractive.com/news/products/crestron-unveils-collaboration-platform-for-mtr-and-byod-05-11-2026/" target="_blank" rel="noopener">AV Interactive — Crestron MTR &amp; BYOD Platform (05/11/2026)</a></div>
+    </div>
+
+    <div class="diagram-box"><div class="diagram-label">SƠ ĐỒ NGUYÊN LÝ — CRESTRON HYBRID MEETING ROOM ARCHITECTURE</div>
+┌──────────────────────────────────────────────────────────────────┐
+│          CRESTRON HYBRID MEETING ROOM — MTR + BYOD               │
+├──────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  DISPLAY / CAMERAS                                               │
+│  ┌────────────────┐    ┌─────────────────────────────────────┐  │
+│  │  Dual Display  │    │  Crestron AI Camera (Auto-Frame)    │  │
+│  │  Primary + Ext │    │  + Microphone Array (Beamforming)   │  │
+│  └────────┬───────┘    └───────────────────┬─────────────────┘  │
+│           │                                │                     │
+│  CONTROL UNIT                              │                     │
+│  ┌────────▼────────────────────────────────▼─────────────────┐  │
+│  │          CRESTRON FLEX UC-MX70-T (MTR Edition)           │  │
+│  │  ┌───────────────┐    ┌────────────────────────────────┐ │  │
+│  │  │  MTR Mode     │    │   BYOD / ZOOM / TEAMS Mode     │ │  │
+│  │  │  (Dedicated   │◄──►│   Wireless: AirMedia 4K        │ │  │
+│  │  │   Teams PC)   │    │   HDMI: Crestron DigitalMedia  │ │  │
+│  │  └───────────────┘    └────────────────────────────────┘ │  │
+│  │                                                           │  │
+│  │     Auto-Switch (No Manual Intervention Required)        │  │
+│  └───────────────────────────────────────────────────────────┘  │
+│                           │                                      │
+│  ROOM CONTROL PANEL                                              │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │  Crestron TSW-770 (10" Touch Panel)                     │    │
+│  │  • One-Touch Join MTR   • BYOD Share   • Lighting/AVS  │    │
+│  └─────────────────────────────────────────────────────────┘    │
+└──────────────────────────────────────────────────────────────────┘
+</div>
+
+    <div class="why-box">
+      <div class="why-box-label">
+        <span class="vi-content">TẦM QUAN TRỌNG VỚI DỰ ÁN AV VIỆT NAM</span>
+        <span class="en-content">RELEVANCE FOR AV PROJECTS IN VIETNAM</span>
+      </div>
+      <div class="vi-content"><p>Với xu hướng làm việc hybrid ngày càng phổ biến tại các doanh nghiệp FDI và tập đoàn lớn ở Việt Nam (đặc biệt sau khi Microsoft 365 trở thành tiêu chuẩn), giải pháp Crestron MTR+BYOD là lựa chọn lý tưởng cho các dự án phòng họp hội đồng, executive boardroom và learning hub. ELV consultant cần lưu ý đặc tả Crestron Flex MTR trong các BoQ phòng họp từ cấp trung bình trở lên.</p></div>
+      <div class="en-content"><p>With the growing hybrid work trend among FDI companies and large corporations in Vietnam (especially since Microsoft 365 became the standard), the Crestron MTR+BYOD solution is ideal for board meeting rooms, executive boardrooms and learning hubs. ELV consultants should note the Crestron Flex MTR specification in BoQ for mid-range and above meeting rooms.</p></div>
+    </div>
+  </div>
+
+  <!-- ══ TIN 4: SCHNEIDER ECOCARE BMS ══ -->
+  <div class="news-item">
+    <div class="news-num">04</div>
+    <div class="news-tags">
+      <span class="news-tag mfr">SCHNEIDER</span>
+      <span class="news-tag">BMS</span>
+      <span class="news-tag">AI</span>
+      <span class="news-tag">ECOSTRUXURE</span>
+      <span class="news-tag">PREDICTIVE</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Schneider Electric Ra Mắt EcoCare for BMS: AI Dự Đoán Vận Hành Tòa Nhà 24/7</div>
+      <div class="news-body">
+        <p>Schneider Electric công bố EcoCare for BMS — dịch vụ giám sát 24/7 với AI phân tích dữ liệu thời gian thực cho hệ thống quản lý tòa nhà (Building Management System). EcoCare tích hợp với nền tảng EcoStruxure Building hiện có, cung cấp khả năng dự báo sự cố thiết bị (predictive maintenance), tối ưu hoá tiêu thụ năng lượng và cảnh báo bất thường tự động.</p>
+        <p>Tính năng nổi bật: AI engine phân tích hơn 10,000 data points/phút từ BMS, digital twin của tòa nhà, báo cáo ESG tự động, và remote expert service từ trung tâm hỗ trợ toàn cầu Schneider.</p>
+      </div>
+      <div class="news-source">📌 Nguồn: <a href="https://www.se.com/us/en/about-us/newsroom/news/press-releases/Schneider-Electric-Launches-EcoCare-for-BMS-to-Deliver-RealTime-Operational-Intelligence-for-Modern-Buildings-6a0b46e9a9d67c9a280ed62d/" target="_blank" rel="noopener">Schneider Electric Newsroom — EcoCare for BMS</a> | <a href="https://www.arcweb.com/blog/schneider-electric-launches-ecocare-bms-support-predictive-building-operations" target="_blank" rel="noopener">ARC Advisory Group</a></div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Schneider Electric Launches EcoCare for BMS: AI-Powered Predictive Building Operations 24/7</div>
+      <div class="news-body">
+        <p>Schneider Electric announced EcoCare for BMS — a 24/7 monitoring service with AI real-time data analysis for Building Management Systems. EcoCare integrates with the existing EcoStruxure Building platform, providing predictive maintenance, energy consumption optimization, and automated anomaly alerts.</p>
+        <p>Standout features: AI engine analyzing over 10,000 data points/minute from BMS, building digital twin, automated ESG reporting, and remote expert service from Schneider's global support centers.</p>
+      </div>
+      <div class="news-source">📌 Source: <a href="https://www.se.com/us/en/about-us/newsroom/news/press-releases/Schneider-Electric-Launches-EcoCare-for-BMS-to-Deliver-RealTime-Operational-Intelligence-for-Modern-Buildings-6a0b46e9a9d67c9a280ed62d/" target="_blank" rel="noopener">Schneider Electric Newsroom — EcoCare for BMS</a> | <a href="https://www.arcweb.com/blog/schneider-electric-launches-ecocare-bms-support-predictive-building-operations" target="_blank" rel="noopener">ARC Advisory Group</a></div>
+    </div>
+
+    <div class="diagram-box"><div class="diagram-label">SƠ ĐỒ NGUYÊN LÝ — SCHNEIDER ECOCARE FOR BMS ARCHITECTURE</div>
+┌──────────────────────────────────────────────────────────────────┐
+│          SCHNEIDER ECOSTRUXURE BMS + ECOCARE PLATFORM            │
+├──────────────────────────────────────────────────────────────────┤
+│  CLOUD / AI LAYER (EcoCare Service)                              │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │  Schneider Remote Expert Center (24/7 Global)          │    │
+│  │  • AI Predictive Maintenance Engine (10K pts/min)      │    │
+│  │  • Building Digital Twin  • ESG Auto-Reporting         │    │
+│  │  • Anomaly Detection + Alert → Email/SMS/Mobile App    │    │
+│  └─────────────────────────────────────────────────────────┘    │
+│                           ▲ Secure Cloud Link                    │
+│  EDGE / SITE LAYER                                               │
+│  ┌─────────────────────────────────────────────────────────┐    │
+│  │  EcoStruxure Building Operation (EBO) Server           │    │
+│  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ │    │
+│  │  │  HVAC    │ │ Lighting │ │  Power   │ │  Fire    │ │    │
+│  │  │ BACnet/  │ │ DALI 2   │ │ Metering │ │ Modbus   │ │    │
+│  │  │ Modbus   │ │ KNX      │ │ ION meter│ │ Protocol │ │    │
+│  │  └──────────┘ └──────────┘ └──────────┘ └──────────┘ │    │
+│  └─────────────────────────────────────────────────────────┘    │
+│                                                                  │
+│  PHYSICAL LAYER: Sensors, Actuators, Sub-metering               │
+└──────────────────────────────────────────────────────────────────┘
+</div>
+
+    <div class="why-box">
+      <div class="why-box-label">
+        <span class="vi-content">TẦM QUAN TRỌNG VỚI DỰ ÁN BMS VIỆT NAM</span>
+        <span class="en-content">RELEVANCE FOR BMS PROJECTS IN VIETNAM</span>
+      </div>
+      <div class="vi-content"><p>EcoCare for BMS đặt ra xu hướng mới: BMS không còn chỉ là hệ thống "giám sát thụ động" mà chuyển sang "dịch vụ vận hành chủ động có AI". Với các chủ đầu tư lớn tại Việt Nam (văn phòng hạng A, bệnh viện, resort, khu công nghiệp), đây là cơ sở để ELV consultant đề xuất gói O&M (Operation & Maintenance) tích hợp AI, nâng cao giá trị hợp đồng vòng đời tòa nhà đáng kể.</p></div>
+      <div class="en-content"><p>EcoCare for BMS sets a new trend: BMS is no longer just a "passive monitoring" system but evolves into an "active AI-powered operations service." For major Vietnamese investors (Grade A offices, hospitals, resorts, industrial parks), this is the basis for ELV consultants to propose AI-integrated O&amp;M (Operation &amp; Maintenance) packages, significantly increasing the value of building lifecycle contracts.</p></div>
+    </div>
+  </div>
+
+  <!-- ══ TIN 5: SECUTECH VIETNAM 2026 ══ -->
+  <div class="news-item">
+    <div class="news-num">05</div>
+    <div class="news-tags">
+      <span class="news-tag mfr">SECUTECH VN</span>
+      <span class="news-tag">VIETNAM</span>
+      <span class="news-tag">SMART BUILDING</span>
+      <span class="news-tag">SECURITY</span>
+      <span class="news-tag">ELV</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Secutech Vietnam 2026 — Triển Lãm Hà Nội: Thị Trường An Ninh & Hạ Tầng Thông Minh Bùng Nổ</div>
+      <div class="news-body">
+        <p>Secutech Vietnam 2026 trở lại Hà Nội với quy mô lớn hơn, phản ánh nhu cầu bùng nổ của thị trường an ninh tích hợp AI, hạ tầng ELV và smart building tại Việt Nam. Triển lãm quy tụ hơn 200 nhà triển lãm từ 20+ quốc gia, trình diễn các giải pháp AI security, IP camera, hệ thống kiểm soát ra vào sinh trắc học, tổng đài IP, hệ thống báo cháy thông minh và BMS tích hợp.</p>
+        <p>Thị trường an ninh Việt Nam được dự báo đạt quy mô $15 tỷ USD vào 2030, với tốc độ tăng trưởng CAGR 18.5%. Các phân khúc tăng trưởng mạnh: AI camera surveillance, access control sinh trắc học và smart building automation.</p>
+      </div>
+      <div class="news-source">📌 Nguồn: <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/press/press-releases/2026/STVN26_PR1.html" target="_blank" rel="noopener">Secutech Vietnam 2026 Press Release — Hanoi</a> | <a href="https://www.sourcesecurity.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" rel="noopener">SourceSecurity.com</a></div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Secutech Vietnam 2026 — Hanoi Exhibition: Security & Smart Infrastructure Market Booms</div>
+      <div class="news-body">
+        <p>Secutech Vietnam 2026 returns to Hanoi on a larger scale, reflecting the explosive demand for AI-integrated security, ELV infrastructure and smart buildings in Vietnam. The exhibition brings together over 200 exhibitors from 20+ countries, showcasing AI security solutions, IP cameras, biometric access control, IP intercoms, smart fire alarm systems, and integrated BMS.</p>
+        <p>Vietnam's security market is projected to reach $15 billion USD by 2030, with an 18.5% CAGR. Strongest growth segments: AI camera surveillance, biometric access control, and smart building automation.</p>
+      </div>
+      <div class="news-source">📌 Source: <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/press/press-releases/2026/STVN26_PR1.html" target="_blank" rel="noopener">Secutech Vietnam 2026 Press Release — Hanoi</a> | <a href="https://www.sourcesecurity.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" rel="noopener">SourceSecurity.com</a></div>
+    </div>
+
+    <div class="diagram-box"><div class="diagram-label">BỨC TRANH THỊ TRƯỜNG — VIETNAM SECURITY & ELV MARKET 2026</div>
+┌──────────────────────────────────────────────────────────────────┐
+│          VIETNAM SECURITY & SMART BUILDING MARKET 2026           │
+├──────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│  Tổng thị trường / Market Size 2026: ~$8.5 Tỷ USD              │
+│  Dự báo / Forecast 2030: $15 Tỷ USD  |  CAGR: 18.5%           │
+│                                                                  │
+│  PHÂN KHÚC / SEGMENTS:                                           │
+│  ┌─────────────────────────┬──────────────┬──────────────────┐  │
+│  │ Phân Khúc / Segment     │ 2026 Share % │ CAGR 2026-2030  │  │
+│  ├─────────────────────────┼──────────────┼──────────────────┤  │
+│  │ AI Camera Surveillance  │    38%       │    22% ▲▲▲      │  │
+│  │ Access Control + Biomet │    24%       │    19% ▲▲▲      │  │
+│  │ Smart Fire & Detection  │    18%       │    15% ▲▲       │  │
+│  │ BMS & Building Autom.   │    12%       │    24% ▲▲▲▲     │  │
+│  │ AV & Collaboration      │     8%       │    17% ▲▲       │  │
+│  └─────────────────────────┴──────────────┴──────────────────┘  │
+│                                                                  │
+│  KEY DRIVERS: Đô thị hoá • FDI vào KCN • Quy định PCCC mới     │
+│               AI adoption • Smart City initiatives              │
+└──────────────────────────────────────────────────────────────────┘
+</div>
+
+    <div class="why-box">
+      <div class="why-box-label">
+        <span class="vi-content">TẦM QUAN TRỌNG VỚI ELV CONSULTANT VIỆT NAM</span>
+        <span class="en-content">RELEVANCE FOR ELV CONSULTANTS IN VIETNAM</span>
+      </div>
+      <div class="vi-content"><p>Secutech Vietnam 2026 là điểm chuẩn thị trường quan trọng nhất trong năm cho cộng đồng ELV/ICT/AV Việt Nam. Với tăng trưởng BMS đạt CAGR 24%, đây là cơ hội lớn cho các ELV consultant và nhà thiết kế tại Duy Hoa Phat Corporation và HBP Project Management đề xuất gói thiết kế BMS tích hợp AI ngay từ giai đoạn schematic design của dự án. Thị trường đang chín muồi cho các dịch vụ tư vấn ELV chuyên sâu.</p></div>
+      <div class="en-content"><p>Secutech Vietnam 2026 is the most important market benchmark of the year for Vietnam's ELV/ICT/AV community. With BMS growth reaching 24% CAGR, this is a major opportunity for ELV consultants and designers at Duy Hoa Phat Corporation and HBP Project Management to propose AI-integrated BMS design packages from the schematic design phase. The market is ripe for specialized ELV consulting services.</p></div>
+    </div>
+  </div>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <h3>
+      <span class="vi-content">🔧 BẠN CẦN TƯ VẤN THIẾT KẾ ELV/ICT/AV?</span>
+      <span class="en-content">🔧 NEED ELV/ICT/AV DESIGN CONSULTING?</span>
+    </h3>
+    <p>
+      <span class="vi-content">Paul Le — ELV/ICT/AV Design Director tại Duy Hoa Phat Corporation &amp; HBP Project Management. Chuyên thiết kế hệ thống ELV, ICT và AV cho các dự án quy mô lớn tại Việt Nam.</span>
+      <span class="en-content">Paul Le — ELV/ICT/AV Design Director at Duy Hoa Phat Corporation &amp; HBP Project Management. Specialized in ELV, ICT and AV system design for large-scale projects in Vietnam.</span>
+    </p>
+    <a href="https://elvconsultant.com/#contact" class="cta-btn">
+      <span class="vi-content">LIÊN HỆ TƯ VẤN →</span>
+      <span class="en-content">GET IN TOUCH →</span>
+    </a>
+  </div>
+
+  <!-- BACK TO BLOG -->
+  <div style="text-align:center;padding:1rem 0 2rem;">
+    <a href="/blog/" style="font-family:'Orbitron',monospace;font-size:11px;letter-spacing:2px;color:var(--steel);text-decoration:none;border-bottom:1px solid var(--card-border);padding-bottom:3px;transition:color 0.2s;"
+       onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--steel)'">
+      ← TẤT CẢ BÀI VIẾT / ALL POSTS
+    </a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo">
+      <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+        <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      </svg>
+      <div style="margin-left:8px;">
+        <span class="logo-text" style="font-family:'Orbitron',monospace;font-size:12px;font-weight:700;color:var(--white);">PAUL LE</span>
+        <span class="logo-sub" style="font-family:'Orbitron',monospace;font-size:8px;color:var(--cyan);letter-spacing:2px;display:block;">ELV · ICT · AV CONSULTANT</span>
+      </div>
+    </a>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Paul Le Consultant — elvconsultant.com</div>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
