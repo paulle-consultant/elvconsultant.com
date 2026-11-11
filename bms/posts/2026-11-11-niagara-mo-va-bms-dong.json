@@ -1,0 +1,116 @@
+{
+ "date": "2026-11-11",
+ "slug": "niagara-mo-va-bms-dong",
+ "pillar_vi": "So sánh kỹ thuật & giải pháp",
+ "pillar_en": "Technical comparison",
+ "title_vi": "Niagara mở và BMS đóng",
+ "title_en": "Open Niagara versus closed BMS",
+ "lead_vi": "Một tòa nhà dùng BMS 15 đến 20 năm, lâu hơn vòng đời của hầu hết hợp đồng bảo trì. Bài này so sánh BMS mở trên Niagara 4 với BMS đóng theo ba tiêu chí kỹ thuật: mở rộng, bảo trì và khả năng đổi nhà tích hợp.",
+ "lead_en": "A building runs its BMS for 15 to 20 years, longer than most maintenance contracts. This post compares an open BMS on Niagara 4 with a closed BMS on three engineering criteria: expansion, maintenance and the ability to change integrator.",
+ "tags": [
+  "Mitsubishi Electric",
+  "Diamond Controls",
+  "Niagara 4",
+  "BACnet/IP",
+  "Open protocol",
+  "DCM 9000",
+  "BMS handover"
+ ],
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 630\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sơ đồ nguyên lý so sánh BMS mở trên Niagara 4 và BMS đóng\" font-family=\"'Maison Sans',system-ui,sans-serif\"><style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.ln2{stroke:#5A5141;stroke-width:1.2;fill:none}.p{fill:#C9A96A;font-size:12px}</style><text class=\"k\" x=\"20\" y=\"28\">OPEN: NIAGARA 4 / DIAMOND CONTROLS</text><text class=\"k\" x=\"500\" y=\"28\">CLOSED: PROPRIETARY BMS</text><rect class=\"b\" x=\"20\" y=\"44\" width=\"440\" height=\"86\"/><text class=\"t\" x=\"36\" y=\"72\">Niagara 4 Supervisor</text><text class=\"s\" x=\"36\" y=\"94\">Any Niagara-certified integrator, Workbench</text><text class=\"s\" x=\"36\" y=\"111\">Station backup and admin accounts held by owner</text><rect class=\"b2\" x=\"500\" y=\"44\" width=\"440\" height=\"86\"/><text class=\"t\" x=\"516\" y=\"72\">Vendor head-end</text><text class=\"s\" x=\"516\" y=\"94\">Engineering tool supplied to vendor partners only</text><text class=\"s\" x=\"516\" y=\"111\">Database and licence tied to the vendor channel</text><path class=\"ln\" d=\"M240 130V190\"/><path class=\"ln2\" d=\"M720 130V190\"/><text class=\"p\" x=\"252\" y=\"165\">BACnet/IP UDP 47808 · Fox (TLS)</text><text class=\"p\" x=\"732\" y=\"165\">Proprietary IP protocol</text><rect class=\"b\" x=\"20\" y=\"190\" width=\"440\" height=\"104\"/><text class=\"t\" x=\"36\" y=\"218\">DCM 9000 · DCM-8044</text><text class=\"s\" x=\"36\" y=\"240\">BACnet/IP, Modbus TCP, all Tridium drivers in licence</text><text class=\"s\" x=\"36\" y=\"257\">DCM 9000: 2× RS-485, up to 4 expansion modules</text><text class=\"s\" x=\"36\" y=\"274\">Licence by tier: DCM-9005 to DCM-9200</text><rect class=\"b2\" x=\"500\" y=\"190\" width=\"440\" height=\"104\"/><text class=\"t\" x=\"516\" y=\"218\">Vendor controller</text><text class=\"s\" x=\"516\" y=\"240\">Programs stored in the vendor format</text><text class=\"s\" x=\"516\" y=\"257\">Spares and firmware through one channel</text><text class=\"s\" x=\"516\" y=\"274\">BACnet only where the vendor exposes it</text><path class=\"ln\" d=\"M240 294V354\"/><path class=\"ln2\" d=\"M720 294V354\"/><text class=\"p\" x=\"252\" y=\"329\">BACnet MS/TP · Modbus RTU</text><text class=\"p\" x=\"732\" y=\"329\">Vendor field bus</text><rect class=\"b\" x=\"20\" y=\"354\" width=\"440\" height=\"86\"/><text class=\"t\" x=\"36\" y=\"382\">Field devices, any brand</text><text class=\"s\" x=\"36\" y=\"404\">VRF, chiller, VFD, energy meter, DCM-8446</text><text class=\"s\" x=\"36\" y=\"421\">Remote IO-0800 / IO-6020 / IO-0008-485</text><rect class=\"b2\" x=\"500\" y=\"354\" width=\"440\" height=\"86\"/><text class=\"t\" x=\"516\" y=\"382\">Third-party equipment</text><text class=\"s\" x=\"516\" y=\"404\">Enters through a vendor gateway</text><text class=\"s\" x=\"516\" y=\"421\">Point mapping done by the vendor partner</text><text class=\"k\" x=\"20\" y=\"482\">HANDOVER CHECKLIST FOR AN OPEN SYSTEM</text><rect class=\"b\" x=\"20\" y=\"498\" width=\"920\" height=\"112\"/><text class=\"s\" x=\"36\" y=\"530\">Station files, backup, admin passwords</text><text class=\"s\" x=\"490\" y=\"530\">Point list, wiring drawings, APM programs</text><text class=\"s\" x=\"36\" y=\"554\">Workbench version and Niagara licence (host ID)</text><text class=\"s\" x=\"490\" y=\"554\">Licence headroom: DCM-9025 = 25 devices / 1,250 points</text><text class=\"s\" x=\"36\" y=\"578\">NiCS: station accepts other Niagara brands</text><text class=\"s\" x=\"490\" y=\"578\">BACnet device IDs and network numbers</text></svg>",
+  "caption_vi": "SĐNL so sánh: bên trái BMS mở Niagara 4 với DCM 9000, DCM-8044 và thiết bị hiện trường nhiều hãng qua BACnet và Modbus; bên phải BMS đóng với head-end, controller và field bus của một hãng. Dưới cùng là danh mục bàn giao để chủ đầu tư giữ quyền với hệ thống.",
+  "caption_en": "Comparison schematic: left, an open Niagara 4 BMS with DCM 9000, DCM-8044 and multi-brand field devices over BACnet and Modbus; right, a closed BMS with one vendor's head-end, controllers and field bus. Bottom: the handover checklist that keeps the owner in control of the system."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>Chủ đầu tư thường chọn BMS theo bản chào thầu, rồi 3 đến 5 năm sau mới gặp câu hỏi thật: thêm một tầng, thay chiller, đổi đơn vị bảo trì thì ai làm được. Với BMS đóng, giao thức giữa head-end và controller, công cụ lập trình và license đều do một kênh của hãng nắm. Đơn vị bảo trì mới không mở được chương trình, thiết bị hãng khác phải đi qua gateway riêng. Hệ thống vẫn chạy, nhưng mọi thay đổi phụ thuộc một nhà thầu.</p>",
+   "en": "<p>Owners usually pick a BMS from the tender offer, and the real question comes 3 to 5 years later: who can add a floor, replace a chiller or take over maintenance. In a closed BMS the head-end to controller protocol, the programming tool and the licences sit with one vendor channel. A new maintenance contractor cannot open the programs, and other brands enter through a dedicated gateway. The system keeps running, but every change depends on one contractor.</p>"
+  },
+  {
+   "h_vi": "Giải pháp: Niagara 4 và bàn giao đủ",
+   "h_en": "Solution: Niagara 4 and a full handover",
+   "vi": "<ul><li><strong>Nền tảng mở:</strong> Diamond Controls của Mitsubishi Electric chạy trên Tridium Niagara Framework. Station Niagara 4 mở bằng Workbench, nhà tích hợp có chứng chỉ Niagara đều làm việc được.</li><li><strong>Giao thức chuẩn từ trên xuống dưới:</strong> BACnet/IP (UDP 47808) và Fox TLS ở tầng quản lý, BACnet MS/TP và Modbus RTU ở tầng hiện trường. DCM-8044 có chứng nhận BTL.</li><li><strong>Driver có sẵn:</strong> license DCM-9005 đến DCM-9200 đã gồm toàn bộ driver Tridium, nên VRF, chiller, đồng hồ điện của hãng khác vào thẳng station, không cần gateway riêng của nhà sản xuất BMS.</li><li><strong>Bàn giao là điều kiện nghiệm thu:</strong> file station, backup, tài khoản admin, license, point list và chương trình APM ghi vào hợp đồng.</li></ul>",
+   "en": "<ul><li><strong>Open platform:</strong> Mitsubishi Electric Diamond Controls runs on the Tridium Niagara Framework. A Niagara 4 station opens in Workbench, so any Niagara-certified integrator can work on it.</li><li><strong>Standard protocols top to bottom:</strong> BACnet/IP (UDP 47808) and Fox TLS at management level, BACnet MS/TP and Modbus RTU in the field. The DCM-8044 is BTL listed.</li><li><strong>Drivers included:</strong> DCM-9005 to DCM-9200 licences include all Tridium drivers, so other brands' VRF, chillers and energy meters land directly in the station without a BMS-vendor gateway.</li><li><strong>Handover as an acceptance condition:</strong> station files, backup, admin accounts, licence, point list and APM programs are written into the contract.</li></ul>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<ol><li><strong>Mở rộng theo bậc license.</strong> DCM-9005 cho 5 thiết bị/250 điểm, DCM-9025 cho 25/1.250, DCM-9200 cho 200/10.000. Khi tòa nhà thêm tải, nâng bằng gói DEVICE-10/25/50 trên cùng phần cứng. Ghi số điểm dự phòng vào thiết kế từ đầu.</li><li><strong>Mở rộng phần cứng.</strong> DCM 9000 có 2 cổng RS-485 cách ly và nhận tối đa 4 module (LON, RS-232, 2× RS-485). DCM-8446 lắp thêm GW-112 thành controller IP, cổng COM2 làm BACnet router tới 32 thiết bị.</li><li><strong>Kiểm tra NiCS.</strong> Mỗi thiết bị Niagara có Niagara Compatibility Statement quy định station và Workbench của thương hiệu nào được kết nối. Yêu cầu NiCS mở trong hồ sơ mời thầu để không bị khóa ngược ngay trên nền tảng mở.</li><li><strong>Bảo trì.</strong> Lập trình DDC bằng APM trong Niagara 4, cùng một công cụ cho supervisor và controller. Đơn vị bảo trì mới chỉ cần backup station và license host ID để tiếp quản.</li><li><strong>Công bằng với BMS đóng.</strong> Hệ đóng có ưu điểm: một hãng chịu trách nhiệm từ cảm biến tới phần mềm, tổ hợp thiết bị đã được thử sẵn. Phù hợp khi chủ đầu tư ký bảo trì dài hạn với chính hãng và ít đổi công năng.</li></ol>",
+   "en": "<ol><li><strong>Expand by licence tier.</strong> DCM-9005 covers 5 devices/250 points, DCM-9025 25/1,250, DCM-9200 200/10,000. As the building adds load, upgrade with DEVICE-10/25/50 on the same hardware. Put spare point capacity in the design from day one.</li><li><strong>Expand the hardware.</strong> The DCM 9000 has 2 isolated RS-485 ports and takes up to 4 modules (LON, RS-232, 2× RS-485). A DCM-8446 with a GW-112 becomes an IP controller, and its COM2 works as a BACnet router for up to 32 devices.</li><li><strong>Check the NiCS.</strong> Every Niagara device has a Niagara Compatibility Statement that defines which brands' stations and Workbench may connect. Ask for an open NiCS in the tender so the open platform is not locked from the inside.</li><li><strong>Maintenance.</strong> DDC programs are written with APM inside Niagara 4, one tool for supervisor and controllers. A new maintenance contractor needs the station backup and the licence host ID to take over.</li><li><strong>Fair to closed systems.</strong> A closed BMS has real strengths: one vendor answers for everything from sensor to software, and device combinations are pre-tested. It fits owners who sign long-term maintenance with the vendor and rarely change building use.</li></ol>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<p><strong>Văn phòng cho thuê, trung tâm thương mại:</strong> khách thuê đổi layout liên tục, cần thêm điểm mà không phụ thuộc một nhà thầu. <strong>Khách sạn, bệnh viện:</strong> nhiều hệ của nhiều hãng (VRF, chiller, thang máy, đồng hồ điện) về một giao diện. <strong>Nhà máy, khu công nghiệp:</strong> BMS gom thêm Modbus TCP từ PLC và đồng hồ năng lượng để làm báo cáo tiêu thụ. <strong>Danh mục đầu tư nhiều tòa:</strong> mỗi tòa một DCM 9000, chung một Supervisor.</p>",
+   "en": "<p><strong>Leased offices, shopping malls:</strong> tenants change layouts all the time and points must be added without depending on one contractor. <strong>Hotels, hospitals:</strong> many systems from many brands (VRF, chillers, lifts, energy meters) on one interface. <strong>Factories, industrial parks:</strong> the BMS also collects Modbus TCP from PLCs and energy meters for consumption reports. <strong>Multi-building portfolios:</strong> one DCM 9000 per building, one shared Supervisor.</p>"
+  }
+ ],
+ "table": {
+  "caption_vi": "So sánh kỹ thuật BMS mở Niagara 4 và BMS đóng",
+  "caption_en": "Technical comparison: open Niagara 4 BMS versus closed BMS",
+  "head": [
+   "Tiêu chí / Criterion",
+   "Niagara 4 (Diamond Controls)",
+   "BMS đóng / Closed BMS"
+  ],
+  "rows": [
+   [
+    "Giao thức tầng quản lý / Management protocol",
+    "BACnet/IP, Fox TLS, Modbus TCP",
+    "Giao thức riêng của hãng / Vendor protocol"
+   ],
+   [
+    "Tầng hiện trường / Field bus",
+    "BACnet MS/TP, Modbus RTU, LON (module)",
+    "Field bus của hãng / Vendor field bus"
+   ],
+   [
+    "Thiết bị hãng khác / Other brands",
+    "Driver Tridium có sẵn trong license / Drivers in licence",
+    "Qua gateway của hãng / Via vendor gateway"
+   ],
+   [
+    "Công cụ lập trình / Engineering tool",
+    "Workbench, APM",
+    "Công cụ của hãng / Vendor tool"
+   ],
+   [
+    "Đổi nhà tích hợp / Change integrator",
+    "Nhà tích hợp Niagara, NiCS mở / Niagara integrator, open NiCS",
+    "Đối tác của hãng / Vendor partner"
+   ],
+   [
+    "Mở rộng / Expansion",
+    "DCM-9005 đến DCM-9200, gói DEVICE-10/25/50",
+    "Theo dòng sản phẩm của hãng / Vendor range"
+   ],
+   [
+    "Điểm mạnh / Strength",
+    "Độ mở, nhiều hãng, tiếp quản dễ / Openness, multi-brand",
+    "Một đầu mối, tổ hợp đã thử / Single source, pre-tested"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "Mitsubishi Electric Asia, Diamond Controls catalogue (2023): DCM 9000 licences, expansion, drivers"
+  },
+  {
+   "title": "Mitsubishi Electric Asia, DCM-8044/DCM-8044-D with IO Modules (2024); DCM-8446 and GW-112"
+  },
+  {
+   "title": "Mitsubishi Electric Vietnam, Building Management System",
+   "url": "https://buildingsolutions.mitsubishi-electric.vn/en/bms/"
+  }
+ ],
+ "x_post": "A BMS runs 15 to 20 years. Who can still open it after year 5?\n\n• Niagara 4: BACnet/IP, Modbus, Workbench\n• Tridium drivers in the DCM 9000 licence\n• Ask for an open NiCS in the tender\n• Hand over station backup and licence\n\nFull schematic on the blog, link in bio.",
+ "fb_post": "Một BMS chạy 15 đến 20 năm. Năm thứ 5 đổi đơn vị bảo trì, ai còn mở được chương trình?\n\nBMS đóng chạy giao thức, công cụ lập trình và license riêng của một hãng. Ưu điểm là một đầu mối chịu trách nhiệm. Nhược điểm là mọi thay đổi phụ thuộc một kênh.\n\nBMS mở trên Niagara 4 (Mitsubishi Electric Diamond Controls):\n1. BACnet/IP, Fox TLS ở tầng quản lý; BACnet MS/TP, Modbus RTU ở hiện trường\n2. License DCM-9005 đến DCM-9200 đã gồm driver Tridium, VRF và chiller hãng khác vào thẳng station\n3. Mở rộng từ 250 lên 10.000 điểm bằng nâng bậc license, giữ nguyên phần cứng\n4. Yêu cầu NiCS mở trong hồ sơ mời thầu\n5. Bàn giao file station, backup, tài khoản admin, license, point list là điều kiện nghiệm thu\n\nSơ đồ nguyên lý và bảng so sánh kỹ thuật:\nhttps://elvconsultant.com/blog/bms/2026-11-11-niagara-mo-va-bms-dong.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #Niagara4 #MitsubishiElectric #DiamondControls #BACnet",
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1650077259482-f78e7ef546aa?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Dây điều khiển đấu nối trong tủ điện",
+  "credit": "Alexey Demidov",
+  "credit_url": "https://unsplash.com/photos/a-close-up-of-a-bunch-of-wires-in-a-box-2V--Mzo0eXs"
+ }
+}

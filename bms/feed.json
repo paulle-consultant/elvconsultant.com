@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-11",
+  "slug": "niagara-mo-va-bms-dong",
+  "title_vi": "Niagara mở và BMS đóng",
+  "title_en": "Open Niagara versus closed BMS",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-11-niagara-mo-va-bms-dong.html",
+  "x_post": "A BMS runs 15 to 20 years. Who can still open it after year 5?\n\n• Niagara 4: BACnet/IP, Modbus, Workbench\n• Tridium drivers in the DCM 9000 licence\n• Ask for an open NiCS in the tender\n• Hand over station backup and licence\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Một BMS chạy 15 đến 20 năm. Năm thứ 5 đổi đơn vị bảo trì, ai còn mở được chương trình?\n\nBMS đóng chạy giao thức, công cụ lập trình và license riêng của một hãng. Ưu điểm là một đầu mối chịu trách nhiệm. Nhược điểm là mọi thay đổi phụ thuộc một kênh.\n\nBMS mở trên Niagara 4 (Mitsubishi Electric Diamond Controls):\n1. BACnet/IP, Fox TLS ở tầng quản lý; BACnet MS/TP, Modbus RTU ở hiện trường\n2. License DCM-9005 đến DCM-9200 đã gồm driver Tridium, VRF và chiller hãng khác vào thẳng station\n3. Mở rộng từ 250 lên 10.000 điểm bằng nâng bậc license, giữ nguyên phần cứng\n4. Yêu cầu NiCS mở trong hồ sơ mời thầu\n5. Bàn giao file station, backup, tài khoản admin, license, point list là điều kiện nghiệm thu\n\nSơ đồ nguyên lý và bảng so sánh kỹ thuật:\nhttps://elvconsultant.com/blog/bms/2026-11-11-niagara-mo-va-bms-dong.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #Niagara4 #MitsubishiElectric #DiamondControls #BACnet"
+ },
+ {
   "date": "2026-11-10",
   "slug": "dcm-8044-d-ahu-vav-gan-io",
   "title_vi": "DCM-8044-D cho AHU VAV: gán IO",

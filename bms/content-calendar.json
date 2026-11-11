@@ -53,7 +53,8 @@
    "pillar": "So sánh kỹ thuật & giải pháp",
    "pillar_en": "Technical comparison",
    "topic": "Niagara mở và BMS đóng: khả năng mở rộng, bảo trì, đổi nhà tích hợp",
-   "status": "planned"
+   "status": "published",
+   "slug": "niagara-mo-va-bms-dong"
   },
   {
    "date": "2026-11-12",
