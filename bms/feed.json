@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-12",
+  "slug": "luat-77-2025-toa-nha-do-dem-nang-luong",
+  "title_vi": "Luật 77/2025: tòa nhà phải đo gì",
+  "title_en": "Law 77/2025: what buildings must meter",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-12-luat-77-2025-toa-nha-do-dem-nang-luong.html",
+  "x_post": "Vietnam, Law 77/2025: buildings using 500 TOE/year or more are key energy users.\n\n• Metering to standard, accurate data\n• Energy audit every 3 years\n• Sub-meters by system on Modbus\n• Niagara 4 logs for the energy balance\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Tòa nhà tiêu thụ từ 500 TOE/năm là cơ sở sử dụng năng lượng trọng điểm theo Luật 77/2025/QH15 (hiệu lực 01/01/2026) và Nghị định 30/2026/NĐ-CP.\n\nNghĩa vụ chính: lập kế hoạch năm và 5 năm, chỉ định người quản lý năng lượng, kiểm toán năng lượng bắt buộc 3 năm một lần, duy trì hệ thống đo đếm đạt chuẩn và lập bảng cân bằng năng lượng. Công tơ tổng của điện lực không đủ cho việc này.\n\nBMS cần đo:\n1. Đồng hồ tổng MSB qua Modbus TCP: kWh, kW, PF, THD\n2. Đồng hồ nhánh chiller, AHU, chiếu sáng, thang máy, bơm qua Modbus RTU về DCM 9000\n3. Đồng hồ BTU nước lạnh để tính hiệu suất plant\n4. Nước và dầu máy phát qua DI, 4–20 mA vào DCM-8044-D\n5. Niagara 4 lưu trend, ICONICS GENESIS làm báo cáo năng lượng\n\nSơ đồ nguyên lý và danh mục đo đếm:\nhttps://elvconsultant.com/blog/bms/2026-11-12-luat-77-2025-toa-nha-do-dem-nang-luong.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #TietKiemNangLuong #Luat77 #MitsubishiElectric #Niagara4"
+ },
+ {
   "date": "2026-11-11",
   "slug": "niagara-mo-va-bms-dong",
   "title_vi": "Niagara mở và BMS đóng",
