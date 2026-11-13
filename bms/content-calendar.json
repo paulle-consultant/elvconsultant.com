@@ -69,7 +69,8 @@
    "pillar": "Tích hợp hệ thống",
    "pillar_en": "System integration",
    "topic": "Tích hợp thang máy Mitsubishi vào BMS: giám sát trạng thái và lỗi",
-   "status": "planned"
+   "status": "published",
+   "slug": "tich-hop-thang-may-mitsubishi-vao-bms"
   },
   {
    "date": "2026-11-14",

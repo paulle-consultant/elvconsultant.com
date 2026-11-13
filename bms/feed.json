@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-13",
+  "slug": "tich-hop-thang-may-mitsubishi-vao-bms",
+  "title_vi": "Thang máy Mitsubishi trên màn hình BMS",
+  "title_en": "Mitsubishi elevators on the BMS",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-13-tich-hop-thang-may-mitsubishi-vao-bms.html",
+  "x_post": "4 elevators, 20 status points on the BMS.\n\n• 5 dry contacts per car: run, fault, fire recall, standby power, out of service\n• 3 x IO-0800-485, 3.7 kV isolated\n• DCM-8044-D to Niagara over BACnet/IP\n• Fire recall stays hard-wired\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Tòa nhà 4 thang máy cần 20 tín hiệu trạng thái về BMS. Phần lớn hồ sơ thiết kế chỉ ghi \"giám sát thang máy\" mà không có bảng tín hiệu, đến nghiệm thu mới vỡ.\n\nCách làm gọn với Diamond Controls:\n1. Mỗi thang cấp 5 tiếp điểm khô: bình thường, lỗi, đã về tầng FER, chạy nguồn dự phòng, ngoài phục vụ\n2. 3 module IO-0800-485 (8 DI, cách ly 3,7 kV) nhận 20 DI\n3. DCM-8044-D làm Modbus master trên RS-485, thêm đồng hồ điện tủ MCC thang\n4. Dữ liệu lên Niagara 4 qua BACnet/IP: alarm lỗi, giờ chạy, kWh thang máy\n5. Lệnh thang về tầng khi cháy (FER) đi dây cứng từ tủ báo cháy, không qua BMS\n\nTổ hợp nhiều nhóm thang dùng thêm MelEye của Mitsubishi Electric; giao diện MelEye sang BMS cần chốt với hãng theo dự án.\n\nSơ đồ nguyên lý và bảng điểm:\nhttps://elvconsultant.com/blog/bms/2026-11-13-tich-hop-thang-may-mitsubishi-vao-bms.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #ThangMay #MitsubishiElectric #Niagara4 #DiamondControls"
+ },
+ {
   "date": "2026-11-12",
   "slug": "luat-77-2025-toa-nha-do-dem-nang-luong",
   "title_vi": "Luật 77/2025: tòa nhà phải đo gì",
