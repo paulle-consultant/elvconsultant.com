@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly W46 | 13 Nov 2026 — Axis OS 13 · Crestron Collab · Schneider EcoCare · Genetec SaaS · Vietnam $5B Digital</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 46 — 13 tháng 11, 2026: Axis OS 13, Crestron Collab Compute, Schneider EcoCare BMS, Genetec SaaS, Vietnam Digital $5B.">
+  <meta name="author" content="Paul Le Consultant">
+  <meta property="og:title" content="ELV/ICT/AV Weekly W46 | 13 Nov 2026">
+  <meta property="og:description" content="5 tin nổi bật: Axis OS 13 · Crestron Collab Engine · Schneider EcoCare AI BMS · Genetec SaaS · Vietnam $5B Digital Infrastructure">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1782945217386-300f33f22069?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:url" content="https://elvconsultant.com/blog/2026-11-13-elv-ict-av-weekly.html">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-13-elv-ict-av-weekly.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --bg:#07111F;
+      --card-bg:#101E30;
+      --card-border:#1E3550;
+      --cyan:#00C8E0;
+      --cyan-dim:rgba(0,200,224,0.10);
+      --cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;
+      --white:#F0F4F8;
+      --steel:#4A6280;
+      --navy:#1B2A4A;
+      --navy-deep:#0D1B35;
+      --grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6;}
+
+    /* GRID BG */
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),
+        linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0;}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;
+      background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .logo-text{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px;}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px;}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan);}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:7px 18px;border-radius:4px;
+      font-size:12px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;
+      transition:all 0.2s;text-decoration:none;}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg);}
+
+    /* LANG BAR */
+    .lang-bar{position:relative;z-index:10;background:var(--navy-deep);border-bottom:1px solid var(--card-border);
+      padding:8px 2rem;display:flex;align-items:center;gap:1rem;font-size:12px;}
+    .lang-label{color:var(--steel);font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;}
+    .lang-btn{background:transparent;border:1px solid var(--card-border);color:var(--silver);
+      padding:4px 14px;border-radius:3px;font-size:11px;font-weight:600;cursor:pointer;
+      font-family:'Orbitron',monospace;letter-spacing:1px;transition:all 0.2s;}
+    .lang-btn.active,.lang-btn:hover{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim);}
+    .breadcrumb{margin-left:auto;font-size:11px;color:var(--steel);}
+    .breadcrumb a{color:var(--steel);text-decoration:none;}
+    .breadcrumb a:hover{color:var(--cyan);}
+
+    /* ARTICLE HERO */
+    .article-hero{position:relative;z-index:1;height:520px;overflow:hidden;}
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.6) saturate(0.85);}
+    .hero-overlay{position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(7,17,31,0.1) 0%,rgba(7,17,31,0.2) 40%,rgba(7,17,31,0.85) 75%,var(--bg) 100%);}
+    .hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem 2rem;}
+    .hero-eyebrow{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan);
+      margin-bottom:0.75rem;display:flex;align-items:center;gap:10px;}
+    .hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan);}
+    .hero-title{font-family:'Orbitron',monospace;font-size:clamp(1.3rem,3vw,2rem);font-weight:900;
+      color:var(--white);line-height:1.2;max-width:800px;}
+    .hero-meta{margin-top:1rem;font-size:12px;color:var(--silver);display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;}
+    .hero-meta span{display:flex;align-items:center;gap:5px;}
+    .hero-credit{font-size:10px;color:var(--steel);position:absolute;bottom:8px;right:1rem;}
+
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:3rem 2rem;}
+
+    /* INTRO */
+    .intro-box{background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid var(--cyan);
+      border-radius:0 6px 6px 0;padding:1.25rem 1.5rem;margin-bottom:3rem;}
+    .intro-box p{font-size:14px;color:var(--silver);line-height:1.75;}
+    .intro-box p.en-content{display:none;}
+
+    /* NEWS ITEM */
+    .news-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;
+      padding:2rem;margin-bottom:2rem;transition:border-color 0.3s;}
+    .news-item:hover{border-color:var(--cyan-glow);}
+    .news-item-header{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.25rem;}
+    .item-number{font-family:'Orbitron',monospace;font-size:1.8rem;font-weight:900;
+      color:var(--cyan-glow);line-height:1;min-width:2.2rem;}
+    .item-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.6rem;}
+    .tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1px;padding:3px 8px;
+      border-radius:3px;border:1px solid rgba(0,200,224,0.3);color:var(--cyan);
+      background:var(--cyan-dim);}
+    .tag.mfr{border-color:rgba(0,200,224,0.5);background:rgba(0,200,224,0.14);}
+    .item-title{font-family:'Orbitron',monospace;font-size:clamp(0.9rem,1.5vw,1.1rem);
+      font-weight:700;color:var(--white);line-height:1.3;}
+    .item-title.en-content{display:none;}
+    .item-body{font-size:14px;color:var(--silver);line-height:1.75;margin:1rem 0;}
+    .item-body.en-content{display:none;}
+
+    /* SCHEMA DIAGRAM */
+    .schema-diagram{background:var(--navy-deep);border:1px solid var(--card-border);
+      border-radius:6px;padding:1.25rem;margin:1.25rem 0;font-family:'Orbitron',monospace;
+      font-size:10px;color:var(--cyan);overflow-x:auto;}
+    .schema-diagram .sd-title{font-size:9px;letter-spacing:2px;color:var(--steel);margin-bottom:0.75rem;}
+    .schema-diagram pre{font-size:10px;line-height:1.6;color:var(--silver);font-family:'Orbitron',monospace;}
+    .schema-diagram .en-content{display:none;}
+
+    /* WHY BOX */
+    .why-box{background:rgba(0,200,224,0.05);border:1px solid rgba(0,200,224,0.2);
+      border-radius:6px;padding:1rem 1.25rem;margin-top:1.25rem;}
+    .why-box h4{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
+      color:var(--cyan);margin-bottom:0.6rem;}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.7;}
+    .why-box p.en-content{display:none;}
+    .source-link{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--steel);
+      text-decoration:none;margin-top:0.75rem;padding:4px 10px;border:1px solid var(--card-border);
+      border-radius:3px;transition:all 0.2s;}
+    .source-link:hover{color:var(--cyan);border-color:var(--cyan);}
+
+    /* CTA BOX */
+    .cta-box{background:var(--navy);border:1px solid var(--card-border);
+      border-radius:8px;padding:2.5rem 2rem;text-align:center;margin-top:3rem;
+      box-shadow:0 0 40px -10px var(--cyan-glow);}
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:1.1rem;font-weight:700;
+      color:var(--cyan);margin-bottom:0.75rem;}
+    .cta-box p{font-size:14px;color:var(--silver);margin-bottom:1.5rem;line-height:1.7;}
+    .cta-box p.en-content{display:none;}
+    .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);
+      padding:12px 32px;border-radius:4px;font-family:'Orbitron',monospace;
+      font-size:11px;font-weight:700;letter-spacing:1.5px;text-decoration:none;transition:all 0.2s;}
+    .cta-btn:hover{background:var(--white);transform:translateY(-2px);}
+
+    /* FOOTER */
+    footer{position:relative;z-index:1;background:var(--navy-deep);
+      border-top:1px solid var(--card-border);padding:2.5rem 2rem;margin-top:4rem;}
+    .footer-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;
+      align-items:center;flex-wrap:wrap;gap:1rem;}
+    .footer-brand{font-family:'Orbitron',monospace;font-size:12px;color:var(--steel);}
+    .footer-brand strong{color:var(--cyan);}
+    .footer-links{display:flex;gap:1.5rem;}
+    .footer-links a{font-size:12px;color:var(--steel);text-decoration:none;transition:color 0.2s;}
+    .footer-links a:hover{color:var(--cyan);}
+    .footer-copy{width:100%;text-align:center;font-size:11px;color:var(--steel);
+      border-top:1px solid var(--card-border);padding-top:1rem;margin-top:1rem;}
+
+    @media(max-width:768px){
+      nav{padding:0 1rem;}
+      .nav-links{display:none;}
+      .article-hero{height:360px;}
+      main{padding:2rem 1rem;}
+      .news-item{padding:1.25rem;}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV DESIGN DIRECTOR</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">TƯ VẤN / CONSULT</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANG</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">🇻🇳 VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 EN</button>
+  <div class="breadcrumb">
+    <a href="/">Home</a> / <a href="/blog/">Blog</a> / <span>W46 · 13 Nov 2026</span>
+  </div>
+</div>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1782945217386-300f33f22069?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Blue-lit control room — ELV ICT AV Weekly W46 2026" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="vi-content">BẢN TIN TUẦN · W46 / 2026</span>
+      <span class="en-content">WEEKLY NEWSLETTER · W46 / 2026</span>
+    </div>
+    <h1 class="hero-title vi-content">Axis OS 13 · Crestron Collab Compute · Schneider EcoCare BMS · Genetec SaaS · Vietnam Hạ Tầng Số $5B</h1>
+    <h1 class="hero-title en-content">Axis OS 13 · Crestron Collab Compute · Schneider EcoCare BMS · Genetec SaaS · Vietnam $5B Digital Infrastructure</h1>
+    <div class="hero-meta">
+      <span>📅 <span class="vi-content">Thứ Sáu, 13 Tháng 11, 2026</span><span class="en-content">Friday, 13 November 2026</span></span>
+      <span>✍️ Paul Le — ELV/ICT/AV Design Director</span>
+      <span>📍 DHP Corporation &amp; HBP Project Management</span>
+    </div>
+  </div>
+  <span class="hero-credit">Photo: Tetiana Sapon / Unsplash</span>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- INTRO -->
+  <div class="intro-box">
+    <p class="vi-content">Chào mừng đến với bản tin ELV/ICT/AV tuần 46 năm 2026. Tuần này nổi bật với 5 tin tức quan trọng: Axis Communications ra mắt AXIS OS 13 nâng cấp bảo mật; Crestron giới thiệu Collab Compute cho phòng họp thế hệ mới; Schneider Electric triển khai EcoCare AI-driven BMS giúp tiết kiệm 22% năng lượng; Genetec Security Center SaaS mở rộng hỗ trợ đa hãng; và Việt Nam công bố kế hoạch đầu tư $5 tỷ hạ tầng số. Đây là những xu hướng sẽ định hình thị trường ELV/ICT/AV Việt Nam trong thời gian tới.</p>
+    <p class="en-content">Welcome to the ELV/ICT/AV Weekly Newsletter, Week 46, 2026. This week highlights 5 key stories: Axis Communications launches AXIS OS 13 with enhanced cybersecurity; Crestron introduces Collab Compute for next-gen meeting rooms; Schneider Electric deploys AI-driven EcoCare BMS saving 22% energy; Genetec Security Center SaaS expands multi-vendor support; and Vietnam announces $5B digital infrastructure investment. These trends will shape the Vietnamese ELV/ICT/AV market ahead.</p>
+  </div>
+
+  <!-- NEWS 1: AXIS OS 13 -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="item-number">01</div>
+      <div>
+        <div class="item-tags">
+          <span class="tag mfr">AXIS COMMUNICATIONS</span>
+          <span class="tag">SECURITY</span>
+          <span class="tag">IP CAMERA</span>
+          <span class="tag">CYBERSECURITY</span>
+        </div>
+        <h2 class="item-title vi-content">Axis Communications ra mắt AXIS OS 13 — Nâng tầm bảo mật mạng và tích hợp hệ thống ELV</h2>
+        <h2 class="item-title en-content">Axis Communications Launches AXIS OS 13 — Elevating Cybersecurity and ELV System Integration</h2>
+      </div>
+    </div>
+
+    <p class="item-body vi-content">Axis Communications vừa chính thức phát hành AXIS OS 13, phiên bản hệ điều hành mới nhất cho toàn bộ dòng camera và thiết bị bảo mật của hãng. AXIS OS 13 mang đến những cải tiến vượt trội về bảo mật mạng với kiến trúc <strong>zero-trust</strong> được tăng cường, hỗ trợ HTTPS/TLS 1.3 mặc định trên tất cả thiết bị, và tích hợp sâu hơn với các nền tảng VMS (Video Management System) và PSIM (Physical Security Information Management). Đặc biệt, hãng bổ sung khả năng phát hiện xâm nhập tích hợp sẵn (on-device threat detection), giúp giảm tải cho máy chủ trung tâm và phản ứng nhanh hơn với các sự cố an ninh.</p>
+    <p class="item-body en-content">Axis Communications has officially released AXIS OS 13, the latest operating system version for its entire range of cameras and security devices. AXIS OS 13 brings significant improvements in network security with enhanced <strong>zero-trust architecture</strong>, HTTPS/TLS 1.3 enabled by default across all devices, and deeper integration with VMS (Video Management System) and PSIM (Physical Security Information Management) platforms. Notably, it adds on-device threat detection capability, reducing load on central servers and enabling faster incident response.</p>
+
+    <div class="schema-diagram">
+      <div class="sd-title vi-content">SƠ ĐỒ NGUYÊN LÝ — AXIS OS 13 SECURITY ARCHITECTURE</div>
+      <div class="sd-title en-content">PRINCIPLE DIAGRAM — AXIS OS 13 SECURITY ARCHITECTURE</div>
+      <pre>
+┌─────────────────────────────────────────────────────────────┐
+│                    AXIS OS 13 ARCHITECTURE                  │
+├──────────────────┬──────────────────┬───────────────────────┤
+│   DEVICE LAYER   │   NETWORK LAYER  │   PLATFORM LAYER      │
+│                  │                  │                       │
+│  ● Zero-Trust    │  ● TLS 1.3       │  ● Genetec SC SaaS   │
+│  ● On-Device AI  │  ● IEEE 802.1X   │  ● Milestone VMS     │
+│  ● ARTPEC-9 SoC  │  ● VLAN Isolate  │  ● Bosch BVMS        │
+│  ● Secure Boot   │  ● HTTPS Only    │  ● Axis Camera Stn   │
+│  ● TPM 2.0       │  ● SFTP/FTPS     │  ● REST API Open     │
+├──────────────────┴──────────────────┴───────────────────────┤
+│  ACAP (Axis Camera Application Platform)                    │
+│  → 3rd-party AI analytics on-device                        │
+│  → Fire/smoke, PPE, crowd, loitering detection             │
+└─────────────────────────────────────────────────────────────┘</pre>
+    </div>
+
+    <div class="why-box">
+      <h4 class="vi-content">🔍 TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM?</h4>
+      <h4 class="en-content">🔍 WHY DOES THIS MATTER FOR ELV/ICT/AV PROJECTS IN VIETNAM?</h4>
+      <p class="vi-content">Axis là một trong những hãng camera IP phổ biến nhất tại các dự án cao cấp ở Việt Nam (văn phòng hạng A, bệnh viện quốc tế, trường học). AXIS OS 13 với zero-trust và on-device AI giúp đáp ứng các tiêu chuẩn an ninh mạng khắt khe hơn theo Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân. Kỹ sư ELV cần cập nhật firmware và cấu hình 802.1X, VLAN theo best practice mới của hãng.</p>
+      <p class="en-content">Axis is one of the most popular IP camera brands in premium Vietnamese projects (Grade-A offices, international hospitals, schools). AXIS OS 13 with zero-trust and on-device AI helps meet stricter cybersecurity standards under Vietnam's Decree 13/2023/ND-CP on personal data protection. ELV engineers need to update firmware and configure 802.1X, VLAN per the new best practice guidelines.</p>
+      <a class="source-link" href="https://menafn.com/1111929072/Axis-Communications-Announces-AXIS-OS-13-That-Takes-Cybersecurity-And-Integration-To-New-Heights" target="_blank" rel="noopener">🔗 MENAFN / Axis Press Release →</a>
+    </div>
+  </div>
+
+  <!-- NEWS 2: CRESTRON COLLAB -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="item-number">02</div>
+      <div>
+        <div class="item-tags">
+          <span class="tag mfr">CRESTRON</span>
+          <span class="tag">AV</span>
+          <span class="tag">COLLABORATION</span>
+          <span class="tag">UNIFIED COMMS</span>
+        </div>
+        <h2 class="item-title vi-content">Crestron ra mắt Collab Compute & Collab Engine — Nền tảng AV thế hệ mới cho phòng họp thông minh</h2>
+        <h2 class="item-title en-content">Crestron Launches Collab Compute & Collab Engine — Next-Gen AV Platform for Smart Meeting Rooms</h2>
+      </div>
+    </div>
+
+    <p class="item-body vi-content">Crestron Electronics vừa ra mắt hai sản phẩm đột phá trong dòng AV collaboration: <strong>Collab Compute</strong> — một lõi phần cứng thông minh tích hợp xử lý AI cho phòng họp — và <strong>Collab Engine</strong> — giải pháp kết hợp hội nghị truyền hình với điều khiển phòng họp trong một thiết bị duy nhất. Collab Compute hỗ trợ Teams, Zoom, Webex đồng thời, không cần laptop riêng, trong khi Collab Engine tích hợp điều khiển âm thanh, ánh sáng, màn hình, và hội nghị qua một giao diện thống nhất. Cả hai sản phẩm đều hỗ trợ AI noise cancellation và camera tracking tích hợp.</p>
+    <p class="item-body en-content">Crestron Electronics has launched two breakthrough products in AV collaboration: <strong>Collab Compute</strong> — an intelligent hardware core with integrated AI processing for meeting rooms — and <strong>Collab Engine</strong> — a solution combining video conferencing with room control in a single device. Collab Compute supports Teams, Zoom, Webex simultaneously without a separate laptop, while Collab Engine integrates audio control, lighting, displays, and conferencing through a unified interface. Both products support AI noise cancellation and integrated camera tracking.</p>
+
+    <div class="schema-diagram">
+      <div class="sd-title vi-content">SƠ ĐỒ NGUYÊN LÝ — CRESTRON COLLAB SYSTEM ARCHITECTURE</div>
+      <div class="sd-title en-content">PRINCIPLE DIAGRAM — CRESTRON COLLAB SYSTEM ARCHITECTURE</div>
+      <pre>
+┌────────────────────────────────────────────────────────────┐
+│              CRESTRON COLLAB ROOM SOLUTION                 │
+├─────────────────────┬──────────────────────────────────────┤
+│  COLLAB COMPUTE     │      COLLAB ENGINE                   │
+│  (Meeting Hardware) │  (Conferencing + Room Control)       │
+│                     │                                      │
+│  ● MTR / Zoom Rooms │  ● Audio DSP (Biamp/Shure OOTB)     │
+│  ● Wireless Present │  ● Display / Projector Control      │
+│  ● AI Camera Track  │  ● Lighting (DALI/0-10V/DMX)        │
+│  ● AI Noise Cancel  │  ● HVAC/Shade via BACnet            │
+│  ● Auto-Framing     │  ● Touch Panel UI (TSW-xx)          │
+├─────────────────────┴──────────────────────────────────────┤
+│  CRESTRON DM NVX (AV-over-IP Matrix) ←→ NX Processor      │
+│  ● 4K60 uncompressed AV distribution over 1GbE LAN       │
+│  ● Dante/AES67 audio network                               │
+│  ● Crestron Home / XiO Cloud remote management            │
+└────────────────────────────────────────────────────────────┘</pre>
+    </div>
+
+    <div class="why-box">
+      <h4 class="vi-content">🔍 TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM?</h4>
+      <h4 class="en-content">🔍 WHY DOES THIS MATTER FOR ELV/ICT/AV PROJECTS IN VIETNAM?</h4>
+      <p class="vi-content">Nhu cầu về phòng họp thông minh (Smart Meeting Room) tại Việt Nam đang bùng nổ — đặc biệt trong các dự án văn phòng hạng A, trung tâm hành chính tỉnh thành, bệnh viện và trường đại học. Collab Engine của Crestron giúp giảm số thiết bị lắp đặt, đơn giản hóa vận hành, và tích hợp liền mạch với BMS/ELV infrastructure. Đây là giải pháp phù hợp cho các SI (System Integrator) muốn cung cấp gói AV+BMS trọn gói.</p>
+      <p class="en-content">Demand for Smart Meeting Rooms in Vietnam is booming — especially in Grade-A office projects, provincial administrative centers, hospitals and universities. Crestron's Collab Engine reduces device count, simplifies operations, and integrates seamlessly with BMS/ELV infrastructure. This is an ideal solution for System Integrators wanting to offer combined AV+BMS packages.</p>
+      <a class="source-link" href="https://www.svconline.com/the-wire/crestron-introduces-collab-compute-a-new-hardware-core-for-intelligent-scalable-collaboration" target="_blank" rel="noopener">🔗 Sound & Video Contractor →</a>
+    </div>
+  </div>
+
+  <!-- NEWS 3: SCHNEIDER ECOCARE -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="item-number">03</div>
+      <div>
+        <div class="item-tags">
+          <span class="tag mfr">SCHNEIDER ELECTRIC</span>
+          <span class="tag">BMS</span>
+          <span class="tag">ENERGY AI</span>
+          <span class="tag">ECOSTRUXURE</span>
+        </div>
+        <h2 class="item-title vi-content">Schneider Electric ra mắt EcoCare cho BMS — AI thực thời gian thực cắt giảm 22% năng lượng tòa nhà</h2>
+        <h2 class="item-title en-content">Schneider Electric Launches EcoCare for BMS — Real-Time AI Cuts Building Energy Consumption by 22%</h2>
+      </div>
+    </div>
+
+    <p class="item-body vi-content">Schneider Electric vừa chính thức ra mắt <strong>EcoCare for BMS</strong> — giải pháp quản lý tòa nhà thế hệ mới tích hợp AI thời gian thực trên nền tảng EcoStruxure. Theo nghiên cứu độc lập được Schneider công bố, BMS tích hợp AI có thể cắt giảm mức tiêu thụ năng lượng HVAC lên tới <strong>22%</strong> và toàn bộ tòa nhà lên tới <strong>27%</strong>. EcoCare sử dụng digital twin của tòa nhà, kết hợp với dự báo thời tiết và mô hình học máy, để tối ưu hóa lịch vận hành HVAC, chiếu sáng và hệ thống điện theo thời gian thực. Dịch vụ bao gồm giám sát từ xa 24/7 bởi đội chuyên gia Schneider qua trung tâm EcoCare Operations Center.</p>
+    <p class="item-body en-content">Schneider Electric has officially launched <strong>EcoCare for BMS</strong> — a next-generation building management solution with real-time AI on the EcoStruxure platform. According to independent research published by Schneider, AI-integrated BMS can reduce HVAC energy consumption by up to <strong>22%</strong> and total building energy by up to <strong>27%</strong>. EcoCare uses a building digital twin, combined with weather forecasting and machine learning models, to optimize HVAC, lighting, and electrical system schedules in real time. The service includes 24/7 remote monitoring by Schneider expert teams via the EcoCare Operations Center.</p>
+
+    <div class="schema-diagram">
+      <div class="sd-title vi-content">SƠ ĐỒ NGUYÊN LÝ — SCHNEIDER ECOCARE BMS AI INTEGRATION</div>
+      <div class="sd-title en-content">PRINCIPLE DIAGRAM — SCHNEIDER ECOCARE BMS AI INTEGRATION</div>
+      <pre>
+┌───────────────────────────────────────────────────────────┐
+│          SCHNEIDER ECOCARE FOR BMS — ARCHITECTURE         │
+├──────────────────────┬────────────────────────────────────┤
+│  FIELD DEVICES       │  ECOSTRUXURE PLATFORM              │
+│                      │                                    │
+│  ● HVAC Controllers  │  ┌─────────────────────────────┐  │
+│  ● VAV/AHU/Chiller   │  │   EcoStruxure Building X    │  │
+│  ● Smart Meters      │  │   + Digital Twin Engine     │  │
+│  ● Lighting DALI     │  │   + AI/ML Optimization      │  │
+│  ● PoE Sensors       │  │   + Weather Forecast API    │  │
+│  ● Fire/Access ELV   │  └──────────────┬──────────────┘  │
+│                      │                 │                  │
+│  Modbus/BACnet/IP    │        EcoCare Operations Center  │
+│  KNX/LonWorks/OPC    │        24/7 Remote Monitoring     │
+├──────────────────────┴────────────────────────────────────┤
+│  RESULT: -22% HVAC energy  |  -27% total building energy │
+│          Carbon reporting  |  ESG dashboard               │
+└───────────────────────────────────────────────────────────┘</pre>
+    </div>
+
+    <div class="why-box">
+      <h4 class="vi-content">🔍 TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM?</h4>
+      <h4 class="en-content">🔍 WHY DOES THIS MATTER FOR ELV/ICT/AV PROJECTS IN VIETNAM?</h4>
+      <p class="vi-content">Với chi phí điện ngày càng tăng và yêu cầu về ESG từ chủ đầu tư nước ngoài, BMS AI của Schneider trở thành đề xuất giá trị cao cho các dự án bệnh viện, cao ốc văn phòng, và trường đại học tại Việt Nam. EcoCare tích hợp được với hệ thống ELV (fire alarm, security, lighting) giúp tư vấn ELV trình bày giải pháp tổng thể tiết kiệm năng lượng thay vì chỉ cung cấp từng hệ thống riêng lẻ. Đây là cơ hội upsell từ ELV basic sang Intelligent Building.</p>
+      <p class="en-content">With rising electricity costs and ESG requirements from foreign investors, Schneider's AI BMS becomes a high-value proposition for hospitals, office towers, and universities in Vietnam. EcoCare integrates with ELV systems (fire alarm, security, lighting), enabling ELV consultants to present holistic energy-saving solutions rather than individual systems. This is an upsell opportunity from basic ELV to Intelligent Building.</p>
+      <a class="source-link" href="https://www.prnewswire.com/news-releases/schneider-electric-launches-ecocare-for-bms-to-deliver-real-time-operational-intelligence-for-modern-buildings-302787588.html" target="_blank" rel="noopener">🔗 PR Newswire — Schneider Electric →</a>
+    </div>
+  </div>
+
+  <!-- NEWS 4: GENETEC SAAS -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="item-number">04</div>
+      <div>
+        <div class="item-tags">
+          <span class="tag mfr">GENETEC</span>
+          <span class="tag">SECURITY</span>
+          <span class="tag">VMS SAAS</span>
+          <span class="tag">CLOUD</span>
+        </div>
+        <h2 class="item-title vi-content">Genetec Security Center SaaS hỗ trợ thiết bị Axis, Bosch, Hanwha &amp; i-PRO — Nền tảng bảo mật đa hãng trên đám mây</h2>
+        <h2 class="item-title en-content">Genetec Security Center SaaS Supports Axis, Bosch, Hanwha &amp; i-PRO Devices — Multi-Vendor Cloud Security Platform</h2>
+      </div>
+    </div>
+
+    <p class="item-body vi-content">Genetec vừa công bố Security Center SaaS — phiên bản đám mây của nền tảng VMS hàng đầu — đã được xác nhận hỗ trợ chính thức từ <strong>Axis, Bosch Security, Hanwha Vision</strong> và <strong>i-PRO</strong>. Điều này cho phép chủ đầu tư triển khai hệ thống camera an ninh đa hãng được quản lý tập trung qua cloud, không cần server tại chỗ. Security Center SaaS hỗ trợ video streaming lên đến 4K, lưu trữ đám mây với retention linh hoạt, và tích hợp sẵn AI analytics (nhận diện đám đông, nhận diện biển số, phát hiện PPE). Các hãng Axis, Bosch, Hanwha, i-PRO đảm bảo tương thích đầy đủ tính năng thông qua chương trình Technology Partner Program.</p>
+    <p class="item-body en-content">Genetec has announced Security Center SaaS — the cloud version of the industry-leading VMS platform — with confirmed official support from <strong>Axis, Bosch Security, Hanwha Vision</strong> and <strong>i-PRO</strong>. This allows owners to deploy multi-vendor IP camera systems managed centrally via cloud, without on-premises servers. Security Center SaaS supports video streaming up to 4K, cloud storage with flexible retention, and built-in AI analytics (crowd detection, license plate recognition, PPE detection). Axis, Bosch, Hanwha, i-PRO ensure full feature compatibility through the Technology Partner Program.</p>
+
+    <div class="schema-diagram">
+      <div class="sd-title vi-content">SƠ ĐỒ NGUYÊN LÝ — GENETEC SECURITY CENTER SAAS TOPOLOGY</div>
+      <div class="sd-title en-content">PRINCIPLE DIAGRAM — GENETEC SECURITY CENTER SAAS TOPOLOGY</div>
+      <pre>
+┌────────────────────────────────────────────────────────────┐
+│          GENETEC SECURITY CENTER SaaS ARCHITECTURE        │
+├────────────────────────┬───────────────────────────────────┤
+│  FIELD DEVICES         │  CLOUD PLATFORM (Genetec SaaS)   │
+│                        │                                   │
+│  ● Axis OS 13 Cameras  │  ┌───────────────────────────┐   │
+│  ● Bosch IP Cameras    │  │  Security Center SaaS     │   │
+│  ● Hanwha Vision       │  │  ● Video Management       │   │
+│  ● i-PRO Cameras       │  │  ● Access Control         │   │
+│  ● Access Controllers  │  │  ● AI Analytics Engine    │   │
+│                        │  │  ● Cloud Video Storage    │   │
+│  PoE Switch (IEEE      │  │  ● LPR / Face / PPE       │   │
+│  802.3bt) → Firewall   │  └────────────┬──────────────┘   │
+│  → Internet (SD-WAN)   │               │                  │
+│                        │       Web/Mobile Client UI        │
+├────────────────────────┴───────────────────────────────────┤
+│  On-Prem Video Unit (optional) for bandwidth optimization  │
+└────────────────────────────────────────────────────────────┘</pre>
+    </div>
+
+    <div class="why-box">
+      <h4 class="vi-content">🔍 TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM?</h4>
+      <h4 class="en-content">🔍 WHY DOES THIS MATTER FOR ELV/ICT/AV PROJECTS IN VIETNAM?</h4>
+      <p class="vi-content">Mô hình VMS SaaS đang ngày càng được chấp nhận tại Việt Nam, đặc biệt trong các dự án có nhiều chi nhánh hoặc không có IT team tại chỗ (chuỗi bán lẻ, trường học tư thục, khu công nghiệp). Việc Genetec hỗ trợ cả Axis + Bosch + Hanwha cùng lúc giúp tư vấn ELV đề xuất giải pháp đa hãng linh hoạt thay vì bị ràng buộc vào một nhà cung cấp. Điều này đặc biệt hữu ích khi chủ đầu tư đã có camera từ nhiều hãng khác nhau.</p>
+      <p class="en-content">The VMS SaaS model is increasingly accepted in Vietnam, especially for multi-branch projects or those without on-site IT teams (retail chains, private schools, industrial parks). Genetec supporting Axis + Bosch + Hanwha simultaneously enables ELV consultants to propose flexible multi-vendor solutions rather than being locked into one provider. This is especially useful when owners already have cameras from multiple vendors.</p>
+      <a class="source-link" href="https://www.sdmmag.com/articles/103060-genetec-saas-announces-support-for-axis-bosch-hanwha-and-i-pro-devices" target="_blank" rel="noopener">🔗 SDM Magazine — Genetec SaaS →</a>
+    </div>
+  </div>
+
+  <!-- NEWS 5: VIETNAM DIGITAL $5B -->
+  <div class="news-item">
+    <div class="news-item-header">
+      <div class="item-number">05</div>
+      <div>
+        <div class="item-tags">
+          <span class="tag mfr">VIETNAM</span>
+          <span class="tag">DIGITAL INFRA</span>
+          <span class="tag">MARKET</span>
+          <span class="tag">OPPORTUNITY</span>
+        </div>
+        <h2 class="item-title vi-content">Chính phủ Việt Nam đặt cược $5 tỷ vào hạ tầng số — Cơ hội vàng cho ngành ELV/ICT/AV</h2>
+        <h2 class="item-title en-content">Vietnam's Government Bets $5B on Digital Infrastructure — Golden Opportunity for ELV/ICT/AV Sector</h2>
+      </div>
+    </div>
+
+    <p class="item-body vi-content">Theo báo cáo mới nhất, Chính phủ Việt Nam đã công bố kế hoạch đầu tư lên tới <strong>$5 tỷ USD</strong> vào hạ tầng số trong giai đoạn 2026–2030, bao gồm mạng lưới cáp quang quốc gia 5G, trung tâm dữ liệu quốc gia, và các nền tảng chính phủ điện tử. Kế hoạch này bao gồm việc nâng cấp hạ tầng ICT cho hàng trăm bệnh viện công, trường học và cơ quan hành chính trên toàn quốc. Song song, cơ sở hạ tầng thương mại (văn phòng, khu công nghiệp, trung tâm thương mại) cũng được thúc đẩy nâng cấp để thu hút FDI theo làn sóng China+1.</p>
+    <p class="item-body en-content">According to the latest reports, Vietnam's Government has announced plans to invest up to <strong>$5 billion USD</strong> in digital infrastructure during 2026–2030, including national fiber optic network upgrades, 5G rollout, national data centers, and e-government platforms. The plan includes ICT infrastructure upgrades for hundreds of public hospitals, schools and administrative agencies nationwide. In parallel, commercial infrastructure (offices, industrial parks, shopping centers) is also being accelerated to attract FDI under the China+1 trend.</p>
+
+    <div class="schema-diagram">
+      <div class="sd-title vi-content">CƠ HỘI THỊ TRƯỜNG — ELV/ICT/AV TRONG HẠ TẦNG SỐ VIỆT NAM 2026-2030</div>
+      <div class="sd-title en-content">MARKET OPPORTUNITY — ELV/ICT/AV IN VIETNAM DIGITAL INFRASTRUCTURE 2026-2030</div>
+      <pre>
+┌───────────────────────────────────────────────────────────┐
+│   VIETNAM DIGITAL INFRA $5B INVESTMENT — ELV/ICT/AV MAP  │
+├──────────────────────┬────────────────────────────────────┤
+│  GOVERNMENT PROJECTS │  COMMERCIAL PROJECTS               │
+│  (Direct $5B plan)   │  (FDI-driven, China+1)             │
+│                      │                                    │
+│  ● 500+ Hospitals    │  ● Grade-A Office Towers           │
+│    → Fire Alarm (FM) │    → AV Boardrooms (Crestron)      │
+│    → IP CCTV (Axis)  │    → Network (Cisco/HPE Aruba)     │
+│    → BMS (Schneider) │    → BMS (Schneider/Siemens)       │
+│  ● 2000+ Schools     │  ● Industrial Parks                │
+│    → Structured CAB  │    → Security (Genetec SaaS)       │
+│    → Smart AV        │    → Fiber/5G infra                │
+│  ● Gov Data Centers  │  ● Data Centers (Viettel/FPT)      │
+│    → Tier III/IV     │    → Tier III+ Infra               │
+│    → TIA-942 Cabling │    → ELV integration               │
+├──────────────────────┴────────────────────────────────────┤
+│  TOTAL ADDRESSABLE MARKET: ELV/ICT/AV ≈ $1-2B+ in 5 yrs │
+└───────────────────────────────────────────────────────────┘</pre>
+    </div>
+
+    <div class="why-box">
+      <h4 class="vi-content">🔍 TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM?</h4>
+      <h4 class="en-content">🔍 WHY DOES THIS MATTER FOR ELV/ICT/AV PROJECTS IN VIETNAM?</h4>
+      <p class="vi-content">Đây là tín hiệu tích cực nhất cho ngành ELV/ICT/AV trong 5 năm qua. Mỗi đồng vốn đầu tư hạ tầng số đều kéo theo nhu cầu về cabling, networking, security, fire alarm, AV, và BMS. Các công ty tư vấn và SI trong ngành cần chuẩn bị năng lực để đấu thầu các gói thầu lớn từ ngân sách nhà nước. Paul Le Consultant sẵn sàng hỗ trợ thiết kế hệ thống ELV/ICT/AV cho các dự án hạ tầng công cộng và thương mại.</p>
+      <p class="en-content">This is the most positive signal for the ELV/ICT/AV sector in 5 years. Every dollar of digital infrastructure investment triggers demand for cabling, networking, security, fire alarm, AV, and BMS. Consulting firms and SIs need to prepare capacity to bid on large government procurement packages. Paul Le Consultant is ready to support ELV/ICT/AV system design for public and commercial infrastructure projects.</p>
+      <a class="source-link" href="https://gradion.com/en/blog/vietnam-digital-infrastructure-investment-in-2026" target="_blank" rel="noopener">🔗 Gradion — Vietnam Digital Infrastructure →</a>
+    </div>
+  </div>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <h3>TƯ VẤN THIẾT KẾ ELV · ICT · AV</h3>
+    <p class="vi-content">Bạn đang cần tư vấn thiết kế hệ thống ELV, ICT, AV cho dự án bệnh viện, trường học, văn phòng hay khu công nghiệp? Paul Le — ELV/ICT/AV Design Director với 10+ năm kinh nghiệm, sẵn sàng hỗ trợ từ giai đoạn ý tưởng đến bàn giao hoàn công.</p>
+    <p class="en-content">Looking for ELV, ICT, AV system design consultancy for your hospital, school, office or industrial park project? Paul Le — ELV/ICT/AV Design Director with 10+ years experience, ready to support from concept to project completion.</p>
+    <a href="https://elvconsultant.com/#contact" class="cta-btn">LIÊN HỆ NGAY / CONTACT NOW →</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>PAUL LE CONSULTANT</strong> — elvconsultant.com<br>
+      <span style="font-size:11px;">ELV/ICT/AV Design Director · DHP Corporation &amp; HBP Project Management</span>
+    </div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    © 2026 Paul Le Consultant — elvconsultant.com · All Rights Reserved ·
+    <a href="/blog/" style="color:var(--cyan);text-decoration:none;">← Back to Blog</a>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
