@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-14",
+  "slug": "tinh-so-ddc-toa-15-tang",
+  "title_vi": "Tính số DDC cho tòa 15 tầng",
+  "title_en": "Counting DDCs for a 15-floor tower",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-14-tinh-so-ddc-toa-15-tang.html",
+  "x_post": "15 floors, 261 hard-wired points, 17 DDCs.\n\n• 14 points per AHU floor on one DCM-8446, 36% spare\n• CHW plant needs 4 AO: add IO-6020\n• 41 Niagara devices: DCM-9025 is too small, DCM-9100 fits\n• Meters on their own RS-485 trunk\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Tòa văn phòng 15 tầng cần bao nhiêu DDC? Đếm từ bản vẽ M&E ra 261 điểm IO cứng và 17 DDC, không ước theo m².\n\nCách đếm trên tòa mẫu với Diamond Controls:\n1. Mỗi tầng 1 AHU + 2 quạt hút WC = 14 điểm, đặt 1 DCM-8446 tại phòng AHU, dư 36%\n2. Trạm nước lạnh cần 4 AO, dùng combo DCM-8446 + IO-6020 để còn dự phòng\n3. Hầm xe 4 quạt + 4 cảm biến CO trên DCM-8446 + IO-0800\n4. 7 bơm cấp thoát nước chỉ giám sát: 3 module IO-0800-485 trên đường MS/TP\n5. 18 đồng hồ điện Modbus RTU đi đường RS-485 riêng qua NPB-8000-2X-485\n\nTổng 41 thiết bị Niagara, nên chọn license DCM-9100 thay vì DCM-9025. Toàn tòa còn 37% IO dự phòng.\n\nSơ đồ nguyên lý và bảng phân bổ IO:\nhttps://elvconsultant.com/blog/bms/2026-11-14-tinh-so-ddc-toa-15-tang.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #DDC #MitsubishiElectric #Niagara4 #DiamondControls"
+ },
+ {
   "date": "2026-11-13",
   "slug": "tich-hop-thang-may-mitsubishi-vao-bms",
   "title_vi": "Thang máy Mitsubishi trên màn hình BMS",

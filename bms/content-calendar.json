@@ -77,7 +77,8 @@
    "pillar": "Bài toán thực tế",
    "pillar_en": "Worked example",
    "topic": "Tính số DDC cho tòa 15 tầng từ bản vẽ M&E",
-   "status": "planned"
+   "status": "published",
+   "slug": "tinh-so-ddc-toa-15-tang"
   },
   {
    "date": "2026-11-15",
