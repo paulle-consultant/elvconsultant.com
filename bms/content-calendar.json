@@ -85,7 +85,8 @@
    "pillar": "Hỏi đáp & tổng hợp",
    "pillar_en": "Q&A and recap",
    "topic": "Hỏi đáp: BMS có cần cho tòa nhà dưới 10.000 m²?",
-   "status": "planned"
+   "status": "published",
+   "slug": "bms-cho-toa-nha-duoi-10000-m2"
   },
   {
    "date": "2026-11-16",
