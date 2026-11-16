@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-16",
+  "slug": "bms-benh-vien-chenh-ap-phong-mo",
+  "title_vi": "BMS bệnh viện: chênh áp phòng mổ",
+  "title_en": "Hospital BMS: OR pressure monitoring",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-16-bms-benh-vien-chenh-ap-phong-mo.html",
+  "x_post": "An OR must stay at least +2.5 Pa above the corridor, an isolation room 2.5 Pa below.\n\n• One DCM-8044-D per OR: DP, T, RH, VAV\n• DCM-8446 per isolation room\n• Door contact blocks false alarms\n• Pa trend every minute\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Phòng mổ phải dương áp tối thiểu +2,5 Pa so với hành lang, phòng cách ly âm áp tối thiểu 2,5 Pa (ASHRAE 170). Một cửa mở lâu hoặc một bộ lọc HEPA bẩn là đủ đảo chiều dòng khí.\n\nCấu hình BMS trong bài:\n1. Mỗi phòng mổ một DCM-8044-D trên BACnet/IP: chênh áp, nhiệt độ, độ ẩm, VAV cấp và hút\n2. Phòng cách ly dùng DCM-8446 trên BACnet MS/TP, đo 2 cảm biến chênh áp qua phòng đệm\n3. Điều khiển theo độ lệch lưu lượng, giám sát và báo động theo Pa\n4. Trễ báo động và khóa theo tiếp điểm cửa để tránh báo động giả\n5. DCM-9025 chạy Niagara 4, lưu trend mỗi phút cho báo cáo kiểm soát nhiễm khuẩn\n\nSơ đồ nguyên lý và bảng gán IO 16 điểm:\nhttps://elvconsultant.com/blog/bms/2026-11-16-bms-benh-vien-chenh-ap-phong-mo.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #BenhVien #Niagara4 #MitsubishiElectric #DiamondControls"
+ },
+ {
   "date": "2026-11-15",
   "slug": "bms-cho-toa-nha-duoi-10000-m2",
   "title_vi": "BMS cho tòa nhà dưới 10.000 m²",

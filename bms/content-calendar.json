@@ -93,7 +93,8 @@
    "pillar": "Giải pháp theo phân khúc",
    "pillar_en": "Solutions by segment",
    "topic": "BMS bệnh viện: giám sát chênh áp phòng mổ, phòng cách ly theo dải Pa",
-   "status": "planned"
+   "status": "published",
+   "slug": "bms-benh-vien-chenh-ap-phong-mo"
   },
   {
    "date": "2026-11-17",
