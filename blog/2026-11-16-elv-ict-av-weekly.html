@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly W47/2026 — Honeywell AI Fire · Axis ISC West · Secutech VN · BMS Convergence · Cabling Gold | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 47 năm 2026: Honeywell AI phát hiện cháy thông minh, Axis Unified Security ISC West, Secutech Vietnam 2026, BMS AI convergence, 5 tiêu chuẩn vàng cabling doanh nghiệp.">
+  <meta name="keywords" content="ELV news Vietnam, ICT AV weekly, Honeywell fire safety AI, Axis ISC West 2026, Secutech Vietnam 2026, BMS convergence, structured cabling 2026, smart building Vietnam">
+  <meta name="author" content="Paul Le — ELV/ICT/AV Design Director">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-16-elv-ict-av-weekly.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="ELV/ICT/AV Weekly W47/2026 — Honeywell AI Fire · Axis ISC West · Secutech VN">
+  <meta property="og:description" content="5 tin nổi bật tuần 47: Honeywell AI fire detection, Axis Unified Security, Secutech Vietnam 2026, BMS convergence, enterprise cabling standards.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1493514789931-586cb221d7a7?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://elvconsultant.com/blog/2026-11-16-elv-ict-av-weekly.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+      --gut:clamp(1rem,4vw,3.5rem);
+    }
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6}
+
+    /* GRID BG */
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;
+      background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      padding:0 var(--gut);display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-text{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1.5px}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2.5px;font-weight:400;display:block;margin-top:-2px;text-transform:uppercase}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);
+      padding:7px 18px;border-radius:999px;font-size:12px;font-weight:600;cursor:pointer;
+      font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all 0.2s;text-decoration:none}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg)}
+    @media(max-width:768px){.nav-links{display:none}.nav-cta{padding:6px 14px;font-size:11px}}
+
+    /* LANG BAR */
+    .lang-bar{position:relative;z-index:1;display:flex;justify-content:flex-end;
+      padding:0.75rem var(--gut);border-bottom:1px solid var(--card-border);
+      background:rgba(16,30,48,0.6)}
+    .lang-btn{font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;
+      padding:5px 14px;border-radius:3px;border:1px solid var(--card-border);
+      color:var(--steel);background:transparent;cursor:pointer;transition:all 0.2s;margin-left:6px}
+    .lang-btn.active{background:var(--cyan);color:var(--bg);border-color:var(--cyan);font-weight:700}
+    .lang-btn:hover:not(.active){border-color:var(--cyan);color:var(--cyan)}
+
+    /* HERO */
+    .article-hero{position:relative;z-index:1;height:clamp(320px,45vw,520px);overflow:hidden}
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.65) saturate(0.85)}
+    .hero-overlay{position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(7,17,31,0.1) 0%,rgba(7,17,31,0.4) 40%,rgba(7,17,31,0.92) 85%,var(--bg) 100%)}
+    .hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem var(--gut) 2rem}
+    .hero-eyebrow{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:4px;
+      color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:10px}
+    .hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
+    .hero-title{font-family:'Orbitron',sans-serif;font-size:clamp(1.1rem,3vw,1.9rem);
+      font-weight:900;color:var(--white);line-height:1.2;max-width:800px;
+      text-shadow:0 2px 20px rgba(0,0,0,0.6)}
+    .hero-meta{margin-top:0.75rem;font-size:12px;color:var(--silver);letter-spacing:0.5px}
+
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:3rem var(--gut) 4rem}
+
+    /* NEWS ITEMS */
+    .news-item{background:var(--card-bg);border:1px solid var(--card-border);
+      border-radius:10px;padding:2rem;margin-bottom:1.5rem;position:relative;overflow:hidden;
+      transition:border-color 0.3s,box-shadow 0.3s}
+    .news-item::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;
+      background:var(--cyan);opacity:0.6}
+    .news-item:hover{border-color:var(--cyan-glow);box-shadow:0 0 0 1px var(--cyan-glow),0 8px 32px -8px rgba(0,200,224,0.2)}
+
+    .item-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+    .item-num{font-family:'Orbitron',sans-serif;font-size:28px;font-weight:900;
+      color:var(--cyan);opacity:0.3;line-height:1;min-width:36px}
+    .item-tags{display:flex;flex-wrap:wrap;gap:6px;flex:1}
+    .tag{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:1.5px;
+      padding:3px 9px;border-radius:3px;border:1px solid;font-weight:700}
+    .tag-brand{color:var(--cyan);border-color:rgba(0,200,224,0.4);background:var(--cyan-dim)}
+    .tag-cat{color:var(--silver);border-color:var(--card-border);background:rgba(160,180,200,0.06)}
+
+    .item-title-vi{font-family:'Inter',sans-serif;font-size:1.05rem;font-weight:700;
+      color:var(--white);line-height:1.4;margin-bottom:0.3rem}
+    .item-title-en{font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:400;
+      color:var(--silver);font-style:italic;margin-bottom:1rem}
+
+    .item-body{font-size:14px;color:var(--silver);line-height:1.75;margin-bottom:1.25rem}
+    .item-body strong{color:var(--white);font-weight:600}
+    .item-body a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(0,200,224,0.3)}
+    .item-body a:hover{border-color:var(--cyan)}
+
+    /* WHY BOX */
+    .why-box{background:rgba(0,200,224,0.06);border:1px solid rgba(0,200,224,0.2);
+      border-radius:6px;padding:1rem 1.25rem;margin-top:1rem}
+    .why-box .why-label{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:0.5rem;display:flex;align-items:center;gap:8px}
+    .why-box .why-label::before{content:'▸';font-size:11px}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.7}
+    .why-box p strong{color:var(--white)}
+
+    /* DIAGRAM BOX */
+    .diagram-box{background:var(--navy-deep);border:1px solid var(--card-border);
+      border-radius:8px;padding:1.5rem;margin:1.25rem 0;overflow-x:auto}
+    .diagram-box .diag-title{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:1rem}
+    .diagram-box pre{font-family:'Inter',monospace;font-size:11px;color:var(--silver);
+      line-height:1.8;white-space:pre}
+    .diagram-box .arrow{color:var(--cyan)}
+
+    /* DIVIDER */
+    .section-divider{border:none;border-top:1px solid var(--card-border);margin:2.5rem 0}
+
+    /* CTA BOX */
+    .cta-box{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);
+      border:1px solid var(--cyan-glow);border-radius:12px;padding:2.5rem;
+      text-align:center;margin:3rem 0 0}
+    .cta-box h3{font-family:'Orbitron',sans-serif;font-size:1.1rem;font-weight:900;
+      color:var(--white);margin-bottom:0.75rem;letter-spacing:1px}
+    .cta-box p{font-size:14px;color:var(--silver);max-width:480px;margin:0 auto 1.5rem;line-height:1.7}
+    .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);
+      font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;
+      padding:12px 32px;border-radius:999px;text-decoration:none;transition:all 0.2s}
+    .cta-btn:hover{background:var(--white);transform:translateY(-2px)}
+
+    /* FOOTER */
+    footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
+      background:var(--card-bg);padding:3rem var(--gut) 2rem;margin-top:4rem}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;
+      grid-template-columns:1fr 1fr 1fr;gap:2rem;align-items:start}
+    .footer-brand .logo-text{font-size:13px}
+    .footer-brand p{font-size:12px;color:var(--steel);line-height:1.7;margin-top:0.75rem}
+    .footer-col h5{font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:1rem;text-transform:uppercase}
+    .footer-col a{display:block;font-size:13px;color:var(--steel);text-decoration:none;
+      margin-bottom:0.4rem;transition:color 0.2s}
+    .footer-col a:hover{color:var(--silver)}
+    .footer-bottom{max-width:1100px;margin:1.5rem auto 0;padding-top:1.5rem;
+      border-top:1px solid var(--card-border);display:flex;justify-content:space-between;
+      flex-wrap:wrap;gap:0.5rem}
+    .footer-copy{font-size:12px;color:var(--steel)}
+    .footer-domain{font-family:'Orbitron',sans-serif;font-size:11px;color:var(--cyan)}
+    @media(max-width:768px){.footer-inner{grid-template-columns:1fr}}
+
+    /* BACK LINK */
+    .back-link{display:inline-flex;align-items:center;gap:8px;
+      font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:2px;
+      color:var(--steel);text-decoration:none;margin-bottom:2rem;
+      transition:color 0.2s}
+    .back-link:hover{color:var(--cyan)}
+    .back-link::before{content:'←';font-size:14px}
+
+    /* SOURCE BADGE */
+    .source-badge{font-size:11px;color:var(--steel);margin-top:0.75rem;display:flex;align-items:center;gap:6px}
+    .source-badge a{color:var(--steel);text-decoration:none;border-bottom:1px solid rgba(74,98,128,0.5)}
+    .source-badge a:hover{color:var(--silver);border-color:var(--silver)}
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư vấn</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">🇻🇳 VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 EN</button>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1493514789931-586cb221d7a7?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="City skyline at night — ELV ICT AV Weekly W47 2026" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="vi-content">BẢN TIN ELV/ICT/AV · TUẦN 47 · 2026</span>
+      <span class="en-content" style="display:none">ELV/ICT/AV WEEKLY · WEEK 47 · 2026</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="vi-content">Honeywell AI Fire Safety · Axis ISC West · Secutech VN 2026 · BMS Convergence · Cabling Gold Standard</span>
+      <span class="en-content" style="display:none">Honeywell AI Fire Safety · Axis ISC West · Secutech VN 2026 · BMS Convergence · Cabling Gold Standard</span>
+    </h1>
+    <div class="hero-meta">THỨ HAI · 16 THÁNG 11, 2026 &nbsp;|&nbsp; MONDAY · NOV 16, 2026 &nbsp;|&nbsp; W47</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <a href="/blog/" class="back-link">
+    <span class="vi-content">Quay lại danh sách bài viết</span>
+    <span class="en-content" style="display:none">Back to blog</span>
+  </a>
+
+  <!-- ═══ NEWS ITEM 1 ═══ -->
+  <article class="news-item">
+    <div class="item-header">
+      <div class="item-num">01</div>
+      <div class="item-tags">
+        <span class="tag tag-brand">HONEYWELL</span>
+        <span class="tag tag-cat">FIRE ALARM</span>
+        <span class="tag tag-cat">LIFE SAFETY</span>
+        <span class="tag tag-cat">AI</span>
+      </div>
+    </div>
+
+    <div class="vi-content">
+      <h2 class="item-title-vi">Honeywell Ra Mắt Danh Mục AI Phát Hiện Cháy & An Toàn Sự Cố Thế Hệ Mới</h2>
+      <p class="item-title-en">Honeywell Unveils New Portfolio of Intelligent Fire and Life Safety Innovations</p>
+      <div class="item-body">
+        <p><strong>Honeywell Technologies</strong> vừa công bố danh mục sản phẩm mới nhất tích hợp AI cho hệ thống phát hiện cháy và an toàn sự cố, bao gồm ba mảng chính:</p>
+        <br>
+        <p>• <strong>AI-Enabled Fire Detection:</strong> Hệ thống cảm biến thế hệ mới sử dụng mô hình học máy phân tích mẫu khói/nhiệt đa chiều, giúp <strong>giảm đến 40% báo động giả</strong> so với các hệ thống thông thường. Đặc biệt quan trọng cho các toà nhà bệnh viện và trường học tại Việt Nam, nơi báo động giả gây ra sự cố nghiêm trọng.</p>
+        <br>
+        <p>• <strong>Low-Level CO Monitoring:</strong> Giám sát Carbon Monoxide (CO) ngưỡng thấp (5–10 ppm) — thấp hơn nhiều so với ngưỡng cảnh báo thông thường 35 ppm. Phù hợp cho bãi đỗ xe ngầm, nhà bếp công nghiệp và các không gian kín trong toà nhà dân cư.</p>
+        <br>
+        <p>• <strong>Intelligent Incident Command:</strong> Nền tảng chỉ huy sự cố tích hợp AI phân tích video + fire panel + BAS, cung cấp hướng dẫn di tản thông minh theo thời gian thực, kết nối trực tiếp với lực lượng cứu hỏa qua API mở.</p>
+
+        <div class="diagram-box">
+          <div class="diag-title">SƠ ĐỒ NGUYÊN LÝ — HONEYWELL AI FIRE SAFETY ARCHITECTURE</div>
+          <pre>
+┌─────────────────────────────────────────────────────────┐
+│          HONEYWELL EBI (Enterprise Buildings Integrator) │
+│           AI Analytics Engine  ·  Cloud Dashboard        │
+└──────────┬──────────────┬─────────────┬─────────────────┘
+           │              │             │
+    ┌──────▼──────┐  ┌────▼────┐  ┌────▼──────────┐
+    │  FIRE PANEL  │  │  BAS    │  │  CCTV / VMS   │
+    │ Notifier/   │  │ HVAC    │  │  Axis/Bosch   │
+    │ FireHawk AI │  │ Smoke   │  │  Video AI     │
+    └──────┬──────┘  │ Control │  └───────────────┘
+           │         └─────────┘
+    ┌──────▼─────────────────────────────────────┐
+    │          FIELD DEVICES                      │
+    │  ┌─────────┐  ┌──────────┐  ┌───────────┐  │
+    │  │  Multi- │  │  Low-CO  │  │  Heat/    │  │
+    │  │  Sensor │  │  Detector│  │  Beam Det │  │
+    │  │  AI Det │  │ 5-10ppm  │  │           │  │
+    │  └─────────┘  └──────────┘  └───────────┘  │
+    └────────────────────────────────────────────┘
+           ↓ Incident Command API
+    ┌──────▼─────────────────────────────────────┐
+    │  INCIDENT RESPONSE PLATFORM                 │
+    │  · AI Evacuation Routing                    │
+    │  · Fire Brigade API Integration             │
+    │  · Real-time Floor Plan Navigation          │
+    └────────────────────────────────────────────┘
+          </pre>
+        </div>
+
+        <p class="source-badge">📰 Nguồn: <a href="https://www.honeywell.com/us/en/news/press-releases/2026/11/honeywell-technologies-unveils-new-portfolio-of-intelligent-fire-and-life-safety-innovations-to-improve-detection-monitoring-and-incident-response" target="_blank" rel="noopener">Honeywell Press Release, Nov 2026</a></p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+        <p>Quy định QCVN 06:2022 (PCCC) yêu cầu giảm thiểu báo động giả trong bệnh viện và trường học. <strong>Honeywell AI Fire Detection</strong> trực tiếp đáp ứng yêu cầu này, đồng thời tương thích NFPA 72 — tiêu chuẩn được chấp nhận trong các dự án FDI và toà nhà quốc tế tại TP.HCM và Hà Nội. <strong>Đây là giải pháp cần đưa vào RFP/BoM cho các dự án bệnh viện, trường học, khách sạn 4–5 sao tại Việt Nam 2026–2027.</strong></p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <h2 class="item-title-vi">Honeywell Unveils AI-Powered Fire Detection & Life Safety Portfolio</h2>
+      <p class="item-title-en">New intelligent portfolio reduces false alarms by 40%, adds low-level CO monitoring and incident command AI</p>
+      <div class="item-body">
+        <p><strong>Honeywell Technologies</strong> has announced a new portfolio of intelligent fire and life safety innovations powered by AI, covering three key areas:</p>
+        <br>
+        <p>• <strong>AI-Enabled Fire Detection:</strong> Next-generation sensors using multi-dimensional smoke/heat ML models, delivering <strong>up to 40% fewer false alarms</strong> compared to conventional systems. Critical for hospitals and schools in Vietnam where false alarms create serious operational disruptions.</p>
+        <br>
+        <p>• <strong>Low-Level CO Monitoring:</strong> Carbon Monoxide detection at 5–10 ppm thresholds — far below the standard 35 ppm alarm level. Ideal for underground parking, commercial kitchens and enclosed residential spaces.</p>
+        <br>
+        <p>• <strong>Intelligent Incident Command:</strong> An AI-integrated incident platform combining video analytics + fire panels + BAS, delivering real-time intelligent evacuation guidance and direct API connectivity with fire brigades.</p>
+        <p class="source-badge">📰 Source: <a href="https://www.honeywell.com/us/en/news/press-releases/2026/11/honeywell-technologies-unveils-new-portfolio-of-intelligent-fire-and-life-safety-innovations-to-improve-detection-monitoring-and-incident-response" target="_blank" rel="noopener">Honeywell Press Release, Nov 2026</a></p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+        <p>QCVN 06:2022 (Vietnam Fire Code) mandates false alarm reduction in hospitals and schools. <strong>Honeywell AI Fire Detection</strong> directly addresses this requirement while maintaining NFPA 72 compliance — the standard accepted for FDI and international buildings in HCMC and Hanoi. <strong>This solution should be included in RFP/BoM for hospital, school and 4–5 star hotel projects in Vietnam 2026–2027.</strong></p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="section-divider">
+
+  <!-- ═══ NEWS ITEM 2 ═══ -->
+  <article class="news-item">
+    <div class="item-header">
+      <div class="item-num">02</div>
+      <div class="item-tags">
+        <span class="tag tag-brand">HONEYWELL</span>
+        <span class="tag tag-cat">BMS</span>
+        <span class="tag tag-cat">BUILDING AUTOMATION</span>
+      </div>
+    </div>
+
+    <div class="vi-content">
+      <h2 class="item-title-vi">Honeywell EBI — Hệ Thống Tích Hợp Toà Nhà Thế Hệ Mới Với AI Tự Vận Hành</h2>
+      <p class="item-title-en">Honeywell Technologies Unveils New EBI, Fire and Life Safety Innovations for Autonomous Building Operations</p>
+      <div class="item-body">
+        <p>Song song với thông báo về fire safety, <strong>Honeywell Technologies</strong> cũng công bố phiên bản mới của <strong>Enterprise Buildings Integrator (EBI)</strong> — nền tảng quản lý toà nhà hợp nhất với các nâng cấp AI quan trọng:</p>
+        <br>
+        <p>• <strong>Autonomous Building Operations:</strong> EBI mới tích hợp AI-driven automation cho phép toà nhà tự điều chỉnh HVAC, chiếu sáng và hệ thống an ninh dựa trên dữ liệu chiếm chỗ thực tế và dự báo thời tiết — không cần can thiệp thủ công.</p>
+        <br>
+        <p>• <strong>Unified Security + Fire Integration:</strong> EBI kết hợp fire alarm, access control, video surveillance và BAS trên một giao diện duy nhất, giảm thiểu số lượng màn hình vận hành từ 4–5 xuống còn 1.</p>
+        <br>
+        <p>• <strong>AI Energy Optimization:</strong> Tối ưu hóa năng lượng real-time, với cam kết tiết kiệm <strong>15–22% chi phí năng lượng</strong> so với BMS thông thường.</p>
+
+        <div class="diagram-box">
+          <div class="diag-title">HONEYWELL EBI — UNIFIED CONVERGENCE ARCHITECTURE</div>
+          <pre>
+                    ┌──────────────────────────────┐
+                    │      HONEYWELL EBI CLOUD      │
+                    │  AI Analytics · Digital Twin  │
+                    │  Energy Optimization Engine   │
+                    └──────────────┬───────────────┘
+                                   │ HTTPS/REST API
+                    ┌──────────────▼───────────────┐
+                    │   ENTERPRISE BUILDINGS        │
+                    │   INTEGRATOR (EBI) SERVER     │
+                    │   On-Premise / Edge           │
+                    └──┬──────┬──────┬──────┬──────┘
+                       │      │      │      │
+              ┌────────▼┐  ┌──▼───┐  ┌▼──┐  ┌▼─────────┐
+              │  FIRE   │  │ACCESS│  │VMS│  │   BAS    │
+              │  ALARM  │  │CTRL  │  │AI │  │  HVAC    │
+              │Notifier │  │ProW  │  │   │  │Lighting  │
+              └─────────┘  └──────┘  └───┘  └──────────┘
+                 ↑                              ↑
+           Field Devices                 IoT Sensors
+           Multi-Sensor AI              Occupancy Data
+          </pre>
+        </div>
+
+        <p class="source-badge">📰 Nguồn: <a href="https://www.honeywell.com/us/en/news/press-releases/2026/11/honeywell-technologies-unveils-new-ebi-fire-and-life-safety-and-security-innovations-that-bring-more-intelligent-autonomous-operations-to-buildings" target="_blank" rel="noopener">Honeywell EBI Press Release, Nov 2026</a> · <a href="https://www.securityinformed.com/news/honeywell-ai-building-automation-accelerate-2026-co-2173-ga.1794393562.html" target="_blank" rel="noopener">SecurityInformed.com</a></p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+        <p>EBI là nền tảng BMS đứng đầu cho các toà nhà hạng A tại Việt Nam (Landmark 81, Sun Group, Vinhomes). Phiên bản mới với <strong>AI tự vận hành</strong> sẽ định nghĩa lại yêu cầu kỹ thuật trong RFP BMS 2027. Các kỹ sư ELV/ICT cần cập nhật hiểu biết về EBI API để thiết kế hệ thống tích hợp (SI) hiệu quả với Honeywell EcoStruxure và Johnson Controls OpenBlue.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <h2 class="item-title-vi">Honeywell EBI — New Generation Building Integration with Autonomous AI Operations</h2>
+      <p class="item-title-en">Honeywell's Enterprise Buildings Integrator gets AI-driven automation for HVAC, security and energy in one platform</p>
+      <div class="item-body">
+        <p>Alongside the fire safety announcement, <strong>Honeywell Technologies</strong> unveiled a new version of its <strong>Enterprise Buildings Integrator (EBI)</strong> with critical AI upgrades:</p>
+        <br>
+        <p>• <strong>Autonomous Building Operations:</strong> New EBI integrates AI-driven automation allowing buildings to self-adjust HVAC, lighting and security based on real occupancy data and weather forecasts — with no manual intervention.</p>
+        <br>
+        <p>• <strong>Unified Security + Fire Integration:</strong> EBI combines fire alarm, access control, video surveillance and BAS in a single interface, reducing operator screens from 4–5 down to 1.</p>
+        <br>
+        <p>• <strong>AI Energy Optimization:</strong> Real-time energy optimization delivering <strong>15–22% energy cost savings</strong> versus conventional BMS.</p>
+        <p class="source-badge">📰 Source: <a href="https://www.honeywell.com/us/en/news/press-releases/2026/11/honeywell-technologies-unveils-new-ebi-fire-and-life-safety-and-security-innovations-that-bring-more-intelligent-autonomous-operations-to-buildings" target="_blank" rel="noopener">Honeywell EBI Press Release, Nov 2026</a></p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+        <p>EBI is the leading BMS platform for Class-A buildings in Vietnam (Landmark 81, Sun Group, Vinhomes). The new <strong>autonomous AI operations</strong> will redefine BMS technical requirements in 2027 RFPs. ELV/ICT engineers need to update their understanding of the EBI API to design effective system integration (SI) with Honeywell EcoStruxure and Johnson Controls OpenBlue.</p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="section-divider">
+
+  <!-- ═══ NEWS ITEM 3 ═══ -->
+  <article class="news-item">
+    <div class="item-header">
+      <div class="item-num">03</div>
+      <div class="item-tags">
+        <span class="tag tag-brand">AXIS</span>
+        <span class="tag tag-cat">SECURITY</span>
+        <span class="tag tag-cat">IP CAMERA</span>
+        <span class="tag tag-cat">AI ANALYTICS</span>
+      </div>
+    </div>
+
+    <div class="vi-content">
+      <h2 class="item-title-vi">Axis Communications Giới Thiệu Làn Sóng Mới Giải Pháp Bảo Mật Hợp Nhất Tại ISC West 2026</h2>
+      <p class="item-title-en">Axis Communications Introduces the Next Wave of Unified Security Solutions at ISC West 2026</p>
+      <div class="item-body">
+        <p><strong>Axis Communications</strong> vừa ra mắt bộ giải pháp bảo mật hợp nhất thế hệ mới tại hội chợ ISC West 2026, tập trung vào ba trụ cột:</p>
+        <br>
+        <p>• <strong>AXIS OS 13 Cybersecurity Platform:</strong> Hệ điều hành AXIS OS 13 mới nhất với kiến trúc <strong>zero-trust</strong>, tích hợp TPM (Trusted Platform Module) trên mọi thiết bị Axis, hỗ trợ đầy đủ IEEE 802.1AR Secure Device Identity. Vá lỗ hổng bảo mật trong vòng 24 giờ qua over-the-air update.</p>
+        <br>
+        <p>• <strong>Unified Security Platform:</strong> Tích hợp liền mạch giữa video analytics AI, kiểm soát truy cập AXIS A series và phát hiện âm thanh AXIS Audio Manager Edge — tất cả quản lý qua một API thống nhất.</p>
+        <br>
+        <p>• <strong>ARTPEC-9 AI Processing:</strong> Chip AI thế hệ mới ARTPEC-9 cho phép xử lý on-device: nhận diện khuôn mặt mask-on, đếm người theo thời gian thực, phát hiện đối tượng nguy hiểm — không cần server phân tích riêng.</p>
+
+        <div class="diagram-box">
+          <div class="diag-title">AXIS UNIFIED SECURITY PLATFORM — INTEGRATION TOPOLOGY</div>
+          <pre>
+┌──────────────────────────────────────────────────────────┐
+│                  AXIS CAMERA STATION PRO                  │
+│           (VMS + Access Control + Audio Mgmt)             │
+│         AXIS OS 13 · Zero-Trust · IEEE 802.1AR           │
+└────────────┬──────────────┬───────────────┬──────────────┘
+             │              │               │
+   ┌─────────▼──────┐  ┌────▼──────┐  ┌────▼──────────────┐
+   │ AXIS IP CAMERA │  │ AXIS A    │  │ AXIS AUDIO        │
+   │ ARTPEC-9 AI    │  │ SERIES    │  │ MANAGER EDGE      │
+   │ Face/Object    │  │ Access    │  │ IP Speaker+Mic    │
+   │ Detection      │  │ Control   │  │ Audio Analytics   │
+   │ AXIS OS 13     │  │ Door      │  │                   │
+   └────────────────┘  │ Controller│  └───────────────────┘
+                       └───────────┘
+   ↓ Open API / ONVIF / ACAP              ↓ HTTPS Integration
+┌──────────────────────────────────────────────────────────┐
+│          3RD PARTY INTEGRATION                            │
+│    Genetec · Milestone · Lenel · C·CURE 9000             │
+│    Johnson Controls · Bosch BVMS · Honeywell Pro-Watch  │
+└──────────────────────────────────────────────────────────┘
+          </pre>
+        </div>
+
+        <p class="source-badge">📰 Nguồn: <a href="https://losspreventionmedia.com/axis-communications-introduces-the-next-wave-of-unified-security-solutions-at-isc-west-2026/" target="_blank" rel="noopener">Loss Prevention Media · ISC West 2026</a> · <a href="https://www.intelligentciso.com/2026/11/06/axis-communications-strengthens-cybersecurity-and-integration-with-axis-os-13/" target="_blank" rel="noopener">Intelligent CISO</a></p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+        <p>Axis là thương hiệu IP camera chiếm thị phần lớn nhất trong phân khúc cao cấp tại Việt Nam (ngân hàng, khách sạn 5 sao, khu công nghiệp FDI). <strong>AXIS OS 13 với zero-trust</strong> là yêu cầu bắt buộc trong các dự án có tiêu chuẩn an ninh mạng (BSIMM, ISO 27001). Kỹ sư ELV cần cập nhật spec sheet để đảm bảo yêu cầu firmware AXIS OS 13 trong RFP 2026–2027.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <h2 class="item-title-vi">Axis Communications Introduces Next-Wave Unified Security at ISC West 2026</h2>
+      <p class="item-title-en">AXIS OS 13 zero-trust cybersecurity + ARTPEC-9 AI chip + unified platform API launched at ISC West</p>
+      <div class="item-body">
+        <p><strong>Axis Communications</strong> unveiled its next-wave unified security portfolio at ISC West 2026, built on three pillars:</p>
+        <br>
+        <p>• <strong>AXIS OS 13 Cybersecurity:</strong> New AXIS OS 13 with <strong>zero-trust architecture</strong>, TPM integration on every device and full IEEE 802.1AR Secure Device Identity support. Security patches delivered via OTA in under 24 hours.</p>
+        <br>
+        <p>• <strong>Unified Security Platform:</strong> Seamless integration between AI video analytics, AXIS A series access control and AXIS Audio Manager Edge — all managed via a single unified API.</p>
+        <br>
+        <p>• <strong>ARTPEC-9 AI Processing:</strong> New ARTPEC-9 chip enables on-device AI: masked face recognition, real-time crowd counting, dangerous object detection — no separate analytics server required.</p>
+        <p class="source-badge">📰 Source: <a href="https://losspreventionmedia.com/axis-communications-introduces-the-next-wave-of-unified-security-solutions-at-isc-west-2026/" target="_blank" rel="noopener">Loss Prevention Media · ISC West 2026</a></p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+        <p>Axis is the leading premium IP camera brand in Vietnam (banks, 5-star hotels, FDI industrial parks). <strong>AXIS OS 13 zero-trust</strong> is now mandatory for projects with cybersecurity requirements (BSIMM, ISO 27001). ELV engineers should update spec sheets to require AXIS OS 13 firmware compliance in 2026–2027 RFPs.</p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="section-divider">
+
+  <!-- ═══ NEWS ITEM 4 ═══ -->
+  <article class="news-item">
+    <div class="item-header">
+      <div class="item-num">04</div>
+      <div class="item-tags">
+        <span class="tag tag-brand">SECUTECH</span>
+        <span class="tag tag-cat">VIETNAM</span>
+        <span class="tag tag-cat">SMART BUILDING</span>
+        <span class="tag tag-cat">TRIỂN LÃM</span>
+      </div>
+    </div>
+
+    <div class="vi-content">
+      <h2 class="item-title-vi">Secutech Vietnam 2026 Trở Lại Hà Nội — Nhu Cầu Bùng Nổ Với Smart Safety & Hạ Tầng AI</h2>
+      <p class="item-title-en">Secutech Vietnam 2026 Returns to Hanoi Amid Surging Demand for Smart Safety and Infrastructure</p>
+      <div class="item-body">
+        <p><strong>Secutech Vietnam 2026</strong> (tổ chức bởi Messe Frankfurt) đã trở lại Hà Nội với quy mô lớn hơn, phản ánh nhu cầu ngày càng tăng về giải pháp an toàn thông minh và hạ tầng tích hợp AI tại Việt Nam. Các điểm nổi bật:</p>
+        <br>
+        <p>• <strong>AI-Integrated Security Solutions:</strong> Các giải pháp bảo mật tích hợp AI là điểm nhấn chính, bao gồm hệ thống camera AI, kiểm soát truy cập sinh trắc học và hệ thống giám sát thông minh cho nhà máy và toà nhà.</p>
+        <br>
+        <p>• <strong>Smart Factory Safety:</strong> Lần đầu tiên Secutech Vietnam tập trung chuyên sâu vào an toàn nhà máy thông minh — phản ánh làn sóng đầu tư FDI vào khu công nghiệp Việt Nam (Samsung, LG, Foxconn, Lego).</p>
+        <br>
+        <p>• <strong>Fire Safety Innovation:</strong> Các hệ thống báo cháy và phát hiện sớm thế hệ mới được trưng bày rộng rãi, đặc biệt cho ứng dụng bệnh viện và toà nhà cao tầng theo yêu cầu QCVN 06:2022.</p>
+        <br>
+        <p>• <strong>Thị trường Việt Nam 2026:</strong> Thị trường bảo mật và ELV Việt Nam dự kiến đạt <strong>$2.3 tỷ USD vào 2028</strong>, tăng trưởng CAGR 12.5%, được thúc đẩy bởi đô thị hóa, khu công nghiệp FDI và chính sách đô thị thông minh của Chính phủ.</p>
+        <p class="source-badge">📰 Nguồn: <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/press/press-releases/2026/STVN26_PR2.html" target="_blank" rel="noopener">Secutech Vietnam 2026 — Messe Frankfurt</a> · <a href="https://securitymiddleeastmag.com/digital-transformation/secutech-vietnam-2026-returns-to-hanoi-amid-surging-demand-for-smart-safety-and-infrastructure/" target="_blank" rel="noopener">Security Middle East</a></p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+        <p>Secutech Vietnam là sự kiện ngành ELV/Security lớn nhất Việt Nam, là nơi các nhà phân phối và tổng thầu gặp gỡ nhà sản xuất. <strong>Sự trở lại với quy mô lớn hơn</strong> xác nhận Việt Nam đang trở thành thị trường trọng điểm trong khu vực ĐNA cho AI security và smart building. Đây là cơ hội quan trọng để update supplier list và đánh giá sản phẩm mới cho các dự án 2027.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <h2 class="item-title-vi">Secutech Vietnam 2026 Returns to Hanoi — AI Smart Safety Market Surges</h2>
+      <p class="item-title-en">Vietnam's largest security and ELV trade show returns bigger, showcasing AI-integrated safety, smart factory and fire solutions</p>
+      <div class="item-body">
+        <p><strong>Secutech Vietnam 2026</strong> (organized by Messe Frankfurt) returned to Hanoi at a larger scale, reflecting surging demand for smart safety solutions and AI-integrated infrastructure in Vietnam. Highlights:</p>
+        <br>
+        <p>• <strong>AI-Integrated Security:</strong> AI security solutions led the show, including AI cameras, biometric access control and intelligent monitoring systems for factories and buildings.</p>
+        <br>
+        <p>• <strong>Smart Factory Safety:</strong> First-ever dedicated smart factory safety focus — reflecting the FDI manufacturing wave into Vietnam (Samsung, LG, Foxconn, Lego).</p>
+        <br>
+        <p>• <strong>Fire Safety Innovation:</strong> Next-generation fire detection systems for hospitals and high-rise buildings per QCVN 06:2022 requirements were prominently featured.</p>
+        <br>
+        <p>• <strong>Vietnam Market 2026:</strong> Vietnam's security and ELV market projected to reach <strong>$2.3 billion by 2028</strong>, growing at 12.5% CAGR, driven by urbanization, FDI industrial parks and government smart city policies.</p>
+        <p class="source-badge">📰 Source: <a href="https://secutechvietnam.tw.messefrankfurt.com/hanoi/en/press/press-releases/2026/STVN26_PR2.html" target="_blank" rel="noopener">Secutech Vietnam 2026 — Messe Frankfurt</a></p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+        <p>Secutech Vietnam is the largest ELV/Security event in Vietnam, where distributors and main contractors meet manufacturers. <strong>Its return at a larger scale</strong> confirms Vietnam is becoming a priority market in SEA for AI security and smart buildings. This is a critical opportunity to update supplier lists and evaluate new products for 2027 projects.</p>
+      </div>
+    </div>
+  </article>
+
+  <hr class="section-divider">
+
+  <!-- ═══ NEWS ITEM 5 ═══ -->
+  <article class="news-item">
+    <div class="item-header">
+      <div class="item-num">05</div>
+      <div class="item-tags">
+        <span class="tag tag-brand">BICSI</span>
+        <span class="tag tag-cat">CABLING</span>
+        <span class="tag tag-cat">INFRASTRUCTURE</span>
+        <span class="tag tag-cat">TIÊU CHUẨN</span>
+      </div>
+    </div>
+
+    <div class="vi-content">
+      <h2 class="item-title-vi">5 Tiêu Chuẩn Vàng Hạ Tầng Cáp Cấu Trúc Doanh Nghiệp 2026 — Từ Fiber-to-Desk Đến Wi-Fi 7</h2>
+      <p class="item-title-en">Five Gold Standards for Enterprise Structured Cabling and Network Infrastructure in 2026</p>
+      <div class="item-body">
+        <p>Một báo cáo toàn diện từ GlobeNewswire/Manila Times xác định <strong>5 tiêu chuẩn vàng</strong> cho hạ tầng cáp cấu trúc doanh nghiệp trong năm 2026, đặc biệt quan trọng khi các toà nhà tích hợp AI, IoT và Wi-Fi 7:</p>
+        <br>
+        <p>• <strong>Tiêu chuẩn 1 — Fiber-to-the-Desk (FTTD):</strong> Mở rộng fiber quang đến từng workstation thay vì chỉ đến IDF. Cáp <strong>OS2 single-mode hoặc OM5 multi-mode</strong> cho phép băng thông không giới hạn cho AI workstation và 100GbE edge switching.</p>
+        <br>
+        <p>• <strong>Tiêu chuẩn 2 — Ultra-PoE (90W IEEE 802.3bt Type 4):</strong> Hạ tầng PoE thế hệ mới cung cấp <strong>90W trên mỗi port</strong>, đủ cho màn hình 4K, thin client, AP Wi-Fi 7, camera AI 4K và hệ thống chiếu sáng LED thông minh Tunable White.</p>
+        <br>
+        <p>• <strong>Tiêu chuẩn 3 — Wi-Fi 7 Ready Backbone:</strong> Cáp Category 8 (40GBase-T) hoặc fiber 10/25G đến mọi AP Wi-Fi 7 đảm bảo không nghẽn cổ chai uplink khi tốc độ wireless vượt 10Gbps.</p>
+        <br>
+        <p>• <strong>Tiêu chuẩn 4 — 10GBase-T Edge Switching:</strong> Switch tầng access <strong>10GbE copper</strong> thay thế 1GbE truyền thống, tương thích ngược hoàn toàn với Cat6A existing. ROI đạt được trong 3–4 năm nhờ tiết kiệm năng lượng và tăng throughput.</p>
+        <br>
+        <p>• <strong>Tiêu chuẩn 5 — Smart Cable Management 2.0:</strong> Hệ thống quản lý cáp thông minh tích hợp DCIM (Data Center Infrastructure Management), nhận dạng cáp bằng RFID/barcode và tự động cập nhật sơ đồ cáp khi thay đổi — giảm thời gian fault finding xuống <strong>60–80%</strong>.</p>
+
+        <div class="diagram-box">
+          <div class="diag-title">ENTERPRISE CABLING GOLD STANDARD 2026 — LAYER DIAGRAM</div>
+          <pre>
+         FIBER BACKBONE (MDF → IDF)
+         OS2 / OM5 · 10/25/100G · Zero-Touch Patch
+
+         ┌─────────────────────────────────────────┐
+         │          MDF / MAIN SWITCH               │
+         │   100GbE Fiber Uplink to Core/WAN        │
+         └──────────┬────────────────┬─────────────┘
+                    │                │
+            ┌───────▼──────┐  ┌──────▼──────┐
+            │  IDF Floor 1 │  │  IDF Floor 2│
+            │ 10/25G Fiber │  │ 10/25G Fiber│
+            └──────┬───────┘  └──────┬──────┘
+                   │                 │
+         ┌─────────▼──────────────────▼──────────┐
+         │   10GBase-T EDGE SWITCH (Cat8/Cat6A)  │
+         │   Ultra-PoE 90W IEEE 802.3bt Type 4   │
+         └──┬────────────┬──────────────┬────────┘
+            │            │              │
+     ┌──────▼─────┐  ┌───▼────┐  ┌─────▼──────────┐
+     │  Wi-Fi 7   │  │ IP CAM │  │  IoT/LED/      │
+     │  AP        │  │ AI 4K  │  │  Thin Client   │
+     │ (Cat6A/F)  │  │(Cat6A) │  │  FTTD OM5      │
+     └────────────┘  └────────┘  └────────────────┘
+     ↑ 10Gbps wireless   ↑ 4K AI stream   ↑ 100GbE fiber desk
+          </pre>
+        </div>
+
+        <p class="source-badge">📰 Nguồn: <a href="https://www.manilatimes.net/2026/08/04/tmt-newswire/globenewswire/five-gold-standards-for-enterprise-structured-cabling-and-network-infrastructure-in-2026/2397516" target="_blank" rel="noopener">GlobeNewswire via Manila Times, Aug 2026</a> · <a href="https://www.zion-communication.com/Structured-Cabling-Systems-2026-Copper-Fiber-Design-Rules-for-Reliable-Scalable-Networks-id45069865.html" target="_blank" rel="noopener">Zion Communication</a></p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+        <p>Hạ tầng cáp là nền tảng của mọi hệ thống ELV/ICT/AV. <strong>5 tiêu chuẩn vàng này</strong> trực tiếp áp dụng vào việc viết BoQ, RFP và spec cho các dự án văn phòng hạng A, trung tâm dữ liệu và khu công nghiệp FDI tại Việt Nam. Đặc biệt, <strong>Ultra-PoE 90W</strong> là yêu cầu thiết yếu cho các dự án tích hợp chiếu sáng LED thông minh Tunable White + camera AI 4K + AP Wi-Fi 7 trên cùng hạ tầng cáp.</p>
+      </div>
+    </div>
+
+    <div class="en-content" style="display:none">
+      <h2 class="item-title-vi">Five Gold Standards for Enterprise Structured Cabling in 2026 — Fiber-to-Desk to Wi-Fi 7</h2>
+      <p class="item-title-en">Comprehensive guide to 2026 cabling standards: FTTD, Ultra-PoE, Wi-Fi 7-ready backbone, 10GBase-T edge, smart cable management</p>
+      <div class="item-body">
+        <p>A comprehensive report from GlobeNewswire identifies <strong>five gold standards</strong> for enterprise structured cabling in 2026, particularly critical as buildings integrate AI, IoT and Wi-Fi 7:</p>
+        <br>
+        <p>• <strong>Standard 1 — Fiber-to-the-Desk (FTTD):</strong> Extend fiber to each workstation rather than just to the IDF. <strong>OS2 single-mode or OM5 multi-mode</strong> delivers unlimited bandwidth for AI workstations and 100GbE edge switching.</p>
+        <br>
+        <p>• <strong>Standard 2 — Ultra-PoE (90W IEEE 802.3bt Type 4):</strong> New generation PoE providing <strong>90W per port</strong> — sufficient for 4K displays, thin clients, Wi-Fi 7 APs, 4K AI cameras and smart Tunable White LED lighting on a single cable plant.</p>
+        <br>
+        <p>• <strong>Standard 3 — Wi-Fi 7 Ready Backbone:</strong> Category 8 (40GBase-T) or 10/25G fiber to every Wi-Fi 7 AP ensures no uplink bottleneck when wireless speeds exceed 10Gbps.</p>
+        <br>
+        <p>• <strong>Standard 4 — 10GBase-T Edge Switching:</strong> <strong>10GbE copper</strong> access switches replacing legacy 1GbE, fully backward-compatible with existing Cat6A. ROI achieved in 3–4 years through energy savings and throughput gains.</p>
+        <br>
+        <p>• <strong>Standard 5 — Smart Cable Management 2.0:</strong> Intelligent cable management integrated with DCIM, RFID/barcode cable identification and automatic diagram updates — reducing fault-finding time by <strong>60–80%</strong>.</p>
+        <p class="source-badge">📰 Source: <a href="https://www.manilatimes.net/2026/08/04/tmt-newswire/globenewswire/five-gold-standards-for-enterprise-structured-cabling-and-network-infrastructure-in-2026/2397516" target="_blank" rel="noopener">GlobeNewswire via Manila Times, Aug 2026</a></p>
+      </div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+        <p>Cabling infrastructure is the foundation of every ELV/ICT/AV system. <strong>These 5 gold standards</strong> directly apply to writing BoQ, RFP and specs for Class-A office, data center and FDI industrial park projects in Vietnam. In particular, <strong>Ultra-PoE 90W</strong> is essential for projects integrating smart Tunable White LED + 4K AI cameras + Wi-Fi 7 APs on a single cable plant.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3>
+      <span class="vi-content">CẦN TƯ VẤN THIẾT KẾ ELV/ICT/AV?</span>
+      <span class="en-content" style="display:none">NEED ELV/ICT/AV DESIGN CONSULTATION?</span>
+    </h3>
+    <p class="vi-content">Paul Le — ELV/ICT/AV Design Director với 15+ năm kinh nghiệm, chuyên thiết kế hệ thống ELV tích hợp cho toà nhà thương mại, bệnh viện, trường học và khu công nghiệp tại Việt Nam.</p>
+    <p class="en-content" style="display:none">Paul Le — ELV/ICT/AV Design Director with 15+ years of experience, specializing in integrated ELV system design for commercial buildings, hospitals, schools and industrial parks in Vietnam.</p>
+    <a href="https://elvconsultant.com/#contact" class="cta-btn">
+      <span class="vi-content">LIÊN HỆ TƯ VẤN →</span>
+      <span class="en-content" style="display:none">CONTACT US →</span>
+    </a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" style="margin-bottom:0.75rem;display:inline-flex">
+        <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+        </svg>
+        <div style="margin-left:8px"><span class="logo-text">PAUL LE CONSULTANT</span></div>
+      </a>
+      <p>ELV · ICT · AV Design Director<br>Duy Hoa Phat Corporation &amp; HBP Project Management<br>elvconsultant.com</p>
+    </div>
+    <div class="footer-col">
+      <h5>Dịch vụ / Services</h5>
+      <a href="https://elvconsultant.com/#services">Thiết kế ELV/ICT/AV</a>
+      <a href="https://elvconsultant.com/#services">Lập RFP / BoM / Spec</a>
+      <a href="https://elvconsultant.com/#services">Tư vấn tích hợp SI</a>
+      <a href="https://elvconsultant.com/#services">Review hồ sơ dự thầu</a>
+    </div>
+    <div class="footer-col">
+      <h5>Tin tức / Newsletter</h5>
+      <a href="/blog/">Tất cả bài viết</a>
+      <a href="/blog/bms/">BMS Series</a>
+      <a href="https://x.com/PLELVCONSULTANT">X @PLELVCONSULTANT</a>
+      <a href="https://www.facebook.com/elvconsultant">Facebook Page</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Paul Le Consultant — ELV/ICT/AV Design Director. All rights reserved.</span>
+    <span class="footer-domain">ELVCONSULTANT.COM</span>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
