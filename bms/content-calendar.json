@@ -77,14 +77,16 @@
    "pillar": "Bài toán thực tế",
    "pillar_en": "Worked example",
    "topic": "Tính số DDC cho tòa 15 tầng từ bản vẽ M&E",
-   "status": "planned"
+   "status": "published",
+   "slug": "tinh-so-ddc-toa-15-tang"
   },
   {
    "date": "2026-11-15",
    "pillar": "Hỏi đáp & tổng hợp",
    "pillar_en": "Q&A and recap",
    "topic": "Hỏi đáp: BMS có cần cho tòa nhà dưới 10.000 m²?",
-   "status": "planned"
+   "status": "published",
+   "slug": "bms-cho-toa-nha-duoi-10000-m2"
   },
   {
    "date": "2026-11-16",

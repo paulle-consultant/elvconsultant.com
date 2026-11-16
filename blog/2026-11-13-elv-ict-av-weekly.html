@@ -14,23 +14,22 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
     :root{
-      --bg:#07111F;
-      --card-bg:#101E30;
-      --card-border:#1E3550;
-      --cyan:#00C8E0;
-      --cyan-dim:rgba(0,200,224,0.10);
-      --cyan-glow:rgba(0,200,224,0.28);
-      --silver:#A0B4C8;
-      --white:#F0F4F8;
-      --steel:#4A6280;
-      --navy:#1B2A4A;
-      --navy-deep:#0D1B35;
-      --grid-line:rgba(0,200,224,0.08);
+      --bg:#0C0B09;
+      --card-bg:#15130F;
+      --card-border:#2A251C;
+      --cyan:#C9A96A;
+      --cyan-dim:rgba(201,169,106,0.10);
+      --cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C;
+      --white:#F3EDE2;
+      --steel:#8A8172;
+      --navy:#2A251C;
+      --navy-deep:#121009;
+      --grid-line:rgba(201,169,106,0.08);
     }
     html{scroll-behavior:smooth;}
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6;}
@@ -43,7 +42,7 @@
 
     /* NAV */
     nav{position:sticky;top:0;z-index:100;
-      background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+      background:rgba(12,11,9,0.95);border-bottom:1px solid var(--card-border);
       backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
       padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;}
     .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
@@ -73,7 +72,7 @@
     .article-hero{position:relative;z-index:1;height:520px;overflow:hidden;}
     .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.6) saturate(0.85);}
     .hero-overlay{position:absolute;inset:0;
-      background:linear-gradient(180deg,rgba(7,17,31,0.1) 0%,rgba(7,17,31,0.2) 40%,rgba(7,17,31,0.85) 75%,var(--bg) 100%);}
+      background:linear-gradient(180deg,rgba(12,11,9,0.1) 0%,rgba(12,11,9,0.2) 40%,rgba(12,11,9,0.85) 75%,var(--bg) 100%);}
     .hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem 2rem;}
     .hero-eyebrow{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan);
       margin-bottom:0.75rem;display:flex;align-items:center;gap:10px;}
@@ -102,9 +101,9 @@
       color:var(--cyan-glow);line-height:1;min-width:2.2rem;}
     .item-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.6rem;}
     .tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1px;padding:3px 8px;
-      border-radius:3px;border:1px solid rgba(0,200,224,0.3);color:var(--cyan);
+      border-radius:3px;border:1px solid rgba(201,169,106,0.3);color:var(--cyan);
       background:var(--cyan-dim);}
-    .tag.mfr{border-color:rgba(0,200,224,0.5);background:rgba(0,200,224,0.14);}
+    .tag.mfr{border-color:rgba(201,169,106,0.5);background:rgba(201,169,106,0.14);}
     .item-title{font-family:'Orbitron',monospace;font-size:clamp(0.9rem,1.5vw,1.1rem);
       font-weight:700;color:var(--white);line-height:1.3;}
     .item-title.en-content{display:none;}
@@ -120,7 +119,7 @@
     .schema-diagram .en-content{display:none;}
 
     /* WHY BOX */
-    .why-box{background:rgba(0,200,224,0.05);border:1px solid rgba(0,200,224,0.2);
+    .why-box{background:rgba(201,169,106,0.05);border:1px solid rgba(201,169,106,0.2);
       border-radius:6px;padding:1rem 1.25rem;margin-top:1.25rem;}
     .why-box h4{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
       color:var(--cyan);margin-bottom:0.6rem;}
@@ -165,6 +164,7 @@
       .news-item{padding:1.25rem;}
     }
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -173,8 +173,8 @@
 <nav>
   <a href="/" class="nav-logo">
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
     </svg>
     <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV DESIGN DIRECTOR</span></div>
   </a>
