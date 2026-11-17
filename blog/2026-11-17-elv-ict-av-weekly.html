@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bản Tin ELV/ICT/AV Tuần 47 — 17 Nov 2026 | HPE Aruba AI · Crestron Collab Engine · CommScope SYSTIMAX 2.0 · Belden · Vietnam $7B Data Center</title>
+  <meta name="description" content="W47/2026: HPE Aruba+Juniper tự-lái mạng AI · Crestron Collab Engine MTR/BYOD · CommScope SYSTIMAX 2.0 · Belden next-gen cybersecurity cabling · Vietnam $7B data center. Song ngữ Việt–Anh từ Paul Le Consultant.">
+  <meta name="keywords" content="ELV news Vietnam 2026, HPE Aruba Juniper AI networking, Crestron Collab Engine, CommScope SYSTIMAX 2.0, Belden cabling 2026, Vietnam data center AI, smart building weekly">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-17-elv-ict-av-weekly.html">
+
+  <meta property="og:title" content="ELV/ICT/AV Weekly W47 | HPE AI Network · Crestron Collab Engine · CommScope SYSTIMAX 2.0">
+  <meta property="og:description" content="5 tin nổi bật tuần 47/2026: HPE Aruba+Juniper · Crestron · CommScope · Belden · Vietnam $7B Data Center">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1791782060424-ec94ef00ce2a?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:url" content="https://elvconsultant.com/blog/2026-11-17-elv-ict-av-weekly.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #07111F;
+      --card-bg: #101E30;
+      --card-border: #1E3550;
+      --cyan: #00C8E0;
+      --cyan-dim: rgba(0,200,224,0.10);
+      --cyan-glow: rgba(0,200,224,0.28);
+      --silver: #A0B4C8;
+      --white: #F0F4F8;
+      --steel: #4A6280;
+      --navy: #1B2A4A;
+      --navy-deep: #0D1B35;
+      --grid-line: rgba(0,200,224,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    .grid-bg {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ═══ NAV ═══ */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(7,17,31,0.96);
+      border-bottom: 1px solid var(--card-border);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; flex-shrink: 0;
+    }
+    .logo-text {
+      font-family: 'Orbitron', sans-serif; font-size: 14px; font-weight: 700;
+      color: var(--white); letter-spacing: 1.5px;
+    }
+    .logo-sub {
+      display: block; font-size: 8px; color: var(--cyan);
+      letter-spacing: 2.5px; margin-top: -2px; font-weight: 400;
+    }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      color: var(--silver); font-size: 13px; font-weight: 500;
+      text-decoration: none; letter-spacing: 0.5px; transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+    .nav-cta {
+      background: transparent; border: 1px solid var(--cyan); color: var(--cyan);
+      padding: 7px 18px; border-radius: 4px; font-size: 12px; font-weight: 600;
+      cursor: pointer; font-family: 'Inter', sans-serif; letter-spacing: 1px;
+      transition: all 0.2s; text-decoration: none; white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--cyan); color: var(--bg); }
+
+    /* ═══ LANG BAR ═══ */
+    .lang-bar {
+      position: relative; z-index: 10;
+      background: var(--navy-deep);
+      border-bottom: 1px solid var(--card-border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.5rem 2rem; gap: 1rem;
+    }
+    .lang-label { font-size: 11px; color: var(--steel); letter-spacing: 1px; }
+    .lang-btns { display: flex; gap: 0.5rem; }
+    .lang-btn {
+      font-family: 'Orbitron', sans-serif; font-size: 10px; font-weight: 700;
+      padding: 4px 14px; border-radius: 3px; cursor: pointer;
+      border: 1px solid var(--card-border); background: transparent;
+      color: var(--steel); letter-spacing: 1px; transition: all 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      border-color: var(--cyan); color: var(--cyan);
+      background: var(--cyan-dim);
+    }
+
+    /* ═══ ARTICLE HERO ═══ */
+    .article-hero {
+      position: relative; z-index: 1;
+      height: clamp(300px, 42vw, 520px);
+      overflow: hidden;
+    }
+    .article-hero img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: brightness(0.55) saturate(0.8);
+    }
+    .article-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(7,17,31,0.1) 0%,
+        rgba(7,17,31,0.25) 40%,
+        rgba(7,17,31,0.75) 75%,
+        rgba(7,17,31,0.97) 100%
+      );
+    }
+    .article-hero-content {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: clamp(1.5rem,4vw,3rem) clamp(1.5rem,6vw,5rem);
+    }
+    .article-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: 'Orbitron', sans-serif; font-size: 10px; font-weight: 700;
+      letter-spacing: 3px; color: var(--cyan); margin-bottom: 1rem;
+    }
+    .article-eyebrow::before {
+      content: ''; width: 28px; height: 1px; background: var(--cyan);
+    }
+    .article-hero-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.3rem, 3vw, 2.2rem);
+      font-weight: 900; color: var(--white);
+      line-height: 1.15; max-width: 820px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+      margin-bottom: 0.75rem;
+    }
+    .article-hero-meta {
+      font-size: 12px; color: var(--silver); letter-spacing: 0.5px;
+    }
+
+    /* ═══ MAIN CONTENT ═══ */
+    main {
+      position: relative; z-index: 1;
+      max-width: 900px; margin: 0 auto;
+      padding: 3rem clamp(1rem,4vw,2rem) 4rem;
+    }
+    .intro-box {
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-left: 3px solid var(--cyan);
+      border-radius: 6px; padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .intro-box p { font-size: 14px; color: var(--silver); line-height: 1.75; }
+
+    /* ═══ NEWS ITEM ═══ */
+    .news-item {
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: 8px; padding: 2rem; margin-bottom: 1.75rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .news-item::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--cyan), transparent);
+      opacity: 0; transition: opacity 0.3s;
+    }
+    .news-item:hover {
+      border-color: rgba(0,200,224,0.35);
+      box-shadow: 0 8px 32px -8px rgba(0,200,224,0.15);
+    }
+    .news-item:hover::before { opacity: 1; }
+
+    .news-num {
+      font-family: 'Orbitron', sans-serif; font-size: 10px; font-weight: 700;
+      color: var(--cyan); letter-spacing: 2px; margin-bottom: 0.6rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .news-num::after { content: ''; flex: 1; height: 1px; background: var(--card-border); }
+
+    .news-tags {
+      display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;
+    }
+    .tag {
+      font-family: 'Orbitron', sans-serif; font-size: 9px; font-weight: 700;
+      letter-spacing: 1.5px; padding: 3px 10px; border-radius: 3px;
+      border: 1px solid rgba(0,200,224,0.3);
+      color: var(--cyan); background: var(--cyan-dim);
+    }
+    .tag.tag-brand { border-color: var(--cyan); background: rgba(0,200,224,0.15); }
+
+    .news-title {
+      font-size: 18px; font-weight: 700; color: var(--white);
+      line-height: 1.35; margin-bottom: 1.25rem;
+    }
+    .news-title.en { font-size: 16px; color: var(--silver); font-weight: 600; }
+
+    .news-body {
+      font-size: 14px; color: var(--silver); line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .news-body strong { color: var(--white); }
+
+    /* Schematic/diagram box */
+    .schematic-box {
+      background: var(--navy-deep); border: 1px solid var(--card-border);
+      border-radius: 6px; padding: 1.25rem 1.5rem; margin: 1rem 0 1.25rem;
+      font-family: monospace; font-size: 12px; color: var(--cyan);
+      line-height: 1.6; overflow-x: auto;
+    }
+    .schematic-box .sch-title {
+      font-family: 'Orbitron', sans-serif; font-size: 9px; letter-spacing: 2px;
+      color: var(--steel); margin-bottom: 0.75rem;
+    }
+
+    .why-box {
+      background: rgba(0,200,224,0.06); border: 1px solid rgba(0,200,224,0.2);
+      border-radius: 6px; padding: 1rem 1.25rem; margin-top: 1rem;
+    }
+    .why-box-label {
+      font-family: 'Orbitron', sans-serif; font-size: 9px; font-weight: 700;
+      letter-spacing: 2px; color: var(--cyan); margin-bottom: 0.5rem;
+    }
+    .why-box p { font-size: 13px; color: var(--silver); line-height: 1.7; }
+
+    .source-link {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 11px; color: var(--cyan); text-decoration: none;
+      border-bottom: 1px dashed rgba(0,200,224,0.3); transition: border-color 0.2s;
+      margin-top: 0.75rem;
+    }
+    .source-link:hover { border-color: var(--cyan); }
+
+    /* ═══ CTA BOX ═══ */
+    .cta-box {
+      background: linear-gradient(135deg, var(--navy-deep) 0%, rgba(0,200,224,0.08) 100%);
+      border: 1px solid rgba(0,200,224,0.3);
+      border-radius: 10px; padding: 2.5rem 2rem; margin-top: 3rem; text-align: center;
+    }
+    .cta-box h3 {
+      font-family: 'Orbitron', sans-serif; font-size: 16px; font-weight: 900;
+      color: var(--white); margin-bottom: 0.75rem; letter-spacing: 1px;
+    }
+    .cta-box p { font-size: 14px; color: var(--silver); margin-bottom: 1.5rem; line-height: 1.7; }
+    .cta-btn {
+      display: inline-block; background: var(--cyan); color: var(--bg);
+      padding: 12px 32px; border-radius: 5px; font-weight: 700;
+      font-family: 'Orbitron', sans-serif; font-size: 12px; letter-spacing: 1.5px;
+      text-decoration: none; transition: all 0.2s;
+    }
+    .cta-btn:hover { background: #00e8ff; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,200,224,0.3); }
+
+    /* ═══ FOOTER ═══ */
+    footer {
+      position: relative; z-index: 1;
+      border-top: 1px solid var(--card-border);
+      background: var(--navy-deep);
+      padding: 2.5rem clamp(1rem,4vw,2rem);
+      margin-top: 2rem;
+    }
+    .footer-inner {
+      max-width: 900px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: flex-start; flex-wrap: wrap; gap: 1.5rem;
+    }
+    .footer-brand .logo-text { font-size: 13px; }
+    .footer-desc { font-size: 12px; color: var(--steel); line-height: 1.7; margin-top: 0.5rem; max-width: 300px; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.4rem; }
+    .footer-links a { font-size: 13px; color: var(--steel); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--cyan); }
+    .footer-bottom {
+      max-width: 900px; margin: 1.5rem auto 0;
+      padding-top: 1rem; border-top: 1px solid var(--card-border);
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;
+    }
+    .footer-copy { font-size: 11px; color: var(--steel); }
+    .footer-domain { font-family: 'Orbitron', sans-serif; font-size: 11px; color: var(--cyan); }
+    .back-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'Orbitron', sans-serif; font-size: 10px; letter-spacing: 1px;
+      color: var(--silver); text-decoration: none; border: 1px solid var(--card-border);
+      padding: 6px 14px; border-radius: 4px; transition: all 0.2s; margin-bottom: 2rem;
+    }
+    .back-btn:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    @media(max-width:768px) {
+      nav { padding: 0 1rem; }
+      .nav-links { display: none; }
+      .lang-bar { padding: 0.5rem 1rem; }
+      .article-hero-content { padding: 1.25rem 1rem; }
+      .news-item { padding: 1.25rem; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div>
+      <span class="logo-text">PAUL LE CONSULTANT</span>
+      <span class="logo-sub">AV · ICT · ELV DESIGN</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">TƯ VẤN / CONSULT</a>
+</nav>
+
+<!-- ═══ LANG BAR ═══ -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE</span>
+  <div class="lang-btns">
+    <button class="lang-btn" data-lang="vi" onclick="setLang('vi')">🇻🇳 TIẾNG VIỆT</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 ENGLISH</button>
+  </div>
+</div>
+
+<!-- ═══ ARTICLE HERO ═══ -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1791782060424-ec94ef00ce2a?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Video production crew at control desk — ELV ICT AV Weekly W47 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="article-eyebrow">
+      <span class="vi-content">BẢN TIN TUẦN · W47 / 2026</span>
+      <span class="en-content">WEEKLY BULLETIN · W47 / 2026</span>
+    </div>
+    <div class="article-hero-title vi-content">
+      HPE Aruba+Juniper AI Network · Crestron Collab Engine · CommScope SYSTIMAX 2.0 · Belden Next-Gen · Vietnam $7B Data Center
+    </div>
+    <div class="article-hero-title en-content">
+      HPE Aruba+Juniper Self-Driving Networks · Crestron Collab Engine MTR/BYOD · CommScope SYSTIMAX 2.0 · Belden · Vietnam $7B AI Data Center Boom
+    </div>
+    <div class="article-hero-meta">
+      THỨ BA · 17 THÁNG 11, 2026 &nbsp;|&nbsp; PAUL LE CONSULTANT &nbsp;|&nbsp; ELV · ICT · AV · BMS
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MAIN ═══ -->
+<main>
+  <a href="/blog/" class="back-btn">← BLOG / TIN TỨC</a>
+
+  <div class="intro-box">
+    <p class="vi-content">
+      Chào mừng đến với <strong>Bản tin ELV/ICT/AV Tuần 47 — ngày 17/11/2026</strong>. Tuần này nổi bật với sự kiện HPE hoàn thiện tích hợp Aruba+Juniper tạo nền tảng mạng tự-lái (self-driving) phục vụ AI factory, Crestron ra mắt Collab Engine mới cho phòng họp MTR/BYOD, CommScope giới thiệu thế hệ cáp SYSTIMAX 2.0, Belden công bố giải pháp bảo mật cáp mạng thế hệ tiếp theo, và Việt Nam vượt mốc $7 tỷ USD đầu tư data center AI.
+    </p>
+    <p class="en-content">
+      Welcome to <strong>ELV/ICT/AV Weekly Bulletin W47 — 17 November 2026</strong>. This week: HPE completes Aruba+Juniper integration launching self-driving AI-factory networking; Crestron releases its Collab Engine platform for MTR and BYOD meeting rooms; CommScope introduces SYSTIMAX 2.0 structured cabling; Belden announces next-gen connectivity and cybersecurity products; and Vietnam crosses $7 billion in AI data center investments.
+    </p>
+  </div>
+
+  <!-- ═══ NEWS 1: HPE ARUBA + JUNIPER ═══ -->
+  <div class="news-item">
+    <div class="news-num">01 / 05</div>
+    <div class="news-tags">
+      <span class="tag tag-brand">HPE ARUBA</span>
+      <span class="tag tag-brand">JUNIPER</span>
+      <span class="tag">ICT NETWORKING</span>
+      <span class="tag">AI CAMPUS</span>
+    </div>
+
+    <div class="news-title vi-content">
+      HPE Aruba + Juniper: Mạng "Tự Lái" Cho Campus, Data Center và AI Factory
+    </div>
+    <div class="news-title en-content">
+      HPE Aruba + Juniper: Self-Driving Networks Across Campus, Data Center &amp; AI Factory
+    </div>
+
+    <div class="news-body vi-content">
+      <p>HPE chính thức hoàn tất tích hợp Aruba và Juniper Mist tạo nên nền tảng <strong>mạng tự-lái (self-driving network)</strong> với AI-native engine duy nhất hoạt động trên toàn bộ campus, data center, edge và AI factory. Giải pháp mới kết hợp AI engine của Juniper Mist với hạ tầng phần cứng Aruba để tự động phát hiện sự cố, tự khắc phục và tối ưu hóa hiệu suất mà không cần can thiệp thủ công.</p>
+      <p>Điểm đột phá: HPE duy trì <strong>hai platform riêng biệt (Aruba Central và Juniper Mist)</strong> nhưng chia sẻ chung AI applications và hardware, cho phép khách hàng lựa chọn theo nhu cầu. Với Wi-Fi 7 và switching AI-native, giải pháp hướng tới các dự án campus thông minh, bệnh viện, trường đại học và nhà máy AI quy mô lớn.</p>
+    </div>
+    <div class="news-body en-content">
+      <p>HPE has completed the Aruba and Juniper Mist integration, delivering a <strong>self-driving network platform</strong> with a single AI-native engine spanning campus, data center, edge, and AI factory environments. The combined solution merges Juniper Mist's AI engine with Aruba's hardware infrastructure for automated fault detection, self-healing, and performance optimization without manual intervention.</p>
+      <p>Key innovation: HPE maintains <strong>two separate platforms (Aruba Central and Juniper Mist)</strong> but shares AI applications and hardware, letting customers choose based on requirements. With Wi-Fi 7 and AI-native switching, the solution targets smart campus, hospital, university, and large-scale AI factory deployments.</p>
+    </div>
+
+    <div class="schematic-box">
+      <div class="sch-title">▸ SƠ ĐỒ NGUYÊN LÝ — HPE SELF-DRIVING NETWORK ARCHITECTURE</div>
+<pre>
+┌─────────────────────────────────────────────────────────────────┐
+│                   HPE AI-NATIVE NETWORK BRAIN                   │
+│            (Aruba Central AI ↔ Juniper Mist AI Engine)         │
+└───────────────────────┬─────────────────────────────────────────┘
+                        │ Shared AI Applications + Hardware
+        ┌───────────────┼───────────────────┐
+        ▼               ▼                   ▼
+ ┌─────────────┐ ┌──────────────┐  ┌──────────────────┐
+ │ CAMPUS EDGE │ │  DATA CENTER │  │   AI FACTORY     │
+ │  Wi-Fi 7    │ │  Switching   │  │  High-bandwidth  │
+ │  Aruba AP   │ │  Juniper QFX │  │  GPU cluster net │
+ └──────┬──────┘ └──────┬───────┘  └────────┬─────────┘
+        └───────────────┼───────────────────┘
+                        ▼
+            ┌───────────────────────┐
+            │  SELF-DRIVING ENGINE  │
+            │  • Auto fault detect  │
+            │  • Self-heal & fix    │
+            │  • Traffic optimize   │
+            │  • Zero-touch deploy  │
+            └───────────────────────┘
+</pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-label">▸ TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+      <p class="vi-content">Với làn sóng xây dựng campus thông minh, bệnh viện đa khoa và trường đại học hiện đại tại Việt Nam, giải pháp self-driving network của HPE giảm đáng kể chi phí vận hành mạng. Tư vấn thiết kế ELV/ICT cần đưa AI-native networking vào đặc tả kỹ thuật (technical specification) thay cho switching truyền thống, đặc biệt cho các dự án hơn 500 access point.</p>
+      <p class="en-content">With Vietnam's smart campus, hospital, and university construction wave, HPE's self-driving network significantly reduces network operations costs. ELV/ICT design consultants should incorporate AI-native networking into technical specifications instead of traditional switching, especially for projects exceeding 500 access points.</p>
+    </div>
+    <a class="source-link" href="https://www.storagereview.com/news/hpe-expands-self-driving-networks-across-edge-campus-data-center-and-ai-factories" target="_blank" rel="noopener">↗ Nguồn / Source: StorageReview — HPE Self-Driving Networks</a>
+  </div>
+
+  <!-- ═══ NEWS 2: CRESTRON COLLAB ENGINE ═══ -->
+  <div class="news-item">
+    <div class="news-num">02 / 05</div>
+    <div class="news-tags">
+      <span class="tag tag-brand">CRESTRON</span>
+      <span class="tag">AV COLLABORATION</span>
+      <span class="tag">MEETING ROOM</span>
+      <span class="tag">BYOD</span>
+    </div>
+
+    <div class="news-title vi-content">
+      Crestron Collab Engine: Nền Tảng Hội Nghị Thống Nhất MTR + BYOD (Tháng 11/2026)
+    </div>
+    <div class="news-title en-content">
+      Crestron Collab Engine: Unified MTR + BYOD Collaboration Platform (November 2026)
+    </div>
+
+    <div class="news-body vi-content">
+      <p>Crestron ra mắt <strong>Collab Engine</strong> — một platform phần cứng và phần mềm mới nhất phục vụ phòng họp thông minh, hỗ trợ cả <strong>Microsoft Teams Rooms (MTR)</strong> và <strong>BYOD (Bring Your Own Device)</strong> trong một thiết bị duy nhất. Collab Engine là bước phát triển tiếp theo sau Collab Compute (ra mắt ISE 2026), tập trung vào khả năng chuyển đổi linh hoạt giữa các nền tảng hội nghị.</p>
+      <p>Tính năng nổi bật: AI camera tự động theo dõi người phát biểu, xử lý âm thanh thích ứng, tích hợp quản lý phòng họp từ xa qua Crestron XiO Cloud, và hỗ trợ cả Zoom, Teams, Google Meet trên cùng một thiết bị. KPMG đã triển khai Collab Engine tại văn phòng Oslo với kết quả cải thiện đáng kể trải nghiệm cộng tác.</p>
+    </div>
+    <div class="news-body en-content">
+      <p>Crestron launched <strong>Collab Engine</strong> — a new hardware/software platform for intelligent meeting rooms supporting both <strong>Microsoft Teams Rooms (MTR)</strong> and <strong>BYOD</strong> in a single device. The Collab Engine advances beyond Collab Compute (ISE 2026), focusing on flexible switching between conferencing platforms.</p>
+      <p>Key features: AI auto-framing camera tracking, adaptive audio processing, remote room management via Crestron XiO Cloud, and simultaneous support for Zoom, Teams, and Google Meet. KPMG deployed Collab Engine at its Oslo headquarters, achieving significant collaboration experience improvements.</p>
+    </div>
+
+    <div class="schematic-box">
+      <div class="sch-title">▸ SƠ ĐỒ NGUYÊN LÝ — CRESTRON COLLAB ENGINE ROOM DESIGN</div>
+<pre>
+ DISPLAY 1               DISPLAY 2
+ ┌──────────┐             ┌──────────┐
+ │ Teams    │             │ Content  │
+ │ MTR View │             │ BYOD     │
+ └────┬─────┘             └────┬─────┘
+      └──────────┬─────────────┘
+                 ▼
+     ┌───────────────────────┐
+     │   CRESTRON COLLAB     │
+     │       ENGINE          │
+     │  ┌─────────────────┐  │
+     │  │ AI Audio/Video  │  │
+     │  │ Processing Unit │  │
+     │  └────────┬────────┘  │
+     └───────────┼───────────┘
+                 ▼
+     ┌───────────────────────┐
+     │  XiO Cloud (Remote    │
+     │  Management + AMS)    │
+     └───────────────────────┘
+     ▲             ▲
+  MTR MODE      BYOD MODE
+(Teams/Zoom)  (Laptop HDMI/
+              Wireless AirPlay)
+</pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-label">▸ TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+      <p class="vi-content">Hầu hết doanh nghiệp Việt Nam hiện nay dùng hỗn hợp Teams, Zoom và BYOD laptop. Crestron Collab Engine giải quyết bài toán phòng họp "đa nền tảng" với một thiết bị duy nhất, giảm chi phí triển khai và hỗ trợ. Đặc biệt phù hợp cho văn phòng corporate, trụ sở ngân hàng và tòa nhà văn phòng hạng A tại TP.HCM và Hà Nội.</p>
+      <p class="en-content">Most Vietnamese enterprises currently use a mix of Teams, Zoom, and BYOD laptops. Crestron Collab Engine solves the "multi-platform meeting room" challenge with a single device, reducing deployment and support costs. Especially suitable for corporate offices, bank headquarters, and Grade A office buildings in Ho Chi Minh City and Hanoi.</p>
+    </div>
+    <a class="source-link" href="https://www.avinteractive.com/news/products/crestron-unveils-collaboration-platform-for-mtr-and-byod-05-11-2026/" target="_blank" rel="noopener">↗ Nguồn / Source: AV Interactive — Crestron Collab Engine MTR/BYOD</a>
+  </div>
+
+  <!-- ═══ NEWS 3: COMMSCOPE SYSTIMAX 2.0 ═══ -->
+  <div class="news-item">
+    <div class="news-num">03 / 05</div>
+    <div class="news-tags">
+      <span class="tag tag-brand">COMMSCOPE</span>
+      <span class="tag">CABLING</span>
+      <span class="tag">STRUCTURED CABLING</span>
+      <span class="tag">INFRASTRUCTURE</span>
+    </div>
+
+    <div class="news-title vi-content">
+      CommScope Ra Mắt SYSTIMAX 2.0 — Thế Hệ Mới Hạ Tầng Cáp Mạng Cho AI Era
+    </div>
+    <div class="news-title en-content">
+      CommScope Unveils SYSTIMAX 2.0 — Next-Generation Structured Cabling for the AI Era
+    </div>
+
+    <div class="news-body vi-content">
+      <p>CommScope giới thiệu <strong>SYSTIMAX 2.0</strong> — thế hệ mới của nền tảng cáp mạng có cấu trúc SYSTIMAX nổi tiếng, được thiết kế lại hoàn toàn để đáp ứng yêu cầu băng thông cao của <strong>AI workload, 400G data center và Wi-Fi 7 campus</strong>. SYSTIMAX 2.0 bao gồm cáp Category 8.1/8.2 cho ứng dụng 25G/40G đến bàn làm việc, hệ thống quản lý kết nối thông minh iPatch với AI monitoring tích hợp, và giải pháp fiber đa mode OM5 cho kết nối intra-campus tốc độ cao.</p>
+      <p>CommScope nhấn mạnh <strong>khả năng tương thích ngược 100%</strong> với các hệ thống SYSTIMAX hiện tại, cho phép nâng cấp từng phần mà không cần thay thế toàn bộ hạ tầng — một lợi thế quan trọng cho các dự án retrofit và nâng cấp tại Việt Nam.</p>
+    </div>
+    <div class="news-body en-content">
+      <p>CommScope unveiled <strong>SYSTIMAX 2.0</strong> — a completely redesigned generation of the renowned SYSTIMAX structured cabling platform built for <strong>AI workloads, 400G data centers, and Wi-Fi 7 campuses</strong>. SYSTIMAX 2.0 includes Category 8.1/8.2 cable for 25G/40G to the desk, iPatch intelligent connectivity management with integrated AI monitoring, and OM5 multimode fiber for high-speed intra-campus connections.</p>
+      <p>CommScope emphasizes <strong>100% backward compatibility</strong> with existing SYSTIMAX systems, enabling incremental upgrades without full infrastructure replacement — a significant advantage for retrofit and upgrade projects in Vietnam.</p>
+    </div>
+
+    <div class="schematic-box">
+      <div class="sch-title">▸ SƠ ĐỒ NGUYÊN LÝ — SYSTIMAX 2.0 HIERARCHICAL CABLING MODEL</div>
+<pre>
+  MDF (Main Distribution Frame)
+  ┌──────────────────────────────┐
+  │  SYSTIMAX 2.0 Fiber Backbone │
+  │  OM5/OS2 — 400G ready        │
+  └──────────────┬───────────────┘
+                 │ OM5 Fiber (Campus Backbone)
+     ┌───────────┼───────────┐
+     ▼           ▼           ▼
+   IDF A       IDF B       IDF C
+  ┌──────┐    ┌──────┐    ┌──────┐
+  │ iPatch    │      │    │      │
+  │ AI Mon.│  │      │    │      │
+  └──┬───┘   └──┬───┘   └──┬───┘
+     │  Cat.8.1  │           │
+     ▼  25G/40G  ▼           ▼
+  Workstations   APs (Wi-Fi 7)   IP Cameras
+  ┌─────────┐  ┌───────────┐  ┌──────────┐
+  │ 2.5G/5G │  │ 10G PoE++ │  │ PoE+ 90W │
+  │  NIC    │  │  uplink   │  │  PTZ     │
+  └─────────┘  └───────────┘  └──────────┘
+</pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-label">▸ TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+      <p class="vi-content">SYSTIMAX là thương hiệu cáp mạng được chỉ định phổ biến nhất trong các dự án văn phòng, bệnh viện và trường học tại Việt Nam. SYSTIMAX 2.0 mở ra khả năng tư vấn nâng cấp hạ tầng cáp cho các tòa nhà đang chuyển đổi sang Wi-Fi 7 và PoE++ mà không phải thay toàn bộ hệ thống — đây là cơ hội tư vấn lớn cho các consultant ELV/ICT.</p>
+      <p class="en-content">SYSTIMAX is the most commonly specified cabling brand in Vietnamese office, hospital, and school projects. SYSTIMAX 2.0 opens upgrade advisory opportunities for buildings transitioning to Wi-Fi 7 and PoE++ without full system replacement — a major consulting opportunity for ELV/ICT consultants.</p>
+    </div>
+    <a class="source-link" href="https://c.digitalisationworld.com/news/66842/commscope-unveils-systimax-20" target="_blank" rel="noopener">↗ Nguồn / Source: Digitalisation World — CommScope SYSTIMAX 2.0</a>
+  </div>
+
+  <!-- ═══ NEWS 4: BELDEN NEXT-GEN ═══ -->
+  <div class="news-item">
+    <div class="news-num">04 / 05</div>
+    <div class="news-tags">
+      <span class="tag tag-brand">BELDEN</span>
+      <span class="tag">CABLING</span>
+      <span class="tag">CYBERSECURITY</span>
+      <span class="tag">INDUSTRIAL</span>
+    </div>
+
+    <div class="news-title vi-content">
+      Belden Ra Mắt Giải Pháp Kết Nối + An Ninh Mạng Thế Hệ Tiếp Theo Cho Môi Trường Quan Trọng
+    </div>
+    <div class="news-title en-content">
+      Belden Launches Next-Gen Connectivity and Cybersecurity Solutions for Critical Environments
+    </div>
+
+    <div class="news-body vi-content">
+      <p>Belden công bố danh mục sản phẩm mới nhất kết hợp <strong>cáp mạng hiệu suất cao</strong> với <strong>bảo mật mạng công nghiệp (OT/IT cybersecurity)</strong> tích hợp, nhắm vào các ứng dụng quan trọng: data center, nhà máy sản xuất thông minh, cơ sở hạ tầng năng lượng và tòa nhà BMS/ELV. Sản phẩm mới bao gồm cáp Category 7A tốc độ cao, cáp armor chống nhiễu EMI cho phòng máy chủ, và module bảo mật OT network tích hợp vào tủ patch panel.</p>
+      <p>Điểm đặc biệt: Belden tích hợp <strong>Tripwire Industrial Visibility</strong> (công ty con) vào firmware của thiết bị mạng, cho phép phát hiện bất thường lưu lượng trực tiếp tại tầng vật lý — xu hướng quan trọng cho ELV consultant khi tư vấn hạ tầng BMS/SCADA tích hợp.</p>
+    </div>
+    <div class="news-body en-content">
+      <p>Belden announced a new product portfolio combining <strong>high-performance network cabling</strong> with integrated <strong>OT/IT industrial cybersecurity</strong>, targeting critical applications: data centers, smart manufacturing facilities, energy infrastructure, and BMS/ELV buildings. New products include Category 7A high-speed cable, EMI-shielded armor cable for server rooms, and OT network security modules integrated into patch panel cabinets.</p>
+      <p>Key differentiator: Belden integrates <strong>Tripwire Industrial Visibility</strong> (subsidiary) into network device firmware, enabling anomalous traffic detection at the physical layer — an important trend for ELV consultants advising on integrated BMS/SCADA infrastructure.</p>
+    </div>
+
+    <div class="schematic-box">
+      <div class="sch-title">▸ SƠ ĐỒ NGUYÊN LÝ — BELDEN OT/IT CONVERGED SECURITY CABLING</div>
+<pre>
+  INTERNET / WAN
+        │
+  ┌─────▼───────────────────────┐
+  │   IT NETWORK (Corporate)    │
+  │   • Belden Cat7A patch      │
+  │   • Tripwire IT monitor     │
+  └──────────┬──────────────────┘
+      DMZ    │  (Secure Boundary)
+  ┌──────────▼──────────────────┐
+  │   OT NETWORK (Building/     │
+  │   Industrial / BMS / SCADA) │
+  │   • Belden Armor cable      │
+  │   • Tripwire OT anomaly     │
+  │     detection (physical)    │
+  └───┬─────────────────────────┘
+      ├── BMS Controllers (Modbus/BACnet)
+      ├── Fire Alarm Panel (IP gateway)
+      ├── CCTV NVR (PoE switch)
+      └── Access Control (OSDP)
+</pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-label">▸ TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+      <p class="vi-content">Với xu hướng hội tụ OT/IT trong các tòa nhà thông minh tại Việt Nam (BMS, CCTV, access control đều kết nối IP), rủi ro an ninh mạng vật lý ngày càng tăng. Belden cung cấp giải pháp tổng thể từ cáp đến bảo mật — quan trọng khi tư vấn hạ tầng cho bệnh viện, khu công nghiệp và tòa nhà government tại Việt Nam yêu cầu tuân thủ ISO 27001 và NIS2.</p>
+      <p class="en-content">With the OT/IT convergence trend in Vietnamese smart buildings (BMS, CCTV, access control all IP-connected), physical network security risks are rising. Belden provides end-to-end solutions from cable to security — critical when consulting on infrastructure for Vietnamese hospitals, industrial parks, and government buildings requiring ISO 27001 and NIS2 compliance.</p>
+    </div>
+    <a class="source-link" href="https://www.emr-online.com/belden-belden-launches-next-gen-connectivity-and-cybersecurity-products-for-critical-applications/" target="_blank" rel="noopener">↗ Nguồn / Source: EMR Online — Belden Next-Gen Connectivity &amp; Cybersecurity</a>
+  </div>
+
+  <!-- ═══ NEWS 5: VIETNAM DATA CENTER ═══ -->
+  <div class="news-item">
+    <div class="news-num">05 / 05</div>
+    <div class="news-tags">
+      <span class="tag tag-brand">VIỆT NAM</span>
+      <span class="tag">DATA CENTER</span>
+      <span class="tag">AI INFRASTRUCTURE</span>
+      <span class="tag">MARKET</span>
+    </div>
+
+    <div class="news-title vi-content">
+      Việt Nam Thu Hút $7+ Tỷ USD Đầu Tư Data Center AI — Cơ Hội Lớn Cho ELV/ICT
+    </div>
+    <div class="news-title en-content">
+      Vietnam Attracts $7+ Billion in AI Data Center Investments — Major Opportunity for ELV/ICT
+    </div>
+
+    <div class="news-body vi-content">
+      <p>Việt Nam đã thu hút hơn <strong>$7 tỷ USD vốn đầu tư</strong> vào hạ tầng data center AI, với sự tham gia của các hyperscaler và cloud provider lớn gồm Microsoft, Google, Amazon AWS, Meta và nhiều tập đoàn công nghệ toàn cầu khác. Sự bùng nổ này định vị Việt Nam trở thành <strong>trung tâm data center tiếp theo của Đông Nam Á</strong>, bên cạnh Singapore và Malaysia đang bão hòa về quỹ đất và điện năng.</p>
+      <p>Theo phân tích của BMI Research, Việt Nam có lợi thế: chi phí điện thấp hơn Singapore 40%, quỹ đất rộng tại các khu công nghiệp Hà Nội và TP.HCM, lực lượng lao động kỹ thuật trẻ, và chính sách ưu đãi đầu tư hạ tầng số từ Chính phủ. Tổng công suất data center dự kiến đạt <strong>500 MW vào 2028</strong>.</p>
+    </div>
+    <div class="news-body en-content">
+      <p>Vietnam has attracted over <strong>$7 billion in investment</strong> in AI data center infrastructure, with participation from major hyperscalers and cloud providers including Microsoft, Google, Amazon AWS, Meta, and other global technology conglomerates. This boom positions Vietnam as <strong>Southeast Asia's next data center hub</strong>, alongside saturated Singapore and Malaysia.</p>
+      <p>BMI Research analysis highlights Vietnam's advantages: electricity costs 40% lower than Singapore, abundant land in Hanoi and Ho Chi Minh City industrial zones, a young technical workforce, and government digital infrastructure investment incentives. Total data center capacity is projected to reach <strong>500 MW by 2028</strong>.</p>
+    </div>
+
+    <div class="schematic-box">
+      <div class="sch-title">▸ SƠ ĐỒ — ELV/ICT SCOPE IN AI DATA CENTER (HYPERSCALE)</div>
+<pre>
+ ┌──────────────────────────────────────────────────┐
+ │            HYPERSCALE AI DATA CENTER             │
+ │                   VIỆT NAM 2026+                 │
+ ├────────────────┬────────────────┬────────────────┤
+ │  CABLING       │  ELV SECURITY  │  BMS / INFRA   │
+ │  ─────────     │  ──────────    │  ─────────     │
+ │ • OS2 single-  │ • Perimeter    │ • DCIM (Data   │
+ │   mode 400G    │   CCTV AI cam  │   Center Infra │
+ │ • Cat8.1 TOR   │ • Access ctrl  │   Management)  │
+ │ • Cable mgmt   │   biometrics   │ • Cooling BMS  │
+ │   system       │ • Mantrap      │ • UPS monitor  │
+ │ • Fiber OTDR   │   airlock      │ • Power meter  │
+ │   testing      │ • OT security  │ • Generator    │
+ └────────────────┴────────────────┴────────────────┘
+   ELV consultant scope: 15–25% of total project value
+</pre>
+    </div>
+
+    <div class="why-box">
+      <div class="why-box-label">▸ TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+      <p class="vi-content">Mỗi data center hyperscale quy mô 50–100 MW tại Việt Nam cần hàng nghìn km cáp quang, hàng trăm hệ thống ELV (CCTV, access control, BMS, fire alarm) và hạ tầng ICT phức tạp. Đây là cơ hội lớn nhất trong lịch sử ngành ELV/ICT/AV Việt Nam — cần chủ động cập nhật năng lực tư vấn data center tier III/IV, DCIM và ELV hyperscale ngay từ bây giờ.</p>
+      <p class="en-content">Each 50–100 MW hyperscale data center in Vietnam requires thousands of kilometers of fiber cable, hundreds of ELV systems (CCTV, access control, BMS, fire alarm), and complex ICT infrastructure. This is the largest opportunity in Vietnamese ELV/ICT/AV history — now is the time to proactively build data center tier III/IV, DCIM, and hyperscale ELV consulting capabilities.</p>
+    </div>
+    <a class="source-link" href="https://erp.today/vietnam-draws-more-than-7-billion-in-ai-data-center-investments-reshaping-enterprise-infrastructure/" target="_blank" rel="noopener">↗ Nguồn / Source: ERP.Today — Vietnam $7B AI Data Center</a>
+  </div>
+
+  <!-- ═══ CTA BOX ═══ -->
+  <div class="cta-box">
+    <h3 class="vi-content">CẦN TƯ VẤN THIẾT KẾ ELV/ICT/AV?</h3>
+    <h3 class="en-content">NEED ELV/ICT/AV DESIGN CONSULTING?</h3>
+    <p class="vi-content">Paul Le cung cấp dịch vụ tư vấn, thiết kế và lập hồ sơ kỹ thuật ELV/ICT/AV cho các dự án tòa nhà, bệnh viện, trường học, data center và khu công nghiệp tại Việt Nam. Liên hệ để được tư vấn miễn phí.</p>
+    <p class="en-content">Paul Le provides ELV/ICT/AV consulting, design, and technical documentation services for building, hospital, school, data center, and industrial zone projects in Vietnam. Contact for a free consultation.</p>
+    <a href="https://elvconsultant.com/#contact" class="cta-btn">LIÊN HỆ TƯ VẤN / CONTACT NOW</a>
+  </div>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" style="margin-bottom:0.5rem">
+        <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+        </svg>
+        <span class="logo-text">PAUL LE CONSULTANT</span>
+      </a>
+      <p class="footer-desc">ELV · ICT · AV Design Director<br>Duy Hoa Phat Corporation &amp; HBP Project Management<br>Ho Chi Minh City, Vietnam</p>
+    </div>
+    <div class="footer-links">
+      <a href="/">Trang chủ / Home</a>
+      <a href="/blog/">Tin tức / Blog</a>
+      <a href="/#services">Dịch vụ / Services</a>
+      <a href="/#portfolio">Dự án / Projects</a>
+      <a href="/#contact">Liên hệ / Contact</a>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.facebook.com/elvconsultant" target="_blank" rel="noopener">Facebook: Elvconsultant.com</a>
+      <a href="https://x.com/PLELVCONSULTANT" target="_blank" rel="noopener">X: @PLELVCONSULTANT</a>
+      <a href="https://elvconsultant.com" target="_blank" rel="noopener">elvconsultant.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Paul Le Consultant. All rights reserved.</span>
+    <span class="footer-domain">ELVCONSULTANT.COM</span>
+  </div>
+</footer>
+
+<script>
+  function setLang(l) {
+    document.querySelectorAll('.vi-content').forEach(e => e.style.display = l === 'vi' ? '' : 'none');
+    document.querySelectorAll('.en-content').forEach(e => e.style.display = l === 'en' ? '' : 'none');
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === l));
+    try { localStorage.setItem('lang', l); } catch(e) {}
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    try { setLang(localStorage.getItem('lang') || 'vi'); } catch(e) { setLang('vi'); }
+  });
+</script>
+</body>
+</html>
