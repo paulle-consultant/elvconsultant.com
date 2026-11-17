@@ -17,23 +17,22 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --bg: #07111F;
-      --card-bg: #101E30;
-      --card-border: #1E3550;
-      --cyan: #00C8E0;
-      --cyan-dim: rgba(0,200,224,0.10);
-      --cyan-glow: rgba(0,200,224,0.28);
-      --silver: #A0B4C8;
-      --white: #F0F4F8;
-      --steel: #4A6280;
-      --navy: #1B2A4A;
-      --navy-deep: #0D1B35;
-      --grid-line: rgba(0,200,224,0.08);
+      --bg: #0C0B09;
+      --card-bg: #15130F;
+      --card-border: #2A251C;
+      --cyan: #C9A96A;
+      --cyan-dim: rgba(201,169,106,0.10);
+      --cyan-glow: rgba(201,169,106,0.28);
+      --silver: #B5AC9C;
+      --white: #F3EDE2;
+      --steel: #8A8172;
+      --navy: #2A251C;
+      --navy-deep: #121009;
+      --grid-line: rgba(201,169,106,0.08);
     }
     html { scroll-behavior: smooth; }
     body {
@@ -55,7 +54,7 @@
     /* ═══ NAV ═══ */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(7,17,31,0.96);
+      background: rgba(12,11,9,0.96);
       border-bottom: 1px solid var(--card-border);
       backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
       padding: 0 2rem;
@@ -123,10 +122,10 @@
       position: absolute; inset: 0;
       background: linear-gradient(
         180deg,
-        rgba(7,17,31,0.1) 0%,
-        rgba(7,17,31,0.25) 40%,
-        rgba(7,17,31,0.75) 75%,
-        rgba(7,17,31,0.97) 100%
+        rgba(12,11,9,0.1) 0%,
+        rgba(12,11,9,0.25) 40%,
+        rgba(12,11,9,0.75) 75%,
+        rgba(12,11,9,0.97) 100%
       );
     }
     .article-hero-content {
@@ -180,8 +179,8 @@
       opacity: 0; transition: opacity 0.3s;
     }
     .news-item:hover {
-      border-color: rgba(0,200,224,0.35);
-      box-shadow: 0 8px 32px -8px rgba(0,200,224,0.15);
+      border-color: rgba(201,169,106,0.35);
+      box-shadow: 0 8px 32px -8px rgba(201,169,106,0.15);
     }
     .news-item:hover::before { opacity: 1; }
 
@@ -198,10 +197,10 @@
     .tag {
       font-family: 'Orbitron', sans-serif; font-size: 9px; font-weight: 700;
       letter-spacing: 1.5px; padding: 3px 10px; border-radius: 3px;
-      border: 1px solid rgba(0,200,224,0.3);
+      border: 1px solid rgba(201,169,106,0.3);
       color: var(--cyan); background: var(--cyan-dim);
     }
-    .tag.tag-brand { border-color: var(--cyan); background: rgba(0,200,224,0.15); }
+    .tag.tag-brand { border-color: var(--cyan); background: rgba(201,169,106,0.15); }
 
     .news-title {
       font-size: 18px; font-weight: 700; color: var(--white);
@@ -228,7 +227,7 @@
     }
 
     .why-box {
-      background: rgba(0,200,224,0.06); border: 1px solid rgba(0,200,224,0.2);
+      background: rgba(201,169,106,0.06); border: 1px solid rgba(201,169,106,0.2);
       border-radius: 6px; padding: 1rem 1.25rem; margin-top: 1rem;
     }
     .why-box-label {
@@ -240,15 +239,15 @@
     .source-link {
       display: inline-flex; align-items: center; gap: 5px;
       font-size: 11px; color: var(--cyan); text-decoration: none;
-      border-bottom: 1px dashed rgba(0,200,224,0.3); transition: border-color 0.2s;
+      border-bottom: 1px dashed rgba(201,169,106,0.3); transition: border-color 0.2s;
       margin-top: 0.75rem;
     }
     .source-link:hover { border-color: var(--cyan); }
 
     /* ═══ CTA BOX ═══ */
     .cta-box {
-      background: linear-gradient(135deg, var(--navy-deep) 0%, rgba(0,200,224,0.08) 100%);
-      border: 1px solid rgba(0,200,224,0.3);
+      background: linear-gradient(135deg, var(--navy-deep) 0%, rgba(201,169,106,0.08) 100%);
+      border: 1px solid rgba(201,169,106,0.3);
       border-radius: 10px; padding: 2.5rem 2rem; margin-top: 3rem; text-align: center;
     }
     .cta-box h3 {
@@ -262,7 +261,7 @@
       font-family: 'Orbitron', sans-serif; font-size: 12px; letter-spacing: 1.5px;
       text-decoration: none; transition: all 0.2s;
     }
-    .cta-btn:hover { background: #00e8ff; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,200,224,0.3); }
+    .cta-btn:hover { background: #00e8ff; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,169,106,0.3); }
 
     /* ═══ FOOTER ═══ */
     footer {
@@ -306,6 +305,7 @@
       .footer-inner { flex-direction: column; }
     }
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -314,8 +314,8 @@
 <nav>
   <a href="/" class="nav-logo">
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
     </svg>
     <div>
       <span class="logo-text">PAUL LE CONSULTANT</span>
@@ -689,8 +689,8 @@
     <div class="footer-brand">
       <a href="/" class="nav-logo" style="margin-bottom:0.5rem">
         <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
-          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
         </svg>
         <span class="logo-text">PAUL LE CONSULTANT</span>
       </a>
