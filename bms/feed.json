@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-17",
+  "slug": "dcm-8446-io-6020-point-list-pau",
+  "title_vi": "Point list PAU 30 điểm",
+  "title_en": "A 30-point PAU point list",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-17-dcm-8446-io-6020-point-list-pau.html",
+  "x_post": "A fresh air PAU needs 12 analog inputs. A DCM-8446 has 8.\n\n• Add IO-6020: 30 points, 14 AI / 4 DI / 6 AO / 6 DO\n• PAU uses 22, 8 spare (27%)\n• Filter ΔP as 0–10 V, not a switch\n• Fire trip hard-wired, BMS only logs it\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "PAU gió tươi cần 12 ngõ vào analog, trong khi DCM-8446 đơn chỉ có 8 UI. Thiếu 4 ngõ là chuyện hay gặp khi hồ sơ chỉ ghi \"BMS giám sát PAU\".\n\nCách làm với Diamond Controls:\n1. Ghép DCM-8446 với IO-6020 thành combo 30 điểm: 14 AI, 4 DI, 6 AO, 6 DO\n2. PAU dùng 22 điểm, dư 8 điểm (27%) cho CO2 gió hồi, đèn UV hay coil gia nhiệt phát sinh sau\n3. ΔP lọc thô và lọc túi đo bằng 0–10 V để theo dõi tải lọc, không dùng công tắc\n4. Khởi động theo thứ tự: damper mở, có gió, rồi mới cho van nước lạnh điều khiển; 30 giây không có trạng thái chạy thì báo lỗi lệnh\n5. Biến tần: lệnh chạy và tốc độ đi dây cứng, kW và kWh đọc qua Modbus RTU\n6. Báo cháy cắt quạt bằng interlock cứng, BMS chỉ ghi sự kiện\n\nSơ đồ nguyên lý và point list đủ 30 điểm:\nhttps://elvconsultant.com/blog/bms/2026-11-17-dcm-8446-io-6020-point-list-pau.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #PAU #MitsubishiElectric #Niagara4 #DiamondControls"
+ },
+ {
   "date": "2026-11-16",
   "slug": "bms-benh-vien-chenh-ap-phong-mo",
   "title_vi": "BMS bệnh viện: chênh áp phòng mổ",

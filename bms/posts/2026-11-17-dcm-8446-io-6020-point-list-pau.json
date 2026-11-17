@@ -1,0 +1,290 @@
+{
+ "date": "2026-11-17",
+ "slug": "dcm-8446-io-6020-point-list-pau",
+ "pillar_vi": "Kỹ thuật sản phẩm",
+ "pillar_en": "Product engineering",
+ "title_vi": "Point list PAU 30 điểm",
+ "title_en": "A 30-point PAU point list",
+ "lead_vi": "Một PAU gió tươi cần 12 ngõ UI, DCM-8446 đơn chỉ có 8. Ghép thêm IO-6020 được 30 điểm, PAU dùng 22 và còn 8 điểm dự phòng.",
+ "lead_en": "A fresh air PAU needs 12 UI channels and a stand-alone DCM-8446 has 8. Adding an IO-6020 gives 30 points: the PAU uses 22 and keeps 8 spare.",
+ "tags": [
+  "PAU",
+  "Point list",
+  "DCM-8446",
+  "IO-6020",
+  "DCM 9000",
+  "Niagara 4",
+  "BACnet MS/TP"
+ ],
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 660\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sơ đồ nguyên lý PAU: DCM 9000 Niagara 4, DCM-8446 ghép IO-6020 qua BACnet MS/TP, đi dây cứng tới cảm biến, biến tần, van nước lạnh và damper gió tươi\" font-family=\"'Maison Sans',system-ui,sans-serif\"><style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.fw{stroke:#B5AC9C;stroke-width:1.2;fill:none;stroke-dasharray:5 4}.p{fill:#C9A96A;font-size:12px}.bg{fill:#0C0B09}</style><text class=\"k\" x=\"20\" y=\"28\">MANAGEMENT LEVEL</text><path class=\"ln\" d=\"M440 92H620\"/><path class=\"ln\" d=\"M230 140V230\"/><path class=\"fw\" d=\"M165 360V410\"/><path class=\"fw\" d=\"M400 360V410\"/><path class=\"fw\" d=\"M795 360V410\"/><rect class=\"b\" x=\"20\" y=\"44\" width=\"420\" height=\"96\"/><text class=\"t\" x=\"36\" y=\"72\">Niagara 4 · DCM 9000</text><text class=\"s\" x=\"36\" y=\"96\">RS-485 #1: BACnet MS/TP tới DDC</text><text class=\"s\" x=\"36\" y=\"118\">RS-485 #2: Modbus RTU tới biến tần</text><rect class=\"b2\" x=\"620\" y=\"44\" width=\"320\" height=\"96\"/><text class=\"t\" x=\"636\" y=\"72\">Biến tần quạt cấp / Supply VFD</text><text class=\"s\" x=\"636\" y=\"96\">kW, kWh, giờ chạy, mã lỗi</text><text class=\"s\" x=\"636\" y=\"118\">Lệnh chạy và tốc độ vẫn đi dây cứng</text><rect class=\"bg\" x=\"490\" y=\"80\" width=\"88\" height=\"16\"/><text class=\"p\" x=\"494\" y=\"92\">Modbus RTU</text><rect class=\"bg\" x=\"236\" y=\"160\" width=\"176\" height=\"16\"/><text class=\"p\" x=\"240\" y=\"172\">RS-485 #1 · BACnet MS/TP</text><text class=\"k\" x=\"20\" y=\"214\">AUTOMATION LEVEL</text><rect class=\"b\" x=\"20\" y=\"230\" width=\"440\" height=\"130\"/><text class=\"t\" x=\"36\" y=\"258\">DCM-8446 · 22 điểm</text><text class=\"s\" x=\"36\" y=\"282\">8 UI, 4 DI, 4 AO, 6 DO</text><text class=\"s\" x=\"36\" y=\"304\">PID, lịch chạy, báo động, RTC</text><text class=\"s\" x=\"36\" y=\"326\">MS/TP 9.6 đến 76.8 kbps</text><text class=\"s\" x=\"36\" y=\"348\">24 VAC, dưới 10 W</text><rect class=\"b\" x=\"460\" y=\"230\" width=\"480\" height=\"130\"/><text class=\"t\" x=\"476\" y=\"258\">+ IO-6020 · 6 UI + 2 AO</text><text class=\"s\" x=\"476\" y=\"282\">Combo 30 điểm: 14 AI, 4 DI, 6 AO, 6 DO</text><text class=\"s\" x=\"476\" y=\"304\">PAU dùng 22 điểm, dư 8 điểm (27%)</text><text class=\"s\" x=\"476\" y=\"326\">UI dư: 2 · DO dư: 3 · AO dư: 3</text><text class=\"k\" x=\"20\" y=\"396\">FIELD LEVEL</text><text class=\"p\" x=\"173\" y=\"390\">Hard-wired NTC, 0–10 V, mA</text><text class=\"p\" x=\"408\" y=\"390\">Hard-wired DI, DO</text><text class=\"p\" x=\"803\" y=\"390\">Hard-wired 0–10 V</text><rect class=\"b2\" x=\"20\" y=\"410\" width=\"290\" height=\"120\"/><text class=\"t\" x=\"36\" y=\"438\">Cảm biến · 10 UI</text><text class=\"s\" x=\"36\" y=\"462\">Nhiệt, ẩm gió tươi và gió cấp</text><text class=\"s\" x=\"36\" y=\"484\">Nhiệt sau coil, áp suất ống gió</text><text class=\"s\" x=\"36\" y=\"506\">ΔP lọc thô, ΔP lọc túi</text><rect class=\"b2\" x=\"335\" y=\"410\" width=\"290\" height=\"120\"/><text class=\"t\" x=\"351\" y=\"438\">Quạt cấp · 4 DI + 3 DO</text><text class=\"s\" x=\"351\" y=\"462\">Chạy, lỗi, auto/manual</text><text class=\"s\" x=\"351\" y=\"484\">Công tắc chênh áp quạt</text><text class=\"s\" x=\"351\" y=\"506\">Start/stop, reset lỗi, đèn báo</text><rect class=\"b2\" x=\"650\" y=\"410\" width=\"290\" height=\"120\"/><text class=\"t\" x=\"666\" y=\"438\">Van, damper · 3 AO</text><text class=\"s\" x=\"666\" y=\"462\">Tốc độ biến tần 0–10 V</text><text class=\"s\" x=\"666\" y=\"484\">Van CHW 2 ngã, damper gió tươi</text><text class=\"s\" x=\"666\" y=\"506\">Phản hồi van, tốc độ, công tắc</text><rect class=\"b2\" x=\"20\" y=\"570\" width=\"920\" height=\"70\"/><text class=\"t\" x=\"36\" y=\"598\">Báo cháy cắt quạt bằng interlock cứng trong tủ, BMS chỉ giám sát qua UI true DI</text><text class=\"s\" x=\"36\" y=\"622\">Fire trip is hard-wired in the panel; the BMS only monitors it</text></svg>",
+  "caption_vi": "SĐNL PAU: DCM-8446 + IO-6020 lên DCM 9000 qua BACnet MS/TP, biến tần đọc qua Modbus RTU, 22 điểm IO cứng tới hiện trường.",
+  "caption_en": "PAU schematic: DCM-8446 + IO-6020 to a DCM 9000 over BACnet MS/TP, VFD data over Modbus RTU, 22 hard-wired points to the field."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>PAU (Primary Air Unit) cấp gió tươi đã xử lý cho cả tầng hoặc cả khối nhà, chạy 100% gió ngoài. Tải ẩm lớn nên van nước lạnh, áp suất ống gió và tình trạng lọc phải được giám sát liên tục. Nhiều hồ sơ chỉ ghi \"BMS giám sát PAU\" mà không có point list, đến lúc thi công mới thấy DDC thiếu ngõ vào analog.</p><p>Một PAU điển hình cần 12 ngõ UI. DCM-8446 đơn có 8 UI, 4 DI, 4 AO, 6 DO, tổng 22 điểm: đủ tổng số nhưng thiếu 4 UI. Không thể dồn cảm biến analog vào ngõ DI vì DI chỉ nhận tiếp điểm khô.</p>",
+   "en": "<p>A PAU (Primary Air Unit) delivers treated outdoor air to a floor or a whole block on 100% fresh air. The latent load is high, so the chilled water valve, duct static pressure and filter condition need continuous supervision. Many design packages only say \"BMS monitors PAU\" with no point list, and the missing analog inputs show up during installation.</p><p>A typical PAU needs 12 UI channels. A stand-alone DCM-8446 has 8 UI, 4 DI, 4 AO and 6 DO, 22 points in total: enough points overall but 4 UI short. Analog sensors cannot move to the DI channels because DI only takes dry contacts.</p>"
+  },
+  {
+   "h_vi": "Giải pháp",
+   "h_en": "Solution",
+   "vi": "<p>Ghép DCM-8446 với module IO-6020 (6 UI + 2 AO) thành combo 30 điểm: 14 AI, 4 DI, 6 AO, 6 DO. PAU dùng 22 điểm, còn 8 điểm dự phòng (27%). Hai combo còn lại của hãng không hợp: IO-0800 và IO-0008 chỉ cho 8 AI.</p><ul><li><strong>Mạng:</strong> DDC lên DCM 9000 qua RS-485 #1, BACnet MS/TP 9.6 đến 76.8 kbps.</li><li><strong>Biến tần:</strong> đọc kW, kWh, mã lỗi qua Modbus RTU trên RS-485 #2 của DCM 9000. Lệnh chạy và tốc độ vẫn đi dây cứng để PAU chạy được khi mất mạng.</li><li><strong>Logic tại chỗ:</strong> PID, lịch chạy, báo động chạy trong DCM-8446, có RTC pin CR1220, không phụ thuộc server.</li></ul>",
+   "en": "<p>Pair the DCM-8446 with an IO-6020 module (6 UI + 2 AO) to get the 30-point combo: 14 AI, 4 DI, 6 AO, 6 DO. The PAU uses 22 points and keeps 8 spare (27%). The other two vendor combos do not fit: IO-0800 and IO-0008 only give 8 AI.</p><ul><li><strong>Network:</strong> the DDC reports to a DCM 9000 on RS-485 #1, BACnet MS/TP at 9.6 to 76.8 kbps.</li><li><strong>VFD:</strong> kW, kWh and fault codes come over Modbus RTU on the DCM 9000's RS-485 #2. Run command and speed stay hard-wired so the PAU keeps running if the network drops.</li><li><strong>Local logic:</strong> PID loops, schedules and alarms run inside the DCM-8446, with a CR1220-backed RTC, independent of the server.</li></ul>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<p><strong>Chọn tín hiệu UI:</strong> nhiệt độ dùng NTC 10K type 2/3 (sai số ±0.1 °C), độ ẩm 4–20 mA, áp suất ống gió và ΔP lọc 0–10 V. Đo ΔP lọc bằng analog thay vì công tắc để vẽ được đường tải lọc theo thời gian và đặt 2 ngưỡng: cảnh báo và phải thay.</p><p><strong>Trình tự khởi động:</strong> mở damper gió tươi, chờ công tắc hành trình, chạy quạt, chờ công tắc chênh áp xác nhận có gió rồi mới cho van nước lạnh điều khiển. Có lệnh chạy mà sau 30 giây chưa có tín hiệu chạy thì báo lỗi lệnh (command failure). Dừng theo thứ tự ngược lại.</p><p><strong>Vòng điều khiển:</strong> van CHW giữ nhiệt độ sau coil (điểm sương gió cấp), biến tần giữ áp suất ống gió, có giới hạn tốc độ tối thiểu. Phản hồi vị trí van và tốc độ biến tần lấy về UI để phát hiện van kẹt hoặc biến tần không theo lệnh.</p><p><strong>Ngõ ra:</strong> DO của DCM-8446 là relay SPST NO 30 VDC 1 A / 125 VAC 0.5 A, đủ cho tiếp điểm điều khiển biến tần và đèn báo 24 VAC, không đóng trực tiếp contactor tải lớn. AO 12-bit, 0–10 V cho biến tần, van và damper.</p><p><strong>Báo cháy:</strong> relay từ tủ báo cháy cắt quạt bằng interlock cứng trong tủ điện. BMS đọc trạng thái này qua 1 UI cấu hình true DI để ghi sự kiện, không nằm trong chuỗi an toàn.</p>",
+   "en": "<p><strong>UI signal choice:</strong> temperatures on NTC 10K type 2/3 (±0.1 °C), humidity on 4–20 mA, duct static and filter ΔP on 0–10 V. Measuring filter ΔP as analog instead of a switch gives a loading trend and two thresholds: warning and replace.</p><p><strong>Start sequence:</strong> open the outdoor air damper, wait for the end switch, start the fan, wait for the airflow switch, then release the chilled water valve loop. If the run command has no run status after 30 seconds, raise a command failure alarm. Stop in reverse order.</p><p><strong>Control loops:</strong> the CHW valve holds off-coil temperature (supply dew point), the VFD holds duct static with a minimum speed limit. Valve position and VFD speed feedback come back on UI channels to catch a stuck valve or a drive that ignores its command.</p><p><strong>Outputs:</strong> the DCM-8446 DO is an SPST NO relay rated 30 VDC 1 A / 125 VAC 0.5 A, fine for VFD control contacts and a 24 VAC pilot lamp, not for switching large contactors directly. AO is 12-bit, 0–10 V to the drive, valve and damper.</p><p><strong>Fire alarm:</strong> the fire panel relay trips the fan through a hard-wired interlock in the starter panel. The BMS reads that state on one UI set as true DI for logging; it is not part of the safety chain.</p>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<p>Combo DCM-8446 + IO-6020 hợp với PAU, AHU gió tươi và AHU có cấp lọc 2 tầng, nơi cần nhiều analog hơn ngõ ra. Văn phòng, khách sạn, bệnh viện và nhà xưởng có PAU riêng từng tầng đều dùng chung một point list mẫu, chỉ đổi địa chỉ MS/TP.</p><p>8 điểm dư dùng cho các nhu cầu thường phát sinh sau thiết kế: cảm biến CO2 gió hồi, đèn UV trong AHU, hoặc van 2 cấp cho coil gia nhiệt. Nếu PAU nằm ở mái xa tủ trung tâm, có thể gắn GW-112 để DCM-8446 lên thẳng BACnet/IP.</p>",
+   "en": "<p>The DCM-8446 + IO-6020 combo suits PAUs, fresh air AHUs and AHUs with two filter stages, where analog inputs outnumber outputs. Offices, hotels, hospitals and factories with one PAU per floor can share one template point list and only change the MS/TP address.</p><p>The 8 spare points cover what usually appears after design: a return air CO2 sensor, an in-duct UV lamp, or a second valve for a reheat coil. If the PAU sits on a roof far from the main panel, a GW-112 turns the DCM-8446 into a BACnet/IP controller.</p>"
+  }
+ ],
+ "table": {
+  "caption_vi": "Point list PAU trên combo DCM-8446 + IO-6020",
+  "caption_en": "PAU point list on the DCM-8446 + IO-6020 combo",
+  "head": [
+   "#",
+   "Điểm / Point",
+   "Loại / Type",
+   "Tín hiệu / Signal",
+   "Kênh / Channel"
+  ],
+  "rows": [
+   [
+    "1",
+    "Nhiệt độ gió tươi / OA temp",
+    "UI",
+    "NTC 10K",
+    "8446 UI1"
+   ],
+   [
+    "2",
+    "Độ ẩm gió tươi / OA RH",
+    "UI",
+    "4–20 mA",
+    "8446 UI2"
+   ],
+   [
+    "3",
+    "Nhiệt độ sau coil / Off-coil temp",
+    "UI",
+    "NTC 10K",
+    "8446 UI3"
+   ],
+   [
+    "4",
+    "Nhiệt độ gió cấp / Supply temp",
+    "UI",
+    "NTC 10K",
+    "8446 UI4"
+   ],
+   [
+    "5",
+    "Độ ẩm gió cấp / Supply RH",
+    "UI",
+    "4–20 mA",
+    "8446 UI5"
+   ],
+   [
+    "6",
+    "Áp suất ống gió / Duct static",
+    "UI",
+    "0–10 V",
+    "8446 UI6"
+   ],
+   [
+    "7",
+    "ΔP lọc thô / Pre-filter ΔP",
+    "UI",
+    "0–10 V",
+    "8446 UI7"
+   ],
+   [
+    "8",
+    "ΔP lọc túi / Bag filter ΔP",
+    "UI",
+    "0–10 V",
+    "8446 UI8"
+   ],
+   [
+    "9",
+    "Phản hồi van CHW / CHW valve feedback",
+    "UI",
+    "0–10 V",
+    "6020 UI1"
+   ],
+   [
+    "10",
+    "Phản hồi tốc độ / VFD speed feedback",
+    "UI",
+    "0–10 V",
+    "6020 UI2"
+   ],
+   [
+    "11",
+    "Hành trình damper / OA damper end switch",
+    "UI",
+    "True DI",
+    "6020 UI3"
+   ],
+   [
+    "12",
+    "Tín hiệu báo cháy / Fire alarm status",
+    "UI",
+    "True DI",
+    "6020 UI4"
+   ],
+   [
+    "13",
+    "Dự phòng / Spare",
+    "UI",
+    "",
+    "6020 UI5"
+   ],
+   [
+    "14",
+    "Dự phòng / Spare",
+    "UI",
+    "",
+    "6020 UI6"
+   ],
+   [
+    "15",
+    "Trạng thái chạy / Fan run status",
+    "DI",
+    "Dry contact",
+    "8446 DI1"
+   ],
+   [
+    "16",
+    "Lỗi biến tần / VFD fault",
+    "DI",
+    "Dry contact",
+    "8446 DI2"
+   ],
+   [
+    "17",
+    "Auto/Manual / Auto/Manual",
+    "DI",
+    "Dry contact",
+    "8446 DI3"
+   ],
+   [
+    "18",
+    "Công tắc chênh áp quạt / Airflow switch",
+    "DI",
+    "Dry contact",
+    "8446 DI4"
+   ],
+   [
+    "19",
+    "Start/stop quạt / Fan start/stop",
+    "DO",
+    "Relay NO",
+    "8446 DO1"
+   ],
+   [
+    "20",
+    "Reset lỗi biến tần / VFD fault reset",
+    "DO",
+    "Relay NO",
+    "8446 DO2"
+   ],
+   [
+    "21",
+    "Đèn báo lỗi tại tủ / Panel alarm lamp",
+    "DO",
+    "Relay NO, 24 VAC",
+    "8446 DO3"
+   ],
+   [
+    "22",
+    "Dự phòng / Spare",
+    "DO",
+    "",
+    "8446 DO4"
+   ],
+   [
+    "23",
+    "Dự phòng / Spare",
+    "DO",
+    "",
+    "8446 DO5"
+   ],
+   [
+    "24",
+    "Dự phòng / Spare",
+    "DO",
+    "",
+    "8446 DO6"
+   ],
+   [
+    "25",
+    "Tốc độ biến tần / VFD speed",
+    "AO",
+    "0–10 V",
+    "8446 AO1"
+   ],
+   [
+    "26",
+    "Van nước lạnh / CHW valve",
+    "AO",
+    "0–10 V",
+    "8446 AO2"
+   ],
+   [
+    "27",
+    "Damper gió tươi / OA damper",
+    "AO",
+    "0–10 V",
+    "8446 AO3"
+   ],
+   [
+    "28",
+    "Dự phòng / Spare",
+    "AO",
+    "",
+    "8446 AO4"
+   ],
+   [
+    "29",
+    "Dự phòng / Spare",
+    "AO",
+    "",
+    "6020 AO1"
+   ],
+   [
+    "30",
+    "Dự phòng / Spare",
+    "AO",
+    "",
+    "6020 AO2"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "Mitsubishi Electric Vietnam, Building Management System",
+   "url": "https://buildingsolutions.mitsubishi-electric.vn/en/bms/"
+  },
+  {
+   "title": "Mitsubishi Electric Asia, DCM-8446 and IO modules datasheet (2024)"
+  }
+ ],
+ "x_post": "A fresh air PAU needs 12 analog inputs. A DCM-8446 has 8.\n\n• Add IO-6020: 30 points, 14 AI / 4 DI / 6 AO / 6 DO\n• PAU uses 22, 8 spare (27%)\n• Filter ΔP as 0–10 V, not a switch\n• Fire trip hard-wired, BMS only logs it\n\nFull schematic on the blog, link in bio.",
+ "fb_post": "PAU gió tươi cần 12 ngõ vào analog, trong khi DCM-8446 đơn chỉ có 8 UI. Thiếu 4 ngõ là chuyện hay gặp khi hồ sơ chỉ ghi \"BMS giám sát PAU\".\n\nCách làm với Diamond Controls:\n1. Ghép DCM-8446 với IO-6020 thành combo 30 điểm: 14 AI, 4 DI, 6 AO, 6 DO\n2. PAU dùng 22 điểm, dư 8 điểm (27%) cho CO2 gió hồi, đèn UV hay coil gia nhiệt phát sinh sau\n3. ΔP lọc thô và lọc túi đo bằng 0–10 V để theo dõi tải lọc, không dùng công tắc\n4. Khởi động theo thứ tự: damper mở, có gió, rồi mới cho van nước lạnh điều khiển; 30 giây không có trạng thái chạy thì báo lỗi lệnh\n5. Biến tần: lệnh chạy và tốc độ đi dây cứng, kW và kWh đọc qua Modbus RTU\n6. Báo cháy cắt quạt bằng interlock cứng, BMS chỉ ghi sự kiện\n\nSơ đồ nguyên lý và point list đủ 30 điểm:\nhttps://elvconsultant.com/blog/bms/2026-11-17-dcm-8446-io-6020-point-list-pau.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #PAU #MitsubishiElectric #Niagara4 #DiamondControls",
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1774290331891-5d759056c68d?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Dãy thiết bị HVAC trên mái tòa nhà",
+  "credit": "Carl Wragg",
+  "credit_url": "https://unsplash.com/photos/row-of-white-hvac-units-on-a-rooftop-8PuhEqdwaN8"
+ }
+}

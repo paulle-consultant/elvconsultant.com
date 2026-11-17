@@ -101,7 +101,8 @@
    "pillar": "Kỹ thuật sản phẩm",
    "pillar_en": "Product engineering",
    "topic": "DCM-8446 + IO-6020 cho PAU: point list 30 điểm",
-   "status": "planned"
+   "status": "published",
+   "slug": "dcm-8446-io-6020-point-list-pau"
   },
   {
    "date": "2026-11-18",
