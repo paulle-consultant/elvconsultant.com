@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W47/2026 ELV·ICT·AV Weekly | Mitsubishi Smart City · Schneider EcoCare UPS · AI Video $9.6B · Cabling Market · Vietnam $5B | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 47/2026: Mitsubishi Electric Smart Building & Smart City Berlin · Schneider EcoCare mở rộng sang UPS · AI Video Analytics $9.6B · Thị trường Cabling bùng nổ · Vietnam đầu tư $5B hạ tầng số.">
+  <meta name="keywords" content="ELV news, ICT AV news Vietnam, smart building, Mitsubishi Electric BMS, Schneider EcoCare, AI video analytics, structured cabling market, Vietnam digital infrastructure">
+  <meta name="author" content="Paul Le Consultant">
+  <meta property="og:title" content="W47/2026 ELV·ICT·AV Weekly | Paul Le Consultant">
+  <meta property="og:description" content="5 tin nổi bật: Mitsubishi Smart City Berlin · Schneider EcoCare UPS · AI Video $9.6B · Cabling Boom · Vietnam $5B Digital">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1680992046626-418f7e910589?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-18-elv-ict-av-weekly.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6}
+
+    /* GRID BACKGROUND */
+    .grid-bg{
+      position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0
+    }
+
+    /* NAV */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px
+    }
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-text{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:7px 18px;border-radius:4px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all .2s;text-decoration:none}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg)}
+
+    /* LANG BAR */
+    .lang-bar{
+      position:relative;z-index:10;
+      background:var(--navy-deep);border-bottom:1px solid var(--card-border);
+      padding:8px 2rem;display:flex;align-items:center;justify-content:flex-end;gap:8px
+    }
+    .lang-label{font-size:11px;color:var(--steel);letter-spacing:1px;font-family:'Orbitron',monospace}
+    .lang-btn{
+      background:transparent;border:1px solid var(--card-border);color:var(--silver);
+      padding:4px 12px;border-radius:3px;font-size:11px;font-weight:600;cursor:pointer;
+      font-family:'Orbitron',monospace;letter-spacing:1px;transition:all .2s
+    }
+    .lang-btn.active{background:var(--cyan);border-color:var(--cyan);color:var(--bg)}
+    .lang-btn:hover:not(.active){border-color:var(--cyan);color:var(--cyan)}
+
+    /* HERO */
+    .article-hero{
+      position:relative;z-index:1;height:520px;overflow:hidden
+    }
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.6) saturate(0.85)}
+    .article-hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(135deg,rgba(7,17,31,0.75) 0%,rgba(0,200,224,0.08) 60%,rgba(7,17,31,0.85) 100%)
+    }
+    .article-hero-content{
+      position:absolute;bottom:0;left:0;right:0;
+      padding:3rem 2rem 2.5rem;
+      background:linear-gradient(0deg,rgba(7,17,31,0.98) 0%,transparent 100%)
+    }
+    .hero-eyebrow{
+      font-family:'Orbitron',monospace;font-size:10px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:.75rem;display:flex;align-items:center;gap:10px
+    }
+    .hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
+    .hero-title{font-family:'Orbitron',monospace;font-size:clamp(1.1rem,2.5vw,1.8rem);font-weight:900;color:var(--white);line-height:1.2;max-width:900px;margin-bottom:1rem}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:.5rem}
+    .hero-tag{
+      font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1px;padding:3px 10px;
+      border-radius:3px;border:1px solid var(--cyan-glow);color:var(--cyan);background:var(--cyan-dim)
+    }
+
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:3rem 2rem 4rem}
+
+    /* NEWS ITEM CARDS */
+    .news-item{
+      background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;
+      padding:2rem;margin-bottom:1.5rem;position:relative;overflow:hidden;
+      transition:border-color .3s,box-shadow .3s
+    }
+    .news-item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);opacity:0;transition:opacity .3s}
+    .news-item:hover{border-color:var(--cyan-glow);box-shadow:0 0 32px -8px var(--cyan-glow)}
+    .news-item:hover::before{opacity:1}
+    .news-num{
+      font-family:'Orbitron',monospace;font-size:36px;font-weight:900;
+      color:rgba(0,200,224,0.08);position:absolute;top:1rem;right:1.5rem;line-height:1
+    }
+    .news-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.85rem}
+    .news-tag{
+      font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1px;padding:3px 10px;
+      border-radius:3px;border:1px solid var(--cyan-glow);color:var(--cyan);background:var(--cyan-dim)
+    }
+    .news-title-vi{font-family:'Orbitron',monospace;font-size:1rem;font-weight:700;color:var(--white);line-height:1.4;margin-bottom:.35rem}
+    .news-title-en{font-family:'Orbitron',monospace;font-size:.82rem;font-weight:400;color:var(--silver);line-height:1.4;margin-bottom:1rem}
+    .news-body{font-size:14px;color:var(--silver);line-height:1.75;margin-bottom:1.25rem}
+    .news-source{font-size:11px;color:var(--steel);margin-top:.5rem}
+    .news-source a{color:var(--cyan);text-decoration:none}
+    .news-source a:hover{text-decoration:underline}
+
+    /* WHY BOX */
+    .why-box{
+      background:rgba(0,200,224,0.05);border-left:3px solid var(--cyan);
+      border-radius:0 6px 6px 0;padding:1rem 1.25rem;margin-top:1.25rem
+    }
+    .why-label{
+      font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--cyan);
+      margin-bottom:.5rem;display:flex;align-items:center;gap:8px
+    }
+    .why-label::before{content:'⚡';font-size:11px}
+    .why-text{font-size:13px;color:var(--silver);line-height:1.7}
+
+    /* SCHEMA / DIAGRAM BOX */
+    .schema-box{
+      background:var(--navy-deep);border:1px solid var(--card-border);
+      border-radius:6px;padding:1.25rem;margin-top:1.25rem;overflow-x:auto
+    }
+    .schema-title{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel);margin-bottom:.75rem}
+    .schema-diagram{font-family:'Courier New',monospace;font-size:11px;color:var(--silver);line-height:1.6;white-space:pre}
+    .schema-cyan{color:var(--cyan)}
+
+    /* CTA */
+    .cta-box{
+      background:linear-gradient(135deg,var(--navy-deep),var(--navy));
+      border:1px solid var(--cyan-glow);border-radius:8px;
+      padding:2.5rem 2rem;text-align:center;margin-top:3rem;
+      box-shadow:0 0 48px -16px var(--cyan-glow)
+    }
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:1rem;font-weight:700;color:var(--white);margin-bottom:.5rem}
+    .cta-box p{font-size:13px;color:var(--silver);line-height:1.6;margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto}
+    .cta-btn{
+      display:inline-block;background:var(--cyan);color:var(--bg);
+      font-family:'Orbitron',monospace;font-size:11px;font-weight:700;letter-spacing:1.5px;
+      padding:12px 28px;border-radius:4px;text-decoration:none;transition:all .2s
+    }
+    .cta-btn:hover{background:var(--white);transform:translateY(-2px)}
+
+    /* FOOTER */
+    footer{
+      position:relative;z-index:1;border-top:1px solid var(--card-border);
+      background:var(--navy-deep);padding:2.5rem 2rem;margin-top:0
+    }
+    .footer-inner{max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-copy{font-size:12px;color:var(--steel)}
+    .footer-links{display:flex;gap:1.5rem}
+    .footer-links a{font-size:12px;color:var(--steel);text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:var(--cyan)}
+    .footer-domain{font-family:'Orbitron',monospace;font-size:12px;color:var(--cyan)}
+
+    @media(max-width:768px){
+      nav{padding:0 1rem}
+      .nav-links{display:none}
+      .article-hero{height:380px}
+      .article-hero-content{padding:2rem 1rem 1.5rem}
+      main{padding:2rem 1rem 3rem}
+      .news-item{padding:1.5rem 1.25rem}
+      .lang-bar{padding:8px 1rem}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">ELV · ICT · AV DESIGN</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">TƯ VẤN / CONSULT</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE:</span>
+  <button class="lang-btn" data-lang="vi" onclick="setLang('vi')">🇻🇳 TIẾNG VIỆT</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇬🇧 ENGLISH</button>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1680992046626-418f7e910589?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Server rack dark room — ELV ICT AV Weekly W47 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="hero-eyebrow">
+      <span class="vi-content">BẢN TIN ELV/ICT/AV TUẦN 47 · THỨ TƯ 18/11/2026</span>
+      <span class="en-content">ELV/ICT/AV WEEKLY · WEEK 47 · WEDNESDAY 18 NOV 2026</span>
+    </div>
+    <div class="hero-title vi-content">Mitsubishi Smart City Berlin · Schneider EcoCare UPS · AI Video Analytics $9.6B · Thị Trường Cabling Bùng Nổ · Vietnam Đầu Tư $5B Số Hóa</div>
+    <div class="hero-title en-content">Mitsubishi Smart City Berlin · Schneider EcoCare UPS · AI Video Analytics $9.6B · Cabling Market Boom · Vietnam $5B Digital Bet</div>
+    <div class="hero-tags">
+      <span class="hero-tag">MITSUBISHI</span>
+      <span class="hero-tag">SCHNEIDER</span>
+      <span class="hero-tag">AI VIDEO</span>
+      <span class="hero-tag">CABLING</span>
+      <span class="hero-tag">VIETNAM</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- ===== NEWS ITEM 1 ===== -->
+  <div class="news-item">
+    <div class="news-num">01</div>
+    <div class="news-tags">
+      <span class="news-tag">MITSUBISHI ELECTRIC</span>
+      <span class="news-tag">BMS</span>
+      <span class="news-tag">SMART CITY</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Mitsubishi Electric Trình Diễn Công Nghệ Smart Building &amp; Smart City Tại Berlin Urban Tech Republic</div>
+      <div class="news-body">
+        Mitsubishi Electric tham gia dự án Urban Tech Republic tại Berlin (Đức) — một trong những khu phát triển đô thị thông minh lớn nhất châu Âu được xây dựng trong tòa nhà lịch sử sân bay Tegel cũ. Công ty trình diễn các công nghệ BMS và smart city tích hợp bao gồm: hệ thống thang máy AI-driven, HVAC tòa nhà được tối ưu theo điều kiện thời tiết thực, hệ thống giám sát năng lượng real-time, và nền tảng quản lý đô thị thông minh kết nối nhiều tòa nhà.
+        <br><br>
+        Dự án này thể hiện tầm nhìn của Mitsubishi Electric về <strong style="color:var(--cyan)">hội tụ Building Automation + Smart City</strong> — nơi dữ liệu từ từng tòa nhà đóng góp vào hệ sinh thái đô thị tổng thể, bao gồm quản lý giao thông, năng lượng lưới điện và an ninh đô thị.
+      </div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Mitsubishi Electric Demonstrates Smart Building &amp; Smart City Tech at Berlin's Urban Tech Republic</div>
+      <div class="news-body">
+        Mitsubishi Electric is participating in the Urban Tech Republic project in Berlin, Germany — one of Europe's largest smart urban developments built within the historic Tegel Airport terminal. The company showcases integrated BMS and smart city technologies including AI-driven elevators, weather-responsive HVAC optimization, real-time energy monitoring, and a unified smart city management platform connecting multiple buildings.
+        <br><br>
+        This project embodies Mitsubishi Electric's vision of <strong style="color:var(--cyan)">Building Automation + Smart City convergence</strong> — where data from individual buildings feeds into a broader urban ecosystem encompassing traffic management, grid energy balancing, and urban security.
+      </div>
+    </div>
+
+    <div class="schema-box">
+      <div class="schema-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — MITSUBISHI SMART BUILDING ECOSYSTEM</div>
+      <div class="schema-diagram">
+<span class="schema-cyan">┌─────────────────── URBAN TECH REPUBLIC PLATFORM ───────────────────┐</span>
+│                                                                      │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐  │
+│  │  BUILDING A     │    │  BUILDING B     │    │  BUILDING C     │  │
+│  │  ┌───────────┐  │    │  ┌───────────┐  │    │  ┌───────────┐  │  │
+│  │  │ HVAC BMS  │  │    │  │ HVAC BMS  │  │    │  │ HVAC BMS  │  │  │
+│  │  │ ELEVATORS │  │    │  │ ELEVATORS │  │    │  │ ELEVATORS │  │  │
+│  │  │ ENERGY    │  │    │  │ ENERGY    │  │    │  │ ENERGY    │  │  │
+│  │  └─────┬─────┘  │    │  └─────┬─────┘  │    │  └─────┬─────┘  │  │
+│  └────────┼────────┘    └────────┼────────┘    └────────┼────────┘  │
+│           │                      │                      │            │
+│           └──────────────────────┼──────────────────────┘            │
+│                                  │                                    │
+│                    <span class="schema-cyan">┌─────────────▼──────────────┐</span>                   │
+│                    <span class="schema-cyan">│  CENTRAL SMART CITY HUB    │</span>                   │
+│                    <span class="schema-cyan">│  ● Traffic AI              │</span>                   │
+│                    <span class="schema-cyan">│  ● Grid Energy Mgmt        │</span>                   │
+│                    <span class="schema-cyan">│  ● Urban Security          │</span>                   │
+│                    <span class="schema-cyan">│  ● CO₂ / ESG Reporting     │</span>                   │
+│                    <span class="schema-cyan">└────────────────────────────┘</span>                   │
+└─────────────────────────────────────────────────────────────────────┘</div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</div>
+      <div class="why-label en-content">WHY THIS MATTERS FOR VIETNAM ELV/ICT/AV PROJECTS</div>
+      <div class="why-text vi-content">
+        Mô hình Urban Tech Republic của Mitsubishi Electric là blueprint cho các khu đô thị thông minh tại Việt Nam như Vinhomes, Eco Park và các dự án khu đô thị mới của chính phủ. Nhà tư vấn ELV/ICT cần hiểu rõ cách tích hợp BMS ở cấp độ tòa nhà đơn lẻ lên cấp độ district/campus, kết nối với hệ thống quản lý đô thị thông minh tổng thể. Đặc biệt quan trọng cho dự án khu đô thị thông minh, bệnh viện đa tòa nhà và trường đại học campus.
+      </div>
+      <div class="why-text en-content">
+        Mitsubishi Electric's Urban Tech Republic model serves as a blueprint for smart urban developments in Vietnam such as Vinhomes, Eco Park, and new government smart city projects. ELV/ICT consultants must understand how to scale BMS integration from individual building to district/campus level, connecting to an overarching smart city management platform. Particularly critical for smart urban development, multi-building hospital campuses, and university campus projects.
+      </div>
+    </div>
+    <div class="news-source">
+      Source: <a href="https://th.mitsubishielectric.com/en/pr/global/2026/0825_rd/" target="_blank" rel="noopener">Mitsubishi Electric Global PR</a> |
+      <a href="https://smartbuildingmag.com/news/114013-mitsubishi-electric-to-demonstrate-smart-building-and-smart-city-technologies-in-berlin" target="_blank" rel="noopener">Smart Building Magazine</a>
+    </div>
+  </div>
+
+  <!-- ===== NEWS ITEM 2 ===== -->
+  <div class="news-item">
+    <div class="news-num">02</div>
+    <div class="news-tags">
+      <span class="news-tag">SCHNEIDER ELECTRIC</span>
+      <span class="news-tag">BMS · UPS</span>
+      <span class="news-tag">AI MONITORING</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Schneider Electric Mở Rộng EcoCare Sang UPS 3 Pha: Bảo Trì AI Condition-Based</div>
+      <div class="news-body">
+        Sau thành công của EcoCare for BMS, Schneider Electric vừa mở rộng dịch vụ EcoCare sang dòng UPS 3 pha với tính năng bảo trì dựa trên điều kiện thực (AI condition-based maintenance). Hệ thống giám sát liên tục các thông số như điện áp, nhiệt độ pin, chất lượng điện lưới và dự đoán thời điểm thay thế linh kiện trước khi xảy ra sự cố ngừng hoạt động.
+        <br><br>
+        EcoCare UPS sử dụng AI và phân tích dữ liệu đám mây để <strong style="color:var(--cyan)">tăng uptime lên đến 99.999%</strong>, giảm chi phí bảo trì phòng ngừa 25-30% và kéo dài vòng đời thiết bị UPS trong data center, bệnh viện và công trình hạ tầng quan trọng.
+      </div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Schneider Electric Expands EcoCare to 3-Phase UPS: AI Condition-Based Maintenance</div>
+      <div class="news-body">
+        Following the success of EcoCare for BMS, Schneider Electric has expanded its EcoCare service to 3-phase UPS systems with AI condition-based maintenance capabilities. The system continuously monitors parameters such as voltage, battery temperature, power quality, and predicts component replacement needs before failures occur.
+        <br><br>
+        EcoCare UPS uses AI and cloud data analytics to <strong style="color:var(--cyan)">achieve uptime up to 99.999%</strong>, reduce preventive maintenance costs by 25–30%, and extend UPS equipment lifespan in data centers, hospitals, and critical infrastructure.
+      </div>
+    </div>
+
+    <div class="schema-box">
+      <div class="schema-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — ECOCARE AI MONITORING ARCHITECTURE</div>
+      <div class="schema-diagram">
+<span class="schema-cyan"> SITE EQUIPMENT                    CLOUD PLATFORM              ACTIONS</span>
+ ─────────────────────────────────────────────────────────────────────
+ ┌──────────────┐                                              ┌───────────────┐
+ │ 3-PHASE UPS  │──[IoT Sensors]──► Battery Voltage/Temp      │ Alert/Ticket   │
+ │              │                 ► Capacitor Health          │ Auto-Generate  │
+ │              │                 ► Harmonic Distortion       └───────────────┘
+ └──────────────┘                                              ┌───────────────┐
+                 ──[Secure API]──► <span class="schema-cyan">SCHNEIDER ECOCARE</span>  ──► │ Predictive     │
+ ┌──────────────┐                     CLOUD ENGINE            │ Maintenance    │
+ │ BMS GATEWAY  │──[BACNET/MODBUS]──► Power Quality           │ Schedule       │
+ │              │                 ► Load Pattern              └───────────────┘
+ └──────────────┘                 ► Ambient Conditions        ┌───────────────┐
+                                                               │ Firmware/      │
+ ┌──────────────┐                     AI Analysis:            │ Config Update  │
+ │ GEN-SET / ATS│──[Digital I/O]──► Anomaly Detection        └───────────────┘
+ └──────────────┘                 ► Failure Prediction
+                                  ► Efficiency Report
+      </div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</div>
+      <div class="why-label en-content">WHY THIS MATTERS FOR VIETNAM ELV/ICT/AV PROJECTS</div>
+      <div class="why-text vi-content">
+        UPS 3 pha là thiết bị hạ tầng quan trọng trong mọi data center, bệnh viện và trung tâm thương mại. EcoCare AI monitoring giúp giảm rủi ro mất điện đột ngột — một vấn đề đặc biệt nghiêm trọng tại Việt Nam nơi điện lưới có nhiều biến động. Nhà thiết kế hệ thống điện nhẹ ELV cần phối hợp chặt chẽ với đội cơ điện để tích hợp EcoCare vào hệ thống SCADA/BMS tổng thể ngay từ giai đoạn thiết kế.
+      </div>
+      <div class="why-text en-content">
+        3-phase UPS is critical infrastructure in every data center, hospital, and commercial center. EcoCare AI monitoring reduces the risk of unexpected power outages — particularly serious in Vietnam where grid power fluctuations are common. ELV system designers must closely coordinate with M&E teams to integrate EcoCare into the overall SCADA/BMS system from the design stage.
+      </div>
+    </div>
+    <div class="news-source">
+      Source: <a href="https://www.facilitiesdive.com/news/schneider-electric-launches-ai-driven-continuous-bms-monitoring-service/822148/" target="_blank" rel="noopener">Facilities Dive</a> |
+      <a href="https://www.marketscale.com/industries/energy/schneider-electric-expands-ecocare-3-phase-ups-ai-condition-based-maintenance.md" target="_blank" rel="noopener">MarketScale</a>
+    </div>
+  </div>
+
+  <!-- ===== NEWS ITEM 3 ===== -->
+  <div class="news-item">
+    <div class="news-num">03</div>
+    <div class="news-tags">
+      <span class="news-tag">AI VIDEO ANALYTICS</span>
+      <span class="news-tag">SECURITY</span>
+      <span class="news-tag">MARKET REPORT</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Thị Trường Crowd Analytics Đạt $9.6 Tỷ Vào 2030: AI Camera &amp; Smart City Thúc Đẩy Tăng Trưởng 18% CAGR</div>
+      <div class="news-body">
+        Báo cáo thị trường Global Crowd Analytics 2026 (phát hành 13/11/2026) xác nhận thị trường phân tích đám đông bằng AI đang tăng trưởng mạnh với CAGR 18%, dự kiến đạt $9.6 tỷ USD vào năm 2030. Các động lực chính bao gồm: triển khai camera AI phân tích hành vi, nhu cầu giám sát đám đông trong sân bay/ga tàu/sự kiện, và đầu tư smart city toàn cầu.
+        <br><br>
+        Các hãng dẫn đầu: <strong style="color:var(--cyan)">Axis Communications, Hikvision, Dahua, Bosch Security, Avigilon (Motorola Solutions)</strong> với các giải pháp AI edge computing trên camera, không cần server phân tích riêng biệt.
+      </div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Crowd Analytics Market to Hit $9.6B by 2030: AI Camera &amp; Smart City Investment Drive 18% CAGR</div>
+      <div class="news-body">
+        The Global Crowd Analytics Market Report 2026 (released November 13, 2026) confirms the AI-powered crowd analytics market is growing strongly at 18% CAGR, projected to reach $9.6 billion by 2030. Key drivers include: AI behavioral analytics camera deployments, crowd monitoring needs at airports/stations/events, and global smart city investments.
+        <br><br>
+        Leading vendors: <strong style="color:var(--cyan)">Axis Communications, Hikvision, Dahua, Bosch Security, Avigilon (Motorola Solutions)</strong> with AI edge computing solutions embedded in cameras, eliminating separate analytics servers.
+      </div>
+    </div>
+
+    <div class="schema-box">
+      <div class="schema-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — AI CROWD ANALYTICS ARCHITECTURE</div>
+      <div class="schema-diagram">
+<span class="schema-cyan">PHYSICAL LAYER          EDGE AI LAYER              PLATFORM LAYER</span>
+─────────────────────────────────────────────────────────────────────
+                        ┌─────────────────────┐
+IP CAMERA (4K) ────────► AI CHIP (Edge)       │   ┌─────────────────┐
+IP CAMERA (4K) ────────► ● Person Counting    ├──►│ VMS / PSIM      │
+IP CAMERA (4K) ────────► ● Crowd Density      │   │ DASHBOARD       │
+                        │ ● Direction/Flow     │   │ ● Real-time map │
+                        │ ● Dwell Time         │   │ ● Heat maps     │
+                        │ ● Aggression Detect  │   │ ● Alerts        │
+                        │ ● Face Recog (opt)   │   │ ● Reports       │
+                        └─────────────────────┘   └─────────────────┘
+                                                            │
+                        <span class="schema-cyan">METADATA only sent to cloud</span>         ▼
+                        <span class="schema-cyan">(no raw video — GDPR compliant)</span>  ┌───────────────┐
+                                                   │ SMART CITY HUB│
+                                                   │ ● Traffic Ctrl│
+                                                   │ ● Emergency   │
+                                                   └───────────────┘</div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</div>
+      <div class="why-label en-content">WHY THIS MATTERS FOR VIETNAM ELV/ICT/AV PROJECTS</div>
+      <div class="why-text vi-content">
+        Thị trường crowd analytics tăng trưởng mạnh đồng nghĩa với nhu cầu upgrade camera IP tại sân bay Nội Bài/Tân Sơn Nhất, nhà ga Hà Nội/Sài Gòn, trung tâm thương mại và sân vận động. Nhà tư vấn ELV phải hiểu rõ kiến trúc AI edge vs. cloud để đề xuất giải pháp phù hợp với yêu cầu GDPR/Nghị định 13 về bảo vệ dữ liệu cá nhân tại Việt Nam.
+      </div>
+      <div class="why-text en-content">
+        The crowd analytics market's strong growth signals the need to upgrade IP cameras at Noi Bai/Tan Son Nhat airports, Hanoi/Saigon train stations, shopping malls, and stadiums. ELV consultants must understand AI edge vs. cloud architecture to propose solutions compliant with Vietnam's Decree 13 on personal data protection.
+      </div>
+    </div>
+    <div class="news-source">
+      Source: <a href="https://www.globenewswire.com/news-release/2026/11/13/3402811/28124/en/global-crowd-analytics-market-report-2026-edition-size-share-and-forecast-to-2030-ai-video-analytics-and-smart-city-investment-drive-18-cagr-to-us-9-6-billion.html" target="_blank" rel="noopener">GlobeNewswire — Global Crowd Analytics Market 2026</a>
+    </div>
+  </div>
+
+  <!-- ===== NEWS ITEM 4 ===== -->
+  <div class="news-item">
+    <div class="news-num">04</div>
+    <div class="news-tags">
+      <span class="news-tag">CABLING MARKET</span>
+      <span class="news-tag">STRUCTURED CABLING</span>
+      <span class="news-tag">AI ERA</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Thị Trường Structured Cabling Đạt $34.74 Tỷ Vào 2034: Kỷ Nguyên AI và Data Center Thúc Đẩy CAGR 9.5%</div>
+      <div class="news-body">
+        Báo cáo mới nhất (phát hành 13/11/2026) dự báo thị trường structured cabling toàn cầu đạt $34.74 tỷ USD vào năm 2034, tăng trưởng CAGR 9.5%. Động lực chính là nhu cầu băng thông cao từ AI workloads, triển khai 5G enterprise, Wi-Fi 7 yêu cầu hạ tầng cáp Cat8/OM5, và bùng nổ xây dựng data center AI trên toàn thế giới.
+        <br><br>
+        Phân khúc tăng trưởng mạnh nhất: <strong style="color:var(--cyan)">cáp quang OM5/OS2 cho data center, cáp Cat6A/8 Ultra-PoE cho campus Wi-Fi 7, và hệ thống quản lý cáp thông minh DCIM-integrated.</strong>
+      </div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Structured Cabling Market to Hit $34.74B by 2034: AI Era and Data Center Explosion Drive 9.5% CAGR</div>
+      <div class="news-body">
+        The latest market report (released November 13, 2026) projects the global structured cabling market to reach $34.74 billion by 2034, growing at 9.5% CAGR. Key drivers are high-bandwidth demands from AI workloads, enterprise 5G rollouts, Wi-Fi 7 requiring Cat8/OM5 cable infrastructure, and the global AI data center construction boom.
+        <br><br>
+        Fastest-growing segments: <strong style="color:var(--cyan)">OM5/OS2 fiber for data centers, Cat6A/8 Ultra-PoE cable for campus Wi-Fi 7, and DCIM-integrated intelligent cable management systems.</strong>
+      </div>
+    </div>
+
+    <div class="schema-box">
+      <div class="schema-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — CABLING TIER SELECTION FOR AI ERA</div>
+      <div class="schema-diagram">
+<span class="schema-cyan">APPLICATION              RECOMMENDED CABLING         BANDWIDTH</span>
+─────────────────────────────────────────────────────────────────────
+AI Server (GPU cluster)  OM5 MPO/MTP Multimode       100G / 400G
+AI Data Center Spine     OS2 Single-mode LC duplex    400G / 800G
+Campus Core/Distrib.     OS2 Single-mode (12-24F)     100G uplinks
+Wi-Fi 7 Access Point     Cat6A U/FTP                  Multi-Gig PoE++
+IP Camera (4K AI)        Cat6A / Cat6                 PoE++ (90W)
+Smart Building BMS       Cat6A shielded               1G + PoE+
+Video Conference Room    Cat6A + OM3 fiber             10G + 4K AV
+─────────────────────────────────────────────────────────────────────
+<span class="schema-cyan">KEY STANDARD: TIA-568.3-D (fiber) / TIA-568.2-D (copper) / ISO/IEC 11801</span></div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</div>
+      <div class="why-label en-content">WHY THIS MATTERS FOR VIETNAM ELV/ICT/AV PROJECTS</div>
+      <div class="why-text vi-content">
+        Tăng trưởng thị trường cabling 9.5% CAGR phản ánh nhu cầu thực tế tại Việt Nam: data center AI của Viettel/FPT/VNG cần cáp quang tốc độ cao, campus trường đại học và bệnh viện đang nâng cấp lên Wi-Fi 7, và các dự án tòa nhà hạng A ngày càng yêu cầu hệ thống cabling thông minh có khả năng hỗ trợ PoE++ 90W cho camera AI và màn hình AV tích hợp.
+      </div>
+      <div class="why-text en-content">
+        The 9.5% CAGR cabling market growth reflects real demand in Vietnam: Viettel/FPT/VNG's AI data centers require high-speed fiber, university and hospital campuses are upgrading to Wi-Fi 7, and Grade-A building projects increasingly require intelligent cabling systems capable of supporting 90W PoE++ for AI cameras and integrated AV displays.
+      </div>
+    </div>
+    <div class="news-source">
+      Source: <a href="https://express-press-release.net/news/2026/11/13/1782251" target="_blank" rel="noopener">Express Press Release — Structured Cabling Market 2026</a> |
+      <a href="https://www.openpr.com/news/4692268/structured-cabling-market-to-reach-usd-21-3-billion-by-2036" target="_blank" rel="noopener">OpenPR — Structured Cabling Market</a>
+    </div>
+  </div>
+
+  <!-- ===== NEWS ITEM 5 ===== -->
+  <div class="news-item">
+    <div class="news-num">05</div>
+    <div class="news-tags">
+      <span class="news-tag">VIETNAM</span>
+      <span class="news-tag">ICT</span>
+      <span class="news-tag">DIGITAL INFRASTRUCTURE</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Chính Phủ Việt Nam Đầu Tư $5 Tỷ USD Vào Hạ Tầng Số: Cơ Hội Lớn Cho ELV/ICT</div>
+      <div class="news-body">
+        Việt Nam công bố kế hoạch đầu tư $5 tỷ USD vào hạ tầng kỹ thuật số trong giai đoạn 2026-2030, bao gồm: mở rộng mạng lưới data center quốc gia, triển khai hạ tầng AI cloud, nâng cấp băng thông internet backbone, và xây dựng smart city tại 5 thành phố lớn. Đây là một trong những kế hoạch đầu tư hạ tầng số lớn nhất Đông Nam Á theo GDP.
+        <br><br>
+        Các mục tiêu cụ thể 2030: <strong style="color:var(--cyan)">100% chính phủ điện tử, 10 data center AI quốc gia, 5G phủ 95% dân số đô thị</strong>, và hạ tầng smart city tích hợp cho Hà Nội, TP.HCM, Đà Nẵng, Hải Phòng và Cần Thơ.
+      </div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Vietnam Government Commits $5B to Digital Infrastructure: Major Opportunity for ELV/ICT Sector</div>
+      <div class="news-body">
+        Vietnam announced a $5 billion digital infrastructure investment plan for 2026–2030, encompassing: expansion of the national data center network, deployment of AI cloud infrastructure, backbone internet bandwidth upgrades, and smart city development across 5 major cities. This ranks among Southeast Asia's largest digital infrastructure investments by GDP share.
+        <br><br>
+        Key 2030 targets: <strong style="color:var(--cyan)">100% e-government, 10 national AI data centers, 5G covering 95% of urban population</strong>, and integrated smart city infrastructure for Hanoi, Ho Chi Minh City, Da Nang, Hai Phong, and Can Tho.
+      </div>
+    </div>
+
+    <div class="schema-box">
+      <div class="schema-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — VIETNAM DIGITAL INFRASTRUCTURE ROADMAP 2026-2030</div>
+      <div class="schema-diagram">
+<span class="schema-cyan">         VIETNAM $5B DIGITAL INFRASTRUCTURE INVESTMENT MAP</span>
+
+ ┌─────────────────────────────────────────────────────────────┐
+ │                NATIONAL AI CLOUD BACKBONE                   │
+ │        [Hanoi DC] ══════ [HCM DC] ══════ [Danang DC]        │
+ └───────────────────────────────────┬─────────────────────────┘
+                                     │
+        ┌────────────────────────────┼────────────────────────┐
+        ▼                            ▼                        ▼
+ ┌─────────────┐           ┌─────────────────┐       ┌───────────────┐
+ │ SMART CITY  │           │   E-GOVERNMENT  │       │  5G INFRA     │
+ │ ● Hanoi     │           │ ● Digital ID    │       │ ● 95% urban   │
+ │ ● HCM City  │           │ ● Online svcs   │       │ ● IoT sensors │
+ │ ● Da Nang   │           │ ● Tax/customs   │       │ ● V2X traffic │
+ │ ● Hai Phong │           │ ● Court/land    │       │ ● Smart grid  │
+ │ ● Can Tho   │           └─────────────────┘       └───────────────┘
+ └─────────────┘
+       │
+       ▼
+<span class="schema-cyan"> ELV/ICT OPPORTUNITY: BMS · Access Control · CCTV · AV · Fire · Cabling</span></div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label vi-content">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN ELV/ICT/AV VIỆT NAM</div>
+      <div class="why-label en-content">WHY THIS MATTERS FOR VIETNAM ELV/ICT/AV PROJECTS</div>
+      <div class="why-text vi-content">
+        Khoản đầu tư $5 tỷ USD mở ra cơ hội thị trường khổng lồ cho ngành ELV/ICT/AV tại Việt Nam. Mỗi data center, smart city hub, và cơ quan chính phủ điện tử đều cần hệ thống ELV đầy đủ: cáp cấu trúc, an ninh, kiểm soát ra vào, BMS, hệ thống AV và phòng cháy. Nhà tư vấn ELV cần định vị và chuẩn bị năng lực để tham gia vào làn sóng đầu tư hạ tầng số lớn nhất lịch sử Việt Nam.
+      </div>
+      <div class="why-text en-content">
+        The $5 billion investment opens a massive market opportunity for Vietnam's ELV/ICT/AV industry. Every data center, smart city hub, and e-government facility requires a complete ELV system: structured cabling, security, access control, BMS, AV systems, and fire protection. ELV consultants must position and prepare their capabilities to participate in Vietnam's largest digital infrastructure investment wave in history.
+      </div>
+    </div>
+    <div class="news-source">
+      Source: <a href="https://gradion.com/en/blog/vietnam-digital-infrastructure-investment-in-2026" target="_blank" rel="noopener">Gradion — Vietnam $5B Digital Infrastructure</a> |
+      <a href="https://e.vnexpress.net/news/tech/vietnam-innovation/vietnam-urged-to-embrace-smart-infrastructure-to-sustain-manufacturing-growth-5139670.html" target="_blank" rel="noopener">VnExpress International</a>
+    </div>
+  </div>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <h3 class="vi-content">CẦN TƯ VẤN HỆ THỐNG ELV/ICT/AV?</h3>
+    <h3 class="en-content">NEED ELV/ICT/AV SYSTEM CONSULTING?</h3>
+    <p class="vi-content">Paul Le cung cấp dịch vụ tư vấn, thiết kế và lập dự toán hệ thống ELV, ICT, AV cho các dự án thương mại, công nghiệp và dân dụng tại Việt Nam.</p>
+    <p class="en-content">Paul Le provides consulting, design, and cost estimation services for ELV, ICT, and AV systems for commercial, industrial, and residential projects in Vietnam.</p>
+    <a href="https://elvconsultant.com/#contact" class="cta-btn">LIÊN HỆ TƯ VẤN / CONTACT →</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <span class="footer-domain">elvconsultant.com</span>
+      <div class="footer-copy" style="margin-top:.4rem">© 2026 Paul Le Consultant — ELV · ICT · AV Design Director</div>
+    </div>
+    <div class="footer-links">
+      <a href="/blog/">Blog</a>
+      <a href="/#services">Services</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://facebook.com/Elvconsultant.com" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://twitter.com/PLELVCONSULTANT" target="_blank" rel="noopener">X / Twitter</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
