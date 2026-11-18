@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-18",
+  "slug": "diamond-controls-va-honeywell-webs-niagara",
+  "title_vi": "DCM 9000 và HON-9000",
+  "title_en": "DCM 9000 versus HON-9000",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-18-diamond-controls-va-honeywell-webs-niagara.html",
+  "x_post": "DCM 9000 and HON-9000: same Niagara 4, same i.MX8M+, 2 GB RAM, 2 x RS-485.\n\nThe real difference sits below:\n• DDC: DCM-8446 (MS/TP or Modbus) vs Spyder/Stryker (MS/TP or LON)\n• Tools: APM vs Spyder Tool\n• Own-brand gear\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "DCM 9000 của Mitsubishi Electric và HON-9000 của Honeywell cùng chạy Niagara 4, cùng CPU i.MX8M+, 2 GB RAM, 2 cổng RS-485. So controller với controller gần như hòa.\n\nKhác biệt thật nằm dưới tầng Niagara:\n1. DDC hiện trường: DCM-8446 (22 điểm, BACnet MS/TP hoặc Modbus RTU trên cùng cổng) so với Spyder, Stryker (BACnet MS/TP hoặc LON)\n2. DDC IP: DCM-8044-D (BACnet IP, Modbus TCP, BACnet router) so với CIPer Model 10 chạy Niagara\n3. Công cụ lập trình: APM ngay trong Niagara 4 so với Spyder Tool, Stryker Tool\n4. Thiết bị cùng hãng: VRF, thang máy, PLC, biến tần Mitsubishi và ICONICS GENESIS; bên Honeywell là Niagara Analytics và Enterprise Security\n\nChọn hãng theo thiết bị chiếm nhiều điểm nhất trong tòa nhà. Dù chọn bên nào, ghi rõ model, phiên bản Niagara tối thiểu và yêu cầu NiCS mở trong hồ sơ mời thầu.\n\nSơ đồ nguyên lý và bảng so sánh 10 tiêu chí:\nhttps://elvconsultant.com/blog/bms/2026-11-18-diamond-controls-va-honeywell-webs-niagara.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #Niagara4 #MitsubishiElectric #DiamondControls #BACnet"
+ },
+ {
   "date": "2026-11-17",
   "slug": "dcm-8446-io-6020-point-list-pau",
   "title_vi": "Point list PAU 30 điểm",
