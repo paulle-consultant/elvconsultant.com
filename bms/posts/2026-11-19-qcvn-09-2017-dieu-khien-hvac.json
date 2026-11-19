@@ -1,0 +1,124 @@
+{
+ "date": "2026-11-19",
+ "slug": "qcvn-09-2017-dieu-khien-hvac",
+ "pillar_vi": "Năng lượng & pháp lý",
+ "pillar_en": "Energy & compliance",
+ "title_vi": "QCVN 09:2017 và điều khiển HVAC",
+ "title_en": "QCVN 09:2017 and HVAC controls",
+ "lead_vi": "QCVN 09:2017/BXD áp dụng cho công trình từ 2.500 m² và đặt ba yêu cầu điều khiển cho hệ HVAC: quạt trên 0,56 kW, thiết bị từ 3,7 kW và thu hồi nhiệt tối thiểu 50%. Bài này chuyển từng điều khoản thành điểm IO và logic trên Diamond Controls.",
+ "lead_en": "QCVN 09:2017/BXD applies to buildings from 2,500 m² and sets three control requirements for HVAC: fans above 0.56 kW, equipment from 3.7 kW and at least 50% energy recovery. This post turns each clause into IO points and logic on Diamond Controls.",
+ "tags": [
+  "QCVN 09:2017/BXD",
+  "QCVN 04-3:2026/BXD",
+  "HVAC",
+  "Niagara 4",
+  "DCM 9000",
+  "DCM-8446",
+  "Thu hồi nhiệt",
+  "Hiệu quả năng lượng"
+ ],
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1765218933298-dc55fdfb517a?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Đường ống và thiết bị cơ điện trong phòng máy",
+  "credit": "Lionel SEE",
+  "credit_url": "https://unsplash.com/photos/industrial-pipes-and-machinery-in-a-factory-18CHs5JonWQ"
+ },
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 640\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sơ đồ nguyên lý BMS Diamond Controls đáp ứng các điều khoản điều khiển HVAC của QCVN 09:2017/BXD: quạt trên 0,56 kW, chiller bơm tháp giải nhiệt từ 3,7 kW, thu hồi nhiệt 50%\" font-family=\"'Maison Sans',system-ui,sans-serif\"><style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.fw{stroke:#B5AC9C;stroke-width:1.2;fill:none;stroke-dasharray:5 4}.p{fill:#C9A96A;font-size:12px}.bg{fill:#0C0B09}</style><path class=\"ln\" d=\"M165 120V200M480 120V200M795 120V200\"/><path class=\"fw\" d=\"M165 340V420M480 340V420M795 340V420\"/><text class=\"k\" x=\"20\" y=\"28\">QUẢN LÝ · NIAGARA 4</text><rect class=\"b\" x=\"20\" y=\"40\" width=\"920\" height=\"80\"/><text class=\"t\" x=\"36\" y=\"68\">DCM 9000 · Niagara 4 station</text><text class=\"s\" x=\"36\" y=\"92\">Lịch vận hành, sequence chiller, trend kW và nhiệt độ, báo cáo tuân thủ QCVN 09:2017</text><rect class=\"bg\" x=\"128\" y=\"154\" width=\"73\" height=\"17\"/><text class=\"p\" x=\"165\" y=\"166\" text-anchor=\"middle\">BACnet/IP</text><rect class=\"bg\" x=\"433\" y=\"154\" width=\"94\" height=\"17\"/><text class=\"p\" x=\"480\" y=\"166\" text-anchor=\"middle\">BACnet MS/TP</text><rect class=\"bg\" x=\"748\" y=\"154\" width=\"94\" height=\"17\"/><text class=\"p\" x=\"795\" y=\"166\" text-anchor=\"middle\">BACnet MS/TP</text><text class=\"k\" x=\"20\" y=\"192\">ĐIỀU KHIỂN · DDC</text><rect class=\"b\" x=\"20\" y=\"200\" width=\"290\" height=\"140\"/><text class=\"t\" x=\"36\" y=\"228\">Mục 2.2.2: quạt &gt; 0,56 kW</text><text class=\"s\" x=\"36\" y=\"252\">DCM-8044-D tại tủ AHU</text><text class=\"s\" x=\"36\" y=\"274\">DO start/stop theo lịch Niagara</text><text class=\"s\" x=\"36\" y=\"296\">DI trạng thái, DI lỗi biến tần</text><text class=\"s\" x=\"36\" y=\"318\">UI nhiệt độ gió cấp, gió hồi</text><rect class=\"b\" x=\"335\" y=\"200\" width=\"290\" height=\"140\"/><text class=\"t\" x=\"351\" y=\"228\">Mục 2.2.3: thiết bị ≥ 3,7 kW</text><text class=\"s\" x=\"351\" y=\"252\">DCM-8446 tại phòng máy chiller</text><text class=\"s\" x=\"351\" y=\"274\">AO 0–10 V tốc độ bơm, quạt tháp</text><text class=\"s\" x=\"351\" y=\"296\">UI chênh áp, nhiệt độ nước</text><text class=\"s\" x=\"351\" y=\"318\">DO chạy/dừng theo tải</text><rect class=\"b\" x=\"650\" y=\"200\" width=\"290\" height=\"140\"/><text class=\"t\" x=\"666\" y=\"228\">Mục 2.2.3: thu hồi nhiệt 50%</text><text class=\"s\" x=\"666\" y=\"252\">IO-6020-485 cạnh ERV</text><text class=\"s\" x=\"666\" y=\"274\">6 UI: T, RH gió ngoài, hồi, cấp</text><text class=\"s\" x=\"666\" y=\"296\">Niagara tính enthalpy, hiệu suất</text><text class=\"s\" x=\"666\" y=\"318\">Báo động khi dưới 50%</text><rect class=\"bg\" x=\"90\" y=\"374\" width=\"150\" height=\"17\"/><text class=\"p\" x=\"165\" y=\"386\" text-anchor=\"middle\">DO / DI · UI NTC 10K</text><rect class=\"bg\" x=\"398\" y=\"374\" width=\"164\" height=\"17\"/><text class=\"p\" x=\"480\" y=\"386\" text-anchor=\"middle\">AO 0–10 V · Modbus RTU</text><rect class=\"bg\" x=\"724\" y=\"374\" width=\"143\" height=\"17\"/><text class=\"p\" x=\"795\" y=\"386\" text-anchor=\"middle\">UI 4–20 mA · 0–10 V</text><text class=\"k\" x=\"20\" y=\"412\">HIỆN TRƯỜNG</text><rect class=\"b2\" x=\"20\" y=\"420\" width=\"290\" height=\"110\"/><text class=\"t\" x=\"36\" y=\"448\">AHU, quạt cấp, quạt hút</text><text class=\"s\" x=\"36\" y=\"472\">Contactor, biến tần quạt</text><text class=\"s\" x=\"36\" y=\"494\">Cảm biến nhiệt độ ống gió</text><text class=\"s\" x=\"36\" y=\"516\">Trừ quạt chạy liên tục</text><rect class=\"b2\" x=\"335\" y=\"420\" width=\"290\" height=\"110\"/><text class=\"t\" x=\"351\" y=\"448\">Chiller, bơm, tháp giải nhiệt</text><text class=\"s\" x=\"351\" y=\"472\">Biến tần bơm, quạt tháp</text><text class=\"s\" x=\"351\" y=\"494\">Cảm biến chênh áp, nhiệt độ</text><text class=\"s\" x=\"351\" y=\"516\">Mực nước bể tháp</text><rect class=\"b2\" x=\"650\" y=\"420\" width=\"290\" height=\"110\"/><text class=\"t\" x=\"666\" y=\"448\">Bộ thu hồi nhiệt (ERV)</text><text class=\"s\" x=\"666\" y=\"472\">3 cảm biến nhiệt độ + độ ẩm</text><text class=\"s\" x=\"666\" y=\"494\">Trạng thái quạt, bánh xe</text><text class=\"s\" x=\"666\" y=\"516\">Lọc gió: công tắc chênh áp</text><text class=\"s\" x=\"20\" y=\"580\">Điều khoản theo bản dịch QCVN 09:2017/BXD của VGBC. QCVN 04-3:2026/BXD hiệu lực từ 01/02/2027.</text><text class=\"s\" x=\"20\" y=\"604\">Clauses per the VGBC translation of QCVN 09:2017/BXD. QCVN 04-3:2026/BXD takes effect 1 Feb 2027.</text></svg>",
+  "caption_vi": "SĐNL: mỗi điều khoản HVAC của QCVN 09:2017/BXD ứng với một nhóm DDC và điểm IO; DCM 9000 chạy lịch, sequence và báo cáo.",
+  "caption_en": "Schematic: each HVAC clause of QCVN 09:2017/BXD maps to a DDC group and its IO points; the DCM 9000 runs schedules, sequences and reports."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>Thẩm định thiết kế hỏi \"công trình đã đáp ứng QCVN 09:2017/BXD chưa\", và phần HVAC thường chỉ được trả lời bằng bảng COP của chiller. Bảng COP đúng nhưng chưa đủ. Mục 2.2 của quy chuẩn còn ba yêu cầu về điều khiển, và cả ba đều cần một hệ điều khiển tự động làm được việc thật sau khi bàn giao.</p><p>Quy chuẩn áp dụng cho văn phòng, khách sạn, bệnh viện, trường học, thương mại và nhà ở có tổng diện tích sàn từ 2.500 m². Hồ sơ BMS của các công trình này cần chỉ ra điểm nào, logic nào phục vụ điều khoản nào. Nếu không, đội vận hành nhận một hệ thống có đủ thiết bị nhưng không chứng minh được tuân thủ.</p>",
+   "en": "<p>Design review asks whether the building meets QCVN 09:2017/BXD, and the HVAC answer is often just the chiller COP table. The COP table is necessary but not enough. Section 2.2 of the code has three control requirements, and all three need an automatic control system that actually works after handover.</p><p>The code covers offices, hotels, hospitals, schools, commercial and residential buildings with a gross floor area of 2,500 m² or more. The BMS documents for these buildings should show which point and which logic serves which clause. Otherwise operations inherits a system with all the hardware and no way to show compliance.</p>"
+  },
+  {
+   "h_vi": "Giải pháp",
+   "h_en": "Solution",
+   "vi": "<p>Đọc mục 2.2 (theo bản dịch tiếng Anh của Hội đồng Công trình xanh Việt Nam) và gán mỗi yêu cầu cho một nhóm DDC:</p><ul><li><strong>2.2.2: quạt có động cơ trên 0,56 kW</strong> phải có điều khiển tự động tắt quạt khi không cần, trừ quạt của hệ chạy liên tục. Trên Diamond Controls: DCM-8044-D tại tủ AHU, 1 DO start/stop chạy theo lịch trong Niagara 4, 1 DI trạng thái để xác nhận quạt đã dừng.</li><li><strong>2.2.3: chiller, hệ gió nóng, quạt tháp giải nhiệt và bơm từ 5 HP (3,7 kW)</strong> phải có thiết bị tự động điều chỉnh công suất và lưu lượng theo tải lạnh và mực nước. Trên Diamond Controls: DCM-8446 tại phòng máy, AO 0–10 V xuất tốc độ cho biến tần bơm và quạt tháp, UI đọc chênh áp và nhiệt độ nước, DCM 9000 chạy sequence chiller theo tải.</li><li><strong>2.2.3: công trình điều hòa trung tâm</strong> phải có thu hồi enthalpy với hiệu suất không nhỏ hơn 50%. Trên Diamond Controls: IO-6020-485 đọc nhiệt độ và độ ẩm của gió ngoài, gió hồi, gió cấp; Niagara tính hiệu suất và báo động khi xuống dưới 50%.</li></ul><p>Quy chuẩn không gọi tên biến tần hay BMS. Nó yêu cầu chức năng. BMS là cách dễ kiểm chứng nhất vì có trend và log để trình khi kiểm tra.</p>",
+   "en": "<p>Read section 2.2 (per the English translation by the Vietnam Green Building Council) and assign each requirement to a DDC group:</p><ul><li><strong>2.2.2: fans with motors above 0.56 kW</strong> need automatic controls that turn them off when not needed, except fans in continuously operating systems. On Diamond Controls: a DCM-8044-D in the AHU panel, 1 DO start/stop driven by a Niagara 4 schedule, 1 DI status to confirm the fan stopped.</li><li><strong>2.2.3: chillers, hot air systems, cooling tower fans and pumps of 5 HP (3.7 kW) and above</strong> need automatic devices that adjust capacity and flow to the cooling load and water level. On Diamond Controls: a DCM-8446 in the plant room, AO 0–10 V speed signals to pump and tower fan drives, UI for differential pressure and water temperature, and the DCM 9000 running the chiller sequence by load.</li><li><strong>2.2.3: centrally air-conditioned buildings</strong> need enthalpy recovery with at least 50% efficiency. On Diamond Controls: an IO-6020-485 reads temperature and humidity of outdoor, return and supply air; Niagara calculates the efficiency and alarms below 50%.</li></ul><p>The code does not name drives or a BMS. It asks for the function. A BMS is the easiest way to prove it because trends and logs can be shown at inspection.</p>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<p><strong>Lịch quạt:</strong> đặt lịch trong station DCM 9000, không chỉ trong DDC. Khi cần đổi giờ làm việc, người vận hành sửa một chỗ cho cả tòa. DDC vẫn giữ logic an toàn tại chỗ (dừng quạt khi có tín hiệu báo cháy, khóa liên động biến tần) để chạy được khi mất mạng.</p><p><strong>Bơm và tháp giải nhiệt:</strong> DCM-8446 có 4 AO 12-bit, 0–10 V hoặc 4–20 mA, đủ cho 2 bơm nước lạnh và 2 quạt tháp. Thêm IO-6020-485 nếu cần 2 AO nữa. Biến tần có cổng Modbus RTU thì đọc thêm kW, dòng, lỗi qua cùng cổng RS-485 của DDC, không cần kéo thêm dây tín hiệu.</p><p><strong>Mực nước tháp:</strong> điều khoản 2.2.3 nhắc cả mực nước. Một UI đọc cảm biến mực 4–20 mA, hoặc DI phao, cho Niagara điều khiển van bù nước và báo động cạn.</p><p><strong>Hiệu suất thu hồi nhiệt:</strong> IO-6020-485 có đúng 6 UI cho 3 cặp nhiệt độ và độ ẩm. Hiệu suất enthalpy = (h gió ngoài − h gió cấp) / (h gió ngoài − h gió hồi). Chỉ lấy mẫu khi ERV đang chạy và chênh enthalpy đủ lớn, nếu không phép chia cho kết quả nhiễu.</p><p><strong>Quy chuẩn mới:</strong> Bộ Xây dựng đã ban hành QCVN 04-3:2026/BXD (Phần 3: công trình sử dụng năng lượng hiệu quả), hiệu lực từ 01/02/2027, bãi bỏ Thông tư 15/2017/TT-BXD. Dự án đã phê duyệt, hoặc có báo cáo nghiên cứu khả thi đã thẩm định hay đã nộp thẩm định trước ngày đó, tiếp tục theo QCVN 09:2017/BXD. Dự án mới nên đối chiếu điều khoản HVAC với toàn văn QCVN 04-3:2026 trước khi chốt point list.</p>",
+   "en": "<p><strong>Fan schedules:</strong> keep schedules in the DCM 9000 station, not only in the DDC. When working hours change, operators edit one place for the whole building. The DDC still holds local safety logic (fan stop on fire alarm, drive interlocks) so it runs if the network drops.</p><p><strong>Pumps and cooling towers:</strong> the DCM-8446 has 4 AO, 12-bit, 0–10 V or 4–20 mA, enough for 2 chilled water pumps and 2 tower fans. Add an IO-6020-485 for 2 more AO. Drives with Modbus RTU can report kW, current and faults on the same RS-485 port of the DDC, with no extra signal wiring.</p><p><strong>Tower water level:</strong> clause 2.2.3 also mentions water level. One UI on a 4–20 mA level sensor, or a DI float switch, lets Niagara run the make-up valve and raise a low-level alarm.</p><p><strong>Recovery efficiency:</strong> the IO-6020-485 has exactly 6 UI for 3 temperature and humidity pairs. Enthalpy efficiency = (h outdoor − h supply) / (h outdoor − h return). Only sample while the ERV runs and the enthalpy difference is large enough, otherwise the division gives noise.</p><p><strong>New code:</strong> the Ministry of Construction has issued QCVN 04-3:2026/BXD (Part 3: energy efficient buildings), effective 1 February 2027, repealing Circular 15/2017/TT-BXD. Projects approved, or whose feasibility study was appraised or submitted for appraisal before that date, stay on QCVN 09:2017/BXD. New projects should check the HVAC clauses against the full text of QCVN 04-3:2026 before freezing the point list.</p>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<ul><li><strong>Văn phòng, khách sạn từ 2.500 m² dùng chiller:</strong> DCM 9000 cùng DCM-8446 tại phòng máy và DCM-8044-D tại các tủ AHU, point list ghi rõ cột \"điều khoản QCVN\".</li><li><strong>Tòa dùng VRF và AHU gió tươi:</strong> 2.2.3 về chiller ít liên quan, nhưng quạt AHU gió tươi trên 0,56 kW và ERV vẫn cần lịch và giám sát hiệu suất.</li><li><strong>Hồ sơ thẩm định và nghiệm thu:</strong> xuất trend lịch quạt, tốc độ bơm và hiệu suất ERV từ Niagara làm bằng chứng vận hành.</li><li><strong>Dự án nộp thẩm định sau 01/02/2027:</strong> giữ kiến trúc này, cập nhật bảng điều khoản theo QCVN 04-3:2026/BXD.</li></ul>",
+   "en": "<ul><li><strong>Offices and hotels from 2,500 m² with chillers:</strong> a DCM 9000 with a DCM-8446 in the plant room and DCM-8044-D units in AHU panels, with a \"QCVN clause\" column in the point list.</li><li><strong>VRF buildings with fresh air AHUs:</strong> the chiller part of 2.2.3 matters less, but fresh air fans above 0.56 kW and the ERV still need schedules and efficiency monitoring.</li><li><strong>Design review and commissioning:</strong> export Niagara trends of fan schedules, pump speed and ERV efficiency as operating evidence.</li><li><strong>Projects submitted after 1 February 2027:</strong> keep this architecture and update the clause table to QCVN 04-3:2026/BXD.</li></ul>"
+  }
+ ],
+ "table": {
+  "caption_vi": "Điều khoản HVAC QCVN 09:2017/BXD và điểm BMS tương ứng",
+  "caption_en": "QCVN 09:2017/BXD HVAC clauses and matching BMS points",
+  "head": [
+   "Điều khoản / Clause",
+   "Yêu cầu / Requirement",
+   "Chức năng BMS / BMS function",
+   "Điểm IO / IO points"
+  ],
+  "rows": [
+   [
+    "2.2.2",
+    "Quạt > 0,56 kW tự động tắt khi không cần",
+    "Lịch Niagara, start/stop",
+    "1 DO, 1 DI trạng thái (DCM-8044-D)"
+   ],
+   [
+    "2.2.3",
+    "Chiller ≥ 3,7 kW điều chỉnh công suất theo tải",
+    "Sequence chiller theo tải lạnh",
+    "DO enable, UI nhiệt độ nước cấp/hồi (DCM-8446)"
+   ],
+   [
+    "2.2.3",
+    "Bơm ≥ 3,7 kW điều chỉnh lưu lượng",
+    "Biến tần theo chênh áp",
+    "1 AO 0–10 V, 1 UI chênh áp, Modbus RTU kW"
+   ],
+   [
+    "2.2.3",
+    "Quạt tháp ≥ 3,7 kW, mực nước",
+    "Tốc độ quạt theo nhiệt độ nước giải nhiệt",
+    "1 AO, 1 UI nhiệt độ, 1 UI/DI mực nước"
+   ],
+   [
+    "2.2.3",
+    "Thu hồi enthalpy ≥ 50%",
+    "Tính hiệu suất, báo động",
+    "6 UI T/RH (IO-6020-485)"
+   ],
+   [
+    "2.2.3",
+    "Quạt hệ ≥ 3,7 kW: FEG &gt; 67 (AMCA 205)",
+    "Không phải chức năng BMS, kiểm tra ở hồ sơ thiết bị",
+    "Không"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "QCVN 09:2017/BXD, National Technical Regulation on Energy Efficiency Buildings (English translation, Vietnam Green Building Council)",
+   "url": "https://policy.asiapacificenergy.org/sites/default/files/National%20Technical%20Regulation%20on%20Energy%20Efficiency%20Buildings.pdf"
+  },
+  {
+   "title": "Bộ Xây dựng, Thông tư ban hành QCVN 04-3:2026/BXD (Công trình xây dựng sử dụng năng lượng hiệu quả)",
+   "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/7/61-bxd.signed.pdf"
+  },
+  {
+   "title": "QCVN 04-3:2026/BXD, thông tin văn bản",
+   "url": "https://thuviennhadat.vn/van-ban-phap-luat-viet-nam/qcvn-04-3-2026-bxd-cong-trinh-dan-dung-phan-3-su-dung-nang-luong-hieu-qua-922443.html"
+  },
+  {
+   "title": "Mitsubishi Electric Asia, Diamond Controls catalogue (2023) and DCM-8044/DCM-8044-D with IO Modules (2024)"
+  }
+ ],
+ "x_post": "QCVN 09:2017 has 3 HVAC control clauses that BMS point lists often miss:\n\n• Fans >0.56 kW: auto off\n• Chillers, pumps, tower fans ≥3.7 kW: follow load\n• Enthalpy recovery ≥50%\n\nQCVN 04-3:2026 applies from 1 Feb 2027.\n\nFull schematic on the blog, link in bio.",
+ "fb_post": "QCVN 09:2017/BXD áp dụng cho công trình từ 2.500 m², và mục HVAC có 3 yêu cầu điều khiển mà point list BMS hay bỏ sót.\n\n1. Quạt có động cơ trên 0,56 kW phải tự động tắt khi không cần. Trên Diamond Controls: DO start/stop theo lịch Niagara 4, DI trạng thái xác nhận.\n2. Chiller, bơm, quạt tháp giải nhiệt từ 3,7 kW phải tự điều chỉnh công suất và lưu lượng theo tải. DCM-8446 xuất AO 0–10 V cho biến tần, đọc chênh áp, nhiệt độ nước; DCM 9000 chạy sequence chiller.\n3. Công trình điều hòa trung tâm phải thu hồi enthalpy với hiệu suất từ 50%. IO-6020-485 đọc 6 UI nhiệt độ, độ ẩm; Niagara tính hiệu suất và báo động.\n\nLưu ý: QCVN 04-3:2026/BXD có hiệu lực từ 01/02/2027. Dự án đã thẩm định báo cáo nghiên cứu khả thi trước ngày đó vẫn theo QCVN 09:2017.\n\nSơ đồ nguyên lý và bảng điều khoản đối chiếu điểm IO:\nhttps://elvconsultant.com/blog/bms/2026-11-19-qcvn-09-2017-dieu-khien-hvac.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #QCVN09 #HVAC #MitsubishiElectric #DiamondControls"
+}

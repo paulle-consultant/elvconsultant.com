@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-19",
+  "slug": "qcvn-09-2017-dieu-khien-hvac",
+  "title_vi": "QCVN 09:2017 và điều khiển HVAC",
+  "title_en": "QCVN 09:2017 and HVAC controls",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-19-qcvn-09-2017-dieu-khien-hvac.html",
+  "x_post": "QCVN 09:2017 has 3 HVAC control clauses that BMS point lists often miss:\n\n• Fans >0.56 kW: auto off\n• Chillers, pumps, tower fans ≥3.7 kW: follow load\n• Enthalpy recovery ≥50%\n\nQCVN 04-3:2026 applies from 1 Feb 2027.\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "QCVN 09:2017/BXD áp dụng cho công trình từ 2.500 m², và mục HVAC có 3 yêu cầu điều khiển mà point list BMS hay bỏ sót.\n\n1. Quạt có động cơ trên 0,56 kW phải tự động tắt khi không cần. Trên Diamond Controls: DO start/stop theo lịch Niagara 4, DI trạng thái xác nhận.\n2. Chiller, bơm, quạt tháp giải nhiệt từ 3,7 kW phải tự điều chỉnh công suất và lưu lượng theo tải. DCM-8446 xuất AO 0–10 V cho biến tần, đọc chênh áp, nhiệt độ nước; DCM 9000 chạy sequence chiller.\n3. Công trình điều hòa trung tâm phải thu hồi enthalpy với hiệu suất từ 50%. IO-6020-485 đọc 6 UI nhiệt độ, độ ẩm; Niagara tính hiệu suất và báo động.\n\nLưu ý: QCVN 04-3:2026/BXD có hiệu lực từ 01/02/2027. Dự án đã thẩm định báo cáo nghiên cứu khả thi trước ngày đó vẫn theo QCVN 09:2017.\n\nSơ đồ nguyên lý và bảng điều khoản đối chiếu điểm IO:\nhttps://elvconsultant.com/blog/bms/2026-11-19-qcvn-09-2017-dieu-khien-hvac.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #QCVN09 #HVAC #MitsubishiElectric #DiamondControls"
+ },
+ {
   "date": "2026-11-18",
   "slug": "diamond-controls-va-honeywell-webs-niagara",
   "title_vi": "DCM 9000 và HON-9000",

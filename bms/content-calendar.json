@@ -117,7 +117,8 @@
    "pillar": "Năng lượng & pháp lý",
    "pillar_en": "Energy & compliance",
    "topic": "QCVN 09:2017/BXD và yêu cầu điều khiển HVAC",
-   "status": "planned"
+   "status": "published",
+   "slug": "qcvn-09-2017-dieu-khien-hvac"
   },
   {
    "date": "2026-11-20",
