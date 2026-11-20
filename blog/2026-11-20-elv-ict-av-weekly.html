@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bản Tin ELV/ICT/AV Tuần 47 — 20/11/2026 | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 47/2026: Cisco Webex Agentic AI · Axis OS 13 Cybersecurity · Crestron CEDIA Q4 · Digital Realty Singapore DRIL · Cisco Price Hike — song ngữ Việt–Anh.">
+  <meta name="keywords" content="ELV news, ICT AV Vietnam, Cisco Webex AI, Axis OS 13, Crestron CEDIA, smart building, Paul Le Consultant">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-20-elv-ict-av-weekly.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bản Tin ELV/ICT/AV Tuần 47 — 20/11/2026">
+  <meta property="og:description" content="Cisco Webex Agentic AI · Axis OS 13 Cybersecurity · Crestron CEDIA Q4 · Digital Realty Singapore · Cisco Price Hike">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1685720543547-cc4873188c75?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:url" content="https://elvconsultant.com/blog/2026-11-20-elv-ict-av-weekly.html">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --bg:#07111F;
+      --card-bg:#101E30;
+      --card-border:#1E3550;
+      --cyan:#00C8E0;
+      --cyan-dim:rgba(0,200,224,0.10);
+      --cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;
+      --white:#F0F4F8;
+      --steel:#4A6280;
+      --navy:#1B2A4A;
+      --navy-deep:#0D1B35;
+      --grid-line:rgba(0,200,224,0.08);
+    }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family:'Inter',sans-serif;
+      background:var(--bg);
+      color:var(--white);
+      overflow-x:hidden;
+      line-height:1.7;
+    }
+
+    /* GRID BG */
+    .grid-bg {
+      position:fixed; top:0; left:0; width:100%; height:100%;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size:48px 48px;
+      pointer-events:none; z-index:0;
+    }
+
+    /* NAV */
+    nav {
+      position:sticky; top:0; z-index:100;
+      background:rgba(7,17,31,0.95);
+      border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      padding:0 2rem;
+      display:flex; align-items:center; justify-content:space-between; height:64px;
+    }
+    .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+    .logo-text { font-family:'Orbitron',sans-serif; font-size:14px; font-weight:700; color:var(--white); letter-spacing:1.5px; }
+    .logo-sub { font-size:9px; color:var(--cyan); letter-spacing:2px; display:block; margin-top:-2px; }
+    .nav-links { display:flex; gap:1.5rem; list-style:none; }
+    .nav-links a { color:var(--silver); font-size:13px; font-weight:500; text-decoration:none; letter-spacing:0.5px; transition:color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color:var(--cyan); }
+    .nav-cta {
+      background:transparent; border:1px solid var(--cyan); color:var(--cyan);
+      padding:8px 20px; border-radius:4px; font-size:13px; font-weight:500;
+      cursor:pointer; font-family:'Inter',sans-serif; letter-spacing:0.5px;
+      transition:all 0.2s; text-decoration:none;
+    }
+    .nav-cta:hover { background:var(--cyan); color:var(--bg); }
+
+    /* LANG BAR */
+    .lang-bar {
+      position:relative; z-index:2;
+      background:var(--navy-deep); border-bottom:1px solid var(--card-border);
+      padding:0.5rem 2rem; display:flex; align-items:center; gap:0.5rem;
+      justify-content:flex-end;
+    }
+    .lang-label { font-size:11px; color:var(--steel); letter-spacing:1px; margin-right:0.25rem; }
+    .lang-btn {
+      background:transparent; border:1px solid var(--card-border); color:var(--silver);
+      padding:4px 14px; border-radius:3px; font-size:11px; font-weight:600;
+      cursor:pointer; letter-spacing:1px; font-family:'Orbitron',sans-serif;
+      transition:all 0.2s;
+    }
+    .lang-btn.active { background:var(--cyan); color:var(--bg); border-color:var(--cyan); }
+    .lang-btn:hover:not(.active) { border-color:var(--cyan); color:var(--cyan); }
+
+    /* ARTICLE HERO */
+    .article-hero {
+      position:relative; z-index:1;
+      height:clamp(260px, 38vw, 520px);
+      overflow:hidden;
+    }
+    .article-hero img {
+      width:100%; height:100%; object-fit:cover;
+      filter:brightness(0.6) saturate(0.85);
+    }
+    .article-hero-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(
+        135deg,
+        rgba(7,17,31,0.75) 0%,
+        rgba(7,17,31,0.4) 50%,
+        rgba(7,17,31,0.85) 100%
+      );
+    }
+    .article-hero-content {
+      position:absolute; bottom:0; left:0; right:0;
+      padding:2.5rem 2rem 2rem;
+    }
+    .hero-eyebrow {
+      font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:4px;
+      color:var(--cyan); margin-bottom:0.75rem;
+      display:flex; align-items:center; gap:10px;
+    }
+    .hero-eyebrow::before {
+      content:''; width:28px; height:1px; background:var(--cyan); flex-shrink:0;
+    }
+    .article-hero-content h1 {
+      font-family:'Orbitron',sans-serif;
+      font-size:clamp(1.3rem, 3.2vw, 2.1rem);
+      font-weight:900; line-height:1.15;
+      color:var(--white); max-width:820px;
+      text-shadow:0 2px 16px rgba(0,0,0,0.6);
+    }
+    .hero-meta {
+      display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem;
+      font-size:11px; color:var(--silver); letter-spacing:1px;
+    }
+    .hero-meta span { display:flex; align-items:center; gap:5px; }
+    .hero-meta .dot { color:var(--cyan); }
+
+    /* MAIN */
+    main {
+      position:relative; z-index:1;
+      max-width:900px; margin:0 auto;
+      padding:3rem 2rem 4rem;
+    }
+    .week-intro {
+      background:var(--card-bg); border:1px solid var(--card-border);
+      border-left:3px solid var(--cyan);
+      border-radius:0 6px 6px 0; padding:1.25rem 1.5rem;
+      margin-bottom:2.5rem;
+    }
+    .week-intro p { font-size:13.5px; color:var(--silver); line-height:1.75; }
+    .week-intro strong { color:var(--cyan); }
+
+    /* NEWS ITEM CARD */
+    .news-item {
+      background:var(--card-bg); border:1px solid var(--card-border);
+      border-radius:8px; overflow:hidden; margin-bottom:2rem;
+      transition:border-color 0.3s, box-shadow 0.3s;
+    }
+    .news-item:hover {
+      border-color:rgba(0,200,224,0.4);
+      box-shadow:0 4px 32px rgba(0,200,224,0.08);
+    }
+    .news-item-header {
+      padding:1.5rem 1.75rem 1rem;
+      border-bottom:1px solid var(--card-border);
+      display:flex; align-items:flex-start; gap:1rem;
+    }
+    .news-num {
+      font-family:'Orbitron',sans-serif; font-size:11px; font-weight:700;
+      color:var(--cyan); background:var(--cyan-dim);
+      border:1px solid rgba(0,200,224,0.25);
+      width:36px; height:36px; border-radius:4px;
+      display:flex; align-items:center; justify-content:center;
+      flex-shrink:0; letter-spacing:1px;
+    }
+    .news-header-info { flex:1; }
+    .news-tags { display:flex; gap:0.4rem; flex-wrap:wrap; margin-bottom:0.6rem; }
+    .tag {
+      font-family:'Orbitron',sans-serif; font-size:8px; letter-spacing:1.5px; font-weight:700;
+      padding:3px 9px; border-radius:2px;
+      border:1px solid rgba(0,200,224,0.3); color:var(--cyan);
+      background:var(--cyan-dim);
+    }
+    .tag.tag-alt {
+      border-color:rgba(160,180,200,0.25); color:var(--silver);
+      background:rgba(160,180,200,0.06);
+    }
+    .news-title-vi {
+      font-size:clamp(15px,1.6vw,18px); font-weight:700;
+      color:var(--white); line-height:1.35;
+    }
+    .news-title-en {
+      font-size:clamp(14px,1.4vw,16px); font-weight:600;
+      color:var(--silver); line-height:1.35; font-style:italic;
+    }
+
+    /* NEWS BODY */
+    .news-body { padding:1.25rem 1.75rem 1.5rem; }
+    .vi-content p, .en-content p {
+      font-size:14px; color:var(--silver); line-height:1.8; margin-bottom:0.9rem;
+    }
+    .vi-content p:last-child, .en-content p:last-child { margin-bottom:0; }
+    .vi-content strong, .en-content strong { color:var(--white); font-weight:600; }
+
+    /* PRINCIPLE DIAGRAM */
+    .diagram-box {
+      background:var(--navy-deep); border:1px solid var(--card-border);
+      border-radius:6px; padding:1.25rem 1.5rem; margin:1.25rem 0;
+    }
+    .diagram-label {
+      font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:3px;
+      color:var(--cyan); margin-bottom:0.75rem;
+    }
+    .diagram-flow {
+      display:flex; align-items:center; gap:0.5rem;
+      flex-wrap:wrap; font-size:12px; color:var(--silver);
+    }
+    .d-node {
+      background:var(--card-bg); border:1px solid rgba(0,200,224,0.25);
+      border-radius:4px; padding:5px 10px;
+      font-family:'Orbitron',sans-serif; font-size:9px; color:var(--cyan);
+      letter-spacing:0.5px; white-space:nowrap;
+    }
+    .d-arrow { color:var(--steel); font-size:14px; flex-shrink:0; }
+    .d-layer {
+      display:flex; flex-direction:column; gap:4px; align-items:center;
+    }
+    .d-stack {
+      display:flex; flex-direction:column; gap:4px;
+    }
+
+    /* WHY BOX */
+    .why-box {
+      margin-top:1.25rem; padding:1rem 1.25rem;
+      background:rgba(0,200,224,0.06); border-radius:6px;
+      border-left:2px solid var(--cyan);
+    }
+    .why-label {
+      font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:2.5px;
+      color:var(--cyan); margin-bottom:0.5rem;
+    }
+    .why-vi, .why-en { font-size:13px; color:var(--silver); line-height:1.75; }
+    .why-vi strong, .why-en strong { color:var(--white); }
+
+    /* SOURCE LINK */
+    .source-link {
+      display:inline-flex; align-items:center; gap:5px;
+      font-size:11px; color:var(--steel); text-decoration:none;
+      border:1px solid var(--card-border); padding:4px 10px; border-radius:3px;
+      margin-top:1rem; transition:all 0.2s; letter-spacing:0.5px;
+    }
+    .source-link:hover { color:var(--cyan); border-color:var(--cyan); }
+
+    /* CTA BOX */
+    .cta-box {
+      position:relative; z-index:1;
+      background:var(--card-bg); border:1px solid var(--card-border);
+      border-top:2px solid var(--cyan);
+      border-radius:0 0 8px 8px; padding:2.5rem 2rem;
+      text-align:center; margin:2rem 0 3rem;
+    }
+    .cta-box .eyebrow {
+      font-family:'Orbitron',sans-serif; font-size:9px; letter-spacing:4px;
+      color:var(--cyan); margin-bottom:0.75rem;
+    }
+    .cta-box h3 {
+      font-family:'Orbitron',sans-serif;
+      font-size:clamp(1rem,2vw,1.4rem);
+      color:var(--white); margin-bottom:0.75rem;
+    }
+    .cta-box p { font-size:13.5px; color:var(--silver); line-height:1.75; margin-bottom:1.5rem; max-width:560px; margin-left:auto; margin-right:auto; }
+    .cta-btn {
+      display:inline-block; background:var(--cyan); color:var(--bg);
+      padding:12px 32px; border-radius:4px; text-decoration:none;
+      font-family:'Orbitron',sans-serif; font-size:11px; font-weight:700;
+      letter-spacing:1.5px; transition:all 0.2s;
+    }
+    .cta-btn:hover { background:white; transform:translateY(-2px); box-shadow:0 8px 24px var(--cyan-glow); }
+
+    /* BACK LINK */
+    .back-link {
+      display:inline-flex; align-items:center; gap:6px;
+      font-size:12px; color:var(--steel); text-decoration:none;
+      font-family:'Orbitron',sans-serif; letter-spacing:1px;
+      margin-bottom:2rem; transition:color 0.2s;
+    }
+    .back-link:hover { color:var(--cyan); }
+
+    /* FOOTER */
+    footer {
+      position:relative; z-index:1;
+      border-top:1px solid var(--card-border);
+      background:var(--navy-deep); padding:2.5rem 2rem;
+      text-align:center;
+    }
+    .footer-logo { font-family:'Orbitron',sans-serif; font-size:13px; color:var(--white); letter-spacing:2px; }
+    .footer-links { display:flex; gap:1.5rem; justify-content:center; margin:1rem 0 0.5rem; }
+    .footer-links a { font-size:12px; color:var(--steel); text-decoration:none; transition:color 0.2s; }
+    .footer-links a:hover { color:var(--cyan); }
+    .footer-copy { font-size:11px; color:var(--steel); margin-top:0.5rem; }
+
+    /* RESPONSIVE */
+    @media (max-width:768px) {
+      nav { padding:0 1rem; }
+      .nav-links { display:none; }
+      main { padding:2rem 1rem 3rem; }
+      .article-hero-content { padding:1.5rem 1rem 1.5rem; }
+      .news-item-header { padding:1.25rem 1.25rem 0.75rem; }
+      .news-body { padding:1rem 1.25rem 1.25rem; }
+      .lang-bar { padding:0.5rem 1rem; }
+      .diagram-flow { gap:0.3rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div>
+      <span class="logo-text">PAUL LE CONSULTANT</span>
+      <span class="logo-sub">AV · ICT · ELV DESIGN</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư vấn</a>
+</nav>
+
+<!-- LANGUAGE BAR -->
+<div class="lang-bar">
+  <span class="lang-label">NGÔN NGỮ / LANGUAGE:</span>
+  <button class="lang-btn" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- ARTICLE HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1685720543547-cc4873188c75?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Control room with electronic equipment — ELV ICT AV Weekly 20 Nov 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="hero-eyebrow">BẢN TIN TUẦN · WEEKLY BULLETIN</div>
+    <h1 class="vi-content">Cisco Webex Agentic AI · Axis OS 13 Bảo Mật · Crestron CEDIA Q4 · Digital Realty Singapore · Cisco Tăng Giá</h1>
+    <h1 class="en-content">Cisco Webex Agentic AI · Axis OS 13 Security · Crestron CEDIA Q4 · Digital Realty Singapore DRIL · Cisco Price Hike</h1>
+    <div class="hero-meta">
+      <span><span class="dot">▸</span> THỨ SÁU · 20 THÁNG 11, 2026</span>
+      <span><span class="dot">▸</span> TUẦN 47 / WEEK 47</span>
+      <span><span class="dot">▸</span> 5 TIN NỔI BẬT · TOP NEWS</span>
+      <span><span class="dot">▸</span> Paul Le Consultant</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main>
+  <a href="/blog/" class="back-link">← BLOG INDEX</a>
+
+  <!-- Week intro -->
+  <div class="week-intro vi-content">
+    <p>Bản tin <strong>Tuần 47 / 2026</strong> — 5 tin nổi bật từ các nhà sản xuất và thị trường trong tuần 17–20/11/2026. Cisco mở rộng AI agentic vào hệ thống cộng tác Webex, Axis Communications ra mắt AXIS OS 13 với bảo mật mạng thế hệ mới, Crestron giới thiệu dòng sản phẩm Q4 tại CEDIA Expo, Digital Realty mở Innovation Lab tại Singapore cho AI-ready infrastructure khu vực APAC, và Cisco thông báo tăng giá phần cứng + phần mềm từ tháng 11/2026.</p>
+  </div>
+  <div class="week-intro en-content">
+    <p><strong>Week 47 / 2026</strong> bulletin — 5 top stories from manufacturers and markets in the week of Nov 17–20, 2026. Cisco expands agentic AI into Webex collaboration, Axis Communications launches AXIS OS 13 for next-gen cybersecurity, Crestron previews Q4 products at CEDIA Expo, Digital Realty opens an Innovation Lab in Singapore for AI-ready APAC infrastructure, and Cisco announces hardware + software price increases effective November 2026.</p>
+  </div>
+
+  <!-- ═══ NEWS 1: CISCO WEBEX AGENTIC ═══ -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">01</div>
+      <div class="news-header-info">
+        <div class="news-tags">
+          <span class="tag">CISCO</span>
+          <span class="tag tag-alt">WEBEX</span>
+          <span class="tag tag-alt">AI AGENTIC</span>
+          <span class="tag tag-alt">UC/AV</span>
+        </div>
+        <div class="news-title-vi vi-content">Cisco Ra Mắt Trải Nghiệm Cộng Tác Agentic AI Mới Trong Nền Tảng Webex</div>
+        <div class="news-title-en en-content">Cisco Unveils New Agentic Collaboration Experiences in Webex Platform</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Cisco chính thức ra mắt loạt <strong>Agentic Collaboration Experiences</strong> trên nền tảng Webex — đánh dấu bước chuyển mình lớn từ UC truyền thống sang hệ sinh thái cộng tác có trí tuệ nhân tạo thực sự tự hành. Các AI agent mới có khả năng tham gia cuộc họp độc lập, tóm tắt nội dung, chuyển đổi hành động thành task được giao tự động, và tích hợp với các luồng công việc doanh nghiệp như CRM, ERP, hệ thống quản lý dự án.</p>
+        <p>Điểm đột phá: AI agents trong Webex có thể <strong>"nghe hiểu ngữ cảnh phòng họp"</strong>, phân biệt quyết định và hành động cụ thể, sau đó chủ động giao việc cho đúng người. Cisco cũng mở nền tảng để đối tác xây dựng agent tùy chỉnh thông qua Webex App Hub — mở ra kỷ nguyên phòng họp AV có AI thực sự làm việc cùng người dùng.</p>
+        <div class="diagram-box">
+          <div class="diagram-label">SƠ ĐỒ NGUYÊN LÝ: CISCO WEBEX AGENTIC AI WORKFLOW</div>
+          <div class="diagram-flow">
+            <div class="d-node">PHÒNG HỌP AV</div>
+            <div class="d-arrow">→</div>
+            <div class="d-node">WEBEX AI ENGINE</div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">MeetingAgent</div>
+              <div class="d-node">SummaryAgent</div>
+              <div class="d-node">TaskAgent</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">CRM / ERP</div>
+              <div class="d-node">Project Mgmt</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-node">AUTO DISPATCH</div>
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+          <p class="why-vi">Với xu hướng xây dựng <strong>phòng họp thông minh</strong> (smart meeting room) tại các dự án văn phòng, bệnh viện, trường học, trụ sở chính phủ Việt Nam — tích hợp AI agentic vào hệ thống AV (Cisco Room Kit, Webex Board) không còn là tương lai xa mà là tiêu chí thiết kế bắt đầu xuất hiện trong RFP. Nhà thiết kế ELV/AV cần cập nhật hệ thống tích hợp điều khiển (control system) để hỗ trợ luồng dữ liệu từ AI engine của Cisco.</p>
+        </div>
+        <a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-unveils-new-agentic-collaboration-experiences.html" class="source-link" target="_blank" rel="noopener">↗ Nguồn: Cisco Newsroom</a>
+      </div>
+      <div class="en-content">
+        <p>Cisco officially launches a suite of <strong>Agentic Collaboration Experiences</strong> in the Webex platform — marking a major shift from traditional UC to a genuinely autonomous AI-driven collaboration ecosystem. New AI agents can independently join meetings, summarize content, convert decisions into automatically assigned tasks, and integrate with enterprise workflows such as CRM, ERP, and project management systems.</p>
+        <p>The breakthrough: Webex AI agents can <strong>"understand meeting room context"</strong>, distinguish specific decisions and actions, then proactively delegate work to the right person. Cisco also opens the platform for partners to build custom agents via the Webex App Hub — ushering in an era of AV meeting rooms where AI truly works alongside users.</p>
+        <div class="diagram-box">
+          <div class="diagram-label">PRINCIPLE DIAGRAM: CISCO WEBEX AGENTIC AI WORKFLOW</div>
+          <div class="diagram-flow">
+            <div class="d-node">AV MEETING ROOM</div>
+            <div class="d-arrow">→</div>
+            <div class="d-node">WEBEX AI ENGINE</div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">MeetingAgent</div>
+              <div class="d-node">SummaryAgent</div>
+              <div class="d-node">TaskAgent</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">CRM / ERP</div>
+              <div class="d-node">Project Mgmt</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-node">AUTO DISPATCH</div>
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">WHY THIS MATTERS FOR ELV/ICT/AV IN VIETNAM</div>
+          <p class="why-en">With the growing trend of building <strong>smart meeting rooms</strong> in office, hospital, school, and government projects in Vietnam — integrating agentic AI into AV systems (Cisco Room Kit, Webex Board) is no longer distant future; it's a design criterion beginning to appear in RFPs. ELV/AV designers need to update control system integrations to support data flows from Cisco's AI engine.</p>
+        </div>
+        <a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m10/cisco-unveils-new-agentic-collaboration-experiences.html" class="source-link" target="_blank" rel="noopener">↗ Source: Cisco Newsroom</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══ NEWS 2: AXIS OS 13 ═══ -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">02</div>
+      <div class="news-header-info">
+        <div class="news-tags">
+          <span class="tag">AXIS</span>
+          <span class="tag tag-alt">OS 13</span>
+          <span class="tag tag-alt">CYBERSECURITY</span>
+          <span class="tag tag-alt">SECURITY</span>
+        </div>
+        <div class="news-title-vi vi-content">Axis Communications Ra Mắt AXIS OS 13: Bảo Mật Mạng & Tích Hợp Hệ Thống Thế Hệ Mới</div>
+        <div class="news-title-en en-content">Axis Communications Releases AXIS OS 13: Next-Generation Cybersecurity & Integration</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Axis Communications ra mắt <strong>AXIS OS 13</strong> — phiên bản firmware lớn nhất từ trước đến nay, tập trung vào bảo mật mạng (cybersecurity) và khả năng tích hợp hệ thống cho toàn bộ dòng camera IP và thiết bị bảo mật. AXIS OS 13 mang lại khả năng <strong>TPM 2.0 attestation</strong> (xác thực phần cứng), tăng cường chống giả mạo thiết bị, và hỗ trợ chuẩn Zero Trust Security Architecture.</p>
+        <p>Nâng cấp quan trọng: hỗ trợ <strong>REST API v5</strong> cho tích hợp VMS/PSIM linh hoạt hơn, cải thiện khả năng tương thích với Milestone, Genetec, Bosch VideoSDK. Axis cũng tích hợp thêm <strong>AI edge analytics</strong> ngay trên thiết bị — giảm băng thông truyền về server, tăng tốc độ phân tích hành vi theo thời gian thực.</p>
+        <div class="diagram-box">
+          <div class="diagram-label">SƠ ĐỒ: AXIS OS 13 — SECURITY & INTEGRATION STACK</div>
+          <div class="diagram-flow">
+            <div class="d-layer">
+              <div class="d-node">HARDWARE LAYER</div>
+              <div class="d-node">TPM 2.0 Chip</div>
+            </div>
+            <div class="d-arrow">↑</div>
+            <div class="d-layer">
+              <div class="d-node">AXIS OS 13</div>
+              <div class="d-node">Zero Trust</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-layer">
+              <div class="d-node">REST API v5</div>
+              <div class="d-node">ACAP Edge AI</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">Milestone VMS</div>
+              <div class="d-node">Genetec</div>
+              <div class="d-node">PSIM</div>
+            </div>
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+          <p class="why-vi">Nhiều dự án ELV tại Việt Nam — đặc biệt ngân hàng, bệnh viện, cảng hàng không, khu công nghiệp — đang yêu cầu tuân thủ tiêu chuẩn an ninh mạng cao hơn. <strong>AXIS OS 13</strong> với TPM 2.0 và Zero Trust giúp nhà thiết kế chứng minh với chủ đầu tư rằng hệ thống camera IP không chỉ là "mắt thần" mà còn là lớp bảo mật OT/IT hội tụ. Yêu cầu upgrade firmware trong specification và BoQ.</p>
+        </div>
+        <a href="https://www.intelligentciso.com/2026/11/06/axis-communications-strengthens-cybersecurity-and-integration-with-axis-os-13/" class="source-link" target="_blank" rel="noopener">↗ Nguồn: Intelligent CISO</a>
+      </div>
+      <div class="en-content">
+        <p>Axis Communications releases <strong>AXIS OS 13</strong> — the largest firmware update to date, focusing on cybersecurity and system integration capabilities across its IP camera and security device lineup. AXIS OS 13 delivers <strong>TPM 2.0 attestation</strong> (hardware verification), enhanced device tamper protection, and supports Zero Trust Security Architecture standards.</p>
+        <p>Key upgrades: support for <strong>REST API v5</strong> enabling more flexible VMS/PSIM integration, improved compatibility with Milestone, Genetec, and Bosch VideoSDK. Axis also embeds additional <strong>AI edge analytics</strong> directly on devices — reducing bandwidth to server, accelerating real-time behavioral analysis.</p>
+        <div class="diagram-box">
+          <div class="diagram-label">DIAGRAM: AXIS OS 13 — SECURITY & INTEGRATION STACK</div>
+          <div class="diagram-flow">
+            <div class="d-layer">
+              <div class="d-node">HARDWARE LAYER</div>
+              <div class="d-node">TPM 2.0 Chip</div>
+            </div>
+            <div class="d-arrow">↑</div>
+            <div class="d-layer">
+              <div class="d-node">AXIS OS 13</div>
+              <div class="d-node">Zero Trust</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-layer">
+              <div class="d-node">REST API v5</div>
+              <div class="d-node">ACAP Edge AI</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">Milestone VMS</div>
+              <div class="d-node">Genetec</div>
+              <div class="d-node">PSIM</div>
+            </div>
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">WHY THIS MATTERS FOR ELV/ICT/AV IN VIETNAM</div>
+          <p class="why-en">Many ELV projects in Vietnam — especially banks, hospitals, airports, and industrial zones — are requiring compliance with higher cybersecurity standards. <strong>AXIS OS 13</strong> with TPM 2.0 and Zero Trust helps designers demonstrate to clients that IP camera systems are not just "surveillance eyes" but a converged OT/IT security layer. Firmware upgrade requirements should be included in specifications and BoQs.</p>
+        </div>
+        <a href="https://www.intelligentciso.com/2026/11/06/axis-communications-strengthens-cybersecurity-and-integration-with-axis-os-13/" class="source-link" target="_blank" rel="noopener">↗ Source: Intelligent CISO</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══ NEWS 3: CRESTRON CEDIA ═══ -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">03</div>
+      <div class="news-header-info">
+        <div class="news-tags">
+          <span class="tag">CRESTRON</span>
+          <span class="tag tag-alt">CEDIA EXPO</span>
+          <span class="tag tag-alt">AV CONTROL</span>
+          <span class="tag tag-alt">AUTOMATION</span>
+        </div>
+        <div class="news-title-vi vi-content">Crestron Giới Thiệu Dòng Sản Phẩm Q4 Tại CEDIA Expo 2026 — Điều Khiển AV & Tự Động Hóa Thế Hệ Mới</div>
+        <div class="news-title-en en-content">Crestron Previews Q4 Products at CEDIA Expo 2026 — Next-Gen AV Control & Automation</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Tại <strong>CEDIA Expo 2026</strong>, Crestron giới thiệu dòng sản phẩm Q4 tập trung vào hai xu hướng chính: <strong>Phòng họp đa nền tảng thông minh (Multi-Platform Smart Rooms)</strong> và <strong>Tự động hóa tích hợp AI (AI-Integrated Automation)</strong>. Nổi bật là thế hệ mới của bộ điều khiển CP4-N và dòng bảng điều khiển cảm ứng TSW với giao diện thiết kế lại hoàn toàn.</p>
+        <p>Crestron <strong>Collab Engine</strong> (phiên bản mới nhất) hỗ trợ native mode cho Microsoft Teams Rooms, Zoom Rooms, và Google Meet trong cùng một phòng mà không cần switch thiết bị. Mảng residential automation của Crestron Home cũng ra mắt tích hợp DALI-2 và KNX tinh gọn hơn cho dự án nhà thông minh cao cấp.</p>
+        <div class="diagram-box">
+          <div class="diagram-label">SƠ ĐỒ: CRESTRON SMART ROOM INTEGRATION TOPOLOGY</div>
+          <div class="diagram-flow">
+            <div class="d-stack">
+              <div class="d-node">TSW TouchPanel</div>
+              <div class="d-node">TSR Remote</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-node">CP4-N Controller</div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">MS Teams Rooms</div>
+              <div class="d-node">Zoom Rooms</div>
+              <div class="d-node">Google Meet</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">DALI-2 Lighting</div>
+              <div class="d-node">AV Switching</div>
+              <div class="d-node">HVAC/BMS</div>
+            </div>
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+          <p class="why-vi">Xu hướng <strong>phòng họp hybrid</strong> (vừa Teams vừa Zoom trong cùng thiết bị) đang trở thành yêu cầu thực tế tại nhiều tòa nhà văn phòng hạng A tại Việt Nam. Crestron Collab Engine native mode giúp giảm chi phí đầu tư thiết bị, đơn giản hóa thiết kế AV và integration với hệ thống BMS/ELV. Nhà thiết kế cần cập nhật template phòng họp trong RFP 2026–2027.</p>
+        </div>
+        <a href="https://www.residentialsystems.com/technology/automation/crestron-previews-q4-products-at-cedia-expo-2026" class="source-link" target="_blank" rel="noopener">↗ Nguồn: Residential Systems</a>
+      </div>
+      <div class="en-content">
+        <p>At <strong>CEDIA Expo 2026</strong>, Crestron showcases Q4 products focused on two major trends: <strong>Multi-Platform Smart Rooms</strong> and <strong>AI-Integrated Automation</strong>. Highlights include the new generation CP4-N controller and TSW touchpanel range with a completely redesigned interface.</p>
+        <p>The updated <strong>Crestron Collab Engine</strong> supports native mode for Microsoft Teams Rooms, Zoom Rooms, and Google Meet in the same room without switching hardware. The Crestron Home residential automation line also launches more streamlined DALI-2 and KNX integration for premium smart home projects.</p>
+        <div class="diagram-box">
+          <div class="diagram-label">DIAGRAM: CRESTRON SMART ROOM INTEGRATION TOPOLOGY</div>
+          <div class="diagram-flow">
+            <div class="d-stack">
+              <div class="d-node">TSW TouchPanel</div>
+              <div class="d-node">TSR Remote</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-node">CP4-N Controller</div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">MS Teams Rooms</div>
+              <div class="d-node">Zoom Rooms</div>
+              <div class="d-node">Google Meet</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">DALI-2 Lighting</div>
+              <div class="d-node">AV Switching</div>
+              <div class="d-node">HVAC/BMS</div>
+            </div>
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">WHY THIS MATTERS FOR ELV/ICT/AV IN VIETNAM</div>
+          <p class="why-en">The trend of <strong>hybrid meeting rooms</strong> (supporting both Teams and Zoom in the same hardware) is becoming a real requirement in many Grade-A office buildings in Vietnam. Crestron Collab Engine native mode helps reduce equipment investment, simplify AV design and BMS/ELV integration. Designers need to update meeting room templates in 2026–2027 RFPs.</p>
+        </div>
+        <a href="https://www.residentialsystems.com/technology/automation/crestron-previews-q4-products-at-cedia-expo-2026" class="source-link" target="_blank" rel="noopener">↗ Source: Residential Systems</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══ NEWS 4: DIGITAL REALTY SINGAPORE DRIL ═══ -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">04</div>
+      <div class="news-header-info">
+        <div class="news-tags">
+          <span class="tag">DIGITAL REALTY</span>
+          <span class="tag tag-alt">DATA CENTER</span>
+          <span class="tag tag-alt">AI INFRA</span>
+          <span class="tag tag-alt">SINGAPORE/APAC</span>
+        </div>
+        <div class="news-title-vi vi-content">Digital Realty Ra Mắt Innovation Lab (DRIL) Tại Singapore — Hạ Tầng AI-Ready Cho Châu Á</div>
+        <div class="news-title-en en-content">Digital Realty Launches DRIL Singapore — AI-Ready Infrastructure for Asia Pacific</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Ngày 17/11/2026, Digital Realty chính thức khai trương <strong>Digital Realty Innovation Lab (DRIL)</strong> tại Singapore — một trung tâm thử nghiệm và triển khai hạ tầng AI quy mô lớn dành cho doanh nghiệp châu Á Thái Bình Dương. DRIL cung cấp môi trường sandbox để doanh nghiệp xác thực (validate) giải pháp AI trước khi mở rộng (scale-out) sang các data center PlatformDIGITAL® toàn cầu.</p>
+        <p>DRIL tích hợp <strong>liquid cooling infrastructure</strong> (hạ tầng làm mát bằng chất lỏng) phục vụ GPU cluster, kết nối <strong>cross-connect low-latency</strong> với hệ sinh thái cloud (AWS, Azure, GCP) và các nhà cung cấp AI trực tiếp như NVIDIA, Supermicro. Singapore là hub chiến lược kết nối Đông Nam Á với Trung Đông và Đại Dương Châu.</p>
+        <div class="diagram-box">
+          <div class="diagram-label">SƠ ĐỒ: DIGITAL REALTY DRIL — AI INFRA ARCHITECTURE</div>
+          <div class="diagram-flow">
+            <div class="d-stack">
+              <div class="d-node">DRIL Singapore</div>
+              <div class="d-node">GPU Cluster + LiquidCool</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">PlatformDIGITAL</div>
+              <div class="d-node">Cross-Connect</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">AWS/Azure/GCP</div>
+              <div class="d-node">NVIDIA/Supermicro</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-node">APAC Enterprises</div>
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+          <p class="why-vi">Việt Nam đang đầu tư mạnh vào data center (mục tiêu $7B đến 2030). DRIL Singapore tạo ra hành lang hạ tầng AI trực tiếp đến Việt Nam, giúp các doanh nghiệp Việt dễ dàng tiếp cận AI-ready infrastructure với độ trễ thấp. Nhà thiết kế ELV/ICT cần hiểu kiến trúc <strong>liquid cooling + high-density power distribution</strong> để thiết kế data center AI-ready thế hệ mới tại Việt Nam.</p>
+        </div>
+        <a href="https://globenewswire.com/news-release/2026/11/17/3404269/0/en/digital-realty-innovation-lab-dril-launches-in-singapore-enabling-asia-pacific-enterprises-to-validate-and-scale-ai-ready-infrastructure.html" class="source-link" target="_blank" rel="noopener">↗ Nguồn: GlobeNewswire</a>
+      </div>
+      <div class="en-content">
+        <p>On November 17, 2026, Digital Realty officially opens the <strong>Digital Realty Innovation Lab (DRIL)</strong> in Singapore — a large-scale AI infrastructure testing and deployment center for Asia Pacific enterprises. DRIL provides a sandbox environment for enterprises to validate AI solutions before scaling out to PlatformDIGITAL® data centers globally.</p>
+        <p>DRIL integrates <strong>liquid cooling infrastructure</strong> for GPU clusters, with <strong>low-latency cross-connect</strong> connectivity to the cloud ecosystem (AWS, Azure, GCP) and AI providers including NVIDIA and Supermicro. Singapore serves as a strategic hub connecting Southeast Asia with the Middle East and Oceania.</p>
+        <div class="diagram-box">
+          <div class="diagram-label">DIAGRAM: DIGITAL REALTY DRIL — AI INFRA ARCHITECTURE</div>
+          <div class="diagram-flow">
+            <div class="d-stack">
+              <div class="d-node">DRIL Singapore</div>
+              <div class="d-node">GPU Cluster + LiquidCool</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">PlatformDIGITAL</div>
+              <div class="d-node">Cross-Connect</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">AWS/Azure/GCP</div>
+              <div class="d-node">NVIDIA/Supermicro</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-node">APAC Enterprises</div>
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">WHY THIS MATTERS FOR ELV/ICT/AV IN VIETNAM</div>
+          <p class="why-en">Vietnam is investing heavily in data centers (targeting $7B by 2030). DRIL Singapore creates a direct AI infrastructure corridor to Vietnam, enabling Vietnamese enterprises to easily access AI-ready infrastructure with low latency. ELV/ICT designers need to understand <strong>liquid cooling + high-density power distribution</strong> architecture to design next-generation AI-ready data centers in Vietnam.</p>
+        </div>
+        <a href="https://globenewswire.com/news-release/2026/11/17/3404269/0/en/digital-realty-innovation-lab-dril-launches-in-singapore-enabling-asia-pacific-enterprises-to-validate-and-scale-ai-ready-infrastructure.html" class="source-link" target="_blank" rel="noopener">↗ Source: GlobeNewswire</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- ═══ NEWS 5: CISCO PRICE HIKE ═══ -->
+  <article class="news-item">
+    <div class="news-item-header">
+      <div class="news-num">05</div>
+      <div class="news-header-info">
+        <div class="news-tags">
+          <span class="tag">CISCO</span>
+          <span class="tag tag-alt">PRICE HIKE</span>
+          <span class="tag tag-alt">ICT INFRA</span>
+          <span class="tag tag-alt">PROJECT BUDGET</span>
+        </div>
+        <div class="news-title-vi vi-content">Cisco Tăng Giá Phần Cứng & Phần Mềm Từ Tháng 11/2026 — Ảnh Hưởng Trực Tiếp Đến Ngân Sách Dự Án ELV/ICT</div>
+        <div class="news-title-en en-content">Cisco Hardware & Software Price Increases Effective November 2026 — Direct Impact on ELV/ICT Project Budgets</div>
+      </div>
+    </div>
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Cisco chính thức thông báo <strong>tăng giá phần cứng và phần mềm</strong> có hiệu lực từ ngày 7/11/2026, ảnh hưởng đến toàn bộ danh mục sản phẩm từ switch/router Catalyst, thiết bị Meraki, giải pháp bảo mật Firepower, đến license Cisco Smart Software. Mức tăng trung bình dao động từ <strong>7–15%</strong> tùy dòng sản phẩm, một phần do chi phí sản xuất chip và logistics toàn cầu gia tăng.</p>
+        <p>Các dự án đã có quote từ trước ngày 7/11 được bảo lưu giá trong vòng 30–60 ngày tùy distributor. Cisco khuyến khích partner và khách hàng <strong>lock in pricing</strong> sớm cho các dự án đang trong giai đoạn thiết kế hoặc đấu thầu tại Việt Nam và Đông Nam Á.</p>
+        <div class="diagram-box">
+          <div class="diagram-label">SƠ ĐỒ ẢNH HƯỞNG: CISCO PRICE HIKE → DỰ ÁN ELV/ICT</div>
+          <div class="diagram-flow">
+            <div class="d-node">CISCO GLOBAL PRICING</div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">Distributor (7–15%↑)</div>
+              <div class="d-node">Partner Margin</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">BoQ ICT Networking</div>
+              <div class="d-node">BoQ Security</div>
+              <div class="d-node">BoQ UC/AV</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-node">TENDER BUDGET ↑</div>
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">TẠI SAO QUAN TRỌNG VỚI ELV/ICT/AV VIỆT NAM</div>
+          <p class="why-vi">Hầu hết dự án tòa nhà hạng A, bệnh viện, trường đại học, khu công nghiệp tại Việt Nam đều có hệ thống ICT networking Cisco trong BoQ. Mức tăng 7–15% ảnh hưởng trực tiếp đến tổng vốn đầu tư. <strong>Khuyến nghị</strong>: Review và update BoQ ngay nếu dự án đang trong giai đoạn thiết kế kỹ thuật hoặc lập hồ sơ mời thầu — ưu tiên lock-in price với distributor Cisco tại Việt Nam trước khi mức giá mới phổ biến rộng rãi hơn.</p>
+        </div>
+        <a href="https://www.channelinsider.com/channel-business/channel-analysis/news-cisco-software-hardware-price-increases-november-2026/" class="source-link" target="_blank" rel="noopener">↗ Nguồn: Channel Insider</a>
+      </div>
+      <div class="en-content">
+        <p>Cisco officially announces <strong>hardware and software price increases</strong> effective November 7, 2026, impacting the full product portfolio including Catalyst switches/routers, Meraki equipment, Firepower security solutions, and Cisco Smart Software licenses. Average increases range from <strong>7–15%</strong> depending on product line, partly due to rising chip manufacturing and global logistics costs.</p>
+        <p>Projects already quoted before November 7 have pricing held for 30–60 days depending on distributor. Cisco encourages partners and customers to <strong>lock in pricing</strong> early for projects currently in design or tender phases across Vietnam and Southeast Asia.</p>
+        <div class="diagram-box">
+          <div class="diagram-label">IMPACT DIAGRAM: CISCO PRICE HIKE → ELV/ICT PROJECTS</div>
+          <div class="diagram-flow">
+            <div class="d-node">CISCO GLOBAL PRICING</div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">Distributor (7–15%↑)</div>
+              <div class="d-node">Partner Margin</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-stack">
+              <div class="d-node">BoQ ICT Networking</div>
+              <div class="d-node">BoQ Security</div>
+              <div class="d-node">BoQ UC/AV</div>
+            </div>
+            <div class="d-arrow">→</div>
+            <div class="d-node">TENDER BUDGET ↑</div>
+          </div>
+        </div>
+        <div class="why-box">
+          <div class="why-label">WHY THIS MATTERS FOR ELV/ICT/AV IN VIETNAM</div>
+          <p class="why-en">Most Grade-A building, hospital, university, and industrial park projects in Vietnam include Cisco ICT networking in the BoQ. A 7–15% increase directly impacts total investment. <strong>Recommendation</strong>: Review and update BoQs immediately if the project is in detailed design or tender document preparation — prioritize locking in pricing with Cisco distributors in Vietnam before the new pricing becomes widely applied.</p>
+        </div>
+        <a href="https://www.channelinsider.com/channel-business/channel-analysis/news-cisco-software-hardware-price-increases-november-2026/" class="source-link" target="_blank" rel="noopener">↗ Source: Channel Insider</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CTA BOX -->
+  <div class="cta-box">
+    <div class="eyebrow">TƯ VẤN · CONSULTATION</div>
+    <h3 class="vi-content">Dự án của bạn cần giải pháp ELV/ICT/AV?</h3>
+    <h3 class="en-content">Your project needs ELV/ICT/AV solutions?</h3>
+    <p class="vi-content">Paul Le Consultant — 10+ năm kinh nghiệm thiết kế hệ thống ELV, ICT, AV cho dự án bệnh viện, tòa nhà văn phòng, trường học, khu công nghiệp tại Việt Nam. Tư vấn kỹ thuật, lập BoQ, soạn hồ sơ mời thầu, kiểm định hệ thống tích hợp.</p>
+    <p class="en-content">Paul Le Consultant — 10+ years designing ELV, ICT, AV systems for hospitals, office buildings, schools, and industrial parks in Vietnam. Technical consultation, BoQ preparation, tender documentation, and SI integration verification.</p>
+    <a href="/#contact" class="cta-btn vi-content">LIÊN HỆ TƯ VẤN →</a>
+    <a href="/#contact" class="cta-btn en-content">GET CONSULTATION →</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:0.5rem">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div class="footer-logo">PAUL LE CONSULTANT</div>
+  </div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="/#services">Services</a>
+    <a href="/#contact">Contact</a>
+    <a href="https://elvconsultant.com" target="_blank" rel="noopener">elvconsultant.com</a>
+  </div>
+  <div class="footer-copy">© 2026 Paul Le Consultant — ELV · ICT · AV Design Director | Duy Hoa Phat Corporation &amp; HBP Project Management</div>
+  <div class="footer-copy" style="margin-top:0.3rem; font-size:10px; color:#2A4060;">
+    Hero image: <a href="https://unsplash.com/photos/2CakbXfm_gM" style="color:#2A4060;" target="_blank">Dmitrijs Safrans via Unsplash</a>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
