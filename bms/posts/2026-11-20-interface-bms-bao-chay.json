@@ -1,0 +1,132 @@
+{
+ "date": "2026-11-20",
+ "slug": "interface-bms-bao-chay",
+ "pillar_vi": "Tích hợp hệ thống",
+ "pillar_en": "System integration",
+ "title_vi": "Interface BMS và hệ thống báo cháy",
+ "title_en": "BMS and fire alarm interface",
+ "lead_vi": "Khi có cháy, ai tắt AHU, ai chạy quạt tăng áp, ai đóng van ngăn cháy? Bài này chia việc giữa tủ báo cháy và BMS Diamond Controls theo QCVN 06:2022/BXD, kèm danh sách tín hiệu và cách thử nghiệm.",
+ "lead_en": "When a fire starts, who stops the AHU, who runs the pressurisation fan, who closes the fire dampers? This post splits the work between the fire alarm panel and a Diamond Controls BMS under QCVN 06:2022/BXD, with a signal list and a test method.",
+ "tags": [
+  "Báo cháy",
+  "FACP",
+  "QCVN 06:2022/BXD",
+  "Niagara 4",
+  "DCM-8044-D",
+  "IO-0800-485",
+  "Hút khói tăng áp",
+  "Cause & effect"
+ ],
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1743698205310-cd814a95afab?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Nút báo cháy trên tường bê tông trong công trình",
+  "credit": "Jakub Żerdzicki",
+  "credit_url": "https://unsplash.com/photos/fire-alarm-system-ready-to-be-triggered-v2WdGv6n_mc"
+ },
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 640\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sơ đồ nguyên lý interface giữa tủ trung tâm báo cháy và BMS Diamond Controls: relay hard-wired ưu tiên cho quạt khói, van ngăn cháy, AHU; tiếp điểm khô về DDC; gateway BACnet/IP chỉ đọc lên Niagara 4\" font-family=\"'Maison Sans',system-ui,sans-serif\"><style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.fw{stroke:#B5AC9C;stroke-width:1.2;fill:none;stroke-dasharray:5 4}.p{fill:#C9A96A;font-size:12px}.bg{fill:#0C0B09}</style><path class=\"ln\" d=\"M320 85H640\"/><path class=\"ln\" d=\"M790 150V220\"/><path class=\"ln\" d=\"M80 150V400H795M165 400V440M480 400V440M795 400V440\"/><path class=\"fw\" d=\"M250 150V275H640\"/><path class=\"fw\" d=\"M880 340V440\"/><text class=\"k\" x=\"20\" y=\"28\">PHÁT HIỆN CHÁY</text><text class=\"k\" x=\"640\" y=\"28\">QUẢN LÝ · NIAGARA 4</text><rect class=\"b\" x=\"20\" y=\"40\" width=\"300\" height=\"110\"/><text class=\"t\" x=\"36\" y=\"68\">Tủ trung tâm báo cháy (FACP)</text><text class=\"s\" x=\"36\" y=\"92\">Đầu báo địa chỉ, module relay</text><text class=\"s\" x=\"36\" y=\"114\">Kích hoạt tự động theo D.1.3</text><text class=\"s\" x=\"36\" y=\"136\">Gateway BACnet/IP hoặc Modbus TCP</text><rect class=\"b\" x=\"640\" y=\"40\" width=\"300\" height=\"110\"/><text class=\"t\" x=\"656\" y=\"68\">DCM 9000 · Niagara 4</text><text class=\"s\" x=\"656\" y=\"92\">Đọc trạng thái zone, đầu báo</text><text class=\"s\" x=\"656\" y=\"114\">Alarm, log sự kiện, trend</text><text class=\"s\" x=\"656\" y=\"136\">Không ghi lệnh xuống FACP</text><rect class=\"bg\" x=\"408\" y=\"73\" width=\"144\" height=\"17\"/><text class=\"p\" x=\"480\" y=\"85\" text-anchor=\"middle\">BACnet/IP · chỉ đọc</text><rect class=\"bg\" x=\"743\" y=\"173\" width=\"94\" height=\"17\"/><text class=\"p\" x=\"790\" y=\"185\" text-anchor=\"middle\">BACnet MS/TP</text><text class=\"k\" x=\"640\" y=\"212\">ĐIỀU KHIỂN · DDC</text><rect class=\"b\" x=\"640\" y=\"220\" width=\"300\" height=\"120\"/><text class=\"t\" x=\"656\" y=\"248\">DCM-8044-D + IO-0800-485</text><text class=\"s\" x=\"656\" y=\"272\">DI: báo cháy chung, lỗi FACP</text><text class=\"s\" x=\"656\" y=\"294\">DI: trạng thái quạt khói, van</text><text class=\"s\" x=\"656\" y=\"316\">Khóa AHU khi có cháy (inhibit)</text><rect class=\"bg\" x=\"371\" y=\"263\" width=\"158\" height=\"17\"/><text class=\"p\" x=\"450\" y=\"275\" text-anchor=\"middle\">Tiếp điểm khô · DI</text><rect class=\"bg\" x=\"196\" y=\"388\" width=\"252\" height=\"17\"/><text class=\"p\" x=\"322\" y=\"400\" text-anchor=\"middle\">Relay FACP · hard-wired · ưu tiên 1</text><rect class=\"bg\" x=\"854\" y=\"373\" width=\"52\" height=\"17\"/><text class=\"p\" x=\"880\" y=\"385\" text-anchor=\"middle\">DO · DI</text><text class=\"k\" x=\"20\" y=\"432\">HIỆN TRƯỜNG</text><rect class=\"b2\" x=\"20\" y=\"440\" width=\"290\" height=\"100\"/><text class=\"t\" x=\"36\" y=\"468\">Van ngăn cháy thường mở</text><text class=\"s\" x=\"36\" y=\"492\">Đóng khi có cháy (D.1.4)</text><text class=\"s\" x=\"36\" y=\"514\">Công tắc vị trí về DDC</text><rect class=\"b2\" x=\"335\" y=\"440\" width=\"290\" height=\"100\"/><text class=\"t\" x=\"351\" y=\"468\">Quạt hút khói, quạt tăng áp</text><text class=\"s\" x=\"351\" y=\"492\">Chạy khi có cháy (D.1.3)</text><text class=\"s\" x=\"351\" y=\"514\">Áp suất dư 20–50 Pa (D.11)</text><rect class=\"b2\" x=\"650\" y=\"440\" width=\"290\" height=\"100\"/><text class=\"t\" x=\"666\" y=\"468\">MCC AHU, quạt gió tươi</text><text class=\"s\" x=\"666\" y=\"492\">Tắt khi có cháy (D.1.4)</text><text class=\"s\" x=\"666\" y=\"514\">Không tự chạy lại trước reset</text><text class=\"s\" x=\"20\" y=\"584\">Lệnh an toàn đi dây cứng từ FACP. Mất mạng BMS không ảnh hưởng chế độ cháy.</text><text class=\"s\" x=\"20\" y=\"608\">Life-safety commands are hard-wired from the FACP. BMS network loss does not affect fire mode.</text></svg>",
+  "caption_vi": "SĐNL: FACP điều khiển trực tiếp quạt khói, van ngăn cháy và MCC AHU bằng dây cứng; DDC nhận tiếp điểm khô để khóa lệnh BMS; Niagara đọc trạng thái qua gateway, không ghi.",
+  "caption_en": "Schematic: the FACP drives smoke fans, fire dampers and AHU MCCs directly by hard wiring; the DDC takes dry contacts to inhibit BMS commands; Niagara reads status through a gateway, never writes."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>Trên nhiều dự án, ranh giới giữa nhà thầu báo cháy và nhà thầu BMS chỉ là một dòng \"interface với hệ thống báo cháy\" trong hồ sơ mời thầu. Kết quả là hai lỗi hay gặp khi nghiệm thu PCCC: AHU được BMS bật lại theo lịch trong khi tủ báo cháy vẫn đang ở trạng thái cháy, hoặc quạt tăng áp chỉ chạy được khi mạng BMS còn sống.</p><p>QCVN 06:2022/BXD, Phụ lục D, mục D.1.3 yêu cầu thiết bị bảo vệ chống khói được kích hoạt tự động từ tín hiệu báo cháy tự động hoặc thiết bị chữa cháy tự động, và kích hoạt từ xa từ phòng trực hoặc nút bấm trên lối thoát nạn. Mục D.1.4 yêu cầu khi hút khói hoạt động phải tắt các hệ thông gió, điều hòa không khí chung và đóng các van ngăn cháy thường mở. Quy chuẩn yêu cầu chức năng; người thiết kế phải quyết định tín hiệu nào đi đường nào.</p>",
+   "en": "<p>On many projects the boundary between the fire alarm contractor and the BMS contractor is a single line in the tender: \"interface with fire alarm system\". That produces two common failures at fire acceptance: the BMS restarts an AHU on its schedule while the fire panel is still in alarm, or the pressurisation fan only runs while the BMS network is alive.</p><p>QCVN 06:2022/BXD, Appendix D, clause D.1.3 requires smoke protection equipment to be activated automatically from the automatic fire alarm or automatic suppression signal, and remotely from the duty room or push buttons on escape routes. Clause D.1.4 requires that when smoke exhaust runs, general ventilation and air conditioning are shut down and normally open fire dampers are closed. The code asks for the function; the designer decides which signal travels which path.</p>"
+  },
+  {
+   "h_vi": "Giải pháp",
+   "h_en": "Solution",
+   "vi": "<p>Chia interface thành 3 lớp, mỗi lớp một nhiệm vụ:</p><ul><li><strong>Lớp 1, an toàn sinh mạng, dây cứng:</strong> module relay của FACP đi thẳng vào mạch điều khiển MCC của quạt hút khói, quạt tăng áp, AHU và van ngăn cháy. Tiếp điểm fire mode đặt trong MCC, ưu tiên cao hơn mọi lệnh khác, kể cả lệnh tay tại tủ. Lớp này chạy đúng khi BMS tắt hoàn toàn.</li><li><strong>Lớp 2, BMS nhận biết, tiếp điểm khô:</strong> FACP xuất tiếp điểm \"báo cháy chung\" và \"lỗi FACP\" về DI của DDC. DDC khóa lệnh start của AHU, FCU gió tươi để lịch Niagara không bật lại thiết bị khi chưa reset báo cháy. IO-0800-485 có 8 DI cách ly 3,7 kV, phù hợp để nhận tiếp điểm từ tủ của hệ khác.</li><li><strong>Lớp 3, giám sát, mạng:</strong> gateway BACnet/IP hoặc Modbus TCP của FACP đưa trạng thái zone, đầu báo, lỗi lên DCM 9000. Niagara chỉ đọc: hiển thị vị trí trên mặt bằng, ghi log, gửi alarm. Không ghi lệnh xuống FACP.</li></ul>",
+   "en": "<p>Split the interface into 3 layers, each with one job:</p><ul><li><strong>Layer 1, life safety, hard-wired:</strong> FACP relay modules go straight into the MCC control circuits of smoke exhaust fans, pressurisation fans, AHUs and fire dampers. The fire mode contact sits in the MCC and overrides every other command, including local hand. This layer works with the BMS fully off.</li><li><strong>Layer 2, BMS awareness, dry contacts:</strong> the FACP outputs \"common fire\" and \"FACP fault\" contacts to DDC DIs. The DDC inhibits AHU and fresh air FCU start commands so the Niagara schedule cannot restart equipment before the fire alarm is reset. The IO-0800-485 has 8 DIs isolated to 3.7 kV, a good fit for contacts from another system's panel.</li><li><strong>Layer 3, monitoring, network:</strong> the FACP BACnet/IP or Modbus TCP gateway sends zone, detector and fault status to the DCM 9000. Niagara reads only: floor plan location, event log, alarms. It never writes commands to the FACP.</li></ul>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<p><strong>Ưu tiên lệnh:</strong> BACnet có mảng ưu tiên 16 mức, mức 1 là Manual Life Safety và mức 2 là Automatic Life Safety. Nếu dự án yêu cầu BMS cũng ra lệnh trong chế độ cháy (ví dụ chuyển damper sang 100% gió tươi), ghi ở mức 2 và để lịch, lệnh vận hành ở mức 8 trở xuống. Nhưng lệnh qua mạng chỉ là lớp bổ sung, không thay lớp dây cứng.</p><p><strong>Fail-safe:</strong> chọn tiếp điểm FACP về DDC loại thường đóng, mở khi có cháy. Đứt dây sẽ được hiểu là cháy và DDC khóa AHU, thay vì im lặng. Ghi rõ logic này trong point list để đội vận hành không coi đó là lỗi BMS.</p><p><strong>Phản hồi trạng thái:</strong> quạt khói và van ngăn cháy có công tắc vị trí, dòng điện hoặc chênh áp. Đưa các phản hồi này về DI của DDC (DCM-8044-D có 8 UI dùng được như DI qua jumper) để Niagara so sánh lệnh FACP với trạng thái thực và báo lỗi khi lệch sau thời gian chờ.</p><p><strong>Áp suất tăng áp:</strong> mục D.11 yêu cầu áp suất dư 20 Pa đến 50 Pa trong buồng thang và giếng thang. Cảm biến chênh áp 4–20 mA vào UI của DDC cho phép trend áp suất trong lúc thử. Vòng điều khiển biến tần quạt tăng áp, nếu có, nên nằm trong DDC riêng hoặc thiết bị của nhà thầu PCCC, không phụ thuộc mạng.</p><p><strong>Reset:</strong> sau khi FACP reset, AHU không chạy lại ngay. Niagara chờ người vận hành xác nhận rồi mới gỡ khóa, tránh hút khói còn sót vào hệ gió.</p>",
+   "en": "<p><strong>Command priority:</strong> BACnet has a 16-level priority array; level 1 is Manual Life Safety and level 2 is Automatic Life Safety. If the project wants the BMS to act in fire mode too (for example driving dampers to 100% outdoor air), write at level 2 and keep schedules and operator commands at level 8 or lower. Network commands are only an extra layer, never a replacement for hard wiring.</p><p><strong>Fail-safe:</strong> use normally closed FACP contacts to the DDC that open on fire. A broken wire then reads as fire and the DDC inhibits the AHU instead of staying silent. Write this logic into the point list so operators do not log it as a BMS fault.</p><p><strong>Status feedback:</strong> smoke fans and fire dampers have end switches, current or differential pressure switches. Wire these to DDC DIs (the DCM-8044-D has 8 UIs that work as DIs by jumper) so Niagara compares the FACP command with the real state and alarms on mismatch after a delay.</p><p><strong>Pressurisation:</strong> clause D.11 requires 20 Pa to 50 Pa overpressure in stair and lift shafts. A 4–20 mA differential pressure sensor on a DDC UI lets you trend pressure during tests. Any speed control loop for the pressurisation fan drive belongs in its own DDC or the fire contractor's equipment, not on the network.</p><p><strong>Reset:</strong> after the FACP resets, the AHU does not restart immediately. Niagara waits for operator confirmation before releasing the inhibit, so residual smoke is not drawn into the air system.</p>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<ul><li><strong>Cause &amp; effect matrix:</strong> lập một bảng duy nhất cho cả hai nhà thầu, mỗi dòng là một zone báo cháy, mỗi cột là một thiết bị bị tác động, ghi rõ lớp 1, 2 hay 3.</li><li><strong>Thử nghiệm theo 3 bước:</strong> point-to-point từng tiếp điểm FACP đến DI; thử theo từng zone với FACP ở chế độ test, đo thời gian thiết bị phản hồi; thử mất mạng BMS rồi kích hoạt báo cháy để chứng minh lớp 1 chạy độc lập.</li><li><strong>Văn phòng, khách sạn, bệnh viện:</strong> kiến trúc này dùng được với FACP của mọi hãng có relay module và gateway BACnet/IP hoặc Modbus TCP.</li><li><strong>Hồ sơ nghiệm thu PCCC:</strong> xuất log sự kiện Niagara trong buổi thử làm bằng chứng thời gian và thứ tự tác động.</li></ul>",
+   "en": "<ul><li><strong>Cause and effect matrix:</strong> one shared table for both contractors, one row per fire zone, one column per affected device, each cell marked layer 1, 2 or 3.</li><li><strong>Test in 3 steps:</strong> point-to-point from each FACP contact to its DI; zone-by-zone tests with the FACP in test mode, timing each device response; cut the BMS network and trigger an alarm to prove layer 1 runs on its own.</li><li><strong>Offices, hotels, hospitals:</strong> this architecture works with any brand of FACP that has relay modules and a BACnet/IP or Modbus TCP gateway.</li><li><strong>Fire acceptance documents:</strong> export the Niagara event log from the test as evidence of timing and sequence.</li></ul>"
+  }
+ ],
+ "table": {
+  "caption_vi": "Danh sách tín hiệu interface FACP và BMS",
+  "caption_en": "FACP to BMS interface signal list",
+  "head": [
+   "Tín hiệu / Signal",
+   "Lớp / Layer",
+   "Đường truyền / Path",
+   "Đích / Destination"
+  ],
+  "rows": [
+   [
+    "Fire mode quạt hút khói, tăng áp",
+    "1",
+    "Relay FACP, dây cứng",
+    "Mạch điều khiển MCC quạt"
+   ],
+   [
+    "Tắt AHU, FCU gió tươi (D.1.4)",
+    "1",
+    "Relay FACP, dây cứng",
+    "Mạch điều khiển MCC AHU"
+   ],
+   [
+    "Đóng van ngăn cháy thường mở",
+    "1",
+    "Relay FACP, dây cứng",
+    "Cơ cấu chấp hành van"
+   ],
+   [
+    "Báo cháy chung (NC)",
+    "2",
+    "Tiếp điểm khô",
+    "DI trên IO-0800-485"
+   ],
+   [
+    "Lỗi FACP",
+    "2",
+    "Tiếp điểm khô",
+    "DI trên IO-0800-485"
+   ],
+   [
+    "Trạng thái quạt khói, vị trí van",
+    "2",
+    "Tiếp điểm khô",
+    "UI dùng như DI, DCM-8044-D"
+   ],
+   [
+    "Áp suất buồng thang",
+    "2",
+    "4–20 mA",
+    "UI DCM-8044-D, trend Niagara"
+   ],
+   [
+    "Trạng thái zone, đầu báo, lỗi",
+    "3",
+    "BACnet/IP hoặc Modbus TCP, chỉ đọc",
+    "DCM 9000, Niagara 4"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "QCVN 06:2022/BXD An toàn cháy cho nhà và công trình, Phụ lục D (Thông tư 06/2022/TT-BXD)",
+   "url": "https://thuvienphapluat.vn/van-ban/xay-dung-do-thi/thong-tu-06-2022-tt-bxd-quy-chuan-qcvn-06-2022-bxd-an-toan-chay-cho-nha-va-cong-trinh-544059.aspx"
+  },
+  {
+   "title": "TCVN 5738:2021 Phòng cháy chữa cháy, Hệ thống báo cháy tự động, Yêu cầu kỹ thuật",
+   "url": "https://hethongphapluat.com/tieu-chuan-quoc-gia-tcvn-5738-2021-ve-phong-chay-chua-chay-he-thong-bao-chay-tu-dong-yeu-cau-ky-thuat.html"
+  },
+  {
+   "title": "Mitsubishi Electric Asia, Diamond Controls catalogue (2023) and DCM-8044/DCM-8044-D with IO Modules (2024)"
+  }
+ ],
+ "x_post": "Fire alarm and BMS: who stops the AHU?\n\n3 layers:\n• FACP relays hard-wired to fans, dampers, MCCs\n• NC dry contacts to DDC to block restarts\n• BACnet/IP gateway, read only\n\nQCVN 06:2022 asks 20 to 50 Pa in stairs.\n\nFull schematic on the blog, link in bio.",
+ "fb_post": "Có cháy, BMS bật lại AHU theo lịch. Đây là lỗi interface báo cháy hay gặp nhất khi nghiệm thu PCCC.\n\nQCVN 06:2022/BXD, mục D.1.4: khi hút khói hoạt động phải tắt thông gió, điều hòa chung và đóng van ngăn cháy thường mở. Cách chia việc giữa tủ báo cháy (FACP) và BMS Diamond Controls:\n\n1. Lớp an toàn: relay FACP đi dây cứng vào MCC quạt hút khói, quạt tăng áp, AHU và van ngăn cháy. Chạy đúng kể cả khi BMS tắt.\n2. Lớp nhận biết: tiếp điểm khô thường đóng về DI của DDC (IO-0800-485, 8 DI cách ly 3,7 kV). DDC khóa lệnh start để lịch Niagara không bật lại AHU trước khi reset.\n3. Lớp giám sát: gateway BACnet/IP hoặc Modbus TCP đưa trạng thái zone lên DCM 9000. Niagara chỉ đọc, không ghi lệnh xuống FACP.\n\nThử nghiệm: point-to-point, theo từng zone, rồi cắt mạng BMS và kích hoạt báo cháy để chứng minh lớp 1 độc lập.\n\nSơ đồ nguyên lý và danh sách tín hiệu:\nhttps://elvconsultant.com/blog/bms/2026-11-20-interface-bms-bao-chay.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #BaoChay #QCVN06 #MitsubishiElectric #DiamondControls"
+}

@@ -125,7 +125,8 @@
    "pillar": "Tích hợp hệ thống",
    "pillar_en": "System integration",
    "topic": "Interface BMS với báo cháy: tín hiệu, ưu tiên và thử nghiệm",
-   "status": "planned"
+   "status": "published",
+   "slug": "interface-bms-bao-chay"
   },
   {
    "date": "2026-11-21",
