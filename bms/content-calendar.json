@@ -133,7 +133,8 @@
    "pillar": "Bài toán thực tế",
    "pillar_en": "Worked example",
    "topic": "Sơ đồ tủ DDC: nguồn 24 VAC, relay, đấu dây UI/AO",
-   "status": "planned"
+   "status": "published",
+   "slug": "so-do-tu-ddc-nguon-24vac-relay-dau-day"
   },
   {
    "date": "2026-11-22",

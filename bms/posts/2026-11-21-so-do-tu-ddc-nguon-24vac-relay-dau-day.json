@@ -1,0 +1,134 @@
+{
+ "date": "2026-11-21",
+ "slug": "so-do-tu-ddc-nguon-24vac-relay-dau-day",
+ "pillar_vi": "Bài toán thực tế",
+ "pillar_en": "Worked example",
+ "title_vi": "Sơ đồ đấu dây tủ DDC",
+ "title_en": "DDC panel wiring schematic",
+ "lead_vi": "Phần lớn lỗi chạy thử BMS nằm trong tủ DDC chứ không nằm trong phần mềm: sai cực G của nguồn 24 VAC, relay DO của bộ điều khiển kéo thẳng contactor, dây tín hiệu đi chung máng với cáp động lực. Bài này đi qua sơ đồ tủ DCM-8044-D cho một AHU, từ biến áp đến từng đầu UI, AO, DO.",
+ "lead_en": "Most BMS commissioning faults live inside the DDC panel, not in the software: a swapped G leg on the 24 VAC supply, a controller DO relay driving a contactor directly, signal cable sharing a tray with power. This post walks through a DCM-8044-D panel for one AHU, from the transformer to every UI, AO and DO terminal.",
+ "tags": [
+  "Tủ DDC",
+  "DCM-8044-D",
+  "IO-V6002",
+  "24 VAC",
+  "Relay trung gian",
+  "Đấu dây UI/AO",
+  "AHU",
+  "Niagara 4"
+ ],
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1607631697491-61972eecf928?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Tủ điện đang lắp dây, aptomat và máng cáp",
+  "credit": "Troy Bridges",
+  "credit_url": "https://unsplash.com/photos/black-and-gray-audio-mixer-kXC6XhVL1e4"
+ },
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 640\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sơ đồ nguyên lý tủ DDC: nguồn 230 VAC, biến áp 230/24 VAC, nguồn 24 VDC, DCM-8044-D với IO-V6002, đấu dây UI, AO, DO qua relay trung gian sang MCC, BACnet/IP lên DCM 9000 Niagara 4\" font-family=\"'Maison Sans',system-ui,sans-serif\"><style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.fw{stroke:#B5AC9C;stroke-width:1.2;fill:none;stroke-dasharray:5 4}.p{fill:#C9A96A;font-size:12px}.bg{fill:#0C0B09}</style><path class=\"ln\" d=\"M135 120V190\"/><path class=\"ln\" d=\"M250 240H340\"/><path class=\"ln\" d=\"M250 400H340\"/><path class=\"ln\" d=\"M420 450V520\"/><path class=\"fw\" d=\"M580 200H740M580 280H740M580 360H740M580 440H740M840 470V530\"/><path class=\"fw\" d=\"M740 560H560V450\"/><text class=\"k\" x=\"20\" y=\"28\">NGUỒN TỦ DDC</text><text class=\"k\" x=\"340\" y=\"158\">BỘ ĐIỀU KHIỂN</text><text class=\"k\" x=\"740\" y=\"158\">THIẾT BỊ HIỆN TRƯỜNG</text><text class=\"k\" x=\"290\" y=\"626\">QUẢN LÝ</text><rect class=\"b\" x=\"20\" y=\"40\" width=\"230\" height=\"80\"/><text class=\"t\" x=\"34\" y=\"66\">Nguồn 230 VAC</text><text class=\"s\" x=\"34\" y=\"88\">MCB 2P riêng cho tủ DDC</text><text class=\"s\" x=\"34\" y=\"109\">Chống sét lan truyền</text><rect class=\"b\" x=\"20\" y=\"190\" width=\"230\" height=\"100\"/><text class=\"t\" x=\"34\" y=\"216\">Biến áp 230/24 VAC</text><text class=\"s\" x=\"34\" y=\"238\">Cầu chì thứ cấp</text><text class=\"s\" x=\"34\" y=\"259\">Cực G nối chung toàn tủ</text><text class=\"s\" x=\"34\" y=\"280\">Cấp actuator và cuộn relay</text><rect class=\"b\" x=\"20\" y=\"360\" width=\"230\" height=\"80\"/><text class=\"t\" x=\"34\" y=\"386\">Nguồn 24 VDC</text><text class=\"s\" x=\"34\" y=\"408\">Cấp vòng 4–20 mA 2 dây</text><text class=\"s\" x=\"34\" y=\"429\">Âm DC nối về G</text><rect class=\"b\" x=\"340\" y=\"170\" width=\"240\" height=\"280\"/><text class=\"t\" x=\"354\" y=\"196\">DCM-8044-D</text><text class=\"s\" x=\"354\" y=\"218\">+ IO-V6002 ở khe phải</text><text class=\"s\" x=\"354\" y=\"239\">8 UI · 4 DO · 4 AO</text><text class=\"s\" x=\"354\" y=\"260\">+ 6 UI · 2 DO</text><text class=\"s\" x=\"354\" y=\"281\">Nguồn 24 VAC, dưới 10 W</text><text class=\"s\" x=\"354\" y=\"302\">DO relay 24 VAC/DC 1 A</text><text class=\"s\" x=\"354\" y=\"323\">AO 0–10 V hoặc 4–20 mA</text><text class=\"s\" x=\"354\" y=\"344\">AO mA tải tối đa 800 Ω</text><text class=\"s\" x=\"354\" y=\"365\">UI: NTC 10K, V, mA, DI</text><text class=\"s\" x=\"354\" y=\"386\">Cổng Ethernet 10/100</text><rect class=\"b\" x=\"740\" y=\"170\" width=\"200\" height=\"60\"/><text class=\"t\" x=\"754\" y=\"196\">Cảm biến NTC 10K</text><text class=\"s\" x=\"754\" y=\"218\">Nhiệt độ gió cấp, 2 dây</text><rect class=\"b\" x=\"740\" y=\"250\" width=\"200\" height=\"60\"/><text class=\"t\" x=\"754\" y=\"276\">Transmitter 4–20 mA</text><text class=\"s\" x=\"754\" y=\"298\">Áp suất ống gió, 2 dây</text><rect class=\"b\" x=\"740\" y=\"330\" width=\"200\" height=\"60\"/><text class=\"t\" x=\"754\" y=\"356\">Actuator van 0–10 V</text><text class=\"s\" x=\"754\" y=\"378\">24V, G, Y: 3 dây</text><rect class=\"b\" x=\"740\" y=\"410\" width=\"200\" height=\"60\"/><text class=\"t\" x=\"754\" y=\"436\">Relay trung gian</text><text class=\"s\" x=\"754\" y=\"458\">Cuộn 24 VAC, đế cắm</text><rect class=\"b2\" x=\"740\" y=\"530\" width=\"200\" height=\"60\"/><text class=\"t\" x=\"754\" y=\"556\">MCC quạt AHU</text><text class=\"s\" x=\"754\" y=\"578\">Tiếp điểm phụ báo chạy</text><rect class=\"b2\" x=\"290\" y=\"520\" width=\"230\" height=\"70\"/><text class=\"t\" x=\"304\" y=\"546\">DCM 9000 · Niagara 4</text><text class=\"s\" x=\"304\" y=\"568\">Đồ họa, alarm, trend, lịch</text><rect class=\"bg\" x=\"103\" y=\"148\" width=\"64\" height=\"17\"/><text class=\"p\" x=\"135\" y=\"160\" text-anchor=\"middle\">230 VAC</text><rect class=\"bg\" x=\"267\" y=\"233\" width=\"56\" height=\"17\"/><text class=\"p\" x=\"295\" y=\"245\" text-anchor=\"middle\">24 VAC</text><rect class=\"bg\" x=\"267\" y=\"393\" width=\"56\" height=\"17\"/><text class=\"p\" x=\"295\" y=\"405\" text-anchor=\"middle\">24 VDC</text><rect class=\"bg\" x=\"622\" y=\"193\" width=\"76\" height=\"17\"/><text class=\"p\" x=\"660\" y=\"205\" text-anchor=\"middle\">UI1 · NTC</text><rect class=\"bg\" x=\"610\" y=\"273\" width=\"100\" height=\"17\"/><text class=\"p\" x=\"660\" y=\"285\" text-anchor=\"middle\">UI2 · 4–20 mA</text><rect class=\"bg\" x=\"614\" y=\"353\" width=\"92\" height=\"17\"/><text class=\"p\" x=\"660\" y=\"365\" text-anchor=\"middle\">AO1 · 0–10 V</text><rect class=\"bg\" x=\"614\" y=\"433\" width=\"92\" height=\"17\"/><text class=\"p\" x=\"660\" y=\"445\" text-anchor=\"middle\">DO1 · 24 VAC</text><rect class=\"bg\" x=\"808\" y=\"493\" width=\"64\" height=\"17\"/><text class=\"p\" x=\"840\" y=\"505\" text-anchor=\"middle\">230 VAC</text><rect class=\"bg\" x=\"606\" y=\"553\" width=\"88\" height=\"17\"/><text class=\"p\" x=\"650\" y=\"565\" text-anchor=\"middle\">UI3 · DI khô</text><rect class=\"bg\" x=\"382\" y=\"478\" width=\"76\" height=\"17\"/><text class=\"p\" x=\"420\" y=\"490\" text-anchor=\"middle\">BACnet/IP</text></svg>",
+  "caption_vi": "SĐNL tủ DDC cho một AHU: biến áp 230/24 VAC và nguồn 24 VDC dùng chung cực G; DCM-8044-D đọc NTC, 4–20 mA và tiếp điểm khô, xuất 0–10 V cho van, đóng relay trung gian 24 VAC để chạy MCC; BACnet/IP lên DCM 9000.",
+  "caption_en": "DDC panel schematic for one AHU: 230/24 VAC transformer and 24 VDC supply share one G reference; the DCM-8044-D reads NTC, 4–20 mA and dry contacts, drives the valve at 0–10 V and an interposing 24 VAC relay for the MCC; BACnet/IP up to the DCM 9000."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>Bản vẽ BMS thường dừng ở sơ đồ mạng và point list. Phần tủ DDC được giao cho đội tủ điện tự làm theo thói quen, và lỗi chỉ lộ ra lúc chạy thử: van nước lạnh đứng ở 50% dù lệnh là 0%, giá trị nhiệt độ nhảy mỗi khi quạt khởi động, relay trên bo DDC cháy tiếp điểm sau vài tuần.</p><p>Ba lỗi đó có chung gốc: tủ không có sơ đồ nguồn và sơ đồ đấu dây rõ ràng. DCM-8044-D chỉ có 16 điểm IO, nên mỗi đầu cuối sai là một thiết bị chạy sai.</p>",
+   "en": "<p>BMS drawings usually stop at the network riser and the point list. The DDC panel is left to the panel shop to build by habit, and the faults only show up at commissioning: a chilled water valve parked at 50% while the command is 0%, a temperature reading that jumps every time the fan starts, a relay on the DDC board with welded contacts after a few weeks.</p><p>All three share one root cause: the panel has no clear power and wiring schematic. A DCM-8044-D has only 16 IO points, so every wrong terminal is a device running wrong.</p>"
+  },
+  {
+   "h_vi": "Giải pháp",
+   "h_en": "Solution",
+   "vi": "<p>Chia tủ thành 3 khối và vẽ từng khối trước khi gia công:</p><ul><li><strong>Khối nguồn:</strong> MCB 2P riêng, biến áp 230/24 VAC có cầu chì thứ cấp, nguồn 24 VDC cho các transmitter 4–20 mA. Cực G của 24 VAC và âm của 24 VDC nối về một thanh chung.</li><li><strong>Khối điều khiển:</strong> DCM-8044-D cộng IO-V6002 ở khe phải, cho 14 UI, 6 DO, 4 AO. Cổng Ethernet đi BACnet/IP lên DCM 9000 chạy Niagara 4.</li><li><strong>Khối giao tiếp hiện trường:</strong> hàng terminal đánh số theo point list, relay trung gian 24 VAC trên đế cắm cho mọi lệnh chạy/dừng sang MCC.</li></ul>",
+   "en": "<p>Split the panel into 3 blocks and draw each one before fabrication:</p><ul><li><strong>Power block:</strong> a dedicated 2-pole MCB, a 230/24 VAC transformer with a secondary fuse, and a 24 VDC supply for the 4–20 mA transmitters. The 24 VAC G leg and the 24 VDC negative land on one common bar.</li><li><strong>Control block:</strong> DCM-8044-D plus an IO-V6002 in the right slot, giving 14 UI, 6 DO and 4 AO. The Ethernet port carries BACnet/IP up to a DCM 9000 running Niagara 4.</li><li><strong>Field interface block:</strong> a terminal row numbered to the point list, and plug-in 24 VAC interposing relays for every start/stop command to the MCC.</li></ul>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<ul><li><strong>Nguồn 24 VAC và cực G:</strong> DCM-8044-D nhận 24 VAC +20/-15% hoặc 24 VDC ±5%, tiêu thụ dưới 10 W. Khi actuator van 0–10 V dùng chung biến áp với DDC, chân G của actuator phải trùng chân G của DDC, vì tín hiệu Y được đo so với G. Đảo hai dây nguồn ở actuator là nguyên nhân hay gặp nhất của van đứng sai vị trí. Chọn biến áp theo tổng VA của DDC, actuator và cuộn relay theo datasheet từng thiết bị, chừa dư cho dòng khởi động.</li><li><strong>DO không kéo tải trực tiếp:</strong> relay DO của DCM-8044-D là SPST NO 24 VAC/DC 1 A. Không đưa 230 VAC của mạch MCC vào đầu DO. DO đóng cuộn relay trung gian 24 VAC, tiếp điểm relay trung gian mới đi vào mạch khởi động MCC. Thay relay trên đế cắm mất vài phút, thay DDC thì phải nạp lại chương trình.</li><li><strong>UI:</strong> NTC 10K type 2/3 đi 2 dây thẳng vào UI. Transmitter 4–20 mA 2 dây lấy nguồn từ 24 VDC, dòng vòng đi vào UI cấu hình mA. Trạng thái chạy lấy từ tiếp điểm phụ khô của contactor, UI chuyển sang DI bằng jumper.</li><li><strong>AO:</strong> 0–10 V cho van và biến tần là cách thường dùng. Nếu đường dây dài hoặc nhiễu nhiều thì chuyển sang 4–20 mA, tổng trở tải không quá 800 Ω.</li><li><strong>Đi dây:</strong> cáp tín hiệu xoắn đôi có chống nhiễu, nối chống nhiễu một đầu tại tủ. Máng tín hiệu tách khỏi cáp 230 VAC trong tủ và ngoài hiện trường.</li></ul>",
+   "en": "<ul><li><strong>24 VAC supply and the G leg:</strong> the DCM-8044-D takes 24 VAC +20/-15% or 24 VDC ±5% and draws under 10 W. When a 0–10 V valve actuator shares the transformer with the DDC, the actuator G must be the same leg as the DDC G, because the Y signal is measured against G. Swapping the two supply wires at the actuator is the most common cause of a valve sitting in the wrong position. Size the transformer on the total VA of DDC, actuators and relay coils from each datasheet, with headroom for inrush.</li><li><strong>DOs do not switch loads:</strong> the DCM-8044-D DO relays are SPST NO rated 24 VAC/DC 1 A. Never bring the 230 VAC MCC circuit onto a DO terminal. The DO energises a 24 VAC interposing relay coil, and that relay contact goes into the MCC start circuit. A plug-in relay is a few minutes to replace; a DDC means reloading the program.</li><li><strong>UIs:</strong> NTC 10K type 2/3 wires straight into a UI on 2 cores. A 2-wire 4–20 mA transmitter is powered from 24 VDC and its loop current returns into a UI set to mA. Run status comes from a dry auxiliary contact on the contactor, with the UI set to DI by jumper.</li><li><strong>AOs:</strong> 0–10 V is the usual choice for valves and VSDs. For long runs or noisy routes switch to 4–20 mA, with total loop load no more than 800 Ω.</li><li><strong>Cabling:</strong> twisted pair, screened, screen earthed at the panel end only. Keep signal trunking separate from 230 VAC cable, inside the panel and in the field.</li></ul>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<ul><li><strong>Tủ AHU, PAU, bơm:</strong> một DCM-8044-D cộng IO-V6002 đủ cho một AHU nước lạnh có biến tần như bảng dưới. Cần nhiều DO hơn thì gắn thêm IO-0008-485 qua RS-485.</li><li><strong>Tủ dùng DCM-8446:</strong> cùng nguyên tắc nguồn và relay trung gian; DO relay của DCM-8446 là 30 VDC 1 A / 125 VAC 0.5 A, vẫn không kéo contactor trực tiếp.</li><li><strong>Hồ sơ nghiệm thu:</strong> nộp sơ đồ nguồn, sơ đồ terminal và point list cùng một bộ số hiệu. Thử point-to-point theo số terminal, không theo tên trong phần mềm.</li></ul>",
+   "en": "<ul><li><strong>AHU, PAU and pump panels:</strong> one DCM-8044-D plus IO-V6002 covers a chilled water AHU with a VSD as in the table below. For more DOs, add an IO-0008-485 on RS-485.</li><li><strong>Panels built on DCM-8446:</strong> the same power and interposing relay rules apply; DCM-8446 DO relays are rated 30 VDC 1 A / 125 VAC 0.5 A and still should not drive a contactor directly.</li><li><strong>Handover documents:</strong> submit the power schematic, terminal schedule and point list under one numbering. Run point-to-point tests by terminal number, not by the name in the software.</li></ul>"
+  }
+ ],
+ "table": {
+  "caption_vi": "Phân bổ IO tủ DDC cho một AHU nước lạnh có biến tần",
+  "caption_en": "IO allocation for one chilled water AHU with VSD",
+  "head": [
+   "Đầu / Terminal",
+   "Tín hiệu / Signal",
+   "Loại / Type",
+   "Thiết bị / Device"
+  ],
+  "rows": [
+   [
+    "UI1",
+    "Nhiệt độ gió cấp / Supply air temp",
+    "NTC 10K",
+    "Cảm biến ống gió"
+   ],
+   [
+    "UI2",
+    "Áp suất ống gió / Duct static pressure",
+    "4–20 mA",
+    "Transmitter, nguồn 24 VDC"
+   ],
+   [
+    "UI3",
+    "Trạng thái quạt / Fan run status",
+    "DI khô",
+    "Tiếp điểm phụ contactor"
+   ],
+   [
+    "UI4",
+    "Bẩn lọc / Filter alarm",
+    "DI khô",
+    "Công tắc chênh áp"
+   ],
+   [
+    "UI5",
+    "Nhiệt độ gió hồi / Return air temp",
+    "NTC 10K",
+    "Cảm biến ống gió"
+   ],
+   [
+    "UI6",
+    "Lỗi biến tần / VSD fault",
+    "DI khô",
+    "Relay lỗi biến tần"
+   ],
+   [
+    "AO1",
+    "Van nước lạnh / CHW valve",
+    "0–10 V",
+    "Actuator 24 VAC"
+   ],
+   [
+    "AO2",
+    "Tốc độ quạt / Fan speed",
+    "0–10 V",
+    "Biến tần"
+   ],
+   [
+    "DO1",
+    "Chạy/dừng quạt / Fan start",
+    "Relay 24 VAC",
+    "Relay trung gian, MCC"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "Mitsubishi Electric Asia, DCM-8044/DCM-8044-D with IO Modules (2024) and Diamond Controls catalogue (2023)"
+  },
+  {
+   "title": "Mitsubishi Electric Vietnam, Building Management System",
+   "url": "https://buildingsolutions.mitsubishi-electric.vn/en/bms/"
+  }
+ ],
+ "x_post": "16 IO points on a DCM-8044-D. Most commissioning faults sit in the panel:\n\n- actuator G leg swapped, valve stuck at 50%\n- 230 V on a 1 A DO relay\n- signal cable in the power tray\n\nFix: common G, interposing relays.\n\nFull schematic on the blog, link in bio.",
+ "fb_post": "Tủ DDC DCM-8044-D chỉ có 16 điểm IO, nên mỗi đầu cuối đấu sai là một thiết bị chạy sai. Phần lớn lỗi chạy thử BMS nằm trong tủ, không nằm trong phần mềm.\n\n3 lỗi hay gặp và cách tránh:\n\n1. Van nước lạnh đứng sai vị trí: actuator 0–10 V dùng chung biến áp 24 VAC với DDC nhưng đảo chân G. Tín hiệu Y đo so với G, nên G phải nối chung toàn tủ.\n2. Relay trên bo DDC cháy tiếp điểm: DO của DCM-8044-D là relay 24 VAC/DC 1 A. Lệnh chạy sang MCC phải qua relay trung gian 24 VAC trên đế cắm.\n3. Giá trị nhiệt độ nhảy khi quạt khởi động: cáp tín hiệu đi chung máng với cáp 230 VAC. Dùng cáp xoắn đôi chống nhiễu, nối chống nhiễu một đầu tại tủ.\n\nBài mới có sơ đồ nguyên lý tủ DDC cho một AHU và bảng phân bổ IO từng đầu UI, AO, DO:\nhttps://elvconsultant.com/blog/bms/2026-11-21-so-do-tu-ddc-nguon-24vac-relay-dau-day.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #TuDDC #MitsubishiElectric #DiamondControls #Niagara4"
+}

@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-21",
+  "slug": "so-do-tu-ddc-nguon-24vac-relay-dau-day",
+  "title_vi": "Sơ đồ đấu dây tủ DDC",
+  "title_en": "DDC panel wiring schematic",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-21-so-do-tu-ddc-nguon-24vac-relay-dau-day.html",
+  "x_post": "16 IO points on a DCM-8044-D. Most commissioning faults sit in the panel:\n\n- actuator G leg swapped, valve stuck at 50%\n- 230 V on a 1 A DO relay\n- signal cable in the power tray\n\nFix: common G, interposing relays.\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Tủ DDC DCM-8044-D chỉ có 16 điểm IO, nên mỗi đầu cuối đấu sai là một thiết bị chạy sai. Phần lớn lỗi chạy thử BMS nằm trong tủ, không nằm trong phần mềm.\n\n3 lỗi hay gặp và cách tránh:\n\n1. Van nước lạnh đứng sai vị trí: actuator 0–10 V dùng chung biến áp 24 VAC với DDC nhưng đảo chân G. Tín hiệu Y đo so với G, nên G phải nối chung toàn tủ.\n2. Relay trên bo DDC cháy tiếp điểm: DO của DCM-8044-D là relay 24 VAC/DC 1 A. Lệnh chạy sang MCC phải qua relay trung gian 24 VAC trên đế cắm.\n3. Giá trị nhiệt độ nhảy khi quạt khởi động: cáp tín hiệu đi chung máng với cáp 230 VAC. Dùng cáp xoắn đôi chống nhiễu, nối chống nhiễu một đầu tại tủ.\n\nBài mới có sơ đồ nguyên lý tủ DDC cho một AHU và bảng phân bổ IO từng đầu UI, AO, DO:\nhttps://elvconsultant.com/blog/bms/2026-11-21-so-do-tu-ddc-nguon-24vac-relay-dau-day.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #TuDDC #MitsubishiElectric #DiamondControls #Niagara4"
+ },
+ {
   "date": "2026-11-20",
   "slug": "interface-bms-bao-chay",
   "title_vi": "Interface BMS và hệ thống báo cháy",
