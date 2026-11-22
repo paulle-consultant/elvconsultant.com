@@ -141,7 +141,8 @@
    "pillar": "Hỏi đáp & tổng hợp",
    "pillar_en": "Q&A and recap",
    "topic": "Tổng hợp tuần: cấu hình DDC chuẩn cho AHU, FCU, bơm",
-   "status": "planned"
+   "status": "published",
+   "slug": "cau-hinh-ddc-chuan-ahu-fcu-bom"
   },
   {
    "date": "2026-11-23",

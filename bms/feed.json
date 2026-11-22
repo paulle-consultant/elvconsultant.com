@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-22",
+  "slug": "cau-hinh-ddc-chuan-ahu-fcu-bom",
+  "title_vi": "Cấu hình DDC chuẩn: AHU, FCU, bơm",
+  "title_en": "Standard DDC configs: AHU, FCU, pumps",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-22-cau-hinh-ddc-chuan-ahu-fcu-bom.html",
+  "x_post": "30 IO points on a DCM-8446 combo covers a PAU, a 3-pump set or 3 lobby FCUs. Pick the module by what you are short of:\n\n- AO short: IO-6020\n- DI short: IO-0800\n- DO short: IO-0008\n\nAHUs get a DCM-8044-D on BACnet/IP.\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Một DCM-8446 ghép thêm 1 module là đủ 30 điểm IO, phủ được PAU, cụm 3 bơm nước lạnh hoặc 3 FCU sảnh. Tổng hợp tuần này là bảng cấu hình DDC chuẩn để bóc tách BMS nhanh.\n\n1. AHU VAV 2 quạt biến tần: DCM-8044-D + IO-V6002, dùng 20/24 điểm, BACnet/IP thẳng lên DCM 9000.\n2. PAU gió tươi: DCM-8446 + IO-6020, dùng 22/30 điểm.\n3. Cụm 3 bơm CHW: DCM-8446 + IO-0800, mỗi bơm 3 DI, 1 DO, 1 AO.\n4. FCU sảnh: DCM-8446 + IO-0008 cho quạt 3 cấp, hoặc + IO-6020 cho quạt EC.\n5. FCU phòng: không cần DDC, thermostat mạng vào cổng RS-485 thứ hai của DCM 9000.\n\nChọn module theo loại điểm đang thiếu, và chừa tối thiểu 15% dự phòng trên từng loại UI, DI, DO, AO.\n\nBài có sơ đồ nguyên lý và bảng cấu hình đầy đủ:\nhttps://elvconsultant.com/blog/bms/2026-11-22-cau-hinh-ddc-chuan-ahu-fcu-bom.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #DDC #MitsubishiElectric #DiamondControls #Niagara4"
+ },
+ {
   "date": "2026-11-21",
   "slug": "so-do-tu-ddc-nguon-24vac-relay-dau-day",
   "title_vi": "Sơ đồ đấu dây tủ DDC",
