@@ -1,0 +1,137 @@
+{
+ "date": "2026-11-23",
+ "slug": "bms-van-phong-hang-b-20000-m2-dcm-9100",
+ "pillar_vi": "Giải pháp theo phân khúc",
+ "pillar_en": "Solutions by segment",
+ "title_vi": "BMS văn phòng hạng B 20.000 m²",
+ "title_en": "BMS for a 20,000 m² Grade B office",
+ "lead_vi": "Tòa văn phòng cho thuê 20.000 m² có 34 đồng hồ điện theo tầng thì license Niagara chạm trần theo số thiết bị, không phải số điểm. Bài này đưa ra cấu hình DCM-9100 với hai trục Modbus RTU cho đồng hồ và cách đếm để chọn đúng bậc license.",
+ "lead_en": "A 20,000 m² lettable office with 34 floor energy meters hits its Niagara licence ceiling on device count, not point count. This post sets out a DCM-9100 design with two Modbus RTU meter trunks and how to count so the licence tier is right the first time.",
+ "tags": [
+  "BMS",
+  "Văn phòng hạng B",
+  "Niagara 4",
+  "Diamond Controls",
+  "DCM-9100",
+  "DCM-8044-D",
+  "Modbus RTU",
+  "Đo đếm năng lượng"
+ ],
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 690\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sơ đồ nguyên lý BMS văn phòng hạng B 20.000 m² với DCM-9100 Niagara 4 và đồng hồ điện theo tầng\" font-family=\"'Maison Sans',system-ui,sans-serif\"><style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.fw{stroke:#B5AC9C;stroke-width:1.2;fill:none;stroke-dasharray:5 4}.p{fill:#C9A96A;font-size:12px}.bg{fill:#0C0B09}</style><text class=\"k\" x=\"20\" y=\"28\">MANAGEMENT LEVEL</text><rect class=\"b\" x=\"20\" y=\"44\" width=\"520\" height=\"96\"/><text class=\"t\" x=\"34\" y=\"72\">Niagara 4 web UI and energy reports</text><text class=\"s\" x=\"34\" y=\"96\">Floor graphics, AHU schedules, alarms, trends</text><text class=\"s\" x=\"34\" y=\"118\">15-minute kWh logs, monthly report per floor</text><rect class=\"b2\" x=\"640\" y=\"44\" width=\"300\" height=\"96\"/><text class=\"t\" x=\"654\" y=\"72\">Building engineer</text><text class=\"s\" x=\"654\" y=\"96\">Workbench over VPN</text><text class=\"s\" x=\"654\" y=\"118\">kWh export per tenant (CSV)</text><path class=\"ln\" d=\"M540 92H640\"/><rect class=\"bg\" x=\"548\" y=\"72\" width=\"84\" height=\"16\"/><text class=\"p\" x=\"552\" y=\"84\">Fox TLS</text><path class=\"ln\" d=\"M240 140V230\"/><rect class=\"bg\" x=\"248\" y=\"168\" width=\"60\" height=\"16\"/><text class=\"p\" x=\"252\" y=\"180\">HTTPS</text><text class=\"k\" x=\"20\" y=\"214\">AUTOMATION LEVEL</text><rect class=\"b\" x=\"20\" y=\"230\" width=\"460\" height=\"100\"/><text class=\"t\" x=\"34\" y=\"258\">DCM-9100 · Niagara 4.13+</text><text class=\"s\" x=\"34\" y=\"282\">Licence: 100 devices, 5,000 points</text><text class=\"s\" x=\"34\" y=\"304\">2 × isolated RS-485, 2 × Gigabit Ethernet</text><rect class=\"b2\" x=\"600\" y=\"230\" width=\"340\" height=\"100\"/><text class=\"t\" x=\"614\" y=\"258\">IO-R-34 × 2, local IO</text><text class=\"s\" x=\"614\" y=\"282\">Each: 16 UI, 10 relay DO, 8 AO</text><text class=\"s\" x=\"614\" y=\"304\">Car park fans, domestic water pumps</text><path class=\"ln\" d=\"M480 280H600\"/><rect class=\"bg\" x=\"506\" y=\"260\" width=\"64\" height=\"16\"/><text class=\"p\" x=\"510\" y=\"272\">IO bus</text><text class=\"k\" x=\"20\" y=\"396\">FIELD LEVEL</text><path class=\"ln\" d=\"M200 330V370M126 370H362M126 370V410M362 370V410\"/><path class=\"ln\" d=\"M400 330V392H598V410\"/><path class=\"ln\" d=\"M460 330V352H834V410\"/><rect class=\"bg\" x=\"208\" y=\"346\" width=\"132\" height=\"16\"/><text class=\"p\" x=\"212\" y=\"358\">BACnet/IP · Ethernet</text><rect class=\"bg\" x=\"470\" y=\"384\" width=\"134\" height=\"16\"/><text class=\"p\" x=\"474\" y=\"396\">Modbus RTU · port 1</text><rect class=\"bg\" x=\"640\" y=\"344\" width=\"134\" height=\"16\"/><text class=\"p\" x=\"644\" y=\"356\">Modbus RTU · port 2</text><rect class=\"b\" x=\"20\" y=\"410\" width=\"212\" height=\"100\"/><text class=\"t\" x=\"34\" y=\"438\">Floor AHU × 15</text><text class=\"s\" x=\"34\" y=\"462\">DCM-8044-D on each floor</text><text class=\"s\" x=\"34\" y=\"484\">16 points: 8 UI, 4 DO, 4 AO</text><rect class=\"b\" x=\"256\" y=\"410\" width=\"212\" height=\"100\"/><text class=\"t\" x=\"270\" y=\"438\">Chiller plant</text><text class=\"s\" x=\"270\" y=\"462\">3 chillers on BACnet/IP</text><text class=\"s\" x=\"270\" y=\"484\">3 × DCM-8044 + IO-V6002</text><rect class=\"b\" x=\"492\" y=\"410\" width=\"212\" height=\"100\"/><text class=\"t\" x=\"506\" y=\"438\">Meters, trunk A</text><text class=\"s\" x=\"506\" y=\"462\">Floors 1–8 + MSB: 20 meters</text><text class=\"s\" x=\"506\" y=\"484\">Riser cable, end-of-line 120 Ω</text><rect class=\"b\" x=\"728\" y=\"410\" width=\"212\" height=\"100\"/><text class=\"t\" x=\"742\" y=\"438\">Meters, trunk B</text><text class=\"s\" x=\"742\" y=\"462\">Floors 9–15: 14 meters</text><text class=\"s\" x=\"742\" y=\"484\">kWh, kW, V, I, PF per meter</text><text class=\"k\" x=\"20\" y=\"566\">LICENCE SIZING: WHY DCM-9100</text><rect class=\"b2\" x=\"20\" y=\"582\" width=\"920\" height=\"88\"/><text class=\"s\" x=\"36\" y=\"614\">Network devices: 57</text><text class=\"s\" x=\"340\" y=\"614\">Points: about 782</text><text class=\"s\" x=\"660\" y=\"614\">34 meters count as 34 devices</text><text class=\"s\" x=\"36\" y=\"644\">DCM-9025: 25 devices, too few</text><text class=\"s\" x=\"340\" y=\"644\">DCM-9100: 100 devices, 5,000 points</text><text class=\"s\" x=\"660\" y=\"644\">Headroom: 43 devices</text></svg>",
+  "caption_vi": "SĐNL BMS văn phòng hạng B 20.000 m²: DCM-9100 chạy Niagara 4, nối AHU tầng (DCM-8044-D), chiller và bộ điều khiển phòng máy qua BACnet/IP; 34 đồng hồ điện chia trên 2 cổng RS-485 Modbus RTU; quạt hầm và bơm qua 2 IO-R-34. Dưới cùng là phép đếm license.",
+  "caption_en": "BMS schematic for a 20,000 m² Grade B office: a DCM-9100 runs Niagara 4 and reaches floor AHUs (DCM-8044-D), chillers and plant controllers over BACnet/IP; 34 energy meters split across 2 RS-485 Modbus RTU ports; car park fans and pumps through 2 IO-R-34 modules. Bottom: the licence count."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>Văn phòng hạng B khoảng 20.000 m² thường có 12 đến 18 tầng cho thuê, nhiều khách thuê trên một sàn, chiller nước lạnh và AHU theo tầng. Ban quản lý cần hai thứ: vận hành điều hòa theo giờ làm việc của từng tầng, và tách được điện năng theo tầng hoặc theo khách thuê mỗi tháng.</p><p>Lỗi hay gặp ở giai đoạn thiết kế là chọn bộ điều khiển Niagara theo số điểm. Tính theo điểm, tòa này chỉ khoảng <strong>782 điểm</strong>, nằm trong bậc DCM-9025 (1.250 điểm). Nhưng license Diamond Controls giới hạn cả số thiết bị, và đồng hồ điện Modbus là thiết bị mạng. <strong>34 đồng hồ</strong> đã vượt giới hạn <strong>25 thiết bị</strong> của DCM-9025 trước khi tính AHU hay chiller. Phát hiện ở giai đoạn chạy thử thì phải đổi license giữa chừng.</p>",
+   "en": "<p>A Grade B office of about 20,000 m² usually has 12 to 18 lettable floors, several tenants per floor, a chilled water plant and one AHU per floor. The building manager needs two things: air conditioning that follows each floor's working hours, and energy split by floor or tenant every month.</p><p>A common design mistake is sizing the Niagara controller by point count. By points, this building has only about <strong>782 points</strong>, inside the DCM-9025 tier (1,250 points). But Diamond Controls licences also cap the device count, and every Modbus energy meter is a network device. <strong>34 meters</strong> already exceed the <strong>25-device</strong> limit of a DCM-9025 before a single AHU or chiller is counted. Found during commissioning, that means a licence change mid-project.</p>"
+  },
+  {
+   "h_vi": "Giải pháp: DCM-9100 và hai trục đồng hồ",
+   "h_en": "Solution: DCM-9100 and two meter trunks",
+   "vi": "<ul><li><strong>Một DCM-9100 chạy Niagara 4.13+:</strong> 100 thiết bị, 5.000 điểm. Ví dụ giả định trong bảng dưới dùng 57 thiết bị, còn 43 thiết bị dự phòng khi khách thuê chia nhỏ sàn và cần thêm đồng hồ.</li><li><strong>Mạng BACnet/IP cho AHU và chiller:</strong> mỗi tầng một DCM-8044-D (16 điểm, có LCD tại tủ), 3 chiller vào qua card BACnet/IP, phòng máy dùng 3 DCM-8044 kèm module IO-V6002 cho bơm, tháp giải nhiệt và van.</li><li><strong>Hai trục RS-485 Modbus RTU cho đồng hồ:</strong> DCM 9000 có sẵn 2 cổng RS-485 cách ly. Trục A cho tầng 1 đến 8 và tủ MSB (20 đồng hồ), trục B cho tầng 9 đến 15 (14 đồng hồ). Mỗi tầng 2 đồng hồ: điều hòa và điện chiếu sáng, ổ cắm.</li><li><strong>IO tại chỗ cho phụ tải hầm:</strong> 2 module IO-R-34 (mỗi module 16 UI, 10 DO relay, 8 AO) cho quạt hút hầm xe và bơm nước sinh hoạt, không cần DDC riêng.</li></ul>",
+   "en": "<ul><li><strong>One DCM-9100 running Niagara 4.13+:</strong> 100 devices, 5,000 points. The hypothetical example in the table below uses 57 devices, leaving 43 spare for when tenants split floors and need more meters.</li><li><strong>BACnet/IP network for AHUs and chillers:</strong> one DCM-8044-D per floor (16 points, LCD at the panel), 3 chillers through BACnet/IP cards, and 3 DCM-8044 with IO-V6002 modules in the plant room for pumps, cooling towers and valves.</li><li><strong>Two RS-485 Modbus RTU trunks for meters:</strong> the DCM 9000 has 2 isolated RS-485 ports built in. Trunk A serves floors 1 to 8 plus the MSB (20 meters), trunk B floors 9 to 15 (14 meters). Each floor gets 2 meters: air conditioning, and lighting plus small power.</li><li><strong>Local IO for basement loads:</strong> 2 IO-R-34 modules (each 16 UI, 10 relay DO, 8 AO) handle car park exhaust fans and domestic water pumps without a separate DDC.</li></ul>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<ol><li><strong>Đếm thiết bị trước, đếm điểm sau.</strong> Các bậc license: DCM-9025 (25/1.250), DCM-9100 (100/5.000), DCM-9200 (200/10.000). Với tòa nhiều đồng hồ, số thiết bị chạm trần trước số điểm. Phương án khác là DCM-9025 cộng gói nâng cấp DEVICE-50 (75 thiết bị); cả hai đều không phải thay phần cứng.</li><li><strong>Giới hạn tải RS-485.</strong> Chuẩn RS-485 cho 32 tải đơn vị trên một đoạn mạng không có repeater. Chia 20 và 14 đồng hồ trên 2 trục giữ mỗi trục dưới ngưỡng này và một trục lỗi không làm mất số liệu cả tòa. Đi dây trục đứng theo kiểu nối tiếp (daisy chain), điện trở cuối đường 120 Ω ở đồng hồ xa nhất, không rẽ nhánh hình sao.</li><li><strong>Khi cần thêm cổng.</strong> Nếu khách thuê chia sàn làm số đồng hồ tăng, DCM 9000 nhận module NPB-8000-2X-485 (tối đa 2 module, mỗi module 2 cổng RS-485) thay vì kéo dài trục hiện có.</li><li><strong>Ghi kWh theo chu kỳ 15 phút.</strong> Niagara lưu lịch sử kWh tích lũy của từng đồng hồ, báo cáo tháng lấy hiệu số đầu kỳ và cuối kỳ. Đọc thanh ghi kWh tích lũy, không cộng dồn từ kW, để mất kết nối vài giờ không làm sai số liệu tháng.</li><li><strong>Lịch AHU theo tầng.</strong> Mỗi DCM-8044-D nhận lịch riêng từ Niagara, khách thuê làm ngoài giờ thì bật thêm cho đúng tầng đó, và điện năng ngoài giờ hiện ngay trên đồng hồ điều hòa của tầng.</li></ol>",
+   "en": "<ol><li><strong>Count devices first, points second.</strong> Licence tiers: DCM-9025 (25/1,250), DCM-9100 (100/5,000), DCM-9200 (200/10,000). In a meter-heavy building the device count hits the ceiling before the point count. The alternative is a DCM-9025 plus a DEVICE-50 upgrade (75 devices); neither needs new hardware.</li><li><strong>RS-485 load limit.</strong> The RS-485 standard allows 32 unit loads per segment without a repeater. Splitting 20 and 14 meters over 2 trunks keeps each well under that, and one faulty trunk does not take out the whole building's data. Run the riser as a daisy chain with a 120 Ω end-of-line resistor at the farthest meter, no star branches.</li><li><strong>When more ports are needed.</strong> If tenant splits push the meter count up, the DCM 9000 takes NPB-8000-2X-485 modules (up to 2, each with 2 RS-485 ports) instead of stretching the existing trunks.</li><li><strong>Log kWh every 15 minutes.</strong> Niagara stores each meter's cumulative kWh history; the monthly report takes the difference between period start and end. Read the cumulative kWh register rather than integrating kW, so a few hours of lost comms do not corrupt the monthly figure.</li><li><strong>AHU schedules per floor.</strong> Each DCM-8044-D gets its own schedule from Niagara. A tenant working late switches on their floor only, and the after-hours energy shows up directly on that floor's AC meter.</li></ol>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<p><strong>Văn phòng cho thuê 15.000 đến 30.000 m²:</strong> chiller và AHU theo tầng, nhiều khách thuê, cần báo cáo điện tháng. <strong>Tòa hỗn hợp văn phòng và thương mại:</strong> khối đế dùng thêm trục RS-485 riêng cho đồng hồ từng gian hàng. <strong>Cải tạo tòa cũ:</strong> giữ chiller, thay bộ điều khiển AHU bằng DCM-8044-D và lắp đồng hồ Modbus theo tầng, đáp ứng yêu cầu đo đếm của Luật 77/2025/QH15 với cơ sở sử dụng năng lượng trọng điểm. <strong>Tòa thiết kế theo QCVN 09:2017/BXD:</strong> số liệu theo tầng và theo hệ thống là đầu vào cho kiểm toán năng lượng.</p>",
+   "en": "<p><strong>Lettable offices of 15,000 to 30,000 m²:</strong> chillers and per-floor AHUs, many tenants, monthly energy reports. <strong>Mixed office and retail:</strong> the podium gets its own RS-485 trunk for shop meters. <strong>Retrofits:</strong> keep the chillers, replace AHU controls with DCM-8044-D and add Modbus meters per floor, meeting the metering duty that Law 77/2025/QH15 places on designated energy users. <strong>Buildings designed to QCVN 09:2017/BXD:</strong> data by floor and by system feeds the energy audit.</p>"
+  }
+ ],
+ "table": {
+  "caption_vi": "Ví dụ giả định: văn phòng hạng B 15 tầng, khoảng 20.000 m²",
+  "caption_en": "Hypothetical example: 15-floor Grade B office, about 20,000 m²",
+  "head": [
+   "Hệ thống / System",
+   "Thiết bị / Device",
+   "Giao thức / Protocol",
+   "Thiết bị mạng / Devices",
+   "Điểm / Points"
+  ],
+  "rows": [
+   [
+    "AHU tầng / Floor AHU × 15",
+    "DCM-8044-D × 15",
+    "BACnet/IP",
+    "15",
+    "240"
+   ],
+   [
+    "Chiller × 3",
+    "Card BACnet / BACnet card",
+    "BACnet/IP",
+    "3",
+    "90"
+   ],
+   [
+    "Bơm, tháp, van / Pumps, towers, valves",
+    "DCM-8044 + IO-V6002 × 3",
+    "BACnet/IP",
+    "3",
+    "72"
+   ],
+   [
+    "Đồng hồ tầng và MSB / Floor and MSB meters × 34",
+    "Đồng hồ đa năng / Multifunction meter",
+    "Modbus RTU, 2 trục / trunks",
+    "34",
+    "272"
+   ],
+   [
+    "Thang máy, báo cháy / Lifts, fire alarm",
+    "Gateway BACnet × 2",
+    "BACnet/IP",
+    "2",
+    "40"
+   ],
+   [
+    "Quạt hầm, bơm sinh hoạt / Car park fans, pumps",
+    "IO-R-34 × 2",
+    "Nối cứng / Hard-wired",
+    "–",
+    "68"
+   ],
+   [
+    "Tổng / Total",
+    "DCM-9100 (100 / 5.000)",
+    "",
+    "57",
+    "782"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "Mitsubishi Electric Asia, Diamond Controls catalogue (2023) and DCM-8044/DCM-8044-D with IO Modules (2024)"
+  },
+  {
+   "title": "Mitsubishi Electric Vietnam, Building Management System",
+   "url": "https://buildingsolutions.mitsubishi-electric.vn/en/bms/"
+  },
+  {
+   "title": "LuatVietnam, Law on Economical and Efficient Use of Energy revised, No. 77/2025/QH15",
+   "url": "https://english.luatvietnam.vn/cong-nghiep/law-on-economical-and-efficient-use-of-energy-revised-no-77-2025-qh15-404895-d1.html"
+  },
+  {
+   "title": "QCVN 09:2017/BXD, Quy chuẩn kỹ thuật quốc gia về các công trình xây dựng sử dụng năng lượng hiệu quả"
+  }
+ ],
+ "x_post": "A 20,000 m² office with 34 floor meters outgrows the Niagara licence its points suggest.\n\n• 782 points: fits DCM-9025\n• 57 devices: does not (limit 25)\n• DCM-9100: 100 devices, 5,000 points\n• Meters on 2 RS-485 trunks: 20 + 14\n\nFull schematic on the blog, link in bio.",
+ "fb_post": "Văn phòng 20.000 m² có 34 đồng hồ điện theo tầng: license Niagara chạm trần theo số thiết bị, không phải số điểm.\n\nTính theo điểm, tòa 15 tầng trong ví dụ chỉ khoảng 782 điểm, nằm trong bậc DCM-9025. Nhưng mỗi đồng hồ Modbus là một thiết bị mạng, và 34 đồng hồ đã vượt giới hạn 25 thiết bị trước khi tính AHU hay chiller.\n\nCấu hình trong bài:\n1. Một DCM-9100 chạy Niagara 4: 100 thiết bị, 5.000 điểm, còn dư 43 thiết bị\n2. Mỗi tầng một DCM-8044-D cho AHU, lịch chạy riêng theo tầng\n3. Chiller và phòng máy trên BACnet/IP\n4. 34 đồng hồ chia 2 trục RS-485 Modbus RTU: 20 và 14\n5. Báo cáo kWh tháng theo tầng từ lịch sử 15 phút\n\nSơ đồ nguyên lý và bảng đếm thiết bị:\nhttps://elvconsultant.com/blog/bms/2026-11-23-bms-van-phong-hang-b-20000-m2-dcm-9100.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #Niagara4 #MitsubishiElectric #DiamondControls #ToaNhaVanPhong",
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1537806528894-fab651b81f42?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Tòa văn phòng nhìn từ dưới lên vào ban đêm",
+  "credit": "Michal Soukup",
+  "credit_url": "https://unsplash.com/photos/low-angle-photography-of-building-6r0V06mhODA"
+ }
+}

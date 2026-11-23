@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-23",
+  "slug": "bms-van-phong-hang-b-20000-m2-dcm-9100",
+  "title_vi": "BMS văn phòng hạng B 20.000 m²",
+  "title_en": "BMS for a 20,000 m² Grade B office",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-23-bms-van-phong-hang-b-20000-m2-dcm-9100.html",
+  "x_post": "A 20,000 m² office with 34 floor meters outgrows the Niagara licence its points suggest.\n\n• 782 points: fits DCM-9025\n• 57 devices: does not (limit 25)\n• DCM-9100: 100 devices, 5,000 points\n• Meters on 2 RS-485 trunks: 20 + 14\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Văn phòng 20.000 m² có 34 đồng hồ điện theo tầng: license Niagara chạm trần theo số thiết bị, không phải số điểm.\n\nTính theo điểm, tòa 15 tầng trong ví dụ chỉ khoảng 782 điểm, nằm trong bậc DCM-9025. Nhưng mỗi đồng hồ Modbus là một thiết bị mạng, và 34 đồng hồ đã vượt giới hạn 25 thiết bị trước khi tính AHU hay chiller.\n\nCấu hình trong bài:\n1. Một DCM-9100 chạy Niagara 4: 100 thiết bị, 5.000 điểm, còn dư 43 thiết bị\n2. Mỗi tầng một DCM-8044-D cho AHU, lịch chạy riêng theo tầng\n3. Chiller và phòng máy trên BACnet/IP\n4. 34 đồng hồ chia 2 trục RS-485 Modbus RTU: 20 và 14\n5. Báo cáo kWh tháng theo tầng từ lịch sử 15 phút\n\nSơ đồ nguyên lý và bảng đếm thiết bị:\nhttps://elvconsultant.com/blog/bms/2026-11-23-bms-van-phong-hang-b-20000-m2-dcm-9100.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #Niagara4 #MitsubishiElectric #DiamondControls #ToaNhaVanPhong"
+ },
+ {
   "date": "2026-11-22",
   "slug": "cau-hinh-ddc-chuan-ahu-fcu-bom",
   "title_vi": "Cấu hình DDC chuẩn: AHU, FCU, bơm",
