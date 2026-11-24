@@ -1,0 +1,115 @@
+{
+ "date": "2026-11-24",
+ "slug": "chon-license-dcm-9000-9005-9200",
+ "pillar_vi": "Kỹ thuật sản phẩm",
+ "pillar_en": "Product engineering",
+ "title_vi": "Chọn license DCM 9000 đúng bậc",
+ "title_en": "Choosing the right DCM 9000 licence",
+ "lead_vi": "Năm bậc license DCM 9000, từ 9005 đến 9200, đều cho 50 điểm trên mỗi thiết bị. Đếm cả thiết bị lẫn điểm, cộng 20% dự phòng, rồi chọn bậc nhỏ nhất chứa được cả hai.",
+ "lead_en": "All five DCM 9000 licence tiers, 9005 to 9200, give 50 points per device. Count both devices and points, add 20% headroom, then pick the smallest tier that holds both.",
+ "tags": [
+  "BMS",
+  "Niagara 4",
+  "Diamond Controls",
+  "DCM 9000",
+  "License Niagara",
+  "BACnet",
+  "Modbus RTU"
+ ],
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 680\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sơ đồ nguyên lý đếm license DCM 9000 Niagara 4: thiết bị và điểm trên BACnet/IP, BACnet MS/TP, Modbus RTU và năm bậc license\" font-family=\"'Maison Sans',system-ui,sans-serif\"><style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.p{fill:#C9A96A;font-size:12px}.bg{fill:#0C0B09}</style><text class=\"k\" x=\"20\" y=\"28\">AUTOMATION LEVEL · NIAGARA STATION</text><rect class=\"b\" x=\"260\" y=\"44\" width=\"440\" height=\"110\"/><text class=\"t\" x=\"276\" y=\"74\">DCM 9000 · Niagara 4.13+</text><text class=\"s\" x=\"276\" y=\"100\">Licence caps two numbers: devices and points</text><text class=\"s\" x=\"276\" y=\"124\">Upgrade packs: DEVICE-10, DEVICE-25, DEVICE-50</text><path class=\"ln\" d=\"M300 154V226H126V290\"/><path class=\"ln\" d=\"M420 154V206H362V290\"/><path class=\"ln\" d=\"M540 154V206H598V290\"/><path class=\"ln\" d=\"M660 154V226H834V290\"/><rect class=\"bg\" x=\"56\" y=\"246\" width=\"140\" height=\"18\"/><text class=\"p\" x=\"126\" y=\"259\" text-anchor=\"middle\">BACnet/IP · Ethernet</text><rect class=\"bg\" x=\"284\" y=\"246\" width=\"156\" height=\"18\"/><text class=\"p\" x=\"362\" y=\"259\" text-anchor=\"middle\">BACnet MS/TP · RS-485 1</text><rect class=\"bg\" x=\"525\" y=\"246\" width=\"146\" height=\"18\"/><text class=\"p\" x=\"598\" y=\"259\" text-anchor=\"middle\">Modbus RTU · RS-485 2</text><rect class=\"bg\" x=\"764\" y=\"246\" width=\"140\" height=\"18\"/><text class=\"p\" x=\"834\" y=\"259\" text-anchor=\"middle\">BACnet/IP · Ethernet</text><text class=\"k\" x=\"20\" y=\"282\">FIELD LEVEL</text><rect class=\"b\" x=\"20\" y=\"290\" width=\"212\" height=\"124\"/><text class=\"t\" x=\"34\" y=\"318\">IP DDC</text><text class=\"s\" x=\"34\" y=\"342\">DCM-8044 / DCM-8044-D</text><text class=\"s\" x=\"34\" y=\"364\">Up to 16 IO points each</text><text class=\"p\" x=\"34\" y=\"396\">Devices bind first</text><rect class=\"b\" x=\"256\" y=\"290\" width=\"212\" height=\"124\"/><text class=\"t\" x=\"270\" y=\"318\">RS-485 DDC</text><text class=\"s\" x=\"270\" y=\"342\">DCM-8446 + IO-0800</text><text class=\"s\" x=\"270\" y=\"364\">Up to 30 IO points each</text><text class=\"p\" x=\"270\" y=\"396\">Devices bind first</text><rect class=\"b\" x=\"492\" y=\"290\" width=\"212\" height=\"124\"/><text class=\"t\" x=\"506\" y=\"318\">Energy meters</text><text class=\"s\" x=\"506\" y=\"342\">Multifunction meter</text><text class=\"s\" x=\"506\" y=\"364\">About 8 mapped points each</text><text class=\"p\" x=\"506\" y=\"396\">Devices bind first</text><rect class=\"b\" x=\"728\" y=\"290\" width=\"212\" height=\"124\"/><text class=\"t\" x=\"742\" y=\"318\">Third-party gateway</text><text class=\"s\" x=\"742\" y=\"342\">Chiller or VRF controller</text><text class=\"s\" x=\"742\" y=\"364\">Hundreds of points possible</text><text class=\"p\" x=\"742\" y=\"396\">Points bind first</text><text class=\"k\" x=\"20\" y=\"458\">RULE: 50 POINTS PER DEVICE IN EVERY TIER</text><rect class=\"b2\" x=\"20\" y=\"472\" width=\"920\" height=\"64\"/><text class=\"s\" x=\"36\" y=\"502\">Average under 50 points per device: device limit binds first</text><text class=\"s\" x=\"520\" y=\"502\">Average over 50: point limit binds first</text><text class=\"s\" x=\"36\" y=\"524\">Count both, then add 20% headroom to each</text><text class=\"s\" x=\"520\" y=\"524\">All Tridium drivers included, 9005 to 9200</text><text class=\"k\" x=\"20\" y=\"572\">DCM 9000 LICENCE TIERS</text><rect class=\"b\" x=\"20\" y=\"586\" width=\"172\" height=\"80\"/><text class=\"t\" x=\"34\" y=\"612\">DCM-9005</text><text class=\"s\" x=\"34\" y=\"634\">5 devices</text><text class=\"s\" x=\"34\" y=\"654\">250 points</text><rect class=\"b\" x=\"207\" y=\"586\" width=\"172\" height=\"80\"/><text class=\"t\" x=\"221\" y=\"612\">DCM-9010</text><text class=\"s\" x=\"221\" y=\"634\">10 devices</text><text class=\"s\" x=\"221\" y=\"654\">500 points</text><rect class=\"b\" x=\"394\" y=\"586\" width=\"172\" height=\"80\"/><text class=\"t\" x=\"408\" y=\"612\">DCM-9025</text><text class=\"s\" x=\"408\" y=\"634\">25 devices</text><text class=\"s\" x=\"408\" y=\"654\">1,250 points</text><rect class=\"b\" x=\"581\" y=\"586\" width=\"172\" height=\"80\"/><text class=\"t\" x=\"595\" y=\"612\">DCM-9100</text><text class=\"s\" x=\"595\" y=\"634\">100 devices</text><text class=\"s\" x=\"595\" y=\"654\">5,000 points</text><rect class=\"b\" x=\"768\" y=\"586\" width=\"172\" height=\"80\"/><text class=\"t\" x=\"782\" y=\"612\">DCM-9200</text><text class=\"s\" x=\"782\" y=\"634\">200 devices</text><text class=\"s\" x=\"782\" y=\"654\">10,000 points</text></svg>",
+  "caption_vi": "SĐNL đếm license DCM 9000: station Niagara 4 đọc DDC IP, DDC RS-485, đồng hồ Modbus RTU và gateway bên thứ ba. Ba loại đầu chạm trần thiết bị trước, gateway nhiều điểm chạm trần điểm trước. Dưới cùng là 5 bậc license.",
+  "caption_en": "Schematic for DCM 9000 licence sizing: a Niagara 4 station reads IP DDCs, RS-485 DDCs, Modbus RTU meters and a third-party gateway. The first three hit the device ceiling first; a point-heavy gateway hits the point ceiling first. The five licence tiers are at the bottom."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>Phần cứng DCM 9000 giống nhau ở cả 5 bậc license. Thứ khác nhau là giới hạn trong license: DCM-9005, 9010, 9025, 9100 và 9200. Chọn thấp thì station báo vượt license khi chạy thử, chọn cao quá thì chủ đầu tư trả cho dung lượng không dùng tới.</p><p>Sai lầm thường gặp là chỉ đếm điểm IO trên bản vẽ. License Niagara của Diamond Controls giới hạn đồng thời <strong>số thiết bị</strong> và <strong>số điểm</strong>, chạm giới hạn nào trước thì phải lên bậc. Một tòa nhà nhiều đồng hồ điện chạm trần thiết bị, một tòa nhà dùng gateway VRF lớn thì chạm trần điểm.</p>",
+   "en": "<p>DCM 9000 hardware is the same across all five licence tiers. What changes is the limit inside the licence: DCM-9005, 9010, 9025, 9100 and 9200. Pick too low and the station reports a licence overrun during commissioning; pick too high and the owner carries capacity nobody uses.</p><p>The common mistake is counting only the IO points on the drawings. A Diamond Controls Niagara licence caps <strong>device count</strong> and <strong>point count</strong> at the same time, and whichever limit is hit first forces the next tier. A building full of energy meters hits the device ceiling; a building with large VRF gateways hits the point ceiling.</p>"
+  },
+  {
+   "h_vi": "Giải pháp: đếm hai con số",
+   "h_en": "Solution: count two numbers",
+   "vi": "<p>Cả 5 bậc đều theo cùng một tỉ lệ: <strong>50 điểm cho mỗi thiết bị</strong>. DCM-9005 là 5 thiết bị / 250 điểm, DCM-9010 là 10 / 500, DCM-9025 là 25 / 1.250, DCM-9100 là 100 / 5.000, DCM-9200 là 200 / 10.000. Từ đó có một phép thử nhanh:</p><ul><li>Trung bình dưới 50 điểm mỗi thiết bị: giới hạn thiết bị quyết định bậc. Đây là trường hợp của DDC DCM-8044 (tối đa 16 điểm IO), DCM-8446 kèm IO-0800 (30 điểm) và đồng hồ điện Modbus.</li><li>Trung bình trên 50 điểm mỗi thiết bị: giới hạn điểm quyết định. Đây là trường hợp gateway chiller hoặc bộ điều khiển trung tâm VRF đưa nhiều dàn lạnh lên qua một thiết bị BACnet.</li></ul><p>Quy trình chọn: liệt kê từng thiết bị station đọc trên mỗi mạng, cộng số điểm proxy thực sự map vào station, cộng thêm 20% dự phòng cho cả hai con số, rồi chọn bậc nhỏ nhất chứa được cả hai.</p>",
+   "en": "<p>All five tiers follow the same ratio: <strong>50 points per device</strong>. DCM-9005 is 5 devices / 250 points, DCM-9010 is 10 / 500, DCM-9025 is 25 / 1,250, DCM-9100 is 100 / 5,000, DCM-9200 is 200 / 10,000. That gives a quick test:</p><ul><li>Average below 50 points per device: the device limit decides the tier. This is the case for DCM-8044 DDCs (up to 16 IO points), a DCM-8446 with IO-0800 (30 points) and Modbus energy meters.</li><li>Average above 50 points per device: the point limit decides. This is the case for a chiller gateway or a VRF central controller that brings many indoor units up through one BACnet device.</li></ul><p>The procedure: list every device the station reads on each network, add up the proxy points actually mapped into the station, add 20% headroom to both numbers, then pick the smallest tier that holds both.</p>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<p><strong>Ví dụ A, giới hạn thiết bị.</strong> 12 DDC DCM-8446 + IO-0800 (30 điểm mỗi bộ, 360 điểm), 3 chiller qua card BACnet (30 điểm mỗi chiller, 90 điểm), 18 đồng hồ điện Modbus RTU (8 điểm mỗi đồng hồ, 144 điểm). Tổng 33 thiết bị, 594 điểm. Theo điểm thì DCM-9025 dư sức, theo thiết bị thì 33 đã vượt 25. Thêm 20% dự phòng là 40 thiết bị, chọn DCM-9100.</p><p><strong>Ví dụ B, giới hạn điểm.</strong> 2 gateway VRF trên BACnet/IP, giả định 400 điểm mỗi gateway, cộng 6 DDC DCM-8044 (16 điểm mỗi bộ). Tổng 8 thiết bị, 896 điểm. Theo thiết bị thì DCM-9010 vừa đủ, theo điểm thì 896 đã vượt 500. Thêm 20% là 1.075 điểm và khoảng 10 thiết bị, chọn DCM-9025.</p><p>Ba điểm hay bị bỏ sót khi đếm:</p><ul><li>Thiết bị MS/TP nằm sau một DCM-8044 hoặc GW-112 làm BACnet router vẫn hiện lên station như từng thiết bị BACnet riêng, nên vẫn tính vào license.</li><li>Điểm tính theo những gì map vào station, không chỉ IO vật lý. Setpoint, trạng thái lỗi, chế độ vận hành của chiller hay VRF đều là điểm.</li><li>DCM-9000-DEMO cho 500 thiết bị nhưng chỉ dùng cho bàn thử và đào tạo, không dùng để vận hành tòa nhà.</li></ul><p>Các bậc 9005 đến 9200 đã gồm đủ driver Tridium, nên không cần tính thêm license riêng cho BACnet hay Modbus. Khi tòa nhà mở rộng theo giai đoạn, hãng có gói nâng cấp DEVICE-10, DEVICE-25 và DEVICE-50; chi tiết từng gói theo bảng license của hãng.</p>",
+   "en": "<p><strong>Example A, device-bound.</strong> 12 DCM-8446 + IO-0800 DDCs (30 points each, 360 points), 3 chillers on BACnet cards (30 points each, 90 points), 18 Modbus RTU energy meters (8 points each, 144 points). Total 33 devices, 594 points. By points a DCM-9025 is plenty; by devices, 33 already exceeds 25. With 20% headroom that is 40 devices, so DCM-9100.</p><p><strong>Example B, point-bound.</strong> 2 VRF gateways on BACnet/IP, assumed at 400 points each, plus 6 DCM-8044 DDCs (16 points each). Total 8 devices, 896 points. By devices a DCM-9010 just fits; by points, 896 already exceeds 500. With 20% headroom that is 1,075 points and about 10 devices, so DCM-9025.</p><p>Three things that get missed in the count:</p><ul><li>MS/TP devices behind a DCM-8044 or GW-112 acting as a BACnet router still appear to the station as individual BACnet devices, so they still count against the licence.</li><li>Points are what is mapped into the station, not only physical IO. Setpoints, fault states and operating modes from a chiller or VRF are all points.</li><li>DCM-9000-DEMO allows 500 devices but is for test benches and training only, not for running a building.</li></ul><p>Tiers 9005 to 9200 include all Tridium drivers, so there is no separate BACnet or Modbus licence to add. When a building is extended in phases, the vendor offers DEVICE-10, DEVICE-25 and DEVICE-50 upgrade packs; see the vendor licence table for what each pack adds.</p>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<p>Bảng dưới là điểm xuất phát, không thay cho phép đếm. DCM-9005 và 9010 hợp với một phòng máy hoặc tòa nhỏ ít AHU. DCM-9025 hợp với khách sạn hoặc tòa văn phòng có phòng máy trung tâm và ít đồng hồ. DCM-9100 hợp khi có đo đếm điện theo tầng hoặc theo khách thuê. DCM-9200 dành cho khu nhiều tòa hoặc tổ hợp hỗn hợp chạy chung một station.</p><p>Gửi cho chúng tôi danh sách thiết bị và point schedule, chúng tôi đếm lại hai con số và đề xuất bậc license kèm dự phòng.</p>",
+   "en": "<p>The table below is a starting point, not a substitute for the count. DCM-9005 and 9010 suit a single plant room or a small building with few AHUs. DCM-9025 suits a hotel or office with a central plant and few meters. DCM-9100 fits once there is energy metering per floor or per tenant. DCM-9200 is for multi-building sites or mixed-use complexes on one station.</p><p>Send us the device list and point schedule and we will run both counts and recommend a licence tier with headroom.</p>"
+  }
+ ],
+ "table": {
+  "caption_vi": "Năm bậc license DCM 9000 (phạm vi gợi ý là ví dụ, cần đếm theo dự án)",
+  "caption_en": "The five DCM 9000 licence tiers (suggested scope is an example; count per project)",
+  "head": [
+   "License",
+   "Thiết bị / Devices",
+   "Điểm / Points",
+   "Điểm mỗi thiết bị / Points per device",
+   "Phạm vi gợi ý / Suggested scope"
+  ],
+  "rows": [
+   [
+    "DCM-9005",
+    "5",
+    "250",
+    "50",
+    "Một phòng máy / One plant room"
+   ],
+   [
+    "DCM-9010",
+    "10",
+    "500",
+    "50",
+    "Tòa nhỏ, ít AHU / Small building, few AHUs"
+   ],
+   [
+    "DCM-9025",
+    "25",
+    "1.250",
+    "50",
+    "Khách sạn, văn phòng ít đồng hồ / Hotel, office with few meters"
+   ],
+   [
+    "DCM-9100",
+    "100",
+    "5.000",
+    "50",
+    "Đo đếm theo tầng, khách thuê / Metering per floor or tenant"
+   ],
+   [
+    "DCM-9200",
+    "200",
+    "10.000",
+    "50",
+    "Nhiều tòa, tổ hợp / Multi-building, mixed-use"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "Mitsubishi Electric Asia, Diamond Controls catalogue (2023) and DCM-8044/DCM-8044-D with IO Modules (2024)"
+  },
+  {
+   "title": "Mitsubishi Electric Vietnam, Building Management System",
+   "url": "https://buildingsolutions.mitsubishi-electric.vn/en/bms/"
+  }
+ ],
+ "x_post": "Every DCM 9000 licence tier gives 50 points per device: 9005 = 5/250, 9025 = 25/1,250, 9200 = 200/10,000.\n\n• Meters at ~8 points: device limit hits first\n• VRF gateways: point limit hits first\n• Count both, add 20%\n\nFull schematic on the blog, link in bio.",
+ "fb_post": "Cả 5 bậc license DCM 9000 đều cho đúng 50 điểm trên mỗi thiết bị. Vì vậy chọn bậc phải đếm hai con số, không chỉ đếm điểm IO.\n\n1. DCM-9005: 5 thiết bị, 250 điểm\n2. DCM-9010: 10 thiết bị, 500 điểm\n3. DCM-9025: 25 thiết bị, 1.250 điểm\n4. DCM-9100: 100 thiết bị, 5.000 điểm\n5. DCM-9200: 200 thiết bị, 10.000 điểm\n\nĐồng hồ điện Modbus và DDC nhỏ có ít điểm, nên tòa nhà nhiều đồng hồ chạm trần thiết bị trước. Gateway VRF hay chiller đưa hàng trăm điểm qua một thiết bị, nên chạm trần điểm trước. Ví dụ trong bài: 33 thiết bị, 594 điểm phải lên DCM-9100; còn 8 thiết bị, 896 điểm thì cần DCM-9025.\n\nQuy trình: đếm thiết bị, đếm điểm map vào station, cộng 20% dự phòng, chọn bậc nhỏ nhất chứa được cả hai.\n\nSơ đồ nguyên lý và bảng 5 bậc license:\nhttps://elvconsultant.com/blog/bms/2026-11-24-chon-license-dcm-9000-9005-9200.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #Niagara4 #MitsubishiElectric #DiamondControls #DCM9000",
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1762162147822-c5c87cede739?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Sàn thép công nghiệp tối màu trong phòng kỹ thuật",
+  "credit": "Mavis M.",
+  "credit_url": "https://unsplash.com/photos/dark-industrial-metal-grating-with-wooden-planks-CisvyPedEdM"
+ }
+}

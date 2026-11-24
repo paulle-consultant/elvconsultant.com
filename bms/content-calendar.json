@@ -157,7 +157,8 @@
    "pillar": "Kỹ thuật sản phẩm",
    "pillar_en": "Product engineering",
    "topic": "DCM 9000 license: chọn 9005/9010/9025/9100/9200 thế nào",
-   "status": "planned"
+   "status": "published",
+   "slug": "chon-license-dcm-9000-9005-9200"
   },
   {
    "date": "2026-11-25",

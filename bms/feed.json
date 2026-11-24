@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-24",
+  "slug": "chon-license-dcm-9000-9005-9200",
+  "title_vi": "Chọn license DCM 9000 đúng bậc",
+  "title_en": "Choosing the right DCM 9000 licence",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-24-chon-license-dcm-9000-9005-9200.html",
+  "x_post": "Every DCM 9000 licence tier gives 50 points per device: 9005 = 5/250, 9025 = 25/1,250, 9200 = 200/10,000.\n\n• Meters at ~8 points: device limit hits first\n• VRF gateways: point limit hits first\n• Count both, add 20%\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Cả 5 bậc license DCM 9000 đều cho đúng 50 điểm trên mỗi thiết bị. Vì vậy chọn bậc phải đếm hai con số, không chỉ đếm điểm IO.\n\n1. DCM-9005: 5 thiết bị, 250 điểm\n2. DCM-9010: 10 thiết bị, 500 điểm\n3. DCM-9025: 25 thiết bị, 1.250 điểm\n4. DCM-9100: 100 thiết bị, 5.000 điểm\n5. DCM-9200: 200 thiết bị, 10.000 điểm\n\nĐồng hồ điện Modbus và DDC nhỏ có ít điểm, nên tòa nhà nhiều đồng hồ chạm trần thiết bị trước. Gateway VRF hay chiller đưa hàng trăm điểm qua một thiết bị, nên chạm trần điểm trước. Ví dụ trong bài: 33 thiết bị, 594 điểm phải lên DCM-9100; còn 8 thiết bị, 896 điểm thì cần DCM-9025.\n\nQuy trình: đếm thiết bị, đếm điểm map vào station, cộng 20% dự phòng, chọn bậc nhỏ nhất chứa được cả hai.\n\nSơ đồ nguyên lý và bảng 5 bậc license:\nhttps://elvconsultant.com/blog/bms/2026-11-24-chon-license-dcm-9000-9005-9200.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Inbox để nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #Niagara4 #MitsubishiElectric #DiamondControls #DCM9000"
+ },
+ {
   "date": "2026-11-23",
   "slug": "bms-van-phong-hang-b-20000-m2-dcm-9100",
   "title_vi": "BMS văn phòng hạng B 20.000 m²",
