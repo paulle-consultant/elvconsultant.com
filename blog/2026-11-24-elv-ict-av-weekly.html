@@ -15,23 +15,22 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box;}
     :root{
-      --bg:#07111F;
-      --card-bg:#101E30;
-      --card-border:#1E3550;
-      --cyan:#00C8E0;
-      --cyan-dim:rgba(0,200,224,0.10);
-      --cyan-glow:rgba(0,200,224,0.28);
-      --silver:#A0B4C8;
-      --white:#F0F4F8;
-      --steel:#4A6280;
-      --navy:#1B2A4A;
-      --navy-deep:#0D1B35;
-      --grid-line:rgba(0,200,224,0.08);
+      --bg:#0C0B09;
+      --card-bg:#15130F;
+      --card-border:#2A251C;
+      --cyan:#C9A96A;
+      --cyan-dim:rgba(201,169,106,0.10);
+      --cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C;
+      --white:#F3EDE2;
+      --steel:#8A8172;
+      --navy:#2A251C;
+      --navy-deep:#121009;
+      --grid-line:rgba(201,169,106,0.08);
     }
     html{scroll-behavior:smooth;}
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;min-height:100vh;}
@@ -47,7 +46,7 @@
     /* NAV */
     nav{
       position:sticky;top:0;z-index:100;
-      background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+      background:rgba(12,11,9,0.95);border-bottom:1px solid var(--card-border);
       backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
       padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;
     }
@@ -90,9 +89,9 @@
     .article-hero-overlay{
       position:absolute;inset:0;
       background:linear-gradient(180deg,
-        rgba(7,17,31,0.1) 0%,
-        rgba(7,17,31,0.4) 50%,
-        rgba(7,17,31,0.92) 100%);
+        rgba(12,11,9,0.1) 0%,
+        rgba(12,11,9,0.4) 50%,
+        rgba(12,11,9,0.92) 100%);
     }
     .article-hero-content{
       position:absolute;bottom:0;left:0;right:0;
@@ -269,6 +268,7 @@
       .footer-inner{grid-template-columns:1fr;}
     }
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -277,8 +277,8 @@
 <nav>
   <a href="/" class="nav-logo">
     <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
     </svg>
     <div>
       <span class="logo-text">PAUL LE CONSULTANT</span>
@@ -368,56 +368,56 @@
           <div class="schematic-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — HPE ARUBA SELF-DRIVING NETWORK</div>
           <svg viewBox="0 0 760 260" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:760px;">
             <!-- Cloud/Central -->
-            <rect x="300" y="10" width="160" height="48" rx="8" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
-            <text x="380" y="31" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0" font-weight="700">ARUBA CENTRAL</text>
-            <text x="380" y="47" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">AI-Native Cloud Mgmt</text>
+            <rect x="300" y="10" width="160" height="48" rx="8" fill="#15130F" stroke="#C9A96A" stroke-width="1.5"/>
+            <text x="380" y="31" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A" font-weight="700">ARUBA CENTRAL</text>
+            <text x="380" y="47" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">AI-Native Cloud Mgmt</text>
 
             <!-- Mist AI -->
-            <rect x="490" y="10" width="140" height="48" rx="8" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
-            <text x="560" y="31" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0" font-weight="700">JUNIPER MIST AI</text>
-            <text x="560" y="47" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">AIOps + Predictive</text>
+            <rect x="490" y="10" width="140" height="48" rx="8" fill="#15130F" stroke="#C9A96A" stroke-width="1.5"/>
+            <text x="560" y="31" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A" font-weight="700">JUNIPER MIST AI</text>
+            <text x="560" y="47" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">AIOps + Predictive</text>
 
             <!-- Line between Cloud and Mist -->
-            <line x1="460" y1="34" x2="490" y2="34" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+            <line x1="460" y1="34" x2="490" y2="34" stroke="#C9A96A" stroke-width="1" stroke-dasharray="4,3"/>
 
             <!-- Core Switch -->
-            <rect x="300" y="100" width="160" height="44" rx="6" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="380" y="120" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F0F4F8" font-weight="700">CORE SWITCH</text>
-            <text x="380" y="134" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">400GbE / AI Factory</text>
+            <rect x="300" y="100" width="160" height="44" rx="6" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="380" y="120" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F3EDE2" font-weight="700">CORE SWITCH</text>
+            <text x="380" y="134" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">400GbE / AI Factory</text>
 
             <!-- Vertical line from cloud to core -->
-            <line x1="380" y1="58" x2="380" y2="100" stroke="#00C8E0" stroke-width="1.5" stroke-dasharray="5,3"/>
+            <line x1="380" y1="58" x2="380" y2="100" stroke="#C9A96A" stroke-width="1.5" stroke-dasharray="5,3"/>
 
             <!-- Edge Switches -->
-            <rect x="80" y="185" width="140" height="44" rx="6" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="150" y="205" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F0F4F8" font-weight="700">EDGE / ACCESS</text>
-            <text x="150" y="219" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">PoE++ / 90W</text>
+            <rect x="80" y="185" width="140" height="44" rx="6" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="150" y="205" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F3EDE2" font-weight="700">EDGE / ACCESS</text>
+            <text x="150" y="219" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">PoE++ / 90W</text>
 
             <!-- Campus AP -->
-            <rect x="300" y="185" width="160" height="44" rx="6" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="380" y="205" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F0F4F8" font-weight="700">Wi-Fi 7 AP</text>
-            <text x="380" y="219" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Campus / Self-Healing</text>
+            <rect x="300" y="185" width="160" height="44" rx="6" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="380" y="205" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F3EDE2" font-weight="700">Wi-Fi 7 AP</text>
+            <text x="380" y="219" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Campus / Self-Healing</text>
 
             <!-- Data Center -->
-            <rect x="530" y="185" width="140" height="44" rx="6" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="600" y="205" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F0F4F8" font-weight="700">DATA CENTER</text>
-            <text x="600" y="219" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">AI Factory Infra</text>
+            <rect x="530" y="185" width="140" height="44" rx="6" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="600" y="205" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F3EDE2" font-weight="700">DATA CENTER</text>
+            <text x="600" y="219" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">AI Factory Infra</text>
 
             <!-- Lines from core to edge devices -->
-            <line x1="310" y1="144" x2="150" y2="185" stroke="#1E3550" stroke-width="1.5"/>
-            <line x1="380" y1="144" x2="380" y2="185" stroke="#1E3550" stroke-width="1.5"/>
-            <line x1="450" y1="144" x2="600" y2="185" stroke="#1E3550" stroke-width="1.5"/>
+            <line x1="310" y1="144" x2="150" y2="185" stroke="#2A251C" stroke-width="1.5"/>
+            <line x1="380" y1="144" x2="380" y2="185" stroke="#2A251C" stroke-width="1.5"/>
+            <line x1="450" y1="144" x2="600" y2="185" stroke="#2A251C" stroke-width="1.5"/>
 
             <!-- Endpoints -->
-            <ellipse cx="150" cy="250" rx="40" ry="8" fill="#0D1B35"/>
-            <text x="150" y="253" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">IoT · Camera · Phone</text>
-            <ellipse cx="380" cy="250" rx="40" ry="8" fill="#0D1B35"/>
-            <text x="380" y="253" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Laptop · Mobile</text>
-            <ellipse cx="600" cy="250" rx="40" ry="8" fill="#0D1B35"/>
-            <text x="600" y="253" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Server · GPU Node</text>
-            <line x1="150" y1="229" x2="150" y2="242" stroke="#4A6280" stroke-width="1"/>
-            <line x1="380" y1="229" x2="380" y2="242" stroke="#4A6280" stroke-width="1"/>
-            <line x1="600" y1="229" x2="600" y2="242" stroke="#4A6280" stroke-width="1"/>
+            <ellipse cx="150" cy="250" rx="40" ry="8" fill="#121009"/>
+            <text x="150" y="253" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">IoT · Camera · Phone</text>
+            <ellipse cx="380" cy="250" rx="40" ry="8" fill="#121009"/>
+            <text x="380" y="253" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Laptop · Mobile</text>
+            <ellipse cx="600" cy="250" rx="40" ry="8" fill="#121009"/>
+            <text x="600" y="253" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Server · GPU Node</text>
+            <line x1="150" y1="229" x2="150" y2="242" stroke="#8A8172" stroke-width="1"/>
+            <line x1="380" y1="229" x2="380" y2="242" stroke="#8A8172" stroke-width="1"/>
+            <line x1="600" y1="229" x2="600" y2="242" stroke="#8A8172" stroke-width="1"/>
           </svg>
         </div>
 
@@ -466,43 +466,43 @@
           <div class="schematic-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — AXIS UNIFIED SECURITY PLATFORM</div>
           <svg viewBox="0 0 720 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;">
             <!-- VMS Platform -->
-            <rect x="260" y="10" width="200" height="50" rx="8" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
-            <text x="360" y="33" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0" font-weight="700">VMS / PSIM</text>
-            <text x="360" y="49" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Milestone XProtect · Genetec</text>
+            <rect x="260" y="10" width="200" height="50" rx="8" fill="#15130F" stroke="#C9A96A" stroke-width="1.5"/>
+            <text x="360" y="33" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A" font-weight="700">VMS / PSIM</text>
+            <text x="360" y="49" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Milestone XProtect · Genetec</text>
 
             <!-- ONVIF connector -->
-            <text x="360" y="86" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#4A6280">ONVIF Profile A/D/T/S</text>
-            <line x1="360" y1="60" x2="360" y2="94" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+            <text x="360" y="86" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#8A8172">ONVIF Profile A/D/T/S</text>
+            <line x1="360" y1="60" x2="360" y2="94" stroke="#C9A96A" stroke-width="1" stroke-dasharray="4,3"/>
 
             <!-- ARTPEC-9 Camera -->
-            <rect x="260" y="94" width="200" height="58" rx="8" fill="#0D1B35" stroke="#00C8E0" stroke-width="2"/>
-            <text x="360" y="116" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#00C8E0" font-weight="900">ARTPEC-9 CAMERA</text>
-            <text x="360" y="131" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">ACAP: LPR · BEH · COUNT · INTRUSION</text>
-            <text x="360" y="143" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">On-Camera AI — No Server Needed</text>
+            <rect x="260" y="94" width="200" height="58" rx="8" fill="#121009" stroke="#C9A96A" stroke-width="2"/>
+            <text x="360" y="116" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#C9A96A" font-weight="900">ARTPEC-9 CAMERA</text>
+            <text x="360" y="131" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">ACAP: LPR · BEH · COUNT · INTRUSION</text>
+            <text x="360" y="143" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">On-Camera AI — No Server Needed</text>
 
             <!-- Access Control -->
-            <rect x="60" y="94" width="160" height="58" rx="6" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="140" y="118" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F0F4F8" font-weight="700">ACCESS CONTROL</text>
-            <text x="140" y="133" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Axis A series</text>
-            <text x="140" y="147" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">OSDP · Wiegand</text>
+            <rect x="60" y="94" width="160" height="58" rx="6" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="140" y="118" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F3EDE2" font-weight="700">ACCESS CONTROL</text>
+            <text x="140" y="133" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Axis A series</text>
+            <text x="140" y="147" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">OSDP · Wiegand</text>
 
             <!-- Analytics Server optional -->
-            <rect x="500" y="94" width="160" height="58" rx="6" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="580" y="116" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F0F4F8" font-weight="700">ANALYTICS SERVER</text>
-            <text x="580" y="131" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Optional / Scale-Out</text>
-            <text x="580" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Deep Learning AI</text>
+            <rect x="500" y="94" width="160" height="58" rx="6" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="580" y="116" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#F3EDE2" font-weight="700">ANALYTICS SERVER</text>
+            <text x="580" y="131" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Optional / Scale-Out</text>
+            <text x="580" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Deep Learning AI</text>
 
             <!-- Lines -->
-            <line x1="220" y1="123" x2="260" y2="123" stroke="#1E3550" stroke-width="1.5"/>
-            <line x1="460" y1="123" x2="500" y2="123" stroke="#1E3550" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <line x1="220" y1="123" x2="260" y2="123" stroke="#2A251C" stroke-width="1.5"/>
+            <line x1="460" y1="123" x2="500" y2="123" stroke="#2A251C" stroke-width="1.5" stroke-dasharray="4,3"/>
 
             <!-- Endpoints / Devices -->
-            <text x="140" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Card Reader · Intercom</text>
-            <text x="360" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">PoE / IP Network</text>
-            <text x="580" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">(Optional) GPU Server</text>
-            <line x1="140" y1="152" x2="140" y2="178" stroke="#4A6280" stroke-width="1"/>
-            <line x1="360" y1="152" x2="360" y2="178" stroke="#4A6280" stroke-width="1"/>
-            <line x1="580" y1="152" x2="580" y2="178" stroke="#4A6280" stroke-width="1" stroke-dasharray="3,3"/>
+            <text x="140" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Card Reader · Intercom</text>
+            <text x="360" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">PoE / IP Network</text>
+            <text x="580" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">(Optional) GPU Server</text>
+            <line x1="140" y1="152" x2="140" y2="178" stroke="#8A8172" stroke-width="1"/>
+            <line x1="360" y1="152" x2="360" y2="178" stroke="#8A8172" stroke-width="1"/>
+            <line x1="580" y1="152" x2="580" y2="178" stroke="#8A8172" stroke-width="1" stroke-dasharray="3,3"/>
           </svg>
         </div>
 
@@ -551,47 +551,47 @@
           <div class="schematic-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — CRESTRON COLLAB ENGINE ROOM SYSTEM</div>
           <svg viewBox="0 0 720 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;">
             <!-- Collab Engine Central -->
-            <rect x="260" y="80" width="200" height="70" rx="8" fill="#0D1B35" stroke="#00C8E0" stroke-width="2"/>
-            <text x="360" y="105" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#00C8E0" font-weight="900">COLLAB ENGINE</text>
-            <text x="360" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">AV Control + Conferencing</text>
-            <text x="360" y="133" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Teams · Zoom · Google Meet</text>
-            <text x="360" y="143" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">AI Scheduling</text>
+            <rect x="260" y="80" width="200" height="70" rx="8" fill="#121009" stroke="#C9A96A" stroke-width="2"/>
+            <text x="360" y="105" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#C9A96A" font-weight="900">COLLAB ENGINE</text>
+            <text x="360" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">AV Control + Conferencing</text>
+            <text x="360" y="133" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Teams · Zoom · Google Meet</text>
+            <text x="360" y="143" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">AI Scheduling</text>
 
             <!-- Cloud -->
-            <rect x="295" y="10" width="130" height="40" rx="6" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
-            <text x="360" y="28" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#A0B4C8">MS 365 / Exchange</text>
-            <text x="360" y="42" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Calendar Sync</text>
-            <line x1="360" y1="50" x2="360" y2="80" stroke="#1E3550" stroke-width="1" stroke-dasharray="3,3"/>
+            <rect x="295" y="10" width="130" height="40" rx="6" fill="#15130F" stroke="#2A251C" stroke-width="1"/>
+            <text x="360" y="28" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#B5AC9C">MS 365 / Exchange</text>
+            <text x="360" y="42" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Calendar Sync</text>
+            <line x1="360" y1="50" x2="360" y2="80" stroke="#2A251C" stroke-width="1" stroke-dasharray="3,3"/>
 
             <!-- Display -->
-            <rect x="490" y="84" width="120" height="44" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="550" y="104" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">DISPLAY / TV</text>
-            <text x="550" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">HDMI 2.1 / HDBaseT</text>
-            <line x1="460" y1="115" x2="490" y2="115" stroke="#1E3550" stroke-width="1.5"/>
+            <rect x="490" y="84" width="120" height="44" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="550" y="104" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">DISPLAY / TV</text>
+            <text x="550" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">HDMI 2.1 / HDBaseT</text>
+            <line x1="460" y1="115" x2="490" y2="115" stroke="#2A251C" stroke-width="1.5"/>
 
             <!-- Touch Panel -->
-            <rect x="110" y="84" width="120" height="44" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="170" y="104" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">TOUCH PANEL</text>
-            <text x="170" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">PoE · Room Scheduling</text>
-            <line x1="230" y1="115" x2="260" y2="115" stroke="#1E3550" stroke-width="1.5"/>
+            <rect x="110" y="84" width="120" height="44" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="170" y="104" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">TOUCH PANEL</text>
+            <text x="170" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">PoE · Room Scheduling</text>
+            <line x1="230" y1="115" x2="260" y2="115" stroke="#2A251C" stroke-width="1.5"/>
 
             <!-- Camera / Mic -->
-            <rect x="110" y="162" width="110" height="40" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
-            <text x="165" y="180" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">CAMERA / MIC</text>
-            <text x="165" y="194" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">USB · AVB</text>
-            <line x1="165" y1="162" x2="260" y2="140" stroke="#1E3550" stroke-width="1"/>
+            <rect x="110" y="162" width="110" height="40" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1"/>
+            <text x="165" y="180" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">CAMERA / MIC</text>
+            <text x="165" y="194" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">USB · AVB</text>
+            <line x1="165" y1="162" x2="260" y2="140" stroke="#2A251C" stroke-width="1"/>
 
             <!-- Speaker / AMP -->
-            <rect x="500" y="162" width="110" height="40" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
-            <text x="555" y="180" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">SPEAKER / AMP</text>
-            <text x="555" y="194" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Dante · Analog</text>
-            <line x1="555" y1="162" x2="460" y2="140" stroke="#1E3550" stroke-width="1"/>
+            <rect x="500" y="162" width="110" height="40" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1"/>
+            <text x="555" y="180" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">SPEAKER / AMP</text>
+            <text x="555" y="194" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Dante · Analog</text>
+            <line x1="555" y1="162" x2="460" y2="140" stroke="#2A251C" stroke-width="1"/>
 
             <!-- Network -->
-            <rect x="295" y="162" width="130" height="40" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
-            <text x="360" y="180" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">PoE NETWORK SWITCH</text>
-            <text x="360" y="194" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">1Gbps · 802.3bt</text>
-            <line x1="360" y1="162" x2="360" y2="150" stroke="#1E3550" stroke-width="1.5"/>
+            <rect x="295" y="162" width="130" height="40" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1"/>
+            <text x="360" y="180" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">PoE NETWORK SWITCH</text>
+            <text x="360" y="194" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">1Gbps · 802.3bt</text>
+            <line x1="360" y1="162" x2="360" y2="150" stroke="#2A251C" stroke-width="1.5"/>
           </svg>
         </div>
 
@@ -646,46 +646,46 @@
           <div class="schematic-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — ELV OPEN PLATFORM INTEGRATION (SECUTECH TREND)</div>
           <svg viewBox="0 0 720 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;">
             <!-- Central Integration Platform -->
-            <rect x="260" y="80" width="200" height="60" rx="8" fill="#0D1B35" stroke="#00C8E0" stroke-width="2"/>
-            <text x="360" y="103" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0" font-weight="700">OPEN PLATFORM</text>
-            <text x="360" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">BACnet · Modbus · ONVIF · REST API</text>
-            <text x="360" y="133" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">AI Analytics Engine</text>
+            <rect x="260" y="80" width="200" height="60" rx="8" fill="#121009" stroke="#C9A96A" stroke-width="2"/>
+            <text x="360" y="103" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A" font-weight="700">OPEN PLATFORM</text>
+            <text x="360" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">BACnet · Modbus · ONVIF · REST API</text>
+            <text x="360" y="133" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">AI Analytics Engine</text>
 
             <!-- Camera / CCTV -->
-            <rect x="30" y="20" width="130" height="40" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="95" y="38" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">CCTV / AI CAMERA</text>
-            <text x="95" y="52" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">ONVIF · Face AI</text>
-            <line x1="160" y1="40" x2="260" y2="96" stroke="#1E3550" stroke-width="1"/>
+            <rect x="30" y="20" width="130" height="40" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="95" y="38" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">CCTV / AI CAMERA</text>
+            <text x="95" y="52" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">ONVIF · Face AI</text>
+            <line x1="160" y1="40" x2="260" y2="96" stroke="#2A251C" stroke-width="1"/>
 
             <!-- Access Control -->
-            <rect x="30" y="90" width="130" height="40" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="95" y="108" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">ACCESS CONTROL</text>
-            <text x="95" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">OSDP · Speed Gate</text>
-            <line x1="160" y1="110" x2="260" y2="110" stroke="#1E3550" stroke-width="1.5"/>
+            <rect x="30" y="90" width="130" height="40" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="95" y="108" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">ACCESS CONTROL</text>
+            <text x="95" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">OSDP · Speed Gate</text>
+            <line x1="160" y1="110" x2="260" y2="110" stroke="#2A251C" stroke-width="1.5"/>
 
             <!-- Fire Alarm -->
-            <rect x="30" y="160" width="130" height="40" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="95" y="178" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">FIRE ALARM</text>
-            <text x="95" y="192" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">BACnet · ModBus</text>
-            <line x1="160" y1="180" x2="260" y2="124" stroke="#1E3550" stroke-width="1"/>
+            <rect x="30" y="160" width="130" height="40" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="95" y="178" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">FIRE ALARM</text>
+            <text x="95" y="192" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">BACnet · ModBus</text>
+            <line x1="160" y1="180" x2="260" y2="124" stroke="#2A251C" stroke-width="1"/>
 
             <!-- BMS -->
-            <rect x="560" y="20" width="130" height="40" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="625" y="38" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">BMS / HVAC</text>
-            <text x="625" y="52" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">BACnet IP · KNX</text>
-            <line x1="460" y1="96" x2="560" y2="40" stroke="#1E3550" stroke-width="1"/>
+            <rect x="560" y="20" width="130" height="40" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="625" y="38" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">BMS / HVAC</text>
+            <text x="625" y="52" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">BACnet IP · KNX</text>
+            <line x1="460" y1="96" x2="560" y2="40" stroke="#2A251C" stroke-width="1"/>
 
             <!-- PA / Intercom -->
-            <rect x="560" y="90" width="130" height="40" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="625" y="108" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">PA / INTERCOM</text>
-            <text x="625" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">SIP · REST API</text>
-            <line x1="460" y1="110" x2="560" y2="110" stroke="#1E3550" stroke-width="1.5"/>
+            <rect x="560" y="90" width="130" height="40" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="625" y="108" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">PA / INTERCOM</text>
+            <text x="625" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">SIP · REST API</text>
+            <line x1="460" y1="110" x2="560" y2="110" stroke="#2A251C" stroke-width="1.5"/>
 
             <!-- Dashboard -->
-            <rect x="560" y="160" width="130" height="40" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="625" y="178" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">DASHBOARD / APP</text>
-            <text x="625" y="192" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">Web · Mobile</text>
-            <line x1="460" y1="124" x2="560" y2="180" stroke="#1E3550" stroke-width="1"/>
+            <rect x="560" y="160" width="130" height="40" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="625" y="178" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">DASHBOARD / APP</text>
+            <text x="625" y="192" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">Web · Mobile</text>
+            <line x1="460" y1="124" x2="560" y2="180" stroke="#2A251C" stroke-width="1"/>
           </svg>
         </div>
 
@@ -734,58 +734,58 @@
           <div class="schematic-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — PoE+ HYBRID CABLING SMART BUILDING</div>
           <svg viewBox="0 0 720 240" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;">
             <!-- MDF -->
-            <rect x="285" y="10" width="150" height="50" rx="6" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
-            <text x="360" y="30" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0" font-weight="700">MDF / SERVER ROOM</text>
-            <text x="360" y="45" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Core Switch + ODF (MPO)</text>
+            <rect x="285" y="10" width="150" height="50" rx="6" fill="#15130F" stroke="#C9A96A" stroke-width="1.5"/>
+            <text x="360" y="30" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#C9A96A" font-weight="700">MDF / SERVER ROOM</text>
+            <text x="360" y="45" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Core Switch + ODF (MPO)</text>
 
             <!-- MPO Fiber backbone lines -->
-            <line x1="360" y1="60" x2="180" y2="110" stroke="#00C8E0" stroke-width="2"/>
-            <line x1="360" y1="60" x2="360" y2="110" stroke="#00C8E0" stroke-width="2"/>
-            <line x1="360" y1="60" x2="540" y2="110" stroke="#00C8E0" stroke-width="2"/>
-            <text x="232" y="92" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#00C8E0">MPO 24f</text>
-            <text x="380" y="92" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#00C8E0">MPO 24f</text>
-            <text x="488" y="92" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#00C8E0">MPO 24f</text>
+            <line x1="360" y1="60" x2="180" y2="110" stroke="#C9A96A" stroke-width="2"/>
+            <line x1="360" y1="60" x2="360" y2="110" stroke="#C9A96A" stroke-width="2"/>
+            <line x1="360" y1="60" x2="540" y2="110" stroke="#C9A96A" stroke-width="2"/>
+            <text x="232" y="92" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#C9A96A">MPO 24f</text>
+            <text x="380" y="92" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#C9A96A">MPO 24f</text>
+            <text x="488" y="92" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#C9A96A">MPO 24f</text>
 
             <!-- IDF Floor 1 -->
-            <rect x="110" y="110" width="140" height="45" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="180" y="130" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">IDF FLOOR 1</text>
-            <text x="180" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">PoE++ Switch 90W</text>
+            <rect x="110" y="110" width="140" height="45" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="180" y="130" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">IDF FLOOR 1</text>
+            <text x="180" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">PoE++ Switch 90W</text>
 
             <!-- IDF Floor 2 -->
-            <rect x="285" y="110" width="150" height="45" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="360" y="130" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">IDF FLOOR 2</text>
-            <text x="360" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">PoE++ Switch 90W</text>
+            <rect x="285" y="110" width="150" height="45" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="360" y="130" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">IDF FLOOR 2</text>
+            <text x="360" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">PoE++ Switch 90W</text>
 
             <!-- IDF Floor 3 -->
-            <rect x="470" y="110" width="140" height="45" rx="5" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
-            <text x="540" y="130" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F0F4F8">IDF FLOOR 3</text>
-            <text x="540" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">PoE++ Switch 90W</text>
+            <rect x="470" y="110" width="140" height="45" rx="5" fill="#15130F" stroke="#2A251C" stroke-width="1.5"/>
+            <text x="540" y="130" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" fill="#F3EDE2">IDF FLOOR 3</text>
+            <text x="540" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">PoE++ Switch 90W</text>
 
             <!-- Cat6A lines from IDF -->
-            <line x1="150" y1="155" x2="90" y2="185" stroke="#A0B4C8" stroke-width="1" stroke-dasharray="3,2"/>
-            <line x1="180" y1="155" x2="180" y2="185" stroke="#A0B4C8" stroke-width="1" stroke-dasharray="3,2"/>
-            <line x1="210" y1="155" x2="250" y2="185" stroke="#A0B4C8" stroke-width="1" stroke-dasharray="3,2"/>
-            <text x="180" y="175" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#A0B4C8">Cat6A</text>
+            <line x1="150" y1="155" x2="90" y2="185" stroke="#B5AC9C" stroke-width="1" stroke-dasharray="3,2"/>
+            <line x1="180" y1="155" x2="180" y2="185" stroke="#B5AC9C" stroke-width="1" stroke-dasharray="3,2"/>
+            <line x1="210" y1="155" x2="250" y2="185" stroke="#B5AC9C" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="180" y="175" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#B5AC9C">Cat6A</text>
 
             <!-- Endpoints floor 1 -->
-            <rect x="50" y="185" width="80" height="34" rx="4" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-            <text x="90" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">AI Camera</text>
-            <text x="90" y="212" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">PoE 25W</text>
+            <rect x="50" y="185" width="80" height="34" rx="4" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+            <text x="90" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">AI Camera</text>
+            <text x="90" y="212" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">PoE 25W</text>
 
-            <rect x="145" y="185" width="80" height="34" rx="4" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-            <text x="185" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">LED Light</text>
-            <text x="185" y="212" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">PoE 15W</text>
+            <rect x="145" y="185" width="80" height="34" rx="4" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+            <text x="185" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">LED Light</text>
+            <text x="185" y="212" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">PoE 15W</text>
 
-            <rect x="240" y="185" width="80" height="34" rx="4" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
-            <text x="280" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Speed Gate</text>
-            <text x="280" y="212" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#4A6280">PoE 60W</text>
+            <rect x="240" y="185" width="80" height="34" rx="4" fill="#121009" stroke="#2A251C" stroke-width="1"/>
+            <text x="280" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Speed Gate</text>
+            <text x="280" y="212" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" fill="#8A8172">PoE 60W</text>
 
             <!-- Legend -->
-            <line x1="470" y1="195" x2="490" y2="195" stroke="#00C8E0" stroke-width="2"/>
-            <text x="500" y="198" font-family="Inter,sans-serif" font-size="7" fill="#00C8E0">MPO Fiber Backbone</text>
-            <line x1="470" y1="210" x2="490" y2="210" stroke="#A0B4C8" stroke-width="1" stroke-dasharray="3,2"/>
-            <text x="500" y="213" font-family="Inter,sans-serif" font-size="7" fill="#A0B4C8">Cat6A PoE+ to Device</text>
-            <text x="470" y="230" font-family="Inter,sans-serif" font-size="7" fill="#4A6280">IEEE 802.3bt Type 4 = 90W max per port</text>
+            <line x1="470" y1="195" x2="490" y2="195" stroke="#C9A96A" stroke-width="2"/>
+            <text x="500" y="198" font-family="Inter,sans-serif" font-size="7" fill="#C9A96A">MPO Fiber Backbone</text>
+            <line x1="470" y1="210" x2="490" y2="210" stroke="#B5AC9C" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="500" y="213" font-family="Inter,sans-serif" font-size="7" fill="#B5AC9C">Cat6A PoE+ to Device</text>
+            <text x="470" y="230" font-family="Inter,sans-serif" font-size="7" fill="#8A8172">IEEE 802.3bt Type 4 = 90W max per port</text>
           </svg>
         </div>
 
@@ -828,8 +828,8 @@
     <div class="footer-brand">
       <a href="/" class="nav-logo" style="margin-bottom:0.75rem;display:inline-flex;">
         <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
-          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+          <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/>
+          <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text>
         </svg>
         <div style="margin-left:8px;"><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
       </a>
