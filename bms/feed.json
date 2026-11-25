@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-25",
+  "slug": "diamond-controls-va-siemens-desigo-cc-khach-san",
+  "title_vi": "Diamond Controls và Desigo CC",
+  "title_en": "Diamond Controls versus Desigo CC for hotels",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-25-diamond-controls-va-siemens-desigo-cc-khach-san.html",
+  "x_post": "Hotel BMS: Diamond Controls or Desigo CC? Both speak BACnet. The choice is elsewhere:\n\n• Management: Niagara 4 vs Desigo CC\n• Rooms: any BACnet/Modbus GRMS vs Interel\n• Tools: Workbench vs ABT Site\n• Own-brand gear on site\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Khách sạn 4 đến 5 sao có ít nhất 6 hệ thống phải đưa về BMS: chiller, AHU, FCU khu công cộng, VRF, thang máy, GRMS phòng nghỉ và đồng hồ điện.\n\nKhi hồ sơ để ngỏ hãng, chủ đầu tư thường nhận hai phương án: Mitsubishi Electric Diamond Controls và Siemens Desigo CC. Cả hai đều chạy BACnet. Khác biệt nằm ở ba điểm:\n1. Tầng quản lý: Niagara 4 (kèm ICONICS GENESIS) so với Desigo CC (BACnet/IP, Modbus TCP, OPC, SNMP)\n2. Phòng nghỉ: Niagara nhận GRMS bất kỳ có BACnet/IP hoặc Modbus TCP; Siemens có Interel tích hợp Desigo CC\n3. Công cụ: Workbench chuẩn chung Niagara so với ABT Site của Siemens\n\nKhách sạn dùng nhiều VRF, thang máy, biến tần Mitsubishi Electric thì Diamond Controls đi cùng hệ sinh thái. Tòa nhà đã chuẩn hóa hạ tầng Siemens thì Desigo CC có lợi thế. Dù chọn bên nào, ghi rõ giao thức tới GRMS và quyền bàn giao file chương trình trong hồ sơ mời thầu.\n\nSơ đồ nguyên lý và bảng so sánh 9 tiêu chí:\nhttps://elvconsultant.com/blog/bms/2026-11-25-diamond-controls-va-siemens-desigo-cc-khach-san.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #Niagara4 #MitsubishiElectric #DiamondControls #BMSKhachSan"
+ },
+ {
   "date": "2026-11-24",
   "slug": "chon-license-dcm-9000-9005-9200",
   "title_vi": "Chọn license DCM 9000 đúng bậc",
