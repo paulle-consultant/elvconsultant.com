@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly W48 | HPE Aruba · Genetec SaaS · Crestron · Vietnam $5B Data Center · QSC | Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 48/2026: HPE Aruba Self-Driving AI, Genetec Security Center SaaS Axis/Bosch/Hanwha, Crestron Collab Engine, Vietnam $5B Data Center, QSC Q-SYS mở rộng.">
+  <meta name="author" content="Paul Le Consultant">
+  <meta property="og:title" content="ELV/ICT/AV Weekly W48 | 25 Nov 2026">
+  <meta property="og:description" content="HPE Aruba AI Self-Driving · Genetec SaaS Axis/Bosch · Crestron Collab Engine · Vietnam $5B Data Center · QSC Q-SYS">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1738918937796-743064feefa1?w=1200&h=630&q=85&auto=format&fit=crop">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-25-elv-ict-av-weekly.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;line-height:1.6}
+    .grid-bg{
+      position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),
+        linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:52px 52px;pointer-events:none;z-index:0
+    }
+
+    /* ═══ NAV ═══ */
+    nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(7,17,31,0.96);border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+      padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px
+    }
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-text{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:.5px;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+    .nav-cta{
+      background:transparent;border:1px solid var(--cyan);color:var(--cyan);
+      padding:7px 18px;border-radius:4px;font-size:12px;font-weight:600;
+      cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.5px;
+      transition:all .2s;text-decoration:none
+    }
+    .nav-cta:hover{background:var(--cyan);color:var(--bg)}
+
+    /* ═══ LANG BAR ═══ */
+    .lang-bar{
+      position:relative;z-index:1;
+      display:flex;align-items:center;justify-content:flex-end;gap:8px;
+      padding:.6rem 2rem;background:rgba(16,30,48,0.6);border-bottom:1px solid var(--card-border)
+    }
+    .lang-label{font-size:11px;color:var(--steel);letter-spacing:1px;font-family:'Orbitron',sans-serif}
+    .lang-btn{
+      font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;
+      padding:4px 12px;border:1px solid var(--card-border);border-radius:3px;
+      background:transparent;color:var(--steel);cursor:pointer;transition:all .2s
+    }
+    .lang-btn.active{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim)}
+    .lang-btn:hover{color:var(--white)}
+
+    /* ═══ ARTICLE HERO ═══ */
+    .article-hero{
+      position:relative;z-index:1;
+      height:clamp(360px,45vw,520px);overflow:hidden
+    }
+    .article-hero img{
+      width:100%;height:100%;object-fit:cover;
+      filter:brightness(.55) saturate(.85)
+    }
+    .article-hero-overlay{
+      position:absolute;inset:0;
+      background:linear-gradient(180deg,
+        rgba(7,17,31,.2) 0%,
+        rgba(7,17,31,.4) 50%,
+        rgba(7,17,31,.92) 100%)
+    }
+    .article-hero-content{
+      position:absolute;bottom:0;left:0;right:0;
+      padding:clamp(1.5rem,4vw,3rem) clamp(1rem,5vw,4rem)
+    }
+    .article-eyebrow{
+      font-family:'Orbitron',sans-serif;font-size:10px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:.75rem;display:flex;align-items:center;gap:10px
+    }
+    .article-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
+    .article-title{
+      font-family:'Orbitron',sans-serif;
+      font-size:clamp(1.2rem,3.2vw,2rem);font-weight:900;
+      color:var(--white);line-height:1.2;max-width:800px;margin-bottom:.75rem
+    }
+    .article-meta{font-size:12px;color:var(--silver);letter-spacing:.5px}
+    .article-meta span{color:var(--cyan)}
+
+    /* ═══ MAIN ═══ */
+    main{
+      position:relative;z-index:1;
+      max-width:900px;margin:0 auto;padding:2.5rem 1.5rem 4rem
+    }
+    .intro-box{
+      background:var(--card-bg);border:1px solid var(--card-border);
+      border-left:3px solid var(--cyan);border-radius:6px;
+      padding:1.25rem 1.5rem;margin-bottom:2.5rem;font-size:14px;color:var(--silver);line-height:1.8
+    }
+
+    /* ═══ NEWS ITEM ═══ */
+    .news-item{
+      background:var(--card-bg);border:1px solid var(--card-border);
+      border-radius:8px;padding:1.75rem;margin-bottom:1.75rem;
+      position:relative;overflow:hidden;transition:border-color .3s
+    }
+    .news-item:hover{border-color:var(--cyan-glow)}
+    .news-item::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:2px;
+      background:linear-gradient(90deg,var(--cyan),transparent);
+      opacity:0;transition:opacity .3s
+    }
+    .news-item:hover::before{opacity:1}
+    .news-num{
+      position:absolute;top:1.5rem;right:1.5rem;
+      font-family:'Orbitron',sans-serif;font-size:28px;font-weight:900;
+      color:rgba(0,200,224,0.08);letter-spacing:-1px;line-height:1
+    }
+    .news-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.85rem}
+    .tag{
+      font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.2px;
+      padding:3px 9px;border-radius:3px;border:1px solid var(--cyan-glow);
+      color:var(--cyan);background:var(--cyan-dim)
+    }
+    .tag.secondary{color:var(--silver);border-color:var(--card-border);background:transparent}
+    .news-title-vi,.news-title-en{
+      font-family:'Orbitron',sans-serif;font-size:clamp(.9rem,1.5vw,1.05rem);
+      font-weight:700;color:var(--white);line-height:1.4;margin-bottom:.85rem
+    }
+    .news-body{font-size:13.5px;color:var(--silver);line-height:1.8;margin-bottom:1rem}
+    .news-body p{margin-bottom:.6rem}
+    .news-body strong{color:var(--white)}
+
+    /* Diagram block */
+    .diagram-block{
+      background:var(--navy-deep);border:1px solid var(--card-border);
+      border-radius:6px;padding:1.25rem;margin:1rem 0;font-size:12px;
+      font-family:'Orbitron',monospace;color:var(--silver);line-height:1.9
+    }
+    .diagram-block .d-title{
+      font-size:10px;letter-spacing:2px;color:var(--cyan);margin-bottom:.75rem
+    }
+    .diagram-block .d-row{display:flex;align-items:center;gap:8px;padding:.15rem 0}
+    .diagram-block .d-box{
+      border:1px solid var(--cyan-glow);padding:3px 10px;border-radius:3px;
+      color:var(--white);font-size:11px;white-space:nowrap;background:var(--cyan-dim)
+    }
+    .diagram-block .d-arrow{color:var(--cyan);font-size:14px}
+    .diagram-block .d-label{font-size:11px;color:var(--steel)}
+
+    /* Why box */
+    .why-box{
+      background:rgba(0,200,224,0.05);border:1px solid var(--cyan-glow);
+      border-radius:6px;padding:1rem 1.25rem;margin-top:1rem
+    }
+    .why-box .why-title{
+      font-family:'Orbitron',sans-serif;font-size:9px;letter-spacing:2px;
+      color:var(--cyan);margin-bottom:.5rem
+    }
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.75}
+    .source-link{
+      display:inline-flex;align-items:center;gap:5px;
+      font-size:11px;color:var(--steel);text-decoration:none;
+      border-bottom:1px solid transparent;transition:all .2s;margin-top:.6rem
+    }
+    .source-link:hover{color:var(--cyan);border-bottom-color:var(--cyan)}
+
+    /* CTA */
+    .cta-box{
+      background:linear-gradient(135deg,var(--navy),var(--navy-deep));
+      border:1px solid var(--card-border);border-radius:8px;
+      padding:2rem;text-align:center;margin-top:2.5rem
+    }
+    .cta-box h3{
+      font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;
+      color:var(--cyan);margin-bottom:.5rem
+    }
+    .cta-box p{font-size:13px;color:var(--silver);margin-bottom:1.25rem}
+    .cta-btn{
+      display:inline-block;background:var(--cyan);color:var(--bg);
+      font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;
+      letter-spacing:1.5px;padding:10px 28px;border-radius:4px;
+      text-decoration:none;transition:opacity .2s
+    }
+    .cta-btn:hover{opacity:.85}
+
+    /* ═══ FOOTER ═══ */
+    footer{
+      position:relative;z-index:1;border-top:1px solid var(--card-border);
+      background:var(--card-bg);padding:2.5rem 2rem;margin-top:0
+    }
+    .footer-inner{
+      max-width:900px;margin:0 auto;
+      display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem
+    }
+    .footer-brand{display:flex;align-items:center;gap:10px}
+    .footer-links{display:flex;gap:1.5rem}
+    .footer-links a{font-size:12px;color:var(--steel);text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:var(--silver)}
+    .footer-copy{font-size:11px;color:var(--steel)}
+
+    /* ═══ RESPONSIVE ═══ */
+    @media(max-width:768px){
+      nav{padding:0 1rem}
+      .nav-links{display:none}
+      .article-hero-content{padding:1.5rem 1rem}
+      main{padding:1.5rem 1rem 3rem}
+      .footer-inner{flex-direction:column;text-align:center}
+      .footer-links{flex-wrap:wrap;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+      <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+    </svg>
+    <div>
+      <span class="logo-text">PAUL LE CONSULTANT</span>
+      <span class="logo-sub">AV · ICT · ELV</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">TƯ VẤN</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span class="lang-label">LANG</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1738918937796-743064feefa1?w=1400&h=520&q=85&auto=format&fit=crop" alt="Control room technology — ELV ICT AV Weekly 25 Nov 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="article-eyebrow vi-content">BẢN TIN TUẦN · W48 / 2026</div>
+    <div class="article-eyebrow en-content">WEEKLY BULLETIN · W48 / 2026</div>
+    <div class="article-title vi-content">HPE Aruba AI "Tự Lái" · Genetec SaaS Axis/Bosch · Crestron Collab Engine · Vietnam $5B Data Center · QSC Q-SYS Mở Rộng</div>
+    <div class="article-title en-content">HPE Aruba Self-Driving AI · Genetec SaaS Axis/Bosch · Crestron Collab Engine · Vietnam $5B Data Center · QSC Q-SYS Expansion</div>
+    <div class="article-meta">
+      <span class="vi-content">THỨ TƯ · <span>25 THÁNG 11, 2026</span> &nbsp;|&nbsp; Biên soạn: <span>Paul Le</span> &nbsp;|&nbsp; ELV/ICT/AV Consultant</span>
+      <span class="en-content">WEDNESDAY · <span>25 NOVEMBER 2026</span> &nbsp;|&nbsp; Curated by: <span>Paul Le</span> &nbsp;|&nbsp; ELV/ICT/AV Consultant</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <div class="intro-box">
+    <span class="vi-content">📡 <strong>W48/2026</strong> — Tuần này: HPE mở rộng mạng AI "tự lái" toàn hạ tầng; Genetec ra Security Center SaaS với hỗ trợ Axis, Bosch, Hanwha; Crestron ra thiết bị Collab Engine tích hợp AV+Conferencing; Việt Nam bùng nổ đầu tư Data Center với dự án $5 tỷ USD tại Hà Nội; QSC mở rộng Q-SYS cho hospitality và entertainment.</span>
+    <span class="en-content">📡 <strong>W48/2026</strong> — This week: HPE expands AI "Self-Driving" networks across all infrastructure tiers; Genetec launches Security Center SaaS with Axis, Bosch, Hanwha, i-PRO support; Crestron releases Collab Engine combining AV+Conferencing in one device; Vietnam's data center boom hits $5B with proposed Hà Nội AI complex; QSC expands Q-SYS for hospitality and entertainment.</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TIN 1: HPE ARUBA
+  ════════════════════════════════════════ -->
+  <div class="news-item">
+    <div class="news-num">01</div>
+    <div class="news-tags">
+      <span class="tag">HPE ARUBA</span>
+      <span class="tag">JUNIPER</span>
+      <span class="tag secondary">NETWORKING</span>
+      <span class="tag secondary">AI</span>
+    </div>
+
+    <div class="news-title-vi vi-content">HPE Mở Rộng "Self-Driving Networks" — AI Tự Động Hóa Toàn Bộ Hạ Tầng Mạng</div>
+    <div class="news-title-en en-content">HPE Expands "Self-Driving Networks" — AI Automates Entire Network Infrastructure</div>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p>HPE chính thức mở rộng nền tảng <strong>Self-Driving Networks</strong> (tại Discover 2026) sang toàn bộ stack hạ tầng: edge, campus, data center và AI Factory. Hệ thống kết hợp Aruba và Juniper sau khi M&A hoàn tất, với AI-native automation chạy trên từng switch, Wi-Fi AP và fabric switching cho môi trường AI Factory.</p>
+        <p>Điểm nổi bật: HPE ra loạt switch mới hỗ trợ 400G/800G cho AI workload, Wi-Fi 7 "Instant-On" cho campus, và nền tảng AI quản lý policy thống nhất từ edge đến cloud. Hệ thống tự phát hiện lỗi, tự tối ưu QoS và tự vá lỗi — không cần can thiệp thủ công.</p>
+      </div>
+      <div class="en-content">
+        <p>HPE officially expanded its <strong>Self-Driving Networks</strong> platform (at Discover 2026) across the full infrastructure stack: edge, campus, data center, and AI Factory environments. The system combines Aruba and Juniper post-acquisition, with AI-native automation running on switches, Wi-Fi APs, and AI Factory fabric switching.</p>
+        <p>Highlights: New HPE switches supporting 400G/800G for AI workloads, Wi-Fi 7 "Instant-On" for campus, and a unified AI-driven policy platform from edge to cloud. The system self-detects anomalies, self-optimizes QoS, and self-remedies faults — zero manual intervention needed.</p>
+      </div>
+    </div>
+
+    <!-- Diagram -->
+    <div class="diagram-block">
+      <div class="d-title">▸ KIẾN TRÚC SELF-DRIVING NETWORK / ARCHITECTURE</div>
+      <div class="d-row">
+        <div class="d-box">AI Engine (Cloud)</div>
+        <div class="d-arrow">↓ Policy / ML Models</div>
+      </div>
+      <div class="d-row" style="padding-left:20px">
+        <div class="d-box">AI Factory Fabric<br><span style="font-size:9px;color:var(--steel)">400G / 800G Spine-Leaf</span></div>
+        <div class="d-arrow">←→</div>
+        <div class="d-box">Campus Core<br><span style="font-size:9px;color:var(--steel)">Aruba CX Switches</span></div>
+        <div class="d-arrow">←→</div>
+        <div class="d-box">Edge / Wi-Fi 7<br><span style="font-size:9px;color:var(--steel)">Instant-On APs</span></div>
+      </div>
+      <div class="d-row" style="padding-left:20px;margin-top:4px">
+        <div class="d-label">↑ Telemetry · Auto-remediation · Zero-touch provisioning</div>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-title">▸ TẦM QUAN TRỌNG VỚI DỰ ÁN ELV/ICT VIỆT NAM</div>
+      <p class="vi-content">Với bùng nổ Data Center và Smart Building tại VN, HPE Self-Driving là giải pháp lý tưởng để quản lý mạng campus quy mô lớn (bệnh viện, sân bay, khách sạn 5 sao, trung tâm dữ liệu) không cần đội NOC đông đảo. Khả năng tích hợp với Aruba Central làm đơn giản hóa thiết kế hệ thống ICT — rút ngắn thời gian thiết kế và vận hành.</p>
+      <p class="en-content">With Vietnam's data center and smart building boom, HPE Self-Driving is ideal for managing large-scale campus networks (hospitals, airports, 5-star hotels, data centers) without large NOC teams. Integration with Aruba Central simplifies ICT system design — reducing both design time and operational overhead for local ELV/ICT consultants.</p>
+    </div>
+    <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/06/hpe-expands-self-driving-networks-across-edge-campus-data-center-and-ai-factories.html" target="_blank" rel="noopener" class="source-link">↗ Nguồn / Source: HPE Newsroom</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TIN 2: GENETEC
+  ════════════════════════════════════════ -->
+  <div class="news-item">
+    <div class="news-num">02</div>
+    <div class="news-tags">
+      <span class="tag">GENETEC</span>
+      <span class="tag">AXIS</span>
+      <span class="tag">BOSCH</span>
+      <span class="tag secondary">SECURITY</span>
+      <span class="tag secondary">SAAS</span>
+    </div>
+
+    <div class="news-title-vi vi-content">Genetec Security Center SaaS — Hỗ Trợ Camera Axis, Bosch, Hanwha, i-PRO Trên Nền Tảng Cloud</div>
+    <div class="news-title-en en-content">Genetec Security Center SaaS — Axis, Bosch, Hanwha, i-PRO Camera Support on Cloud Platform</div>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p><strong>Genetec</strong> công bố Security Center SaaS hỗ trợ chính thức cho thiết bị từ 4 nhà sản xuất camera hàng đầu: <strong>Axis Communications, Bosch Security Systems, Hanwha Vision và i-PRO</strong>. Đây là bước tiến lớn trong chiến lược "Open Platform VMS" của Genetec — hướng đến quản lý bảo mật vật lý thống nhất trên cloud.</p>
+        <p>Security Center SaaS cho phép quản lý video surveillance, access control, intrusion detection từ một giao diện web duy nhất, không cần máy chủ on-premise. Firmware OTA cập nhật tự động cho toàn bộ camera endpoint.</p>
+      </div>
+      <div class="en-content">
+        <p><strong>Genetec</strong> announced Security Center SaaS officially supports devices from 4 leading camera manufacturers: <strong>Axis Communications, Bosch Security Systems, Hanwha Vision, and i-PRO</strong>. This is a major step in Genetec's "Open Platform VMS" strategy — unified cloud-based physical security management.</p>
+        <p>Security Center SaaS enables managing video surveillance, access control, and intrusion detection from a single web interface, with no on-premise servers. Automatic OTA firmware updates for all camera endpoints are included.</p>
+      </div>
+    </div>
+
+    <div class="diagram-block">
+      <div class="d-title">▸ SƠ ĐỒ TÍCH HỢP GENETEC SAAS / INTEGRATION DIAGRAM</div>
+      <div class="d-row">
+        <div class="d-box">Genetec Cloud SaaS</div>
+        <div class="d-arrow">↕ Encrypted API</div>
+      </div>
+      <div class="d-row" style="padding-left:20px;gap:12px;flex-wrap:wrap">
+        <div class="d-box">Axis<br><span style="font-size:9px">ARTPEC-9</span></div>
+        <div class="d-box">Bosch<br><span style="font-size:9px">FLEXIDOME</span></div>
+        <div class="d-box">Hanwha<br><span style="font-size:9px">AI Camera</span></div>
+        <div class="d-box">i-PRO<br><span style="font-size:9px">AI Analytics</span></div>
+      </div>
+      <div class="d-row" style="padding-left:20px;margin-top:4px">
+        <div class="d-label">→ Access Control · Video Analytics · Intrusion Detection · OTA Update</div>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-title">▸ TẦM QUAN TRỌNG VỚI DỰ ÁN SECURITY VIỆT NAM</div>
+      <p class="vi-content">Việt Nam đang chuyển mạnh sang IP surveillance và integrated security. Genetec SaaS + Axis/Bosch là giải pháp lý tưởng cho dự án khách sạn 5 sao, bệnh viện, trung tâm thương mại cần compliance cao mà không muốn đầu tư server riêng. Giảm CAPEX đáng kể, dễ scale theo số lượng camera.</p>
+      <p class="en-content">Vietnam is rapidly shifting toward IP surveillance and integrated security. Genetec SaaS + Axis/Bosch is ideal for 5-star hotels, hospitals, and shopping centers requiring high compliance without dedicated server investment. Significant CAPEX reduction with easy camera-count scaling — perfect for Vietnam's rapidly growing security market.</p>
+    </div>
+    <a href="https://www.sdmmag.com/articles/103060-genetec-saas-announces-support-for-axis-bosch-hanwha-and-i-pro-devices" target="_blank" rel="noopener" class="source-link">↗ Nguồn / Source: SDM Magazine</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TIN 3: CRESTRON COLLAB ENGINE
+  ════════════════════════════════════════ -->
+  <div class="news-item">
+    <div class="news-num">03</div>
+    <div class="news-tags">
+      <span class="tag">CRESTRON</span>
+      <span class="tag secondary">AV</span>
+      <span class="tag secondary">COLLABORATION</span>
+      <span class="tag secondary">INFOCOMM 2026</span>
+    </div>
+
+    <div class="news-title-vi vi-content">Crestron Collab Engine — Thiết Bị Duy Nhất Tích Hợp AV + Hội Nghị Truyền Hình Cho Phòng Họp</div>
+    <div class="news-title-en en-content">Crestron Collab Engine — Single Device Combining AV + Video Conferencing for Meeting Rooms</div>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p><strong>Crestron</strong> ra mắt <strong>Collab Engine</strong> tại InfoComm 2026 — thiết bị AV control "2-in-1" kết hợp điều khiển phòng họp và video conferencing trong một hardware duy nhất. Hỗ trợ Teams, Zoom, Google Meet native; tích hợp room scheduling, sensor điều chỉnh ánh sáng/nhiệt độ tự động.</p>
+        <p>Trước đó, Crestron ra mắt <strong>Collab Compute</strong> — module máy tính scalable cho phép nâng cấp platform mà không thay toàn bộ thiết bị. Cả hai sản phẩm hướng đến giảm điểm cài đặt (fewer touchpoints) và tối ưu chi phí triển khai.</p>
+      </div>
+      <div class="en-content">
+        <p><strong>Crestron</strong> launched the <strong>Collab Engine</strong> at InfoComm 2026 — a "2-in-1" AV control device combining room control and video conferencing in a single hardware unit. Native support for Teams, Zoom, and Google Meet; integrated room scheduling and automatic lighting/temperature sensor control.</p>
+        <p>Previously, Crestron also introduced <strong>Collab Compute</strong> — a scalable compute module allowing platform upgrades without replacing the entire device. Both products target fewer installation touchpoints and optimized deployment costs.</p>
+      </div>
+    </div>
+
+    <div class="diagram-block">
+      <div class="d-title">▸ SƠ ĐỒ PHÒNG HỌP CRESTRON COLLAB ENGINE / ROOM DIAGRAM</div>
+      <div class="d-row" style="flex-wrap:wrap;gap:10px">
+        <div class="d-box">Crestron<br>Collab Engine</div>
+        <div class="d-arrow">←→</div>
+        <div class="d-box">Display / AV</div>
+      </div>
+      <div class="d-row" style="padding-left:20px;flex-wrap:wrap;gap:10px;margin-top:6px">
+        <div class="d-box">Teams / Zoom / Meet<br><span style="font-size:9px">Native UC</span></div>
+        <div class="d-box">Room Scheduler<br><span style="font-size:9px">Touch Panel</span></div>
+        <div class="d-box">Sensors<br><span style="font-size:9px">Light · Temp · Occ</span></div>
+      </div>
+      <div class="d-row" style="padding-left:20px;margin-top:4px">
+        <div class="d-label">→ Giảm cabling · 1 device thay 3 · Dễ troubleshoot</div>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-title">▸ TẦM QUAN TRỌNG VỚI DỰ ÁN AV VIỆT NAM</div>
+      <p class="vi-content">Với xu hướng hybrid work mạnh ở Việt Nam (đặc biệt văn phòng corporate và khách sạn), Collab Engine của Crestron giải quyết vấn đề chi phí lắp đặt và bảo trì phòng họp. Thay vì 3–4 thiết bị riêng (Codec + Controller + PC + Hub), chỉ cần 1 unit. Phù hợp cho dự án văn phòng cao cấp Hà Nội/HCM có ngân sách AV trung bình.</p>
+      <p class="en-content">With Vietnam's strong hybrid work trend (especially in corporate offices and hotels), Crestron's Collab Engine addresses meeting room installation and maintenance costs. Instead of 3–4 separate devices (Codec + Controller + PC + Hub), only 1 unit is needed. Ideal for mid-budget AV projects in upscale Hanoi/HCMC office developments.</p>
+    </div>
+    <a href="https://www.svconline.com/the-wire/crestron-introduces-collab-compute-a-new-hardware-core-for-intelligent-scalable-collaboration" target="_blank" rel="noopener" class="source-link">↗ Nguồn / Source: Sound & Video Contractor</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TIN 4: VIETNAM DATA CENTER
+  ════════════════════════════════════════ -->
+  <div class="news-item">
+    <div class="news-num">04</div>
+    <div class="news-tags">
+      <span class="tag">VIETNAM</span>
+      <span class="tag secondary">DATA CENTER</span>
+      <span class="tag secondary">AI INFRA</span>
+      <span class="tag secondary">FDI</span>
+    </div>
+
+    <div class="news-title-vi vi-content">Việt Nam Bùng Nổ Data Center: Dự Án $5 Tỷ USD Tại Hà Nội, Thu Hút Hyperscaler Toàn Cầu</div>
+    <div class="news-title-en en-content">Vietnam Data Center Boom: $5B Complex Proposed in Hà Nội, Global Hyperscalers Flock In</div>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p>Việt Nam đang nổi lên là điểm đến hàng đầu cho đầu tư hạ tầng số toàn cầu. Dự án <strong>AI & Data Center $5 tỷ USD tại Hà Nội</strong> vừa được đề xuất, cùng với làn sóng FDI vào hạ tầng công nghệ cao tại TP.HCM từ hyperscalers và cloud titans.</p>
+        <p>Đà Nẵng đang định vị thành hub data center miền Trung. Nhu cầu tăng mạnh từ AI workload, cloud expansion và chính sách số hóa quốc gia của Chính phủ Việt Nam. Cushman & Wakefield cũng bắt đầu tư vấn thị trường hyperscale tại VN.</p>
+      </div>
+      <div class="en-content">
+        <p>Vietnam is emerging as a top destination for global digital infrastructure investment. A <strong>$5 billion AI & Data Center complex in Hà Nội</strong> was recently proposed, alongside a wave of FDI into hi-tech digital infrastructure in HCMC from hyperscalers and cloud titans.</p>
+        <p>Đà Nẵng is positioning itself as Central Vietnam's data hub. Demand is surging from AI workloads, cloud expansion, and Vietnam's national digitalization policy. Cushman & Wakefield has also entered Vietnam's hyperscale advisory market.</p>
+      </div>
+    </div>
+
+    <div class="diagram-block">
+      <div class="d-title">▸ BẢN ĐỒ ĐẦU TƯ DATA CENTER VIỆT NAM 2026 / INVESTMENT MAP</div>
+      <div class="d-row" style="flex-wrap:wrap;gap:12px">
+        <div class="d-box">Hà Nội<br><span style="font-size:9px">$5B AI Complex (đề xuất)</span></div>
+        <div class="d-box">TP.HCM<br><span style="font-size:9px">FDI Hi-Tech Infra Hub</span></div>
+        <div class="d-box">Đà Nẵng<br><span style="font-size:9px">Central VN Data Hub</span></div>
+      </div>
+      <div class="d-row" style="padding-left:0;margin-top:8px">
+        <div class="d-label">→ Hyperscalers · Cloud Titans · AI Players đổ bộ → Nhu cầu ELV/ICT hạ tầng DC tăng mạnh</div>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-title">▸ TẦM QUAN TRỌNG VỚI ELV/ICT/AV CONSULTANT VIỆT NAM</div>
+      <p class="vi-content">Bùng nổ data center = cơ hội lớn cho ELV/ICT consultant. Mỗi data center tier-3/tier-4 cần hệ thống ICT phức tạp: structured cabling đến 40G/100G, hệ thống DCIM, security/CCTV, BMS tích hợp HVAC, fire suppression, UPS monitoring. Đây là phân khúc dự án có giá trị ELV/ICT cao nhất tại VN hiện nay.</p>
+      <p class="en-content">The data center boom equals major opportunities for ELV/ICT consultants. Each tier-3/tier-4 data center requires complex ICT systems: structured cabling up to 40G/100G, DCIM, security/CCTV, BMS integrated with HVAC, fire suppression, and UPS monitoring. This is currently the highest-value ELV/ICT project segment in Vietnam.</p>
+    </div>
+    <a href="https://en.vietstock.vn/2026/07/5-billion-ai-data-centre-complex-proposed-in-ha-noi-974-637489.htm" target="_blank" rel="noopener" class="source-link">↗ Nguồn / Source: VietStock — $5B Hà Nội AI Complex</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       TIN 5: QSC Q-SYS
+  ════════════════════════════════════════ -->
+  <div class="news-item">
+    <div class="news-num">05</div>
+    <div class="news-tags">
+      <span class="tag">QSC</span>
+      <span class="tag secondary">AV</span>
+      <span class="tag secondary">Q-SYS</span>
+      <span class="tag secondary">HOSPITALITY</span>
+    </div>
+
+    <div class="news-title-vi vi-content">QSC Mở Rộng Nền Tảng Q-SYS — Giải Pháp AV Scalable Cho Khách Sạn, Entertainment và Hội Nghị</div>
+    <div class="news-title-en en-content">QSC Expands Q-SYS Platform — Scalable AV Solutions for Hospitality, Entertainment & Conferencing</div>
+
+    <div class="news-body">
+      <div class="vi-content">
+        <p><strong>QSC</strong> công bố mở rộng nền tảng <strong>Q-SYS</strong> với loạt tính năng mới cho collaboration, hospitality và entertainment. Q-SYS giờ hỗ trợ Teams/Zoom rooms native, tích hợp sâu với hệ thống Dante audio, DMX lighting, và room automation — tất cả trên nền IP software-defined.</p>
+        <p>InfoComm 2026 là sân khấu QSC ra mắt loạt giải pháp meeting room scalable: từ phòng họp 10 người đến ballroom 2.000 người, dùng chung một platform Q-SYS duy nhất, giảm chi phí đào tạo và vận hành.</p>
+      </div>
+      <div class="en-content">
+        <p><strong>QSC</strong> announced expanded <strong>Q-SYS</strong> platform with new features for collaboration, hospitality, and entertainment. Q-SYS now natively supports Teams/Zoom rooms, with deep integration of Dante audio, DMX lighting, and room automation — all on an IP software-defined foundation.</p>
+        <p>InfoComm 2026 was the stage for QSC's scalable meeting room solutions: from a 10-person huddle room to a 2,000-person ballroom, all running on the same Q-SYS platform, reducing training and operational costs.</p>
+      </div>
+    </div>
+
+    <div class="diagram-block">
+      <div class="d-title">▸ SƠ ĐỒ Q-SYS PLATFORM / ARCHITECTURE</div>
+      <div class="d-row">
+        <div class="d-box">Q-SYS Core<br><span style="font-size:9px">Software-Defined AV</span></div>
+        <div class="d-arrow">↕ IP Network</div>
+      </div>
+      <div class="d-row" style="padding-left:20px;flex-wrap:wrap;gap:10px;margin-top:6px">
+        <div class="d-box">Audio I/O<br><span style="font-size:9px">Dante Network</span></div>
+        <div class="d-box">Video Conf<br><span style="font-size:9px">Teams / Zoom</span></div>
+        <div class="d-box">Room Control<br><span style="font-size:9px">Lighting / HVAC</span></div>
+        <div class="d-box">Paging<br><span style="font-size:9px">BGM / PA</span></div>
+      </div>
+      <div class="d-row" style="padding-left:0;margin-top:6px">
+        <div class="d-label">→ Huddle Room → Boardroom → Ballroom — 1 Platform, Many Scales</div>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <div class="why-title">▸ TẦM QUAN TRỌNG VỚI DỰ ÁN AV/ELV VIỆT NAM</div>
+      <p class="vi-content">Với boom khách sạn 5 sao và trung tâm hội nghị tại VN (Hà Nội, Đà Nẵng, Phú Quốc, HCM), Q-SYS là platform AV scalable lý tưởng. Khả năng dùng 1 platform cho toàn property (guestroom BGM + meeting rooms + ballroom + PA/paging) là lợi thế lớn khi thiết kế hệ thống AV tích hợp. Giảm số lượng vendor và điểm bảo trì.</p>
+      <p class="en-content">With Vietnam's 5-star hotel and convention center boom (Hanoi, Da Nang, Phu Quoc, HCMC), Q-SYS is the ideal scalable AV platform. Using 1 platform for the entire property (guestroom BGM + meeting rooms + ballroom + PA/paging) is a major design advantage. Fewer vendors, fewer maintenance touchpoints — perfect for high-end hospitality AV integration.</p>
+    </div>
+    <a href="https://www.avnation.tv/2026/01/26/qsc-launches-scalable-q-sys-collaboration-solutions-and-expands-hospitality-and-entertainment-applications/" target="_blank" rel="noopener" class="source-link">↗ Nguồn / Source: AVNation</a>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3 class="vi-content">CẦN TƯ VẤN HỆ THỐNG ELV/ICT/AV?</h3>
+    <h3 class="en-content">NEED ELV/ICT/AV SYSTEM CONSULTATION?</h3>
+    <p class="vi-content">Paul Le — ELV/ICT/AV Design Director với kinh nghiệm thiết kế hệ thống cho khách sạn, bệnh viện, sân bay và data center tại Việt Nam.</p>
+    <p class="en-content">Paul Le — ELV/ICT/AV Design Director with experience designing systems for hotels, hospitals, airports, and data centers in Vietnam.</p>
+    <a href="https://elvconsultant.com/#contact" class="cta-btn vi-content">LIÊN HỆ TƯ VẤN →</a>
+    <a href="https://elvconsultant.com/#contact" class="cta-btn en-content">GET IN TOUCH →</a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+        <path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text>
+      </svg>
+      <span class="footer-copy">© 2026 Paul Le Consultant — elvconsultant.com</span>
+    </div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://x.com/PLELVCONSULTANT" target="_blank">X/Twitter</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
