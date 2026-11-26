@@ -1,0 +1,121 @@
+{
+ "date": "2026-11-26",
+ "slug": "bems-leed-edge-lotus-diem-bms",
+ "pillar_vi": "Năng lượng & pháp lý",
+ "pillar_en": "Energy & compliance",
+ "title_vi": "BEMS cho LEED, EDGE, LOTUS",
+ "title_en": "BEMS for LEED, EDGE and LOTUS",
+ "lead_vi": "Chứng nhận công trình xanh không chấm điểm cho cái tủ BMS, mà chấm cho dữ liệu đo đếm và chiến lược điều khiển nó tạo ra. Bài này chỉ ra phần nào của LEED, EDGE và LOTUS mà BMS và hệ đo đếm năng lượng trực tiếp đóng góp, và cách cấu hình Diamond Controls để có đủ bằng chứng.",
+ "lead_en": "Green building rating systems do not score the BMS panel; they score the metering data and control strategies it produces. This post shows which parts of LEED, EDGE and LOTUS a BMS with energy metering contributes to directly, and how to set up Diamond Controls to produce the evidence.",
+ "tags": [
+  "BEMS",
+  "LEED",
+  "EDGE",
+  "LOTUS",
+  "Đo đếm năng lượng",
+  "Niagara 4",
+  "ICONICS GENESIS",
+  "Diamond Controls"
+ ],
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1630107753878-866b364cdbd9?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Mặt tiền tòa nhà cao tầng đen trắng nhìn từ dưới lên",
+  "credit": "Brady Bellini",
+  "credit_url": "https://unsplash.com/photos/black-and-white-high-rise-building-7c3P7k3XPgI"
+ },
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 700\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sơ đồ nguyên lý BEMS cho chứng nhận LEED, EDGE, LOTUS: đồng hồ điện, chiller plant và AHU về DCM 9000, lưu history Niagara và báo cáo qua ICONICS GENESIS\" font-family=\"'Maison Sans',system-ui,sans-serif\"><style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.fw{stroke:#B5AC9C;stroke-width:1.2;fill:none;stroke-dasharray:5 4}.p{fill:#C9A96A;font-size:12px}.bg{fill:#0C0B09}</style><path class=\"ln\" d=\"M420 85H540\"/><path class=\"ln\" d=\"M220 140V230\"/><path class=\"ln\" d=\"M420 290H540\"/><path class=\"ln\" d=\"M220 350V395M160 395H800M160 395V445M480 395V445M800 395V445\"/><path class=\"fw\" d=\"M160 565V600M480 565V600M800 565V600\"/><text class=\"k\" x=\"20\" y=\"22\">QUẢN LÝ NĂNG LƯỢNG / ENERGY MANAGEMENT</text><rect class=\"b\" x=\"20\" y=\"30\" width=\"400\" height=\"110\"/><text class=\"t\" x=\"36\" y=\"58\">ICONICS GENESIS</text><text class=\"s\" x=\"36\" y=\"82\">Năng lượng theo hệ, báo động, FDD</text><text class=\"s\" x=\"36\" y=\"104\">Báo cáo carbon, so sánh baseline</text><rect class=\"b2\" x=\"540\" y=\"30\" width=\"400\" height=\"110\"/><text class=\"t\" x=\"556\" y=\"58\">Hồ sơ chứng nhận / Evidence</text><text class=\"s\" x=\"556\" y=\"82\">LEED: Advanced Energy Metering</text><text class=\"s\" x=\"556\" y=\"104\">EDGE: số liệu đo sau vận hành</text><text class=\"s\" x=\"556\" y=\"126\">LOTUS: nhóm Năng lượng</text><rect class=\"b\" x=\"20\" y=\"230\" width=\"400\" height=\"120\"/><text class=\"t\" x=\"36\" y=\"258\">Controller: DCM 9000 · Niagara 4</text><text class=\"s\" x=\"36\" y=\"282\">2 × GbE, 2 × RS-485 cách ly</text><text class=\"s\" x=\"36\" y=\"304\">DCM-9025: 25 thiết bị, 1.250 điểm</text><text class=\"s\" x=\"36\" y=\"326\">Driver BACnet, Modbus kèm licence</text><rect class=\"b2\" x=\"540\" y=\"230\" width=\"400\" height=\"120\"/><text class=\"t\" x=\"556\" y=\"258\">Niagara history</text><text class=\"s\" x=\"556\" y=\"282\">Trend năng lượng chu kỳ ≤ 60 phút</text><text class=\"s\" x=\"556\" y=\"304\">Lưu tối thiểu 36 tháng, truy cập từ xa</text><text class=\"s\" x=\"556\" y=\"326\">Xuất CSV cho đơn vị tư vấn chứng nhận</text><rect class=\"b2\" x=\"20\" y=\"445\" width=\"280\" height=\"120\"/><text class=\"t\" x=\"36\" y=\"473\">Đồng hồ điện</text><text class=\"s\" x=\"36\" y=\"497\">Tổng tòa nhà + nhánh ≥ 10%</text><text class=\"s\" x=\"36\" y=\"519\">HVAC, chiếu sáng, ổ cắm</text><text class=\"s\" x=\"36\" y=\"541\">Thang máy, nước nóng</text><rect class=\"b2\" x=\"340\" y=\"445\" width=\"280\" height=\"120\"/><text class=\"t\" x=\"356\" y=\"473\">Chiller plant</text><text class=\"s\" x=\"356\" y=\"497\">Chiller, bơm, tháp giải nhiệt</text><text class=\"s\" x=\"356\" y=\"519\">Đồng hồ BTU nước lạnh</text><text class=\"s\" x=\"356\" y=\"541\">Tính kW/RT theo giờ</text><rect class=\"b2\" x=\"660\" y=\"445\" width=\"280\" height=\"120\"/><text class=\"t\" x=\"676\" y=\"473\">AHU: DCM-8044-D</text><text class=\"s\" x=\"676\" y=\"497\">16 điểm, BACnet IP</text><text class=\"s\" x=\"676\" y=\"519\">Nhiệt độ, CO2, tốc độ quạt</text><text class=\"s\" x=\"676\" y=\"541\">Lịch chạy theo giờ làm việc</text><rect class=\"bg\" x=\"430\" y=\"68\" width=\"57\" height=\"16\"/><text class=\"p\" x=\"434\" y=\"80\">Báo cáo</text><rect class=\"bg\" x=\"222\" y=\"178\" width=\"141\" height=\"16\"/><text class=\"p\" x=\"226\" y=\"190\">BACnet/IP · Fox TLS</text><rect class=\"bg\" x=\"430\" y=\"273\" width=\"57\" height=\"16\"/><text class=\"p\" x=\"434\" y=\"285\">History</text><rect class=\"bg\" x=\"162\" y=\"413\" width=\"78\" height=\"16\"/><text class=\"p\" x=\"166\" y=\"425\">Modbus RTU</text><rect class=\"bg\" x=\"482\" y=\"413\" width=\"71\" height=\"16\"/><text class=\"p\" x=\"486\" y=\"425\">BACnet/IP</text><rect class=\"bg\" x=\"802\" y=\"413\" width=\"71\" height=\"16\"/><text class=\"p\" x=\"806\" y=\"425\">BACnet/IP</text><rect class=\"bg\" x=\"162\" y=\"576\" width=\"50\" height=\"16\"/><text class=\"p\" x=\"166\" y=\"588\">RS-485</text><rect class=\"bg\" x=\"482\" y=\"576\" width=\"78\" height=\"16\"/><text class=\"p\" x=\"486\" y=\"588\">Hard-wired</text><rect class=\"bg\" x=\"802\" y=\"576\" width=\"106\" height=\"16\"/><text class=\"p\" x=\"806\" y=\"588\">0–10 V · DI/DO</text><rect class=\"b2\" x=\"20\" y=\"600\" width=\"920\" height=\"40\"/><text class=\"s\" x=\"36\" y=\"625\">Thiết bị hiện trường: CT, cảm biến nhiệt độ, áp suất, lưu lượng, CO2 / Field devices</text><text class=\"s\" x=\"20\" y=\"668\">Yêu cầu đo đếm theo LEED v4 EA Advanced Energy Metering; EDGE và LOTUS theo phiên bản dự án đăng ký.</text><text class=\"s\" x=\"20\" y=\"690\">Metering per LEED v4 Advanced Energy Metering; EDGE and LOTUS per the registered version.</text></svg>",
+  "caption_vi": "SĐNL BEMS cho hồ sơ chứng nhận: đồng hồ điện Modbus RTU, chiller plant và AHU BACnet/IP về DCM 9000, history Niagara lưu 36 tháng, ICONICS GENESIS xuất báo cáo.",
+  "caption_en": "BEMS schematic for certification evidence: Modbus RTU meters, BACnet/IP chiller plant and AHUs into DCM 9000, Niagara history kept 36 months, ICONICS GENESIS produces the reports."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>Chủ đầu tư đặt mục tiêu LEED, EDGE hoặc LOTUS từ giai đoạn thiết kế, nhưng hồ sơ BMS thường chỉ ghi \"BMS giám sát HVAC\". Đến lúc nộp hồ sơ, đơn vị tư vấn chứng nhận hỏi đồng hồ nhánh ở đâu, dữ liệu lưu bao lâu, truy cập từ xa thế nào, và nhà thầu BMS phải sửa cấu hình, có khi phải bổ sung đồng hồ.</p><p>Lý do: BMS không có điểm riêng trong các hệ thống này. Điểm nằm ở yêu cầu đo đếm và ở mức tiết kiệm năng lượng mà chiến lược điều khiển giúp đạt được. Nếu đặc tả BMS không viết theo các yêu cầu đó ngay từ đầu, công trình mất điểm dù đã lắp BMS.</p>",
+   "en": "<p>Owners set a LEED, EDGE or LOTUS target at design stage, yet the BMS specification often says only \"BMS monitors HVAC\". At submission the certification consultant asks where the sub-meters are, how long data is stored and how it is reached remotely, and the BMS contractor has to rework the configuration, sometimes add meters.</p><p>The reason: a BMS earns no points of its own in these systems. The points sit in metering requirements and in the energy savings that control strategies help achieve. If the BMS specification is not written against those requirements from the start, the project loses points even with a BMS installed.</p>"
+  },
+  {
+   "h_vi": "Giải pháp",
+   "h_en": "Solution",
+   "vi": "<p>Viết đặc tả BMS theo từng hệ thống chứng nhận:</p><ul><li><strong>LEED v4 BD+C, EA Advanced Energy Metering (1 điểm):</strong> đo toàn bộ nguồn năng lượng cấp cho tòa nhà và mọi phụ tải chiếm từ 10% tổng năng lượng tiêu thụ hằng năm trở lên. Đồng hồ ghi dữ liệu chu kỳ 1 giờ hoặc ngắn hơn, lưu tối thiểu 36 tháng, truyền về vị trí từ xa qua LAN, BAS hoặc mạng tương đương.</li><li><strong>EDGE (IFC):</strong> mức EDGE Certified cần tiết kiệm từ 20% năng lượng, nước và năng lượng hàm chứa trong vật liệu; EDGE Advanced cần từ 40% tiết kiệm năng lượng tại chỗ; Zero Carbon thêm 100% năng lượng tái tạo hoặc bù carbon. BMS đóng góp qua các biện pháp điều khiển và qua số liệu đo sau vận hành.</li><li><strong>LOTUS (VGBC):</strong> nhóm Năng lượng có yêu cầu đo đếm và giám sát; đối chiếu tiêu chí cụ thể theo technical manual của phiên bản dự án đăng ký.</li></ul><p>Với Diamond Controls, phần đo đếm và lưu trữ nằm trong Niagara 4 trên DCM 9000; phần báo cáo năng lượng, FDD và carbon nằm trong ICONICS GENESIS.</p>",
+   "en": "<p>Write the BMS specification against each rating system:</p><ul><li><strong>LEED v4 BD+C, EA Advanced Energy Metering (1 point):</strong> meter all energy sources serving the building and every end use that is 10% or more of total annual consumption. Meters record at intervals of one hour or less, store data for at least 36 months and transmit to a remote location over a LAN, BAS or comparable network.</li><li><strong>EDGE (IFC):</strong> EDGE Certified needs 20% or more savings in energy, water and embodied energy in materials; EDGE Advanced needs 40% or more on-site energy savings; Zero Carbon adds 100% renewables or carbon offsets. The BMS contributes through control measures and post-occupancy metered data.</li><li><strong>LOTUS (VGBC):</strong> the Energy category carries metering and monitoring requirements; check the exact criteria in the technical manual of the version the project registers under.</li></ul><p>With Diamond Controls, metering and storage live in Niagara 4 on the DCM 9000; energy reporting, FDD and carbon reports live in ICONICS GENESIS.</p>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<ol><li><strong>Danh sách đồng hồ:</strong> lấy bảng phụ tải từ mô hình năng lượng, đánh dấu mọi phụ tải từ 10% trở lên. Văn phòng và khách sạn tại Việt Nam thường có HVAC, chiếu sáng, ổ cắm và thang máy vào danh sách; xác nhận bằng số liệu mô hình, không đoán.</li><li><strong>Giao thức:</strong> đồng hồ điện Modbus RTU đi bus RS-485 về một trong 2 cổng RS-485 cách ly của DCM 9000. Mỗi bus nên tách theo tủ điện để lỗi một nhánh không làm mất cả tòa. Chiller và AHU đi BACnet/IP.</li><li><strong>History:</strong> cấu hình history Niagara cho điểm kWh với chu kỳ 15 phút, ngắn hơn ngưỡng 1 giờ của LEED và đủ mịn để xem phụ tải đỉnh. Dung lượng lưu tính cho ít nhất 36 tháng, nên đẩy về Supervisor hoặc ICONICS GENESIS thay vì giữ trên thẻ micro-SD 8 GB của controller.</li><li><strong>Licence:</strong> đếm cả điểm đồng hồ khi chọn licence. Tòa 20 đồng hồ, mỗi đồng hồ 8 điểm, đã là 160 điểm; cộng chiller plant và AHU thì DCM-9025 (25 thiết bị, 1.250 điểm) thường là mức xuất phát.</li><li><strong>Truy cập từ xa:</strong> Fox TLS hoặc HTTPS qua VPN, không mở cổng thẳng ra Internet.</li></ol>",
+   "en": "<ol><li><strong>Meter list:</strong> take the end-use breakdown from the energy model and flag every end use at 10% or more. Offices and hotels in Vietnam usually put HVAC, lighting, plug loads and lifts on the list; confirm with the model, do not guess.</li><li><strong>Protocol:</strong> Modbus RTU power meters run on RS-485 into one of the 2 isolated RS-485 ports of the DCM 9000. Split buses by switchboard so one faulty branch does not take the whole building offline. Chillers and AHUs run BACnet/IP.</li><li><strong>History:</strong> set Niagara histories on kWh points at 15 minutes, shorter than the LEED one-hour limit and fine enough to see peak demand. Size storage for at least 36 months and push it to a Supervisor or ICONICS GENESIS rather than keeping it on the controller's 8 GB micro-SD.</li><li><strong>Licence:</strong> count meter points when choosing the licence. 20 meters at 8 points each is already 160 points; add the chiller plant and AHUs and DCM-9025 (25 devices, 1,250 points) is the usual starting tier.</li><li><strong>Remote access:</strong> Fox TLS or HTTPS over VPN, never a port opened straight to the Internet.</li></ol>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<p>Văn phòng cho thuê nhắm LEED để thu hút khách thuê quốc tế, nhà máy FDI cần EDGE theo yêu cầu của tập đoàn mẹ, và dự án trong nước chọn LOTUS. Cả ba đều dùng chung một kiến trúc: đồng hồ đúng chỗ, history đúng chu kỳ, báo cáo xuất được.</p><p>Mitsubishi Electric công bố quản lý tập trung có thể giảm tới 30% năng lượng và nêu hỗ trợ LEED, WELL, EDGE, LOTUS; con số thực tế của từng công trình phải lấy từ đo đếm sau vận hành. Với cơ sở sử dụng năng lượng trọng điểm, cùng bộ dữ liệu này phục vụ luôn nghĩa vụ đo đếm và kế hoạch năng lượng theo Luật 77/2025/QH15.</p>",
+   "en": "<p>Lettable offices targeting LEED for international tenants, FDI factories needing EDGE for their parent group, and local projects choosing LOTUS. All three use the same architecture: meters in the right place, histories at the right interval, reports that can be exported.</p><p>Mitsubishi Electric states that centralised management can cut energy use by up to 30% and lists support for LEED, WELL, EDGE and LOTUS; the actual figure for each building has to come from post-occupancy metering. For designated energy users, the same data set also serves the metering and energy planning duties under Law 77/2025/QH15.</p>"
+  }
+ ],
+ "table": {
+  "caption_vi": "BMS đóng góp vào đâu trong từng hệ thống chứng nhận",
+  "caption_en": "Where the BMS contributes in each rating system",
+  "head": [
+   "Hệ thống / System",
+   "Yêu cầu liên quan BMS",
+   "Cấu hình Diamond Controls"
+  ],
+  "rows": [
+   [
+    "LEED v4 BD+C",
+    "EA Advanced Energy Metering, 1 điểm: nguồn tổng + phụ tải ≥ 10%",
+    "Đồng hồ Modbus RTU về DCM 9000"
+   ],
+   [
+    "LEED v4 BD+C",
+    "Chu kỳ ghi ≤ 1 giờ, lưu ≥ 36 tháng, truy cập từ xa",
+    "History 15 phút, Supervisor/GENESIS, Fox TLS qua VPN"
+   ],
+   [
+    "EDGE Certified",
+    "Tiết kiệm ≥ 20% năng lượng, nước, vật liệu",
+    "Lịch chạy, điều khiển theo CO2, reset nhiệt độ"
+   ],
+   [
+    "EDGE Advanced",
+    "Tiết kiệm năng lượng tại chỗ ≥ 40%",
+    "Tối ưu chiller plant, FDD trên GENESIS"
+   ],
+   [
+    "EDGE Zero Carbon",
+    "EDGE Advanced + 100% tái tạo hoặc bù carbon",
+    "Báo cáo carbon trên ICONICS GENESIS"
+   ],
+   [
+    "LOTUS (VGBC)",
+    "Nhóm Năng lượng: đo đếm và giám sát theo manual",
+    "Cùng kiến trúc đo đếm như LEED"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "Mitsubishi Electric Asia, Diamond Controls catalogue (2023)"
+  },
+  {
+   "title": "Mitsubishi Electric Vietnam, Building Management System",
+   "url": "https://buildingsolutions.mitsubishi-electric.vn/en/bms/"
+  },
+  {
+   "title": "LEEDuser (BuildingGreen), LEED v4 BD+C EA credit Advanced energy metering",
+   "url": "https://leeduser.buildinggreen.com/credit/NC-v4/EAc3"
+  },
+  {
+   "title": "EDGE (IFC), EDGE certification levels",
+   "url": "https://edgebuildings.com/certify/certification/"
+  },
+  {
+   "title": "EDGE (IFC), About EDGE",
+   "url": "https://edgebuildings.com/about/about-edge/"
+  }
+ ],
+ "x_post": "LEED gives 1 point for advanced energy metering: every end use at 10%+ of annual energy, hourly or faster data, 36 months stored, remote access.\n\nWrite that into the BMS spec on day one, not at submission.\n\nFull schematic on the blog, link in bio.",
+ "fb_post": "LEED v4 cho 1 điểm Advanced Energy Metering nếu đo được mọi phụ tải từ 10% tổng năng lượng năm trở lên, ghi dữ liệu chu kỳ 1 giờ hoặc ngắn hơn, lưu 36 tháng và truy cập từ xa.\n\nBMS không có điểm riêng trong LEED, EDGE hay LOTUS. Điểm nằm ở dữ liệu đo đếm và ở mức tiết kiệm mà chiến lược điều khiển tạo ra. EDGE Certified cần tiết kiệm từ 20% năng lượng, EDGE Advanced từ 40%.\n\nVới Mitsubishi Electric Diamond Controls:\n1. Đồng hồ điện Modbus RTU về cổng RS-485 cách ly của DCM 9000\n2. History Niagara chu kỳ 15 phút, lưu trên Supervisor hoặc ICONICS GENESIS\n3. GENESIS xuất báo cáo năng lượng, FDD, carbon cho đơn vị tư vấn chứng nhận\n\nGhi các yêu cầu này vào đặc tả BMS từ giai đoạn thiết kế, đừng đợi đến lúc nộp hồ sơ mới bổ sung đồng hồ.\n\nSơ đồ nguyên lý và bảng đối chiếu LEED, EDGE, LOTUS:\nhttps://elvconsultant.com/blog/bms/2026-11-26-bems-leed-edge-lotus-diem-bms.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #LEED #EDGE #LOTUS #DiamondControls"
+}

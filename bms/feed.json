@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-26",
+  "slug": "bems-leed-edge-lotus-diem-bms",
+  "title_vi": "BEMS cho LEED, EDGE, LOTUS",
+  "title_en": "BEMS for LEED, EDGE and LOTUS",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-26-bems-leed-edge-lotus-diem-bms.html",
+  "x_post": "LEED gives 1 point for advanced energy metering: every end use at 10%+ of annual energy, hourly or faster data, 36 months stored, remote access.\n\nWrite that into the BMS spec on day one, not at submission.\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "LEED v4 cho 1 điểm Advanced Energy Metering nếu đo được mọi phụ tải từ 10% tổng năng lượng năm trở lên, ghi dữ liệu chu kỳ 1 giờ hoặc ngắn hơn, lưu 36 tháng và truy cập từ xa.\n\nBMS không có điểm riêng trong LEED, EDGE hay LOTUS. Điểm nằm ở dữ liệu đo đếm và ở mức tiết kiệm mà chiến lược điều khiển tạo ra. EDGE Certified cần tiết kiệm từ 20% năng lượng, EDGE Advanced từ 40%.\n\nVới Mitsubishi Electric Diamond Controls:\n1. Đồng hồ điện Modbus RTU về cổng RS-485 cách ly của DCM 9000\n2. History Niagara chu kỳ 15 phút, lưu trên Supervisor hoặc ICONICS GENESIS\n3. GENESIS xuất báo cáo năng lượng, FDD, carbon cho đơn vị tư vấn chứng nhận\n\nGhi các yêu cầu này vào đặc tả BMS từ giai đoạn thiết kế, đừng đợi đến lúc nộp hồ sơ mới bổ sung đồng hồ.\n\nSơ đồ nguyên lý và bảng đối chiếu LEED, EDGE, LOTUS:\nhttps://elvconsultant.com/blog/bms/2026-11-26-bems-leed-edge-lotus-diem-bms.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #LEED #EDGE #LOTUS #DiamondControls"
+ },
+ {
   "date": "2026-11-25",
   "slug": "diamond-controls-va-siemens-desigo-cc-khach-san",
   "title_vi": "Diamond Controls và Desigo CC",

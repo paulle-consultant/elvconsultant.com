@@ -173,7 +173,8 @@
    "pillar": "Năng lượng & pháp lý",
    "pillar_en": "Energy & compliance",
    "topic": "BEMS cho LEED, EDGE, LOTUS: điểm số nào BMS lấy được",
-   "status": "planned"
+   "status": "published",
+   "slug": "bems-leed-edge-lotus-diem-bms"
   },
   {
    "date": "2026-11-27",
