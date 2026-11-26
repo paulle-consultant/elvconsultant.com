@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly W48 | 26 Tháng 11, 2026 — Paul Le Consultant</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 48/2026: Schneider+Planon Intelligent Buildings · CommScope/Amphenol cabling M&A · Cisco AI workplace · Sterlite AI fiber · Secutech Vietnam 2026.">
+  <meta name="keywords" content="ELV news, ICT AV news, smart building, AI security, structured cabling, bản tin ELV, Paul Le Consultant">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-26-elv-ict-av-weekly.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;min-height:100vh}
+
+    /* GRID BG */
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;
+      background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);
+      background-size:48px 48px;pointer-events:none;z-index:0}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;
+      background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);
+      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-text{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:.5px;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:7px 18px;
+      border-radius:4px;font-size:12px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;
+      letter-spacing:.5px;transition:all .2s;text-decoration:none}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg)}
+
+    /* LANG BAR */
+    .lang-bar{position:relative;z-index:10;background:var(--navy-deep);border-bottom:1px solid var(--card-border);
+      padding:.6rem 2rem;display:flex;align-items:center;gap:.5rem}
+    .lang-label{font-size:11px;color:var(--steel);letter-spacing:1px;font-family:'Orbitron',monospace}
+    .lang-btn{font-family:'Orbitron',monospace;font-size:11px;font-weight:700;padding:4px 14px;
+      border-radius:3px;border:1px solid var(--card-border);background:transparent;
+      color:var(--steel);cursor:pointer;letter-spacing:1px;transition:all .2s}
+    .lang-btn.active{background:var(--cyan);color:var(--bg);border-color:var(--cyan)}
+    .lang-btn:hover:not(.active){border-color:var(--cyan);color:var(--cyan)}
+
+    /* HERO */
+    .article-hero{position:relative;z-index:1;height:520px;overflow:hidden}
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(.85)}
+    .article-hero-overlay{position:absolute;inset:0;
+      background:linear-gradient(180deg,rgba(7,17,31,.2) 0%,rgba(7,17,31,.55) 50%,rgba(7,17,31,.95) 100%)}
+    .article-hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2rem}
+    .article-hero-content .eyebrow{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:.75rem;display:flex;align-items:center;gap:10px}
+    .article-hero-content .eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
+    .article-hero-content h1{font-family:'Orbitron',monospace;font-size:clamp(1.3rem,3vw,2.1rem);
+      font-weight:900;line-height:1.15;color:var(--white);text-shadow:0 2px 16px rgba(0,0,0,.7);max-width:900px}
+    .article-hero-content .hero-meta{margin-top:1rem;display:flex;gap:1rem;flex-wrap:wrap;
+      font-size:12px;color:var(--silver);font-family:'Orbitron',monospace;letter-spacing:1px}
+
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:3rem 1.5rem 5rem}
+
+    /* SECTION LABEL */
+    .section-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;
+      color:var(--cyan);margin-bottom:2rem;display:flex;align-items:center;gap:12px}
+    .section-label::after{content:'';flex:1;height:1px;background:var(--card-border)}
+
+    /* NEWS ITEM */
+    .news-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;
+      padding:2rem;margin-bottom:1.75rem;position:relative;overflow:hidden;transition:border-color .3s}
+    .news-item:hover{border-color:var(--cyan-glow)}
+    .news-item::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--cyan);opacity:.6}
+    .news-num{position:absolute;top:1.5rem;right:1.75rem;font-family:'Orbitron',monospace;
+      font-size:2.5rem;font-weight:900;color:rgba(0,200,224,.06);line-height:1}
+
+    .news-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+    .news-tag{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:1.5px;padding:3px 10px;
+      border-radius:3px;border:1px solid var(--card-border);color:var(--cyan);background:var(--cyan-dim)}
+    .news-tag.primary{background:var(--cyan);color:var(--bg);border-color:var(--cyan);font-weight:700}
+
+    .news-title-vi{font-family:'Orbitron',monospace;font-size:1rem;font-weight:700;color:var(--white);
+      line-height:1.4;margin-bottom:.35rem}
+    .news-title-en{font-size:.85rem;font-weight:500;color:var(--silver);margin-bottom:1.25rem;line-height:1.5}
+
+    .news-body{font-size:14px;color:var(--silver);line-height:1.8;margin-bottom:1.25rem}
+    .news-body strong{color:var(--white);font-weight:600}
+
+    /* WHY BOX */
+    .why-box{background:rgba(0,200,224,.06);border:1px solid rgba(0,200,224,.2);border-radius:6px;
+      padding:1rem 1.25rem;margin-top:1.25rem}
+    .why-box .why-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
+      color:var(--cyan);margin-bottom:.5rem}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.75}
+
+    /* DIAGRAM */
+    .diagram-box{background:var(--navy-deep);border:1px solid var(--card-border);border-radius:6px;
+      padding:1.25rem;margin:1.25rem 0;overflow-x:auto}
+    .diagram-box .diagram-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;
+      color:var(--steel);margin-bottom:.75rem}
+    .diagram-box svg{display:block;margin:0 auto}
+
+    /* SOURCE LINK */
+    .source-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;
+      color:var(--steel);text-decoration:none;margin-top:.75rem;
+      border-bottom:1px solid transparent;transition:all .2s}
+    .source-link:hover{color:var(--cyan);border-bottom-color:var(--cyan)}
+
+    /* CTA */
+    .cta-box{background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;
+      padding:2.5rem 2rem;margin-top:3rem;text-align:center;
+      background:linear-gradient(135deg,var(--navy-deep),var(--card-bg))}
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:1rem;font-weight:700;
+      color:var(--cyan);margin-bottom:.75rem}
+    .cta-box p{font-size:14px;color:var(--silver);line-height:1.75;margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto}
+    .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);padding:12px 32px;
+      border-radius:4px;text-decoration:none;font-family:'Orbitron',monospace;font-size:12px;
+      font-weight:700;letter-spacing:1px;transition:all .2s}
+    .cta-btn:hover{opacity:.85;transform:translateY(-2px)}
+
+    /* FOOTER */
+    footer{position:relative;z-index:1;border-top:1px solid var(--card-border);
+      background:var(--navy-deep);padding:2rem;margin-top:0}
+    .footer-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;
+      align-items:center;flex-wrap:wrap;gap:1rem}
+    .footer-copy{font-size:12px;color:var(--steel)}
+    .footer-links{display:flex;gap:1rem}
+    .footer-links a{font-size:12px;color:var(--steel);text-decoration:none;transition:color .2s}
+    .footer-links a:hover{color:var(--cyan)}
+
+    @media(max-width:768px){
+      nav{padding:0 1rem}
+      .nav-links{display:none}
+      .article-hero{height:380px}
+      .article-hero-content h1{font-size:1.1rem}
+      main{padding:2rem 1rem 4rem}
+    }
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="32" height="36" viewBox="0 0 120 140" fill="none">
+      <path d="M60 8 L108 28 L108 72 Q108 110 60 132 Q12 110 12 72 L12 28 Z" fill="#1B2A4A" stroke="#4A6280" stroke-width="4"/>
+      <path d="M60 18 L98 34 L98 72 Q98 105 60 124 Q22 105 22 72 L22 34 Z" fill="#0D1B35"/>
+      <path d="M60 18 L60 124 Q22 105 22 72 L22 34 Z" fill="#1B2A4A"/>
+      <circle cx="52" cy="72" r="8" fill="none" stroke="#00C8E0" stroke-width="2.5"/>
+      <rect x="48.5" y="78" width="7" height="7" rx="1" fill="#00C8E0"/>
+      <line x1="56" y1="71" x2="63" y2="71" stroke="#00C8E0" stroke-width="2.5"/>
+      <rect x="63" y="65" width="6" height="6" rx="1" fill="none" stroke="#00C8E0" stroke-width="2"/>
+      <line x1="66" y1="71" x2="66" y2="83" stroke="#00C8E0" stroke-width="2"/>
+      <circle cx="66" cy="84" r="3" fill="#00C8E0"/>
+    </svg>
+    <div><span class="logo-text">PAUL LE</span><span class="logo-sub">AV · ICT · ELV CONSULTANT</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Trang chủ</a></li>
+    <li><a href="/#services">Dịch vụ</a></li>
+    <li><a href="/#portfolio">Dự án</a></li>
+    <li><a href="/blog/" class="active">Tin tức</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Tư vấn</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span class="lang-label">LANG</span>
+  <button class="lang-btn active" data-lang="vi" onclick="setLang('vi')">VI</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1720962158937-7ea890052166?w=1400&h=520&q=85&auto=format&fit=crop"
+       alt="Control panel technology dark — ELV ICT AV Weekly W48 2026" loading="eager">
+  <div class="article-hero-overlay"></div>
+  <div class="article-hero-content">
+    <div class="eyebrow vi-content">BẢN TIN ELV/ICT/AV TUẦN 48 · 2026</div>
+    <div class="eyebrow en-content">ELV/ICT/AV WEEKLY · WEEK 48 · 2026</div>
+    <h1 class="vi-content">Schneider+Planon Tòa Nhà Thông Minh · CommScope/Amphenol M&amp;A Cáp · Cisco AI Workplace · Sterlite Fiber AI-DC · Secutech Vietnam 2026</h1>
+    <h1 class="en-content">Schneider+Planon Intelligent Buildings · CommScope/Amphenol Cabling M&amp;A · Cisco AI Workplace · Sterlite AI-DC Fiber · Secutech Vietnam 2026</h1>
+    <div class="hero-meta">
+      <span>THỨ NĂM · 26.11.2026</span>
+      <span>W48 / 2026</span>
+      <span>5 TIN NỔI BẬT</span>
+      <span>PAUL LE CONSULTANT</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <div class="section-label">TIN TỨC NỔI BẬT TUẦN NÀY · TOP NEWS THIS WEEK</div>
+
+  <!-- NEWS 1: SCHNEIDER ELECTRIC -->
+  <div class="news-item">
+    <div class="news-num">01</div>
+    <div class="news-tags">
+      <span class="news-tag primary">SCHNEIDER</span>
+      <span class="news-tag">BMS</span>
+      <span class="news-tag">SMART BUILDING</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Schneider Electric + Planon + WORKTECH: Báo Cáo Toàn Cầu Về Tòa Nhà Thông Minh 2030</div>
+      <div class="news-body">
+        <strong>Planon, Schneider Electric và WORKTECH Academy</strong> vừa công bố nghiên cứu toàn cầu về tương lai của tòa nhà thông minh — kết quả khảo sát 600+ lãnh đạo facility management (FM) tại 30 quốc gia. Báo cáo xác định <strong>AI-driven building operations</strong> là xu hướng số 1, với 72% tổ chức dự kiến triển khai BMS tích hợp AI trước 2028.
+        <br><br>
+        Điểm nổi bật: tòa nhà tích hợp AI của Schneider EcoStruxure có thể <strong>giảm 22% tiêu thụ điện năng</strong>, tiết kiệm đến 15% chi phí vận hành hàng năm. Nghiên cứu nhấn mạnh sự hội tụ giữa <strong>HVAC-BMS-ELV-ICT</strong> thành một nền tảng thống nhất — không còn là 4 hệ thống riêng biệt.
+      </div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+        <p>Các dự án bệnh viện, trường học, khách sạn cao cấp tại Việt Nam đang được chủ đầu tư yêu cầu tích hợp BMS toàn diện. Nghiên cứu này cung cấp dữ liệu ROI cụ thể (22% tiết kiệm điện) để tư vấn thuyết phục ban lãnh đạo. Schneider EcoStruxure Building Expert là giải pháp đáng xem xét cho dự án quy mô trung lớn tại Việt Nam.</p>
+      </div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Schneider Electric + Planon + WORKTECH: Global Research on the Future of Intelligent Buildings 2030</div>
+      <div class="news-body">
+        <strong>Planon, Schneider Electric and WORKTECH Academy</strong> have released new global research on the future of intelligent buildings — surveying 600+ FM leaders across 30 countries. The report identifies <strong>AI-driven building operations</strong> as the #1 trend, with 72% of organizations planning AI-integrated BMS by 2028.
+        <br><br>
+        Key finding: Schneider EcoStruxure AI-enabled buildings can <strong>cut energy use by up to 22%</strong>, saving 15% in annual operating costs. The research highlights the convergence of <strong>HVAC-BMS-ELV-ICT</strong> into a unified platform — no longer four separate systems.
+      </div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+        <p>Hospitals, schools, and luxury hotels in Vietnam increasingly require comprehensive BMS integration. This research provides concrete ROI data (22% energy saving) to persuade project owners. Schneider EcoStruxure Building Expert is worth considering for mid-to-large scale projects in Vietnam.</p>
+      </div>
+    </div>
+
+    <!-- DIAGRAM: BMS Integration Architecture -->
+    <div class="diagram-box">
+      <div class="diagram-label">SƠĐỒ · BMS AI-UNIFIED PLATFORM ARCHITECTURE</div>
+      <svg width="100%" viewBox="0 0 700 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Center AI Core -->
+        <rect x="270" y="75" width="160" height="70" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="350" y="103" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="10" font-weight="700" fill="#00C8E0">AI CORE</text>
+        <text x="350" y="119" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#A0B4C8">EcoStruxure Building</text>
+        <text x="350" y="133" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#A0B4C8">Expert Platform</text>
+        <!-- Left subsystems -->
+        <rect x="20" y="30" width="110" height="45" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="75" y="51" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#A0B4C8">HVAC/BMS</text>
+        <text x="75" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Chiller · AHU · FCU</text>
+        <line x1="130" y1="52" x2="270" y2="100" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <rect x="20" y="90" width="110" height="45" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="75" y="111" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#A0B4C8">ELV / SECURITY</text>
+        <text x="75" y="125" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">CCTV · Access · FA</text>
+        <line x1="130" y1="112" x2="270" y2="110" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <rect x="20" y="150" width="110" height="45" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="75" y="171" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#A0B4C8">LIGHTING</text>
+        <text x="75" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">DALI · KNX · PoE</text>
+        <line x1="130" y1="172" x2="270" y2="130" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <!-- Right subsystems -->
+        <rect x="570" y="30" width="110" height="45" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="625" y="51" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#A0B4C8">ICT NETWORK</text>
+        <text x="625" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Cisco · Aruba · Wi-Fi</text>
+        <line x1="430" y1="100" x2="570" y2="52" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <rect x="570" y="90" width="110" height="45" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="625" y="111" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#A0B4C8">AV / DISPLAY</text>
+        <text x="625" y="125" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Crestron · QSC · Extron</text>
+        <line x1="430" y1="110" x2="570" y2="112" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <rect x="570" y="150" width="110" height="45" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="625" y="171" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#A0B4C8">ENERGY METER</text>
+        <text x="625" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">PM8000 · PowerLogic</text>
+        <line x1="430" y1="130" x2="570" y2="172" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <!-- Label savings -->
+        <rect x="295" y="160" width="110" height="30" rx="4" fill="rgba(0,200,224,0.12)" stroke="#00C8E0" stroke-width="1"/>
+        <text x="350" y="175" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" font-weight="700" fill="#00C8E0">-22% ENERGY</text>
+        <text x="350" y="185" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#A0B4C8">AI-driven optimization</text>
+      </svg>
+    </div>
+
+    <a href="https://www.prnewswire.com/news-releases/planon-schneider-electric-and-worktech-academy-release-new-global-research-on-the-future-of-intelligent-buildings-302949606.html" target="_blank" rel="noopener" class="source-link">↗ Nguồn: PR Newswire — Planon + Schneider + WORKTECH Research</a>
+  </div>
+
+  <!-- NEWS 2: COMMSCOPE / AMPHENOL -->
+  <div class="news-item">
+    <div class="news-num">02</div>
+    <div class="news-tags">
+      <span class="news-tag primary">COMMSCOPE</span>
+      <span class="news-tag">CABLING</span>
+      <span class="news-tag">M&amp;A</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Amphenol "Chơi Lớn" $10.5 Tỷ USD: Thâu Tóm Mảng Cáp Data Center Của CommScope</div>
+      <div class="news-body">
+        <strong>Amphenol Corporation</strong> — một trong những nhà sản xuất connector hàng đầu thế giới — đã công bố thâu tóm mảng kinh doanh cáp data center của <strong>CommScope</strong> với giá trị ước tính <strong>$10.5 tỷ USD</strong>. Thương vụ này bao gồm toàn bộ danh mục cáp đồng (Cat6A/Cat8) và cáp quang (OM4/OS2/MPO) phục vụ hạ tầng data center và AI computing clusters.
+        <br><br>
+        Đây là thương vụ M&amp;A lớn nhất trong ngành cáp hạ tầng trong 10 năm qua. Amphenol dự kiến tích hợp portfolio CommScope với hệ sinh thái connector của mình để tạo ra giải pháp <strong>end-to-end từ cáp đến I/O</strong> cho các siêu trung tâm dữ liệu AI. Thương vụ dự kiến hoàn thành Q1/2027.
+      </div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+        <p>CommScope là thương hiệu phổ biến trong hạ tầng cáp cho dự án Tier-I tại Việt Nam. M&amp;A này có thể ảnh hưởng đến chuỗi cung ứng, giá sản phẩm và chương trình đối tác trong 1-2 năm tới. Nhà tư vấn/SI nên theo dõi chính sách phân phối mới và cân nhắc dự trữ hàng cho dự án đang triển khai.</p>
+      </div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Amphenol's $10.5B Bet: Acquiring CommScope's Data Center Cabling Business</div>
+      <div class="news-body">
+        <strong>Amphenol Corporation</strong> — one of the world's leading connector manufacturers — has announced the acquisition of <strong>CommScope's</strong> data center cabling business for approximately <strong>$10.5 billion</strong>. The deal covers copper (Cat6A/Cat8) and fiber (OM4/OS2/MPO) cable portfolios serving data center and AI computing cluster infrastructure.
+        <br><br>
+        This is the largest M&amp;A in infrastructure cabling in a decade. Amphenol plans to integrate CommScope's portfolio with its connector ecosystem to create <strong>end-to-end solutions from cable to I/O</strong> for hyperscale AI data centers. Deal expected to close Q1/2027.
+      </div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+        <p>CommScope is widely specified in Tier-I infrastructure projects in Vietnam. This M&amp;A may impact supply chain, product pricing, and partner programs over the next 1-2 years. Consultants and SIs should monitor new distribution policies and consider pre-ordering for ongoing projects.</p>
+      </div>
+    </div>
+
+    <!-- DIAGRAM: Cabling Portfolio -->
+    <div class="diagram-box">
+      <div class="diagram-label">SƠĐỒ · AMPHENOL + COMMSCOPE COMBINED CABLING PORTFOLIO</div>
+      <svg width="100%" viewBox="0 0 700 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Amphenol box -->
+        <rect x="10" y="30" width="150" height="100" rx="6" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="85" y="58" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="10" font-weight="700" fill="#00C8E0">AMPHENOL</text>
+        <text x="85" y="74" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#A0B4C8">Connectors / I/O</text>
+        <text x="85" y="88" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4A6280">SFP · QSFP · DAC</text>
+        <text x="85" y="102" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4A6280">AOC · PCIe cables</text>
+        <text x="85" y="116" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4A6280">Backplane solutions</text>
+
+        <!-- Plus sign -->
+        <text x="175" y="88" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="24" font-weight="900" fill="#00C8E0">+</text>
+
+        <!-- CommScope box -->
+        <rect x="195" y="30" width="150" height="100" rx="6" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
+        <text x="270" y="58" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="10" font-weight="700" fill="#A0B4C8">COMMSCOPE</text>
+        <text x="270" y="74" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#A0B4C8">DC Cabling Portfolio</text>
+        <text x="270" y="88" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4A6280">Cat6A · Cat8 · MPO</text>
+        <text x="270" y="102" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4A6280">OM4 · OS2 fiber</text>
+        <text x="270" y="116" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4A6280">Patch panels · Trunks</text>
+
+        <!-- Arrow -->
+        <text x="360" y="88" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="20" fill="#00C8E0">→</text>
+
+        <!-- Result box -->
+        <rect x="385" y="20" width="300" height="120" rx="6" fill="rgba(0,200,224,0.08)" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="535" y="48" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="11" font-weight="900" fill="#00C8E0">END-TO-END AI-DC</text>
+        <text x="535" y="64" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#A0B4C8">Complete Infrastructure Solution</text>
+        <text x="535" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#A0B4C8">Cable → Panel → Connector → I/O → Server</text>
+        <text x="535" y="100" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#00C8E0">$10.5B DEAL · CLOSE Q1/2027</text>
+        <text x="535" y="116" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4A6280">Largest cabling M&amp;A in a decade</text>
+        <text x="535" y="130" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#4A6280">Impact on supply chain · distribution · pricing</text>
+      </svg>
+    </div>
+
+    <a href="https://www.marketresearchreports.com/blog/data-center-cable-market-amphenol-commscope" target="_blank" rel="noopener" class="source-link">↗ Nguồn: Market Research Reports — Amphenol / CommScope Deal Analysis</a>
+  </div>
+
+  <!-- NEWS 3: CISCO AI WORKPLACE -->
+  <div class="news-item">
+    <div class="news-num">03</div>
+    <div class="news-tags">
+      <span class="news-tag primary">CISCO</span>
+      <span class="news-tag">ICT</span>
+      <span class="news-tag">AV</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Cisco "Intelligent Workplace 2026": AI Agent Tự Động Hóa Phòng Họp Và Cộng Tác Từ Xa</div>
+      <div class="news-body">
+        <strong>Cisco</strong> công bố lộ trình <strong>"From Collaboration to Intelligent Workplace"</strong> cho đối tác toàn cầu, bao gồm thiết bị Webex mới tích hợp AI agents có khả năng tự động hóa nhiều tác vụ: ghi chú, tóm tắt, phân công công việc, kiểm soát AV phòng họp từ xa qua lệnh thoại tự nhiên.
+        <br><br>
+        Nổi bật: <strong>Cisco AI-Native Room System</strong> kết hợp Webex Control Hub cho phép quản lý toàn bộ hệ thống AV phòng họp từ một dashboard — camera, mic (Shure/Biamp tích hợp), màn hình, lighting. Cisco cũng mở rộng hệ sinh thái với 150+ partner AV/UC tích hợp API mở.
+      </div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+        <p>Các dự án văn phòng, trường đại học, bệnh viện tại Việt Nam đang đầu tư mạnh vào hệ thống phòng họp thông minh. Cisco Webex Room Kit tích hợp AI là lựa chọn đáng cân nhắc — đặc biệt nếu dự án đã có hạ tầng mạng Cisco. Khả năng tích hợp với Crestron/Extron qua API mở giảm phức tạp cho SI.</p>
+      </div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Cisco "Intelligent Workplace 2026": AI Agents Automate Meeting Rooms and Remote Collaboration</div>
+      <div class="news-body">
+        <strong>Cisco</strong> has announced the <strong>"From Collaboration to Intelligent Workplace"</strong> roadmap for global partners, featuring new Webex devices with AI agents that automate: note-taking, summarization, task assignment, and AV room control via natural voice commands.
+        <br><br>
+        Highlights: <strong>Cisco AI-Native Room System</strong> combined with Webex Control Hub enables management of all meeting room AV from a single dashboard — camera, mic (Shure/Biamp integrated), display, lighting. Cisco also expands its ecosystem with 150+ AV/UC partners via open API integration.
+      </div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+        <p>Offices, universities, and hospitals in Vietnam are investing heavily in smart meeting room systems. Cisco Webex Room Kit with AI is worth specifying — especially on projects with existing Cisco network infrastructure. Open API integration with Crestron/Extron reduces complexity for SIs.</p>
+      </div>
+    </div>
+
+    <!-- DIAGRAM: Cisco Room System -->
+    <div class="diagram-box">
+      <div class="diagram-label">SƠĐỒ · CISCO AI-NATIVE INTELLIGENT ROOM SYSTEM</div>
+      <svg width="100%" viewBox="0 0 700 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Room outline -->
+        <rect x="10" y="10" width="680" height="160" rx="8" fill="#0D1B35" stroke="#1E3550" stroke-width="1"/>
+        <text x="350" y="28" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#4A6280">MEETING ROOM — CISCO INTELLIGENT WORKPLACE</text>
+
+        <!-- Display -->
+        <rect x="40" y="40" width="130" height="80" rx="4" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="105" y="78" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#00C8E0">DISPLAY</text>
+        <text x="105" y="92" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#A0B4C8">Samsung / LG / Sony</text>
+        <text x="105" y="106" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">HDMI 2.1 · 4K</text>
+
+        <!-- Webex Device -->
+        <rect x="210" y="40" width="130" height="80" rx="4" fill="rgba(0,200,224,0.12)" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="275" y="68" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" font-weight="700" fill="#00C8E0">WEBEX ROOM KIT</text>
+        <text x="275" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#A0B4C8">AI Camera + Codec</text>
+        <text x="275" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#A0B4C8">Speaker Tracking AI</text>
+        <text x="275" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Noise Reduction AI</text>
+
+        <!-- Audio -->
+        <rect x="380" y="40" width="130" height="80" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
+        <text x="445" y="68" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#A0B4C8">AUDIO SYSTEM</text>
+        <text x="445" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#A0B4C8">Shure MXA920</text>
+        <text x="445" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Biamp Tesira</text>
+        <text x="445" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">API Integration</text>
+
+        <!-- Control Hub -->
+        <rect x="550" y="40" width="120" height="80" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1.5"/>
+        <text x="610" y="68" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#A0B4C8">WEBEX</text>
+        <text x="610" y="82" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#A0B4C8">CONTROL HUB</text>
+        <text x="610" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Cloud AI</text>
+        <text x="610" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Central Mgmt</text>
+
+        <!-- Connections -->
+        <line x1="170" y1="80" x2="210" y2="80" stroke="#00C8E0" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <line x1="340" y1="80" x2="380" y2="80" stroke="#00C8E0" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <line x1="510" y1="80" x2="550" y2="80" stroke="#00C8E0" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+        <!-- AI Agent label -->
+        <rect x="185" y="140" width="330" height="22" rx="4" fill="rgba(0,200,224,0.08)" stroke="rgba(0,200,224,0.3)" stroke-width="1"/>
+        <text x="350" y="155" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="8" fill="#00C8E0">AI AGENT: Auto Notes · Task Assign · Voice Control · Analytics</text>
+      </svg>
+    </div>
+
+    <a href="https://blogs.cisco.com/partner/from-collaboration-to-intelligent-workplace-whats-new-for-cisco-partners-in-2026" target="_blank" rel="noopener" class="source-link">↗ Nguồn: Cisco Blogs — Intelligent Workplace 2026 Partner Program</a>
+  </div>
+
+  <!-- NEWS 4: STERLITE FIBER AI-DC -->
+  <div class="news-item">
+    <div class="news-num">04</div>
+    <div class="news-tags">
+      <span class="news-tag primary">STERLITE</span>
+      <span class="news-tag">CABLING</span>
+      <span class="news-tag">FIBER</span>
+      <span class="news-tag">AI-DC</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Sterlite Ra Mắt Cáp Quang Plenum-Rated Cho Data Center AI: MPO-16 Mật Độ Cao, Chịu Nhiệt 90°C</div>
+      <div class="news-body">
+        <strong>Sterlite Technologies</strong> vừa ra mắt dòng cáp quang <strong>Plenum-Rated Fiber Trunk Assemblies</strong> được thiết kế riêng cho hạ tầng AI data center. Điểm nổi bật: hỗ trợ cấu hình <strong>MPO-16</strong> (mật độ cao gấp đôi MPO-12 truyền thống), đầu nối pre-terminated sẵn với độ chính xác ±0.5dB insertion loss, vỏ bọc LSZH/Plenum chịu nhiệt đến 90°C.
+        <br><br>
+        Sản phẩm hướng đến hạ tầng kết nối GPU cluster và cụm máy chủ AI — nơi mật độ cáp cực cao và yêu cầu an toàn NFPA 262/UL910 cho không gian plenum. Sterlite cam kết thời gian giao hàng 4-6 tuần cho đơn hàng batch, so với 12-16 tuần của thị trường trước.
+      </div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+        <p>Việt Nam đang bùng nổ xây dựng data center AI — đặc biệt Hà Nội và TP.HCM. Dự án DC Tier-III/IV yêu cầu cáp quang plenum-rated cho không gian raised floor và plenum ceiling. MPO-16 cho phép đấu nối GPU cluster với mật độ cao hơn, tiết kiệm không gian rack đáng kể. Nên đưa vào BoM cho dự án data center 2027+.</p>
+      </div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Sterlite Debuts Plenum-Rated Fiber Trunk Assemblies for AI Data Centers: High-Density MPO-16, 90°C Rating</div>
+      <div class="news-body">
+        <strong>Sterlite Technologies</strong> has launched <strong>Plenum-Rated Fiber Trunk Assemblies</strong> specifically designed for AI data center infrastructure. Key features: <strong>MPO-16</strong> configuration (double the density of traditional MPO-12), pre-terminated connectors with ±0.5dB insertion loss accuracy, LSZH/Plenum jacket rated to 90°C.
+        <br><br>
+        Products target GPU cluster interconnects and AI server arrays — where extreme cable density and NFPA 262/UL910 plenum safety compliance are required. Sterlite commits to 4-6 week delivery for batch orders, versus 12-16 weeks previously seen on the market.
+      </div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+        <p>Vietnam is seeing explosive AI data center construction — especially in Hanoi and HCMC. Tier-III/IV DC projects require plenum-rated fiber for raised floor and ceiling spaces. MPO-16 enables GPU cluster connectivity at higher density, saving significant rack space. Should be included in BoM for 2027+ data center projects.</p>
+      </div>
+    </div>
+
+    <!-- DIAGRAM: MPO Fiber -->
+    <div class="diagram-box">
+      <div class="diagram-label">SƠĐỒ · MPO-16 PLENUM TRUNK — AI DATA CENTER CABLING</div>
+      <svg width="100%" viewBox="0 0 700 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- GPU Server 1 -->
+        <rect x="10" y="40" width="130" height="80" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="75" y="68" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#A0B4C8">GPU SERVER</text>
+        <text x="75" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">NVIDIA H100 / A100</text>
+        <text x="75" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">QSFP-DD 400G</text>
+        <text x="75" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">x8 ports per server</text>
+
+        <!-- MPO Trunk -->
+        <rect x="175" y="55" width="350" height="50" rx="4" fill="rgba(0,200,224,0.08)" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="350" y="78" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" font-weight="700" fill="#00C8E0">MPO-16 PLENUM TRUNK — STERLITE</text>
+        <text x="350" y="92" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#A0B4C8">OM4/OS2 · Pre-terminated · ±0.5dB · 90°C Plenum · NFPA 262</text>
+        <text x="350" y="106" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">MPO-16 = 2× density of MPO-12 | 4–6 week lead time</text>
+
+        <!-- Arrows -->
+        <line x1="140" y1="80" x2="175" y2="80" stroke="#00C8E0" stroke-width="1.5"/>
+        <polygon points="175,75 185,80 175,85" fill="#00C8E0"/>
+        <line x1="525" y1="80" x2="560" y2="80" stroke="#00C8E0" stroke-width="1.5"/>
+        <polygon points="560,75 570,80 560,85" fill="#00C8E0"/>
+
+        <!-- ToR Switch -->
+        <rect x="560" y="40" width="130" height="80" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="625" y="68" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#A0B4C8">ToR SWITCH</text>
+        <text x="625" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Cisco Nexus 9K</text>
+        <text x="625" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">400G / 800G ports</text>
+        <text x="625" y="110" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">AI Fabric layer</text>
+
+        <!-- Label floor -->
+        <text x="350" y="145" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">RAISED FLOOR PLENUM SPACE — Compliant with NFPA 262 / UL910 / TIA-942</text>
+      </svg>
+    </div>
+
+    <a href="https://futuretweets.com/sterlite-plenum-rated-fiber-trunk-assemblies-ai-data-centers-2026/" target="_blank" rel="noopener" class="source-link">↗ Nguồn: FutureTweets — Sterlite Plenum Fiber Trunks for AI DCs</a>
+  </div>
+
+  <!-- NEWS 5: VIETNAM - SECUTECH + VIETBUILD -->
+  <div class="news-item">
+    <div class="news-num">05</div>
+    <div class="news-tags">
+      <span class="news-tag primary">VIETNAM</span>
+      <span class="news-tag">SECURITY</span>
+      <span class="news-tag">SMART BUILDING</span>
+    </div>
+
+    <div class="vi-content">
+      <div class="news-title-vi">Secutech Vietnam 2026 &amp; VIETBUILD Hà Nội: Làn Sóng AI-Security Và Tòa Nhà Xanh Thông Minh</div>
+      <div class="news-body">
+        <strong>Secutech Vietnam 2026</strong> (TP.HCM &amp; Hà Nội) vừa kết thúc với kết quả ấn tượng: <strong>200+ nhà triển lãm</strong>, tập trung vào AI-integrated security (camera AI phân tích hành vi, nhận diện khuôn mặt), smart access control và hệ thống fire detection thế hệ mới. Điểm nổi bật: xu hướng tích hợp ELV+ICT+Security vào một nền tảng quản lý thống nhất.
+        <br><br>
+        Song song, <strong>VIETBUILD Hà Nội 2026</strong> ghi nhận làn sóng chuyển đổi số trong xây dựng: BIM tích hợp ELV, hệ thống giám sát công trình thông minh, và sản phẩm điện thông minh (GONEO, Schneider, ABB). Việt Nam đang đẩy mạnh Green Building tiêu chuẩn LEED/LOTUS cho dự án nhà nước và FDI.
+      </div>
+      <div class="why-box">
+        <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM</div>
+        <p>Thị trường ELV/Security Việt Nam 2026-2028 được dự báo tăng trưởng 18-22%/năm. Chủ đầu tư FDI và khách sạn 5 sao đang yêu cầu tích hợp AI camera + access control + BMS trong một gói thiết kế duy nhất. Đây là cơ hội lớn cho tư vấn ELV như Paul Le Consultant trong việc thiết kế giải pháp tích hợp toàn diện.</p>
+      </div>
+    </div>
+
+    <div class="en-content">
+      <div class="news-title-en">Secutech Vietnam 2026 &amp; VIETBUILD Hanoi: AI-Security Wave and Smart Green Buildings</div>
+      <div class="news-body">
+        <strong>Secutech Vietnam 2026</strong> (HCMC &amp; Hanoi) concluded with impressive results: <strong>200+ exhibitors</strong> focused on AI-integrated security (behavioral analytics cameras, facial recognition), smart access control, and next-gen fire detection systems. Highlight: the trend toward integrating ELV+ICT+Security into one unified management platform.
+        <br><br>
+        In parallel, <strong>VIETBUILD Hanoi 2026</strong> showcased the digital transformation wave in construction: BIM with ELV integration, smart construction monitoring systems, and smart electrical products (GONEO, Schneider, ABB). Vietnam is pushing Green Building standards LEED/LOTUS for government and FDI projects.
+      </div>
+      <div class="why-box">
+        <div class="why-label">WHY THIS MATTERS FOR VIETNAM PROJECTS</div>
+        <p>The Vietnam ELV/Security market 2026-2028 is projected to grow 18-22% annually. FDI investors and 5-star hotels are requiring AI camera + access control + BMS integration in a single design package. This is a major opportunity for ELV consultants like Paul Le Consultant to design comprehensive integrated solutions.</p>
+      </div>
+    </div>
+
+    <!-- DIAGRAM: Vietnam ELV Market -->
+    <div class="diagram-box">
+      <div class="diagram-label">SƠĐỒ · VIETNAM INTEGRATED ELV/SECURITY/BMS DESIGN APPROACH 2026</div>
+      <svg width="100%" viewBox="0 0 700 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Center -->
+        <ellipse cx="350" cy="100" rx="80" ry="55" fill="rgba(0,200,224,0.12)" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="350" y="92" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" font-weight="700" fill="#00C8E0">UNIFIED</text>
+        <text x="350" y="106" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" font-weight="700" fill="#00C8E0">MANAGEMENT</text>
+        <text x="350" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#A0B4C8">Platform</text>
+
+        <!-- Surrounding systems -->
+        <!-- CCTV AI -->
+        <rect x="10" y="10" width="120" height="55" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="70" y="33" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#A0B4C8">CCTV AI</text>
+        <text x="70" y="47" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Axis · Hikvision</text>
+        <text x="70" y="59" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Behavior analytics</text>
+        <line x1="130" y1="37" x2="270" y2="80" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <!-- ACCESS CONTROL -->
+        <rect x="570" y="10" width="120" height="55" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="630" y="33" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#A0B4C8">ACCESS</text>
+        <text x="630" y="47" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Bosch · Honeywell</text>
+        <text x="630" y="59" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Face ID + RFID</text>
+        <line x1="570" y1="37" x2="430" y2="80" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <!-- FIRE ALARM -->
+        <rect x="10" y="135" width="120" height="55" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="70" y="158" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#A0B4C8">FIRE ALARM</text>
+        <text x="70" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Hochiki · Notifier</text>
+        <text x="70" y="186" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">NFPA 72 compliant</text>
+        <line x1="130" y1="162" x2="270" y2="120" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <!-- BMS -->
+        <rect x="570" y="135" width="120" height="55" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="630" y="158" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#A0B4C8">BMS</text>
+        <text x="630" y="172" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Schneider · Siemens</text>
+        <text x="630" y="186" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">HVAC + Energy</text>
+        <line x1="570" y1="162" x2="430" y2="120" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <!-- NETWORK -->
+        <rect x="295" y="155" width="110" height="40" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="350" y="173" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#A0B4C8">ICT NETWORK</text>
+        <text x="350" y="187" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#4A6280">Cisco · Aruba · Fiber</text>
+        <line x1="350" y1="155" x2="350" y2="155" stroke="#00C8E0" stroke-width="1"/>
+        <line x1="350" y1="150" x2="350" y2="140" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <!-- GROWTH label -->
+        <rect x="260" y="10" width="180" height="30" rx="4" fill="rgba(0,200,224,0.06)" stroke="rgba(0,200,224,0.2)" stroke-width="1"/>
+        <text x="350" y="29" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="9" fill="#00C8E0">VIETNAM MARKET +18–22%/YR · 2026–2028</text>
+      </svg>
+    </div>
+
+    <a href="https://www.sourcesecurity.com/news/ai-integrated-solutions-secutech-vietnam-2026-co-5478-ga.1789724404.html" target="_blank" rel="noopener" class="source-link">↗ Nguồn: SourceSecurity — Secutech Vietnam 2026 AI Integrated Solutions</a>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3 class="vi-content">CẦN TƯ VẤN THIẾT KẾ ELV/ICT/AV?</h3>
+    <h3 class="en-content">NEED ELV/ICT/AV DESIGN CONSULTATION?</h3>
+    <p class="vi-content">Paul Le Consultant — 10+ năm kinh nghiệm thiết kế hệ thống ELV, ICT, AV cho dự án khách sạn, bệnh viện, trường học, văn phòng tại Việt Nam. Từ BoM, Specification đến Shop Drawing và SI Integration.</p>
+    <p class="en-content">Paul Le Consultant — 10+ years designing ELV, ICT, AV systems for hotels, hospitals, schools and offices in Vietnam. From BoM and Specifications to Shop Drawings and SI Integration.</p>
+    <a href="https://elvconsultant.com/#contact" class="cta-btn">LIÊN HỆ TƯ VẤN / CONTACT →</a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">© 2026 Paul Le Consultant — elvconsultant.com</span>
+    <div class="footer-links">
+      <a href="/blog/">Blog</a>
+      <a href="/#services">Dịch vụ</a>
+      <a href="/#contact">Liên hệ</a>
+      <a href="https://x.com/PLELVCONSULTANT" target="_blank">X/Twitter</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
