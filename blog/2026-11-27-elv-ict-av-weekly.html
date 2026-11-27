@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELV/ICT/AV Weekly W48 | 27 Nov 2026 — Crestron · Bosch · Hikvision · HPE · Vietnam DC</title>
+  <meta name="description" content="Bản tin ELV/ICT/AV tuần 48/2026: Crestron Collab Engine, Bosch IQSIGHT, Hikvision HIKO AI, HPE Aruba Self-Driving Network, Vietnam Data Center $5B+. Song ngữ Việt–Anh.">
+  <meta name="keywords" content="ELV news, ICT AV Vietnam, Crestron Collab Engine, Bosch IQSIGHT, Hikvision HIKO AI, HPE Aruba, Vietnam data center 2026">
+  <meta name="author" content="Paul Le Consultant">
+  <link rel="canonical" href="https://elvconsultant.com/blog/2026-11-27-elv-ict-av-weekly.html">
+
+  <!-- OG -->
+  <meta property="og:title" content="ELV/ICT/AV Weekly W48 · 27 Nov 2026">
+  <meta property="og:description" content="Crestron Collab Engine · Bosch IQSIGHT · Hikvision HIKO AI · HPE Aruba Self-Driving · Vietnam DC Boom">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1782945217386-300f33f22069?w=1200&h=630&q=85&auto=format&fit=crop">
+  <meta property="og:type" content="article">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
+      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
+      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
+      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;min-height:100vh}
+
+    /* GRID BG */
+    .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .logo-text{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px}
+    .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--silver);font-size:13px;font-weight:500;text-decoration:none;letter-spacing:0.5px;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
+    .nav-cta{background:transparent;border:1px solid var(--cyan);color:var(--cyan);padding:7px 18px;border-radius:4px;font-size:12px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:all 0.2s;text-decoration:none}
+    .nav-cta:hover{background:var(--cyan);color:var(--bg)}
+    @media(max-width:768px){.nav-links{display:none};nav{padding:0 1rem}}
+
+    /* LANG BAR */
+    .lang-bar{position:relative;z-index:1;background:var(--navy-deep);border-bottom:1px solid var(--card-border);padding:8px 2rem;display:flex;align-items:center;gap:12px}
+    .lang-bar span{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel)}
+    .lang-btn{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:1.5px;padding:4px 12px;border:1px solid var(--card-border);background:transparent;color:var(--silver);cursor:pointer;border-radius:3px;transition:all 0.2s}
+    .lang-btn.active{background:var(--cyan);border-color:var(--cyan);color:var(--bg);font-weight:700}
+    .lang-btn:hover:not(.active){border-color:var(--cyan);color:var(--cyan)}
+
+    /* HERO */
+    .article-hero{position:relative;z-index:1;height:400px;overflow:hidden}
+    .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.45) saturate(0.7)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,17,31,0.3) 0%,rgba(7,17,31,0.75) 60%,rgba(7,17,31,1) 100%)}
+    .hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2.5rem 2rem}
+    .hero-eyebrow{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:10px}
+    .hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
+    .hero-title{font-family:'Orbitron',monospace;font-size:clamp(1.3rem,3.2vw,2.4rem);font-weight:900;line-height:1.15;color:var(--white);text-shadow:0 2px 20px rgba(0,0,0,0.6);max-width:800px}
+    @media(max-width:768px){.article-hero{height:280px}.hero-content{padding:1.5rem 1.25rem 1.25rem}}
+
+    /* MAIN */
+    main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:3rem 2rem 4rem}
+
+    /* INTRO BLOCK */
+    .intro-block{margin-bottom:2.5rem;padding:1.5rem 1.75rem;background:var(--card-bg);border:1px solid var(--card-border);border-left:3px solid var(--cyan);border-radius:6px}
+    .intro-block p{font-size:14px;color:var(--silver);line-height:1.75}
+    .vi-content,.en-content{display:none}
+
+    /* NEWS ITEM */
+    .news-item{margin-bottom:2rem;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s}
+    .news-item:hover{border-color:rgba(0,200,224,0.35);box-shadow:0 0 0 1px rgba(0,200,224,0.12),0 8px 32px -8px rgba(0,200,224,0.2)}
+    .news-header{padding:1.5rem 1.75rem 1.25rem;border-bottom:1px solid var(--card-border)}
+    .news-num{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel);margin-bottom:0.6rem}
+    .news-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.75rem}
+    .tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1px;padding:3px 8px;border-radius:3px;border:1px solid rgba(0,200,224,0.3);color:var(--cyan);background:var(--cyan-dim)}
+    .tag.mfr{background:rgba(0,200,224,0.15);border-color:var(--cyan);font-weight:700}
+    .news-title{font-family:'Orbitron',monospace;font-size:clamp(13px,1.4vw,16px);font-weight:700;color:var(--white);line-height:1.3}
+    .news-title-en{font-size:clamp(12px,1.2vw,14px);font-weight:600;color:var(--silver);margin-top:4px;font-family:'Inter',sans-serif}
+    .news-body{padding:1.25rem 1.75rem}
+    .news-body p{font-size:14px;color:var(--silver);line-height:1.75;margin-bottom:0.75rem}
+    .news-body p:last-child{margin-bottom:0}
+    .news-source{font-size:12px;color:var(--steel);margin-top:0.5rem}
+    .news-source a{color:var(--cyan);text-decoration:none;opacity:0.8;transition:opacity 0.2s}
+    .news-source a:hover{opacity:1}
+
+    /* WHY BOX */
+    .why-box{margin:1rem 1.75rem 1.5rem;padding:1rem 1.25rem;background:rgba(0,200,224,0.05);border:1px solid rgba(0,200,224,0.2);border-radius:5px}
+    .why-box .why-label{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;color:var(--cyan);margin-bottom:0.5rem}
+    .why-box p{font-size:13px;color:var(--silver);line-height:1.65}
+
+    /* SCHEMA DIAGRAM */
+    .diagram-box{margin:1rem 1.75rem 1.5rem;background:var(--navy-deep);border:1px solid var(--card-border);border-radius:6px;padding:1.25rem;overflow-x:auto}
+    .diagram-box .diagram-title{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;color:var(--steel);margin-bottom:0.75rem}
+    .diagram-box svg{display:block;margin:0 auto;max-width:100%}
+
+    /* CTA */
+    .cta-box{margin-top:3rem;padding:2rem 2.5rem;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-deep) 100%);border:1px solid var(--card-border);border-radius:8px;text-align:center}
+    .cta-box .cta-label{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan);margin-bottom:0.75rem}
+    .cta-box h3{font-family:'Orbitron',monospace;font-size:clamp(1rem,2vw,1.4rem);font-weight:900;color:var(--white);margin-bottom:0.75rem}
+    .cta-box p{font-size:13px;color:var(--silver);line-height:1.65;margin-bottom:1.5rem}
+    .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);padding:11px 28px;border-radius:4px;font-family:'Orbitron',monospace;font-size:11px;font-weight:700;letter-spacing:1.5px;text-decoration:none;transition:box-shadow 0.2s,transform 0.2s}
+    .cta-btn:hover{box-shadow:0 0 20px rgba(0,200,224,0.5);transform:translateY(-2px)}
+
+    /* FOOTER */
+    footer{position:relative;z-index:1;background:var(--navy-deep);border-top:1px solid var(--card-border);padding:2rem;text-align:center;margin-top:0}
+    footer .footer-logo{font-family:'Orbitron',monospace;font-size:12px;color:var(--cyan);letter-spacing:2px;margin-bottom:0.5rem}
+    footer p{font-size:12px;color:var(--steel);line-height:1.6}
+    footer a{color:var(--silver);text-decoration:none;margin:0 8px;transition:color 0.2s}
+    footer a:hover{color:var(--cyan)}
+    .footer-links{margin:0.75rem 0}
+
+    @media(max-width:768px){main{padding:2rem 1.25rem 3rem}.news-body,.why-box,.diagram-box{margin-left:1.25rem;margin-right:1.25rem}.news-header{padding:1.25rem 1.25rem 1rem}.hero-content{padding:1.5rem 1.25rem 1rem}}
+  </style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text></svg>
+    <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">TƯ VẤN</a>
+</nav>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <span>NGÔN NGỮ / LANGUAGE:</span>
+  <button class="lang-btn" data-lang="vi" onclick="setLang('vi')">🇻🇳 TIẾNG VIỆT</button>
+  <button class="lang-btn" data-lang="en" onclick="setLang('en')">🇺🇸 ENGLISH</button>
+</div>
+
+<!-- HERO -->
+<div class="article-hero">
+  <img src="https://images.unsplash.com/photo-1782945217386-300f33f22069?w=1400&h=520&q=85&auto=format&fit=crop" alt="Blue-lit control room technology — ELV ICT AV Weekly W48 2026" loading="eager">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="vi-content">BẢN TIN TUẦN · W48/2026 · 27 THÁNG 11</span>
+      <span class="en-content">WEEKLY BULLETIN · W48/2026 · 27 NOVEMBER</span>
+    </div>
+    <div class="hero-title">
+      <span class="vi-content">Crestron Collab Engine · Bosch IQSIGHT · Hikvision HIKO AI · HPE Aruba Self-Driving · Vietnam Data Center Boom</span>
+      <span class="en-content">Crestron Collab Engine · Bosch IQSIGHT · Hikvision HIKO AI · HPE Aruba Self-Driving · Vietnam DC Race</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- INTRO -->
+  <div class="intro-block">
+    <p class="vi-content">Tuần 48/2026 — 5 tin nổi bật trong ngành ELV/ICT/AV: Crestron ra mắt Collab Engine tích hợp AV + hội nghị vào 1 thiết bị; Bosch Security ra mắt thương hiệu IQSIGHT cho visual intelligence; Hikvision nâng cấp lớn Hik-Connect 7 với HIKO AI Engine; HPE Aruba đưa AI "tự lái" vào toàn hạ tầng mạng; và Việt Nam tiếp tục thu hút đầu tư tỷ đô vào data center. Mỗi tin kèm phân tích tác động thực tế đến dự án ELV/ICT/AV tại Việt Nam.</p>
+    <p class="en-content">Week 48/2026 — 5 highlights across ELV/ICT/AV: Crestron launches Collab Engine unifying AV control and conferencing; Bosch Security unveils the IQSIGHT visual intelligence brand; Hikvision delivers major Hik-Connect 7 upgrade with HIKO AI; HPE Aruba brings self-driving AI to the full network stack; and Vietnam continues attracting billions in data center investment. Each story includes analysis of its practical impact on ELV/ICT/AV projects in Vietnam.</p>
+  </div>
+
+  <!-- ═══════════ NEWS 1: CRESTRON ═══════════ -->
+  <div class="news-item">
+    <div class="news-header">
+      <div class="news-num">01 / 05</div>
+      <div class="news-tags">
+        <span class="tag mfr">CRESTRON</span>
+        <span class="tag">AV</span>
+        <span class="tag">COLLABORATION</span>
+        <span class="tag">CONFERENCING</span>
+      </div>
+      <div class="news-title">
+        <span class="vi-content">Crestron Collab Engine — Hội Nghị AV + Điều Khiển Phòng Trong 1 Thiết Bị</span>
+        <span class="en-content">Crestron Collab Engine — AV Room Control Meets Conferencing in One Unit</span>
+      </div>
+    </div>
+    <div class="news-body">
+      <p class="vi-content">Crestron vừa ra mắt <strong>Collab Engine</strong>, nền tảng phần cứng thế hệ mới tích hợp điều khiển phòng AV và hội nghị Microsoft Teams Room (MTR) vào một thiết bị duy nhất. Giải pháp này loại bỏ nhu cầu về compute unit riêng biệt cho cả AV control và video conferencing, hỗ trợ đầy đủ BYOD (Bring Your Own Device), AI native features, và tích hợp liền mạch với nền tảng âm thanh DM NAX của Crestron.</p>
+      <p class="vi-content">Collab Engine chạy song song cả Crestron control processor lẫn MTR compute trong cùng một chassis, hỗ trợ multi-camera AI tracking, automatic framing, và quản lý room booking tích hợp. Đây là sản phẩm trực tiếp cạnh tranh với các giải pháp all-in-one từ Logitech Rally Bar và Poly Studio R30.</p>
+      <p class="en-content">Crestron unveiled the <strong>Collab Engine</strong>, a next-generation hardware platform that combines AV room control and Microsoft Teams Room (MTR) conferencing compute into a single chassis. The solution eliminates separate processing units for AV control and video conferencing, adding full BYOD support, native AI features, and seamless integration with Crestron's DM NAX intelligent audio platform.</p>
+      <p class="en-content">The Collab Engine runs both the Crestron control processor and MTR compute simultaneously in one unit, supporting AI multi-camera tracking, automatic framing, and integrated room booking management. It directly competes with all-in-one solutions from Logitech Rally Bar and Poly Studio R30.</p>
+      <div class="news-source">Source: <a href="https://www.crestron.com/News/Press-Releases/2026/Crestron-Introduces-Collab-Compute,-a-New-Hardware" target="_blank" rel="noopener">Crestron Press Release</a> | <a href="https://www.avinteractive.com/sponsored-story/introducing-crestron-collab-engine-26-11-2026/" target="_blank" rel="noopener">AV Interactive 26 Nov 2026</a></div>
+    </div>
+
+    <!-- DIAGRAM: Crestron Collab Engine Architecture -->
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — CRESTRON COLLAB ENGINE</div>
+      <svg width="760" height="260" viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="10">
+        <!-- BG -->
+        <rect width="760" height="260" fill="#0D1B35" rx="6"/>
+        <!-- COLLAB ENGINE BOX -->
+        <rect x="260" y="80" width="240" height="100" rx="6" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="380" y="102" text-anchor="middle" fill="#00C8E0" font-size="9" letter-spacing="2" font-weight="bold">COLLAB ENGINE</text>
+        <line x1="270" y1="108" x2="490" y2="108" stroke="#1E3550" stroke-width="1"/>
+        <text x="380" y="124" text-anchor="middle" fill="#A0B4C8" font-size="9">AV Control Processor</text>
+        <text x="380" y="140" text-anchor="middle" fill="#A0B4C8" font-size="9">+ MTR Compute Unit</text>
+        <text x="380" y="156" text-anchor="middle" fill="#4A6280" font-size="9">DM NAX Audio Platform</text>
+
+        <!-- LEFT: INPUTS -->
+        <rect x="20" y="40" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
+        <text x="85" y="58" text-anchor="middle" fill="#A0B4C8" font-size="9">Microsoft Teams / Zoom</text>
+        <text x="85" y="70" text-anchor="middle" fill="#4A6280" font-size="8">Cloud Conferencing</text>
+
+        <rect x="20" y="90" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
+        <text x="85" y="108" text-anchor="middle" fill="#A0B4C8" font-size="9">BYOD Devices</text>
+        <text x="85" y="120" text-anchor="middle" fill="#4A6280" font-size="8">USB-C / AirPlay / Miracast</text>
+
+        <rect x="20" y="140" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
+        <text x="85" y="158" text-anchor="middle" fill="#A0B4C8" font-size="9">Room Sensors</text>
+        <text x="85" y="170" text-anchor="middle" fill="#4A6280" font-size="8">Occupancy / Environment</text>
+
+        <!-- ARROWS LEFT -->
+        <line x1="150" y1="58" x2="258" y2="118" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
+        <line x1="150" y1="108" x2="258" y2="128" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
+        <line x1="150" y1="158" x2="258" y2="145" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
+        <polygon points="254,116 262,118 258,124" fill="#00C8E0"/>
+        <polygon points="254,126 262,128 258,134" fill="#00C8E0"/>
+        <polygon points="254,142 262,145 258,150" fill="#00C8E0"/>
+
+        <!-- RIGHT: OUTPUTS -->
+        <rect x="610" y="40" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
+        <text x="675" y="56" text-anchor="middle" fill="#A0B4C8" font-size="9">AI PTZ Cameras</text>
+        <text x="675" y="68" text-anchor="middle" fill="#4A6280" font-size="8">Auto-Framing / Tracking</text>
+
+        <rect x="610" y="90" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
+        <text x="675" y="106" text-anchor="middle" fill="#A0B4C8" font-size="9">Display / Touch Panel</text>
+        <text x="675" y="118" text-anchor="middle" fill="#4A6280" font-size="8">Room Booking UI</text>
+
+        <rect x="610" y="140" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
+        <text x="675" y="156" text-anchor="middle" fill="#A0B4C8" font-size="9">DM NAX Audio</text>
+        <text x="675" y="168" text-anchor="middle" fill="#4A6280" font-size="8">Beam-Forming Mic Array</text>
+
+        <!-- ARROWS RIGHT -->
+        <line x1="502" y1="118" x2="608" y2="58" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
+        <line x1="502" y1="128" x2="608" y2="108" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
+        <line x1="502" y1="145" x2="608" y2="158" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
+        <polygon points="604,54 612,58 606,62" fill="#00C8E0"/>
+        <polygon points="604,104 612,108 606,112" fill="#00C8E0"/>
+        <polygon points="604,154 612,158 606,162" fill="#00C8E0"/>
+
+        <!-- BOTTOM: MANAGEMENT -->
+        <rect x="260" y="210" width="240" height="34" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
+        <text x="380" y="226" text-anchor="middle" fill="#A0B4C8" font-size="9">XiO Cloud Management</text>
+        <text x="380" y="238" text-anchor="middle" fill="#4A6280" font-size="8">Zero-Touch Provisioning · Analytics · Alerts</text>
+        <line x1="380" y1="180" x2="380" y2="208" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
+        <polygon points="376,205 384,205 380,210" fill="#00C8E0"/>
+
+        <!-- LABEL -->
+        <text x="380" y="22" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="1">AV CONTROL + MTR UNIFIED ARCHITECTURE · CRESTRON 2026</text>
+      </svg>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM / WHY IT MATTERS</div>
+      <p class="vi-content">Collab Engine giảm thiết bị AV phòng họp từ 3-4 unit xuống 1 unit duy nhất, tiết kiệm rack space và chi phí licensing. Với xu hướng thiết kế phòng họp hybrid tại văn phòng, khách sạn 5 sao, trường đại học tại Việt Nam, đây là giải pháp tối ưu cho gói AV tích hợp MTR. Designer và SI cần cập nhật spec sheet Crestron.</p>
+      <p class="en-content">The Collab Engine cuts meeting room AV equipment from 3-4 units down to one, saving rack space and licensing costs. With the growing trend of hybrid meeting room designs in offices, 5-star hotels, and universities in Vietnam, this is the optimal solution for AV packages integrating MTR. ELV designers and SIs should update Crestron specifications accordingly.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════ NEWS 2: BOSCH IQSIGHT ═══════════ -->
+  <div class="news-item">
+    <div class="news-header">
+      <div class="news-num">02 / 05</div>
+      <div class="news-tags">
+        <span class="tag mfr">BOSCH</span>
+        <span class="tag">IQSIGHT</span>
+        <span class="tag">SECURITY</span>
+        <span class="tag">AI ANALYTICS</span>
+      </div>
+      <div class="news-title">
+        <span class="vi-content">Bosch Ra Mắt IQSIGHT — Thương Hiệu Visual Intelligence Thế Hệ Mới</span>
+        <span class="en-content">Bosch Introduces IQSIGHT — New Visual Intelligence Security Brand</span>
+      </div>
+    </div>
+    <div class="news-body">
+      <p class="vi-content">Bosch Security Systems ra mắt <strong>IQSIGHT</strong>, thương hiệu bảo mật mới hoàn toàn tập trung vào "visual intelligence" (trí tuệ thị giác). IQSIGHT hợp nhất toàn bộ danh mục AI security của Bosch bao gồm: camera AI phân tích hành vi, cảm biến nhiệt (thermal imaging), nhận diện khuôn mặt và phân tích metadata dưới một thương hiệu duy nhất có định vị rõ ràng hơn so với FLEXIDOME và AUTODOME hiện tại.</p>
+      <p class="vi-content">Dòng sản phẩm IQSIGHT tích hợp AI on-edge (xử lý tại camera, không phụ thuộc server), hỗ trợ chuẩn ONVIF Profile S/T/G và tích hợp trực tiếp với Bosch Building Technologies platform, Genetec Security Center và Milestone XProtect. Camera IQSIGHT có khả năng phát hiện xâm nhập, đếm người, phân tích cử chỉ và cảnh báo theo thời gian thực.</p>
+      <p class="en-content">Bosch Security Systems launched <strong>IQSIGHT</strong>, a new brand exclusively focused on "visual intelligence." IQSIGHT consolidates Bosch's entire AI security portfolio including AI behavioral analytics cameras, thermal imaging sensors, facial recognition, and metadata analytics under a single, more distinctly positioned brand — cleaner than the existing FLEXIDOME and AUTODOME lines.</p>
+      <p class="en-content">The IQSIGHT product line features on-edge AI processing (compute at the camera, no server dependency), supports ONVIF Profile S/T/G, and integrates natively with Bosch Building Technologies platform, Genetec Security Center, and Milestone XProtect. IQSIGHT cameras detect intrusions, count people, analyze gestures, and generate real-time alerts.</p>
+      <div class="news-source">Source: <a href="https://www.asadria.com/en/bosch-introduces-iqsight-a-new-brand-focused-on-visual-intelligence-and-advanced-security/" target="_blank" rel="noopener">Asadria — Bosch IQSIGHT Launch</a></div>
+    </div>
+
+    <!-- DIAGRAM: IQSIGHT System Architecture -->
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ HỆ THỐNG / SYSTEM DIAGRAM — BOSCH IQSIGHT VISUAL INTELLIGENCE</div>
+      <svg width="760" height="220" viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="9">
+        <rect width="760" height="220" fill="#0D1B35" rx="6"/>
+        <!-- Camera nodes -->
+        <rect x="20" y="30" width="120" height="50" rx="4" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="80" y="52" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">IQSIGHT AI CAM</text>
+        <text x="80" y="66" text-anchor="middle" fill="#A0B4C8" font-size="8">Behavior Analytics</text>
+        <text x="80" y="78" text-anchor="middle" fill="#4A6280" font-size="8">On-Edge Processing</text>
+
+        <rect x="20" y="100" width="120" height="50" rx="4" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="80" y="122" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">IQSIGHT THERMAL</text>
+        <text x="80" y="136" text-anchor="middle" fill="#A0B4C8" font-size="8">Heat Detection</text>
+        <text x="80" y="148" text-anchor="middle" fill="#4A6280" font-size="8">Perimeter Security</text>
+
+        <rect x="20" y="170" width="120" height="38" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
+        <text x="80" y="188" text-anchor="middle" fill="#A0B4C8" font-size="9">Access Control</text>
+        <text x="80" y="200" text-anchor="middle" fill="#4A6280" font-size="8">Face Recognition</text>
+
+        <!-- ARROWS TO MIDDLEWARE -->
+        <line x1="140" y1="55" x2="195" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="140" y1="125" x2="195" y2="110" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="140" y1="189" x2="195" y2="130" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <!-- MIDDLEWARE: Bosch Platform -->
+        <rect x="195" y="70" width="160" height="80" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="275" y="93" text-anchor="middle" fill="#00C8E0" font-size="9" letter-spacing="1" font-weight="bold">BOSCH BUILDING</text>
+        <text x="275" y="107" text-anchor="middle" fill="#00C8E0" font-size="9" letter-spacing="1" font-weight="bold">TECHNOLOGIES</text>
+        <line x1="205" y1="115" x2="345" y2="115" stroke="#1E3550"/>
+        <text x="275" y="130" text-anchor="middle" fill="#A0B4C8" font-size="8">Video Management</text>
+        <text x="275" y="142" text-anchor="middle" fill="#4A6280" font-size="8">AI Analytics Engine</text>
+
+        <!-- ARROW TO VMS -->
+        <line x1="355" y1="110" x2="420" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="355" y1="110" x2="420" y2="130" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <!-- VMS -->
+        <rect x="420" y="60" width="120" height="40" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="480" y="78" text-anchor="middle" fill="#A0B4C8" font-size="9">Genetec Security</text>
+        <text x="480" y="90" text-anchor="middle" fill="#4A6280" font-size="8">Center / Unified</text>
+
+        <rect x="420" y="115" width="120" height="40" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="480" y="133" text-anchor="middle" fill="#A0B4C8" font-size="9">Milestone XProtect</text>
+        <text x="480" y="145" text-anchor="middle" fill="#4A6280" font-size="8">ONVIF S/T/G</text>
+
+        <!-- ARROW TO OUTPUT -->
+        <line x1="540" y1="80" x2="600" y2="100" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="540" y1="135" x2="600" y2="110" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <!-- OUTPUT -->
+        <rect x="600" y="70" width="140" height="80" rx="6" fill="#1B2A4A" stroke="#1E3550"/>
+        <text x="670" y="93" text-anchor="middle" fill="#A0B4C8" font-size="9" font-weight="bold">OPERATORS</text>
+        <line x1="610" y1="100" x2="730" y2="100" stroke="#1E3550"/>
+        <text x="670" y="116" text-anchor="middle" fill="#A0B4C8" font-size="8">Real-Time Alerts</text>
+        <text x="670" y="130" text-anchor="middle" fill="#4A6280" font-size="8">Forensic Search</text>
+        <text x="670" y="142" text-anchor="middle" fill="#4A6280" font-size="8">Compliance Reports</text>
+
+        <text x="380" y="200" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="1">BOSCH IQSIGHT — ON-EDGE AI · ONVIF OPEN STANDARD · MULTI-VMS INTEGRATION</text>
+      </svg>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM / WHY IT MATTERS</div>
+      <p class="vi-content">IQSIGHT tạo ra dòng sản phẩm AI security rõ ràng hơn của Bosch, giúp ELV designer dễ spec hơn cho các dự án quy mô lớn (khu công nghiệp, bệnh viện, resort). On-edge AI giảm chi phí server và băng thông mạng. Cần cập nhật BoQ/Spec sheet cho dự án dùng Bosch security tại VN.</p>
+      <p class="en-content">IQSIGHT creates a cleaner AI security product line from Bosch, making it easier for ELV designers to specify for large-scale projects (industrial zones, hospitals, resorts). On-edge AI reduces server costs and network bandwidth requirements. BoQ/Spec sheets for Bosch security projects in Vietnam should be updated accordingly.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════ NEWS 3: HIKVISION ═══════════ -->
+  <div class="news-item">
+    <div class="news-header">
+      <div class="news-num">03 / 05</div>
+      <div class="news-tags">
+        <span class="tag mfr">HIKVISION</span>
+        <span class="tag">HIKO AI</span>
+        <span class="tag">SECURITY MGMT</span>
+        <span class="tag">IP CAMERA</span>
+      </div>
+      <div class="news-title">
+        <span class="vi-content">Hikvision HIKO AI Engine — Nâng Cấp Lớn Hik-Connect 7 Cho Quản Lý Bảo Mật AI</span>
+        <span class="en-content">Hikvision HIKO AI Engine — Major Hik-Connect 7 Upgrade for AI Security Management</span>
+      </div>
+    </div>
+    <div class="news-body">
+      <p class="vi-content">Hikvision giới thiệu <strong>HIKO AI Engine</strong> tích hợp vào nền tảng Hik-Connect 7, nâng cấp toàn diện cho phép quản lý bảo mật bằng AI. HIKO AI cung cấp: tìm kiếm thông minh đa camera theo đặc điểm ngoại hình, tự động phân loại sự kiện bảo mật theo mức độ ưu tiên, nhận diện hành vi bất thường (徘徊, xâm phạm khu vực cấm, bỏ đồ vật) và giao diện quản lý được đơn giản hóa đáng kể.</p>
+      <p class="vi-content">Đây là nâng cấp lớn nhất của Hik-Connect kể từ phiên bản 6, nhằm vào phân khúc SMB và dự án quy mô trung bình. HIKO AI hoạt động ngay trên app di động mà không cần cài đặt thêm phần mềm phức tạp, giảm thời gian review footage từ hàng giờ xuống còn vài phút.</p>
+      <p class="en-content">Hikvision introduced the <strong>HIKO AI Engine</strong> integrated into the Hik-Connect 7 platform, a comprehensive upgrade enabling AI-powered security management. HIKO AI delivers: intelligent multi-camera search by appearance attributes, automatic security event classification by priority, abnormal behavior detection (loitering, restricted area intrusion, abandoned objects), and a significantly simplified management interface.</p>
+      <p class="en-content">This is the largest Hik-Connect upgrade since version 6, targeting the SMB and mid-scale project segment. HIKO AI works directly on the mobile app without additional software installation, reducing footage review time from hours to minutes.</p>
+      <div class="news-source">Source: <a href="https://technode.global/prnasia/hikvision-introduces-new-hiko-ai-engine-to-hik-connect-7-in-a-major-upgrade-which-simplifies-day-to-day-security-management" target="_blank" rel="noopener">TechNode Asia — Hikvision HIKO AI</a></div>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ / SYSTEM OVERVIEW — HIKVISION HIKO AI + HIK-CONNECT 7</div>
+      <svg width="760" height="200" viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="9">
+        <rect width="760" height="200" fill="#0D1B35" rx="6"/>
+        <!-- Camera icons -->
+        <rect x="20" y="30" width="90" height="40" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="65" y="48" text-anchor="middle" fill="#A0B4C8" font-size="9">IP Cameras</text>
+        <text x="65" y="60" text-anchor="middle" fill="#4A6280" font-size="8">NVR / DVR</text>
+
+        <rect x="20" y="85" width="90" height="40" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="65" y="103" text-anchor="middle" fill="#A0B4C8" font-size="9">Hikvision NVR</text>
+        <text x="65" y="115" text-anchor="middle" fill="#4A6280" font-size="8">Cloud Linked</text>
+
+        <rect x="20" y="140" width="90" height="40" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="65" y="158" text-anchor="middle" fill="#A0B4C8" font-size="9">DeepInMind / AcuSense</text>
+        <text x="65" y="170" text-anchor="middle" fill="#4A6280" font-size="8">Edge AI Cameras</text>
+
+        <!-- ARROWS -->
+        <line x1="110" y1="50" x2="195" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="110" y1="105" x2="195" y2="100" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="110" y1="160" x2="195" y2="110" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <!-- HIKO AI ENGINE -->
+        <rect x="195" y="60" width="200" height="90" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="2"/>
+        <text x="295" y="85" text-anchor="middle" fill="#00C8E0" font-size="10" font-weight="bold" letter-spacing="1">HIKO AI ENGINE</text>
+        <text x="295" y="100" text-anchor="middle" fill="#A0B4C8" font-size="8">HIK-CONNECT 7 PLATFORM</text>
+        <line x1="205" y1="107" x2="385" y2="107" stroke="#1E3550"/>
+        <text x="295" y="121" text-anchor="middle" fill="#A0B4C8" font-size="8">· Intelligent Face/Behavior Search</text>
+        <text x="295" y="134" text-anchor="middle" fill="#A0B4C8" font-size="8">· Auto Event Classification</text>
+        <text x="295" y="147" text-anchor="middle" fill="#A0B4C8" font-size="8">· Anomaly Detection (loiter/intrusion)</text>
+
+        <!-- OUTPUT ARROWS -->
+        <line x1="395" y1="90" x2="460" y2="60" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="395" y1="105" x2="460" y2="110" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="395" y1="130" x2="460" y2="155" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+
+        <!-- OUTPUTS -->
+        <rect x="460" y="40" width="130" height="36" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="525" y="58" text-anchor="middle" fill="#A0B4C8" font-size="9">Mobile App Alerts</text>
+        <text x="525" y="69" text-anchor="middle" fill="#4A6280" font-size="8">iOS / Android Push</text>
+
+        <rect x="460" y="90" width="130" height="36" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="525" y="108" text-anchor="middle" fill="#A0B4C8" font-size="9">Web Dashboard</text>
+        <text x="525" y="119" text-anchor="middle" fill="#4A6280" font-size="8">Multi-Site Management</text>
+
+        <rect x="460" y="140" width="130" height="36" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="525" y="158" text-anchor="middle" fill="#A0B4C8" font-size="9">HikCentral Pro</text>
+        <text x="525" y="169" text-anchor="middle" fill="#4A6280" font-size="8">Enterprise Integration</text>
+
+        <text x="380" y="185" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="1">HIKVISION HIKO AI — CLOUD-EDGE HYBRID · SMB TO ENTERPRISE</text>
+      </svg>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM / WHY IT MATTERS</div>
+      <p class="vi-content">Hik-Connect là nền tảng quản lý camera phổ biến nhất tại Việt Nam. HIKO AI Engine nâng cấp trực tiếp hiệu quả vận hành bảo vệ tại hầu hết dự án ELV VN từ chung cư, văn phòng đến khu công nghiệp. Không cần đầu tư thêm phần cứng. ELV designer nên tích hợp HIKO AI là điểm bán (selling point) trong hồ sơ dự thầu camera security.</p>
+      <p class="en-content">Hik-Connect is the most widely used camera management platform in Vietnam. The HIKO AI Engine directly upgrades the operational efficiency of security monitoring across most ELV projects in Vietnam — apartments, offices, industrial zones. No additional hardware investment needed. ELV designers should include HIKO AI as a key selling point in security camera tender documents.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════ NEWS 4: HPE ARUBA ═══════════ -->
+  <div class="news-item">
+    <div class="news-header">
+      <div class="news-num">04 / 05</div>
+      <div class="news-tags">
+        <span class="tag mfr">HPE ARUBA</span>
+        <span class="tag">JUNIPER</span>
+        <span class="tag">AI NETWORKING</span>
+        <span class="tag">ICT</span>
+      </div>
+      <div class="news-title">
+        <span class="vi-content">HPE Aruba + Juniper — Mạng AI "Tự Lái" Cho Edge, Campus, Data Center và AI Factory</span>
+        <span class="en-content">HPE Aruba + Juniper — Self-Driving AI Networks for Edge, Campus, Data Center &amp; AI Factory</span>
+      </div>
+    </div>
+    <div class="news-body">
+      <p class="vi-content">Tại HPE Discover 2026, HPE mở rộng hạ tầng mạng AI "tự lái" (self-driving) toàn diện, tích hợp Aruba và Juniper Mist AI vào một stack thống nhất từ edge đến AI factory. Các switch QFX thế hệ mới (do AI xây dựng và tối ưu) có khả năng tự phục hồi sự cố, tối ưu lưu lượng theo thời gian thực và cấu hình zero-touch provisioning không cần can thiệp thủ công.</p>
+      <p class="vi-content">HPE giữ nguyên hai nền tảng Aruba Central và Juniper Mist nhưng tích hợp AI ở lớp orchestration. Điều này cho phép enterprise sử dụng cả Aruba (campus Wi-Fi, switching) lẫn Juniper (data center, WAN) dưới cùng một khung quản lý AIOps. Giảm OpEx vận hành mạng lên đến 40% theo khảo sát HPE.</p>
+      <p class="en-content">At HPE Discover 2026, HPE expanded its self-driving AI networking stack, integrating Aruba and Juniper Mist AI into a unified platform from edge to AI factory. New AI-built QFX switches feature autonomous fault healing, real-time traffic optimization, and zero-touch provisioning eliminating manual configuration steps.</p>
+      <p class="en-content">HPE maintained separate Aruba Central and Juniper Mist platforms but integrated AI at the orchestration layer. This allows enterprises to use both Aruba (campus Wi-Fi, switching) and Juniper (data center, WAN) under a unified AIOps management framework. Network OpEx reportedly reduced by up to 40% per HPE surveys.</p>
+      <div class="news-source">Source: <a href="https://www.hpe.com/us/en/newsroom/press-release/2026/06/hpe-expands-self-driving-networks-across-edge-campus-data-center-and-ai-factories.html" target="_blank" rel="noopener">HPE Newsroom — Discover 2026</a> | <a href="https://www.techtarget.com/searchnetworking/opinion/Networking-takes-center-stage-at-HPE-Discover-2026" target="_blank" rel="noopener">TechTarget Analysis</a></div>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ / ARCHITECTURE — HPE ARUBA + JUNIPER SELF-DRIVING NETWORK</div>
+      <svg width="760" height="230" viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="9">
+        <rect width="760" height="230" fill="#0D1B35" rx="6"/>
+        <!-- TOP: AI ORCHESTRATION LAYER -->
+        <rect x="150" y="10" width="460" height="40" rx="5" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="380" y="27" text-anchor="middle" fill="#00C8E0" font-size="10" font-weight="bold" letter-spacing="2">HPE AI ORCHESTRATION LAYER</text>
+        <text x="380" y="42" text-anchor="middle" fill="#A0B4C8" font-size="8">Aruba Central + Juniper Mist AI · AIOps · Zero-Touch · Self-Healing</text>
+        <!-- Drop lines -->
+        <line x1="230" y1="50" x2="130" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="310" y1="50" x2="280" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="440" y1="50" x2="440" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="540" y1="50" x2="610" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <!-- LAYER: EDGE -->
+        <rect x="20" y="90" width="120" height="55" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="80" y="108" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">EDGE</text>
+        <text x="80" y="122" text-anchor="middle" fill="#A0B4C8" font-size="8">Aruba APs (Wi-Fi 7)</text>
+        <text x="80" y="134" text-anchor="middle" fill="#4A6280" font-size="8">IoT / OT Gateways</text>
+        <!-- CAMPUS -->
+        <rect x="160" y="90" width="120" height="55" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="220" y="108" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">CAMPUS</text>
+        <text x="220" y="122" text-anchor="middle" fill="#A0B4C8" font-size="8">Aruba CX Switches</text>
+        <text x="220" y="134" text-anchor="middle" fill="#4A6280" font-size="8">PoE / Segmentation</text>
+        <!-- DATA CENTER -->
+        <rect x="300" y="90" width="160" height="55" rx="4" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
+        <text x="380" y="108" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">DATA CENTER</text>
+        <text x="380" y="122" text-anchor="middle" fill="#A0B4C8" font-size="8">Juniper QFX AI-Built Switches</text>
+        <text x="380" y="134" text-anchor="middle" fill="#4A6280" font-size="8">Self-Healing · Traffic Optim.</text>
+        <!-- AI FACTORY -->
+        <rect x="480" y="90" width="130" height="55" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="545" y="108" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">AI FACTORY</text>
+        <text x="545" y="122" text-anchor="middle" fill="#A0B4C8" font-size="8">InfiniBand / Ethernet</text>
+        <text x="545" y="134" text-anchor="middle" fill="#4A6280" font-size="8">GPU Cluster Networking</text>
+        <!-- WAN -->
+        <rect x="630" y="90" width="110" height="55" rx="4" fill="#101E30" stroke="#1E3550"/>
+        <text x="685" y="108" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">WAN / SD-WAN</text>
+        <text x="685" y="122" text-anchor="middle" fill="#A0B4C8" font-size="8">Juniper Session</text>
+        <text x="685" y="134" text-anchor="middle" fill="#4A6280" font-size="8">Smart Director</text>
+
+        <!-- BOTTOM: END DEVICES -->
+        <rect x="20" y="170" width="720" height="40" rx="4" fill="#0D1B35" stroke="#1E3550"/>
+        <text x="380" y="187" text-anchor="middle" fill="#4A6280" font-size="9">END DEVICES: Laptops · Phones · Cameras · Servers · OT/IoT · BAS Controllers · AV Systems</text>
+        <text x="380" y="200" text-anchor="middle" fill="#4A6280" font-size="8">CABLING: Cat6A / Cat8 / Single-Mode Fiber · PoE++ 90W · 400G Uplinks</text>
+
+        <!-- Connect lines bottom -->
+        <line x1="80" y1="145" x2="80" y2="168" stroke="#1E3550" stroke-width="1"/>
+        <line x1="220" y1="145" x2="220" y2="168" stroke="#1E3550" stroke-width="1"/>
+        <line x1="380" y1="145" x2="380" y2="168" stroke="#1E3550" stroke-width="1"/>
+        <line x1="545" y1="145" x2="545" y2="168" stroke="#1E3550" stroke-width="1"/>
+        <line x1="685" y1="145" x2="685" y2="168" stroke="#1E3550" stroke-width="1"/>
+
+        <text x="380" y="218" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="1">HPE ARUBA + JUNIPER UNIFIED AI NETWORKING — DISCOVER 2026</text>
+      </svg>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM / WHY IT MATTERS</div>
+      <p class="vi-content">Hạ tầng mạng AI "tự lái" đang trở thành tiêu chuẩn mới cho thiết kế ICT campus và data center tại Việt Nam, đặc biệt trong bối cảnh làn sóng data center tỷ đô. ELV/ICT designer cần cập nhật spec network theo hướng AI-ready, Wi-Fi 7, PoE 90W và 400G fiber. HPE Aruba + Juniper là gói giải pháp cần thiết trong hồ sơ thiết kế ICT tier cao.</p>
+      <p class="en-content">AI self-driving networking is becoming the new standard for ICT campus and data center design in Vietnam, especially amid the multi-billion dollar data center wave. ELV/ICT designers must update network specs toward AI-ready architecture: Wi-Fi 7, 90W PoE, and 400G fiber. HPE Aruba + Juniper is an essential solution set for high-tier ICT design packages.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════ NEWS 5: VIETNAM DC ═══════════ -->
+  <div class="news-item">
+    <div class="news-header">
+      <div class="news-num">05 / 05</div>
+      <div class="news-tags">
+        <span class="tag mfr">VIETNAM</span>
+        <span class="tag">DATA CENTER</span>
+        <span class="tag">AI INFRA</span>
+        <span class="tag">MARKET</span>
+      </div>
+      <div class="news-title">
+        <span class="vi-content">Việt Nam Thu Hút Hàng Tỷ USD Đầu Tư Data Center AI — Cơ Hội Lớn Cho ELV/ICT</span>
+        <span class="en-content">Vietnam Attracts Billions in AI Data Center Investment — Major Opportunity for ELV/ICT</span>
+      </div>
+    </div>
+    <div class="news-body">
+      <p class="vi-content">Việt Nam đang nổi lên như điểm đến cạnh tranh chi phí hàng đầu Đông Nam Á cho data center AI, thu hút hàng loạt hyperscalers, cloud titans và AI players. TP.HCM dẫn đầu với dự án <strong>AIC $2.1 tỷ USD AI data center</strong> tại Khu Công nghệ cao SHTP. Làn sóng FDI vào hạ tầng công nghệ cao tại TP.HCM và Hà Nội tạo ra nhu cầu khổng lồ cho hạ tầng cáp, BMS, security và AV control room cấp tier III/IV.</p>
+      <p class="vi-content">Theo VietnamNet và VnExpress, cơn sốt data center 2026 đang kéo theo đầu tư đồng bộ vào nguồn điện (data power), làm mát (cooling), kết nối quang (fiber), và toàn bộ hệ thống ELV. Thách thức chính: nguồn điện phải theo kịp tốc độ tăng trưởng và cần đội ngũ thiết kế ELV có kinh nghiệm tier III/IV TIA-942.</p>
+      <p class="en-content">Vietnam is emerging as Southeast Asia's most cost-competitive AI data center destination, attracting hyperscalers, cloud titans, and AI players. Ho Chi Minh City leads with <strong>AIC's $2.1 billion AI data center</strong> at SHTP High-Tech Park. The wave of FDI into hi-tech data infrastructure in HCMC and Hanoi is generating massive demand for structured cabling, BMS, security, and AV control room infrastructure at tier III/IV levels.</p>
+      <p class="en-content">According to VietnamNet and VnExpress, the 2026 data center boom is driving synchronized investment in power, cooling, optical fiber, and all ELV systems. Key challenge: power supply must keep pace with growth, and Vietnam needs experienced ELV design teams with TIA-942 tier III/IV expertise.</p>
+      <div class="news-source">Source: <a href="https://vietnamnet.vn/en/vietnam-s-data-centre-race-draws-multibillion-dollar-investment-2550193.html" target="_blank" rel="noopener">VietnamNet — DC Race Multibillion</a> | <a href="https://e.vnexpress.net/news/tech/vietnam-innovation/vietnam-data-center-boom-draws-billions-of-dollars-as-ai-demand-accelerates-5113451.html" target="_blank" rel="noopener">VnExpress International</a></div>
+    </div>
+
+    <div class="diagram-box">
+      <div class="diagram-title">SƠ ĐỒ HỆ THỐNG ELV/ICT DATA CENTER / ELV SYSTEMS IN AI DATA CENTER — TIER III/IV</div>
+      <svg width="760" height="240" viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="9">
+        <rect width="760" height="240" fill="#0D1B35" rx="6"/>
+        <!-- OUTER: BUILDING SHELL -->
+        <rect x="10" y="10" width="740" height="220" rx="8" fill="none" stroke="#1E3550" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <text x="380" y="27" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="2">AI DATA CENTER — TIER III · TIA-942 · VIETNAM 2026+</text>
+
+        <!-- POWER INFRA -->
+        <rect x="25" y="35" width="140" height="90" rx="5" fill="#101E30" stroke="#1E3550"/>
+        <text x="95" y="52" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">POWER / BMS</text>
+        <line x1="35" y1="58" x2="155" y2="58" stroke="#1E3550"/>
+        <text x="95" y="72" text-anchor="middle" fill="#A0B4C8" font-size="8">Generator / UPS / ATS</text>
+        <text x="95" y="84" text-anchor="middle" fill="#A0B4C8" font-size="8">PDU / DCIM</text>
+        <text x="95" y="96" text-anchor="middle" fill="#A0B4C8" font-size="8">Schneider / ABB</text>
+        <text x="95" y="108" text-anchor="middle" fill="#4A6280" font-size="8">BMS Integration</text>
+        <text x="95" y="118" text-anchor="middle" fill="#4A6280" font-size="8">Siemens Desigo</text>
+
+        <!-- CABLING -->
+        <rect x="185" y="35" width="140" height="90" rx="5" fill="#101E30" stroke="#1E3550"/>
+        <text x="255" y="52" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">STRUCTURED CABLING</text>
+        <line x1="195" y1="58" x2="315" y2="58" stroke="#1E3550"/>
+        <text x="255" y="72" text-anchor="middle" fill="#A0B4C8" font-size="8">Cat6A / Cat8 Copper</text>
+        <text x="255" y="84" text-anchor="middle" fill="#A0B4C8" font-size="8">MPO-16/32 Fiber</text>
+        <text x="255" y="96" text-anchor="middle" fill="#A0B4C8" font-size="8">Panduit / CommScope</text>
+        <text x="255" y="108" text-anchor="middle" fill="#4A6280" font-size="8">400G / 800G Uplinks</text>
+        <text x="255" y="118" text-anchor="middle" fill="#4A6280" font-size="8">TIA-942 Zones</text>
+
+        <!-- SECURITY -->
+        <rect x="345" y="35" width="140" height="90" rx="5" fill="#101E30" stroke="#1E3550"/>
+        <text x="415" y="52" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">SECURITY / ACCESS</text>
+        <line x1="355" y1="58" x2="475" y2="58" stroke="#1E3550"/>
+        <text x="415" y="72" text-anchor="middle" fill="#A0B4C8" font-size="8">Biometric Access Control</text>
+        <text x="415" y="84" text-anchor="middle" fill="#A0B4C8" font-size="8">AI Camera CCTV</text>
+        <text x="415" y="96" text-anchor="middle" fill="#A0B4C8" font-size="8">Axis / Bosch IQSIGHT</text>
+        <text x="415" y="108" text-anchor="middle" fill="#4A6280" font-size="8">Perimeter Thermal</text>
+        <text x="415" y="118" text-anchor="middle" fill="#4A6280" font-size="8">Video Analytics</text>
+
+        <!-- AV / FIRE -->
+        <rect x="505" y="35" width="240" height="90" rx="5" fill="#101E30" stroke="#1E3550"/>
+        <text x="625" y="52" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">AV CONTROL ROOM + FIRE</text>
+        <line x1="515" y1="58" x2="735" y2="58" stroke="#1E3550"/>
+        <text x="625" y="72" text-anchor="middle" fill="#A0B4C8" font-size="8">NOC/SOC Video Wall (Christie/Barco)</text>
+        <text x="625" y="84" text-anchor="middle" fill="#A0B4C8" font-size="8">Crestron Control System</text>
+        <text x="625" y="96" text-anchor="middle" fill="#A0B4C8" font-size="8">Fire Detection: VESDA / Hochiki</text>
+        <text x="625" y="108" text-anchor="middle" fill="#4A6280" font-size="8">FM-200 / Novec 1230 Suppression</text>
+        <text x="625" y="118" text-anchor="middle" fill="#4A6280" font-size="8">PA/VA Emergency System</text>
+
+        <!-- INTEGRATION LAYER -->
+        <rect x="25" y="145" width="720" height="40" rx="4" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1"/>
+        <text x="380" y="162" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold" letter-spacing="1">INTEGRATED BMS / DCIM PLATFORM</text>
+        <text x="380" y="175" text-anchor="middle" fill="#A0B4C8" font-size="8">Schneider EcoStruxure · Power · IT · Building — Single Pane of Glass Management</text>
+
+        <!-- Connect arrows up to integration -->
+        <line x1="95" y1="125" x2="95" y2="143" stroke="#1E3550"/>
+        <line x1="255" y1="125" x2="255" y2="143" stroke="#1E3550"/>
+        <line x1="415" y1="125" x2="415" y2="143" stroke="#1E3550"/>
+        <line x1="625" y1="125" x2="625" y2="143" stroke="#1E3550"/>
+
+        <!-- OPERATORS ROW -->
+        <rect x="25" y="200" width="720" height="28" rx="4" fill="#0D1B35" stroke="#1E3550"/>
+        <text x="380" y="216" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="1">OPERATORS: NOC / SOC / FM · 24/7 MONITORING · COMPLIANCE: ISO 27001 · SOC 2 · TIER III SLA 99.982%</text>
+      </svg>
+    </div>
+
+    <div class="why-box">
+      <div class="why-label">TẠI SAO QUAN TRỌNG VỚI DỰ ÁN VIỆT NAM / WHY IT MATTERS</div>
+      <p class="vi-content">Mỗi data center AI quy mô lớn kéo theo nhu cầu thiết kế ELV/ICT trị giá hàng triệu USD: cáp quang MPO, cáp copper Cat8, hệ thống BMS tích hợp, CCTV với AI analytics, fire suppression FM-200, AV control room NOC/SOC. Đây là mảng thị trường có biên lợi nhuận cao nhất cho ELV consultant và SI tại VN hiện nay. Cần chủ động tìm kiếm cơ hội từ giai đoạn đầu tư sớm.</p>
+      <p class="en-content">Every large-scale AI data center creates millions in ELV/ICT design demand: MPO fiber cabling, Cat8 copper, integrated BMS, AI analytics CCTV, FM-200 fire suppression, and NOC/SOC AV control rooms. This is currently the highest-margin market segment for ELV consultants and SIs in Vietnam. Proactively engage early-stage investment pipelines for maximum positioning.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <div class="cta-label">TƯ VẤN CHUYÊN NGHIỆP / PROFESSIONAL CONSULTING</div>
+    <h3 class="vi-content">Cần Thiết Kế ELV/ICT/AV Cho Dự Án Của Bạn?</h3>
+    <h3 class="en-content">Need ELV/ICT/AV Design For Your Project?</h3>
+    <p class="vi-content">Paul Le Consultant cung cấp dịch vụ thiết kế ELV/ICT/AV chuyên nghiệp cho dự án văn phòng, khách sạn, bệnh viện, trường học và data center tại Việt Nam. RFP, BoM, Specification, Tender Support và SI Integration.</p>
+    <p class="en-content">Paul Le Consultant provides professional ELV/ICT/AV design services for office, hotel, hospital, school, and data center projects in Vietnam. RFP, BoM, Specification, Tender Support, and SI Integration.</p>
+    <a href="https://elvconsultant.com/#contact" class="cta-btn">LIÊN HỆ TƯ VẤN / CONTACT →</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">⬡ PAUL LE CONSULTANT</div>
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://facebook.com/elvconsultant" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://x.com/PLELVCONSULTANT" target="_blank" rel="noopener">X / Twitter</a>
+    <a href="/#contact">Contact</a>
+  </div>
+  <p>© 2026 Paul Le Consultant — ELV · ICT · AV Design Director<br>
+  <span style="font-size:11px;color:#1E3550">Photo: Tetiana Sapon / Unsplash — ELV/ICT/AV Weekly W48 · 27 Nov 2026</span></p>
+</footer>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('.vi-content').forEach(e=>e.style.display=l==='vi'?'':'none');
+  document.querySelectorAll('.en-content').forEach(e=>e.style.display=l==='en'?'':'none');
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+  try{localStorage.setItem('lang',l);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  try{setLang(localStorage.getItem('lang')||'vi');}catch(e){setLang('vi');}
+});
+</script>
+</body>
+</html>
