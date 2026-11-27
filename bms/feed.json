@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-27",
+  "slug": "dong-ho-dien-modbus-dia-chi-baudrate-register-map",
+  "title_vi": "Đồng hồ điện Modbus vào BMS",
+  "title_en": "Modbus power meters into the BMS",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-27-dong-ho-dien-modbus-dia-chi-baudrate-register-map.html",
+  "x_post": "Modbus meter reads 65,536x the real kW? Wrong word order on a 32-bit value.\n\nFix 4 settings before the meters are ordered: address 1-247, baud rate, parity (8E1 or 8N2) and the register map with its offset.\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Đồng hồ điện đọc lên BMS ra số lớn gấp 65.536 lần thực tế: gần như chắc chắn là ghép sai thứ tự 2 word của số 32 bit.\n\nPhần lớn lỗi tích hợp đồng hồ Modbus nằm ở 4 thông số, không phải phần mềm:\n1. Địa chỉ 1 đến 247, không trùng trong một trục RS-485\n2. Baudrate giống nhau trên cả trục, 9600 hoặc 19200\n3. Parity: mặc định Modbus là 8E1, nếu đặt None thì dùng 2 stop bit\n4. Register map: manual ghi 40001 thì địa chỉ PDU là 0, nhập lệch 1 là đọc sai\n\nVới Mitsubishi Electric Diamond Controls, đồng hồ tủ tổng đọc Modbus TCP cổng 502, đồng hồ tủ nhánh đi 2 trục Modbus RTU về 2 cổng RS-485 cách ly của DCM 9000, tối đa 32 tải mỗi trục. Driver Modbus có sẵn trong license Niagara 4.\n\nChốt các thông số này trong hồ sơ thiết kế, trước khi nhà thầu điện đặt hàng đồng hồ.\n\nSơ đồ nguyên lý và phiếu chạy thử từng đồng hồ:\nhttps://elvconsultant.com/blog/bms/2026-11-27-dong-ho-dien-modbus-dia-chi-baudrate-register-map.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #Modbus #DoDemNangLuong #DiamondControls #Niagara4"
+ },
+ {
   "date": "2026-11-26",
   "slug": "bems-leed-edge-lotus-diem-bms",
   "title_vi": "BEMS cho LEED, EDGE, LOTUS",
