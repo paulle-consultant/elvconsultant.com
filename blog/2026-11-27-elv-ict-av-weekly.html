@@ -18,15 +18,14 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     :root{
-      --bg:#07111F;--card-bg:#101E30;--card-border:#1E3550;
-      --cyan:#00C8E0;--cyan-dim:rgba(0,200,224,0.10);--cyan-glow:rgba(0,200,224,0.28);
-      --silver:#A0B4C8;--white:#F0F4F8;--steel:#4A6280;
-      --navy:#1B2A4A;--navy-deep:#0D1B35;--grid-line:rgba(0,200,224,0.08);
+      --bg:#0C0B09;--card-bg:#15130F;--card-border:#2A251C;
+      --cyan:#C9A96A;--cyan-dim:rgba(201,169,106,0.10);--cyan-glow:rgba(201,169,106,0.28);
+      --silver:#B5AC9C;--white:#F3EDE2;--steel:#8A8172;
+      --navy:#2A251C;--navy-deep:#121009;--grid-line:rgba(201,169,106,0.08);
     }
     html{scroll-behavior:smooth}
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--white);overflow-x:hidden;min-height:100vh}
@@ -35,7 +34,7 @@
     .grid-bg{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(var(--grid-line) 1px,transparent 1px),linear-gradient(90deg,var(--grid-line) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
 
     /* NAV */
-    nav{position:sticky;top:0;z-index:100;background:rgba(7,17,31,0.95);border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
+    nav{position:sticky;top:0;z-index:100;background:rgba(12,11,9,0.95);border-bottom:1px solid var(--card-border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px}
     .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
     .logo-text{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px}
     .logo-sub{font-size:9px;color:var(--cyan);letter-spacing:2px;font-weight:400;display:block;margin-top:-2px}
@@ -56,7 +55,7 @@
     /* HERO */
     .article-hero{position:relative;z-index:1;height:400px;overflow:hidden}
     .article-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(0.45) saturate(0.7)}
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,17,31,0.3) 0%,rgba(7,17,31,0.75) 60%,rgba(7,17,31,1) 100%)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,11,9,0.3) 0%,rgba(12,11,9,0.75) 60%,rgba(12,11,9,1) 100%)}
     .hero-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem 2.5rem 2rem}
     .hero-eyebrow{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:3px;color:var(--cyan);margin-bottom:0.75rem;display:flex;align-items:center;gap:10px}
     .hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--cyan)}
@@ -73,12 +72,12 @@
 
     /* NEWS ITEM */
     .news-item{margin-bottom:2rem;background:var(--card-bg);border:1px solid var(--card-border);border-radius:8px;overflow:hidden;transition:border-color 0.3s,box-shadow 0.3s}
-    .news-item:hover{border-color:rgba(0,200,224,0.35);box-shadow:0 0 0 1px rgba(0,200,224,0.12),0 8px 32px -8px rgba(0,200,224,0.2)}
+    .news-item:hover{border-color:rgba(201,169,106,0.35);box-shadow:0 0 0 1px rgba(201,169,106,0.12),0 8px 32px -8px rgba(201,169,106,0.2)}
     .news-header{padding:1.5rem 1.75rem 1.25rem;border-bottom:1px solid var(--card-border)}
     .news-num{font-family:'Orbitron',monospace;font-size:9px;letter-spacing:2px;color:var(--steel);margin-bottom:0.6rem}
     .news-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0.75rem}
-    .tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1px;padding:3px 8px;border-radius:3px;border:1px solid rgba(0,200,224,0.3);color:var(--cyan);background:var(--cyan-dim)}
-    .tag.mfr{background:rgba(0,200,224,0.15);border-color:var(--cyan);font-weight:700}
+    .tag{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:1px;padding:3px 8px;border-radius:3px;border:1px solid rgba(201,169,106,0.3);color:var(--cyan);background:var(--cyan-dim)}
+    .tag.mfr{background:rgba(201,169,106,0.15);border-color:var(--cyan);font-weight:700}
     .news-title{font-family:'Orbitron',monospace;font-size:clamp(13px,1.4vw,16px);font-weight:700;color:var(--white);line-height:1.3}
     .news-title-en{font-size:clamp(12px,1.2vw,14px);font-weight:600;color:var(--silver);margin-top:4px;font-family:'Inter',sans-serif}
     .news-body{padding:1.25rem 1.75rem}
@@ -89,7 +88,7 @@
     .news-source a:hover{opacity:1}
 
     /* WHY BOX */
-    .why-box{margin:1rem 1.75rem 1.5rem;padding:1rem 1.25rem;background:rgba(0,200,224,0.05);border:1px solid rgba(0,200,224,0.2);border-radius:5px}
+    .why-box{margin:1rem 1.75rem 1.5rem;padding:1rem 1.25rem;background:rgba(201,169,106,0.05);border:1px solid rgba(201,169,106,0.2);border-radius:5px}
     .why-box .why-label{font-family:'Orbitron',monospace;font-size:8px;letter-spacing:2px;color:var(--cyan);margin-bottom:0.5rem}
     .why-box p{font-size:13px;color:var(--silver);line-height:1.65}
 
@@ -104,7 +103,7 @@
     .cta-box h3{font-family:'Orbitron',monospace;font-size:clamp(1rem,2vw,1.4rem);font-weight:900;color:var(--white);margin-bottom:0.75rem}
     .cta-box p{font-size:13px;color:var(--silver);line-height:1.65;margin-bottom:1.5rem}
     .cta-btn{display:inline-block;background:var(--cyan);color:var(--bg);padding:11px 28px;border-radius:4px;font-family:'Orbitron',monospace;font-size:11px;font-weight:700;letter-spacing:1.5px;text-decoration:none;transition:box-shadow 0.2s,transform 0.2s}
-    .cta-btn:hover{box-shadow:0 0 20px rgba(0,200,224,0.5);transform:translateY(-2px)}
+    .cta-btn:hover{box-shadow:0 0 20px rgba(201,169,106,0.5);transform:translateY(-2px)}
 
     /* FOOTER */
     footer{position:relative;z-index:1;background:var(--navy-deep);border-top:1px solid var(--card-border);padding:2rem;text-align:center;margin-top:0}
@@ -116,6 +115,7 @@
 
     @media(max-width:768px){main{padding:2rem 1.25rem 3rem}.news-body,.why-box,.diagram-box{margin-left:1.25rem;margin-right:1.25rem}.news-header{padding:1.25rem 1.25rem 1rem}.hero-content{padding:1.5rem 1.25rem 1rem}}
   </style>
+  <link rel="stylesheet" href="../assets/maison.css">
 </head>
 <body>
 <div class="grid-bg"></div>
@@ -123,7 +123,7 @@
 <!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#00C8E0" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#00C8E0">PL</text></svg>
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L25.2 8.5V21.5L14 28L2.8 21.5V8.5L14 2Z" fill="none" stroke="#C9A96A" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" font-family="Orbitron,sans-serif" font-size="7" font-weight="700" fill="#C9A96A">PL</text></svg>
     <div><span class="logo-text">PAUL LE CONSULTANT</span><span class="logo-sub">AV · ICT · ELV</span></div>
   </a>
   <ul class="nav-links">
@@ -194,66 +194,66 @@
       <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ / PRINCIPLE DIAGRAM — CRESTRON COLLAB ENGINE</div>
       <svg width="760" height="260" viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="10">
         <!-- BG -->
-        <rect width="760" height="260" fill="#0D1B35" rx="6"/>
+        <rect width="760" height="260" fill="#121009" rx="6"/>
         <!-- COLLAB ENGINE BOX -->
-        <rect x="260" y="80" width="240" height="100" rx="6" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
-        <text x="380" y="102" text-anchor="middle" fill="#00C8E0" font-size="9" letter-spacing="2" font-weight="bold">COLLAB ENGINE</text>
-        <line x1="270" y1="108" x2="490" y2="108" stroke="#1E3550" stroke-width="1"/>
-        <text x="380" y="124" text-anchor="middle" fill="#A0B4C8" font-size="9">AV Control Processor</text>
-        <text x="380" y="140" text-anchor="middle" fill="#A0B4C8" font-size="9">+ MTR Compute Unit</text>
-        <text x="380" y="156" text-anchor="middle" fill="#4A6280" font-size="9">DM NAX Audio Platform</text>
+        <rect x="260" y="80" width="240" height="100" rx="6" fill="#15130F" stroke="#C9A96A" stroke-width="1.5"/>
+        <text x="380" y="102" text-anchor="middle" fill="#C9A96A" font-size="9" letter-spacing="2" font-weight="bold">COLLAB ENGINE</text>
+        <line x1="270" y1="108" x2="490" y2="108" stroke="#2A251C" stroke-width="1"/>
+        <text x="380" y="124" text-anchor="middle" fill="#B5AC9C" font-size="9">AV Control Processor</text>
+        <text x="380" y="140" text-anchor="middle" fill="#B5AC9C" font-size="9">+ MTR Compute Unit</text>
+        <text x="380" y="156" text-anchor="middle" fill="#8A8172" font-size="9">DM NAX Audio Platform</text>
 
         <!-- LEFT: INPUTS -->
-        <rect x="20" y="40" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
-        <text x="85" y="58" text-anchor="middle" fill="#A0B4C8" font-size="9">Microsoft Teams / Zoom</text>
-        <text x="85" y="70" text-anchor="middle" fill="#4A6280" font-size="8">Cloud Conferencing</text>
+        <rect x="20" y="40" width="130" height="36" rx="4" fill="#2A251C" stroke="#2A251C"/>
+        <text x="85" y="58" text-anchor="middle" fill="#B5AC9C" font-size="9">Microsoft Teams / Zoom</text>
+        <text x="85" y="70" text-anchor="middle" fill="#8A8172" font-size="8">Cloud Conferencing</text>
 
-        <rect x="20" y="90" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
-        <text x="85" y="108" text-anchor="middle" fill="#A0B4C8" font-size="9">BYOD Devices</text>
-        <text x="85" y="120" text-anchor="middle" fill="#4A6280" font-size="8">USB-C / AirPlay / Miracast</text>
+        <rect x="20" y="90" width="130" height="36" rx="4" fill="#2A251C" stroke="#2A251C"/>
+        <text x="85" y="108" text-anchor="middle" fill="#B5AC9C" font-size="9">BYOD Devices</text>
+        <text x="85" y="120" text-anchor="middle" fill="#8A8172" font-size="8">USB-C / AirPlay / Miracast</text>
 
-        <rect x="20" y="140" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
-        <text x="85" y="158" text-anchor="middle" fill="#A0B4C8" font-size="9">Room Sensors</text>
-        <text x="85" y="170" text-anchor="middle" fill="#4A6280" font-size="8">Occupancy / Environment</text>
+        <rect x="20" y="140" width="130" height="36" rx="4" fill="#2A251C" stroke="#2A251C"/>
+        <text x="85" y="158" text-anchor="middle" fill="#B5AC9C" font-size="9">Room Sensors</text>
+        <text x="85" y="170" text-anchor="middle" fill="#8A8172" font-size="8">Occupancy / Environment</text>
 
         <!-- ARROWS LEFT -->
-        <line x1="150" y1="58" x2="258" y2="118" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
-        <line x1="150" y1="108" x2="258" y2="128" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
-        <line x1="150" y1="158" x2="258" y2="145" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
-        <polygon points="254,116 262,118 258,124" fill="#00C8E0"/>
-        <polygon points="254,126 262,128 258,134" fill="#00C8E0"/>
-        <polygon points="254,142 262,145 258,150" fill="#00C8E0"/>
+        <line x1="150" y1="58" x2="258" y2="118" stroke="#C9A96A" stroke-width="1" stroke-dasharray="4,2"/>
+        <line x1="150" y1="108" x2="258" y2="128" stroke="#C9A96A" stroke-width="1" stroke-dasharray="4,2"/>
+        <line x1="150" y1="158" x2="258" y2="145" stroke="#C9A96A" stroke-width="1" stroke-dasharray="4,2"/>
+        <polygon points="254,116 262,118 258,124" fill="#C9A96A"/>
+        <polygon points="254,126 262,128 258,134" fill="#C9A96A"/>
+        <polygon points="254,142 262,145 258,150" fill="#C9A96A"/>
 
         <!-- RIGHT: OUTPUTS -->
-        <rect x="610" y="40" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
-        <text x="675" y="56" text-anchor="middle" fill="#A0B4C8" font-size="9">AI PTZ Cameras</text>
-        <text x="675" y="68" text-anchor="middle" fill="#4A6280" font-size="8">Auto-Framing / Tracking</text>
+        <rect x="610" y="40" width="130" height="36" rx="4" fill="#2A251C" stroke="#2A251C"/>
+        <text x="675" y="56" text-anchor="middle" fill="#B5AC9C" font-size="9">AI PTZ Cameras</text>
+        <text x="675" y="68" text-anchor="middle" fill="#8A8172" font-size="8">Auto-Framing / Tracking</text>
 
-        <rect x="610" y="90" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
-        <text x="675" y="106" text-anchor="middle" fill="#A0B4C8" font-size="9">Display / Touch Panel</text>
-        <text x="675" y="118" text-anchor="middle" fill="#4A6280" font-size="8">Room Booking UI</text>
+        <rect x="610" y="90" width="130" height="36" rx="4" fill="#2A251C" stroke="#2A251C"/>
+        <text x="675" y="106" text-anchor="middle" fill="#B5AC9C" font-size="9">Display / Touch Panel</text>
+        <text x="675" y="118" text-anchor="middle" fill="#8A8172" font-size="8">Room Booking UI</text>
 
-        <rect x="610" y="140" width="130" height="36" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
-        <text x="675" y="156" text-anchor="middle" fill="#A0B4C8" font-size="9">DM NAX Audio</text>
-        <text x="675" y="168" text-anchor="middle" fill="#4A6280" font-size="8">Beam-Forming Mic Array</text>
+        <rect x="610" y="140" width="130" height="36" rx="4" fill="#2A251C" stroke="#2A251C"/>
+        <text x="675" y="156" text-anchor="middle" fill="#B5AC9C" font-size="9">DM NAX Audio</text>
+        <text x="675" y="168" text-anchor="middle" fill="#8A8172" font-size="8">Beam-Forming Mic Array</text>
 
         <!-- ARROWS RIGHT -->
-        <line x1="502" y1="118" x2="608" y2="58" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
-        <line x1="502" y1="128" x2="608" y2="108" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
-        <line x1="502" y1="145" x2="608" y2="158" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
-        <polygon points="604,54 612,58 606,62" fill="#00C8E0"/>
-        <polygon points="604,104 612,108 606,112" fill="#00C8E0"/>
-        <polygon points="604,154 612,158 606,162" fill="#00C8E0"/>
+        <line x1="502" y1="118" x2="608" y2="58" stroke="#C9A96A" stroke-width="1" stroke-dasharray="4,2"/>
+        <line x1="502" y1="128" x2="608" y2="108" stroke="#C9A96A" stroke-width="1" stroke-dasharray="4,2"/>
+        <line x1="502" y1="145" x2="608" y2="158" stroke="#C9A96A" stroke-width="1" stroke-dasharray="4,2"/>
+        <polygon points="604,54 612,58 606,62" fill="#C9A96A"/>
+        <polygon points="604,104 612,108 606,112" fill="#C9A96A"/>
+        <polygon points="604,154 612,158 606,162" fill="#C9A96A"/>
 
         <!-- BOTTOM: MANAGEMENT -->
-        <rect x="260" y="210" width="240" height="34" rx="4" fill="#1B2A4A" stroke="#1E3550"/>
-        <text x="380" y="226" text-anchor="middle" fill="#A0B4C8" font-size="9">XiO Cloud Management</text>
-        <text x="380" y="238" text-anchor="middle" fill="#4A6280" font-size="8">Zero-Touch Provisioning · Analytics · Alerts</text>
-        <line x1="380" y1="180" x2="380" y2="208" stroke="#00C8E0" stroke-width="1" stroke-dasharray="4,2"/>
-        <polygon points="376,205 384,205 380,210" fill="#00C8E0"/>
+        <rect x="260" y="210" width="240" height="34" rx="4" fill="#2A251C" stroke="#2A251C"/>
+        <text x="380" y="226" text-anchor="middle" fill="#B5AC9C" font-size="9">XiO Cloud Management</text>
+        <text x="380" y="238" text-anchor="middle" fill="#8A8172" font-size="8">Zero-Touch Provisioning · Analytics · Alerts</text>
+        <line x1="380" y1="180" x2="380" y2="208" stroke="#C9A96A" stroke-width="1" stroke-dasharray="4,2"/>
+        <polygon points="376,205 384,205 380,210" fill="#C9A96A"/>
 
         <!-- LABEL -->
-        <text x="380" y="22" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="1">AV CONTROL + MTR UNIFIED ARCHITECTURE · CRESTRON 2026</text>
+        <text x="380" y="22" text-anchor="middle" fill="#8A8172" font-size="8" letter-spacing="1">AV CONTROL + MTR UNIFIED ARCHITECTURE · CRESTRON 2026</text>
       </svg>
     </div>
 
@@ -291,61 +291,61 @@
     <div class="diagram-box">
       <div class="diagram-title">SƠ ĐỒ HỆ THỐNG / SYSTEM DIAGRAM — BOSCH IQSIGHT VISUAL INTELLIGENCE</div>
       <svg width="760" height="220" viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="9">
-        <rect width="760" height="220" fill="#0D1B35" rx="6"/>
+        <rect width="760" height="220" fill="#121009" rx="6"/>
         <!-- Camera nodes -->
-        <rect x="20" y="30" width="120" height="50" rx="4" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
-        <text x="80" y="52" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">IQSIGHT AI CAM</text>
-        <text x="80" y="66" text-anchor="middle" fill="#A0B4C8" font-size="8">Behavior Analytics</text>
-        <text x="80" y="78" text-anchor="middle" fill="#4A6280" font-size="8">On-Edge Processing</text>
+        <rect x="20" y="30" width="120" height="50" rx="4" fill="#15130F" stroke="#C9A96A" stroke-width="1.5"/>
+        <text x="80" y="52" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">IQSIGHT AI CAM</text>
+        <text x="80" y="66" text-anchor="middle" fill="#B5AC9C" font-size="8">Behavior Analytics</text>
+        <text x="80" y="78" text-anchor="middle" fill="#8A8172" font-size="8">On-Edge Processing</text>
 
-        <rect x="20" y="100" width="120" height="50" rx="4" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
-        <text x="80" y="122" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">IQSIGHT THERMAL</text>
-        <text x="80" y="136" text-anchor="middle" fill="#A0B4C8" font-size="8">Heat Detection</text>
-        <text x="80" y="148" text-anchor="middle" fill="#4A6280" font-size="8">Perimeter Security</text>
+        <rect x="20" y="100" width="120" height="50" rx="4" fill="#15130F" stroke="#C9A96A" stroke-width="1.5"/>
+        <text x="80" y="122" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">IQSIGHT THERMAL</text>
+        <text x="80" y="136" text-anchor="middle" fill="#B5AC9C" font-size="8">Heat Detection</text>
+        <text x="80" y="148" text-anchor="middle" fill="#8A8172" font-size="8">Perimeter Security</text>
 
-        <rect x="20" y="170" width="120" height="38" rx="4" fill="#101E30" stroke="#1E3550" stroke-width="1"/>
-        <text x="80" y="188" text-anchor="middle" fill="#A0B4C8" font-size="9">Access Control</text>
-        <text x="80" y="200" text-anchor="middle" fill="#4A6280" font-size="8">Face Recognition</text>
+        <rect x="20" y="170" width="120" height="38" rx="4" fill="#15130F" stroke="#2A251C" stroke-width="1"/>
+        <text x="80" y="188" text-anchor="middle" fill="#B5AC9C" font-size="9">Access Control</text>
+        <text x="80" y="200" text-anchor="middle" fill="#8A8172" font-size="8">Face Recognition</text>
 
         <!-- ARROWS TO MIDDLEWARE -->
-        <line x1="140" y1="55" x2="195" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="140" y1="125" x2="195" y2="110" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="140" y1="189" x2="195" y2="130" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="140" y1="55" x2="195" y2="90" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="140" y1="125" x2="195" y2="110" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="140" y1="189" x2="195" y2="130" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
 
         <!-- MIDDLEWARE: Bosch Platform -->
-        <rect x="195" y="70" width="160" height="80" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1.5"/>
-        <text x="275" y="93" text-anchor="middle" fill="#00C8E0" font-size="9" letter-spacing="1" font-weight="bold">BOSCH BUILDING</text>
-        <text x="275" y="107" text-anchor="middle" fill="#00C8E0" font-size="9" letter-spacing="1" font-weight="bold">TECHNOLOGIES</text>
-        <line x1="205" y1="115" x2="345" y2="115" stroke="#1E3550"/>
-        <text x="275" y="130" text-anchor="middle" fill="#A0B4C8" font-size="8">Video Management</text>
-        <text x="275" y="142" text-anchor="middle" fill="#4A6280" font-size="8">AI Analytics Engine</text>
+        <rect x="195" y="70" width="160" height="80" rx="6" fill="#2A251C" stroke="#C9A96A" stroke-width="1.5"/>
+        <text x="275" y="93" text-anchor="middle" fill="#C9A96A" font-size="9" letter-spacing="1" font-weight="bold">BOSCH BUILDING</text>
+        <text x="275" y="107" text-anchor="middle" fill="#C9A96A" font-size="9" letter-spacing="1" font-weight="bold">TECHNOLOGIES</text>
+        <line x1="205" y1="115" x2="345" y2="115" stroke="#2A251C"/>
+        <text x="275" y="130" text-anchor="middle" fill="#B5AC9C" font-size="8">Video Management</text>
+        <text x="275" y="142" text-anchor="middle" fill="#8A8172" font-size="8">AI Analytics Engine</text>
 
         <!-- ARROW TO VMS -->
-        <line x1="355" y1="110" x2="420" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="355" y1="110" x2="420" y2="130" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="355" y1="110" x2="420" y2="90" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="355" y1="110" x2="420" y2="130" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
 
         <!-- VMS -->
-        <rect x="420" y="60" width="120" height="40" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="480" y="78" text-anchor="middle" fill="#A0B4C8" font-size="9">Genetec Security</text>
-        <text x="480" y="90" text-anchor="middle" fill="#4A6280" font-size="8">Center / Unified</text>
+        <rect x="420" y="60" width="120" height="40" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="480" y="78" text-anchor="middle" fill="#B5AC9C" font-size="9">Genetec Security</text>
+        <text x="480" y="90" text-anchor="middle" fill="#8A8172" font-size="8">Center / Unified</text>
 
-        <rect x="420" y="115" width="120" height="40" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="480" y="133" text-anchor="middle" fill="#A0B4C8" font-size="9">Milestone XProtect</text>
-        <text x="480" y="145" text-anchor="middle" fill="#4A6280" font-size="8">ONVIF S/T/G</text>
+        <rect x="420" y="115" width="120" height="40" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="480" y="133" text-anchor="middle" fill="#B5AC9C" font-size="9">Milestone XProtect</text>
+        <text x="480" y="145" text-anchor="middle" fill="#8A8172" font-size="8">ONVIF S/T/G</text>
 
         <!-- ARROW TO OUTPUT -->
-        <line x1="540" y1="80" x2="600" y2="100" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="540" y1="135" x2="600" y2="110" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="540" y1="80" x2="600" y2="100" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="540" y1="135" x2="600" y2="110" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
 
         <!-- OUTPUT -->
-        <rect x="600" y="70" width="140" height="80" rx="6" fill="#1B2A4A" stroke="#1E3550"/>
-        <text x="670" y="93" text-anchor="middle" fill="#A0B4C8" font-size="9" font-weight="bold">OPERATORS</text>
-        <line x1="610" y1="100" x2="730" y2="100" stroke="#1E3550"/>
-        <text x="670" y="116" text-anchor="middle" fill="#A0B4C8" font-size="8">Real-Time Alerts</text>
-        <text x="670" y="130" text-anchor="middle" fill="#4A6280" font-size="8">Forensic Search</text>
-        <text x="670" y="142" text-anchor="middle" fill="#4A6280" font-size="8">Compliance Reports</text>
+        <rect x="600" y="70" width="140" height="80" rx="6" fill="#2A251C" stroke="#2A251C"/>
+        <text x="670" y="93" text-anchor="middle" fill="#B5AC9C" font-size="9" font-weight="bold">OPERATORS</text>
+        <line x1="610" y1="100" x2="730" y2="100" stroke="#2A251C"/>
+        <text x="670" y="116" text-anchor="middle" fill="#B5AC9C" font-size="8">Real-Time Alerts</text>
+        <text x="670" y="130" text-anchor="middle" fill="#8A8172" font-size="8">Forensic Search</text>
+        <text x="670" y="142" text-anchor="middle" fill="#8A8172" font-size="8">Compliance Reports</text>
 
-        <text x="380" y="200" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="1">BOSCH IQSIGHT — ON-EDGE AI · ONVIF OPEN STANDARD · MULTI-VMS INTEGRATION</text>
+        <text x="380" y="200" text-anchor="middle" fill="#8A8172" font-size="8" letter-spacing="1">BOSCH IQSIGHT — ON-EDGE AI · ONVIF OPEN STANDARD · MULTI-VMS INTEGRATION</text>
       </svg>
     </div>
 
@@ -382,53 +382,53 @@
     <div class="diagram-box">
       <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ / SYSTEM OVERVIEW — HIKVISION HIKO AI + HIK-CONNECT 7</div>
       <svg width="760" height="200" viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="9">
-        <rect width="760" height="200" fill="#0D1B35" rx="6"/>
+        <rect width="760" height="200" fill="#121009" rx="6"/>
         <!-- Camera icons -->
-        <rect x="20" y="30" width="90" height="40" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="65" y="48" text-anchor="middle" fill="#A0B4C8" font-size="9">IP Cameras</text>
-        <text x="65" y="60" text-anchor="middle" fill="#4A6280" font-size="8">NVR / DVR</text>
+        <rect x="20" y="30" width="90" height="40" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="65" y="48" text-anchor="middle" fill="#B5AC9C" font-size="9">IP Cameras</text>
+        <text x="65" y="60" text-anchor="middle" fill="#8A8172" font-size="8">NVR / DVR</text>
 
-        <rect x="20" y="85" width="90" height="40" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="65" y="103" text-anchor="middle" fill="#A0B4C8" font-size="9">Hikvision NVR</text>
-        <text x="65" y="115" text-anchor="middle" fill="#4A6280" font-size="8">Cloud Linked</text>
+        <rect x="20" y="85" width="90" height="40" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="65" y="103" text-anchor="middle" fill="#B5AC9C" font-size="9">Hikvision NVR</text>
+        <text x="65" y="115" text-anchor="middle" fill="#8A8172" font-size="8">Cloud Linked</text>
 
-        <rect x="20" y="140" width="90" height="40" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="65" y="158" text-anchor="middle" fill="#A0B4C8" font-size="9">DeepInMind / AcuSense</text>
-        <text x="65" y="170" text-anchor="middle" fill="#4A6280" font-size="8">Edge AI Cameras</text>
+        <rect x="20" y="140" width="90" height="40" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="65" y="158" text-anchor="middle" fill="#B5AC9C" font-size="9">DeepInMind / AcuSense</text>
+        <text x="65" y="170" text-anchor="middle" fill="#8A8172" font-size="8">Edge AI Cameras</text>
 
         <!-- ARROWS -->
-        <line x1="110" y1="50" x2="195" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="110" y1="105" x2="195" y2="100" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="110" y1="160" x2="195" y2="110" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="110" y1="50" x2="195" y2="90" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="110" y1="105" x2="195" y2="100" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="110" y1="160" x2="195" y2="110" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
 
         <!-- HIKO AI ENGINE -->
-        <rect x="195" y="60" width="200" height="90" rx="6" fill="#1B2A4A" stroke="#00C8E0" stroke-width="2"/>
-        <text x="295" y="85" text-anchor="middle" fill="#00C8E0" font-size="10" font-weight="bold" letter-spacing="1">HIKO AI ENGINE</text>
-        <text x="295" y="100" text-anchor="middle" fill="#A0B4C8" font-size="8">HIK-CONNECT 7 PLATFORM</text>
-        <line x1="205" y1="107" x2="385" y2="107" stroke="#1E3550"/>
-        <text x="295" y="121" text-anchor="middle" fill="#A0B4C8" font-size="8">· Intelligent Face/Behavior Search</text>
-        <text x="295" y="134" text-anchor="middle" fill="#A0B4C8" font-size="8">· Auto Event Classification</text>
-        <text x="295" y="147" text-anchor="middle" fill="#A0B4C8" font-size="8">· Anomaly Detection (loiter/intrusion)</text>
+        <rect x="195" y="60" width="200" height="90" rx="6" fill="#2A251C" stroke="#C9A96A" stroke-width="2"/>
+        <text x="295" y="85" text-anchor="middle" fill="#C9A96A" font-size="10" font-weight="bold" letter-spacing="1">HIKO AI ENGINE</text>
+        <text x="295" y="100" text-anchor="middle" fill="#B5AC9C" font-size="8">HIK-CONNECT 7 PLATFORM</text>
+        <line x1="205" y1="107" x2="385" y2="107" stroke="#2A251C"/>
+        <text x="295" y="121" text-anchor="middle" fill="#B5AC9C" font-size="8">· Intelligent Face/Behavior Search</text>
+        <text x="295" y="134" text-anchor="middle" fill="#B5AC9C" font-size="8">· Auto Event Classification</text>
+        <text x="295" y="147" text-anchor="middle" fill="#B5AC9C" font-size="8">· Anomaly Detection (loiter/intrusion)</text>
 
         <!-- OUTPUT ARROWS -->
-        <line x1="395" y1="90" x2="460" y2="60" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="395" y1="105" x2="460" y2="110" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="395" y1="130" x2="460" y2="155" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="395" y1="90" x2="460" y2="60" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="395" y1="105" x2="460" y2="110" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="395" y1="130" x2="460" y2="155" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
 
         <!-- OUTPUTS -->
-        <rect x="460" y="40" width="130" height="36" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="525" y="58" text-anchor="middle" fill="#A0B4C8" font-size="9">Mobile App Alerts</text>
-        <text x="525" y="69" text-anchor="middle" fill="#4A6280" font-size="8">iOS / Android Push</text>
+        <rect x="460" y="40" width="130" height="36" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="525" y="58" text-anchor="middle" fill="#B5AC9C" font-size="9">Mobile App Alerts</text>
+        <text x="525" y="69" text-anchor="middle" fill="#8A8172" font-size="8">iOS / Android Push</text>
 
-        <rect x="460" y="90" width="130" height="36" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="525" y="108" text-anchor="middle" fill="#A0B4C8" font-size="9">Web Dashboard</text>
-        <text x="525" y="119" text-anchor="middle" fill="#4A6280" font-size="8">Multi-Site Management</text>
+        <rect x="460" y="90" width="130" height="36" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="525" y="108" text-anchor="middle" fill="#B5AC9C" font-size="9">Web Dashboard</text>
+        <text x="525" y="119" text-anchor="middle" fill="#8A8172" font-size="8">Multi-Site Management</text>
 
-        <rect x="460" y="140" width="130" height="36" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="525" y="158" text-anchor="middle" fill="#A0B4C8" font-size="9">HikCentral Pro</text>
-        <text x="525" y="169" text-anchor="middle" fill="#4A6280" font-size="8">Enterprise Integration</text>
+        <rect x="460" y="140" width="130" height="36" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="525" y="158" text-anchor="middle" fill="#B5AC9C" font-size="9">HikCentral Pro</text>
+        <text x="525" y="169" text-anchor="middle" fill="#8A8172" font-size="8">Enterprise Integration</text>
 
-        <text x="380" y="185" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="1">HIKVISION HIKO AI — CLOUD-EDGE HYBRID · SMB TO ENTERPRISE</text>
+        <text x="380" y="185" text-anchor="middle" fill="#8A8172" font-size="8" letter-spacing="1">HIKVISION HIKO AI — CLOUD-EDGE HYBRID · SMB TO ENTERPRISE</text>
       </svg>
     </div>
 
@@ -465,55 +465,55 @@
     <div class="diagram-box">
       <div class="diagram-title">SƠ ĐỒ NGUYÊN LÝ / ARCHITECTURE — HPE ARUBA + JUNIPER SELF-DRIVING NETWORK</div>
       <svg width="760" height="230" viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="9">
-        <rect width="760" height="230" fill="#0D1B35" rx="6"/>
+        <rect width="760" height="230" fill="#121009" rx="6"/>
         <!-- TOP: AI ORCHESTRATION LAYER -->
-        <rect x="150" y="10" width="460" height="40" rx="5" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1.5"/>
-        <text x="380" y="27" text-anchor="middle" fill="#00C8E0" font-size="10" font-weight="bold" letter-spacing="2">HPE AI ORCHESTRATION LAYER</text>
-        <text x="380" y="42" text-anchor="middle" fill="#A0B4C8" font-size="8">Aruba Central + Juniper Mist AI · AIOps · Zero-Touch · Self-Healing</text>
+        <rect x="150" y="10" width="460" height="40" rx="5" fill="#2A251C" stroke="#C9A96A" stroke-width="1.5"/>
+        <text x="380" y="27" text-anchor="middle" fill="#C9A96A" font-size="10" font-weight="bold" letter-spacing="2">HPE AI ORCHESTRATION LAYER</text>
+        <text x="380" y="42" text-anchor="middle" fill="#B5AC9C" font-size="8">Aruba Central + Juniper Mist AI · AIOps · Zero-Touch · Self-Healing</text>
         <!-- Drop lines -->
-        <line x1="230" y1="50" x2="130" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="310" y1="50" x2="280" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="440" y1="50" x2="440" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
-        <line x1="540" y1="50" x2="610" y2="90" stroke="#00C8E0" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="230" y1="50" x2="130" y2="90" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="310" y1="50" x2="280" y2="90" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="440" y1="50" x2="440" y2="90" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
+        <line x1="540" y1="50" x2="610" y2="90" stroke="#C9A96A" stroke-width="1" stroke-dasharray="3,2"/>
         <!-- LAYER: EDGE -->
-        <rect x="20" y="90" width="120" height="55" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="80" y="108" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">EDGE</text>
-        <text x="80" y="122" text-anchor="middle" fill="#A0B4C8" font-size="8">Aruba APs (Wi-Fi 7)</text>
-        <text x="80" y="134" text-anchor="middle" fill="#4A6280" font-size="8">IoT / OT Gateways</text>
+        <rect x="20" y="90" width="120" height="55" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="80" y="108" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">EDGE</text>
+        <text x="80" y="122" text-anchor="middle" fill="#B5AC9C" font-size="8">Aruba APs (Wi-Fi 7)</text>
+        <text x="80" y="134" text-anchor="middle" fill="#8A8172" font-size="8">IoT / OT Gateways</text>
         <!-- CAMPUS -->
-        <rect x="160" y="90" width="120" height="55" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="220" y="108" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">CAMPUS</text>
-        <text x="220" y="122" text-anchor="middle" fill="#A0B4C8" font-size="8">Aruba CX Switches</text>
-        <text x="220" y="134" text-anchor="middle" fill="#4A6280" font-size="8">PoE / Segmentation</text>
+        <rect x="160" y="90" width="120" height="55" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="220" y="108" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">CAMPUS</text>
+        <text x="220" y="122" text-anchor="middle" fill="#B5AC9C" font-size="8">Aruba CX Switches</text>
+        <text x="220" y="134" text-anchor="middle" fill="#8A8172" font-size="8">PoE / Segmentation</text>
         <!-- DATA CENTER -->
-        <rect x="300" y="90" width="160" height="55" rx="4" fill="#101E30" stroke="#00C8E0" stroke-width="1.5"/>
-        <text x="380" y="108" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">DATA CENTER</text>
-        <text x="380" y="122" text-anchor="middle" fill="#A0B4C8" font-size="8">Juniper QFX AI-Built Switches</text>
-        <text x="380" y="134" text-anchor="middle" fill="#4A6280" font-size="8">Self-Healing · Traffic Optim.</text>
+        <rect x="300" y="90" width="160" height="55" rx="4" fill="#15130F" stroke="#C9A96A" stroke-width="1.5"/>
+        <text x="380" y="108" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">DATA CENTER</text>
+        <text x="380" y="122" text-anchor="middle" fill="#B5AC9C" font-size="8">Juniper QFX AI-Built Switches</text>
+        <text x="380" y="134" text-anchor="middle" fill="#8A8172" font-size="8">Self-Healing · Traffic Optim.</text>
         <!-- AI FACTORY -->
-        <rect x="480" y="90" width="130" height="55" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="545" y="108" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">AI FACTORY</text>
-        <text x="545" y="122" text-anchor="middle" fill="#A0B4C8" font-size="8">InfiniBand / Ethernet</text>
-        <text x="545" y="134" text-anchor="middle" fill="#4A6280" font-size="8">GPU Cluster Networking</text>
+        <rect x="480" y="90" width="130" height="55" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="545" y="108" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">AI FACTORY</text>
+        <text x="545" y="122" text-anchor="middle" fill="#B5AC9C" font-size="8">InfiniBand / Ethernet</text>
+        <text x="545" y="134" text-anchor="middle" fill="#8A8172" font-size="8">GPU Cluster Networking</text>
         <!-- WAN -->
-        <rect x="630" y="90" width="110" height="55" rx="4" fill="#101E30" stroke="#1E3550"/>
-        <text x="685" y="108" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">WAN / SD-WAN</text>
-        <text x="685" y="122" text-anchor="middle" fill="#A0B4C8" font-size="8">Juniper Session</text>
-        <text x="685" y="134" text-anchor="middle" fill="#4A6280" font-size="8">Smart Director</text>
+        <rect x="630" y="90" width="110" height="55" rx="4" fill="#15130F" stroke="#2A251C"/>
+        <text x="685" y="108" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">WAN / SD-WAN</text>
+        <text x="685" y="122" text-anchor="middle" fill="#B5AC9C" font-size="8">Juniper Session</text>
+        <text x="685" y="134" text-anchor="middle" fill="#8A8172" font-size="8">Smart Director</text>
 
         <!-- BOTTOM: END DEVICES -->
-        <rect x="20" y="170" width="720" height="40" rx="4" fill="#0D1B35" stroke="#1E3550"/>
-        <text x="380" y="187" text-anchor="middle" fill="#4A6280" font-size="9">END DEVICES: Laptops · Phones · Cameras · Servers · OT/IoT · BAS Controllers · AV Systems</text>
-        <text x="380" y="200" text-anchor="middle" fill="#4A6280" font-size="8">CABLING: Cat6A / Cat8 / Single-Mode Fiber · PoE++ 90W · 400G Uplinks</text>
+        <rect x="20" y="170" width="720" height="40" rx="4" fill="#121009" stroke="#2A251C"/>
+        <text x="380" y="187" text-anchor="middle" fill="#8A8172" font-size="9">END DEVICES: Laptops · Phones · Cameras · Servers · OT/IoT · BAS Controllers · AV Systems</text>
+        <text x="380" y="200" text-anchor="middle" fill="#8A8172" font-size="8">CABLING: Cat6A / Cat8 / Single-Mode Fiber · PoE++ 90W · 400G Uplinks</text>
 
         <!-- Connect lines bottom -->
-        <line x1="80" y1="145" x2="80" y2="168" stroke="#1E3550" stroke-width="1"/>
-        <line x1="220" y1="145" x2="220" y2="168" stroke="#1E3550" stroke-width="1"/>
-        <line x1="380" y1="145" x2="380" y2="168" stroke="#1E3550" stroke-width="1"/>
-        <line x1="545" y1="145" x2="545" y2="168" stroke="#1E3550" stroke-width="1"/>
-        <line x1="685" y1="145" x2="685" y2="168" stroke="#1E3550" stroke-width="1"/>
+        <line x1="80" y1="145" x2="80" y2="168" stroke="#2A251C" stroke-width="1"/>
+        <line x1="220" y1="145" x2="220" y2="168" stroke="#2A251C" stroke-width="1"/>
+        <line x1="380" y1="145" x2="380" y2="168" stroke="#2A251C" stroke-width="1"/>
+        <line x1="545" y1="145" x2="545" y2="168" stroke="#2A251C" stroke-width="1"/>
+        <line x1="685" y1="145" x2="685" y2="168" stroke="#2A251C" stroke-width="1"/>
 
-        <text x="380" y="218" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="1">HPE ARUBA + JUNIPER UNIFIED AI NETWORKING — DISCOVER 2026</text>
+        <text x="380" y="218" text-anchor="middle" fill="#8A8172" font-size="8" letter-spacing="1">HPE ARUBA + JUNIPER UNIFIED AI NETWORKING — DISCOVER 2026</text>
       </svg>
     </div>
 
@@ -550,65 +550,65 @@
     <div class="diagram-box">
       <div class="diagram-title">SƠ ĐỒ HỆ THỐNG ELV/ICT DATA CENTER / ELV SYSTEMS IN AI DATA CENTER — TIER III/IV</div>
       <svg width="760" height="240" viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" font-family="monospace" font-size="9">
-        <rect width="760" height="240" fill="#0D1B35" rx="6"/>
+        <rect width="760" height="240" fill="#121009" rx="6"/>
         <!-- OUTER: BUILDING SHELL -->
-        <rect x="10" y="10" width="740" height="220" rx="8" fill="none" stroke="#1E3550" stroke-width="1.5" stroke-dasharray="6,3"/>
-        <text x="380" y="27" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="2">AI DATA CENTER — TIER III · TIA-942 · VIETNAM 2026+</text>
+        <rect x="10" y="10" width="740" height="220" rx="8" fill="none" stroke="#2A251C" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <text x="380" y="27" text-anchor="middle" fill="#8A8172" font-size="8" letter-spacing="2">AI DATA CENTER — TIER III · TIA-942 · VIETNAM 2026+</text>
 
         <!-- POWER INFRA -->
-        <rect x="25" y="35" width="140" height="90" rx="5" fill="#101E30" stroke="#1E3550"/>
-        <text x="95" y="52" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">POWER / BMS</text>
-        <line x1="35" y1="58" x2="155" y2="58" stroke="#1E3550"/>
-        <text x="95" y="72" text-anchor="middle" fill="#A0B4C8" font-size="8">Generator / UPS / ATS</text>
-        <text x="95" y="84" text-anchor="middle" fill="#A0B4C8" font-size="8">PDU / DCIM</text>
-        <text x="95" y="96" text-anchor="middle" fill="#A0B4C8" font-size="8">Schneider / ABB</text>
-        <text x="95" y="108" text-anchor="middle" fill="#4A6280" font-size="8">BMS Integration</text>
-        <text x="95" y="118" text-anchor="middle" fill="#4A6280" font-size="8">Siemens Desigo</text>
+        <rect x="25" y="35" width="140" height="90" rx="5" fill="#15130F" stroke="#2A251C"/>
+        <text x="95" y="52" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">POWER / BMS</text>
+        <line x1="35" y1="58" x2="155" y2="58" stroke="#2A251C"/>
+        <text x="95" y="72" text-anchor="middle" fill="#B5AC9C" font-size="8">Generator / UPS / ATS</text>
+        <text x="95" y="84" text-anchor="middle" fill="#B5AC9C" font-size="8">PDU / DCIM</text>
+        <text x="95" y="96" text-anchor="middle" fill="#B5AC9C" font-size="8">Schneider / ABB</text>
+        <text x="95" y="108" text-anchor="middle" fill="#8A8172" font-size="8">BMS Integration</text>
+        <text x="95" y="118" text-anchor="middle" fill="#8A8172" font-size="8">Siemens Desigo</text>
 
         <!-- CABLING -->
-        <rect x="185" y="35" width="140" height="90" rx="5" fill="#101E30" stroke="#1E3550"/>
-        <text x="255" y="52" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">STRUCTURED CABLING</text>
-        <line x1="195" y1="58" x2="315" y2="58" stroke="#1E3550"/>
-        <text x="255" y="72" text-anchor="middle" fill="#A0B4C8" font-size="8">Cat6A / Cat8 Copper</text>
-        <text x="255" y="84" text-anchor="middle" fill="#A0B4C8" font-size="8">MPO-16/32 Fiber</text>
-        <text x="255" y="96" text-anchor="middle" fill="#A0B4C8" font-size="8">Panduit / CommScope</text>
-        <text x="255" y="108" text-anchor="middle" fill="#4A6280" font-size="8">400G / 800G Uplinks</text>
-        <text x="255" y="118" text-anchor="middle" fill="#4A6280" font-size="8">TIA-942 Zones</text>
+        <rect x="185" y="35" width="140" height="90" rx="5" fill="#15130F" stroke="#2A251C"/>
+        <text x="255" y="52" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">STRUCTURED CABLING</text>
+        <line x1="195" y1="58" x2="315" y2="58" stroke="#2A251C"/>
+        <text x="255" y="72" text-anchor="middle" fill="#B5AC9C" font-size="8">Cat6A / Cat8 Copper</text>
+        <text x="255" y="84" text-anchor="middle" fill="#B5AC9C" font-size="8">MPO-16/32 Fiber</text>
+        <text x="255" y="96" text-anchor="middle" fill="#B5AC9C" font-size="8">Panduit / CommScope</text>
+        <text x="255" y="108" text-anchor="middle" fill="#8A8172" font-size="8">400G / 800G Uplinks</text>
+        <text x="255" y="118" text-anchor="middle" fill="#8A8172" font-size="8">TIA-942 Zones</text>
 
         <!-- SECURITY -->
-        <rect x="345" y="35" width="140" height="90" rx="5" fill="#101E30" stroke="#1E3550"/>
-        <text x="415" y="52" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">SECURITY / ACCESS</text>
-        <line x1="355" y1="58" x2="475" y2="58" stroke="#1E3550"/>
-        <text x="415" y="72" text-anchor="middle" fill="#A0B4C8" font-size="8">Biometric Access Control</text>
-        <text x="415" y="84" text-anchor="middle" fill="#A0B4C8" font-size="8">AI Camera CCTV</text>
-        <text x="415" y="96" text-anchor="middle" fill="#A0B4C8" font-size="8">Axis / Bosch IQSIGHT</text>
-        <text x="415" y="108" text-anchor="middle" fill="#4A6280" font-size="8">Perimeter Thermal</text>
-        <text x="415" y="118" text-anchor="middle" fill="#4A6280" font-size="8">Video Analytics</text>
+        <rect x="345" y="35" width="140" height="90" rx="5" fill="#15130F" stroke="#2A251C"/>
+        <text x="415" y="52" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">SECURITY / ACCESS</text>
+        <line x1="355" y1="58" x2="475" y2="58" stroke="#2A251C"/>
+        <text x="415" y="72" text-anchor="middle" fill="#B5AC9C" font-size="8">Biometric Access Control</text>
+        <text x="415" y="84" text-anchor="middle" fill="#B5AC9C" font-size="8">AI Camera CCTV</text>
+        <text x="415" y="96" text-anchor="middle" fill="#B5AC9C" font-size="8">Axis / Bosch IQSIGHT</text>
+        <text x="415" y="108" text-anchor="middle" fill="#8A8172" font-size="8">Perimeter Thermal</text>
+        <text x="415" y="118" text-anchor="middle" fill="#8A8172" font-size="8">Video Analytics</text>
 
         <!-- AV / FIRE -->
-        <rect x="505" y="35" width="240" height="90" rx="5" fill="#101E30" stroke="#1E3550"/>
-        <text x="625" y="52" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold">AV CONTROL ROOM + FIRE</text>
-        <line x1="515" y1="58" x2="735" y2="58" stroke="#1E3550"/>
-        <text x="625" y="72" text-anchor="middle" fill="#A0B4C8" font-size="8">NOC/SOC Video Wall (Christie/Barco)</text>
-        <text x="625" y="84" text-anchor="middle" fill="#A0B4C8" font-size="8">Crestron Control System</text>
-        <text x="625" y="96" text-anchor="middle" fill="#A0B4C8" font-size="8">Fire Detection: VESDA / Hochiki</text>
-        <text x="625" y="108" text-anchor="middle" fill="#4A6280" font-size="8">FM-200 / Novec 1230 Suppression</text>
-        <text x="625" y="118" text-anchor="middle" fill="#4A6280" font-size="8">PA/VA Emergency System</text>
+        <rect x="505" y="35" width="240" height="90" rx="5" fill="#15130F" stroke="#2A251C"/>
+        <text x="625" y="52" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold">AV CONTROL ROOM + FIRE</text>
+        <line x1="515" y1="58" x2="735" y2="58" stroke="#2A251C"/>
+        <text x="625" y="72" text-anchor="middle" fill="#B5AC9C" font-size="8">NOC/SOC Video Wall (Christie/Barco)</text>
+        <text x="625" y="84" text-anchor="middle" fill="#B5AC9C" font-size="8">Crestron Control System</text>
+        <text x="625" y="96" text-anchor="middle" fill="#B5AC9C" font-size="8">Fire Detection: VESDA / Hochiki</text>
+        <text x="625" y="108" text-anchor="middle" fill="#8A8172" font-size="8">FM-200 / Novec 1230 Suppression</text>
+        <text x="625" y="118" text-anchor="middle" fill="#8A8172" font-size="8">PA/VA Emergency System</text>
 
         <!-- INTEGRATION LAYER -->
-        <rect x="25" y="145" width="720" height="40" rx="4" fill="#1B2A4A" stroke="#00C8E0" stroke-width="1"/>
-        <text x="380" y="162" text-anchor="middle" fill="#00C8E0" font-size="9" font-weight="bold" letter-spacing="1">INTEGRATED BMS / DCIM PLATFORM</text>
-        <text x="380" y="175" text-anchor="middle" fill="#A0B4C8" font-size="8">Schneider EcoStruxure · Power · IT · Building — Single Pane of Glass Management</text>
+        <rect x="25" y="145" width="720" height="40" rx="4" fill="#2A251C" stroke="#C9A96A" stroke-width="1"/>
+        <text x="380" y="162" text-anchor="middle" fill="#C9A96A" font-size="9" font-weight="bold" letter-spacing="1">INTEGRATED BMS / DCIM PLATFORM</text>
+        <text x="380" y="175" text-anchor="middle" fill="#B5AC9C" font-size="8">Schneider EcoStruxure · Power · IT · Building — Single Pane of Glass Management</text>
 
         <!-- Connect arrows up to integration -->
-        <line x1="95" y1="125" x2="95" y2="143" stroke="#1E3550"/>
-        <line x1="255" y1="125" x2="255" y2="143" stroke="#1E3550"/>
-        <line x1="415" y1="125" x2="415" y2="143" stroke="#1E3550"/>
-        <line x1="625" y1="125" x2="625" y2="143" stroke="#1E3550"/>
+        <line x1="95" y1="125" x2="95" y2="143" stroke="#2A251C"/>
+        <line x1="255" y1="125" x2="255" y2="143" stroke="#2A251C"/>
+        <line x1="415" y1="125" x2="415" y2="143" stroke="#2A251C"/>
+        <line x1="625" y1="125" x2="625" y2="143" stroke="#2A251C"/>
 
         <!-- OPERATORS ROW -->
-        <rect x="25" y="200" width="720" height="28" rx="4" fill="#0D1B35" stroke="#1E3550"/>
-        <text x="380" y="216" text-anchor="middle" fill="#4A6280" font-size="8" letter-spacing="1">OPERATORS: NOC / SOC / FM · 24/7 MONITORING · COMPLIANCE: ISO 27001 · SOC 2 · TIER III SLA 99.982%</text>
+        <rect x="25" y="200" width="720" height="28" rx="4" fill="#121009" stroke="#2A251C"/>
+        <text x="380" y="216" text-anchor="middle" fill="#8A8172" font-size="8" letter-spacing="1">OPERATORS: NOC / SOC / FM · 24/7 MONITORING · COMPLIANCE: ISO 27001 · SOC 2 · TIER III SLA 99.982%</text>
       </svg>
     </div>
 
@@ -642,7 +642,7 @@
     <a href="/#contact">Contact</a>
   </div>
   <p>© 2026 Paul Le Consultant — ELV · ICT · AV Design Director<br>
-  <span style="font-size:11px;color:#1E3550">Photo: Tetiana Sapon / Unsplash — ELV/ICT/AV Weekly W48 · 27 Nov 2026</span></p>
+  <span style="font-size:11px;color:#2A251C">Photo: Tetiana Sapon / Unsplash — ELV/ICT/AV Weekly W48 · 27 Nov 2026</span></p>
 </footer>
 
 <script>
