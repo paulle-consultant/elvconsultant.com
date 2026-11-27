@@ -181,7 +181,8 @@
    "pillar": "Tích hợp hệ thống",
    "pillar_en": "System integration",
    "topic": "Đồng hồ điện Modbus TCP/RTU: địa chỉ, baudrate, register map",
-   "status": "planned"
+   "status": "published",
+   "slug": "dong-ho-dien-modbus-dia-chi-baudrate-register-map"
   },
   {
    "date": "2026-11-28",

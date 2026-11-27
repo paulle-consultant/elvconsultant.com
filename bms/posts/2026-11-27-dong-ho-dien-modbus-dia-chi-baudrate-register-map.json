@@ -1,0 +1,125 @@
+{
+ "date": "2026-11-27",
+ "slug": "dong-ho-dien-modbus-dia-chi-baudrate-register-map",
+ "pillar_vi": "Tích hợp hệ thống",
+ "pillar_en": "System integration",
+ "title_vi": "Đồng hồ điện Modbus vào BMS",
+ "title_en": "Modbus power meters into the BMS",
+ "lead_vi": "Phần lớn lỗi khi đưa đồng hồ điện lên BMS không nằm ở phần mềm mà ở 4 thông số: địa chỉ, baudrate, parity và register map. Bài này đi qua từng thông số, cách đấu trục RS-485 về DCM 9000 và cách kiểm tra số đọc trước khi nghiệm thu.",
+ "lead_en": "Most failures when bringing power meters onto a BMS are not software problems but four settings: address, baud rate, parity and the register map. This post walks through each one, how to wire the RS-485 trunk to a DCM 9000, and how to check readings before handover.",
+ "tags": [
+  "Modbus RTU",
+  "Modbus TCP",
+  "Đồng hồ điện",
+  "RS-485",
+  "DCM 9000",
+  "Niagara 4",
+  "Đo đếm năng lượng",
+  "Diamond Controls"
+ ],
+ "hero_image": {
+  "src": "https://images.unsplash.com/photo-1604177420682-0c840feb01de?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&w=1600&h=900&fit=crop",
+  "alt": "Đồng hồ điện gắn tường, ảnh đen trắng",
+  "credit": "Jon Moore",
+  "credit_url": "https://unsplash.com/photos/black-and-white-electric-meter-0MKzwPmehRE"
+ },
+ "diagram": {
+  "svg": "<svg viewBox=\"0 0 960 690\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Sơ đồ nguyên lý tích hợp đồng hồ điện Modbus RTU và Modbus TCP vào DCM 9000\" font-family=\"'Maison Sans',system-ui,sans-serif\">\n<style>.b{fill:#15130F;stroke:#C9A96A;stroke-width:1}.b2{fill:#15130F;stroke:#5A5141;stroke-width:1}.t{fill:#F3EDE2;font-size:15px;font-weight:500}.s{fill:#B5AC9C;font-size:12.5px}.k{fill:#C9A96A;font-size:12px;letter-spacing:.14em}.ln{stroke:#C9A96A;stroke-width:1.2;fill:none}.ld{stroke:#B5AC9C;stroke-width:1;stroke-dasharray:4 4;fill:none}.p{fill:#C9A96A;font-size:12px}.rt{fill:#C9A96A}</style>\n<path class=\"ln\" d=\"M180 104V190M180 150H520M520 150V190\"/>\n<path class=\"ln\" d=\"M340 240H420\"/>\n<path class=\"ln\" d=\"M620 240H760\"/>\n<path class=\"ln\" d=\"M90 294V380M40 380H460\"/>\n<path class=\"ln\" d=\"M260 294V344H560V380M500 380H940\"/>\n<path class=\"ln\" d=\"M85 380V420\"/>\n<path class=\"ln\" d=\"M240 380V420\"/>\n<path class=\"ln\" d=\"M395 380V420\"/>\n<path class=\"ln\" d=\"M565 380V420\"/>\n<path class=\"ln\" d=\"M720 380V420\"/>\n<path class=\"ln\" d=\"M875 380V420\"/>\n<rect class=\"rt\" x=\"36\" y=\"372\" width=\"8\" height=\"16\"/>\n<rect class=\"rt\" x=\"456\" y=\"372\" width=\"8\" height=\"16\"/>\n<rect class=\"rt\" x=\"496\" y=\"372\" width=\"8\" height=\"16\"/>\n<rect class=\"rt\" x=\"936\" y=\"372\" width=\"8\" height=\"16\"/>\n<rect class=\"b\" x=\"20\" y=\"34\" width=\"320\" height=\"70\"/><text class=\"t\" x=\"34\" y=\"60\">Niagara 4 Supervisor</text><text class=\"s\" x=\"34\" y=\"82\">History 15 min · energy reports · alarms</text>\n<rect class=\"b2\" x=\"380\" y=\"34\" width=\"560\" height=\"70\"/><text class=\"t\" x=\"394\" y=\"60\">ICONICS GENESIS (BEMS)</text><text class=\"s\" x=\"394\" y=\"82\">kWh per tenant / per system · Law 77/2025 energy balance</text>\n<rect class=\"b\" x=\"20\" y=\"190\" width=\"320\" height=\"104\"/><text class=\"t\" x=\"34\" y=\"216\">DCM 9000</text><text class=\"s\" x=\"34\" y=\"238\">Niagara 4.13+ · Modbus driver included</text><text class=\"s\" x=\"34\" y=\"255\">2× isolated RS-485 (bias / termination)</text><text class=\"s\" x=\"34\" y=\"272\">Licence counts devices: 1 meter = 1</text>\n<rect class=\"b2\" x=\"420\" y=\"190\" width=\"200\" height=\"104\"/><text class=\"t\" x=\"434\" y=\"216\">BMS switch</text><text class=\"s\" x=\"434\" y=\"238\">Meter VLAN</text><text class=\"s\" x=\"434\" y=\"255\">Static IP per meter</text>\n<rect class=\"b\" x=\"760\" y=\"190\" width=\"180\" height=\"104\"/><text class=\"t\" x=\"774\" y=\"216\">MSB main meters</text><text class=\"s\" x=\"774\" y=\"238\">Modbus TCP</text><text class=\"s\" x=\"774\" y=\"255\">Unit ID per manual</text>\n<rect class=\"b\" x=\"20\" y=\"420\" width=\"130\" height=\"72\"/><text class=\"t\" x=\"34\" y=\"446\">Meter ID 1</text><text class=\"s\" x=\"34\" y=\"468\">MSB-1 outgoing</text>\n<rect class=\"b\" x=\"175\" y=\"420\" width=\"130\" height=\"72\"/><text class=\"t\" x=\"189\" y=\"446\">Meter ID 2</text><text class=\"s\" x=\"189\" y=\"468\">DB chiller</text>\n<rect class=\"b\" x=\"330\" y=\"420\" width=\"130\" height=\"72\"/><text class=\"t\" x=\"344\" y=\"446\">Meter ID 3</text><text class=\"s\" x=\"344\" y=\"468\">DB AHU</text>\n<rect class=\"b\" x=\"500\" y=\"420\" width=\"130\" height=\"72\"/><text class=\"t\" x=\"514\" y=\"446\">Meter ID 1</text><text class=\"s\" x=\"514\" y=\"468\">DB tenant L2</text>\n<rect class=\"b\" x=\"655\" y=\"420\" width=\"130\" height=\"72\"/><text class=\"t\" x=\"669\" y=\"446\">Meter ID 2</text><text class=\"s\" x=\"669\" y=\"468\">DB tenant L3</text>\n<rect class=\"b\" x=\"810\" y=\"420\" width=\"130\" height=\"72\"/><text class=\"t\" x=\"824\" y=\"446\">Meter ID 3</text><text class=\"s\" x=\"824\" y=\"468\">DB lighting</text>\n<text class=\"s\" x=\"20\" y=\"520\">Up to 32 unit loads per trunk without repeater · daisy-chain, no stubs · shield earthed at one point</text>\n<rect class=\"b\" x=\"20\" y=\"556\" width=\"450\" height=\"118\"/><text class=\"t\" x=\"34\" y=\"582\">Serial settings: same on the whole trunk</text><text class=\"s\" x=\"34\" y=\"604\">Address 1–247, unique per trunk (0 = broadcast)</text><text class=\"s\" x=\"34\" y=\"621\">Baud 9600 or 19200 · Modbus default 8E1</text><text class=\"s\" x=\"34\" y=\"638\">No parity: 2 stop bits (8N2)</text><text class=\"s\" x=\"34\" y=\"655\">≤ 1,000 m at 9,600 bps, termination both ends</text>\n<rect class=\"b\" x=\"490\" y=\"556\" width=\"450\" height=\"118\"/><text class=\"t\" x=\"504\" y=\"582\">Register map checks</text><text class=\"s\" x=\"504\" y=\"604\">Manual 40001 = PDU address 0 (offset 1)</text><text class=\"s\" x=\"504\" y=\"621\">FC 03 holding / FC 04 input registers</text><text class=\"s\" x=\"504\" y=\"638\">float32 / int32 = 2 registers: check word order</text><text class=\"s\" x=\"504\" y=\"655\">≤ 125 registers per read request</text>\n<text class=\"k\" x=\"20\" y=\"24\">MANAGEMENT LEVEL</text>\n<text class=\"p\" x=\"196\" y=\"140\">BACnet/IP · Niagara Fox (TLS)</text>\n<text class=\"k\" x=\"20\" y=\"182\">AUTOMATION LEVEL</text>\n<text class=\"p\" x=\"350\" y=\"232\">GbE</text>\n<text class=\"p\" x=\"632\" y=\"232\">Modbus TCP :502</text>\n<text class=\"p\" x=\"104\" y=\"372\">COM1 · Modbus RTU · 19200 8E1</text>\n<text class=\"p\" x=\"575\" y=\"372\">COM2 · Modbus RTU · 9600 8E1</text>\n<text class=\"k\" x=\"290\" y=\"330\">FIELD LEVEL · RS-485</text>\n</svg>",
+  "caption_vi": "SĐNL đo đếm điện năng: đồng hồ tủ tổng qua Modbus TCP, đồng hồ tủ nhánh trên 2 trục Modbus RTU về 2 cổng RS-485 cách ly của DCM 9000, dữ liệu lên Niagara 4 Supervisor và ICONICS GENESIS. Thông số controller theo catalog Mitsubishi Electric Asia, thông số Modbus theo spec Modbus Organization.",
+  "caption_en": "Energy metering schematic: main switchboard meters over Modbus TCP, sub-board meters on two Modbus RTU trunks into the two isolated RS-485 ports of a DCM 9000, data up to Niagara 4 Supervisor and ICONICS GENESIS. Controller ratings per Mitsubishi Electric Asia catalogue, Modbus figures per the Modbus Organization specifications."
+ },
+ "sections": [
+  {
+   "h_vi": "Vấn đề",
+   "h_en": "The problem",
+   "vi": "<p>Đồng hồ điện thường do nhà thầu điện mua và lắp, còn nhà thầu BMS chỉ nhận về một sợi cáp RS-485. Đến lúc chạy thử, Niagara báo timeout, hoặc đọc được nhưng kW ra số 0, số âm, hoặc lớn gấp 65.536 lần thực tế. Nguyên nhân gần như luôn là một trong 4 thứ: hai đồng hồ trùng địa chỉ, baudrate hoặc parity không khớp, đọc lệch một thanh ghi, hoặc ghép sai thứ tự 2 word của số 32 bit.</p><p>Từ 01/01/2026, Luật 77/2025/QH15 yêu cầu cơ sở sử dụng năng lượng trọng điểm duy trì hệ thống đo đếm đạt chuẩn. Số liệu kWh sai trên BMS thì báo cáo cân bằng năng lượng cũng sai.</p>",
+   "en": "<p>Power meters are usually bought and installed by the electrical contractor; the BMS contractor receives one RS-485 cable. At commissioning Niagara reports timeouts, or it reads values but kW shows zero, a negative number, or 65,536 times the real value. The cause is almost always one of four things: two meters on the same address, a baud rate or parity mismatch, reading one register off, or the two words of a 32-bit value joined in the wrong order.</p><p>From 1 January 2026, Law 77/2025/QH15 requires designated energy users to keep compliant metering. Wrong kWh on the BMS means a wrong energy balance report.</p>"
+  },
+  {
+   "h_vi": "Giải pháp",
+   "h_en": "Solution",
+   "vi": "<p>Chốt thông số Modbus trong hồ sơ thiết kế, trước khi nhà thầu điện đặt hàng đồng hồ:</p><ul><li><strong>Đồng hồ tủ tổng (MSB):</strong> chọn loại có Ethernet, đọc Modbus TCP cổng 502 qua switch BMS, IP tĩnh trên VLAN riêng.</li><li><strong>Đồng hồ tủ nhánh:</strong> Modbus RTU, đi daisy-chain về cổng RS-485 cách ly của DCM 9000. DCM 9000 có 2 cổng, mỗi cổng là một trục độc lập, nên chia theo khu vực hoặc theo baudrate.</li><li><strong>Địa chỉ:</strong> 1 đến 247, không trùng trong một trục. Hai trục khác nhau được phép dùng lại địa chỉ.</li><li><strong>Khung truyền:</strong> cả trục cùng một baudrate và parity. Mặc định của spec Modbus là 19200 bps, 8 bit dữ liệu, parity chẵn, 1 stop bit (8E1).</li><li><strong>Register map:</strong> lấy từ manual đúng model và đúng firmware đồng hồ, ghi vào point schedule cùng mã chức năng, kiểu dữ liệu và hệ số nhân.</li></ul><p>Trên Niagara, driver Modbus đã có sẵn trong license DCM-9005 đến DCM-9200. Mỗi đồng hồ tính là 1 thiết bị trong license.</p>",
+   "en": "<p>Fix the Modbus parameters in the design documents, before the electrical contractor orders meters:</p><ul><li><strong>Main switchboard (MSB) meters:</strong> pick models with Ethernet, read over Modbus TCP port 502 through the BMS switch, static IP on a dedicated VLAN.</li><li><strong>Sub-board meters:</strong> Modbus RTU, daisy-chained to an isolated RS-485 port on the DCM 9000. The DCM 9000 has 2 ports, each an independent trunk, so split by area or by baud rate.</li><li><strong>Address:</strong> 1 to 247, unique within one trunk. Two different trunks may reuse addresses.</li><li><strong>Framing:</strong> the whole trunk shares one baud rate and parity. The Modbus specification default is 19200 bps, 8 data bits, even parity, 1 stop bit (8E1).</li><li><strong>Register map:</strong> taken from the manual for the exact meter model and firmware, written into the point schedule with function code, data type and scale factor.</li></ul><p>On Niagara, the Modbus driver is included in licences DCM-9005 to DCM-9200. Each meter counts as 1 device against the licence.</p>"
+  },
+  {
+   "h_vi": "Phân tích kỹ thuật",
+   "h_en": "Engineering notes",
+   "vi": "<ul><li><strong>Lệch 1 thanh ghi:</strong> manual nhiều hãng ghi theo kiểu 4xxxx, trong đó 40001 tương ứng địa chỉ PDU 0. Nếu nhập 40001 hoặc 1 vào chỗ cần địa chỉ 0, giá trị đọc về là nửa sau của số này ghép với nửa đầu của số kế tiếp. Kiểm tra manual ghi địa chỉ theo kiểu nào trước khi nhập.</li><li><strong>Số 32 bit:</strong> float32 hoặc int32 chiếm 2 thanh ghi 16 bit. Thứ tự word (ABCD hoặc CDAB) mỗi hãng một kiểu. Sai thứ tự thì kW ra số vô nghĩa dù kết nối vẫn tốt.</li><li><strong>Mã chức năng:</strong> FC 03 đọc holding register, FC 04 đọc input register. Đồng hồ chỉ hỗ trợ một trong hai thì đọc sai mã sẽ nhận exception.</li><li><strong>Gom thanh ghi liền kề:</strong> một lệnh đọc tối đa 125 thanh ghi. Ở 9600 bps, mỗi ký tự 11 bit, đường truyền chỉ chuyển khoảng 870 byte mỗi giây, nên đọc 30 thanh ghi liền nhau trong 1 lệnh nhanh hơn nhiều so với 30 lệnh lẻ.</li><li><strong>Vật lý RS-485:</strong> tối đa 32 tải đơn vị mỗi trục khi không có repeater, chiều dài tới 1.000 m ở 9600 bps với cáp AWG26 trở lên, điện trở cuối ở 2 đầu trục (spec Modbus nêu 150 Ω), chống nhiễu nối đất 1 điểm, không đi nhánh rẽ. Cổng RS-485 của DCM 9000 chọn được bias và termination, nên đầu trục phía controller bật ngay trên cổng.</li><li><strong>Không parity:</strong> nếu đồng hồ đặt None thì phải dùng 2 stop bit (8N2) để giữ khung 11 bit. Nhiều trục lỗi chập chờn vì để 8N1.</li></ul>",
+   "en": "<ul><li><strong>One register off:</strong> many manuals list registers in 4xxxx style, where 40001 maps to PDU address 0. Entering 40001 or 1 where address 0 is expected returns the second half of one value joined to the first half of the next. Check which convention the manual uses before entering points.</li><li><strong>32-bit values:</strong> float32 or int32 spans two 16-bit registers. Word order (ABCD or CDAB) varies by manufacturer. Wrong order gives nonsense kW even with a healthy link.</li><li><strong>Function codes:</strong> FC 03 reads holding registers, FC 04 reads input registers. A meter that supports only one returns an exception for the other.</li><li><strong>Group adjacent registers:</strong> one read request carries up to 125 registers. At 9600 bps with 11-bit characters the line moves roughly 870 bytes per second, so reading 30 adjacent registers in one request is far faster than 30 single reads.</li><li><strong>RS-485 physical layer:</strong> up to 32 unit loads per trunk without a repeater, up to 1,000 m at 9600 bps on AWG26 or heavier cable, termination at both ends (the Modbus specification gives 150 Ω), shield earthed at one point, no stubs. The DCM 9000 RS-485 ports have selectable bias and termination, so the controller end is set on the port itself.</li><li><strong>No parity:</strong> a meter set to None needs 2 stop bits (8N2) to keep the 11-bit frame. Many flaky trunks are simply left at 8N1.</li></ul>"
+  },
+  {
+   "h_vi": "Ứng dụng",
+   "h_en": "Where it fits",
+   "vi": "<ul><li><strong>Văn phòng cho thuê:</strong> đồng hồ theo tầng hoặc theo khách thuê, ICONICS GENESIS xuất kWh từng khách thuê theo tháng.</li><li><strong>Cơ sở sử dụng năng lượng trọng điểm:</strong> đo tổng và đo theo hệ thống (chiller, AHU, chiếu sáng) làm số liệu cho cân bằng năng lượng theo Luật 77/2025/QH15.</li><li><strong>Công trình xanh:</strong> đo phụ tải lớn, ghi history 15 phút trên Niagara, đáp ứng yêu cầu đo đếm của LEED, EDGE, LOTUS.</li><li><strong>Cải tạo tòa nhà cũ:</strong> đồng hồ có sẵn cổng RS-485 chỉ cần kéo trục về DCM 9000, không phải thay đồng hồ, miễn có manual register map.</li></ul>",
+   "en": "<ul><li><strong>Leased offices:</strong> meters per floor or per tenant, ICONICS GENESIS exports monthly kWh per tenant.</li><li><strong>Designated energy users:</strong> main and per-system metering (chiller, AHU, lighting) as input to the energy balance under Law 77/2025/QH15.</li><li><strong>Green buildings:</strong> sub-meter major loads, 15-minute history on Niagara, meeting LEED, EDGE and LOTUS metering requirements.</li><li><strong>Retrofits:</strong> existing meters with an RS-485 port only need a trunk run to the DCM 9000, no meter replacement, as long as the register map manual is available.</li></ul>"
+  }
+ ],
+ "table": {
+  "caption_vi": "Phiếu chạy thử từng đồng hồ Modbus",
+  "caption_en": "Commissioning sheet per Modbus meter",
+  "head": [
+   "Thông số / Parameter",
+   "Giá trị đặt / Setting",
+   "Cách kiểm tra / Check"
+  ],
+  "rows": [
+   [
+    "Địa chỉ / Address",
+    "1–247, không trùng trong trục / unique per trunk",
+    "Ping từng ID trên Niagara / poll each ID"
+   ],
+   [
+    "Baudrate",
+    "9600 hoặc 19200, cả trục giống nhau / same on trunk",
+    "Đọc lại trên màn hình đồng hồ / read back on meter display"
+   ],
+   [
+    "Parity, stop bit",
+    "8E1 (mặc định Modbus) hoặc 8N2",
+    "Không còn lỗi CRC trên driver / no CRC errors"
+   ],
+   [
+    "Địa chỉ thanh ghi / Register",
+    "PDU = số trong manual trừ offset / manual number minus offset",
+    "So kW, V, A với màn hình đồng hồ / compare with display"
+   ],
+   [
+    "Kiểu dữ liệu / Data type",
+    "float32 hoặc int32, 2 thanh ghi, thứ tự word / word order",
+    "Giá trị hợp lý, không nhảy 65.536 lần / sane values"
+   ],
+   [
+    "Hệ số / Scale",
+    "Theo manual (×1, ×0,1, ×0,01) / per manual",
+    "kWh Niagara khớp kWh đồng hồ / kWh matches"
+   ],
+   [
+    "Điện trở cuối / Termination",
+    "2 đầu trục / both trunk ends",
+    "Đo khoảng 75 Ω giữa A và B khi tắt nguồn / ~75 Ω A to B, power off"
+   ]
+  ]
+ },
+ "sources": [
+  {
+   "title": "Mitsubishi Electric Asia, Diamond Controls catalogue (2023)"
+  },
+  {
+   "title": "Mitsubishi Electric Vietnam, Building Management System",
+   "url": "https://buildingsolutions.mitsubishi-electric.vn/en/bms/"
+  },
+  {
+   "title": "Modbus Organization, MODBUS over Serial Line Specification and Implementation Guide V1.02",
+   "url": "https://cars.uchicago.edu/software/epics/Modbus_over_serial_line_V1_02.pdf"
+  },
+  {
+   "title": "Modbus Organization, MODBUS Application Protocol Specification V1.1b3",
+   "url": "https://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf"
+  },
+  {
+   "title": "LuatVietnam, Luật 77/2025/QH15 sửa đổi Luật Sử dụng năng lượng tiết kiệm và hiệu quả"
+  }
+ ],
+ "x_post": "Modbus meter reads 65,536x the real kW? Wrong word order on a 32-bit value.\n\nFix 4 settings before the meters are ordered: address 1-247, baud rate, parity (8E1 or 8N2) and the register map with its offset.\n\nFull schematic on the blog, link in bio.",
+ "fb_post": "Đồng hồ điện đọc lên BMS ra số lớn gấp 65.536 lần thực tế: gần như chắc chắn là ghép sai thứ tự 2 word của số 32 bit.\n\nPhần lớn lỗi tích hợp đồng hồ Modbus nằm ở 4 thông số, không phải phần mềm:\n1. Địa chỉ 1 đến 247, không trùng trong một trục RS-485\n2. Baudrate giống nhau trên cả trục, 9600 hoặc 19200\n3. Parity: mặc định Modbus là 8E1, nếu đặt None thì dùng 2 stop bit\n4. Register map: manual ghi 40001 thì địa chỉ PDU là 0, nhập lệch 1 là đọc sai\n\nVới Mitsubishi Electric Diamond Controls, đồng hồ tủ tổng đọc Modbus TCP cổng 502, đồng hồ tủ nhánh đi 2 trục Modbus RTU về 2 cổng RS-485 cách ly của DCM 9000, tối đa 32 tải mỗi trục. Driver Modbus có sẵn trong license Niagara 4.\n\nChốt các thông số này trong hồ sơ thiết kế, trước khi nhà thầu điện đặt hàng đồng hồ.\n\nSơ đồ nguyên lý và phiếu chạy thử từng đồng hồ:\nhttps://elvconsultant.com/blog/bms/2026-11-27-dong-ho-dien-modbus-dia-chi-baudrate-register-map.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #Modbus #DoDemNangLuong #DiamondControls #Niagara4"
+}
