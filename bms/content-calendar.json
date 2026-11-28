@@ -189,7 +189,8 @@
    "pillar": "Bài toán thực tế",
    "pillar_en": "Worked example",
    "topic": "Nghiệm thu BMS: checklist point-to-point và end-to-end",
-   "status": "planned"
+   "status": "published",
+   "slug": "nghiem-thu-bms-point-to-point-end-to-end"
   },
   {
    "date": "2026-11-29",

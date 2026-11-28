@@ -1,5 +1,14 @@
 [
  {
+  "date": "2026-11-28",
+  "slug": "nghiem-thu-bms-point-to-point-end-to-end",
+  "title_vi": "Nghiệm thu BMS: point-to-point và end-to-end",
+  "title_en": "BMS acceptance: point-to-point and end-to-end",
+  "url": "https://elvconsultant.com/blog/bms/2026-11-28-nghiem-thu-bms-point-to-point-end-to-end.html",
+  "x_post": "BMS handover signed on \"system operating normally\"? That is not acceptance.\n\nTwo layers: point-to-point on 100% of I/O (real contact at the device, not a jumper at the DDC), then end-to-end by sequence plus a 2-week trend.\n\nFull schematic on the blog, link in bio.",
+  "fb_post": "Nghiệm thu BMS cần 2 lớp kiểm tra, và point-to-point phải làm trên 100% điểm IO, không lấy mẫu.\n\nNhiều biên bản chỉ ghi \"hệ thống hoạt động bình thường\". Vài tháng sau mới phát hiện cảm biến AHU-2 hiển thị trên trang AHU-3, trạng thái quạt lấy từ lệnh chạy, cảnh báo lọc bẩn chưa từng gửi đi.\n\nCách tách đúng:\n1. Point-to-point: từng điểm theo point schedule. AI so với dụng cụ chuẩn chính xác gấp đôi cảm biến, DI tạo tiếp điểm thật tại thiết bị, AO thử 0/50/100%, DO thử contactor hút.\n2. End-to-end: chạy từng kịch bản trong sequence: khởi động, dừng, liên động báo cháy, mất nguồn và phục hồi trong 5 phút, cảnh báo tới console và e-mail.\n3. Thử vận hành 2 tuần có trend, rồi chủ đầu tư lấy mẫu 10% điểm để chứng kiến lại.\n\nVí dụ trong bài dùng DDC Mitsubishi Electric DCM-8446 (22 điểm) trên trục BACnet MS/TP về DCM 9000, Niagara 4.\n\nSơ đồ nguyên lý và phiếu P2P mẫu cho một AHU:\nhttps://elvconsultant.com/blog/bms/2026-11-28-nghiem-thu-bms-point-to-point-end-to-end.html\n\nDHP là đối tác chính thức Mitsubishi Electric. Gửi bản vẽ M&E, nhận SĐNL + BoM cho dự án của anh/chị trong 48 giờ.\n\n#BMS #NghiemThu #Commissioning #DiamondControls #Niagara4"
+ },
+ {
   "date": "2026-11-27",
   "slug": "dong-ho-dien-modbus-dia-chi-baudrate-register-map",
   "title_vi": "Đồng hồ điện Modbus vào BMS",
